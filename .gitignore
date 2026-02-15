@@ -1,0 +1,11 @@
+out.txt
+test.html
+test.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# uv
+uv.lock

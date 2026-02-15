@@ -1,0 +1,19 @@
+[project]
+name = "nlp-legalqa"
+version = "0.1.0"
+description = "Vietnamese legal document scraper and QA toolkit"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+legal-scraper = "legal_scraper.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/legal_scraper"]
