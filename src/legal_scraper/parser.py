@@ -145,14 +145,29 @@ class MetadataParser:
 
 # Vietnamese legal docs use this letter sequence for Điểm (Point)
 _VIET_POINT_LETTERS = set("abcdeđghiklmnopqrstuvxy")
+_VIET_POINT_RE_CLASS = "".join(sorted(_VIET_POINT_LETTERS - {"đ"})) + "đ"
 
 # Regex patterns for structural elements
 _RE_PART = re.compile(r"^(?:PHẦN|Phần)\s+thứ\s+(\S+?)\.?\s+(.*)", re.IGNORECASE)
-_RE_CHAPTER = re.compile(r"^Chương\s+([IVXLCDM]+)\.?\s*(.*)")
+_RE_CHAPTER = re.compile(r"^Chương\s+([IVXLCDM]+|\d+)\.?\s*(.*)", re.IGNORECASE)
 _RE_SECTION = re.compile(r"^Mục\s+(\d+)\.?\s*(.*)")
 _RE_ARTICLE = re.compile(r"^Điều\s+(\d+[a-z]?)\.?\s*(.*)")
 _RE_CLAUSE = re.compile(r"^(\d+)\.\s+(.*)")
-_RE_POINT = re.compile(r"^([a-eđg-y])\)\s+(.*)")
+_RE_POINT = re.compile(rf"^([{_VIET_POINT_RE_CLASS}])\)\s+(.*)")
+
+# Footer / appendix boundary — first match marks end of legal content
+_RE_FOOTER_START = re.compile(
+    r"^(?:"
+    r"Luật này được Quốc hội.*thông qua"
+    r"|CHỦ TỊCH QUỐC HỘI"
+    r"|TM\.\s*CHÍNH PHỦ"
+    r"|KT\.\s*THỦ TƯỚNG"
+    r"|Nơi nhận:"
+    r"|\(\*\)\s*Nguồn dữ liệu"
+    r"|Phụ lục"
+    r")",
+    re.MULTILINE | re.IGNORECASE,
+)
 
 
 class ContentParser:
@@ -162,13 +177,24 @@ class ContentParser:
         text = txt_path.read_text(encoding="utf-8")
         return self.parse_text(text, doc_identity)
 
+    def _split_document(self, text: str) -> tuple[str, str]:
+        """Split text into (main_content, footer)."""
+        match = _RE_FOOTER_START.search(text)
+        if match:
+            return text[:match.start()], text[match.start():]
+        return text, ""
+
     def parse_text(self, text: str, doc_identity: str) -> dict:
+        # Split footer/appendix before parsing
+        main_text, footer = self._split_document(text)
+
         parts: list[Part] = []
         chapters: list[Chapter] = []
         sections: list[Section] = []
         articles: list[Article] = []
         clauses: list[Clause] = []
         points: list[Point] = []
+        preamble_lines: list[str] = []
 
         cur_part: Part | None = None
         cur_chapter: Chapter | None = None
@@ -176,13 +202,46 @@ class ContentParser:
         cur_article: Article | None = None
         cur_clause: Clause | None = None
         cur_point: Point | None = None
+        in_quote: bool = False
 
-        for raw_line in text.splitlines():
+        def append_content(ln: str) -> None:
+            if cur_point:
+                cur_point.content += "\n" + ln
+            elif cur_clause:
+                cur_clause.content += "\n" + ln
+            elif cur_article:
+                cur_article.content += "\n" + ln
+            elif cur_section:
+                cur_section.content += "\n" + ln
+            elif cur_chapter:
+                cur_chapter.content += "\n" + ln
+            elif cur_part:
+                cur_part.content += "\n" + ln
+            else:
+                preamble_lines.append(ln)
+
+        for raw_line in main_text.splitlines():
             line = raw_line.strip()
             if not line:
                 continue
 
-            # Check patterns in hierarchical order (outermost first)
+            # ── Quote block tracking ──
+            # Lines starting with " or " open a quoted amendment block.
+            # Everything inside is treated as content, not parsed as hierarchy.
+            opens_quote = line[0] in ('"', '\u201c')
+            # Strip trailing punctuation, then check for closing quote
+            closes_quote = line.rstrip('.;:, ') [-1:] in ('"', '\u201d')
+
+            if opens_quote and not in_quote:
+                in_quote = True
+
+            if in_quote:
+                append_content(line)
+                if closes_quote:
+                    in_quote = False
+                continue
+
+            # ── Hierarchy matching (only when NOT inside a quoted block) ──
 
             # ── Part ──
             if m := _RE_PART.match(line):
@@ -197,7 +256,7 @@ class ContentParser:
             # ── Chapter ──
             if m := _RE_CHAPTER.match(line):
                 cur_chapter = Chapter(
-                    number=m.group(1), title=m.group(2).strip(),
+                    number=m.group(1).upper(), title=m.group(2).strip(),
                     doc_identity=doc_identity,
                     parent_part=cur_part.number if cur_part else None,
                     order=len(chapters),
@@ -211,7 +270,7 @@ class ContentParser:
                 cur_section = Section(
                     number=m.group(1), title=m.group(2).strip(),
                     doc_identity=doc_identity,
-                    parent_chapter=cur_chapter.number if cur_chapter else "",
+                    parent_chapter=cur_chapter.number if cur_chapter else None,
                     order=len(sections),
                 )
                 sections.append(cur_section)
@@ -256,12 +315,7 @@ class ContentParser:
                 continue
 
             # ── Content continuation ──
-            if cur_point:
-                cur_point.content += "\n" + line
-            elif cur_clause:
-                cur_clause.content += "\n" + line
-            elif cur_article:
-                cur_article.content += "\n" + line
+            append_content(line)
 
         # Build relationships
         relationships: list[dict] = []
@@ -288,11 +342,18 @@ class ContentParser:
                 )))
 
         for sec in sections:
-            relationships.append(asdict(Relationship(
-                type="HAS_SECTION",
-                from_label="Chapter", from_id=sec.parent_chapter,
-                to_label="Section", to_id=sec.number,
-            )))
+            if sec.parent_chapter:
+                relationships.append(asdict(Relationship(
+                    type="HAS_SECTION",
+                    from_label="Chapter", from_id=sec.parent_chapter,
+                    to_label="Section", to_id=sec.number,
+                )))
+            else:
+                relationships.append(asdict(Relationship(
+                    type="HAS_SECTION",
+                    from_label="Document", from_id=doc_identity,
+                    to_label="Section", to_id=sec.number,
+                )))
 
         for art in articles:
             if art.parent_section:
@@ -329,6 +390,8 @@ class ContentParser:
             )))
 
         return {
+            "preamble": "\n".join(preamble_lines),
+            "footer": footer.strip(),
             "nodes": {
                 "parts": [asdict(p) for p in parts],
                 "chapters": [asdict(c) for c in chapters],
@@ -371,6 +434,8 @@ class LegalDocumentParser:
             content = self.content_parser.parse(txt_path, doc_identity)
             result["nodes"].update(content["nodes"])
             result["relationships"].extend(content["relationships"])
+            result["preamble"] = content.get("preamble", "")
+            result["footer"] = content.get("footer", "")
 
         return result
 

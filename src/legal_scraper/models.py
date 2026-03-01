@@ -92,7 +92,7 @@ class Section:
     number: str
     title: str
     doc_identity: str
-    parent_chapter: str
+    parent_chapter: Optional[str]
     order: int
     content: str = ""
 
@@ -123,6 +123,15 @@ class Point:
     doc_identity: str
     parent_article: str
     parent_clause: str
+    order: int
+    content: str = ""
+
+
+@dataclass
+class Appendix:
+    number: str
+    title: str
+    doc_identity: str
     order: int
     content: str = ""
 
