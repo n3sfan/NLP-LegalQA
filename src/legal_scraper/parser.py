@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from dataclasses import asdict
 from pathlib import Path
 
@@ -174,7 +175,7 @@ class ContentParser:
     """Parse plain-text legal document content into a hierarchical structure."""
 
     def parse(self, txt_path: Path, doc_identity: str) -> dict:
-        text = txt_path.read_text(encoding="utf-8")
+        text = unicodedata.normalize("NFC", txt_path.read_text(encoding="utf-8"))
         return self.parse_text(text, doc_identity)
 
     def _split_document(self, text: str) -> tuple[str, str]:
