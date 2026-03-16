@@ -1,0 +1,3580 @@
+{
+  "doc_stem": "9ed2a463-02ab-f500-2bad-cf5a424c7170",
+  "nodes": {
+    "document": {
+      "doc_guid": "9ed2a463-02ab-f500-2bad-cf5a424c7170",
+      "doc_identity": "44/2019/QH14",
+      "doc_name": "Luật Phòng, chống tác hại của rượu, bia của Quốc hội, số 44/2019/QH14",
+      "issue_date": "2019-06-14T00:00:00",
+      "effect_date": "2020-01-01T00:00:00",
+      "expire_date": null,
+      "gazette_number": "559&560-07/2019",
+      "gazette_date": "2019-07-17T00:00:00"
+    },
+    "document_group": [
+      {
+        "id": 1,
+        "name": "Văn bản pháp quy"
+      }
+    ],
+    "document_type": [
+      {
+        "id": 10,
+        "name": "Luật"
+      }
+    ],
+    "effect_status": [
+      {
+        "id": 2,
+        "name": "Hết Hiệu lực một phần"
+      }
+    ],
+    "organizations": [
+      {
+        "id": 161,
+        "name": "Quốc hội"
+      }
+    ],
+    "signers": [
+      {
+        "id": 430,
+        "name": "Nguyễn Thị Kim Ngân"
+      }
+    ],
+    "fields": [
+      {
+        "id": 12,
+        "name": "Y tế-Sức khỏe"
+      },
+      {
+        "id": 11,
+        "name": "An ninh trật tự"
+      }
+    ],
+    "related_documents": [
+      {
+        "doc_guid": "8daa0e0e-02a2-e500-30c9-0047beb9b80d",
+        "doc_identity": "264/QĐ-UBDT",
+        "doc_name": "Quyết định 264/QĐ-UBDT của Ủy ban Dân tộc về việc phê duyệt Kế hoạch tuyên truyền, vận động về phòng, chống tệ nạn ma túy, mại dâm và mua bán người vùng đồng bào dân tộc thiểu số năm 2019",
+        "field_name": "An ninh trật tự"
+      },
+      {
+        "doc_guid": "55bf7368-04b2-a300-523e-f67e92ef3c2d",
+        "doc_identity": "169/QĐ-VKSTC",
+        "doc_name": "Quyết định 169/QĐ-VKSTC của Viện kiểm sát nhân dân tối cao ban hành Biểu mẫu thống kê về phòng, chống ma tuý",
+        "field_name": "An ninh trật tự, Hình sự"
+      },
+      {
+        "doc_guid": "850e4826-02a3-6400-341c-f29959bc9544",
+        "doc_identity": "1179/QĐ-TCHQ",
+        "doc_name": "Quyết định 1179/QĐ-TCHQ của Tổng cục Hải quan về việc ban hành Nội quy phòng cháy và chữa cháy tại trụ sở cơ quan Tổng cục Hải quan",
+        "field_name": "An ninh trật tự"
+      },
+      {
+        "doc_guid": "c9dd8d60-029e-3800-d557-913ed25eb063",
+        "doc_identity": "1180/QĐ-BVHTTDL",
+        "doc_name": "Quyết định 1180/QÐ-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch về việc tổ chức triển khai thực hiện Đề án \"Phòng ngừa tội phạm và phòng, chống vi phạm pháp luật trong hoạt động văn hóa, thể thao và du lịch\" năm 2019",
+        "field_name": "An ninh trật tự, Văn hóa-Thể thao-Du lịch"
+      },
+      {
+        "doc_guid": "7a2e5d1d-029f-8e00-3b55-efc761b617a1",
+        "doc_identity": "08/2019/TT-BCA",
+        "doc_name": "Thông tư 08/2019/TT-BCA của Bộ Công an về việc ban hành Danh mục sản phẩm, hàng hóa có khả năng gây mất an toàn thuộc trách nhiệm quản lý của Bộ Công an",
+        "field_name": "An ninh trật tự, Thương mại-Quảng cáo"
+      },
+      {
+        "doc_guid": "7eac3795-029c-1e00-454b-50b7495eeba3",
+        "doc_identity": "87/QĐ-UBDT",
+        "doc_name": "Quyết định 87/QĐ-UBDT của Ủy ban Dân tộc về việc phê duyệt Kế hoạch tuyên truyền, vận động đồng bào dân tộc thiểu số tích cực tham gia vào hoạt động phòng, chống ma túy, HIV/AIDS, mại dâm, chống trồng và tái trồng cây có chứa chất ma túy năm 2019",
+        "field_name": "An ninh trật tự, Chính sách"
+      },
+      {
+        "doc_guid": "1f31f173-029c-0c00-48c9-8a1af3eac76e",
+        "doc_identity": "13/2019/QĐ-TTg",
+        "doc_name": "Quyết định 13/2019/QĐ-TTg của Thủ tướng Chính phủ về việc sửa đổi, bổ sung một số điều của Quyết định 127/2009/QĐ-TTg ngày 26/10/2009 của Thủ tướng Chính phủ ban hành Chế độ báo cáo thống kê về phòng, chống ma túy",
+        "field_name": "An ninh trật tự"
+      },
+      {
+        "doc_guid": "d034112d-0299-b400-73b1-bb526a14ebe7",
+        "doc_identity": "01/CT-BXD",
+        "doc_name": "Chỉ thị 01/CT-BXD của Bộ Xây dựng về việc tổ chức Tết và tăng cường các biện pháp bảo đảm đón Tết Nguyên đán Kỷ Hợi 2019 vui tươi, lành mạnh, an toàn, tiết kiệm",
+        "field_name": "An ninh trật tự, Tiết kiệm-Phòng, chống tham nhũng, lãng phí"
+      },
+      {
+        "doc_guid": "2a8f27ab-0299-2600-c5b1-02fd1d3bb0bf",
+        "doc_identity": "170/QĐ-BYT",
+        "doc_name": "Quyết định 170/QĐ-BYT của Bộ Y tế về việc phê duyệt Đề án Phòng ngừa tội phạm và phòng, chống vi phạm pháp luật tại các cơ sở y tế",
+        "field_name": "An ninh trật tự, Y tế-Sức khỏe"
+      },
+      {
+        "doc_guid": "39f82693-0297-5400-6902-8fcd49a1c924",
+        "doc_identity": "34/CT-TTg",
+        "doc_name": "Chỉ thị 34/CT-TTg của Thủ tướng Chính phủ về việc tăng cường các biện pháp bảo đảm đón Tết Nguyên đán Kỷ Hợi 2019 vui tươi, lành mạnh, an toàn, tiết kiệm",
+        "field_name": "An ninh trật tự"
+      }
+    ],
+    "parts": [],
+    "chapters": [
+      {
+        "number": "I",
+        "title": "NHỮNG QUY ĐỊNH CHUNG",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 0,
+        "content": ""
+      },
+      {
+        "number": "II",
+        "title": "BIỆN PHÁP GIẢM MỨC TIÊU THỤ RƯỢU, BIA",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 1,
+        "content": ""
+      },
+      {
+        "number": "III",
+        "title": "BIỆN PHÁP QUẢN LÝ VIỆC CUNG CẤP RƯỢU, BIA",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 2,
+        "content": ""
+      },
+      {
+        "number": "IV",
+        "title": "BIỆN PHÁP GIẢM TÁC HẠI CỦA RƯỢU, BIA",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 3,
+        "content": ""
+      },
+      {
+        "number": "V",
+        "title": "ĐIỀU KIỆN BẢO ĐẢM CHO HOẠT ĐỘNG PHÒNG, CHỐNG TÁC HẠI CỦA RƯỢU, BIA",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 4,
+        "content": ""
+      },
+      {
+        "number": "VI",
+        "title": "QUẢN LÝ NHÀ NƯỚC VÀ TRÁCH NHIỆM CỦA CƠ QUAN, TỔ CHỨC, CÁ NHÂN TRONG PHÒNG, CHỐNG TÁC HẠI CỦA RƯỢU, BIA",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 5,
+        "content": ""
+      },
+      {
+        "number": "VII",
+        "title": "ĐIỀU KHOẢN THI HÀNH",
+        "doc_identity": "44/2019/QH14",
+        "parent_part": null,
+        "order": 6,
+        "content": ""
+      }
+    ],
+    "sections": [],
+    "articles": [
+      {
+        "number": "1",
+        "title": "Phạm vi điều chỉnh",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 0,
+        "content": "\nLuật này quy định biện pháp giảm mức tiêu thụ rượu, bia; biện pháp quản lý việc cung cấp rượu, bia; biện pháp giảm tác hại của rượu, bia; điều kiện bảo đảm cho hoạt động phòng, chống tác hại của rượu, bia; quản lý nhà nước và trách nhiệm của cơ quan, tổ chức, cá nhân trong phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "title": "Giải thích từ ngữ",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 1,
+        "content": "\nTrong Luật này, các từ ngữ dưới đây được hiểu như sau:"
+      },
+      {
+        "number": "3",
+        "title": "Chính sách của Nhà nước trong phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 2,
+        "content": ""
+      },
+      {
+        "number": "4",
+        "title": "Quyền và nghĩa vụ của cá nhân, tổ chức trong phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 3,
+        "content": ""
+      },
+      {
+        "number": "5",
+        "title": "Các hành vi bị nghiêm cấm trong phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 4,
+        "content": ""
+      },
+      {
+        "number": "6",
+        "title": "Mục đích, yêu cầu trong thông tin, giáo dục, truyền thông về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 5,
+        "content": ""
+      },
+      {
+        "number": "7",
+        "title": "Nội dung thông tin, giáo dục, truyền thông về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 6,
+        "content": ""
+      },
+      {
+        "number": "8",
+        "title": "Hình thức thông tin, giáo dục, truyền thông về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 7,
+        "content": ""
+      },
+      {
+        "number": "9",
+        "title": "Trách nhiệm trong thông tin, giáo dục, truyền thông về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 8,
+        "content": ""
+      },
+      {
+        "number": "10",
+        "title": "Địa điểm không uống rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 9,
+        "content": ""
+      },
+      {
+        "number": "11",
+        "title": "Quản lý việc khuyến mại rượu, bia có độ cồn dưới 15 độ",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 10,
+        "content": "\nTổ chức, cá nhân thực hiện khuyến mại rượu, bia có độ cồn dưới 15 độ phải tuân thủ các quy định của Luật này và quy định khác của pháp luật về khuyến mại."
+      },
+      {
+        "number": "12",
+        "title": "Quản lý việc quảng cáo rượu, bia có độ cồn dưới 5,5 độ",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 11,
+        "content": ""
+      },
+      {
+        "number": "13",
+        "title": "Quản lý việc quảng cáo rượu có độ cồn từ 5,5 độ đến dưới 15 độ và bia có độ cồn từ 5,5 độ trở lên",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 12,
+        "content": "\nTổ chức, cá nhân thực hiện quảng cáo rượu có độ cồn từ 5,5 độ đến dưới 15 độ và bia có độ cồn từ 5,5 độ trở lên phải tuân thủ quy định tại Điều 12 của Luật này và không quảng cáo trong trường hợp sau đây:"
+      },
+      {
+        "number": "14",
+        "title": "Quản lý việc tài trợ của tổ chức, cá nhân kinh doanh rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 13,
+        "content": "\nTổ chức, cá nhân kinh doanh rượu, bia thực hiện tài trợ phải tuân thủ các quy định của pháp luật có liên quan đến việc tài trợ và không được tài trợ bằng sản phẩm rượu, bia."
+      },
+      {
+        "number": "15",
+        "title": "Quản lý kinh doanh rượu",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 14,
+        "content": ""
+      },
+      {
+        "number": "16",
+        "title": "Điều kiện bán rượu, bia theo hình thức thương mại điện tử",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 15,
+        "content": ""
+      },
+      {
+        "number": "17",
+        "title": "Biện pháp quản lý đối với sản xuất rượu thủ công không nhằm mục đích kinh doanh",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 16,
+        "content": ""
+      },
+      {
+        "number": "18",
+        "title": "Bảo đảm chất lượng, an toàn thực phẩm đối với rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 17,
+        "content": "\nRượu, bia được kinh doanh, lưu hành tại Việt Nam phải bảo đảm tiêu chuẩn, quy chuẩn kỹ thuật, chất lượng sản phẩm, hàng hóa và an toàn thực phẩm theo quy định của pháp luật."
+      },
+      {
+        "number": "19",
+        "title": "Địa điểm không bán rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 18,
+        "content": ""
+      },
+      {
+        "number": "20",
+        "title": "Phòng ngừa và xử lý rượu, bia giả, không bảo đảm chất lượng, an toàn thực phẩm; rượu, bia nhập lậu, không rõ nguồn gốc, xuất xứ",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 19,
+        "content": ""
+      },
+      {
+        "number": "21",
+        "title": "Phòng ngừa tai nạn giao thông liên quan đến sử dụng rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "IV",
+        "parent_section": null,
+        "order": 20,
+        "content": ""
+      },
+      {
+        "number": "22",
+        "title": "Phòng ngừa, can thiệp và giảm tác hại của việc uống rượu, bia đối với sức khỏe",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "IV",
+        "parent_section": null,
+        "order": 21,
+        "content": ""
+      },
+      {
+        "number": "23",
+        "title": "Tư vấn về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "IV",
+        "parent_section": null,
+        "order": 22,
+        "content": ""
+      },
+      {
+        "number": "24",
+        "title": "Biện pháp phòng ngừa tác hại của rượu, bia tại cộng đồng",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "IV",
+        "parent_section": null,
+        "order": 23,
+        "content": ""
+      },
+      {
+        "number": "25",
+        "title": "Chăm sóc, hỗ trợ, bảo vệ trẻ em, phụ nữ và các đối tượng yếu thế khác để phòng ngừa, giảm tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "IV",
+        "parent_section": null,
+        "order": 24,
+        "content": ""
+      },
+      {
+        "number": "26",
+        "title": "Kinh phí cho hoạt động phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 25,
+        "content": ""
+      },
+      {
+        "number": "27",
+        "title": "Đào tạo, bồi dưỡng kiến thức chuyên môn, nghiệp vụ cho người làm công tác phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 26,
+        "content": ""
+      },
+      {
+        "number": "28",
+        "title": "Xử lý vi phạm pháp luật về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 27,
+        "content": ""
+      },
+      {
+        "number": "29",
+        "title": "Nội dung quản lý nhà nước về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 28,
+        "content": ""
+      },
+      {
+        "number": "30",
+        "title": "Trách nhiệm quản lý nhà nước về phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 29,
+        "content": ""
+      },
+      {
+        "number": "31",
+        "title": "Trách nhiệm của Mặt trận Tổ quốc Việt Nam, các tổ chức thành viên của Mặt trận và tổ chức xã hội - nghề nghiệp, tổ chức xã hội",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 30,
+        "content": ""
+      },
+      {
+        "number": "32",
+        "title": "Trách nhiệm của cơ sở kinh doanh rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 31,
+        "content": ""
+      },
+      {
+        "number": "33",
+        "title": "Trách nhiệm của người đứng đầu cơ quan, tổ chức trong phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 32,
+        "content": ""
+      },
+      {
+        "number": "34",
+        "title": "Trách nhiệm của gia đình trong phòng, chống tác hại của rượu, bia",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 33,
+        "content": ""
+      },
+      {
+        "number": "35",
+        "title": "Sửa đổi, bổ sung quy định của một số luật khác",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VII",
+        "parent_section": null,
+        "order": 34,
+        "content": ""
+      },
+      {
+        "number": "36",
+        "title": "Hiệu lực thi hành",
+        "doc_identity": "44/2019/QH14",
+        "parent_chapter": "VII",
+        "parent_section": null,
+        "order": 35,
+        "content": ""
+      }
+    ],
+    "clauses": [
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 0,
+        "content": "Rượu là đồ uống có cồn thực phẩm, được sản xuất từ quá trình lên men từ một hoặc hỗn hợp của các loại nguyên liệu chủ yếu gồm tinh bột của ngũ cốc, dịch đường của cây, hoa, củ, quả hoặc là đồ uống được pha chế từ cồn thực phẩm."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 1,
+        "content": "Bia là đồ uống có cồn thực phẩm, được sản xuất từ quá trình lên men từ hỗn hợp của các loại nguyên liệu chủ yếu gồm mạch nha (malt), đại mạch, nấm men bia, hoa bia (hoa houblon), nước."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 2,
+        "content": "Cồn thực phẩm là hợp chất hữu cơ có công thức phân tử là C2H5OH và có tên khoa học là ethanol đã được loại bỏ tạp chất, đạt yêu cầu dùng trong thực phẩm theo quy chuẩn kỹ thuật quốc gia, có khả năng gây nghiện và gây ngộ độc cấp tính."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 3,
+        "content": "Độ cồn là số đo chỉ hàm lượng cồn thực phẩm có trong rượu, bia tính theo phần trăm thể tích. Độ cồn được tính bằng số mililít ethanol nguyên chất trong 100 ml dung dịch ở 20 °C."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 4,
+        "content": "Tác hại của rượu, bia là ảnh hưởng, tác động có hại của rượu, bia đối với sức khỏe con người, gia đình, cộng đồng, an toàn giao thông, trật tự, an toàn xã hội, kinh tế và các vấn đề xã hội khác."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 5,
+        "content": "Nghiện rượu, bia là tình trạng lệ thuộc vào rượu, bia với biểu hiện đặc trưng như thường xuyên thèm uống, lượng uống có thể tăng theo thời gian, không thể tự kiểm soát lượng uống hay ngừng uống."
+      },
+      {
+        "number": "7",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 6,
+        "content": "Sản xuất rượu thủ công là hoạt động sản xuất rượu bằng dụng cụ truyền thống, không sử dụng máy móc, thiết bị công nghiệp."
+      },
+      {
+        "number": "8",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "2",
+        "order": 7,
+        "content": "Sản xuất rượu công nghiệp là hoạt động sản xuất rượu bằng máy móc, thiết bị công nghiệp."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "3",
+        "order": 8,
+        "content": "Thực hiện đồng bộ các biện pháp phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "3",
+        "order": 9,
+        "content": "Ưu tiên hoạt động thông tin, giáo dục, truyền thông; giảm tính sẵn có, dễ tiếp cận của rượu, bia; giảm tác hại của rượu, bia; tăng cường quản lý sản xuất rượu thủ công; thực hiện các biện pháp phòng, chống tác hại của rượu, bia đối với trẻ em, học sinh, sinh viên, thanh niên, phụ nữ mang thai."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "3",
+        "order": 10,
+        "content": "Bảo đảm nguồn lực cho công tác phòng, chống tác hại của rượu, bia; chú trọng các hoạt động phòng, chống tác hại của rượu, bia của y tế cơ sở và ở cộng đồng; huy động xã hội hóa các hoạt động phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "3",
+        "order": 11,
+        "content": "Khuyến khích nghiên cứu khoa học, phát triển công nghệ và ứng dụng công nghệ cao, công nghệ tiên tiến, công nghệ mới nhằm giảm tác hại của rượu, bia."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "3",
+        "order": 12,
+        "content": "Khen thưởng tập thể, cá nhân có thành tích trong phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "4",
+        "order": 13,
+        "content": "Được sống trong môi trường không chịu ảnh hưởng bởi tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "4",
+        "order": 14,
+        "content": "Được cung cấp thông tin phù hợp, chính xác, khách quan, khoa học, đầy đủ về rượu, bia, nguồn gốc, xuất xứ, chất lượng và tác hại của rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "4",
+        "order": 15,
+        "content": "Phản ánh, tố cáo hành vi vi phạm pháp luật về phòng, chống tác hại của rượu, bia; tố cáo việc cơ quan, người có thẩm quyền không xử lý hành vi vi phạm pháp luật về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "4",
+        "order": 16,
+        "content": "Tuân thủ quy định của pháp luật về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 17,
+        "content": "Xúi giục, kích động, lôi kéo, ép buộc người khác uống rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 18,
+        "content": "Người chưa đủ 18 tuổi uống rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 19,
+        "content": "Bán, cung cấp, khuyến mại rượu, bia cho người chưa đủ 18 tuổi."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 20,
+        "content": "Sử dụng lao động là người chưa đủ 18 tuổi trực tiếp tham gia vào việc sản xuất, mua bán rượu, bia."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 21,
+        "content": "Cán bộ, công chức, viên chức, người lao động trong các cơ quan, tổ chức, sĩ quan, hạ sĩ quan, quân nhân chuyên nghiệp, chiến sĩ, người làm việc trong lực lượng vũ trang nhân dân, học sinh, sinh viên uống rượu, bia ngay trước, trong giờ làm việc, học tập và nghỉ giữa giờ làm việc, học tập."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 22,
+        "content": "Điều khiển phương tiện giao thông mà trong máu hoặc hơi thở có nồng độ cồn."
+      },
+      {
+        "number": "7",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 23,
+        "content": "Quảng cáo rượu có độ cồn từ 15 độ trở lên."
+      },
+      {
+        "number": "8",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 24,
+        "content": "Cung cấp thông tin không chính xác, sai sự thật về ảnh hưởng của rượu, bia đối với sức khỏe."
+      },
+      {
+        "number": "9",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 25,
+        "content": "Khuyến mại trong hoạt động kinh doanh rượu, bia có độ cồn từ 15 độ trở lên; sử dụng rượu, bia có độ cồn từ 15 độ trở lên để khuyến mại dưới mọi hình thức."
+      },
+      {
+        "number": "10",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 26,
+        "content": "Sử dụng nguyên liệu, phụ gia, chất hỗ trợ chế biến không được phép dùng trong thực phẩm; nguyên liệu, phụ gia thực phẩm, chất hỗ trợ chế biến thực phẩm không bảo đảm chất lượng và không rõ nguồn gốc, xuất xứ để sản xuất, pha chế rượu, bia."
+      },
+      {
+        "number": "11",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 27,
+        "content": "Kinh doanh rượu không có giấy phép hoặc không đăng ký; bán rượu, bia bằng máy bán hàng tự động."
+      },
+      {
+        "number": "12",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 28,
+        "content": "Kinh doanh, tàng trữ, vận chuyển rượu, bia giả, nhập lậu, không bảo đảm chất lượng, không rõ nguồn gốc, xuất xứ, nhập lậu rượu, bia."
+      },
+      {
+        "number": "13",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "5",
+        "order": 29,
+        "content": "Các hành vi bị nghiêm cấm khác liên quan đến rượu, bia do luật định."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "6",
+        "order": 30,
+        "content": "Thông tin, giáo dục, truyền thông nhằm nâng cao nhận thức, định hướng hành vi, thay đổi thói quen có hại để phòng, chống tác hại của rượu, bia đối với sức khỏe con người, gia đình, cộng đồng, an toàn giao thông, trật tự, an toàn xã hội, kinh tế và các vấn đề xã hội khác."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "6",
+        "order": 31,
+        "content": "Việc thông tin, giáo dục, truyền thông về phòng, chống tác hại của rượu, bia phải bảo đảm các yêu cầu sau đây:"
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 32,
+        "content": "Chính sách, pháp luật của Nhà nước về phòng, chống tác hại của rượu, bia; các hành vi bị nghiêm cấm trong phòng, chống tác hại của rượu, bia; các chế tài xử phạt và vận động cá nhân, tổ chức tuân thủ quy định của pháp luật về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 33,
+        "content": "Quyền, nghĩa vụ của cá nhân và trách nhiệm của cơ quan, tổ chức, gia đình, cộng đồng trong phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 34,
+        "content": "Tác hại của rượu, bia; tác hại của rượu, bia giả, không bảo đảm chất lượng, an toàn thực phẩm; các mức độ nguy cơ khi uống rượu, bia; các biện pháp giảm tác hại của rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 35,
+        "content": "Bệnh, tình trạng sức khỏe, đối tượng không nên uống rượu, bia; độ tuổi không được uống rượu, bia."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 36,
+        "content": "Kỹ năng từ chối uống rượu, bia; kỹ năng nhận biết và ứng xử, xử trí khi gặp người say rượu, bia, người nghiện rượu, bia."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 37,
+        "content": "Vận động hạn chế uống rượu, bia và không điều khiển phương tiện giao thông, vận hành máy móc sau khi uống rượu, bia."
+      },
+      {
+        "number": "7",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 38,
+        "content": "Hướng dẫn hộ gia đình, cá nhân sản xuất rượu thủ công bảo đảm an toàn thực phẩm theo quy định của pháp luật."
+      },
+      {
+        "number": "8",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "7",
+        "order": 39,
+        "content": "Tuyên truyền, vận động, hướng dẫn hộ gia đình, cá nhân sản xuất rượu thủ công làm thủ tục cấp giấy phép sản xuất, đăng ký với Ủy ban nhân dân cấp xã việc bán rượu cho cơ sở có giấy phép sản xuất rượu để chế biến lại, kê khai việc sản xuất rượu thủ công không nhằm mục đích kinh doanh."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "8",
+        "order": 40,
+        "content": "Thực hiện trực tiếp; tư vấn, hướng dẫn tìm hiểu pháp luật; cung cấp, phổ biến tài liệu."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "8",
+        "order": 41,
+        "content": "Thông qua phương tiện thông tin đại chúng, loa truyền thanh, mạng Internet, pa-nô, áp-phích, tranh cổ động."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "8",
+        "order": 42,
+        "content": "Thi tuyên truyền, tìm hiểu."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "8",
+        "order": 43,
+        "content": "Chiến dịch truyền thông."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "8",
+        "order": 44,
+        "content": "Lồng ghép trong việc giảng dạy, học tập tại cơ sở giáo dục thuộc hệ thống giáo dục quốc dân; trong hoạt động văn hóa, nghệ thuật, thể thao; trong hoạt động của cơ quan, tổ chức, cộng đồng và các thiết chế văn hóa, thể thao cơ sở."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "9",
+        "order": 45,
+        "content": "Cơ quan, tổ chức, cá nhân có trách nhiệm thực hiện thông tin, giáo dục, truyền thông quy định tại các điều 6, 7 và 8 của Luật này."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "9",
+        "order": 46,
+        "content": "Chính phủ quy định trách nhiệm thực hiện thông tin, giáo dục, truyền thông về phòng, chống tác hại của rượu, bia và việc hạn chế sử dụng hình ảnh diễn viên uống rượu, bia trong tác phẩm điện ảnh, sân khấu, truyền hình."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 47,
+        "content": "Cơ sở y tế."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 48,
+        "content": "Cơ sở giáo dục trong thời gian giảng dạy, học tập, làm việc."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 49,
+        "content": "Cơ sở, khu vực chăm sóc, nuôi dưỡng, vui chơi, giải trí dành cho người chưa đủ 18 tuổi."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 50,
+        "content": "Cơ sở cai nghiện, cơ sở giáo dục bắt buộc, trường giáo dưỡng, cơ sở giam giữ phạm nhân và cơ sở giam giữ khác."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 51,
+        "content": "Cơ sở bảo trợ xã hội."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 52,
+        "content": "Nơi làm việc của cơ quan nhà nước, tổ chức chính trị, tổ chức chính trị - xã hội, tổ chức chính trị xã hội - nghề nghiệp, đơn vị sự nghiệp công lập trong thời gian làm việc, trừ địa điểm được phép kinh doanh rượu, bia."
+      },
+      {
+        "number": "7",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "10",
+        "order": 53,
+        "content": "Các địa điểm công cộng theo quy định của Chính phủ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "order": 54,
+        "content": "Tổ chức, cá nhân thực hiện quảng cáo rượu, bia phải tuân thủ các quy định của Luật này và quy định khác của pháp luật về quảng cáo."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "order": 55,
+        "content": "Quảng cáo không thể hiện các nội dung sau đây:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "order": 56,
+        "content": "Không thực hiện quảng cáo trên các phương tiện quảng cáo trong trường hợp sau đây:"
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "order": 57,
+        "content": "Quảng cáo phải có cảnh báo để phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "order": 58,
+        "content": "Quảng cáo trên báo điện tử, trang thông tin điện tử, phương tiện điện tử, thiết bị đầu cuối và thiết bị viễn thông khác phải có hệ thống công nghệ chặn lọc, phần mềm kiểm soát tuổi của người truy cập để ngăn ngừa người chưa đủ 18 tuổi tiếp cận, truy cập, tìm kiếm thông tin về rượu, bia."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "order": 59,
+        "content": "Chính phủ quy định chi tiết điểm d khoản 3, khoản 4 và khoản 5 Điều này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "13",
+        "order": 60,
+        "content": "Trong các chương trình, hoạt động văn hóa, sân khấu, điện ảnh, thể thao;"
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "13",
+        "order": 61,
+        "content": "Trên các phương tiện quảng cáo ngoài trời, trừ biển hiệu của cơ sở kinh doanh rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "order": 62,
+        "content": "Điều kiện cấp phép sản xuất rượu công nghiệp có độ cồn từ 5,5 độ trở lên bao gồm:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "order": 63,
+        "content": "Điều kiện cấp phép sản xuất rượu thủ công có độ cồn từ 5,5 độ trở lên nhằm mục đích kinh doanh, trừ trường hợp quy định tại khoản 3 Điều này, bao gồm:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "order": 64,
+        "content": "Điều kiện đối với hộ gia đình, cá nhân sản xuất rượu thủ công có độ cồn từ 5,5 độ trở lên bán cho cơ sở có giấy phép sản xuất rượu để chế biến lại bao gồm:"
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "order": 65,
+        "content": "Điều kiện cấp phép mua bán rượu có độ cồn từ 5,5 độ trở lên bao gồm:"
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "order": 66,
+        "content": "Chính phủ quy định chi tiết Điều này và quy định việc quản lý kinh doanh rượu có độ cồn dưới 5,5 độ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "16",
+        "order": 67,
+        "content": "Đáp ứng quy định tại khoản 4, khoản 5 Điều 15 và Điều 18 của Luật này."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "16",
+        "order": 68,
+        "content": "Đáp ứng điều kiện theo quy định của pháp luật về thương mại điện tử."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "16",
+        "order": 69,
+        "content": "Thực hiện biện pháp theo quy định của Chính phủ để ngăn ngừa người chưa đủ 18 tuổi tiếp cận, truy cập, tìm kiếm thông tin và mua rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "16",
+        "order": 70,
+        "content": "Áp dụng hình thức thanh toán không dùng tiền mặt."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "17",
+        "order": 71,
+        "content": "Hộ gia đình, cá nhân sản xuất rượu thủ công không nhằm mục đích kinh doanh phải có bản kê khai gửi Ủy ban nhân dân cấp xã về lượng rượu được sản xuất, phạm vi sử dụng, cam kết bảo đảm an toàn thực phẩm và không bán rượu ra thị trường theo mẫu do Bộ trưởng Bộ Công Thương quy định. Việc kê khai không phải nộp phí, lệ phí."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "17",
+        "order": 72,
+        "content": "Ủy ban nhân dân các cấp hướng dẫn việc thực hiện các quy định của pháp luật về an toàn thực phẩm; báo cáo sản lượng và tình hình bảo đảm an toàn thực phẩm đối với sản xuất rượu thủ công không nhằm mục đích kinh doanh trên địa bàn."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "19",
+        "order": 73,
+        "content": "Cơ sở y tế."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "19",
+        "order": 74,
+        "content": "Cơ sở giáo dục."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "19",
+        "order": 75,
+        "content": "Cơ sở, khu vực chăm sóc, nuôi dưỡng, vui chơi, giải trí dành cho người chưa đủ 18 tuổi."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "19",
+        "order": 76,
+        "content": "Cơ sở cai nghiện, cơ sở giáo dục bắt buộc, trường giáo dưỡng, cơ sở giam giữ phạm nhân và cơ sở giam giữ khác."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "19",
+        "order": 77,
+        "content": "Cơ sở bảo trợ xã hội."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "19",
+        "order": 78,
+        "content": "Nơi làm việc của cơ quan nhà nước, tổ chức chính trị, tổ chức chính trị - xã hội, tổ chức chính trị xã hội - nghề nghiệp, đơn vị sự nghiệp công lập, trừ địa điểm được phép kinh doanh rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "20",
+        "order": 79,
+        "content": "Rượu, bia giả, không bảo đảm chất lượng, an toàn thực phẩm và rượu, bia nhập lậu, không rõ nguồn gốc, xuất xứ đều bị tịch thu, xử lý theo quy định của pháp luật."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "20",
+        "order": 80,
+        "content": "Tổ chức, cá nhân có trách nhiệm phối hợp, tham gia với cơ quan có thẩm quyền trong phòng, chống rượu, bia giả, không bảo đảm chất lượng, an toàn thực phẩm và rượu, bia nhập lậu, không rõ nguồn gốc, xuất xứ."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "20",
+        "order": 81,
+        "content": "Bộ Công Thương, Bộ Y tế, trong phạm vi nhiệm vụ, quyền hạn của mình, hướng dẫn việc bổ sung chất chỉ thị màu vào các sản phẩm cồn không dùng trong thực phẩm để phân biệt với cồn thực phẩm và phòng ngừa pha chế rượu từ sản phẩm cồn không được phép dùng trong thực phẩm."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "21",
+        "order": 82,
+        "content": "Người điều khiển phương tiện giao thông không uống rượu, bia trước và trong khi tham gia giao thông."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "21",
+        "order": 83,
+        "content": "Người đứng đầu cơ sở kinh doanh vận tải, chủ phương tiện giao thông vận tải có trách nhiệm chủ động thực hiện biện pháp phòng ngừa, phát hiện, ngăn chặn người điều khiển phương tiện vận tải uống rượu, bia ngay trước và trong khi tham gia giao thông."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "21",
+        "order": 84,
+        "content": "Cơ quan, người có thẩm quyền có trách nhiệm kiểm tra nồng độ cồn trong máu, hơi thở của người điều khiển phương tiện giao thông đang tham gia giao thông hoặc gây ra tai nạn giao thông."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "21",
+        "order": 85,
+        "content": "Bộ Giao thông vận tải có trách nhiệm xây dựng nội dung và tổ chức việc đào tạo về phòng, chống tác hại của rượu, bia trong chương trình đào tạo cấp bằng, chứng chỉ, giấy phép điều khiển phương tiện giao thông thuộc phạm vi quản lý."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "22",
+        "order": 86,
+        "content": "Các biện pháp phòng ngừa, can thiệp và giảm tác hại của việc uống rượu, bia đối với sức khỏe bao gồm:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "22",
+        "order": 87,
+        "content": "Cơ sở y tế thực hiện các biện pháp quy định tại khoản 1 Điều này theo hướng dẫn chuyên môn, kỹ thuật của Bộ Y tế."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "order": 88,
+        "content": "Tư vấn về phòng, chống tác hại của rượu, bia bao gồm các nội dung sau đây:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "order": 89,
+        "content": "Việc tư vấn về phòng, chống tác hại của rượu, bia tập trung vào các đối tượng sau đây:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "order": 90,
+        "content": "Ủy ban nhân dân cấp xã chủ trì phối hợp với Ủy ban Mặt trận Tổ quốc Việt Nam cùng cấp và các tổ chức thành viên của Mặt trận hướng dẫn, tạo điều kiện cho hoạt động tư vấn về phòng, chống tác hại của rượu, bia trên địa bàn."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "order": 91,
+        "content": "Nhà nước tạo điều kiện và khuyến khích tổ chức, cá nhân thực hiện tư vấn về phòng, chống tác hại của rượu, bia cho thành viên trong cộng đồng."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "order": 92,
+        "content": "Cơ quan, tổ chức, cá nhân thực hiện hoạt động tư vấn quy định tại khoản 1 và khoản 2 Điều này phù hợp với chức năng, nhiệm vụ được giao."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "24",
+        "order": 93,
+        "content": "Tuyên truyền, vận động các gia đình, thành viên thuộc tổ chức, cộng đồng tham gia tuyên truyền và thực hiện quy định của pháp luật về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "24",
+        "order": 94,
+        "content": "Lồng ghép hoạt động phòng, chống tác hại của rượu, bia vào các phong trào, hoạt động văn hóa, văn nghệ, thể thao, xây dựng đời sống văn hóa và hoạt động khác tại cộng đồng."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "24",
+        "order": 95,
+        "content": "Vận động, khuyến khích quy định trong hương ước, quy ước việc hạn chế hoặc không uống rượu, bia tại đám cưới, đám tang, lễ hội trên địa bàn dân cư."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "24",
+        "order": 96,
+        "content": "Vận động cá nhân, tổ chức không sử dụng sản phẩm rượu, bia không rõ nguồn gốc, xuất xứ, chưa được kiểm nghiệm an toàn thực phẩm."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "24",
+        "order": 97,
+        "content": "Phát hiện, phản ánh người say rượu, bia, người nghiện rượu, bia để cảnh báo, phòng ngừa, xử lý hành vi gây ảnh hưởng đến trật tự, an toàn xã hội."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "25",
+        "order": 98,
+        "content": "Các biện pháp chăm sóc, hỗ trợ, bảo vệ trẻ em, phụ nữ và các đối tượng yếu thế khác để phòng ngừa, giảm tác hại của rượu, bia bao gồm:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "25",
+        "order": 99,
+        "content": "Các biện pháp quy định tại khoản 1 Điều này phải được lồng ghép trong chương trình, kế hoạch, hoạt động có liên quan đến trẻ em, phụ nữ và các đối tượng yếu thế khác."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "25",
+        "order": 100,
+        "content": "Cơ quan, tổ chức, gia đình, cá nhận thực hiện quy định tại khoản 1 và khoản 2 Điều này phù hợp với chức năng, nhiệm vụ được giao."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "26",
+        "order": 101,
+        "content": "Kinh phí cho hoạt động phòng, chống tác hại của rượu, bia bao gồm:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "26",
+        "order": 102,
+        "content": "Kinh phí cho hoạt động phòng, chống tác hại của rượu, bia được phân bổ, quản lý, sử dụng đúng mục đích, hiệu quả và theo quy định của pháp luật"
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "26",
+        "order": 103,
+        "content": "Chính phủ quy định nội dung chi, mức chi cho hoạt động phòng, chống tác hại của rượu, bia được ngân sách nhà nước bảo đảm."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "27",
+        "order": 104,
+        "content": "Người làm công tác phòng, chống tác hại của rượu, bia được đào tạo, bồi dưỡng kiến thức chuyên môn, nghiệp vụ phù hợp với trách nhiệm được giao."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "27",
+        "order": 105,
+        "content": "Nhân viên y tế cơ sở, cộng tác viên thực hiện phòng, chống tác hại của rượu, bia được ưu tiên tham gia các hoạt động bồi dưỡng nâng cao năng lực, kiến thức chuyên môn, nghiệp vụ liên quan đến phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "28",
+        "order": 106,
+        "content": "Tổ chức, cá nhân có hành vi vi phạm pháp luật về phòng, chống tác hại của rượu, bia thì tùy theo tính chất, mức độ vi phạm mà bị xử lý kỷ luật, xử phạt vi phạm hành chính hoặc bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường theo quy định của pháp luật."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "28",
+        "order": 107,
+        "content": "Cơ quan, người có thẩm quyền được sử dụng phương tiện, thiết bị kỹ thuật nghiệp vụ để phát hiện, xử lý kịp thời hành vi vi phạm pháp luật về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "28",
+        "order": 108,
+        "content": "Chính phủ quy định về xử phạt vi phạm hành chính trong phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "29",
+        "order": 109,
+        "content": "Ban hành, trình cấp có thẩm quyền ban hành và tổ chức thực hiện chính sách, pháp luật, kế hoạch về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "29",
+        "order": 110,
+        "content": "Thông tin, tuyên truyền, phổ biến, giáo dục về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "29",
+        "order": 111,
+        "content": "Đào tạo, bồi dưỡng về công tác phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "29",
+        "order": 112,
+        "content": "Thống kê, sơ kết, tổng kết, định kỳ báo cáo việc thực hiện phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "29",
+        "order": 113,
+        "content": "Thanh tra, kiểm tra, xử lý vi phạm pháp luật và giải quyết khiếu nại, tố cáo về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "29",
+        "order": 114,
+        "content": "Nghiên cứu khoa học và hợp tác quốc tế về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "30",
+        "order": 115,
+        "content": "Chính phủ thống nhất quản lý nhà nước về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "30",
+        "order": 116,
+        "content": "Bộ Y tế là cơ quan đầu mối giúp Chính phủ thực hiện quản lý nhà nước về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "30",
+        "order": 117,
+        "content": "Bộ, cơ quan ngang Bộ, trong phạm vi nhiệm vụ, quyền hạn của mình, có trách nhiệm thực hiện quản lý nhà nước về phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "30",
+        "order": 118,
+        "content": "Ủy ban nhân dân các cấp, trong phạm vi nhiệm vụ, quyền hạn của mình, thực hiện quản lý nhà nước về phòng, chống tác hại của rượu, bia tại địa phương."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "order": 119,
+        "content": "Mặt trận Tổ quốc Việt Nam và các tổ chức thành viên của Mặt trận, trong phạm vi chức năng, nhiệm vụ của mình, có trách nhiệm giáo dục, tuyên truyền, vận động nhân dân, đoàn viên, hội viên thực hiện chính sách, pháp luật về phòng, chống tác hại của rượu, bia; đưa nội dung phòng, chống tác hại của rượu, bia vào nội quy, quy chế của cơ quan, tổ chức; tham gia ý kiến xây dựng pháp luật, thực hiện giám sát, phản biện xã hội trong lĩnh vực phòng, chống tác hại của rượu, bia theo quy định của pháp luật."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "order": 120,
+        "content": "Đoàn Thanh niên Cộng sản Hồ Chí Minh có trách nhiệm sau đây:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "order": 121,
+        "content": "Hội Liên hiệp Phụ nữ Việt Nam có trách nhiệm sau đây:"
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "order": 122,
+        "content": "Tổ chức xã hội - nghề nghiệp, tổ chức xã hội, trong phạm vi chức năng, nhiệm vụ của mình, tham gia giáo dục, tuyên truyền, vận động thực hiện chính sách, pháp luật về phòng, chống tác hại của rượu, bia; tham gia ý kiến xây dựng pháp luật về phòng, chống tác hại của rượu, bia; cung cấp thông tin về phòng, chống tác hại của rượu, bia theo quy định của pháp luật."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 123,
+        "content": "Tuân thủ quy định của pháp luật về điều kiện kinh doanh rượu, bia; về quảng cáo, khuyến mại, tài trợ, an toàn thực phẩm, chất lượng, tiêu chuẩn, quy chuẩn kỹ thuật, ghi nhãn hàng hóa đối với rượu, bia. Thông tin về sản phẩm rượu, bia phải bảo đảm chính xác, khoa học."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 124,
+        "content": "Cung cấp thông tin đầy đủ, chính xác về hoạt động kinh doanh của cơ sở theo yêu cầu của cơ quan có thẩm quyền."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 125,
+        "content": "Không sử dụng lao động là người chưa đủ 18 tuổi trực tiếp tham gia vào việc kinh doanh, quảng cáo rượu, bia."
+      },
+      {
+        "number": "4",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 126,
+        "content": "Thu hồi và xử lý rượu, bia không bảo đảm chất lượng, an toàn thực phẩm do cơ sở mình sản xuất, mua bán theo quy định của pháp luật về an toàn thực phẩm."
+      },
+      {
+        "number": "5",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 127,
+        "content": "Cơ sở bán rượu, bia phải niêm yết thông báo không bán rượu, bia cho người chưa đủ 18 tuổi. Trường hợp nghi ngờ về độ tuổi của người mua rượu, bia thì người bán có quyền yêu cầu người mua xuất trình giấy tờ chứng minh."
+      },
+      {
+        "number": "6",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 128,
+        "content": "Cơ sở bán rượu, bia tiêu dùng tại chỗ nhắc nhở và có hình thức thông tin phù hợp đối với khách hàng về việc không điều khiển phương tiện giao thông, hỗ trợ khách hàng thuê, sử dụng phương tiện giao thông công cộng sau khi uống rượu, bia."
+      },
+      {
+        "number": "7",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "32",
+        "order": 129,
+        "content": "Kể từ ngày Luật này có hiệu lực, không được mở mới điểm bán rượu, bia để tiêu dùng tại chỗ trong bán kính 100 m tính từ khuôn viên của cơ sở y tế, nhà trẻ, trường mẫu giáo, trường mầm non, cơ sở giáo dục phổ thông."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "33",
+        "order": 130,
+        "content": "Người đứng đầu cơ quan, tổ chức, trong phạm vi nhiệm vụ, quyền hạn của mình, có trách nhiệm tổ chức thực hiện các biện pháp phòng, chống tác hại của rượu, bia; tổ chức thực hiện nghiêm quy định không uống rượu, bia trong thời gian làm việc, tại nơi làm việc của cơ quan, tổ chức."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "33",
+        "order": 131,
+        "content": "Người đứng đầu tổ dân phố, khu phố, khối phố, thôn, ấp, bản, làng, buôn, phum, sóc, tổ chức tại cơ sở, cộng đồng tham gia các hoạt động phòng, chống tác hại của rượu, bia quy định tại Điều 24 của Luật này."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "33",
+        "order": 132,
+        "content": "Người đứng đầu, người quản lý, điều hành địa điểm quy định tại Điều 10 và Điều 19 của Luật này có trách nhiệm sau đây:"
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "34",
+        "order": 133,
+        "content": "Giáo dục, giám sát, nhắc nhở thành viên chưa đủ 18 tuổi không uống rượu, bia, các thành viên khác trong gia đình hạn chế uống rượu, bia; động viên, giúp đỡ người nghiện rượu, bia trong gia đình cai nghiện rượu, bia."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "34",
+        "order": 134,
+        "content": "Hướng dẫn các thành viên trong gia đình kỹ năng từ chối uống rượu, bia; kỹ năng nhận biết, ứng xử, xử trí khi gặp người say rượu, bia, người nghiện rượu, bia và thực hiện các biện pháp phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "34",
+        "order": 135,
+        "content": "Tham gia với các cơ quan, tổ chức và cộng đồng thực hiện phòng, chống tác hại của rượu, bia."
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "35",
+        "order": 136,
+        "content": "Sửa đổi, bổ sung khoản 8 Điều 8 của Luật Giao thông đường bộ số 23/2008/QH12 đã được sửa đổi, bổ sung một số điều theo Luật số 35/2018/QH14 như sau:\n“8. Điều khiển phương tiện tham gia giao thông đường bộ mà trong máu hoặc hơi thở có nồng độ cồn”."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "35",
+        "order": 137,
+        "content": "Sửa đổi, bổ sung khoản 8 Điều 8 của Luật Giao thông đường thủy nội địa số 23/2004/QH11 đã được sửa đổi, bổ sung một số điều theo Luật số 48/2014/QH13, Luật số 97/2015/QH13 và Luật số 35/2018/QH14 như sau:\n“8. Thuyền viên, người lái phương tiện đang làm việc trên phương tiện mà trong máu hoặc hơi thở có nồng độ cồn hoặc có các chất kích thích khác mà luật cấm sử dụng.”."
+      },
+      {
+        "number": "3",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "35",
+        "order": 138,
+        "content": "Thay thế một số cụm từ tại một số điều của Luật Thương mại số 36/2005/QH11 đã dược sửa đổi, bổ sung một số điều theo Luật số 05/2017/QH14 như sau:"
+      },
+      {
+        "number": "1",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "36",
+        "order": 139,
+        "content": "Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2020."
+      },
+      {
+        "number": "2",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "36",
+        "order": 140,
+        "content": "Kể từ ngày Luật này có hiệu lực đến ngày 01 tháng 01 năm 2022, việc cấp phép sản xuất rượu thủ công quy định tại khoản 2 Điều 15 của Luật này và việc đăng ký sản xuất rượu thủ công quy định tại khoản 3 Điều 15 của Luật này không phải nộp phí, lệ phí."
+      }
+    ],
+    "points": [
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 0,
+        "content": "Chính xác, khách quan và khoa học;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 1,
+        "content": "Thường xuyên; phù hợp, dễ tiếp cận và hiệu quả đối với từng đối tượng, trình độ, lứa tuổi, giới tính; phù hợp với truyền thống, văn hóa, bản sắc dân tộc, tôn giáo và phong tục tập quán; chú trọng đối với học sinh, sinh viên, thanh niên, phụ nữ mang thai và cá nhân, tổ chức, hộ gia đình sản xuất rượu thủ công."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "parent_clause": "2",
+        "order": 2,
+        "content": "Có thông tin, hình ảnh nhằm khuyến khích uống rượu, bia; thông tin rượu, bia có tác dụng tạo sự trưởng thành, thành đạt, thân thiện, hấp dẫn về giới tính; hướng đến trẻ em, học sinh, sinh viên, thanh niên, phụ nữ mang thai;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "parent_clause": "2",
+        "order": 3,
+        "content": "Sử dụng vật dụng, hình ảnh, biểu tượng, âm nhạc, nhân vật trong phim, nhãn hiệu sản phẩm dành cho trẻ em, học sinh, sinh viên; sử dụng người chưa đủ 18 tuổi hoặc hình ảnh của người chưa đủ 18 tuổi trong quảng cáo rượu, bia."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "parent_clause": "3",
+        "order": 4,
+        "content": "Sự kiện, phương tiện quảng cáo, sản phẩm dành cho người chưa đủ 18 tuổi, học sinh, sinh viên, thanh niên, phụ nữ mang thai;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "parent_clause": "3",
+        "order": 5,
+        "content": "Phương tiện giao thông;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "parent_clause": "3",
+        "order": 6,
+        "content": "Báo nói, báo hình ngay trước, trong và ngay sau chương trình dành cho trẻ em; trong thời gian từ 18 giờ đến 21 giờ hằng ngày, trừ trường hợp quảng cáo có sẵn trong các chương trình thể thao mua bản quyền tiếp sóng trực tiếp từ nước ngoài và trường hợp khác theo quy định của Chính phủ;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "12",
+        "parent_clause": "3",
+        "order": 7,
+        "content": "Phương tiện quảng cáo ngoài trời vi phạm quy định về kích thước, khoảng cách đặt phương tiện quảng cáo tính từ khuôn viên của cơ sở giáo dục, cơ sở, khu vực chăm sóc, nuôi dưỡng, vui chơi, giải trí dành cho người chưa đủ 18 tuổi."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "1",
+        "order": 8,
+        "content": "Doanh nghiệp được thành lập theo quy định của pháp luật;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "1",
+        "order": 9,
+        "content": "Có dây chuyền máy móc, thiết bị công nghiệp, quy trình công nghệ sản xuất rượu đáp ứng quy mô dự kiến sản xuất;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "1",
+        "order": 10,
+        "content": "Bảo đảm điều kiện về an toàn thực phẩm và bảo vệ môi trường theo quy định của pháp luật;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "1",
+        "order": 11,
+        "content": "Có nhân viên kỹ thuật có trình độ, chuyên môn phù hợp với ngành, nghề sản xuất rượu."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "2",
+        "order": 12,
+        "content": "Doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã hoặc hộ kinh doanh được thành lập theo quy định của pháp luật;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "2",
+        "order": 13,
+        "content": "Bảo đảm điều kiện về an toàn thực phẩm theo quy ánh của pháp luật."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "3",
+        "order": 14,
+        "content": "Có hợp đồng mua bán với cơ sở có giấy phép sản xuất rượu và có đăng ký với Ủy ban nhân dân cấp xã nơi có cơ sở sản xuất;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "3",
+        "order": 15,
+        "content": "Bảo đảm điều kiện về an toàn thực phẩm theo quy định của pháp luật."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "4",
+        "order": 16,
+        "content": "Đăng ký kinh doanh theo quy định của pháp luật;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "15",
+        "parent_clause": "4",
+        "order": 17,
+        "content": "Đáp ứng điều kiện theo từng loại hình mua bán rượu."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "22",
+        "parent_clause": "1",
+        "order": 18,
+        "content": "Tư vấn về phòng, chống tác hại của rượu, bia cho người đến khám bệnh, chữa bệnh tại cơ sở y tế;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "22",
+        "parent_clause": "1",
+        "order": 19,
+        "content": "Sàng lọc, phát hiện sớm yếu tố nguy cơ đối với sức khỏe của người uống rượu, bia; người mắc bệnh, rối loạn chức năng do uống rượu, bia; người nghiện rượu, bia;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "22",
+        "parent_clause": "1",
+        "order": 20,
+        "content": "Can thiệp giảm tác hại cho người có yếu tố nguy cơ đối với sức khỏe, phụ nữ mang thai có hội chứng hoặc nguy cơ ngộ độc rượu ở thai nhi; phòng, chống nghiện và tái nghiện rượu, bia;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "22",
+        "parent_clause": "1",
+        "order": 21,
+        "content": "Chẩn đoán, điều trị, phục hồi chức năng cho người mắc bệnh, rối loạn chức năng có liên quan đến uống rượu, bia."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "1",
+        "order": 22,
+        "content": "Thông tin, kiến thức, pháp luật về phòng, chống tác hại của rượu, bia;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "1",
+        "order": 23,
+        "content": "Biện pháp giảm tác hại của rượu, bia; kỹ năng từ chối uống rượu, bia; kỹ năng nhận biết và ứng xử, xử trí khi gặp người say rượu, bia, người nghiện rượu, bia."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 24,
+        "content": "Người thường xuyên uống rượu, bia;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 25,
+        "content": "Người nghiện rượu, bia;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 26,
+        "content": "Thành viên gia đình có người thường xuyên uống rượu, bia, người nghiện rượu, bia;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 27,
+        "content": "Trẻ em, học sinh, sinh viên, thanh niên, phụ nữ mang thai;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 28,
+        "content": "Người bị ảnh hưởng bởi tác hại của rượu, bia."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "25",
+        "parent_clause": "1",
+        "order": 29,
+        "content": "Tư vấn cho phụ nữ trong độ tuổi sinh đẻ, phụ nữ mang thai, phụ nữ đang cho con bú về tác hại của rượu, bia đối với thai nhi, trẻ em; cho người bị ảnh hưởng bởi tác hại của rượu, bia khi sử dụng dịch vụ tại cơ sở y tế, cơ sở trợ giúp xã hội, cơ sở hỗ trợ nạn nhân bị bạo lực gia đình;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "25",
+        "parent_clause": "1",
+        "order": 30,
+        "content": "Can thiệp, hỗ trợ, áp dụng biện pháp cấm tiếp xúc, bảo đảm an toàn theo quy định của pháp luật về phòng, chống bạo lực gia đình đối với trẻ em, phụ nữ và các đối tượng yếu thế khác để không bị ảnh hưởng bởi tác hại của rượu, bia;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "25",
+        "parent_clause": "1",
+        "order": 31,
+        "content": "Các biện pháp ngăn chặn theo quy định của pháp luật."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "26",
+        "parent_clause": "1",
+        "order": 32,
+        "content": "Ngân sách nhà nước;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "26",
+        "parent_clause": "1",
+        "order": 33,
+        "content": "Kinh phí hợp pháp khác."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "2",
+        "order": 34,
+        "content": "Thực hiện trách nhiệm quy định tại khoản 1 Điều này;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "2",
+        "order": 35,
+        "content": "Tuyên truyền, giáo dục trẻ em, học sinh, sinh viên, thanh niên không uống rượu, bia;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "2",
+        "order": 36,
+        "content": "Phối hợp với cơ quan, tổ chức có liên quan để bảo vệ và hỗ trợ trẻ em, học sinh, sinh viên, thanh niên bị ảnh hưởng bởi tác hại của rượu, bia;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "2",
+        "order": 37,
+        "content": "Lồng ghép hoạt động phòng, chống tác hại của rượu, bia trong công tác đoàn, đội."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "3",
+        "order": 38,
+        "content": "Thực hiện trách nhiệm quy định tại khoản 1 Điều này;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "3",
+        "order": 39,
+        "content": "Phối hợp với cơ quan, tổ chức có liên quan để bảo vệ và hỗ trợ phụ nữ, trẻ em bị ảnh hưởng bởi tác hại của rượu, bia;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "31",
+        "parent_clause": "3",
+        "order": 40,
+        "content": "Lồng ghép hoạt động phòng, chống tác hại của rượu, bia trong công tác hội."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "33",
+        "parent_clause": "3",
+        "order": 41,
+        "content": "Nhắc nhở, yêu cầu chấm dứt hành vi vi phạm quy định tại Điều 10 và Điều 19 của Luật này; từ chối cung cấp dịch vụ nếu người vi phạm tiếp tục vi phạm sau khi đã được nhắc nhở, yêu cầu;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "33",
+        "parent_clause": "3",
+        "order": 42,
+        "content": "Tổ chức thực hiện, hướng dẫn, kiểm tra, đôn đốc mọi người thực hiện đúng quy định về không được uống, không được bán rượu, bia tại địa điểm thuộc, quyền quản lý, điều hành."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "35",
+        "parent_clause": "3",
+        "order": 43,
+        "content": "Thay thế cụm từ “rượu có độ cồn từ 30 độ trở lên” bằng cụm từ “rượu, bia có độ cồn từ 15 độ trở lên” tại khoản 4 Điều 100;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "44/2019/QH14",
+        "parent_article": "35",
+        "parent_clause": "3",
+        "order": 44,
+        "content": "Thay thế cụm từ “rượu có độ cồn từ 30 độ trở lên” bằng cụm từ “rượu có độ cồn từ 15 độ trở lên” tại khoản 4 Điều 109."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "BELONGS_TO_GROUP",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "DocumentGroup",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_TYPE",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "DocumentType",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_STATUS",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "EffectStatus",
+      "to_id": "2"
+    },
+    {
+      "type": "ISSUED_BY",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Organization",
+      "to_id": "161"
+    },
+    {
+      "type": "SIGNED_BY",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Signer",
+      "to_id": "430"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Field",
+      "to_id": "12"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Field",
+      "to_id": "11"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "264/QĐ-UBDT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "169/QĐ-VKSTC"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "1179/QĐ-TCHQ"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "1180/QĐ-BVHTTDL"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "08/2019/TT-BCA"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "87/QĐ-UBDT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "13/2019/QĐ-TTg"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "01/CT-BXD"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "170/QĐ-BYT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Document",
+      "to_id": "34/CT-TTg"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "I"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "II"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "III"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "IV"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "V"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "VI"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "44/2019/QH14",
+      "to_label": "Chapter",
+      "to_id": "VII"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "18"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "19"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "20"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Article",
+      "to_id": "21"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Article",
+      "to_id": "22"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Article",
+      "to_id": "23"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Article",
+      "to_id": "24"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Article",
+      "to_id": "25"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "26"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "27"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "28"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "29"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "30"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "31"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "32"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "33"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "34"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VII",
+      "to_label": "Article",
+      "to_id": "35"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VII",
+      "to_label": "Article",
+      "to_id": "36"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "13",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "13",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "17",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "17",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "20",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "20",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "20",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "22",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "22",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "25",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "25",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "25",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "26",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "26",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "26",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "27",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "27",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "28",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "28",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "28",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "12.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "12.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "12.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "12.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "12.3",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "12.3",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.1",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "22.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "22.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "22.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "22.1",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "25.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "25.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "25.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "26.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "26.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.2",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "31.3",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "33.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "33.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "35.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "35.3",
+      "to_label": "Point",
+      "to_id": "b"
+    }
+  ],
+  "preamble": "QUỐC HỘI\n-------\nSố: 44/2019/QH14\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập - Tự do - Hạnh phúc\n---------------\nLUẬT\nPHÒNG, CHỐNG TÁC HẠI CỦA RƯỢU, BIA\nCăn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam;\nQuốc hội ban hành Luật Phòng, chống tác hại của rượu, bia.",
+  "footer": "Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XIV, kỳ họp thứ 7 thông qua ngày 14 tháng 6 năm 2019.\n\n \n\n\n\n\n\n\n \n\n\n\nCHỦ TỊCH QUỐC HỘI\n\n\n\n\n\n\n\n\n\n\n\t\t\tNguyễn Thị Kim Ngân\n\n\n\n\n\n \n\n \n\n \n\n(*) Nguồn dữ liệu được lấy từ cơ sở dữ liệu của LuatVietnam.vn, có tính chất tham khảo."
+}

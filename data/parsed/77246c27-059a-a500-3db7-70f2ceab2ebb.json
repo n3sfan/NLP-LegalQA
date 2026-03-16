@@ -1,0 +1,4375 @@
+{
+  "doc_stem": "77246c27-059a-a500-3db7-70f2ceab2ebb",
+  "nodes": {
+    "document": {
+      "doc_guid": "77246c27-059a-a500-3db7-70f2ceab2ebb",
+      "doc_identity": "119/2024/NĐ-CP",
+      "doc_name": "Nghị định 119/2024/NĐ-CP của Chính phủ quy định về thanh toán điện tử giao thông đường bộ",
+      "issue_date": "2024-09-30T00:00:00",
+      "effect_date": "2024-10-01T00:00:00",
+      "expire_date": null,
+      "gazette_number": "1107&1108-10/2024",
+      "gazette_date": "2024-10-11T00:00:00"
+    },
+    "document_group": [
+      {
+        "id": 1,
+        "name": "Văn bản pháp quy"
+      }
+    ],
+    "document_type": [
+      {
+        "id": 11,
+        "name": "Nghị định"
+      }
+    ],
+    "effect_status": [
+      {
+        "id": 4,
+        "name": "Còn Hiệu lực"
+      }
+    ],
+    "organizations": [
+      {
+        "id": 93,
+        "name": "Chính phủ"
+      }
+    ],
+    "signers": [
+      {
+        "id": 1074,
+        "name": "Trần Hồng Hà"
+      }
+    ],
+    "fields": [
+      {
+        "id": 4,
+        "name": "Thuế-Phí-Lệ phí"
+      },
+      {
+        "id": 2,
+        "name": "Tài chính-Ngân hàng"
+      },
+      {
+        "id": 28,
+        "name": "Giao thông"
+      }
+    ],
+    "related_documents": [
+      {
+        "doc_guid": "b81fb00e-05d5-ba00-2684-34ead31dac6f",
+        "doc_identity": "2292/QĐ-BTC",
+        "doc_name": "Quyết định 2292/QĐ-BTC của Bộ Tài chính về việc công bố thủ tục hành chính mới ban hành lĩnh vực quản lý công sản thuộc phạm vi chức năng quản lý của Bộ Tài chính",
+        "field_name": "Tài chính-Ngân hàng, Hành chính"
+      },
+      {
+        "doc_guid": "f50f088c-0599-e000-1d3b-49aa9928529f",
+        "doc_identity": "2281/QĐ-BTC",
+        "doc_name": "Quyết định 2281/QĐ-BTC của Bộ Tài chính về việc công bố công khai dự toán ngân sách năm 2024 của Bộ Tài chính",
+        "field_name": "Tài chính-Ngân hàng"
+      },
+      {
+        "doc_guid": "01573fca-0598-1e00-beaa-0b19ee6e8831",
+        "doc_identity": "1153/QĐ-BGTVT",
+        "doc_name": "Quyết định 1153/QĐ-BGTVT của Bộ Giao thông Vận tải về việc điều chỉnh dự toán chi ngân sách Nhà nước năm 2024 - nguồn chi quản lý Nhà nước, đảng, đoàn thể và sự nghiệp kinh tế khác",
+        "field_name": "Tài chính-Ngân hàng"
+      },
+      {
+        "doc_guid": "cedcb4a6-0597-4500-2a92-2b783063d796",
+        "doc_identity": "2752/QĐ-BVHTTDL",
+        "doc_name": "Quyết định 2752/QÐ-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch về việc tổ chức Lớp tập huấn nghiệp vụ thực hiện Tổng kiểm kê tài sản công cho các cơ quan, đơn vị thuộc Bộ tại miền Bắc và miền Nam",
+        "field_name": "Tài chính-Ngân hàng, Cơ cấu tổ chức"
+      },
+      {
+        "doc_guid": "bd46d84f-059b-9c00-7088-910975052cff",
+        "doc_identity": "1754/QĐ-TLĐ",
+        "doc_name": "Quyết định 1754/QĐ-TLĐ của Tổng Liên đoàn Lao động Việt Nam về việc ban hành Quy định về nguyên tắc xây dựng và giao dự toán tài chính công đoàn năm 2025",
+        "field_name": "Tài chính-Ngân hàng, Lao động-Tiền lương"
+      },
+      {
+        "doc_guid": "feea0f83-0598-c500-b8c2-e084071520b2",
+        "doc_identity": "2740/QĐ-BVHTTDL",
+        "doc_name": "Quyết định 2740/QÐ-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch phê duyệt Dự toán chi tiết nhiệm vụ “Tổ chức Chương trình Xúc tiến Du lịch - Điện ảnh Việt Nam tại Hoa Kỳ” từ nguồn ngân sách nhà nước cấp cho Quỹ hỗ trợ phát triển du lịch thực hiện Kế hoạch xúc tiến, quảng bá và hỗ trợ phát triển du lịch năm 2024",
+        "field_name": "Tài chính-Ngân hàng, Văn hóa-Thể thao-Du lịch"
+      },
+      {
+        "doc_guid": "eb719cab-0596-e300-846f-0dcfa0b33122",
+        "doc_identity": "1000/QĐ-TTg",
+        "doc_name": "Quyết định 1000/QĐ-TTg của Thủ tướng Chính phủ về việc bổ sung dự toán chi thường xuyên ngân sách Nhà nước năm 2024 của Bộ Y tế để thực hiện hoạt động tiêm chủng mở rộng",
+        "field_name": "Tài chính-Ngân hàng, Y tế-Sức khỏe"
+      },
+      {
+        "doc_guid": "194f209f-0607-1500-cf31-9934a9788eaa",
+        "doc_identity": "1938/QĐ-NHNN",
+        "doc_name": "Quyết định 1938/QĐ-NHNN của Ngân hàng Nhà nước Việt Nam về việc quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Ngân hàng Nhà nước chi nhánh Thành phố Hà Nội",
+        "field_name": "Tài chính-Ngân hàng, Cơ cấu tổ chức"
+      },
+      {
+        "doc_guid": "189eb635-0607-9500-4288-e869cd43edcf",
+        "doc_identity": "1939/QĐ-NHNN",
+        "doc_name": "Quyết định 1939/QĐ-NHNN của Ngân hàng Nhà nước Việt Nam về việc quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Ngân hàng Nhà nước chi nhánh Thành phố Hồ Chí Minh",
+        "field_name": "Tài chính-Ngân hàng, Cơ cấu tổ chức"
+      },
+      {
+        "doc_guid": "edccdbf4-0596-7d00-3782-1f2d88dda792",
+        "doc_identity": "1141/QĐ-BGTVT",
+        "doc_name": "Quyết định 1141/QĐ-BGTVT của Bộ Giao thông Vận tải về việc công bố công khai quyết toán vốn đầu tư công nguồn ngân sách Nhà nước theo niên độ ngân sách năm 2023 của Bộ Giao thông Vận tải",
+        "field_name": "Đầu tư, Tài chính-Ngân hàng"
+      }
+    ],
+    "parts": [],
+    "chapters": [
+      {
+        "number": "I",
+        "title": "QUY ĐỊNH CHUNG",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_part": null,
+        "order": 0,
+        "content": ""
+      },
+      {
+        "number": "II",
+        "title": "HỆ THỐNG THANH TOÁN ĐIỆN TỬ GIAO THÔNG",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_part": null,
+        "order": 1,
+        "content": ""
+      },
+      {
+        "number": "III",
+        "title": "MỞ VÀ SỬ DỤNG TÀI KHOẢN GIAO THÔNG",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_part": null,
+        "order": 2,
+        "content": ""
+      },
+      {
+        "number": "IV",
+        "title": "THANH TOÁN ĐIỆN TỬ GIAO THÔNG ĐƯỜNG BỘ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_part": null,
+        "order": 3,
+        "content": ""
+      },
+      {
+        "number": "V",
+        "title": "TRÁCH NHIỆM CỦA CÁC ĐƠN VỊ TRONG THANH TOÁN",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_part": null,
+        "order": 4,
+        "content": ""
+      },
+      {
+        "number": "VI",
+        "title": "TỔ CHỨC THỰC HIỆN",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_part": null,
+        "order": 5,
+        "content": ""
+      }
+    ],
+    "sections": [
+      {
+        "number": "1",
+        "title": "THANH TOÁN TIỀN SỬ DỤNG ĐƯỜNG BỘ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "order": 0,
+        "content": ""
+      },
+      {
+        "number": "2",
+        "title": "THANH TOÁN CÁC LOẠI PHÍ, GIÁ, TIỀN DỊCH VỤ KHÁC",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "order": 1,
+        "content": ""
+      },
+      {
+        "number": "3",
+        "title": "THÔNG TIN, BÁO CÁO VÀ BẢO MẬT, AN TOÀN THÔNG TIN",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "order": 2,
+        "content": ""
+      }
+    ],
+    "articles": [
+      {
+        "number": "1",
+        "title": "Phạm vi điều chỉnh",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 0,
+        "content": "\nNghị định này quy định chi tiết về thanh toán điện tử giao thông đường bộ: tài khoản giao thông; thanh toán tiền sử dụng đường bộ trên đường cao tốc; cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "2",
+        "title": "Đối tượng áp dụng",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 1,
+        "content": "\nNghị định này áp dụng đối với các tổ chức, cá nhân liên quan đến hoạt động thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "3",
+        "title": "Giải thích từ ngữ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 2,
+        "content": "\nTrong Nghị định này, các từ ngữ dưới đây được hiểu như sau:"
+      },
+      {
+        "number": "4",
+        "title": "Nguyên tắc chung",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 3,
+        "content": ""
+      },
+      {
+        "number": "5",
+        "title": "Những hành vi không được thực hiện trong hoạt động thanh toán điện tử giao thông đường bộ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "I",
+        "parent_section": null,
+        "order": 4,
+        "content": ""
+      },
+      {
+        "number": "6",
+        "title": "Cấu thành hệ thống thanh toán điện tử giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 5,
+        "content": ""
+      },
+      {
+        "number": "7",
+        "title": "Thẻ đầu cuối gắn trên các phương tiện",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 6,
+        "content": ""
+      },
+      {
+        "number": "8",
+        "title": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 7,
+        "content": ""
+      },
+      {
+        "number": "9",
+        "title": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 8,
+        "content": ""
+      },
+      {
+        "number": "10",
+        "title": "Hệ thống thiết bị lắp đặt tại các điểm thu",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "II",
+        "parent_section": null,
+        "order": 9,
+        "content": ""
+      },
+      {
+        "number": "11",
+        "title": "Mở tài khoản giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 10,
+        "content": ""
+      },
+      {
+        "number": "12",
+        "title": "Sử dụng tài khoản giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 11,
+        "content": ""
+      },
+      {
+        "number": "13",
+        "title": "Khoá tài khoản giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 12,
+        "content": ""
+      },
+      {
+        "number": "14",
+        "title": "Đóng tài khoản giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "III",
+        "parent_section": null,
+        "order": 13,
+        "content": ""
+      },
+      {
+        "number": "15",
+        "title": "Thanh toán tiền sử dụng đường bộ theo hình thức điện tử không dừng",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "1",
+        "order": 14,
+        "content": ""
+      },
+      {
+        "number": "16",
+        "title": "Đối soát doanh thu thu tiền sử dụng đường bộ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "1",
+        "order": 15,
+        "content": ""
+      },
+      {
+        "number": "17",
+        "title": "Hoàn trả doanh thu thu tiền sử dụng đường bộ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "1",
+        "order": 16,
+        "content": ""
+      },
+      {
+        "number": "18",
+        "title": "Xử lý các trường hợp miễn thu, thu theo tháng, theo quý, theo năm",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "1",
+        "order": 17,
+        "content": ""
+      },
+      {
+        "number": "19",
+        "title": "Chi phí tổ chức, quản lý, giám sát thu tiền sử dụng đường bộ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "1",
+        "order": 18,
+        "content": ""
+      },
+      {
+        "number": "20",
+        "title": "Thanh toán các loại phí, giá, tiền dịch vụ khác",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "2",
+        "order": 19,
+        "content": ""
+      },
+      {
+        "number": "21",
+        "title": "Đối soát doanh thu dịch vụ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "2",
+        "order": 20,
+        "content": ""
+      },
+      {
+        "number": "22",
+        "title": "Hoàn trả doanh thu dịch vụ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "2",
+        "order": 21,
+        "content": ""
+      },
+      {
+        "number": "23",
+        "title": "Xử lý các trường hợp miễn thu, thu theo tháng, theo quý, theo năm",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "2",
+        "order": 22,
+        "content": ""
+      },
+      {
+        "number": "24",
+        "title": "Chi phí tổ chức, quản lý, giám sát thu phí, giá, tiền dịch vụ khác",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "2",
+        "order": 23,
+        "content": ""
+      },
+      {
+        "number": "25",
+        "title": "Quyền về thông tin, báo cáo",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "3",
+        "order": 24,
+        "content": ""
+      },
+      {
+        "number": "26",
+        "title": "Nghĩa vụ về thông tin, báo cáo",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "3",
+        "order": 25,
+        "content": ""
+      },
+      {
+        "number": "27",
+        "title": "Bảo mật và an toàn thông tin mạng",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "3",
+        "order": 26,
+        "content": ""
+      },
+      {
+        "number": "28",
+        "title": "Bảo đảm an toàn trong thanh toán",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "IV",
+        "parent_section": "3",
+        "order": 27,
+        "content": "\nNhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị vận hành thu phải áp dụng các biện pháp bảo đảm an toàn trong thanh toán theo quy định của pháp luật. Chủ phương tiện có nghĩa vụ tuân thủ các biện pháp bảo đảm an toàn trong thanh toán theo quy định và hướng dẫn của Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
+      },
+      {
+        "number": "29",
+        "title": "Trách nhiệm của Bộ Giao thông vận tải",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 28,
+        "content": ""
+      },
+      {
+        "number": "30",
+        "title": "Trách nhiệm của các bộ, ngành, địa phương có liên quan",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 29,
+        "content": ""
+      },
+      {
+        "number": "31",
+        "title": "Quyền và nghĩa vụ của chủ phương tiện",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 30,
+        "content": ""
+      },
+      {
+        "number": "32",
+        "title": "Quyền và nghĩa vụ của Nhà cung cấp dịch vụ thanh toán điện tử giao thông đối với chủ phương tiện",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 31,
+        "content": ""
+      },
+      {
+        "number": "33",
+        "title": "Quyền và nghĩa vụ khác của Nhà cung cấp dịch vụ thanh toán điện tử giao thông",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 32,
+        "content": ""
+      },
+      {
+        "number": "34",
+        "title": "Quyền và nghĩa vụ của đơn vị vận hành thu",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 33,
+        "content": ""
+      },
+      {
+        "number": "35",
+        "title": "Quyền và nghĩa vụ của đơn vị quản lý thu",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "V",
+        "parent_section": null,
+        "order": 34,
+        "content": ""
+      },
+      {
+        "number": "36",
+        "title": "Xử lý chuyển tiếp",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 35,
+        "content": ""
+      },
+      {
+        "number": "37",
+        "title": "Hiệu lực thi hành",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 36,
+        "content": ""
+      },
+      {
+        "number": "38",
+        "title": "Trách nhiệm tổ chức thực hiện",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_chapter": "VI",
+        "parent_section": null,
+        "order": 37,
+        "content": "\nCác Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương và các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này./."
+      }
+    ],
+    "clauses": [
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 0,
+        "content": "Phương tiện giao thông đường bộ (sau đây gọi tắt là phương tiện) là phương tiện giao thông cơ giới đường bộ, xe máy chuyên dùng và các loại xe tương tự thuộc đối tượng phải thu các loại phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 1,
+        "content": "Chủ phương tiện là chủ sở hữu phương tiện hoặc cá nhân, tổ chức khác được chủ sở hữu phương tiện giao quyền chiếm hữu, sử dụng phương tiện thuộc đối tượng phải thu các loại phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện. Chủ phương tiện đồng thời là chủ tài khoản giao thông, chủ phương tiện thanh toán được quy định tại Nghị định này."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 2,
+        "content": "Thẻ đầu cuối là thiết bị điện tử được gắn trên phương tiện để giao tiếp thông tin với hệ thống thiết bị lắp đặt tại các điểm thu theo tiêu chuẩn về nhận dạng tần số vô tuyến thụ động cho việc giao tiếp không dây và lưu trữ các thông tin liên quan đến kiểm định an toàn kỹ thuật và bảo vệ môi trường của phương tiện."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 3,
+        "content": "Phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện bao gồm:"
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 4,
+        "content": "Cơ quan có thẩm quyền bao gồm:"
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 5,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ là đơn vị được cơ quan có thẩm quyền lựa chọn để cung cấp dịch vụ thanh toán điện tử giao thông đường bộ đối với các loại phí, giá, tiền dịch vụ được quy định tại khoản 4 Điều này."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 6,
+        "content": "Nhà cung cấp dịch vụ thanh toán giao thông đường bộ là đơn vị được cơ quan có thẩm quyền hoặc đơn vị quản lý thu lựa chọn để cung cấp dịch vụ thanh toán điện tử giao thông đường bộ đối với các loại phí, giá, tiền dịch vụ được quy định tại điểm b khoản 4 Điều này."
+      },
+      {
+        "number": "8",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 7,
+        "content": "Đơn vị quản lý thu là tổ chức được cơ quan có thẩm quyền giao quyền thu hoặc có quyền thu các loại phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện."
+      },
+      {
+        "number": "9",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 8,
+        "content": "Đơn vị vận hành thu là tổ chức được đơn vị quản lý thu lựa chọn để vận hành hệ thống thiết bị lắp đặt tại các điểm thu."
+      },
+      {
+        "number": "10",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 9,
+        "content": "Điểm thu là nơi đặt trạm thu phí đường bộ hoặc là nơi lắp đặt các hệ thống thiết bị để tương tác với phương tiện, đọc các thông tin của phương tiện, thẻ đầu cuối và xử lý giao dịch thanh toán điện tử giao thông đường bộ hoặc các hình thức thanh toán khác đối với phương tiện được đơn vị quản lý thu chấp thuận."
+      },
+      {
+        "number": "11",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 10,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ là một thành phần của hệ thống quản lý cơ sở dữ liệu đường bộ do Bộ Giao thông vận tải đầu tư, tổ chức quản lý, vận hành, khai thác để quản lý tập trung cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "12",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "order": 11,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ hoặc của Nhà cung cấp dịch vụ thanh toán giao thông đường đường bộ (sau đây gọi chung là Nhà cung cấp dịch vụ thanh toán điện tử giao thông) bao gồm các phân hệ, hệ thống phần cứng, phần mềm đặt tại trung tâm dữ liệu, phục vụ các yêu cầu, quy trình nghiệp vụ thanh toán điện tử giao thông. Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông thực hiện thu nhận, xử lý các giao dịch được gửi về từ hệ thống thiết bị lắp đặt tại điểm thu và thực hiện các chức năng được quy định tại Nghị định này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "4",
+        "order": 12,
+        "content": "Bảo đảm tính minh bạch của công tác thanh toán điện tử các loại phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "4",
+        "order": 13,
+        "content": "Bảo đảm yêu cầu về kết nối liên thông giữa các cấu thành hệ thống thanh toán điện tử giao thông. Mỗi phương tiện chỉ gắn 01 thẻ đầu cuối tại một thời điểm."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "4",
+        "order": 14,
+        "content": "Bảo đảm an toàn, bảo mật thông tin cá nhân của chủ phương tiện theo quy định pháp luật về bảo vệ dữ liệu cá nhân, trừ trường hợp cung cấp thông tin theo quyết định của cơ quan nhà nước có thẩm quyền theo quy định của pháp luật."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "4",
+        "order": 15,
+        "content": "Bảo đảm việc tích hợp, cung cấp thông tin đầy đủ, kịp thời để phục vụ các mục tiêu quản lý nhà nước theo quy định của pháp luật."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "4",
+        "order": 16,
+        "content": "Bảo đảm quyền được lựa chọn, sử dụng dịch vụ, tiện ích giá trị gia tăng của chủ phương tiện."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 17,
+        "content": "Phá hủy, làm giả, xoá dữ liệu hoặc can thiệp nội dung thẻ đầu cuối; chuyển thẻ đầu cuối từ phương tiện tham gia giao thông này sang phương tiện tham gia giao thông khác."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 18,
+        "content": "Xâm nhập hoặc tìm cách xâm nhập, phá hoại, đánh cắp dữ liệu, làm thay đổi trái phép chương trình phần mềm, dữ liệu điện tử sử dụng trong thanh toán điện tử giao thông đường bộ; lợi dụng lỗi hệ thống mạng máy tính để trục lợi."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 19,
+        "content": "Cung cấp thông tin không trung thực trong quá trình tham gia các hoạt động thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 20,
+        "content": "Tiết lộ, cung cấp thông tin có liên quan đến dữ liệu cá nhân không đúng theo quy định của pháp luật."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 21,
+        "content": "Mở hoặc duy trì tài khoản giao thông nặc danh, mạo danh."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 22,
+        "content": "Các hành vi cố tình trốn tránh, gian lận trong thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "5",
+        "order": 23,
+        "content": "Cạnh tranh không lành mạnh giữa các Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "order": 24,
+        "content": "Thanh toán điện tử giao thông đường bộ được thực hiện tự động bởi Hệ thống thanh toán điện tử giao thông đường bộ (sau đây gọi tắt là hệ thống thanh toán điện tử giao thông)."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "order": 25,
+        "content": "Hệ thống thanh toán điện tử giao thông bao gồm các cấu thành sau:"
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "7",
+        "order": 26,
+        "content": "Phương tiện phải được gắn thẻ đầu cuối để mở tài khoản giao thông. Việc gắn thẻ đầu cuối và kích hoạt thẻ đầu cuối do Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện theo các quy định tại Nghị định này."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "7",
+        "order": 27,
+        "content": "Bộ Công an, Bộ Quốc phòng phối hợp với Bộ Giao thông vận tải và Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện gắn thẻ đầu cuối cho các phương tiện phục vụ an ninh, quốc phòng tham gia giao thông."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "7",
+        "order": 28,
+        "content": "Chủ phương tiện phải trả chi phí gắn thẻ đầu cuối cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ. Thẻ đầu cuối được Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ bảo hành trong thời gian tối thiểu là 12 tháng kể từ thời điểm gắn thẻ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "order": 29,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ phải bảo đảm các yêu cầu sau đây:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "order": 30,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ được kết nối với các hệ thống, cơ sở dữ liệu sau đây:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "order": 31,
+        "content": "Thông tin trong cơ sở dữ liệu thanh toán điện tử giao thông đường bộ được quản lý tập trung tại Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ được quy định tại Phụ lục kèm theo Nghị định này."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "order": 32,
+        "content": "Chi phí quản lý, vận hành, khai thác Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ được lấy từ nguồn chi phí tổ chức, quản lý, giám sát thu phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện và các nguồn tài chính được quy định tại khoản 1 Điều 42 Luật Đường bộ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "order": 33,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ do Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ đầu tư, xây dựng, cải tạo, nâng cấp, quản lý, vận hành, khai thác để thực hiện các nội dung sau đây:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "order": 34,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán giao thông đường bộ do Nhà cung cấp dịch vụ thanh toán giao thông đường bộ đầu tư, xây dựng, cải tạo, nâng cấp, quản lý, vận hành, khai thác để thực hiện các nội dung sau đây:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "order": 35,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông phải bảo đảm các yêu cầu sau đây:"
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "order": 36,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông được kết nối với các hệ thống, cơ sở dữ liệu sau đây:"
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "10",
+        "order": 37,
+        "content": "Hệ thống thiết bị lắp đặt tại các điểm thu phải được thiết kế, đầu tư, xây dựng, cải tạo, nâng cấp, quản lý, vận hành bảo trì, kết nối với Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông để thực hiện các nội dung sau đây:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "10",
+        "order": 38,
+        "content": "Đơn vị quản lý thu tổ chức đầu tư, xây dựng, cải tạo, quản lý, vận hành hệ thống lắp đặt tại các điểm thu và quyết định chi phí quản lý, vận hành và bảo trì theo quy định tại Điều 41 Luật Đường bộ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 39,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ mở tài khoản giao thông và cung cấp tài khoản truy cập ứng dụng thanh toán điện tử giao thông đường bộ cho chủ phương tiện ngay lần đầu gắn thẻ đầu cuối."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 40,
+        "content": "Tại thời điểm thực hiện giao dịch thanh toán điện tử giao thông đường bộ, tài khoản giao thông chỉ được kết nối với một phương tiện thanh toán không dùng tiền mặt theo quy định của pháp luật ngân hàng để thực hiện thanh toán điện tử giao thông đường bộ. Phương tiện thanh toán không dùng tiền mặt do tổ chức cung ứng phương tiện thanh toán không dùng tiền mặt cung cấp thông qua hợp đồng dịch vụ với Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 41,
+        "content": "Mỗi tài khoản giao thông có thể sử dụng để chi trả cho nhiều phương tiện tham gia giao thông thuộc sở hữu của chủ phương tiện; mỗi phương tiện tham gia giao thông chỉ được nhận chi trả từ một tài khoản giao thông."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 42,
+        "content": "Đối tượng mở tài khoản giao thông bao gồm:"
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 43,
+        "content": "Hồ sơ mở tài khoản giao thông phải bảo đảm cung cấp đầy đủ thông tin tài khoản giao thông theo quy định tại Phụ lục kèm theo Nghị định này."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 44,
+        "content": "Xác thực thông tin chủ phương tiện mở tài khoản giao thông"
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 45,
+        "content": "Thông tin tài khoản giao thông phải được Nhà cung cấp dịch vụ thanh toán điện tử giao thông đồng bộ sau khi mở hoặc sau mỗi lần có thay đổi thông tin với Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ. Thông tin phương tiện thanh toán phải được Nhà cung cấp dịch vụ thanh toán giao thông đường bộ đồng bộ sau khi kết nối hoặc sau mỗi lần có thay đổi hoặc bổ sung phương tiện thanh toán với Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ. Các thông tin này phải được đồng bộ với Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ trong vòng 06 giờ kể từ khi có sự cập nhật, thay đổi trên Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
+      },
+      {
+        "number": "8",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 46,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ phải công khai cho chủ phương tiện các điều khoản về việc đăng ký mở và sử dụng tài khoản giao thông; trình tự, thủ tục tiếp nhận, xử lý hồ sơ mở tài khoản giao thông; phương thức và địa điểm ký hợp đồng mở, sử dụng tài khoản giao thông cho từng đối tượng phù hợp với điều kiện và khả năng cung ứng của mình nhưng phải bảo đảm tuân thủ các quy định của pháp luật và chịu trách nhiệm về tính chính xác, chặt chẽ, đầy đủ của hồ sơ và hợp đồng mở, sử dụng tài khoản giao thông."
+      },
+      {
+        "number": "9",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "order": 47,
+        "content": "Trong trường hợp có sự thay đổi thông tin trong hồ sơ mở tài khoản giao thông, chủ tài khoản giao thông phải thông báo cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ để cập nhật trên Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ trong thời hạn tối đa 10 ngày kể từ ngày thay đổi. Chủ tài khoản giao thông chịu toàn bộ trách nhiệm trong trường hợp không thông báo cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ theo quy định tại khoản này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 48,
+        "content": "Chủ phương tiện phải bảo đảm đủ tiền trong phương tiện thanh toán được kết nối với tài khoản giao thông khi thực hiện thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 49,
+        "content": "Trường hợp số tiền trong phương tiện thanh toán được kết nối với tài khoản giao thông không đủ để thực hiện thanh toán tiền sử dụng đường bộ trên đường cao tốc thì phương tiện không được đi qua trạm thu phí đường bộ trên đường cao tốc."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 50,
+        "content": "Trường hợp số tiền trong phương tiện thanh toán được kết nối với tài khoản giao thông không đủ để thực hiện thanh toán tiền sử dụng đường bộ thì phương tiện phải sử dụng làn thu phí hỗn hợp tại trạm thu phí đường bộ, trừ trường hợp quy định tại khoản 2 Điều này."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 51,
+        "content": "Trường hợp số tiền trong phương tiện thanh toán được kết nối với tài khoản giao thông không đủ để thực hiện thanh toán điện tử giao thông đường bộ, trừ trường hợp quy định tại khoản 2, khoản 3 Điều này thì thực hiện các hình thức thanh toán khác tại điểm thu."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 52,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ sử dụng trực tiếp các tài khoản giao thông do mình quản lý để thực hiện thanh toán điện tử giao thông đường bộ đối với các dịch vụ do Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ cung cấp."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 53,
+        "content": "Khi có yêu cầu hoặc được sự đồng ý của chủ tài khoản giao thông, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ sử dụng thông tin tài khoản giao thông thông qua kết nối, chia sẻ dữ liệu với Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ để thực hiện thanh toán điện tử giao thông đường bộ đối với các dịch vụ do Nhà cung cấp dịch vụ thanh toán giao thông đường bộ cung cấp. Nhà cung cấp dịch vụ thanh toán giao thông đường bộ cung cấp tài khoản truy cập ứng dụng thanh toán điện tử giao thông đường bộ cho chủ phương tiện."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "12",
+        "order": 54,
+        "content": "Trong trường hợp Nhà cung cấp dịch vụ thanh toán điện tử giao thông không duy trì được dịch vụ thanh toán điện tử giao thông đường bộ, Bộ Giao thông vận tải quyết định việc sử dụng tài khoản giao thông để bảo đảm không gián đoạn hoạt động thanh toán điện tử giao thông đường bộ trên cơ sở đồng ý của chủ tài khoản giao thông."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "order": 55,
+        "content": "Khóa tài khoản giao thông theo đề nghị của chủ tài khoản giao thông"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "order": 56,
+        "content": "Khóa tài khoản giao thông theo yêu cầu bằng văn bản của cơ quan có thẩm quyền theo quy định của pháp luật"
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "order": 57,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện đóng tài khoản giao thông trong các trường hợp sau:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "order": 58,
+        "content": "Sau khi đóng tài khoản giao thông, chủ tài khoản giao thông muốn sử dụng tài khoản giao thông phải làm thủ tục mở tài khoản giao thông theo quy định tại Điều 11 của Nghị định này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "order": 59,
+        "content": "Hình thức vận hành hệ thống thiết bị lắp đặt tại trạm thu phí đường bộ theo hình thức điện tử không dừng"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "order": 60,
+        "content": "Quá trình xử lý giao dịch thanh toán tiền sử dụng đường bộ theo hình thức điện tử không dừng"
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "order": 61,
+        "content": "Phương thức thanh toán tiền sử dụng đường bộ\nThanh toán tiền sử dụng đường bộ được thực hiện theo phương thức mở và phương thức kín. Trong đó:"
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "order": 62,
+        "content": "Các tuyến, đoạn tuyến đường cao tốc; các tuyến, đoạn tuyến đường cao tốc nối tiếp nhau được tổ chức thu thành một hệ thống thu thực hiện theo phương thức kín theo hình thức điện tử không dừng."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "order": 63,
+        "content": "Các trạm thu phí đường bộ không nằm trên đường cao tốc phải triển khai thu tiền sử dụng đường bộ theo hình thức điện tử không dừng và duy trì mỗi trạm thu phí đường bộ có 01 làn thu phí hỗn hợp hoặc 01 làn xử lý sự cố (làn thu phí áp dụng cả hình thức điện tử không dừng và một dừng) trên mỗi chiều lưu thông theo quy định."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "order": 64,
+        "content": "Việc thiết kế, đầu tư, xây dựng, cải tạo, nâng cấp trạm thu phí đường bộ, hình thức vận hành hệ thống thiết bị lắp đặt tại trạm thu phí đường bộ và phương thức thu tiền sử dụng đường bộ được cấp có thẩm quyền quyết định trong Báo cáo nghiên cứu khả thi của dự án đầu tư kết cấu hạ tầng đường bộ hoặc trong Đề án khai thác tài sản kết cấu hạ tầng đường bộ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "order": 65,
+        "content": "Đối soát doanh thu thu tiền sử dụng đường bộ được thực hiện theo các nguyên tắc sau:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "order": 66,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ xây dựng quy trình nghiệp vụ quy định thời gian bù trừ, thanh toán, việc tra soát, đối chiếu dữ liệu, bảo đảm thực hiện quyết toán kịp thời, đầy đủ, chính xác cho các bên có liên quan."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "order": 67,
+        "content": "Đơn vị quản lý thu, đơn vị vận hành thu và Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ có trách nhiệm phối hợp để thực hiện quy trình đối soát và khắc phục, điều chỉnh các lỗi, sai số phát hiện được thông qua quá trình đối soát."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "order": 68,
+        "content": "Sau khi đối soát doanh thu thu tiền sử dụng đường bộ, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ đồng bộ thông tin giao dịch thanh toán tiền sử dụng đường bộ có thay đổi về Hệ thống cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "17",
+        "order": 69,
+        "content": "Trên cơ sở số liệu đã thống nhất sau khi thực hiện đối soát doanh thu thu tiền sử dụng đường bộ hằng ngày, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ chuyển toàn bộ số tiền thu tiền sử dụng đường bộ (bao gồm cả thuế giá trị gia tăng) theo đối soát tại mỗi trạm thu phí đường bộ theo hình thức điện tử không dừng cho Đơn vị quản lý thu sau khi trừ đi chi phí tổ chức, quản lý, giám sát thu tiền sử dụng đường bộ. Thời gian chuyển trả theo quy định tại hợp đồng dịch vụ thu giữa Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và đơn vị quản lý thu nhưng không vượt quá 48 giờ kể từ thời điểm chốt số liệu. Trường hợp vào các ngày lễ, ngày nghỉ mà hệ thống ngân hàng nghỉ làm việc không thực hiện được việc chuyển tiền qua hệ thống ngân hàng thì sẽ chuyển vào ngày làm việc kế tiếp, trừ trường hợp các bên có thỏa thuận khác."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "17",
+        "order": 70,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ có trách nhiệm xây dựng quy trình thực hiện giao dịch thu tiền sử dụng đường bộ theo hình thức điện tử không dừng; kê khai và nộp các loại thuế trên phần chi phí tổ chức, quản lý, giám sát thu tiền sử dụng đường bộ được hưởng theo quy định của pháp luật."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "18",
+        "order": 71,
+        "content": "Các phương tiện được miễn thu tiền sử dụng đường bộ theo quy định của pháp luật được gắn thẻ đầu cuối và mở tài khoản giao thông với thông tin xe ưu tiên, khi lưu thông qua làn thu phí điện tử không dừng sẽ được nhận diện tự động và cho phép lưu thông qua trạm thu phí đường bộ."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "18",
+        "order": 72,
+        "content": "Thu theo tháng, theo quý, theo năm"
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "19",
+        "order": 73,
+        "content": "Chi phí tổ chức, quản lý, giám sát thu tiền sử dụng đường bộ bao gồm chi phí cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và chi phí quản lý, vận hành, khai thác Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "19",
+        "order": 74,
+        "content": "Chi phí cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ được xác định trong hợp đồng dịch vụ thu giữa Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và đơn vị quản lý thu."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "order": 75,
+        "content": "Đơn vị quản lý thu sử dụng hình thức đơn làn có barrier hoặc sử dụng hệ thống thiết bị di động để đọc thông tin thẻ đầu cuối để thanh toán các loại phí, giá, tiền dịch vụ khác phải thu."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "order": 76,
+        "content": "Quá trình xử lý giao dịch thanh toán"
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "order": 77,
+        "content": "Đơn vị quản lý thu quyết định phương thức thanh toán phù hợp với dịch vụ phải thu phí, giá, tiền dịch vụ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "order": 78,
+        "content": "Đối soát doanh thu dịch vụ được thực hiện theo các nguyên tắc sau:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "order": 79,
+        "content": "Nhà cung cấp dịch vụ thanh toán giao thông đường bộ xây dựng quy trình nghiệp vụ quy định thời gian bù trừ, thanh toán, việc tra soát, đối chiếu dữ liệu, bảo đảm thực hiện quyết toán kịp thời, đầy đủ, chính xác cho các bên có liên quan."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "order": 80,
+        "content": "Đơn vị quản lý thu, đơn vị vận hành thu và Nhà cung cấp dịch vụ thanh toán giao thông đường bộ có trách nhiệm phối hợp để thực hiện quy trình đối soát và khắc phục, điều chỉnh các lỗi, sai số phát hiện được thông qua quá trình đối soát."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "order": 81,
+        "content": "Sau khi đối soát doanh thu dịch vụ, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ đồng bộ thông tin giao dịch thanh toán điện tử giao thông đường bộ có thay đổi về Hệ thống cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "22",
+        "order": 82,
+        "content": "Trên cơ sở số liệu đã thống nhất sau khi thực hiện đối soát doanh thu dịch vụ hằng ngày, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ chuyển toàn bộ số tiền tương ứng với doanh thu dịch vụ thu được theo đối soát (bao gồm cả thuế giá trị gia tăng) tại mỗi điểm thu cho Đơn vị quản lý thu sau khi trừ đi chi phí tổ chức, quản lý, giám sát thu phí, giá, tiền dịch vụ khác theo quy định. Thời gian chuyển trả theo quy định tại hợp đồng dịch vụ thu giữa Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và đơn vị quản lý thu nhưng không vượt quá 48 giờ kể từ thời điểm chốt số liệu. Trường hợp vào các ngày lễ, ngày nghỉ mà hệ thống ngân hàng nghỉ làm việc không thực hiện được việc chuyển tiền qua hệ thống ngân hàng thì sẽ chuyển vào ngày làm việc kế tiếp, trừ trường hợp các bên có thỏa thuận khác."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "22",
+        "order": 83,
+        "content": "Nhà cung cấp dịch vụ thanh toán giao thông đường bộ có trách nhiệm xây dựng quy trình thực hiện giao dịch thu phí, giá, tiền dịch vụ khác; kê khai và nộp các loại thuế trên phần chi phí tổ chức, quản lý, giám sát thu phí, giá, tiền dịch vụ khác được hưởng theo quy định của pháp luật."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "23",
+        "order": 84,
+        "content": "Các phương tiện được miễn thanh toán các loại phí, giá, tiền dịch vụ khác theo quy định của pháp luật hoặc của đơn vị quản lý thu có gắn thẻ đầu cuối, khi lưu thông qua điểm thu sẽ được nhận diện tự động và cho phép lưu thông qua điểm thu hoặc được xác nhận miễn thanh toán."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "23",
+        "order": 85,
+        "content": "Thu theo tháng, theo quý, theo năm"
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "24",
+        "order": 86,
+        "content": "Chi phí tổ chức, quản lý, giám sát thu phí, giá, tiền dịch vụ khác bao gồm chi phí cho Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và chi phí quản lý, vận hành, khai thác Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "24",
+        "order": 87,
+        "content": "Chi phí cho Nhà cung cấp dịch vụ thanh toán giao thông đường bộ được xác định trong hợp đồng dịch vụ thu giữa Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và đơn vị quản lý thu."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "25",
+        "order": 88,
+        "content": "Cơ quan có thẩm quyền, đơn vị quản lý Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ, đơn vị quản lý thu có quyền yêu cầu các Nhà cung cấp dịch vụ thanh toán điện tử giao thông cung cấp thông tin giao dịch thanh toán điện tử giao thông đường bộ có liên quan theo định kỳ và đột xuất."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "25",
+        "order": 89,
+        "content": "Nhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị quản lý thu có quyền yêu cầu chủ phương tiện cung cấp thông tin tài khoản giao thông hoặc thông tin giao dịch thanh toán điện tử giao thông đường bộ có liên quan khi sử dụng dịch vụ của mình trên nguyên tắc tuân thủ khoản 3 Điều 4 Nghị định này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "26",
+        "order": 90,
+        "content": "Nhà cung cấp dịch vụ thanh toán điện tử giao thông có nghĩa vụ báo cáo và cung cấp thông tin cho các cơ quan có thẩm quyền theo quy định tại khoản 1 Điều 25 Nghị định này."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "26",
+        "order": 91,
+        "content": "Nhà cung cấp dịch vụ thanh toán điện tử giao thông có nghĩa vụ cung cấp thông tin về giao dịch qua tài khoản giao thông cho chủ phương tiện mở tài khoản giao thông theo thỏa thuận."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "27",
+        "order": 92,
+        "content": "Quyền từ chối cung cấp thông tin\nĐơn vị vận hành Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ, Nhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị vận hành thu có quyền từ chối yêu cầu của tổ chức, cá nhân về việc cung cấp thông tin về chủ phương tiện, giao dịch và của chủ phương tiện, trừ trường hợp theo yêu cầu của cơ quan nhà nước có thẩm quyền theo quy định của pháp luật hoặc được sự chấp thuận của chủ tài khoản giao thông."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "27",
+        "order": 93,
+        "content": "Nghĩa vụ bảo mật thông tin\nĐơn vị vận hành Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ, Nhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị vận hành thu có trách nhiệm giữ bí mật các thông tin liên quan đến chủ phương tiện, giao dịch của chủ phương tiện, trừ trường hợp pháp luật có quy định khác."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "27",
+        "order": 94,
+        "content": "An toàn thông tin mạng\nĐơn vị quản lý Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ, Nhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị quản lý thu có trách nhiệm bảo vệ hệ thống thông tin của hệ thống thuộc trách nhiệm quản lý theo quy định của pháp luật về an toàn thông tin mạng và giao dịch điện tử."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "29",
+        "order": 95,
+        "content": "Tổ chức thực hiện, kiểm tra, giám sát hoạt động thanh toán điện tử giao thông đường bộ, bảo đảm chính xác, khách quan, minh bạch."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "29",
+        "order": 96,
+        "content": "Quản lý, kiểm soát hoạt động của Hệ thống thanh toán điện tử giao thông theo quy định của pháp luật."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "29",
+        "order": 97,
+        "content": "Đầu tư, tổ chức quản lý, vận hành, khai thác Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ theo quy định."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "29",
+        "order": 98,
+        "content": "Thực hiện nhiệm vụ cơ quan có thẩm quyền đối với các dự án có thu tiền sử dụng đường bộ theo quy định; thanh toán điện tử các loại phí, giá, dịch vụ thuộc phạm vi quản lý liên quan đến hoạt động giao thông của phương tiện."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "29",
+        "order": 99,
+        "content": "Xử lý hoặc kiến nghị xử lý các nội dung phát sinh theo thẩm quyền."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "29",
+        "order": 100,
+        "content": "Phối hợp với Bộ Công an kết nối, chia sẻ giữa Cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ và các cấu thành Hệ thống thanh toán điện tử giao thông."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "order": 101,
+        "content": "Bộ Công an, Bộ Quốc phòng\nChỉ đạo các cơ quan chức năng thuộc Bộ Công an, Bộ Quốc phòng phối hợp với Bộ Giao thông vận tải và Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện việc gắn thẻ đầu cuối cho các phương tiện phục vụ mục đích quốc phòng, an ninh tham gia giao thông."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "order": 102,
+        "content": "Bộ Tài chính\nChủ trì, phối hợp với Bộ Giao thông vận tải quản lý hướng dẫn Nhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị quản lý thu sử dụng hoá đơn điện tử theo quy định của pháp luật về hoá đơn trong hoạt động thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "order": 103,
+        "content": "Bộ Thông tin và Truyền thông"
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "order": 104,
+        "content": "Các bộ, ngành khác\nThực hiện nhiệm vụ theo chức năng, thẩm quyền trong việc thanh toán điện tử các loại phí, giá, dịch vụ liên quan đến hoạt động giao thông của phương tiện do bộ, ngành quản lý."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "order": 105,
+        "content": "Ủy ban nhân dân cấp tỉnh\nThực hiện nhiệm vụ cơ quan có thẩm quyền đối với các dự án có thu tiền sử dụng đường bộ theo quy định; thanh toán điện tử các loại phí, giá, dịch vụ thuộc phạm vi quản lý liên quan đến hoạt động giao thông của phương tiện."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 106,
+        "content": "Thực hiện gắn thẻ đầu cuối cho phương tiện tại lần kiểm định gần nhất hoặc trước khi đến hạn kiểm định hoặc khi qua trạm thu phí đường bộ lần đầu hoặc ngay khi thẻ đầu cuối bị mất, hỏng do lỗi của chủ phương tiện hoặc sau khi hết hạn bảo hành. Chi trả tiền gắn thẻ đầu cuối cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ theo quy định."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 107,
+        "content": "Cung cấp thông tin để mở tài khoản giao thông, khai báo và sửa đổi thông tin tài khoản giao thông khi có thay đổi; cung cấp các thông tin cần thiết để Nhà cung cấp dịch vụ thanh toán điện tử giao thông giao hoàn trả tiền vào phương tiện thanh toán liên kết với tài khoản giao thông của chủ phương tiện khi cần thiết."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 108,
+        "content": "Thực hiện dịch vụ thanh toán điện tử giao thông đường bộ theo đúng hướng dẫn của Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 109,
+        "content": "Phối hợp với Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện việc chuyển đổi tài khoản thu phí đã có theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ sang tài khoản giao thông và thực hiện kết nối phương tiện thanh toán không dùng tiền mặt với tài khoản giao thông trước ngày 01 tháng 10 năm 2025."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 110,
+        "content": "Đọc, hiểu quyền, nghĩa vụ của chủ phương tiện và đồng ý tuân thủ các quy định về bảo mật dữ liệu cá nhân khi cung cấp, cho phép chia sẻ thông tin dữ liệu cá nhân chủ phương tiện, các Nhà cung cấp dịch vụ thanh toán điện tử giao thông, các đơn vị quản lý thu và đơn vị vận hành thu nhằm định danh, xác thực, xử lý và lưu trữ dữ liệu trong quá trình cung cấp dịch vụ thanh toán điện tử giao thông đường bộ cho phương tiện."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 111,
+        "content": "Quyết định việc sử dụng thông tin tài khoản giao thông để thực hiện thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 112,
+        "content": "Thanh toán các loại phí, giá, dịch vụ liên quan đến hoạt động giao thông của phương tiện theo quy định."
+      },
+      {
+        "number": "8",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "31",
+        "order": 113,
+        "content": "Chấp hành các hướng dẫn về giao thông khi lưu thông qua điểm thu."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 114,
+        "content": "Hướng dẫn sử dụng, bảo hành thẻ đầu cuối gắn cho chủ phương tiện trong trường hợp Nhà cung cấp dịch vụ thanh toán điện tử giao thông là nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 115,
+        "content": "Hướng dẫn chủ phương tiện cách thức sử dụng dịch vụ."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 116,
+        "content": "Tổ chức tiếp nhận, xử lý thông tin tra soát, khiếu nại của chủ phương tiện"
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 117,
+        "content": "Xử lý kết quả tra soát, khiếu nại"
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 118,
+        "content": "Trường hợp vụ việc có dấu hiệu tội phạm, Nhà cung cấp dịch vụ thanh toán điện tử giao thông thực hiện thông báo cho cơ quan nhà nước có thẩm quyền theo quy định của pháp luật về tố tụng hình sự và báo cáo Cục Đường bộ Việt Nam; đồng thời, thông báo bằng văn bản cho chủ phương tiện về tình trạng xử lý đề nghị tra soát, khiếu nại. Việc xử lý kết quả tra soát, khiếu nại thuộc trách nhiệm giải quyết của cơ quan nhà nước có thẩm quyền. Trong trường hợp cơ quan nhà nước có thẩm quyền thông báo kết quả giải quyết không có yếu tố tội phạm, trong vòng 15 ngày làm việc kể từ ngày có kết luận của cơ quan nhà nước có thẩm quyền, Nhà cung cấp dịch vụ thanh toán điện tử giao thông thỏa thuận với chủ phương tiện về phương án xử lý kết quả tra soát, khiếu nại."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 119,
+        "content": "Trường hợp Nhà cung cấp dịch vụ thanh toán điện tử giao thông, chủ phương tiện và các bên liên quan không thỏa thuận được và/hoặc không đồng ý với quá trình xử lý đề nghị tra soát, khiếu nại thì việc giải quyết tranh chấp được thực hiện theo quy định của pháp luật."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 120,
+        "content": "Hướng dẫn chủ phương tiện về việc thu thập, xử lý, sử dụng, lưu trữ thông tin dữ liệu cá nhân và yêu cầu chủ phương tiện xác nhận đồng ý trước khi chia sẻ một phần hoặc toàn bộ thông tin dữ liệu cá nhân với các bên liên quan phục vụ cho việc cung cấp dịch vụ thanh toán điện tử giao thông đường bộ cho phương tiện."
+      },
+      {
+        "number": "8",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 121,
+        "content": "Lưu trữ các dữ liệu hoạt động về \"Quyền được biết\", \"Quyền đồng ý\", \"Quyền truy cập\", \"Quyền rút lại sự đồng ý\", \"Quyền xóa\" hoặc \"Quyền hạn chế xử lý dữ liệu\", \"Quyền cung cấp dữ liệu\" của chủ phương tiện khi sử dụng dịch vụ."
+      },
+      {
+        "number": "9",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "order": 122,
+        "content": "Thực hiện các biện pháp bảo vệ dữ liệu cá nhân theo tiêu chuẩn bảo vệ dữ liệu cá nhân và theo quy định của pháp luật về bảo vệ dữ liệu cá nhân; bảo vệ quyền và lợi ích hợp pháp của chủ phương tiện và của các Nhà cung cấp dịch vụ thanh toán điện tử giao thông trong quá trình xử lý dữ liệu cá nhân."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 123,
+        "content": "Đối với đơn vị quản lý thu"
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 124,
+        "content": "Xây dựng, ban hành quy trình nghiệp vụ theo quy định tại các Điều 16, 17, 21, 22 Nghị định này."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 125,
+        "content": "Đồng bộ thông tin tài khoản giao thông và thông tin giao dịch thanh toán điện tử giao thông đường bộ về Hệ thống cơ sở dữ liệu thanh toán điện tử giao thông đường bộ theo các quy định tại Nghị định này."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 126,
+        "content": "Thông báo cho cơ quan Cảnh sát giao thông khi phát hiện các trường hợp xe gắn biển số giả, biển số không do cơ quan có thẩm quyền cấp để kịp thời ngăn chặn, xử lý."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 127,
+        "content": "Thực hiện chế độ báo cáo theo quy định."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 128,
+        "content": "Kê khai và nộp các loại thuế, phí, lệ phí theo quy định của pháp luật về thuế, phí và lệ phí."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 129,
+        "content": "Mở tài khoản trên hệ thống ngân hàng thương mại để tiếp nhận tiền từ việc thực hiện thanh toán điện tử giao thông đường bộ của chủ phương tiện."
+      },
+      {
+        "number": "8",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 130,
+        "content": "Cung cấp hình ảnh, thông tin hành trình, lịch trình di chuyển của phương tiện khi có đề nghị của cơ quan có thẩm quyền."
+      },
+      {
+        "number": "9",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "order": 131,
+        "content": "Các trách nhiệm khác theo hợp đồng với các đơn vị có liên quan, theo các quy định tại Nghị định này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "34",
+        "order": 132,
+        "content": "Thực hiện nhiệm vụ được đơn vị quản lý thu giao hoặc thực hiện theo hợp đồng dịch vụ thu ký kết với đơn vị quản lý thu. Phối hợp với các cơ quan chức năng của địa phương nơi đặt điểm thu để giữ gìn an ninh, trật tự trong quá trình thanh toán điện tử giao thông đường bộ, bảo đảm an toàn giao thông, tránh ùn tắc giao thông, bảo đảm không xảy ra các hiện tượng tiêu cực, cản trở, gây phiền hà trong hoạt động thanh toán điện tử giao thông đường bộ; xử lý kịp thời các hành vi vi phạm trong quá trình thanh toán."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "34",
+        "order": 133,
+        "content": "Trong trường hợp hệ thống thiết bị lắp đặt tại điểm thu bị trục trặc, hư hỏng, đơn vị vận hành thu phải kịp thời có báo cáo cơ quan có thẩm quyền hoặc báo cáo đơn vị quản lý thu; đồng thời, khẩn trương khắc phục các sự cố của hệ thống. Thời gian khắc phục sự cố không quá 48 giờ, kể từ thời điểm hệ thống bị trục trặc, hư hỏng. Trong thời gian khắc phục sự cố, đơn vị vận hành thu phải thông báo công khai tại điểm thu và trên phương tiện truyền thông, thông tin đại chúng; có biện pháp bảo đảm thu nhanh gọn, an toàn, tránh ùn tắc giao thông và có biện pháp giám sát chống thất thoát doanh thu."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "34",
+        "order": 134,
+        "content": "Thực hiện các quy trình nghiệp vụ do Nhà cung cấp dịch vụ thanh toán điện tử giao thông ban hành."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "34",
+        "order": 135,
+        "content": "Đồng bộ thông tin giao dịch thanh toán điện tử giao thông đường bộ về Hệ thống cơ sở dữ liệu thanh toán điện tử giao thông đường bộ theo các quy định tại Nghị định này."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "34",
+        "order": 136,
+        "content": "Thực hiện các biện pháp bảo vệ dữ liệu cá nhân theo tiêu chuẩn bảo vệ dữ liệu cá nhân và theo quy định của pháp luật về bảo vệ dữ liệu cá nhân; bảo vệ quyền và lợi ích hợp pháp của chủ phương tiện và của đơn vị vận hành thu trong quá trình xử lý dữ liệu cá nhân."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "34",
+        "order": 137,
+        "content": "Các trách nhiệm khác theo hợp đồng với các đơn vị có liên quan, theo các quy định tại Nghị định này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 138,
+        "content": "Chủ trì xây dựng và phê duyệt quy trình thanh toán điện tử giao thông đường bộ phù hợp với hình thức và phương thức thanh toán điện tử tại điểm thu; quy định nội bộ về kiểm tra, xử lý vi phạm, xử lý sự cố trong quá trình thực hiện thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 139,
+        "content": "Thực hiện hoặc ký hợp đồng giao đơn vị vận hành thu thực hiện việc thiết kế, đầu tư, xây dựng, cải tạo, quản lý, vận hành hệ thống thiết bị lắp đặt tại các điểm thu theo quy định."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 140,
+        "content": "Ký hợp đồng cung cấp dịch vụ thu với Nhà cung cấp dịch vụ thanh toán điện tử giao thông; thực hiện các quyền và nghĩa vụ theo hợp đồng ký kết."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 141,
+        "content": "Thực hiện các quy trình nghiệp vụ do Nhà cung cấp dịch vụ thanh toán điện tử giao thông ban hành."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 142,
+        "content": "Thực hiện chế độ báo cáo theo quy định."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 143,
+        "content": "Kê khai và nộp các loại thuế, phí, lệ phí theo quy định của pháp luật về thuế, phí và lệ phí."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 144,
+        "content": "Thực hiện các biện pháp bảo vệ dữ liệu cá nhân theo tiêu chuẩn bảo vệ dữ liệu cá nhân và theo quy định của pháp luật về bảo vệ dữ liệu cá nhân; bảo vệ quyền và lợi ích hợp pháp của chủ phương tiện và của các đơn vị quản lý thu trong quá trình xử lý dữ liệu cá nhân."
+      },
+      {
+        "number": "8",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "35",
+        "order": 145,
+        "content": "Các trách nhiệm khác theo hợp đồng với các đơn vị có liên quan, theo các quy định tại Nghị định này."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 146,
+        "content": "Việc thu phí dịch vụ sử dụng đường bộ theo hình thức điện tử không dừng đã được thực hiện theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ tiếp tục được thực hiện đến ngày 01 tháng 7 năm 2026."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 147,
+        "content": "Nhà cung cấp dịch vụ thu phí dịch vụ sử dụng đường bộ được quy định theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ là Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ được quy định tại Nghị định này."
+      },
+      {
+        "number": "3",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 148,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ tiếp tục thu tiền sử dụng đường bộ theo các quy định về thu phí dịch vụ sử dụng đường bộ theo hình thức điện tử không dừng tại Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ đến ngày 01 tháng 7 năm 2026."
+      },
+      {
+        "number": "4",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 149,
+        "content": "Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ kết nối hệ thống điều hành và trung tâm dữ liệu để kết nối, chia sẻ thông tin tài khoản giao thông đến ngày 01 tháng 7 năm 2026. Chi phí kết nối theo thỏa thuận giữa các bên với nhau."
+      },
+      {
+        "number": "5",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 150,
+        "content": "Các cơ quan, đơn vị liên quan điều chỉnh hợp đồng dự án và các nội dung liên quan đã thực hiện theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ để phù hợp với Nghị định này. Việc bổ sung dịch vụ thanh toán điện tử giao thông đường bộ vào hợp đồng ký giữa Nhà cung cấp dịch vụ thu phí dịch vụ sử dụng đường bộ được quy định theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ với cơ quan có thẩm quyền thực hiện trên cơ sở đàm phán, điều chỉnh hợp đồng."
+      },
+      {
+        "number": "6",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 151,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ hoàn thiện việc chuyển tài khoản thu phí của chủ phương tiện theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ sang tài khoản giao thông kết nối với phương tiện thanh toán của chủ phương tiện trước ngày 01 tháng 10 năm 2025."
+      },
+      {
+        "number": "7",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "36",
+        "order": 152,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ hoàn thiện việc chuyển tiền từ tài khoản thu phí của chủ phương tiện theo Quyết định số 19/2020/QĐ-TTg ngày 17 tháng 6 năm 2020 của Thủ tướng Chính phủ sang phương tiện thanh toán của chủ phương tiện được kết nối với tài khoản giao thông trước ngày 01 tháng 10 năm 2025."
+      },
+      {
+        "number": "1",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "37",
+        "order": 153,
+        "content": "Nghị định này có hiệu lực thi hành kể từ ngày 01 tháng 10 năm 2024."
+      },
+      {
+        "number": "2",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "37",
+        "order": 154,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ vận hành từ ngày 01 tháng 7 năm 2026. Các nội dung có liên quan đến Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ quy định trong Nghị định này có hiệu lực từ ngày 01 tháng 7 năm 2026."
+      }
+    ],
+    "points": [
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "parent_clause": "4",
+        "order": 0,
+        "content": "Tiền sử dụng đường bộ bao gồm tiền dịch vụ sử dụng đường bộ theo pháp luật về giá và phí sử dụng đường cao tốc thu đối với phương tiện lưu thông trên tuyến đường cao tốc do Nhà nước đầu tư, sở hữu, quản lý và khai thác;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "parent_clause": "4",
+        "order": 1,
+        "content": "Phí, giá, tiền dịch vụ khác liên quan đến hoạt động giao thông của phương tiện."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "parent_clause": "5",
+        "order": 2,
+        "content": "Bộ Giao thông vận tải đối với các dự án đầu tư kết cấu hạ tầng đường bộ có thu tiền sử dụng đường bộ do Bộ Giao thông vận tải quản lý, các dự án của Tổng công ty Đầu tư phát triển đường cao tốc Việt Nam và các dịch vụ liên quan đến hoạt động giao thông của phương tiện do Bộ Giao thông vận tải quản lý;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "parent_clause": "5",
+        "order": 3,
+        "content": "Các bộ, ngành khác đối với các dịch vụ khác liên quan đến hoạt động giao thông của phương tiện do bộ, ngành quản lý;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "3",
+        "parent_clause": "5",
+        "order": 4,
+        "content": "Ủy ban nhân dân cấp tỉnh đối với các dự án đầu tư kết cấu hạ tầng đường bộ có thu tiền sử dụng đường bộ và các dịch vụ liên quan đến hoạt động giao thông của phương tiện do địa phương quản lý."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 5,
+        "content": "Thẻ đầu cuối gắn trên các phương tiện;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 6,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 7,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 8,
+        "content": "Hệ thống thiết bị lắp đặt tại các điểm thu;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 9,
+        "content": "Hệ thống đường truyền dữ liệu;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "6",
+        "parent_clause": "2",
+        "order": 10,
+        "content": "Các hệ thống, thiết bị, hạng mục khác bảo đảm hoạt động của Hệ thống thanh toán điện tử giao thông; bảo đảm kết nối liên thông giữa các cấu thành của hệ thống thanh toán điện tử giao thông với nhau."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "parent_clause": "1",
+        "order": 11,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ được xây dựng theo tiêu chuẩn, quy chuẩn kỹ thuật công nghệ thông tin, định mức kinh tế - kỹ thuật có liên quan, bảo đảm hoạt động ổn định, liên tục;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "parent_clause": "1",
+        "order": 12,
+        "content": "Bảo đảm kết nối với các hệ thống, cơ sở dữ liệu quy định tại khoản 2 Điều này;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "parent_clause": "1",
+        "order": 13,
+        "content": "Bảo đảm quyền khai thác thông tin của cơ quan, tổ chức, cá nhân theo quy định của pháp luật về giao dịch điện tử và quy định khác của pháp luật có liên quan."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "parent_clause": "2",
+        "order": 14,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "parent_clause": "2",
+        "order": 15,
+        "content": "Cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "8",
+        "parent_clause": "2",
+        "order": 16,
+        "content": "Cơ sở dữ liệu quốc gia về dân cư."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "1",
+        "order": 17,
+        "content": "Mở và quản lý tài khoản giao thông;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "1",
+        "order": 18,
+        "content": "Xác định chi phí chủ phương tiện phải trả đối với các dịch vụ do Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ cung cấp;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "1",
+        "order": 19,
+        "content": "Kết nối với phương tiện thanh toán hợp pháp của tổ chức cung ứng dịch vụ thanh toán không dùng tiền mặt hoặc tổ chức cung ứng dịch vụ trung gian thanh toán (sau đây gọi là tổ chức cung ứng phương tiện thanh toán không dùng tiền mặt) theo quy định tại khoản 2 Điều 11 Nghị định này;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "1",
+        "order": 20,
+        "content": "Hoàn trả doanh thu phí, giá, tiền dịch vụ liên quan đến hoạt động giao thông của phương tiện cho các đơn vị quản lý thu."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "2",
+        "order": 21,
+        "content": "Kết nối, sử dụng thông tin tài khoản giao thông từ Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "2",
+        "order": 22,
+        "content": "Xác định chi phí chủ phương tiện phải trả đối với các dịch vụ do Nhà cung cấp dịch vụ thanh toán giao thông đường bộ cung cấp;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "2",
+        "order": 23,
+        "content": "Kết nối với phương tiện thanh toán hợp pháp của tổ chức cung ứng phương tiện thanh toán không dùng tiền mặt theo quy định tại khoản 2 Điều 11 Nghị định này;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "2",
+        "order": 24,
+        "content": "Hoàn trả doanh thu phí, giá, tiền dịch vụ khác liên quan đến hoạt động giao thông của phương tiện cho các đơn vị quản lý thu."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "3",
+        "order": 25,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu được xây dựng theo tiêu chuẩn, quy chuẩn kỹ thuật công nghệ thông tin, định mức kinh tế - kỹ thuật có liên quan, bảo đảm hoạt động ổn định, liên tục;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "3",
+        "order": 26,
+        "content": "Bảo đảm kết nối với các hệ thống, cơ sở dữ liệu quy định tại khoản 4 Điều này;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "3",
+        "order": 27,
+        "content": "Bảo đảm quyền khai thác thông tin của cơ quan, tổ chức, cá nhân theo quy định của pháp luật về giao dịch điện tử và quy định khác của pháp luật có liên quan."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "4",
+        "order": 28,
+        "content": "Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "4",
+        "order": 29,
+        "content": "Hệ thống thiết bị lắp đặt tại các điểm thu;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "9",
+        "parent_clause": "4",
+        "order": 30,
+        "content": "Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán điện tử giao thông khác."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "10",
+        "parent_clause": "1",
+        "order": 31,
+        "content": "Xác định giao dịch của phương tiện giao thông tại điểm thu;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "10",
+        "parent_clause": "1",
+        "order": 32,
+        "content": "Xác định chi phí chủ phương tiện phải trả trong giao dịch thanh toán điện tử giao thông đường bộ chưa được xác định bởi Nhà cung cấp dịch vụ thanh toán điện tử giao thông theo quy định tại điểm b khoản 1 và điểm b khoản 2 Điều 9 Nghị định này."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "parent_clause": "4",
+        "order": 33,
+        "content": "Chủ phương tiện là cá nhân có năng lực hành vi dân sự đầy đủ theo quy định của pháp luật;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "parent_clause": "4",
+        "order": 34,
+        "content": "Chủ phương tiện là tổ chức được thành lập, hoạt động hợp pháp theo quy định của pháp luật."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "parent_clause": "6",
+        "order": 35,
+        "content": "Chủ phương tiện phải cung cấp, cập nhật đầy đủ, chính xác các thông tin trong hồ sơ mở tài khoản giao thông cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và chịu trách nhiệm về tính trung thực của các thông tin mà mình cung cấp."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "11",
+        "parent_clause": "6",
+        "order": 36,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ có trách nhiệm kiểm tra, đối chiếu; xác minh thông tin nhận biết chủ phương tiện đối với trường hợp chủ phương tiện là tổ chức và xác thực thông tin nhận biết chủ phương tiện thông qua cơ sở dữ liệu quốc gia về dân cư đối với chủ phương tiện là cá nhân."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "parent_clause": "1",
+        "order": 37,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện khóa tài khoản giao thông khi có đề nghị của chủ tài khoản giao thông hoặc người giám hộ, người đại diện hợp pháp của chủ tài khoản giao thông hoặc theo thỏa thuận trước bằng văn bản giữa chủ tài khoản giao thông với Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ, trừ trường hợp quy định tại điểm b khoản này."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "parent_clause": "1",
+        "order": 38,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ từ chối yêu cầu khóa tài khoản giao thông khi chủ tài khoản giao thông chưa thanh toán xong khoản nợ phải trả cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ hoặc Nhà cung cấp dịch vụ thanh toán giao thông đường bộ. Thông tin khoản nợ phải trả cho Nhà cung cấp dịch vụ thanh toán giao thông đường bộ được đồng bộ từ Hệ thống quản lý cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "parent_clause": "1",
+        "order": 39,
+        "content": "Thời gian khóa tài khoản giao thông thực hiện theo yêu cầu của chủ tài khoản giao thông hoặc người giám hộ, người đại diện hợp pháp của chủ tài khoản giao thông hoặc theo văn bản thỏa thuận giữa chủ tại khoản giao thông với Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "parent_clause": "2",
+        "order": 40,
+        "content": "Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện khóa tài khoản giao thông theo yêu cầu bằng văn bản của cơ quan có thẩm quyền theo quy định của pháp luật."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "parent_clause": "2",
+        "order": 41,
+        "content": "Ngay sau khi thực hiện khóa tài khoản giao thông, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ phải thông báo cho chủ tài khoản giao thông hoặc người giám hộ, người đại diện theo pháp luật của chủ tài khoản giao thông biết về lý do khóa tài khoản giao thông."
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "13",
+        "parent_clause": "2",
+        "order": 42,
+        "content": "Thời gian khóa tài khoản giao thông thực hiện theo yêu cầu của cơ quan có thẩm quyền trong văn bản yêu cầu khóa tài khoản giao thông hoặc trong văn bản yêu cầu chấm dứt khóa tài khoản giao thông."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "parent_clause": "1",
+        "order": 43,
+        "content": "Có đề nghị đóng tài khoản giao thông của chủ tài khoản giao thông hoặc người giám hộ, người đại diện theo pháp luật của chủ tài khoản giao thông và chủ tài khoản giao thông đã thực hiện đầy đủ các nghĩa vụ liên quan đến tài khoản giao thông;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "parent_clause": "1",
+        "order": 44,
+        "content": "Chủ tài khoản giao thông là cá nhân bị chết, bị tuyên bố là đã chết, bị mất tích; Chủ tài khoản giao thông là tổ chức bị chấm dứt hoạt động, phá sản, giải thể theo quy định của pháp luật;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "parent_clause": "1",
+        "order": 45,
+        "content": "Các trường hợp đóng tài khoản giao thông theo thỏa thuận giữa Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và chủ tài khoản giao thông;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "parent_clause": "1",
+        "order": 46,
+        "content": "Chủ tài khoản giao thông thực hiện một trong các hành vi không được thực hiện quy định tại Điều 5 của Nghị định này hoặc vi phạm thỏa thuận mở và sử dụng tài khoản giao thông với Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "14",
+        "parent_clause": "1",
+        "order": 47,
+        "content": "Các trường hợp khác theo quy định của pháp luật."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "1",
+        "order": 48,
+        "content": "Hình thức đơn làn có barrier\nTheo hình thức này, barrier tại trạm thu phí đường bộ sẽ mở cho phương tiện đi qua khi phương tiện có gắn thẻ đầu cuối hợp lệ và thực hiện thành công thanh toán tiền sử dụng đường bộ."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "1",
+        "order": 49,
+        "content": "Hình thức đa làn tự do\nTheo hình thức này, tại khu vực trạm thu phí đường bộ chỉ còn duy trì giá long môn và các thiết bị thu phí gắn trên giá long môn. Hình thức này chỉ áp dụng tại đầu vào của đường cao tốc."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "2",
+        "order": 50,
+        "content": "Khi phương tiện đi vào vùng nhận diện của hệ thống thiết bị lắp đặt tại trạm thu phí đường bộ, hệ thống thiết bị lắp đặt tại trạm thu phí đường bộ sẽ đọc thông tin, gửi thông tin giao dịch về Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ để thực hiện thanh toán tiền sử dụng đường bộ và gửi lại thông tin cho hệ thống thiết bị lắp đặt tại trạm thu phí đường bộ để kết thúc giao dịch phương tiện qua trạm thu phí đường bộ."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "2",
+        "order": 51,
+        "content": "Nội dung trao đổi thông tin và quá trình xử lý giao dịch thanh toán tiền sử dụng đường bộ được thực hiện theo quy chuẩn, tiêu chuẩn kỹ thuật về trạm thu phí đường bộ và các quy chuẩn, tiêu chuẩn kỹ thuật khác có liên quan."
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "2",
+        "order": 52,
+        "content": "Sau khi kết thúc giao dịch, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và đơn vị vận hành thu đồng bộ thông tin giao dịch thanh toán tiền sử dụng đường bộ về Hệ thống cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "3",
+        "order": 53,
+        "content": "Phương thức mở là phương thức thanh toán mà chủ phương tiện phải trả một mức tiền tại trạm thu phí đường bộ không phụ thuộc vào chiều dài quãng đường phương tiện đã đi được trên đoạn đường thanh toán tiền sử dụng đường bộ mà chỉ phụ thuộc vào kiểu loại phương tiện."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "15",
+        "parent_clause": "3",
+        "order": 54,
+        "content": "Phương thức kín là phương thức thanh toán mà chủ phương tiện phải trả một mức tiền tại trạm thu phí đường bộ dựa vào chiều dài quãng đường phương tiện đã đi được trên đoạn đường thanh toán tiền sử dụng đường bộ và kiểu loại phương tiện."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "parent_clause": "1",
+        "order": 55,
+        "content": "Hằng ngày, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện đối soát doanh thu thu tiền sử dụng đường bộ theo khung thời gian từ 00h00 đến 24h00 (thời điểm chốt số liệu) với đơn vị vận hành thu để làm cơ sở cho Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ hoàn trả doanh thu thu tiền sử dụng đường bộ cho đơn vị quản lý thu."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "parent_clause": "1",
+        "order": 56,
+        "content": "Hằng tháng, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và Đơn vị quản lý thu thực hiện đối soát và chốt công nợ trước ngày 05 của tháng liền kề hoặc thời điểm khác do các bên thỏa thuận."
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "16",
+        "parent_clause": "1",
+        "order": 57,
+        "content": "Trong thời hạn 30 ngày kể từ ngày kết thúc mỗi năm tài chính, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ và Đơn vị quản lý thu thực hiện chốt công nợ và quyết toán cho năm liền trước đó."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "18",
+        "parent_clause": "2",
+        "order": 58,
+        "content": "Trường hợp chủ phương tiện có nhu cầu thanh toán tiền sử dụng đường bộ theo tháng, theo quý hoặc theo năm cho một hoặc một số trạm thu phí đường bộ theo hình thức điện tử không dừng cụ thể, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ thực hiện trừ tiền trong phương tiện thanh toán của chủ phương tiện tại thời điểm đăng ký thanh toán theo tháng, quý, năm."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "18",
+        "parent_clause": "2",
+        "order": 59,
+        "content": "Phương tiện đã đăng ký thanh toán tiền sử dụng đường bộ theo tháng, quý, năm đi qua trạm thu phí đường bộ đã đăng ký, Nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ không trừ tiền trong phương tiện thanh toán của chủ phương tiện. Ngoài việc trả theo tháng, quý, năm cho trạm thu phí đường bộ cụ thể được đăng ký, chủ phương tiện phải thực hiện các hình thức thanh toán theo quy định để đi qua các trạm thu phí đường bộ theo hình thức điện tử không dừng khác trong trường hợp có nhu cầu sử dụng."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "parent_clause": "2",
+        "order": 60,
+        "content": "Trường hợp Nhà cung cấp dịch vụ thanh toán giao thông đường bộ xác định chi phí\nKhi phương tiện đi vào vùng nhận diện của hệ thống thiết bị lắp đặt tại điểm thu, hệ thống thiết bị lắp đặt tại điểm thu sẽ đọc thông tin, gửi thông tin giao dịch về Hệ thống điều hành và trung tâm dữ liệu của Nhà cung cấp dịch vụ thanh toán giao thông đường bộ để thực hiện thanh toán điện tử giao thông đường bộ và gửi lại thông tin cho hệ thống thiết bị lắp đặt tại điểm thu để kết thúc giao dịch phương tiện qua điểm thu."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "parent_clause": "2",
+        "order": 61,
+        "content": "Trường hợp hệ thống thiết bị lắp đặt tại điểm thu xác định chi phí\nKhi phương tiện đi vào vùng nhận diện của hệ thống thiết bị lắp đặt tại điểm thu, hệ thống thiết bị lắp đặt tại điểm thu sẽ đọc thông tin để tính phí, giá, tiền dịch vụ khác phải thu và gửi thông tin giao dịch cho hệ thống của Nhà cung cấp dịch vụ thanh toán giao thông đường bộ để thực hiện thanh toán điện tử giao thông đường bộ; Nhà cung cấp dịch vụ thanh toán giao thông đường bộ gửi lại thông tin giao dịch sau khi xử lý cho hệ thống thiết bị lắp đặt tại điểm thu để kết thúc giao dịch phương tiện qua điểm thu."
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "parent_clause": "2",
+        "order": 62,
+        "content": "Nội dung trao đổi thông tin và quá trình xử lý giao dịch thanh toán điện tử giao thông đường bộ được thực hiện theo quy chuẩn, tiêu chuẩn kỹ thuật về điểm thu và các quy chuẩn, tiêu chuẩn kỹ thuật khác có liên quan."
+      },
+      {
+        "letter": "d",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "parent_clause": "2",
+        "order": 63,
+        "content": "Sau khi kết thúc giao dịch, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và đơn vị vận hành thu đồng bộ thông tin giao dịch thanh toán điện tử giao thông đường bộ về Hệ thống cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "20",
+        "parent_clause": "2",
+        "order": 64,
+        "content": "Đơn vị quản lý thu quyết định việc xử lý thanh toán theo quy định tại điểm a hoặc điểm b khoản 2 Điều này."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "parent_clause": "1",
+        "order": 65,
+        "content": "Hằng ngày, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ thực hiện đối soát doanh thu dịch vụ theo khung thời gian từ 00h00 đến 24h00 (thời điểm chốt số liệu bù trừ) với hệ thống thiết bị lắp đặt tại điểm thu để làm cơ sở cho Nhà cung cấp dịch vụ thanh toán giao thông đường bộ hoàn trả doanh thu dịch vụ cho đơn vị quản lý thu;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "parent_clause": "1",
+        "order": 66,
+        "content": "Hằng tháng, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và Đơn vị quản lý thu thực hiện đối soát và chốt công nợ trước ngày 05 của tháng liền kề hoặc thời điểm khác do các bên thỏa thuận;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "21",
+        "parent_clause": "1",
+        "order": 67,
+        "content": "Trong thời hạn 30 ngày kể từ ngày kết thúc mỗi năm tài chính, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ và Đơn vị quản lý thu thực hiện chốt công nợ và quyết toán cho năm liền trước đó."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 68,
+        "content": "Trường hợp chủ phương tiện có nhu cầu thanh toán các loại phí, giá, tiền dịch vụ khác theo tháng, theo quý hoặc theo năm cho một hoặc một số điểm thu cụ thể, Nhà cung cấp dịch vụ thanh toán giao thông đường bộ thực hiện trừ tiền trong phương tiện thanh toán của chủ phương tiện tại thời điểm đăng ký thanh toán theo tháng, quý, năm."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "23",
+        "parent_clause": "2",
+        "order": 69,
+        "content": "Phương tiện đã đăng ký thanh toán các loại phí, giá, tiền dịch vụ khác theo tháng, quý, năm đi qua điểm thu đã đăng ký, hệ thống thiết bị lắp đặt tại điểm thu không trừ tiền trong phương tiện thanh toán của chủ phương tiện. Ngoài việc trả theo tháng, quý, năm cho trạm điểm thu cụ thể được đăng ký, chủ phương tiện phải thực hiện các hình thức thanh toán theo quy định để thanh toán các loại phí, giá, tiền dịch vụ tại các điểm thu khác trong trường hợp có nhu cầu sử dụng."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "parent_clause": "3",
+        "order": 70,
+        "content": "Cấp giấy phép sử dụng tần số vô tuyến điện và xử lý nhiễu có hại (nếu có) cho thiết bị vô tuyến điện thuộc Hệ thống thanh toán điện tử giao thông theo quy định của pháp luật về tần số vô tuyến điện."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "parent_clause": "3",
+        "order": 71,
+        "content": "Hướng dẫn, hỗ trợ các đơn vị có liên quan trong việc bảo đảm an toàn thông tin, cho các cấu thành Hệ thống thanh toán điện tử giao thông theo quy định của pháp luật."
+      },
+      {
+        "letter": "c",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "parent_clause": "3",
+        "order": 72,
+        "content": "Kiểm tra, giám sát các đơn vị có liên quan thực hiện các quy định của pháp luật trong lĩnh vực công nghệ thông tin có liên quan đến hoạt động thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "letter": "d",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "30",
+        "parent_clause": "3",
+        "order": 73,
+        "content": "Chỉ đạo các cơ quan thông tấn, báo chí, hệ thống thông tin cơ sở đẩy mạnh công tác tuyên truyền, phổ biến lợi ích cũng như các quy định của pháp luật về thanh toán điện tử giao thông đường bộ."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "parent_clause": "3",
+        "order": 74,
+        "content": "Áp dụng tối thiểu hai hình thức tiếp nhận thông tin tra soát, khiếu nại bao gồm qua tổng đài điện thoại (có ghi âm, hoạt động 24/24 giờ trong ngày và 7/7 ngày trong tuần) và qua trụ sở/chi nhánh của Nhà cung cấp dịch vụ thanh toán điện tử giao thông; bảo đảm xác thực những thông tin cơ bản mà chủ phương tiện đã cung cấp cho Nhà cung cấp dịch vụ thanh toán điện tử giao thông;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "parent_clause": "3",
+        "order": 75,
+        "content": "Thời hạn xử lý đề nghị tra soát, khiếu nại không quá 45 ngày làm việc kể từ ngày tiếp nhận đề nghị tra soát, khiếu nại lần đầu của chủ phương tiện."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "parent_clause": "4",
+        "order": 76,
+        "content": "Trong thời hạn tối đa 05 ngày làm việc kể từ ngày thông báo kết quả tra soát, khiếu nại cho chủ phương tiện, Nhà cung cấp dịch vụ thanh toán điện tử giao thông thực hiện bồi hoàn tổn thất cho khách hàng theo thỏa thuận và quy định của pháp luật hiện hành đối với những tổn thất phát sinh không do lỗi của chủ phương tiện và/hoặc không thuộc các trường hợp bất khả kháng theo thỏa thuận về điều khoản và điều kiện sử dụng dịch vụ."
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "32",
+        "parent_clause": "4",
+        "order": 77,
+        "content": "Trong trường hợp hết thời hạn xử lý tra soát, khiếu nại được quy định tại điểm b khoản 3 Điều này mà vẫn chưa xác định được nguyên nhân hay lỗi thuộc bên nào thì trong vòng 15 ngày làm việc tiếp theo, Nhà cung cấp dịch vụ thanh toán điện tử giao thông thỏa thuận với chủ phương tiện về phương án xử lý hoặc tạm thời bồi hoàn tổn thất cho chủ phương tiện cho đến khi có kết luận cuối cùng của cơ quan có thẩm quyền phân định rõ lỗi và trách nhiệm của các bên."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "parent_clause": "1",
+        "order": 78,
+        "content": "Ký hợp đồng cung cấp dịch vụ thu với đơn vị quản lý thu; Thực hiện các quyền và nghĩa vụ theo hợp đồng ký kết;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "119/2024/NĐ-CP",
+        "parent_article": "33",
+        "parent_clause": "1",
+        "order": 79,
+        "content": "Hoàn trả doanh thu theo quy định."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "BELONGS_TO_GROUP",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "DocumentGroup",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_TYPE",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "DocumentType",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_STATUS",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "EffectStatus",
+      "to_id": "4"
+    },
+    {
+      "type": "ISSUED_BY",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Organization",
+      "to_id": "93"
+    },
+    {
+      "type": "SIGNED_BY",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Signer",
+      "to_id": "1074"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Field",
+      "to_id": "4"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Field",
+      "to_id": "2"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Field",
+      "to_id": "28"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "2292/QĐ-BTC"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "2281/QĐ-BTC"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "1153/QĐ-BGTVT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "2752/QĐ-BVHTTDL"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "1754/QĐ-TLĐ"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "2740/QĐ-BVHTTDL"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "1000/QĐ-TTg"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "1938/QĐ-NHNN"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "1939/QĐ-NHNN"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "1141/QĐ-BGTVT"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Chapter",
+      "to_id": "I"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Chapter",
+      "to_id": "II"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Chapter",
+      "to_id": "III"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Chapter",
+      "to_id": "IV"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Chapter",
+      "to_id": "V"
+    },
+    {
+      "type": "HAS_CHAPTER",
+      "from_label": "Document",
+      "from_id": "119/2024/NĐ-CP",
+      "to_label": "Chapter",
+      "to_id": "VI"
+    },
+    {
+      "type": "HAS_SECTION",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Section",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_SECTION",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Section",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_SECTION",
+      "from_label": "Chapter",
+      "from_id": "IV",
+      "to_label": "Section",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "I",
+      "to_label": "Article",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "II",
+      "to_label": "Article",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "III",
+      "to_label": "Article",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "1",
+      "to_label": "Article",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "1",
+      "to_label": "Article",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "1",
+      "to_label": "Article",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "1",
+      "to_label": "Article",
+      "to_id": "18"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "1",
+      "to_label": "Article",
+      "to_id": "19"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "2",
+      "to_label": "Article",
+      "to_id": "20"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "2",
+      "to_label": "Article",
+      "to_id": "21"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "2",
+      "to_label": "Article",
+      "to_id": "22"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "2",
+      "to_label": "Article",
+      "to_id": "23"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "2",
+      "to_label": "Article",
+      "to_id": "24"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "3",
+      "to_label": "Article",
+      "to_id": "25"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "3",
+      "to_label": "Article",
+      "to_id": "26"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "3",
+      "to_label": "Article",
+      "to_id": "27"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Section",
+      "from_id": "3",
+      "to_label": "Article",
+      "to_id": "28"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "29"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "30"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "31"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "32"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "33"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "34"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "V",
+      "to_label": "Article",
+      "to_id": "35"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "36"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "37"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Chapter",
+      "from_id": "VI",
+      "to_label": "Article",
+      "to_id": "38"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "12",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "13",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "13",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "14",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "14",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "15",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "16",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "17",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "17",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "18",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "18",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "19",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "20",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "20",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "20",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "21",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "22",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "22",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "23",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "24",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "25",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "25",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "26",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "26",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "27",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "27",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "27",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "29",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "30",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "31",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "32",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "33",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "34",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "35",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "36",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "37",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "37",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.5",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.5",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.5",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "6.2",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.1",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.2",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.3",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.4",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "10.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "10.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "11.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "11.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "11.6",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "11.6",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "13.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "13.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "13.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "13.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "13.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "13.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "14.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "14.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "14.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "14.1",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "14.1",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "15.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "16.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "16.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "16.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "18.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "18.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "20.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "20.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "20.2",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "20.2",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "20.2",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "21.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "21.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "21.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "23.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "30.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "30.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "30.3",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "30.3",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "32.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "32.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "32.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "32.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "33.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "33.1",
+      "to_label": "Point",
+      "to_id": "b"
+    }
+  ],
+  "preamble": "CHÍNH PHỦ\n__________\nSố: 119/2024/NĐ-CP\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập - Tự do - Hạnh phúc\n______________________\nHà Nội, ngày 30 tháng 9 năm 2024\nNGHỊ ĐỊNH\nQuy định về thanh toán điện tử giao thông đường bộ\n________________\nCăn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019;\nCăn cứ Luật Đường bộ ngày 27 tháng 6 năm 2024;\nCăn cứ Luật Công nghệ thông tin ngày 29 tháng 6 năm 2006;\nCăn cứ Luật An toàn thông tin mạng ngày 19 tháng 11 năm 2015;\nCăn cứ Luật Phí và lệ phí ngày 25 tháng 11 năm 2015;\nCăn cứ Luật An ninh mạng ngày 12 tháng 6 năm 2018;\nCăn cứ Luật Đầu tư theo phương thức đối tác công tư ngày 16 tháng 6 năm 2020;\nCăn cứ Luật Giá ngày 19 tháng 6 năm 2023;\nCăn cứ Luật Giao dịch điện tử ngày 22 tháng 6 năm 2023;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định về thanh toán điện tử giao thông đường bộ.",
+  "footer": "Nơi nhận:\n\n- Ban Bí thư Trung ương Đảng;\n\n- Thủ tướng, các Phó Thủ tướng Chính phủ;\n\n- Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ;\n\n- HĐND, UBND các tỉnh, thành phố trực thuộc trung ương;\n\n- Văn phòng Trung ương và các Ban của Đảng;\n\n- Văn phòng Tổng Bí thư;\n\n- Văn phòng Chủ tịch nước;\n\n- Hội đồng Dân tộc và các Ủy ban của Quốc hội;\n\n- Văn phòng Quốc hội;\n\n- Tòa án nhân dân tối cao;\n\n- Viện kiểm sát nhân dân tối cao;\n\n- Kiểm toán nhà nước;\n\n- Ủy ban Giám sát tài chính tối cao;\n\n- Ngân hàng Chính sách xã hội;\n\n- Ngân hàng Phát triển Việt Nam;\n\n- Ủy ban trung ương của các đoàn thể;\n\n- VPCP: BTCN, các PCN, Trợ lý TTg, TGĐ Cổng TTĐT, các Vụ, Cục, đơn vị trực thuộc, Công báo;\n\n- Lưu: VT, CN.pvc\n\n\n\nTM. CHÍNH PHỦ\n\nKT. THỦ TƯỚNG\n\nPHÓ THỦ TƯỚNG\n\n \n\n \n\n \n\nTrần Hồng Hà\n\n\n\n\n\n\n\n\n \n\nPhụ lục\n\nTHÔNG TIN TRONG CƠ SỞ DỮ LIỆU \n\nTHANH TOÁN ĐIỆN TỬ GIAO THÔNG ĐƯỜNG BỘ\n\n(Kèm theo Nghị định số 119/2024/NĐ-CP ngày 30 tháng 9 năm 2024 của Chính phủ)\n\n___________\n\n \n\n1. Thông tin tài khoản giao thông\n\na) Số tài khoản giao thông, ngày mở tài khoản giao thông.\n\nb) Thông tin chủ tài khoản giao thông (trường hợp chủ tài khoản là cá nhân): Họ tên; ngày, tháng, năm sinh; giới tính; quốc tịch; địa chỉ liên lạc; số định danh cá nhân; số điện thoại đăng ký; email đăng ký.\n\nc) Thông tin chủ tài khoản giao thông (trường hợp chủ tài khoản là tổ chức): Tên tổ chức; quyết định thành lập hoặc giấy phép hoạt động hoặc giấy chứng nhận đăng ký doanh nghiệp; địa chỉ liên lạc;  số điện thoại đăng ký; email đăng ký.\n\nd) Thông tin phương tiện gắn thẻ đầu cuối: Biển số xe, số khung, số máy, tải trọng, số chỗ ngồi, loại xe; giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường; giấy chứng minh xe ưu tiên (nếu có).\n\nđ) Thông tin thẻ đầu cuối: Mã định danh thẻ đầu cuối (TID); mã sản phẩm điện tử của thẻ đầu cuối (EPC); ngày, tháng, năm gắn thẻ đầu cuối.\n\ne) Thông tin phương tiện thanh toán không dùng tiền mặt: Loại phương tiện thanh toán; số phương tiện thanh toán; đơn vị cung ứng phương tiện thanh toán.\n\n2. Thông tin giao dịch thanh toán điện tử giao thông đường bộ\n\na) Thông tin đơn vị tham gia giao dịch: Đơn vị quản lý thu, đơn vị vận hành thu, Nhà cung cấp dịch vụ thanh toán điện tử giao thông.\n\nb) Thông tin thanh toán tiền sử dụng đường bộ: Mã hiệu bản tin giao dịch; mã nhà cung cấp dịch vụ thanh toán tiền sử dụng đường bộ; mã đơn vị vận hành thu; mã trạm thu phí đường bộ; loại trạm thu phí đường bộ (trạm mở, trạm kín); mã làn thu phí; loại làn thu phí (làn mở, làn vào, làn ra); ngày, tháng, năm, giờ, phút, giây thực hiện giao dịch; loại phương tiện (theo phân loại thu phí đường bộ); loại vé; biển số xe gắn với tài khoản giao thông; biển số xe nhận diện từ biển số; ảnh chụp phương tiện; ảnh chụp biển số.\n\nc) Thông tin thanh toán các loại phí, giá, tiền dịch vụ khác: Mã hiệu bản tin giao dịch; mã nhà cung cấp dịch vụ thanh toán giao thông đường bộ; mã đơn vị vận hành thu; mã điểm thu; loại điểm thu (điểm thu mở, điểm thu kín); mã làn thu phí; loại làn thu phí (làn mở, làn vào, làn ra); ngày, tháng, năm, giờ, phút, giây thực hiện giao dịch; loại phương tiện (theo phân loại của đơn vị quản lý thu); loại vé; biển số xe gắn với tài khoản giao thông; biển số xe nhận diện từ biển số; ảnh chụp biển số.\n\nd) Thông tin thanh toán: Mã bản tin thanh toán; số tiền thanh toán; phương tiện thanh toán; ngày, tháng, năm, giờ, phút, giây thực hiện thanh toán thành công./.\n\n\n\n\n \n\n(*) Nguồn dữ liệu được lấy từ cơ sở dữ liệu của LuatVietnam.vn, có tính chất tham khảo."
+}
