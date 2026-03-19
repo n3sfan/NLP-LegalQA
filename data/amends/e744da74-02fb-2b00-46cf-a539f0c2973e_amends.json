@@ -1,0 +1,29 @@
+{
+  "doc_identity": "67/2020/QH14",
+  "amends": [
+    {
+      "amending_doc_identity": "67/2020/QH14",
+      "amending_article": "1",
+      "amending_clause": null,
+      "amend_type": "Sửa đổi, bổ sung",
+      "target_doc_identity": "Luật Xử lý vi phạm hành chính",
+      "target_article": null,
+      "target_clause": null,
+      "target_point": null,
+      "original_text": null,
+      "new_text": null
+    },
+    {
+      "amending_doc_identity": "67/2020/QH14",
+      "amending_article": "2",
+      "amending_clause": null,
+      "amend_type": "Sửa đổi, bổ sung",
+      "target_doc_identity": "26/2008/QH12",
+      "target_article": "163",
+      "target_clause": "1",
+      "target_point": "d",
+      "original_text": null,
+      "new_text": null
+    }
+  ]
+}

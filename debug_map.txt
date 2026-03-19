@@ -1,0 +1,3 @@
+preamble_map: {'54/2019/QH14': 'Chứng khoán', '88/2015/QH13': 'Kế toán', '67/2011/QH12': 'Kiểm toán độc lập', '83/2015/QH13': 'Ngân sách nhà nước', '38/2019/QH14': 'Quản lý thuế', '04/2007/QH12': 'Thuế thu nhập cá nhân', '22/2012/QH13': 'Dự trữ quốc gia', '15/2012/QH13': 'Xử lý vi phạm hành chính'}
+doc_ids: ['54/2019/QH14', '88/2015/QH13', '67/2011/QH12', '83/2015/QH13', '38/2019/QH14', '04/2007/QH12', '22/2012/QH13', '15/2012/QH13']
+num amends: 147

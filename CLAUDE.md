@@ -27,19 +27,27 @@ uv run legal-scraper parse -i data/ -o data/parsed/
 
 # Parse a single document by GUID stem
 uv run legal-scraper parse -d e97b70fe-0672-4800-3bfb-39d6be8eb58d
+
+# Extract amendment relationships from parsed documents
+uv run legal-scraper amend -i data/parsed/ -o data/amends/
+
+# Extract amendments from a single document
+uv run legal-scraper amend -d e97b70fe-0672-4800-3bfb-39d6be8eb58d -i data/parsed/ -o data/amends/
 ```
 
 ## Project Structure
 
 ```
 src/legal_scraper/
-  client.py    - Low-level HTTP client wrapping the phapluat.gov.vn API (3 endpoints)
-  scraper.py   - High-level scraper: search, fetch, parse HTML, save .txt + .json
-  parser.py    - Metadata + content parsers producing Neo4j-ready structured JSON
-  models.py    - Dataclasses for all graph node types (Document, Chapter, Article, etc.)
-  cli.py       - CLI entry point (search, scrape, get, parse commands)
-data/          - Scraped document output (plain text + JSON metadata)
-data/parsed/   - Parsed structured JSON output (one file per document)
+  client.py       - Low-level HTTP client wrapping the phapluat.gov.vn API (3 endpoints)
+  scraper.py      - High-level scraper: search, fetch, parse HTML, save .txt + .json
+  parser.py       - Metadata + content parsers producing Neo4j-ready structured JSON
+  models.py        - Dataclasses for all graph node types (Document, Chapter, Article, etc.)
+  amend_extractor.py - Amendment extraction using NuExtract API
+  cli.py          - CLI entry point (search, scrape, get, parse, amend commands)
+data/            - Scraped document output (plain text + JSON metadata)
+data/parsed/     - Parsed structured JSON output (one file per document)
+data/amends/     - Extracted amendment relationships JSON output
 ```
 
 ## API Endpoints
