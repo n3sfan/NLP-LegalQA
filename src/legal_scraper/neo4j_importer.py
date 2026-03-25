@@ -6,8 +6,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-import ssl
-
 import neo4j
 from neo4j import GraphDatabase
 
