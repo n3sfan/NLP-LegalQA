@@ -10,6 +10,7 @@ from pathlib import Path
 from legal_scraper.parser import LegalDocumentParser
 from legal_scraper.scraper import LegalDocumentScraper
 from legal_scraper.amend_extractor import AmendExtractor
+from legal_scraper.neo4j_importer import Neo4jImporter
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -49,6 +50,15 @@ def main(argv: list[str] | None = None) -> None:
     p_amend.add_argument("-d", "--doc-id", help="Extract amendments from single document by stem")
     p_amend.add_argument("--api-key", help="NuExtract API key (optional, uses default if not provided)")
     p_amend.add_argument("--project-id", help="NuExtract project ID (optional, uses default if not provided)")
+
+    # --- import-neo4j ---
+    p_import = sub.add_parser("import-neo4j", help="Import parsed JSON into Neo4j")
+    p_import.add_argument("-i", "--input", default="data/parsed", help="Directory with parsed JSON files")
+    p_import.add_argument("--uri", required=True, help="Neo4j URI (e.g. neo4j://localhost:7687)")
+    p_import.add_argument("--user", required=True, help="Neo4j username")
+    p_import.add_argument("--password", required=True, help="Neo4j password")
+    p_import.add_argument("--database", default="neo4j", help="Neo4j database name (default: neo4j)")
+    p_import.add_argument("--fail-fast", action="store_true", help="Stop on first import error")
 
     args = parser.parse_args(argv)
 
@@ -163,3 +173,20 @@ def main(argv: list[str] | None = None) -> None:
                     print(f"  Skipping {stem}: {e}")
 
             print(f"\nDone. Extracted {total_amends} amendments from {processed} documents to {output_dir}/")
+
+    elif args.command == "import-neo4j":
+        importer = Neo4jImporter(
+            args.uri,
+            args.user,
+            args.password,
+            args.database,
+        )
+        try:
+            importer.ensure_constraints()
+            summary = importer.import_parsed_directory(
+                Path(args.input),
+                fail_fast=args.fail_fast,
+            )
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        finally:
+            importer.close()
