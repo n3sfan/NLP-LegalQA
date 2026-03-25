@@ -6,6 +6,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+import ssl
+
+import neo4j
 from neo4j import GraphDatabase
 
 
@@ -117,7 +120,10 @@ class Neo4jImporter:
     def __init__(
         self, uri: str, user: str, password: str, database: str = "neo4j"
     ) -> None:
-        self.driver = GraphDatabase.driver(uri, auth=(user, password))
+        self.driver = GraphDatabase.driver(
+            uri,
+            auth=(user, password),
+        )
         self.database = database
 
     def close(self) -> None:
@@ -210,10 +216,10 @@ class Neo4jImporter:
     def _upsert_metadata(self, tx, nodes: dict[str, Any], doc_identity: str) -> int:
         count = 0
 
-        def upsert_node(label: str, key: str, props: dict) -> None:
+        def upsert_node(label: str, key_prop: str, props: dict) -> None:
             tx.run(
-                f"MERGE (n:{label} {{{key}: ${key}}}) SET n += $props",
-                key=props[key],
+                f"MERGE (n:{label} {{{key_prop}: ${key_prop}}}) SET n += $props",
+                **{key_prop: props[key_prop]},
                 props=props,
             )
 
@@ -475,29 +481,74 @@ class Neo4jImporter:
             to_label = rel["to_label"]
             to_id = rel["to_id"]
 
-            # Skip inter-document relationships here (handled in _upsert_metadata)
-            if from_label == "Document" and rel_type in (
-                "BELONGS_TO_GROUP",
-                "HAS_TYPE",
-                "HAS_STATUS",
-                "ISSUED_BY",
-                "SIGNED_BY",
-                "IN_FIELD",
-            ):
+            # Skip inter-document RELATED_TO (handled in _upsert_metadata)
+            if rel_type == "RELATED_TO":
                 continue
+
+            # Rebuild full UIDs from structural IDs for content hierarchy nodes
+            from_uid = self._build_from_uid(from_label, from_id, doc_identity)
+            to_uid = self._build_to_uid(to_label, to_id, doc_identity, rel)
+
+            from_key = "uid" if from_label != "Document" else "doc_identity"
+            to_key = "uid"
 
             tx.run(
                 f"""
-                MATCH (from:{from_label} {{{_id_prop(from_label)}: $from_id}})
-                MATCH (to:{to_label} {{{_id_prop(to_label)}: $to_id}})
+                MATCH (from:{from_label} {{{from_key}: $from_uid}})
+                MATCH (to:{to_label} {{{to_key}: $to_uid}})
                 MERGE (from)-[r:{rel_type}]->(to)
                 """,
-                from_id=from_id,
-                to_id=to_id,
+                from_uid=from_uid,
+                to_uid=to_uid,
             )
             count += 1
 
         return count
+
+    def _build_from_uid(
+        self, from_label: str, from_id: str, doc_identity: str
+    ) -> str:
+        if from_label == "Document":
+            return doc_identity  # doc_identity IS the Document primary key
+        if from_label == "Part":
+            return build_part_uid(doc_identity, from_id)
+        if from_label == "Chapter":
+            return build_chapter_uid(doc_identity, from_id)
+        if from_label == "Section":
+            return build_section_uid(doc_identity, from_id)
+        if from_label == "Article":
+            return build_article_uid(doc_identity, from_id)
+        if from_label == "Clause":
+            # from_id for a Clause parent is "article.clause" (e.g. "1.3")
+            article, clause = from_id.rsplit(".", 1)
+            return build_clause_uid(doc_identity, article, clause)
+        return from_id
+
+    def _build_to_uid(
+        self,
+        to_label: str,
+        to_id: str,
+        doc_identity: str,
+        rel: dict[str, Any],
+    ) -> str:
+        if to_label == "Part":
+            return build_part_uid(doc_identity, to_id)
+        if to_label == "Chapter":
+            return build_chapter_uid(doc_identity, to_id)
+        if to_label == "Section":
+            return build_section_uid(doc_identity, to_id)
+        if to_label == "Article":
+            return build_article_uid(doc_identity, to_id)
+        if to_label == "Clause":
+            # to_id is clause number; parent article is in rel["from_id"]
+            parent_article = rel["from_id"]
+            return build_clause_uid(doc_identity, parent_article, to_id)
+        if to_label == "Point":
+            # to_id is letter; parent article + clause in rel["from_id"]
+            parent_article = rel["from_id"].rsplit(".", 1)[0]  # strip last .clause
+            parent_clause = rel["from_id"].rsplit(".", 1)[1]
+            return build_point_uid(doc_identity, parent_article, parent_clause, to_id)
+        return to_id
 
     # ── Directory import ─────────────────────────────────────────────────────
 
