@@ -11,6 +11,7 @@ from legal_scraper.parser import LegalDocumentParser
 from legal_scraper.scraper import LegalDocumentScraper
 from legal_scraper.amend_extractor import AmendExtractor
 from legal_scraper.neo4j_importer import Neo4jImporter
+from legal_scraper.embedder import Neo4jEmbedder
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -59,6 +60,26 @@ def main(argv: list[str] | None = None) -> None:
     p_import.add_argument("--password", required=True, help="Neo4j password")
     p_import.add_argument("--database", default="neo4j", help="Neo4j database name (default: neo4j)")
     p_import.add_argument("--fail-fast", action="store_true", help="Stop on first import error")
+
+    # --- embed ---
+    p_embed = sub.add_parser("embed", help="Generate vector embeddings for Neo4j nodes")
+    p_embed.add_argument("--uri", required=True, help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
+    p_embed.add_argument("--user", required=True)
+    p_embed.add_argument("--password", required=True)
+    p_embed.add_argument("--database", default="neo4j")
+    p_embed.add_argument(
+        "--node-labels",
+        nargs="+",
+        default=["Article"],
+        choices=["Article", "Clause", "Point"],
+        help="Node labels to embed (default: Article)",
+    )
+    p_embed.add_argument(
+        "--batch-size",
+        type=int,
+        default=32,
+        help="Batch size for embedding (default: 32)",
+    )
 
     args = parser.parse_args(argv)
 
@@ -190,3 +211,18 @@ def main(argv: list[str] | None = None) -> None:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         finally:
             importer.close()
+
+    elif args.command == "embed":
+        embedder = Neo4jEmbedder(
+            uri=args.uri,
+            user=args.user,
+            password=args.password,
+            database=args.database,
+        )
+        try:
+            print(f"Embedding {args.node_labels} nodes...")
+            embedder.embed_label(args.node_labels, batch_size=args.batch_size)
+            print("  Done.")
+        finally:
+            embedder.close()
+        return

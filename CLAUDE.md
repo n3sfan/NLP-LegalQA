@@ -41,6 +41,13 @@ uv run legal-scraper import-neo4j \
   --user neo4j \
   --password <password> \
   --database neo4j
+
+# Generate vector embeddings for Neo4j nodes
+uv run legal-scraper embed \
+  --uri "neo4j+ssc://<host>:7687" \
+  --user neo4j \
+  --password <password> \
+  --node-labels Article Clause Point
 ```
 
 ## Project Structure
@@ -53,7 +60,8 @@ src/legal_scraper/
   models.py           - Dataclasses for all graph node types (Document, Chapter, Article, etc.)
   amend_extractor.py  - Amendment extraction using NuExtract API
   neo4j_importer.py   - MERGE-based importer for parsed JSON into Neo4j (single-pass, idempotent)
-  cli.py              - CLI entry point (search, scrape, get, parse, amend, import-neo4j commands)
+  embedder.py         - Neo4j vector embedding via LangChain HuggingFaceEmbeddings + Neo4jVector
+  cli.py              - CLI entry point (search, scrape, get, parse, amend, import-neo4j, embed commands)
 data/                - Scraped document output (plain text + JSON metadata)
 data/parsed/         - Parsed structured JSON output (one file per document)
 data/amends/         - Extracted amendment relationships JSON output
@@ -138,3 +146,47 @@ Metadata nodes (DocumentGroup, DocumentType, EffectStatus, Organization, Signer,
 ### Data quirks (known)
 - The parsed JSON for `118/2025/QH15` contains 2 duplicate Clause entries (same UID). The importer correctly `MERGE`-deduplicates them — only one survives in Neo4j. This is a source-data artifact, not a bug.
 - Some clause numbering in source documents is sequential within an article rather than reflecting the original document's clause numbers. The importer preserves whatever numbers are in the parsed JSON.
+
+## Vector Search
+
+Embeddings generated using `bkai-foundation-models/vietnamese-bi-encoder` (PhoBERT-base-v2, 768-dim, cosine-normalized, local GPU inference on CUDA).
+
+Vector indexes exist on `Article`, `Clause`, and `Point` nodes (property: `embedding`).
+
+### Search via LangChain Neo4jVector
+
+Uses Neo4j's native vector index — no GDS plugin required:
+
+```python
+from legal_scraper.embedder import Neo4jEmbedder
+
+e = Neo4jEmbedder(
+    uri="neo4j+ssc://nguyenhoangquan.com:7687",
+    user="neo4j",
+    password="Neoneo4j",
+    database="neo4j",
+)
+results = e.search(
+    labels=["Article", "Clause", "Point"],
+    query="không đội mũ bảo hiểm phạt bao nhiêu",
+    k=5,
+)
+for r in results:
+    print(f"[{r.score:.4f}] [{r.label}] {r.uid}")
+e.close()
+```
+
+Returns `List[SearchResult(uid, label, score)]`, sorted by cosine similarity descending. Pass a single label string instead of a list to search just one index.
+
+### CLI embed command
+
+```bash
+# Generate embeddings for specified node labels
+uv run legal-scraper embed \
+  --uri "neo4j+ssc://<host>:7687" \
+  --user neo4j \
+  --password <password> \
+  --node-labels Article Clause Point
+```
+
+Embeddings are stored in the `embedding` property on each node. The command is idempotent — nodes that already have an embedding are skipped on re-run.
