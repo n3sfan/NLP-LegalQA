@@ -18,9 +18,14 @@ dependencies = [
 dev = [
     "pytest>=8.3.0",
 ]
+annotate = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+]
 
 [project.scripts]
 legal-scraper = "legal_scraper.cli:main"
+annotate = "annotate_qa.server:main"
 
 [build-system]
 requires = ["hatchling"]

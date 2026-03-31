@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal QA Annotation</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; background: #f5f5f5; color: #222; height: 100vh; display: flex; flex-direction: column; }
+
+header { background: #1a1a2e; color: #fff; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+header .nav { display: flex; align-items: center; gap: 12px; }
+header button { background: #16213e; color: #fff; border: 1px solid #0f3460; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+header button:hover { background: #0f3460; }
+header .primary { background: #e94560; border-color: #e94560; font-weight: 600; }
+header .primary:hover { background: #c73650; }
+#jump-input { width: 60px; padding: 5px; border-radius: 4px; border: 1px solid #0f3460; }
+#save-status { font-size: 13px; color: #aaa; margin-left: 10px; }
+#save-status.success { color: #4caf50; }
+#save-status.error { color: #e94560; }
+
+main { display: flex; flex: 1; overflow: hidden; }
+.panel { padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+.left-panel { flex: 0 0 60%; border-right: 1px solid #ddd; background: #fff; }
+.right-panel { flex: 0 0 40%; background: #fafafa; }
+
+.field label { display: block; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #555; margin-bottom: 6px; }
+.readonly-text { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 4px; padding: 10px 12px; font-size: 14px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+.readonly-text.scrollable { max-height: 45vh; overflow-y: auto; }
+
+.uid-chips { display: flex; flex-wrap: wrap; gap: 6px; min-height: 36px; padding: 6px; background: #f0f4ff; border: 1px solid #c0d0ff; border-radius: 4px; margin-bottom: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 4px; background: #1a1a2e; color: #fff; padding: 3px 8px; border-radius: 3px; font-size: 12px; font-family: 'Consolas', monospace; }
+.chip button { background: none; border: none; color: #e94560; cursor: pointer; font-size: 14px; line-height: 1; padding: 0; }
+#ref-input { width: 100%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; font-family: 'Consolas', monospace; }
+
+/* --- Drill-down search ---------------------------------------------------- */
+#search-input { width: 100%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+
+/* Breadcrumb */
+#breadcrumb { display: flex; align-items: center; gap: 4px; margin-top: 8px; font-size: 12px; flex-wrap: wrap; }
+.breadcrumb-item { padding: 3px 8px; border-radius: 4px; cursor: pointer; }
+.breadcrumb-item.placeholder { color: #aaa; font-style: italic; cursor: default; }
+.breadcrumb-item.article-crumb { background: #e8f0ff; color: #1a1a2e; font-family: 'Consolas', monospace; font-size: 11px; }
+.breadcrumb-item.clause-crumb { background: #e8f5e9; color: #2e7d32; font-family: 'Consolas', monospace; font-size: 11px; }
+.breadcrumb-item.point-crumb { background: #e3f2fd; color: #1565c0; font-family: 'Consolas', monospace; font-size: 11px; }
+.breadcrumb-item.clickable:hover { opacity: 0.8; }
+.breadcrumb-sep { color: #ccc; font-size: 11px; }
+
+/* Result list */
+#result-list { list-style: none; border: 1px solid #ddd; border-radius: 4px; margin-top: 6px; max-height: 280px; overflow-y: auto; }
+#result-list li { padding: 7px 10px; cursor: pointer; border-bottom: 1px solid #eee; font-size: 13px; }
+#result-list li:last-child { border-bottom: none; }
+#result-list li:hover { background: #e8f0ff; }
+#result-list li.selected { background: #c8e6c9; }
+#result-list li.point-selected { background: #e3f2fd; }
+#result-list .doc-name { display: block; font-size: 11px; color: #888; margin-bottom: 1px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#result-list .doc-id { font-family: monospace; color: #1a1a2e; font-weight: 600; }
+#result-list .art-num { color: #e94560; }
+#result-list .art-title { color: #555; }
+#result-list .clause-num { font-family: 'Consolas', monospace; color: #2e7d32; font-weight: 700; }
+#result-list .clause-label { font-size: 10px; color: #888; }
+#result-list .point-letter { font-family: 'Consolas', monospace; color: #1565c0; font-weight: 700; }
+#result-list .content-snippet { display: block; font-size: 11px; color: #666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#result-list .result-meta { font-size: 10px; color: #888; margin-top: 1px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.result-section-header { padding: 5px 10px 3px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #888; border-bottom: 1px solid #eee; }
+.result-section-header + li { border-top: none; }
+#result-list .loading-row { padding: 10px 12px; font-size: 12px; color: #888; }
+#result-list .empty-row { padding: 10px 12px; font-size: 12px; color: #999; }
+#result-list .add-btn { float: right; font-size: 10px; background: #4caf50; color: #fff; border: none; border-radius: 3px; padding: 1px 6px; cursor: pointer; line-height: 1.6; }
+#result-list .add-btn:hover { background: #388e3c; }
+
+/* Preview bar */
+#preview-bar { margin-top: 10px; }
+#preview-uid { font-family: 'Consolas', monospace; font-size: 12px; color: #555; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 6px 10px; word-break: break-all; margin-bottom: 6px; }
+#preview-uid .label { font-size: 10px; color: #aaa; display: block; margin-bottom: 2px; }
+.preview-actions { display: flex; gap: 6px; }
+#btn-add-result { background: #2e7d32; color: #fff; border: none; padding: 7px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+#btn-add-result:hover { background: #256227; }
+#btn-add-result:disabled { background: #ccc; cursor: not-allowed; }
+#btn-clear-drilldown { background: none; border: 1px solid #ccc; color: #888; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+#btn-clear-drilldown:hover { border-color: #999; color: #555; }
+
+/* Manual UID */
+#manual-uid { width: 100%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; font-family: 'Consolas', monospace; margin-bottom: 6px; }
+#btn-add-uid { background: #1a1a2e; color: #fff; border: none; padding: 7px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+#btn-add-uid:hover { background: #0f3460; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <button id="btn-prev">&#9664; Prev</button>
+    <span id="row-counter">Row 1 / N</span>
+    <button id="btn-next">Next &#9654;</button>
+    <label>Jump:</label>
+    <input type="number" id="jump-input" min="1">
+    <button id="btn-jump">Go</button>
+  </div>
+  <div>
+    <button id="btn-save" class="primary">&#128190; Save CSV</button>
+    <span id="save-status"></span>
+  </div>
+</header>
+
+<main>
+  <!-- Left panel -->
+  <div class="panel left-panel">
+    <div class="field">
+      <label>Question</label>
+      <div id="question-text" class="readonly-text"></div>
+    </div>
+    <div class="field">
+      <label>Answer</label>
+      <div id="answer-text" class="readonly-text scrollable"></div>
+    </div>
+    <div class="field">
+      <label>References</label>
+      <div id="uid-chips" class="uid-chips"></div>
+      <input type="text" id="ref-input" placeholder="UID1, UID2, ...">
+    </div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="panel right-panel">
+    <div class="field">
+      <label>&#128269; Tìm kiếm</label>
+      <input type="text" id="search-input" placeholder="Tên văn bản, số điều, từ khóa...">
+      <div id="breadcrumb"></div>
+      <ul id="result-list"></ul>
+    </div>
+
+    <div id="preview-bar">
+      <div id="preview-uid">
+        <span class="label">UID đang chọn</span>
+        <span id="preview-uid-text"></span>
+      </div>
+      <div class="preview-actions">
+        <button id="btn-add-result">&#10148; Thêm UID</button>
+        <button id="btn-clear-drilldown">Xóa</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>&#9998; UID thủ công</label>
+      <input type="text" id="manual-uid" placeholder="e.g. 56/2024/QH15::article::1::clause::5::point::a">
+      <button id="btn-add-uid">Thêm</button>
+    </div>
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- State --------------------------------------------------------------- */
+  var allRows = [];
+  var currentIndex = 0;
+  var selectedArticle = null;     // { doc_identity, doc_name, article_num, uid }
+  var selectedClause = null;      // { clause_num, content, uid }
+  var selectedPoint  = null;      // { clause_num, point_letter, content, uid }
+  var currentClauses = [];
+  var currentPoints  = [];
+
+  /* ---- DOM ----------------------------------------------------------------- */
+  function $(id) { return document.getElementById(id); }
+  var btnPrev         = $('btn-prev');
+  var btnNext         = $('btn-next');
+  var btnJump         = $('btn-jump');
+  var btnSave         = $('btn-save');
+  var btnAddUid       = $('btn-add-uid');
+  var btnAddFull     = $('btn-add-full');
+  var btnClearBuilder = $('btn-clear-builder');
+  var jumpInput       = $('jump-input');
+  var rowCounter      = $('row-counter');
+  var saveStatus      = $('save-status');
+  var questionEl      = $('question-text');
+  var answerEl        = $('answer-text');
+  var chipsEl         = $('uid-chips');
+  var refInput        = $('ref-input');
+  var searchInput     = $('search-input');
+  var searchResults   = $('search-results');
+  var manualUidInput  = $('manual-uid');
+  var uidBuilder      = $('uid-builder');
+  /* ---- DOM ----------------------------------------------------------------- */
+  var breadcrumb       = $('breadcrumb');
+  var resultList      = $('result-list');
+  var previewUid      = $('preview-uid-text');
+  var btnAddResult    = $('btn-add-result');
+  var btnClearDrill   = $('btn-clear-drilldown');
+  var btnPrev         = $('btn-prev');
+  var btnNext         = $('btn-next');
+  var btnJump         = $('btn-jump');
+  var btnSave         = $('btn-save');
+  var btnAddUid       = $('btn-add-uid');
+  var jumpInput       = $('jump-input');
+  var rowCounter      = $('row-counter');
+  var saveStatus      = $('save-status');
+  var questionEl      = $('question-text');
+  var answerEl        = $('answer-text');
+  var chipsEl         = $('uid-chips');
+  var refInput        = $('ref-input');
+  var searchInput     = $('search-input');
+  var manualUidInput  = $('manual-uid');
+
+  /* ---- Drill-down state ----------------------------------------------------- */
+  // 'search' | 'article' | 'clause' | 'point'
+  var drillState    = 'search';
+  var selectedArticle = null;   // { doc_identity, doc_name, article_num, uid }
+  var selectedClause   = null;   // { clause_num, content, uid }
+  var selectedPoint     = null;   // { clause_num, point_letter, content, uid }
+  var currentClauses    = [];
+  var currentPoints     = [];
+  var selectedLiEl      = null;  // currently highlighted <li> in result list
+
+  /* ---- Init ---------------------------------------------------------------- */
+  function init() {
+    fetch('/api/rows').then(function(r){ return r.json(); }).then(function(data){
+      allRows = data;
+      if (allRows.length > 0) showRow(0);
+      else { questionEl.textContent = 'No rows found.'; }
+    }).catch(function(e){ questionEl.textContent = 'Error: ' + e.message; });
+  }
+
+  /* ---- Row rendering -------------------------------------------------------- */
+  function showRow(idx) {
+    var row = allRows[idx];
+    var total = allRows.length;
+    rowCounter.textContent = 'Row ' + (idx + 1) + ' / ' + total;
+    jumpInput.max = total;
+    jumpInput.placeholder = '1\u2013' + total;
+    questionEl.textContent = row.question || '(no question)';
+    answerEl.textContent   = row.answer   || '(no answer)';
+    renderChips(row.reference || '');
+    btnPrev.disabled = idx === 0;
+    btnNext.disabled = idx === total - 1;
+    resetDrilldown();
+  }
+
+  /* ---- Chips ---------------------------------------------------------------- */
+  function renderChips(refStr) {
+    var uids = refStr ? refStr.split(',').map(function(s){ return s.trim(); }).filter(Boolean) : [];
+    chipsEl.innerHTML = '';
+    uids.forEach(function(uid, i) {
+      var chip = document.createElement('span');
+      chip.className = 'chip';
+      chip.textContent = uid;
+      var rm = document.createElement('button');
+      rm.textContent = '\u2715';
+      rm.title = 'Remove';
+      rm.addEventListener('click', function() { removeUid(i); });
+      chip.appendChild(rm);
+      chipsEl.appendChild(chip);
+    });
+    refInput.value = uids.join(', ');
+  }
+
+  function getCurrentUids() {
+    return refInput.value.split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+  }
+
+  function setCurrentUids(uids) {
+    refInput.value = uids.join(', ');
+    renderChips(refInput.value);
+  }
+
+  function removeUid(idx) {
+    var uids = getCurrentUids();
+    uids.splice(idx, 1);
+    setCurrentUids(uids);
+  }
+
+  function addUid(uid) {
+    var trimmed = uid.trim();
+    if (!trimmed) return;
+    var uids = getCurrentUids();
+    if (uids.indexOf(trimmed) === -1) uids.push(trimmed);
+    setCurrentUids(uids);
+  }
+
+  /* ---- Preview bar --------------------------------------------------------- */
+  function updatePreview() {
+    var uid = '';
+    if (drillState === 'search' || !selectedArticle) {
+      uid = '';
+    } else if (drillState === 'article') {
+      uid = selectedArticle.uid;
+    } else if (drillState === 'clause') {
+      uid = selectedClause.uid;
+    } else if (drillState === 'point') {
+      uid = selectedPoint.uid;
+    }
+    previewUid.textContent = uid;
+    btnAddResult.disabled = !uid;
+  }
+
+  btnAddResult.addEventListener('click', function() {
+    if (drillState === 'article' && selectedArticle) {
+      addUid(selectedArticle.uid);
+      resetDrilldown();
+    } else if (drillState === 'clause' && selectedClause) {
+      addUid(selectedClause.uid);
+      resetDrilldown();
+    } else if (drillState === 'point' && selectedPoint) {
+      addUid(selectedPoint.uid);
+      resetDrilldown();
+    }
+  });
+
+  /* ---- Drill-down reset ----------------------------------------------------- */
+  function resetDrilldown() {
+    drillState       = 'search';
+    selectedArticle  = null;
+    selectedClause   = null;
+    selectedPoint    = null;
+    currentClauses  = [];
+    currentPoints    = [];
+    selectedLiEl     = null;
+    searchInput.value = '';
+    renderBreadcrumb();
+    renderResultList_articles([]);
+    updatePreview();
+  }
+
+  btnClearDrill.addEventListener('click', resetDrilldown);
+
+  /* ---- Breadcrumb ----------------------------------------------------------- */
+  function renderBreadcrumb() {
+    breadcrumb.innerHTML = '';
+    if (drillState === 'search') {
+      var ph = document.createElement('span');
+      ph.className = 'breadcrumb-item placeholder';
+      ph.textContent = '\u2191 Ch\u1ecdn \u0110i\u1ec1u';
+      breadcrumb.appendChild(ph);
+      return;
+    }
+    // Article crumb
+    var artCrumb = document.createElement('span');
+    artCrumb.className = 'breadcrumb-item article-crumb clickable';
+    artCrumb.textContent = (selectedArticle ? selectedArticle.uid : '...');
+    artCrumb.title = 'Quay l\u1ea1i danh sách \u0110i\u1ec1u';
+    artCrumb.addEventListener('click', function() {
+      drillState = 'search';
+      selectedClause = null;
+      selectedPoint   = null;
+      renderBreadcrumb();
+      renderResultList_clauses(currentClauses, null);
+      updatePreview();
+    });
+    breadcrumb.appendChild(artCrumb);
+
+    if (drillState === 'clause' || drillState === 'point') {
+      var sep1 = document.createElement('span');
+      sep1.className = 'breadcrumb-sep';
+      sep1.textContent = '>';
+      breadcrumb.appendChild(sep1);
+
+      var clCrumb = document.createElement('span');
+      clCrumb.className = 'breadcrumb-item clause-crumb' + (drillState === 'clause' ? ' clickable' : '');
+      clCrumb.textContent = 'Kho\u1ea3n ' + (selectedClause ? selectedClause.clause_num : '...');
+      if (drillState === 'point') {
+        clCrumb.title = 'Quay l\u1ea1i danh s\u00e1ch Kho\u1ea3n';
+        clCrumb.addEventListener('click', function() {
+          drillState = 'clause';
+          selectedPoint = null;
+          renderBreadcrumb();
+          renderResultList_clauses(currentClauses, selectedClause);
+          updatePreview();
+        });
+      }
+      breadcrumb.appendChild(clCrumb);
+    }
+
+    if (drillState === 'point') {
+      var sep2 = document.createElement('span');
+      sep2.className = 'breadcrumb-sep';
+      sep2.textContent = '>';
+      breadcrumb.appendChild(sep2);
+
+      var ptCrumb = document.createElement('span');
+      ptCrumb.className = 'breadcrumb-item point-crumb';
+      ptCrumb.textContent = '\u0110i\u1ec3m ' + (selectedPoint ? selectedPoint.point_letter : '...');
+      breadcrumb.appendChild(ptCrumb);
+    }
+  }
+
+  /* ---- Result list renderers ----------------------------------------------- */
+  function setLoading() {
+    resultList.innerHTML = '';
+    var li = document.createElement('li');
+    li.className = 'loading-row';
+    li.textContent = '...\u0110ang t\u1ea3i';
+    resultList.appendChild(li);
+  }
+
+  function setEmpty(msg) {
+    resultList.innerHTML = '';
+    var li = document.createElement('li');
+    li.className = 'empty-row';
+    li.textContent = msg || 'Kh\xf4ng c\xf3 k\u1ebft qu\u1ea3';
+    resultList.appendChild(li);
+  }
+
+  function clearResultList() {
+    selectedLiEl = null;
+    resultList.innerHTML = '';
+  }
+
+  function renderResultList_articles(articles) {
+    clearResultList();
+    if (!articles || articles.length === 0) {
+      setEmpty('G\xf5 t\u1eeb kh\xf3a \u0111\u1ec3 t\xecm \u0111i\u1ec1u');
+      return;
+    }
+    articles.forEach(function(a) {
+      var li = document.createElement('li');
+      var nameLine = document.createElement('span');
+      nameLine.className = 'doc-name';
+      nameLine.textContent = a.doc_name || a.doc_identity;
+      li.appendChild(nameLine);
+      var doc = document.createElement('span');
+      doc.className = 'doc-id';
+      doc.textContent = a.doc_identity;
+      var num = document.createElement('span');
+      num.className = 'art-num';
+      num.textContent = ' \u2502 \u0110i\u1ec1u ' + a.article_num;
+      var ttl = document.createElement('span');
+      ttl.className = 'art-title';
+      ttl.textContent = ' \u2013 ' + (a.title || '');
+      li.appendChild(doc);
+      li.appendChild(num);
+      li.appendChild(ttl);
+      li.addEventListener('click', function() {
+        selectArticle(a);
+      });
+      resultList.appendChild(li);
+    });
+  }
+
+  function renderResultList_clauses(clauses, activeClause) {
+    clearResultList();
+    if (!clauses || clauses.length === 0) {
+      // No clauses — offer just the article UID
+      setEmpty('Kh\xf4ng c\xf3 Kho\u1ea3n \u2014 nh\u1ea5n Th\xeam UID \u0111\u1ec3 l\u01b0u \u0110i\u1ec1u n\xe0y');
+      return;
+    }
+    clauses.forEach(function(c) {
+      var li = document.createElement('li');
+      if (activeClause && activeClause.clause_num === c.clause_num) {
+        li.className = 'selected';
+        selectedLiEl = li;
+      }
+      var num = document.createElement('span');
+      num.className = 'clause-num';
+      num.textContent = 'Kho\u1ea3n ' + c.clause_num;
+      var snip = document.createElement('span');
+      snip.className = 'content-snippet';
+      snip.textContent = (c.content || '').substring(0, 100);
+      li.appendChild(num);
+      li.appendChild(snip);
+      li.addEventListener('click', function() {
+        selectClause(c, li);
+      });
+      resultList.appendChild(li);
+    });
+  }
+
+  function renderResultList_points(points, activePoint) {
+    clearResultList();
+    if (!points || points.length === 0) {
+      setEmpty('Kh\xf4ng c\xf3 \u0110i\u1ec3m \u2014 nh\u1ea5n Th\xeam UID \u0111\u1ec3 l\u01b0u Kho\u1ea3n n\xe0y');
+      return;
+    }
+    points.forEach(function(p) {
+      var li = document.createElement('li');
+      li.className = 'point-selected';
+      if (activePoint && activePoint.point_letter === p.point_letter) {
+        li.className = 'point-selected';
+        selectedLiEl = li;
+      }
+      var ltr = document.createElement('span');
+      ltr.className = 'point-letter';
+      ltr.textContent = '\u0110i\u1ec3m ' + p.point_letter;
+      var snip = document.createElement('span');
+      snip.className = 'content-snippet';
+      snip.textContent = (p.content || '').substring(0, 100);
+      li.appendChild(ltr);
+      li.appendChild(snip);
+      li.addEventListener('click', function() {
+        selectPoint(p, li);
+      });
+      resultList.appendChild(li);
+    });
+  }
+
+  /* ---- Drill-down actions --------------------------------------------------- */
+  function selectArticle(article) {
+    drillState       = 'article';
+    selectedArticle  = article;
+    selectedClause   = null;
+    selectedPoint    = null;
+    currentClauses   = [];
+    currentPoints    = [];
+    renderBreadcrumb();
+    setLoading();
+    updatePreview();
+
+    fetch('/api/article?doc_identity=' + encodeURIComponent(article.doc_identity)
+        + '&article_num=' + article.article_num)
+      .then(function(r){ return r.json(); })
+      .then(function(data) {
+        currentClauses = data.clauses || [];
+        currentPoints  = data.points  || [];
+        renderResultList_clauses(currentClauses, null);
+      })
+      .catch(function() {
+        setEmpty('L\u1ed7i t\u1ea3i Kho\u1ea3n');
+      });
+  }
+
+  function selectClause(c, liEl) {
+    // Highlight
+    if (selectedLiEl) selectedLiEl.className = '';
+    liEl.className = 'selected';
+    selectedLiEl = liEl;
+
+    drillState     = 'clause';
+    selectedClause = c;
+    selectedPoint  = null;
+
+    // Filter points for this clause
+    var pts = currentPoints.filter(function(p){ return p.clause_num === c.clause_num; });
+    renderBreadcrumb();
+    renderResultList_points(pts, null);
+    updatePreview();
+  }
+
+  function selectPoint(p, liEl) {
+    if (selectedLiEl) selectedLiEl.className = 'point-selected';
+    liEl.className = 'point-selected';
+    selectedLiEl = liEl;
+
+    selectedPoint = p;
+    drillState    = 'point';
+    renderBreadcrumb();
+    updatePreview();
+  }
+
+  /* ---- Search (articles only, wired to state 'search') -------------------- */
+  var searchTimer = null;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(searchTimer);
+    var q = searchInput.value.trim();
+    if (!q) {
+      drillState = 'search';
+      selectedArticle = null;
+      renderBreadcrumb();
+      renderResultList_articles([]);
+      updatePreview();
+      return;
+    }
+    // Only search articles when in search mode
+    if (drillState !== 'search') return;
+    searchTimer = setTimeout(function() {
+      fetch('/api/search?q=' + encodeURIComponent(q))
+        .then(function(r){ return r.json(); })
+        .then(function(data) {
+          renderResultList_articles(data.articles || []);
+        })
+        .catch(function(){});
+    }, 200);
+  });
+
+  /* ---- Navigation ----------------------------------------------------------- */
+  function saveCurrentRow() {
+    allRows[currentIndex].reference = refInput.value.trim();
+  }
+
+  btnPrev.addEventListener('click', function() {
+    if (currentIndex > 0) { saveCurrentRow(); showRow(--currentIndex); }
+  });
+
+  btnNext.addEventListener('click', function() {
+    if (currentIndex < allRows.length - 1) { saveCurrentRow(); showRow(++currentIndex); }
+  });
+
+  btnJump.addEventListener('click', function() {
+    var n = parseInt(jumpInput.value, 10);
+    if (n >= 1 && n <= allRows.length) { saveCurrentRow(); currentIndex = n - 1; showRow(currentIndex); }
+  });
+
+  jumpInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') btnJump.click(); });
+  refInput.addEventListener('input', function() { renderChips(refInput.value); });
+
+  /* ---- Save ----------------------------------------------------------------- */
+  btnSave.addEventListener('click', function() {
+    saveCurrentRow();
+    btnSave.disabled = true;
+    saveStatus.textContent = 'Saving\u2026';
+    saveStatus.className = '';
+    fetch('/api/save', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({rows: allRows})
+    }).then(function(r){ return r.json(); }).then(function(data) {
+      saveStatus.textContent = 'Saved ' + data.saved + ' rows \u2713';
+      saveStatus.className = 'success';
+      setTimeout(function(){ saveStatus.textContent = ''; }, 3000);
+    }).catch(function(e) {
+      saveStatus.textContent = 'Save failed: ' + e.message;
+      saveStatus.className = 'error';
+    }).finally(function() { btnSave.disabled = false; });
+  });
+
+  /* ---- Manual add ----------------------------------------------------------- */
+  btnAddUid.addEventListener('click', function() {
+    addUid(manualUidInput.value);
+    manualUidInput.value = '';
+    manualUidInput.focus();
+  });
+  manualUidInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') btnAddUid.click(); });
+
+  /* ---- Keyboard shortcuts ---------------------------------------------------- */
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') { e.preventDefault(); btnSave.click(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'ArrowRight') { e.preventDefault(); btnNext.click(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'ArrowLeft')  { e.preventDefault(); btnPrev.click(); }
+  });
+
+  /* ---- Boot ----------------------------------------------------------------- */
+  init();
+})();
+</script>
+</body>
+</html>
