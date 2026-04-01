@@ -1,0 +1,2156 @@
+{
+  "doc_stem": "0379c986-0671-f900-0c89-b91abd8d1d34",
+  "nodes": {
+    "document": {
+      "doc_guid": "0379c986-0671-f900-0c89-b91abd8d1d34",
+      "doc_identity": "118/2025/QH15",
+      "doc_name": "Luật sửa đổi, bổ sung một số điều của 10 Luật có liên quan đến an ninh, trật tự của Quốc hội, số 118/2025/QH15",
+      "issue_date": "2025-12-10T00:00:00",
+      "effect_date": "2026-07-01T00:00:00",
+      "expire_date": null,
+      "gazette_number": "35-01/2026",
+      "gazette_date": "2026-01-21T00:00:00"
+    },
+    "document_group": [
+      {
+        "id": 1,
+        "name": "Văn bản pháp quy"
+      }
+    ],
+    "document_type": [
+      {
+        "id": 10,
+        "name": "Luật"
+      }
+    ],
+    "effect_status": [
+      {
+        "id": 6,
+        "name": "Chưa áp dụng"
+      }
+    ],
+    "organizations": [
+      {
+        "id": 161,
+        "name": "Quốc hội"
+      }
+    ],
+    "signers": [
+      {
+        "id": 2067,
+        "name": "Trần Thanh Mẫn"
+      }
+    ],
+    "fields": [
+      {
+        "id": 27,
+        "name": "Hành chính"
+      },
+      {
+        "id": 11,
+        "name": "An ninh trật tự"
+      }
+    ],
+    "related_documents": [
+      {
+        "doc_guid": "9091de43-067b-0000-6554-3d3637f24a4c",
+        "doc_identity": "48/2025/L-CTN",
+        "doc_name": "Lệnh 48/2025/L-CTN của Chủ tịch nước về việc công bố Luật Tình trạng khẩn cấp",
+        "field_name": "An ninh trật tự, Hành chính, An ninh quốc gia"
+      },
+      {
+        "doc_guid": "462495f3-0676-e300-7a3e-36879c890b56",
+        "doc_identity": "09/2025/UBTVQH15",
+        "doc_name": "Pháp lệnh 09/2025/UBTVQH15 của Ủy ban Thường vụ Quốc hội sửa đổi, bổ sung một số điều của Pháp lệnh Cảnh sát môi trường",
+        "field_name": "An ninh trật tự, Tài nguyên-Môi trường"
+      },
+      {
+        "doc_guid": "04ac7816-0671-8b00-0480-d1bbd153c10a",
+        "doc_identity": "104/2025/QH15",
+        "doc_name": "Luật Tình trạng khẩn cấp của Quốc hội, số 104/2025/QH15",
+        "field_name": "An ninh trật tự, An ninh quốc gia, Tài nguyên-Môi trường"
+      },
+      {
+        "doc_guid": "002ae4d4-066f-aa00-858b-cf9e50859938",
+        "doc_identity": "109/2025/TT-BCA",
+        "doc_name": "Thông tư 109/2025/TT-BCA của Bộ Công an quy định về phân công trách nhiệm, quan hệ phối hợp, quy trình xác minh, giải quyết vụ cháy trong Công an nhân dân",
+        "field_name": "An ninh trật tự, Cơ cấu tổ chức"
+      },
+      {
+        "doc_guid": "6b5de6dd-0664-4b00-0c0b-7a6bae0b1288",
+        "doc_identity": "297/2025/NĐ-CP",
+        "doc_name": "Nghị định 297/2025/NĐ-CP của Chính phủ quy định thực hiện liên thông điện tử nhóm thủ tục hành chính: Đăng ký thành lập hộ kinh doanh - cấp Giấy chứng nhận đủ điều kiện về an ninh, trật tự - cấp Giấy phép đủ điều kiện kinh doanh dịch vụ karaoke",
+        "field_name": "An ninh trật tự, Doanh nghiệp, Hành chính, Văn hóa-Thể thao-Du lịch"
+      },
+      {
+        "doc_guid": "ec18f69b-0660-a700-43bd-c7b27495580f",
+        "doc_identity": "288/2025/NĐ-CP",
+        "doc_name": "Nghị định 288/2025/NĐ-CP của Chính phủ quy định về quản lý tàu bay không người lái và phương tiện bay khác",
+        "field_name": "An ninh trật tự, Hành chính, Giao thông"
+      },
+      {
+        "doc_guid": "06d457c6-0660-0800-bccf-39b87b98d420",
+        "doc_identity": "103/2025/TT-BCA",
+        "doc_name": "Thông tư 103/2025/TT-BCA của Bộ Công an banh hành Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình",
+        "field_name": "Đất đai-Nhà ở, An ninh trật tự, Xây dựng"
+      },
+      {
+        "doc_guid": "ac767734-065f-e900-73b4-881f8759143c",
+        "doc_identity": "282/2025/NĐ-CP",
+        "doc_name": "Nghị định 282/2025/NĐ-CP của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực an ninh, trật tự, an toàn xã hội; phòng, chống tệ nạn xã hội; phòng, chống bạo lực gia đình",
+        "field_name": "An ninh trật tự, Vi phạm hành chính, Hành chính, Hôn nhân gia đình"
+      },
+      {
+        "doc_guid": "dff8e642-065c-c200-75e0-27bf9f508be1",
+        "doc_identity": "97/2025/TT-BTC",
+        "doc_name": "Thông tư 97/2025/TT-BTC của Bộ Tài chính hướng dẫn thực hiện các chính sách tài chính đối với doanh nghiệp trực tiếp phục vụ quốc phòng, an ninh quy định tại điểm b, c, d, đ, e khoản 1 Điều 7 Nghị định 16/2023/NĐ-CP ngày 25/04/2023 của Chính phủ về tổ chức quản lý và hoạt động của doanh nghiệp trực tiếp phục vụ quốc phòng, an ninh và doanh nghiệp kết hợp kinh tế với quốc phòng, an ninh",
+        "field_name": "Tài chính-Ngân hàng, An ninh trật tự, Doanh nghiệp"
+      },
+      {
+        "doc_guid": "b11f9b85-0654-b200-cb67-1cb8bb4cafc1",
+        "doc_identity": "8211/QĐ-BCA",
+        "doc_name": "Quyết định 8211/QĐ-BCA của Bộ Công an về việc công bố thủ tục hành chính sửa đổi, bổ sung liên quan đến lực lượng tham gia bảo vệ an ninh, trật tự ở cơ sở thuộc phạm vi, chức năng quản lý Nhà nước của Bộ Công an",
+        "field_name": "An ninh trật tự, Hành chính"
+      }
+    ],
+    "parts": [],
+    "chapters": [],
+    "sections": [],
+    "articles": [
+      {
+        "number": "7",
+        "title": "Sửa đổi, bổ sung một số điều của Luật Trật tự, an toàn giao thông đường bộ",
+        "doc_identity": "118/2025/QH15",
+        "parent_chapter": null,
+        "parent_section": null,
+        "order": 6,
+        "content": ""
+      },
+      {
+        "number": "8",
+        "title": "Sửa đổi, bổ sung một số điều của Luật Đường bộ",
+        "doc_identity": "118/2025/QH15",
+        "parent_chapter": null,
+        "parent_section": null,
+        "order": 7,
+        "content": ""
+      }
+    ],
+    "clauses": [
+      {
+        "number": "1",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 68,
+        "content": "Sửa đổi, bổ sung một số điểm của khoản 1 Điều 7 như sau:"
+      },
+      {
+        "number": "2",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 69,
+        "content": "Sửa đổi, bổ sung khoản 18 và bổ sung khoản 18a vào sau khoản 18 Điều 9 như sau:\n“18. Làm gián đoạn hoạt động hoặc làm sai lệch dữ liệu của thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách theo quy định của Luật này.\n18a. Sử dụng dữ liệu thu được từ thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách để xâm phạm nhân phẩm, danh dự, đời sống riêng tư, bí mật cá nhân, các quyền và lợi ích hợp pháp khác của cá nhân và tổ chức.”."
+      },
+      {
+        "number": "3",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 70,
+        "content": "Sửa đổi, bổ sung khoản 3 Điều 10 như sau:\n“3. Khi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe ô tô, người lái xe không được cho trẻ em ngồi cùng hàng ghế, trừ xe ô tô chỉ có một hàng ghế; người lái xe phải sử dụng, hướng dẫn sử dụng thiết bị an toàn phù hợp cho trẻ em, trừ xe ô tô kinh doanh vận tải hành khách.”."
+      },
+      {
+        "number": "4",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 71,
+        "content": "Sửa đổi, bổ sung điểm a và điểm b khoản 3 Điều 27 như sau:\n“a) Xe chữa cháy của Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ và xe chữa cháy của các lực lượng khác được huy động đi làm nhiệm vụ chữa cháy, xe cứu thương đang làm nhiệm vụ cấp cứu có đèn nhấp nháy màu đỏ;\nb) Xe của lực lượng công an, quân sự, kiểm sát đi làm nhiệm vụ khẩn cấp, xe Cảnh sát giao thông dẫn đường có đèn nhấp nháy màu xanh và đỏ;”."
+      },
+      {
+        "number": "5",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 72,
+        "content": "Sửa đổi, bổ sung một số khoản của Điều 34 như sau:"
+      },
+      {
+        "number": "6",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 73,
+        "content": "Sửa đổi, bổ sung khoản 2 và khoản 3 Điều 35 như sau:\n“2. Xe ô tô kinh doanh vận tải hàng hóa, xe ô tô kinh doanh vận tải hành khách dưới 08 chỗ (không kể chỗ của người lái xe), xe ô tô đầu kéo, xe cứu thương, xe vận tải nội bộ phải lắp thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe. Xe ô tô kinh doanh vận tải hành khách từ 08 chỗ trở lên (không kể chỗ của người lái xe) phải lắp thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách.\nViệc xử lý dữ liệu thu được từ thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách thực hiện theo quy định của pháp luật về bảo vệ dữ liệu cá nhân và quy định khác của pháp luật có liên quan.\n3. Phương tiện giao thông thông minh là xe cơ giới, xe máy chuyên dùng thì phải bảo đảm các điều kiện quy định tại khoản 1 Điều này và được cơ quan có thẩm quyền cấp phép hoạt động.”."
+      },
+      {
+        "number": "7",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 74,
+        "content": "Sửa đổi, bổ sung khoản 7 Điều 41 như sau:\n“7. Bộ trưởng Bộ Xây dựng ban hành quy chuẩn kỹ thuật quốc gia về chất lượng an toàn kỹ thuật và bảo vệ môi trường, tiêu thụ năng lượng xe cơ giới, xe máy chuyên dùng, phụ tùng xe cơ giới trong nhập khẩu, sản xuất, lắp ráp; ban hành quy chuẩn kỹ thuật quốc gia về cơ sở bảo hành, bảo dưỡng xe cơ giới; quy định về trình tự, thủ tục chứng nhận chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới, xe máy chuyên dùng, phụ tùng xe cơ giới trong nhập khẩu, sản xuất, lắp ráp, trừ trường hợp quy định tại khoản 8 Điều này; quy định về tiêu chuẩn, tập huấn đăng kiểm viên, cấp mới, cấp lại, tạm đình chỉ, thu hồi chứng chỉ đăng kiểm viên.”."
+      },
+      {
+        "number": "8",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 75,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 42 như sau:"
+      },
+      {
+        "number": "9",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 76,
+        "content": "Sửa đổi, bổ sung khoản 1 Điều 43 như sau:\n“1. Cơ sở đăng kiểm là tổ chức cung cấp dịch vụ công thực hiện kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới, xe máy chuyên dùng được tổ chức, hoạt động theo quy định của Chính phủ; chứng nhận an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới cải tạo, xe máy chuyên dùng cải tạo.\nCơ sở đăng kiểm chịu trách nhiệm về kết quả kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới, xe máy chuyên dùng; kết quả chứng nhận an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới cải tạo, xe máy chuyên dùng cải tạo.\nCơ sở đăng kiểm chỉ được từ chối kiểm định trong các trường hợp: theo yêu cầu của cơ quan tiến hành tố tụng; khi chủ phương tiện chưa thực hiện xong yêu cầu của cơ quan nhà nước có thẩm quyền về giải quyết vụ việc vi phạm hành chính trong lĩnh vực trật tự, an toàn giao thông đường bộ; thông tin thể hiện trên chứng nhận đăng ký xe không đúng với biển số xe hoặc với phương tiện thực tế khi làm thủ tục kiểm định; chưa thực hiện cấp đổi chứng nhận đăng ký xe tại lần kiểm định tiếp theo sau khi phương tiện đã được cấp chứng nhận cải tạo; có căn cứ xác thực việc chủ xe làm giả tài liệu, giấy tờ của phương tiện.”."
+      },
+      {
+        "number": "10",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 77,
+        "content": "Sửa đổi, bổ sung khoản 9 Điều 52 như sau:\n“9. Bộ trưởng Bộ Xây dựng quy định chi tiết điểm b khoản 3 và điểm a khoản 4 Điều này; quy định về tải trọng, khổ giới hạn của đường bộ; quy định lưu hành xe quá khổ giới hạn, xe quá tải trọng, xe bánh xích trên đường bộ; quy định trình tự, thủ tục cấp giấy phép lưu hành cho xe quá tải trọng, xe quá khổ giới hạn, xe bánh xích.”."
+      },
+      {
+        "number": "11",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 78,
+        "content": "Sửa đổi, bổ sung khoản 9 Điều 57 như sau:\n“9. Bộ trưởng Bộ Công an quy định mẫu giấy phép lái xe và giấy phép lái xe quốc tế, trình tự, thủ tục cấp và việc sử dụng giấy phép lái xe, giấy phép lái xe quốc tế; Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định mẫu giấy phép lái xe, trình tự, thủ tục cấp và việc sử dụng giấy phép lái xe của lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh.”."
+      },
+      {
+        "number": "12",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 79,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 60 như sau:"
+      },
+      {
+        "number": "13",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 80,
+        "content": "Sửa đổi, bổ sung một số khoản của Điều 61 như sau:"
+      },
+      {
+        "number": "14",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 81,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 62 như sau:"
+      },
+      {
+        "number": "15",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 82,
+        "content": "Sửa đổi, bổ sung khoản 1 Điều 64 như sau:\n“ 1. Thời gian lái xe liên tục của người lái xe không quá 04 giờ, trừ trường hợp bất khả kháng hoặc trở ngại khách quan. Thời gian làm việc của người lái xe trong một ngày, một tuần thực hiện theo quy định của Bộ luật Lao động.”."
+      },
+      {
+        "number": "16",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 83,
+        "content": "Sửa đổi, bổ sung khoản 3 Điều 67 như sau:\n“3. Khai thác dữ liệu từ thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách; tiếp nhận dữ liệu thu thập từ công trình kiểm soát tải trọng xe.”."
+      },
+      {
+        "number": "17",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 84,
+        "content": "Sửa đổi, bổ sung Điều 71 như sau:\n“Điều 71. Hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ; hệ thống quản lý dữ liệu thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách; hệ thống thiết bị kỹ thuật nghiệp vụ kiểm tra tải trọng xe cơ giới\n1. Hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ được quy định như sau:\na) Hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ là hệ thống thu thập tín hiệu, dữ liệu, âm thanh, hình ảnh về hành trình của phương tiện tham gia giao thông đường bộ, tình trạng giao thông và các dữ liệu liên quan khác được xây dựng, lắp đặt trên các tuyến giao thông đường bộ theo quy chuẩn kỹ thuật quốc gia để giám sát tình hình an ninh, trật tự, an toàn giao thông đường bộ; phát hiện vi phạm pháp luật về trật tự, an toàn giao thông đường bộ và vi phạm pháp luật khác;\nb) Việc xây dựng, quản lý, vận hành, sử dụng hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ phải tuân thủ đúng quy trình, quy tắc, bảo đảm hoạt động liên tục và kết nối với Trung tâm chỉ huy giao thông;\nc) Dữ liệu thu thập được từ hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ phải được quản lý theo quy định của pháp luật; bảo đảm các yêu cầu về bảo vệ dữ liệu cá nhân, bảo vệ các quyền và lợi ích hợp pháp của cá nhân và tổ chức; được sử dụng để xử lý vi phạm pháp luật về trật tự, an toàn giao thông đường bộ, vi phạm pháp luật khác và phục vụ công tác quản lý nhà nước.\n2. Hệ thống quản lý dữ liệu thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách dùng để ghi, lưu trữ, truyền phát thông tin, dữ liệu về hành trình của phương tiện tham gia giao thông đường bộ và hình ảnh của người lái xe, hình ảnh khoang chở khách phục vụ công tác bảo đảm an ninh, trật tự, an toàn giao thông đường bộ và xử lý hành vi vi phạm pháp luật, quản lý nhà nước về vận tải đường bộ; do lực lượng Cảnh sát giao thông quản lý, vận hành, sử dụng; được kết nối, chia sẻ với cơ quan quản lý đường bộ và các cơ quan liên quan.\n3. Hệ thống thiết bị kỹ thuật nghiệp vụ kiểm tra tải trọng xe cơ giới được trang bị cho lực lượng Cảnh sát giao thông để phục vụ kiểm tra, phát hiện và xử lý hành vi vi phạm quy định của pháp luật về tải trọng xe trên đường bộ.\n4. Bộ trưởng Bộ Công an ban hành quy chuẩn kỹ thuật quốc gia về hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ và quy chuẩn kỹ thuật quốc gia về thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách; quy định việc xây dựng, quản lý, vận hành, khai thác và sử dụng hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ, thiết bị thông minh hỗ trợ chỉ huy, điều khiển giao thông đường bộ; quy định việc quản lý, vận hành, sử dụng hệ thống quản lý dữ liệu thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách; quy định việc trang bị, lắp đặt, quản lý, vận hành, sử dụng hệ thống thiết bị kỹ thuật nghiệp vụ kiểm tra tải trọng xe cơ giới.”."
+      },
+      {
+        "number": "18",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 85,
+        "content": "Sửa đổi, bổ sung điểm c khoản 4 Điều 75 như sau:\n“c) Hệ thống quản lý dữ liệu thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe, thiết bị ghi nhận hình ảnh khoang chở khách;”."
+      },
+      {
+        "number": "19",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 86,
+        "content": "Sửa đổi, bổ sung khoản 2 và khoản 3 Điều 87 như sau:\n“2. Bộ Công an là cơ quan đầu mối giúp Chính phủ thực hiện thống nhất quản lý nhà nước về trật tự, an toàn giao thông đường bộ; sát hạch, cấp giấy phép lái xe; xây dựng lực lượng Cảnh sát giao thông chính quy, tinh nhuệ, hiện đại đáp ứng yêu cầu nhiệm vụ bảo đảm trật tự, an toàn giao thông đường bộ.\n3. Bộ Xây dựng thực hiện quản lý nhà nước về đào tạo lái xe; chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới, xe máy chuyên dùng, phụ tùng xe cơ giới và nhiệm vụ quản lý khác theo quy định của Luật này; ban hành quy chuẩn kỹ thuật quốc gia về thiết bị an toàn cho trẻ em quy định tại khoản 3 Điều 10 của Luật này.”."
+      },
+      {
+        "number": "20",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 87,
+        "content": "Sửa đổi, bổ sung một số khoản của Điều 88 như sau:"
+      },
+      {
+        "number": "21",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 88,
+        "content": "Thay thế cụm từ “Bộ Giao thông vận tải” bằng cụm từ “Bộ Xây dựng” tại khoản 13 Điều 11, khoản 4 Điều 12, khoản 5 Điều 42, điểm d khoản 1 Điều 49, khoản 7 Điều 53 và khoản 4 Điều 63."
+      },
+      {
+        "number": "22",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 89,
+        "content": "Bỏ một số cụm từ tại một số khoản, điều như sau:"
+      },
+      {
+        "number": "23",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "order": 90,
+        "content": "Bãi bỏ khoản 7 Điều 62."
+      },
+      {
+        "number": "1",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 91,
+        "content": "Sửa đổi, bổ sung khoản 6 Điều 2 như sau:\n“6. Cơ quan quản lý đường bộ là cơ quan thuộc Bộ Xây dựng giúp Bộ trưởng Bộ Xây dựng thực hiện chức năng quản lý nhà nước về hoạt động đường bộ; cơ quan chuyên môn thuộc Ủy ban nhân dân cấp tỉnh; Ủy ban nhân dân cấp xã.”."
+      },
+      {
+        "number": "2",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 92,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 5 như sau:"
+      },
+      {
+        "number": "3",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 93,
+        "content": "Sửa đổi, bổ sung Điều 8 như sau:\n“Điều 8. Phân loại đường bộ theo cấp quản lý\n1. Đường bộ theo cấp quản lý bao gồm: quốc lộ, đường tỉnh, đường xã, đường thôn, đường đô thị, đường chuyên dùng và được xác định như sau:\na) Quốc lộ là đường nối liền Thủ đô Hà Nội với trung tâm hành chính cấp tỉnh; đường nối liền các trung tâm hành chính cấp tỉnh; đường có vị trí quan trọng đối với sự phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh của vùng, khu vực;\nb) Đường tỉnh là đường nằm trong địa bàn một tỉnh nối trung tâm hành chính của tỉnh với trung tâm hành chính của cấp xã; đường có vị trí quan trọng đối với sự phát triển kinh tế - xã hội của tỉnh;\nc) Đường xã là đường nối trung tâm hành chính của xã với thôn, làng, ấp, bản, buôn, bon, phum, sóc (sau đây gọi là thôn) và điểm dân cư nông thôn hoặc đường nối với xã lân cận; đường có vị trí quan trọng đối với sự phát triển kinh tế - xã hội của xã;\nd) Đường thôn là đường trong khu vực thôn; đường trục nối thôn với khu vực sản xuất nông nghiệp, lâm nghiệp và cơ sở sản xuất, kinh doanh khác trên địa bàn thôn;\nđ) Đường đô thị là đường trong phạm vi địa giới hành chính nội thành, nội thị, bao gồm: đường cao tốc đô thị, đường phố, đường ngõ, ngách, kiệt, hẻm trong đô thị;\ne) Đường chuyên dùng là đường chuyên phục vụ giao thông cho một hoặc một số cơ quan, tổ chức, cá nhân và đường nội bộ.\n2. Đường địa phương bao gồm: đường tỉnh, đường đô thị, đường xã, đường thôn.\n3. Bộ Xây dựng có trách nhiệm quản lý quốc lộ, trừ quốc lộ quy định tại điểm a khoản 4 Điều này và đường gom, đường bên quy định tại điểm c khoản 4 Điều này.\n4. Ủy ban nhân dân cấp tỉnh có trách nhiệm quản lý các loại đường sau đây:\na) Quản lý đường tỉnh, quốc lộ đi qua đô thị loại đặc biệt; quốc lộ khi được phân cấp; tuyến, đoạn tuyến quốc lộ đã hoàn thành việc đầu tư xây dựng tuyến tránh thay thế phù hợp với quy hoạch mạng lưới đường bộ; tuyến, đoạn tuyến quốc lộ không còn trong quy hoạch mạng lưới đường bộ, trừ trường hợp quốc lộ có yêu cầu đặc biệt về bảo đảm quốc phòng, an ninh; tuyến, đoạn tuyến quốc lộ được Bộ trưởng Bộ Xây dựng giao trên cơ sở đề nghị của Ủy ban nhân dân cấp tỉnh để đáp ứng nhu cầu phát triển kinh tế - xã hội, bảo đảm lợi ích quốc gia, quốc phòng, an ninh, khả năng bố trí nguồn lực của địa phương; tuyến, đoạn tuyến quốc lộ đã được điều chuyển tài sản về Ủy ban nhân dân cấp tỉnh quản lý theo quy định của pháp luật về quản lý, sử dụng tài sản công;\nb) Quy định việc quản lý đường đô thị, đường xã, đường thôn;\nc) Quản lý đường gom, đường bên tách khỏi quốc lộ.\n5. Người quản lý, sử dụng đường bộ đối với đường chuyên dùng có trách nhiệm quản lý đường chuyên dùng theo quy định của Luật này và quy định khác của pháp luật có liên quan.\n6. Chính phủ quy định chi tiết Điều này.”."
+      },
+      {
+        "number": "4",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 94,
+        "content": "Sửa đổi, bổ sung khoản 3 Điều 27 như sau:\n“3. Trách nhiệm công bố tải trọng, khổ giới hạn của đường bộ được quy định như sau:\na) Cơ quan quản lý đường bộ thuộc Bộ Xây dựng công bố tải trọng, khổ giới hạn của đường bộ thuộc phạm vi quản lý của Bộ Xây dựng;\nb) Cơ quan chuyên môn thuộc Ủy ban nhân dân cấp tỉnh công bố tải trọng, khổ giới hạn của đường bộ thuộc phạm vi quản lý và đường chuyên dùng quy định tại điểm c khoản này trên địa bàn;\nc) Người quản lý, sử dụng đường bộ đối với đường chuyên dùng có hoạt động giao thông công cộng có trách nhiệm cung cấp thông tin về tải trọng, khổ giới hạn của đường chuyên dùng để cơ quan chuyên môn thuộc Ủy ban nhân dân cấp tỉnh công bố;\nd) Chủ đầu tư dự án đầu tư xây dựng công trình đường bộ có trách nhiệm cung cấp thông tin về tải trọng, khổ giới hạn cho các cơ quan quy định tại các điểm a, b và c khoản này.”."
+      },
+      {
+        "number": "5",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 95,
+        "content": "Sửa đổi, bổ sung khoản 1 Điều 29 như sau:\n“1. Đường bộ được thẩm tra, thẩm định về an toàn giao thông trong giai đoạn lập dự án đầu tư xây dựng công trình; thiết kế triển khai sau thiết kế cơ sở; trước khi đưa công trình đường bộ vào khai thác và trong quá trình khai thác công trình đường bộ, trừ đường bộ có cấp kỹ thuật theo quy định tại điểm d khoản 2 Điều 10 của Luật này, đường phố gom, đường nội bộ đô thị.\nTrong giai đoạn lập dự án đầu tư, thiết kế triển khai sau thiết kế cơ sở, việc thẩm tra, thẩm định an toàn giao thông được thực hiện cùng với công tác thẩm tra, thẩm định báo cáo nghiên cứu khả thi, thiết kế xây dựng.”."
+      },
+      {
+        "number": "6",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 96,
+        "content": "Sửa đổi, bổ sung điểm a và điểm b khoản 1 Điều 39 như sau:\n“a) Bến xe được xây dựng tại các đô thị và các khu vực cần thiết khác để phục vụ vận tải hành khách công cộng;\nb) Bãi đỗ xe được xây dựng phù hợp với nhu cầu đỗ xe tại các khu vực trong đô thị, ngoại ô thành phố, đường có lưu lượng vận tải lớn và các khu vực khác khi cần thiết để phục vụ đỗ xe, trông giữ xe. Bãi đỗ xe gồm: bãi đỗ xe tải; bãi đỗ xe khách, xe con; bãi đỗ xe dùng cho nhiều loại xe;”."
+      },
+      {
+        "number": "7",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 97,
+        "content": "Sửa đổi, bổ sung khoản 3 Điều 78 như sau:\n“3. Người thuê phương tiện để tự lái không được sử dụng phương tiện đi thuê để vận tải hành khách, hàng hóa có thu tiền, trừ xe gắn máy, xe mô tô hai bánh.”."
+      },
+      {
+        "number": "8",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 98,
+        "content": "Thay thế cụm từ “Bộ Giao thông vận tải” bằng cụm từ “Bộ Xây dựng” tại khoản 3 Điều 10, điểm a khoản 3 Điều 21, khoản 5 Điều 25, khoản 5 Điều 26, khoản 3 Điều 28, điểm b khoản 4 và khoản 5 Điều 30, điểm b khoản 3 và khoản 7 Điều 32, khoản 8 Điều 35, khoản 3 Điều 36, khoản 1 Điều 37, điểm a khoản 2 và khoản 3 Điều 38, các khoản 1, 4 và 5 Điều 39, Điều 49, khoản 1 và khoản 5 Điều 52, khoản 3 Điều 57, khoản 4 Điều 61, khoản 2 và khoản 3 Điều 82."
+      },
+      {
+        "number": "9",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 99,
+        "content": "Bỏ một số cụm từ tại một số khoản, điều như sau:"
+      },
+      {
+        "number": "10",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "order": 100,
+        "content": "Bãi bỏ khoản 4 Điều 10, Điều 83."
+      }
+    ],
+    "points": [
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "1",
+        "order": 37,
+        "content": "Sửa đổi, bổ sung điểm c và điểm d như sau:\n“c) Cơ sở dữ liệu về đào tạo lái xe, chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ cho người điều khiển xe máy chuyên dùng;\nd) Cơ sở dữ liệu về sát hạch, cấp giấy phép lái xe;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "1",
+        "order": 38,
+        "content": "Sửa đổi, bổ sung điểm h như sau:\n“h) Cơ sở dữ liệu về hành trình của phương tiện giao thông đường bộ, hình ảnh người lái xe, hình ảnh khoang chở khách theo quy định của Luật này;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "5",
+        "order": 39,
+        "content": "Sửa đổi, bổ sung khoản 4 như sau:\n“4. Phương tiện giao thông thông minh là phương tiện giao thông đường bộ mà toàn bộ việc điều khiển, duy trì hoạt động của phương tiện không cần có sự điều khiển trực tiếp của người lái trên phương tiện đó.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "5",
+        "order": 40,
+        "content": "Sửa đổi, bổ sung khoản 6 như sau:\n“6. Bộ trưởng Bộ Xây dựng quy định chi tiết Điều này.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "8",
+        "order": 41,
+        "content": "Sửa đổi, bổ sung khoản 4 như sau:\n“4. Việc kiểm định an toàn kỹ thuật và bảo vệ môi trường xe cơ giới, xe máy chuyên dùng; chứng nhận an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới cải tạo, xe máy chuyên dùng cải tạo do đăng kiểm viên của cơ sở đăng kiểm thực hiện và được cơ sở đăng kiểm cấp giấy chứng nhận.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "8",
+        "order": 42,
+        "content": "Sửa đổi, bổ sung điểm e khoản 5 như sau:\n“e) Quy chuẩn kỹ thuật quốc gia về cơ sở đăng kiểm xe cơ giới, cơ sở kiểm định khí thải xe mô tô, xe gắn máy; quy chuẩn kỹ thuật quốc gia về kiểm định xe cơ giới, xe máy chuyên dùng tham gia giao thông đường bộ;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "12",
+        "order": 43,
+        "content": "Sửa đổi, bổ sung điểm e khoản 3 như sau:\n“e) Nâng hạng giấy phép lái xe từ hạng B lên hạng BE, từ hạng C1 lên hạng C1E, từ hạng C, D1, D2, D lên hạng CE, từ hạng D1 lên hạng D1E, từ hạng D2 lên hạng D2E, từ hạng D lên hạng DE.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "12",
+        "order": 44,
+        "content": "Sửa đổi, bổ sung khoản 7, khoản 8 và bổ sung khoản 9 vào sau khoản 8 như sau:\n“7. Chính phủ quy định chi tiết các hình thức đào tạo lái xe khác quy định tại khoản 2 Điều này; quy định trình tự, thủ tục kiểm tra, đánh giá để cấp, cấp lại, thu hồi giấy phép xe tập lái; quy định tiêu chuẩn của giáo viên dạy lái xe; quy định việc cấp, cấp lại, thu hồi giấy chứng nhận giáo viên dạy lái xe; quy định việc cấp, cấp lại, thu hồi giấy phép đào tạo lái xe.\n8. Bộ trưởng Bộ Xây dựng quy định hình thức, nội dung, chương trình đào tạo lái xe; quy định thời gian lái xe an toàn cho từng hạng giấy phép lái xe quy định tại khoản 4 Điều này; quy định tiêu chuẩn của cơ sở đào tạo lái xe mô tô.\n9. Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định việc đào tạo lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "13",
+        "order": 45,
+        "content": "Sửa đổi, bổ sung khoản 4 như sau:\n“4. Trung tâm sát hạch lái xe là đơn vị cung cấp dịch vụ sát hạch lái xe; phải đáp ứng các điều kiện do Chính phủ quy định và đáp ứng yêu cầu kỹ thuật theo quy chuẩn kỹ thuật quốc gia về trung tâm sát hạch lái xe cơ giới đường bộ; phải sử dụng thiết bị ứng dụng công nghệ thông tin và phải chia sẻ ngay kết quả và dữ liệu giám sát quá trình sát hạch đến cơ quan quản lý sát hạch, cấp giấy phép lái xe để giám sát, trừ khi tổ chức sát hạch lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "13",
+        "order": 46,
+        "content": "Sửa đổi, bổ sung khoản 6, khoản 7 và bổ sung khoản 8 vào sau khoản 7 như sau:\n“6. Chính phủ quy định điều kiện, trình tự, thủ tục kiểm tra, đánh giá để cấp, cấp lại, thu hồi giấy phép sát hạch cho trung tâm sát hạch lái xe; quy định điều kiện sân tập lái để sát hạch lái xe mô tô.\n7. Bộ trưởng Bộ Công an quy định hình thức, nội dung, quy trình sát hạch để cấp giấy phép lái xe; điều kiện, tiêu chuẩn sát hạch viên, tổ chức tập huấn, cấp thẻ sát hạch viên; tiêu chuẩn kỹ thuật sân tập lái để sát hạch lái xe mô tô, quy chuẩn kỹ thuật quốc gia về trung tâm sát hạch lái xe cơ giới đường bộ.\n8. Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định việc sát hạch lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "14",
+        "order": 47,
+        "content": "Sửa đổi, bổ sung điểm b khoản 5 như sau:\n“b) Giấy phép lái xe cấp sai quy định hoặc người được cấp có hành vi gian dối để được cấp, đổi, cấp lại giấy phép lái xe;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "14",
+        "order": 48,
+        "content": "Sửa đổi, bổ sung khoản 6 như sau:\n“6. Bộ trưởng Bộ Công an quy định điều kiện, trình tự, thủ tục về cấp, đổi, cấp lại và thu hồi giấy phép lái xe; Bộ trưởng Bộ Giáo dục và Đào tạo quy định điều kiện, trình tự, thủ tục cấp, đổi, cấp lại, thu hồi chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có giấy phép lái xe quy định tại các điểm d, e, g, h, i, k, l, m và n khoản 3 Điều 89 của Luật này.\nBộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định việc cấp, đổi, cấp lại, thu hồi giấy phép lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "20",
+        "order": 49,
+        "content": "Sửa đổi, bổ sung khoản 2 như sau:\n“2. Khoản 3 Điều 10 của Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "20",
+        "order": 50,
+        "content": "Bổ sung khoản 2a vào sau khoản 2 như sau:\n“2a. Quy định lắp thiết bị ghi nhận hình ảnh người lái xe đối với xe ô tô kinh doanh vận tải hành khách dưới 08 chỗ (không kể chỗ của người lái xe), xe ô tô kinh doanh vận tải hàng hóa (trừ xe ô tô đầu kéo), xe vận tải nội bộ tại khoản 2 Điều 35 của Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2028. Quy định lắp thiết bị ghi nhận hình ảnh khoang chở khách đối với xe ô tô kinh doanh vận tải hành khách từ 08 chỗ trở lên (không kể chỗ của người lái xe) tại khoản 2 Điều 35 của Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2029 và thực hiện theo lộ trình do Chính phủ quy định.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "22",
+        "order": 51,
+        "content": "Bỏ cụm từ “, Bộ Lao động, Thương binh và Xã hội,” tại khoản 3 Điều 6;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "7",
+        "parent_clause": "22",
+        "order": 52,
+        "content": "Bỏ cụm từ “trực thuộc trung ương” tại khoản 3 Điều 75."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "parent_clause": "2",
+        "order": 53,
+        "content": "Sửa đổi, bổ sung điểm c khoản 1 như sau:\n“c) Bộ Xây dựng tổ chức lập quy hoạch mạng lưới đường bộ.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "parent_clause": "2",
+        "order": 54,
+        "content": "Sửa đổi, bổ sung điểm c khoản 2 như sau:\n“c) Bộ Xây dựng tổ chức lập quy hoạch kết cấu hạ tầng đường bộ.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "parent_clause": "9",
+        "order": 55,
+        "content": "Bỏ cụm từ “các điểm a, b và d” tại khoản 3 Điều 10;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "118/2025/QH15",
+        "parent_article": "8",
+        "parent_clause": "9",
+        "order": 56,
+        "content": "Bỏ cụm từ “; quy hoạch sử dụng đất cấp huyện” tại khoản 1 Điều 12."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "BELONGS_TO_GROUP",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "DocumentGroup",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_TYPE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "DocumentType",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_STATUS",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "EffectStatus",
+      "to_id": "6"
+    },
+    {
+      "type": "ISSUED_BY",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Organization",
+      "to_id": "161"
+    },
+    {
+      "type": "SIGNED_BY",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Signer",
+      "to_id": "2067"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Field",
+      "to_id": "27"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Field",
+      "to_id": "11"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "48/2025/L-CTN"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "09/2025/UBTVQH15"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "104/2025/QH15"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "109/2025/TT-BCA"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "297/2025/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "288/2025/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "103/2025/TT-BCA"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "282/2025/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "97/2025/TT-BTC"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Document",
+      "to_id": "8211/QĐ-BCA"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "118/2025/QH15",
+      "to_label": "Article",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "4",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "5",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "6",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "18"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "19"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "20"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "21"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "22"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "7",
+      "to_label": "Clause",
+      "to_id": "23"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "8",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "9",
+      "to_label": "Clause",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "10",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "11",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.1",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.1",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.11",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.11",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.16",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.16",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.16",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.16",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.16",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.16",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.13",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.13",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.13",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.13",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.13",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.5",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.5",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.7",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.7",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.12",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.12",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.12",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.13",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "4.13",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.7",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.7",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.9",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.9",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.9",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.10",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "5.10",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.1",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.1",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.5",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.5",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.8",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.8",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.12",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.12",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.13",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.13",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.14",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.14",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.20",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.20",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.22",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "7.22",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.9",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "8.9",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.7",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.7",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.7",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.11",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.11",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.12",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.12",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.13",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.13",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.13",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.15",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.15",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.15",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.15",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.16",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.16",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "9.16",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "10.2",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "10.2",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "10.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "10.3",
+      "to_label": "Point",
+      "to_id": "b"
+    }
+  ],
+  "preamble": "QUỐC HỘI\n_______\nLuật số: 118/2025/QH15\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập – Tự do – Hạnh phúc\n_________________\nLUẬT\nSỬA ĐỔI, BỔ SUNG MỘT SỐ ĐIỀU CỦA 10 LUẬT\nCÓ LIÊN QUAN ĐẾN AN NINH, TRẬT TỰ\nCăn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 203/2025/QH15;\nQuốc hội ban hành Luật sửa đổi, bổ sung một số điều của Luật Cảnh vệ số 13/2017/QH14 đã được sửa đổi, bổ sung một số điều theo Luật số 40/2024/QH15, Luật Nhập cảnh, xuất cảnh, quá cảnh, cư trú của người nước ngoài tại Việt Nam số 47/2014/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 51/2019/QH14, Luật số 23/2023/QH15 và Luật số 103/2025/QH15, Luật Xuất cảnh, nhập cảnh của công dân Việt Nam số 49/2019/QH14 đã được sửa đổi, bổ sung một số điều theo Luật số 23/2023/QH15, Luật Cư trú số 68/2020/QH14 đã được sửa đổi, bổ sung một số điều theo Luật số 59/2024/QH15, Luật Căn cước số 26/2023/QH15, Luật Lực lượng tham gia bảo vệ an ninh, trật tự ở cơ sở số 30/2023/QH15 đã được sửa đổi, bổ sung theo Luật số 51/2024/QH15, Luật Trật tự, an toàn giao thông đường bộ số 36/2024/QH15, Luật Đường bộ số 35/2024/QH15 đã được sửa đổi, bổ sung theo Luật số 112/2025/QH15, Luật Quản lý, sử dụng vũ khí, vật liệu nổ và công cụ hỗ trợ số 42/2024/QH15, Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ số 55/2024/QH15 đã được sửa đổi, bổ sung theo Luật số 135/2025/QH15.",
+  "footer": "Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XV, Kỳ họp thứ 10 thông qua ngày 10 tháng 12 năm 2025.\n\n \n\n\n\n\n\n\n \n\n\n\nCHỦ TỊCH QUỐC HỘI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrần Thanh Mẫn\n\n\n\n\n\n \n\n(*) Nguồn dữ liệu được lấy từ cơ sở dữ liệu của LuatVietnam.vn, có tính chất tham khảo."
+}

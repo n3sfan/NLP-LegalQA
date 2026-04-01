@@ -1,0 +1,3432 @@
+{
+  "doc_stem": "a23acd3d-0347-de00-7bd0-1da3bdd18347",
+  "nodes": {
+    "document": {
+      "doc_guid": "a23acd3d-0347-de00-7bd0-1da3bdd18347",
+      "doc_identity": "123/2021/NĐ-CP",
+      "doc_name": "Nghị định 123/2021/NĐ-CP của Chính phủ về việc sửa đổi, bổ sung một số điều của các Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực hàng hải; giao thông đường bộ, đường sắt; hàng không dân dụng",
+      "issue_date": "2021-12-28T00:00:00",
+      "effect_date": "2022-01-01T00:00:00",
+      "expire_date": null,
+      "gazette_number": "từ 45 đến 48-01/2022",
+      "gazette_date": "2022-01-10T00:00:00"
+    },
+    "document_group": [
+      {
+        "id": 1,
+        "name": "Văn bản pháp quy"
+      }
+    ],
+    "document_type": [
+      {
+        "id": 11,
+        "name": "Nghị định"
+      }
+    ],
+    "effect_status": [
+      {
+        "id": 2,
+        "name": "Hết Hiệu lực một phần"
+      }
+    ],
+    "organizations": [
+      {
+        "id": 93,
+        "name": "Chính phủ"
+      }
+    ],
+    "signers": [
+      {
+        "id": 1992,
+        "name": "Lê Văn Thành"
+      }
+    ],
+    "fields": [
+      {
+        "id": 28,
+        "name": "Giao thông"
+      },
+      {
+        "id": 26,
+        "name": "Vi phạm hành chính"
+      },
+      {
+        "id": 193,
+        "name": "Hàng không"
+      }
+    ],
+    "related_documents": [
+      {
+        "doc_guid": "b0ee3792-0346-a200-d9e2-d241be589319",
+        "doc_identity": "120/2021/NĐ-CP",
+        "doc_name": "Nghị định 120/2021/NĐ-CP của Chính phủ quy định chế độ áp dụng biện pháp xử lý hành chính giáo dục tại xã, phường, thị trấn",
+        "field_name": "Vi phạm hành chính, Hành chính"
+      },
+      {
+        "doc_guid": "2321900f-0347-9700-9bed-af73f216db56",
+        "doc_identity": "118/2021/NĐ-CP",
+        "doc_name": "Nghị định 118/2021/NĐ-CP của Chính phủ về việc quy định chi tiết một số điều và biện pháp thi hành Luật Xử lý vi phạm hành chính",
+        "field_name": "Vi phạm hành chính, Hành chính"
+      },
+      {
+        "doc_guid": "de63ade6-0347-3b00-285d-1a0d71c978b7",
+        "doc_identity": "116/2021/NĐ-CP",
+        "doc_name": "Nghị định 116/2021/NĐ-CP của Chính phủ về việc quy định chi tiết một số điều của Luật Phòng, chống ma túy, Luật Xử lý vi phạm hành chính về cai nghiện ma túy và quản lý sau cai nghiện ma túy",
+        "field_name": "An ninh trật tự, Y tế-Sức khỏe, Vi phạm hành chính"
+      },
+      {
+        "doc_guid": "11c9f7b4-0346-0a00-93aa-24f3ce8cc99c",
+        "doc_identity": "2162/QĐ-BGTVT",
+        "doc_name": "Quyết định 2162/QĐ-BGTVT của Bộ Giao thông Vận tải về việc ban hành Kế hoạch theo dõi thi hành pháp luật về xử lý vi phạm hành chính năm 2022 của Bộ Giao thông Vận tải",
+        "field_name": "Vi phạm hành chính, Giao thông"
+      },
+      {
+        "doc_guid": "e10055b4-0581-a800-c5b1-3755aae2e333",
+        "doc_identity": "3278/QĐ-BVHTTDL",
+        "doc_name": "Quyết định 3278/QÐ-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch ban hành Kế hoạch theo dõi tình hình thi hành pháp luật về xử lý vi phạm hành chính của Bộ Văn hoá, Thể thao và Du lịch năm 2022",
+        "field_name": "Vi phạm hành chính, Văn hóa-Thể thao-Du lịch"
+      },
+      {
+        "doc_guid": "5e173b3a-0345-d700-d8fa-9167313f77f7",
+        "doc_identity": "20/2021/TT-BCT",
+        "doc_name": "Thông tư 20/2021/TT-BCT của Bộ Công Thương về việc sửa đổi, bổ sung một số điều của Thông tư 27/2020/TT-BCT ngày 30/9/2020 của Bộ trưởng Bộ Công Thương quy định về nội dung, trình tự, thủ tục hoạt động kiểm tra, xử lý vi phạm hành chính và thực hiện các biện pháp nghiệp vụ của lực lượng Quản lý thị trường",
+        "field_name": "Vi phạm hành chính, Thương mại-Quảng cáo"
+      },
+      {
+        "doc_guid": "53f73c8c-0344-6000-b780-5873986994ad",
+        "doc_identity": "22/2021/TT-BCT",
+        "doc_name": "Thông tư 22/2021/TT-BCT của Bộ Công Thương quy định về quản lý, sử dụng biểu mẫu trong hoạt động kiểm tra, xử lý vi phạm hành chính và thực hiện các biện pháp nghiệp vụ của lực lượng Quản lý thị trường",
+        "field_name": "Vi phạm hành chính, Thương mại-Quảng cáo"
+      },
+      {
+        "doc_guid": "df50db79-033e-4b00-d0e0-6dada7a42e27",
+        "doc_identity": "102/2021/NĐ-CP",
+        "doc_name": "Nghị định 102/2021/NĐ-CP của Chính phủ về việc sửa đổi, bổ sung một số điều của các Nghị định về xử phạt vi phạm hành chính trong lĩnh vực thuế, hóa đơn; hải quan; kinh doanh bảo hiểm, kinh doanh xổ số; quản lý, sử dụng tài sản công; thực hành tiết kiệm, chống lãng phí; dự trữ quốc gia; kho bạc Nhà nước; kế toán, kiểm toán độc lập",
+        "field_name": "Thuế-Phí-Lệ phí, Xuất nhập khẩu, Vi phạm hành chính, Kế toán-Kiểm toán, Tiết kiệm-Phòng, chống tham nhũng, lãng phí, Bảo hiểm, Bảo hiểm nhân thọ - Phi nhân thọ"
+      },
+      {
+        "doc_guid": "4773ebef-033e-ba00-4bfd-75a7d4a06022",
+        "doc_identity": "100/2021/NĐ-CP",
+        "doc_name": "Nghị định 100/2021/NĐ-CP của Chính phủ về việc sửa đổi, bổ sung một số điều của Nghị định 95/2016/NĐ-CP ngày 01/7/2016 của Chính phủ quy định về xử phạt vi phạm hành chính trong lĩnh vực thống kê",
+        "field_name": "Tài chính-Ngân hàng, Vi phạm hành chính, Hành chính"
+      },
+      {
+        "doc_guid": "d4de6d8d-033a-7800-add0-fb73a4be4673",
+        "doc_identity": "13/2021/TT-BLĐTBXH",
+        "doc_name": "Thông tư 13/2021/TT-BLĐTBXH của Bộ Lao động Thương binh và Xã hội về việc ban hành Bộ chỉ tiêu thống kê về tình hình trẻ em và tình hình xâm hại trẻ em, xử lý vi phạm hành chính đối với các hành vi xâm hại trẻ em",
+        "field_name": "Chính sách, Vi phạm hành chính"
+      }
+    ],
+    "parts": [],
+    "chapters": [],
+    "sections": [],
+    "articles": [
+      {
+        "number": "2",
+        "title": "Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_chapter": null,
+        "parent_section": null,
+        "order": 1,
+        "content": ""
+      }
+    ],
+    "clauses": [
+      {
+        "number": "1",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 44,
+        "content": "Sửa đổi điểm h khoản 2 Điều 2 như sau:\n“h) Tổ hợp tác;”."
+      },
+      {
+        "number": "2",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 45,
+        "content": "Bổ sung Điều 4a vào sau Điều 4 như sau:\n“Điều 4a. Hành vi vi phạm hành chính đã kết thúc, hành vi vi phạm hành chính đang thực hiện\n1. Hành vi vi phạm hành chính đã kết thúc gồm những hành vi vi phạm sau đây:\na) Hành vi vi phạm quy định về xếp hàng hóa tại điểm a khoản 1, điểm a khoản 3, khoản 5 Điều 28 Nghị định này. Thời điểm chấm dứt hành vi vi phạm được tính từ thời điểm phát hiện hành vi chở hàng vượt trọng tải (khối lượng hàng chuyên chở) cho phép tham gia giao thông của phương tiện;\nb) Các hành vi vi phạm được phát hiện thông qua phương tiện, thiết bị kỹ thuật nghiệp vụ. Thời điểm chấm dứt hành vi vi phạm được tính từ thời điểm phương tiện, thiết bị kỹ thuật nghiệp vụ ghi nhận hành vi vi phạm;\nc) Các hành vi vi phạm hành chính quy định tại Nghị định này mà không thuộc các trường hợp quy định tại điểm a, điểm b khoản này nhưng đã được thực hiện xong trước thời điểm người có thẩm quyền phát hiện hành vi vi phạm. Trong trường hợp không có tài liệu, chứng cứ để xác định chính xác thời điểm chấm dứt hành vi vi phạm, thì các hành vi vi phạm này vẫn được xác định là còn trong thời hiệu xử phạt vi phạm hành chính.\n2. Các hành vi vi phạm hành chính quy định tại Nghị định này mà không thuộc trường hợp quy định tại khoản 1 Điều này là các hành vi vi phạm hành chính đang thực hiện.”."
+      },
+      {
+        "number": "3",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 46,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 5 như sau:"
+      },
+      {
+        "number": "4",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 47,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 6 như sau:"
+      },
+      {
+        "number": "5",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 48,
+        "content": "Sửa đổi điểm g khoản 4 Điều 7 như sau:\n“g) Quay đầu xe tại nơi đường bộ giao nhau cùng mức với đường sắt; quay đầu xe tại nơi đường hẹp, đường dốc, đoạn đường cong tầm nhìn bị che khuất, nơi có biển báo hiệu có nội dung cấm quay đầu đối với loại phương tiện đang điều khiển; điều khiển xe rẽ trái tại nơi có biển báo hiệu có nội dung cấm rẽ trái đối với loại phương tiện đang điều khiển; điều khiển xe rẽ phải tại nơi có biển báo hiệu có nội dung cấm rẽ phải đối với loại phương tiện đang điều khiển;”."
+      },
+      {
+        "number": "6",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 49,
+        "content": "Bổ sung điểm đ, điểm e vào sau điểm d khoản 4 Điều 8 như sau:\n“đ) Người điều khiển xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ;\ne) Chở người ngồi trên xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.”."
+      },
+      {
+        "number": "7",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 50,
+        "content": "Sửa đổi khoản 6 Điều 11 như sau:\n“6. Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với người được chở trên xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô, các loại xe tương tự xe gắn máy, xe đạp máy (kể cả xe đạp điện) thực hiện một trong các hành vi vi phạm sau đây:\na) Bám, kéo, đẩy xe khác, vật khác, dẫn dắt súc vật, mang vác vật cồng kềnh, đứng trên yên, giá đèo hàng hoặc ngồi trên tay lái;\nb) Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ.”."
+      },
+      {
+        "number": "8",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 51,
+        "content": "Bổ sung khoản 4a vào sau khoản 4 Điều 15 như sau:\n“4a. Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với người điều khiển phương tiện, chủ phương tiện trốn tránh, không trả tiền dịch vụ sử dụng đường bộ khi phương tiện tham gia giao thông qua các trạm thu phí.”."
+      },
+      {
+        "number": "9",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 52,
+        "content": "Sửa đổi Điều 16 như sau:\n“Điều 16. Xử phạt người điều khiển xe ô tô (bao gồm cả rơ moóc hoặc sơ mi rơ moóc được kéo theo) và các loại xe tương tự xe ô tô vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông\n1. Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với hành vi điều khiển xe không có kính chắn gió hoặc có nhưng vỡ hoặc có nhưng không có tác dụng (đối với xe có thiết kế lắp kính chắn gió).\n2. Phạt tiền từ 300.000 đồng đến 400.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe không có đủ đèn chiếu sáng, đèn soi biển số, đèn báo hãm, đèn tín hiệu, cần gạt nước, gương chiếu hậu, dây an toàn, dụng cụ thoát hiểm, thiết bị chữa cháy, đồng hồ báo áp lực hơi, đồng hồ báo tốc độ của xe hoặc có những thiết bị đó nhưng không có tác dụng, không đúng tiêu chuẩn thiết kế (đối với loại xe được quy định phải có những thiết bị đó), trừ các hành vi vi phạm quy định tại điểm m khoản 3 Điều 23, điểm q khoản 4 Điều 28 Nghị định này;\nb) Điều khiển xe không có còi hoặc có nhưng còi không có tác dụng;\nc) Điều khiển xe không có bộ phận giảm thanh, giảm khói hoặc có nhưng không có tác dụng, không bảo đảm quy chuẩn môi trường về khí thải, tiếng ồn.\n3. Phạt tiền từ từ 1.000.000 đồng đến 2.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe lắp thêm đèn phía trước, phía sau, trên nóc, dưới gầm, một hoặc cả hai bên thành xe;\nb) Điều khiển xe có hệ thống chuyển hướng của xe không đúng tiêu chuẩn an toàn kỹ thuật;\nc) Điều khiển xe không lắp đủ bánh lốp hoặc lắp bánh lốp không đúng kích cỡ hoặc không bảo đảm tiêu chuẩn kỹ thuật (kể cả rơ moóc và sơ mi rơ moóc);\nd) Điều khiển xe ô tô kinh doanh vận tải hành khách lắp thêm hoặc tháo bớt ghế, giường nằm hoặc có kích thước khoang chở hành lý (hầm xe) không đúng với thông số kỹ thuật được ghi trong Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe.\n4. Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe không có Giấy đăng ký xe theo quy định hoặc sử dụng Giấy đăng ký xe đã hết hạn sử dụng (kể cả rơ moóc và sơ mi rơ moóc);\nb) Điều khiển xe (kể cả rơ moóc và sơ mi rơ moóc) không gắn biển số (đối với loại xe có quy định phải gắn biển số);\nc) Điều khiển xe ô tô tải (kể cả rơ moóc và sơ mi rơ moóc) có kích thước thùng xe không đúng với thông số kỹ thuật được ghi trong Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe;\nd) Điều khiển xe lắp đặt, sử dụng còi vượt quá âm lượng theo quy định.\n5. Phạt tiền từ 3.000.000 đồng đến 4.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe có Giấy chứng nhận hoặc tem kiểm định an toàn kỹ thuật và bảo vệ môi trường nhưng đã hết hạn sử dụng dưới 01 tháng (kể cả rơ moóc và sơ mi rơ moóc);\nb) Điều khiển xe không đủ hệ thống hãm hoặc có đủ hệ thống hãm nhưng không có tác dụng, không đúng tiêu chuẩn an toàn kỹ thuật (kể cả rơ moóc và sơ mi rơ moóc).\n6. Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe gắn biển số không đúng với Giấy đăng ký xe hoặc gắn biển số không do cơ quan có thẩm quyền cấp (kể cả rơ moóc và sơ mi rơ moóc);\nb) Sử dụng Giấy đăng ký xe, Giấy chứng nhận, tem kiểm định an toàn kỹ thuật và bảo vệ môi trường không do cơ quan có thẩm quyền cấp hoặc bị tẩy xóa; sử dụng Giấy đăng ký xe không đúng số khung, số máy của xe (kể cả rơ moóc và sơ mi rơ moóc);\nc) Điều khiển xe không có Giấy chứng nhận hoặc tem kiểm định an toàn kỹ thuật và bảo vệ môi trường (đối với loại xe có quy định phải kiểm định, trừ xe đăng ký tạm thời) hoặc có nhưng đã hết hạn sử dụng từ 01 tháng trở lên (kể cả rơ moóc và sơ mi rơ moóc);\nd) Điều khiển xe không gắn đủ biển số hoặc gắn biển số không đúng vị trí; gắn biển số không rõ chữ, số; gắn biển số bị bẻ cong, bị che lấp, bị hỏng; sơn, dán thêm làm thay đổi chữ, số hoặc thay đổi màu sắc của chữ, số, nền biển (kể cả rơ moóc và sơ mi rơ moóc).\n7. Phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe đăng ký tạm, xe có phạm vi hoạt động hạn chế hoạt động quá phạm vi, thời hạn cho phép;\nb) Điều khiển xe (kể cả rơ moóc và sơ mi rơ moóc) quá niên hạn sử dụng tham gia giao thông (đối với loại xe có quy định về niên hạn sử dụng);\nc) Điều khiển loại xe sản xuất, lắp ráp trái quy định tham gia giao thông (bao gồm cả xe công nông thuộc diện bị đình chỉ tham gia giao thông, rơ moóc và sơ mi rơ moóc được kéo theo).\n8. Ngoài việc bị phạt tiền, người điều khiển xe thực hiện hành vi vi phạm còn bị áp dụng các hình thức xử phạt bổ sung sau đây:\na) Thực hiện hành vi quy định tại điểm a, điểm b khoản 3; khoản 4; khoản 5; điểm c khoản 6; điểm a khoản 7 Điều này bị tước quyền sử dụng Giấy phép lái xe từ 01 tháng đến 03 tháng;\nb) Thực hiện hành vi quy định tại điểm a khoản 3, điểm d khoản 4 Điều này bị tịch thu đèn lắp thêm, còi vượt quá âm lượng;\nc) Thực hiện hành vi quy định tại điểm a, điểm b khoản 6 Điều này bị tịch thu Giấy chứng nhận, tem kiểm định an toàn kỹ thuật và bảo vệ môi trường, Giấy đăng ký xe, biển số không đúng quy định hoặc bị tẩy xóa; bị tước quyền sử dụng Giấy phép lái xe từ 01 tháng đến 03 tháng;\nd) Thực hiện hành vi quy định tại điểm b, điểm c khoản 7 Điều này bị tịch thu phương tiện (trừ trường hợp xe ô tô từ 10 chỗ ngồi trở lên kinh doanh vận tải hành khách có niên hạn sử dụng vượt quá quy định về điều kiện kinh doanh của hình thức kinh doanh đã đăng ký nhưng chưa quá 20 năm tính từ năm sản xuất, xe ô tô dưới 10 chỗ ngồi kinh doanh vận tải hành khách) và bị tước quyền sử dụng Giấy phép lái xe từ 01 tháng đến 03 tháng;\nđ) Thực hiện hành vi quy định tại điểm a khoản 4, điểm b khoản 6 Điều này trong trường hợp không có Giấy đăng ký xe hoặc sử dụng Giấy đăng ký xe không do cơ quan có thẩm quyền cấp, không đúng số khung, số máy của xe hoặc bị tẩy xóa (kể cả rơ moóc và sơ mi rơ moóc) mà không chứng minh được nguồn gốc xuất xứ của phương tiện (không có giấy tờ, chứng từ chuyển quyền sở hữu xe hoặc giấy tờ, chứng từ nguồn gốc xe hợp pháp) thì bị tịch thu phương tiện.\n9. Ngoài việc bị áp dụng hình thức xử phạt, người điều khiển xe thực hiện hành vi vi phạm còn bị áp dụng các biện pháp khắc phục hậu quả sau đây:\na) Thực hiện hành vi quy định tại khoản 1; khoản 2; điểm b, điểm c khoản 3; điểm c, điểm d khoản 4; điểm b khoản 5; điểm d khoản 6 Điều này buộc phải lắp đầy đủ thiết bị hoặc thay thế thiết bị đủ tiêu chuẩn an toàn kỹ thuật hoặc khôi phục lại tính năng kỹ thuật của thiết bị theo quy định;\nb) Thực hiện hành vi quy định tại điểm a, điểm d khoản 3 Điều này buộc phải lắp đầy đủ thiết bị hoặc khôi phục lại tính năng kỹ thuật của thiết bị theo quy định, tháo bỏ những thiết bị lắp thêm không đúng quy định.”."
+      },
+      {
+        "number": "10",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 53,
+        "content": "Bổ sung điểm d vào sau điểm c khoản 2 Điều 17 như sau:\n“d) Điều khiển xe gắn biển số không đúng quy định; gắn biển số không rõ chữ, số; gắn biển số bị bẻ cong, bị che lấp, bị hỏng; sơn, dán thêm làm thay đổi chữ, số hoặc thay đổi màu sắc của chữ, số, nền biển.”."
+      },
+      {
+        "number": "11",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 54,
+        "content": "Sửa đổi Điều 21 như sau:\n“Điều 21. Xử phạt các hành vi vi phạm quy định về điều kiện của người điều khiển xe cơ giới\n1. Phạt cảnh cáo người từ đủ 14 tuổi đến dưới 16 tuổi điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện) và các loại xe tương tự xe mô tô hoặc điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô.\n2. Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không có hoặc không mang theo Giấy chứng nhận bảo hiểm trách nhiệm dân sự của chủ xe cơ giới còn hiệu lực;\nb) Người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không mang theo Giấy đăng ký xe;\nc) Người điều khiển xe mô tô và các loại xe tương tự xe mô tô không mang theo Giấy phép lái xe, trừ hành vi vi phạm quy định tại điểm b khoản 5, điểm c khoản 7 Điều này.\n3. Phạt tiền từ 200.000 đồng đến 400.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Người điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô không mang theo Giấy phép lái xe, trừ hành vi vi phạm quy định tại điểm c khoản 8 Điều này;\nb) Người điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô không mang theo Giấy đăng ký xe (kể cả rơ moóc và sơ mi rơ moóc);\nc) Người điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô không mang theo Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường (đối với loại xe có quy định phải kiểm định, kể cả rơ moóc và sơ mi rơ moóc).\n4. Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên;\nb) Người điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô không có hoặc không mang theo Giấy chứng nhận bảo hiểm trách nhiệm dân sự của chủ xe cơ giới còn hiệu lực.\n5. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với người điều khiển xe mô tô hai bánh có dung tích xi lanh dưới 175 cm3 và các loại xe tương tự xe mô tô thực hiện một trong các hành vi vi phạm sau đây:\na) Không có Giấy phép lái xe hoặc sử dụng Giấy phép lái xe không do cơ quan có thẩm quyền cấp, Giấy phép lái xe bị tẩy xóa;\nb) Có Giấy phép lái xe quốc tế do các nước tham gia Công ước về Giao thông đường bộ năm 1968 cấp (trừ Giấy phép lái xe quốc tế do Việt Nam cấp) nhưng không mang theo Giấy phép lái xe quốc gia;\nc) Sử dụng Giấy phép lái xe không hợp lệ (Giấy phép lái xe có số phôi ghi ở mặt sau không trùng với số phôi được cấp mới nhất trong hệ thống thông tin quản lý Giấy phép lái xe).\n6. Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo, các loại xe tương tự xe ô tô.\n7. Phạt tiền từ 4.000.000 đồng đến 5.000.000 đồng đối với người điều khiển xe mô tô hai bánh có dung tích xi lanh từ 175 cm3 trở lên, xe mô tô ba bánh thực hiện một trong các hành vi vi phạm sau đây:\na) Có Giấy phép lái xe nhưng không phù hợp với loại xe đang điều khiển;\nb) Không có Giấy phép lái xe hoặc sử dụng Giấy phép lái xe không do cơ quan có thẩm quyền cấp, Giấy phép lái xe bị tẩy xóa;\nc) Có Giấy phép lái xe quốc tế do các nước tham gia Công ước về Giao thông đường bộ năm 1968 cấp (trừ Giấy phép lái xe quốc tế do Việt Nam cấp) nhưng không mang theo Giấy phép lái xe quốc gia;\nd) Sử dụng Giấy phép lái xe không hợp lệ (Giấy phép lái xe có số phôi ghi ở mặt sau không trùng với số phôi được cấp mới nhất trong hệ thống thông tin quản lý Giấy phép lái xe).\n8. Phạt tiền từ 5.000.000 đồng đến 7.000.000 đồng đối với người điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô vi phạm một trong các hành vi sau đây:\na) Có Giấy phép lái xe nhưng đã hết hạn sử dụng dưới 03 tháng;\nb) Có Giấy phép lái xe quốc tế do các nước tham gia Công ước về Giao thông đường bộ năm 1968 cấp (trừ Giấy phép lái xe quốc tế do Việt Nam cấp) nhưng không mang theo Giấy phép lái xe quốc gia;\nc) Sử dụng Giấy phép lái xe không hợp lệ (Giấy phép lái xe có số phôi ghi ở mặt sau không trùng với số phôi được cấp mới nhất trong hệ thống thông tin quản lý Giấy phép lái xe).\n9. Phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với người điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô vi phạm một trong các hành vi sau đây:\na) Có Giấy phép lái xe nhưng không phù hợp với loại xe đang điều khiển hoặc có Giấy phép lái xe nhưng đã hết hạn sử dụng từ 03 tháng trở lên;\nb) Không có Giấy phép lái xe hoặc sử dụng Giấy phép lái xe không do cơ quan có thẩm quyền cấp hoặc sử dụng Giấy phép lái xe bị tẩy xóa.\n10. Ngoài việc bị phạt tiền, người điều khiển phương tiện thực hiện hành vi vi phạm còn bị áp dụng các hình thức xử phạt bổ sung sau đây:\na) Thực hiện hành vi quy định tại điểm a, điểm c khoản 5; điểm b, điểm d khoản 7; điểm c khoản 8; điểm b khoản 9 Điều này còn bị áp dụng hình thức xử phạt bổ sung tịch thu Giấy phép lái xe không do cơ quan có thẩm quyền cấp, Giấy phép lái xe bị tẩy xóa, Giấy phép lái xe không hợp lệ;\nb) Thực hiện hành vi quy định tại điểm c khoản 5, điểm d khoản 7, điểm c khoản 8 bị tước quyền sử dụng Giấy phép lái xe được cấp mới nhất trong hệ thống thông tin quản lý Giấy phép lái xe từ 01 tháng đến 03 tháng.”."
+      },
+      {
+        "number": "12",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 55,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 23 như sau:"
+      },
+      {
+        "number": "13",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 56,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 24 như sau:"
+      },
+      {
+        "number": "14",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 57,
+        "content": "Sửa đổi Điều 25 như sau:\n“Điều 25. Xử phạt người điều khiển xe ô tô thực hiện hành vi vi phạm quy định về vận chuyển hàng siêu trường, siêu trọng\n1. Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Chở hàng siêu trường, siêu trọng không có báo hiệu kích thước của hàng theo quy định;\nb) Không thực hiện đúng quy định trong Giấy phép lưu hành, trừ các hành vi vi phạm quy định tại khoản 2; điểm b, điểm c, điểm d khoản 3 Điều này.\n2. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với hành vi chở hàng siêu trường, siêu trọng có Giấy phép lưu hành còn giá trị sử dụng nhưng kích thước bao ngoài của xe (sau khi đã xếp hàng lên xe) vượt quá quy định trong Giấy phép lưu hành.\n3. Phạt tiền từ 13.000.000 đồng đến 15.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Chở hàng siêu trường, siêu trọng không có Giấy phép lưu hành hoặc có Giấy phép lưu hành nhưng đã hết giá trị sử dụng hoặc sử dụng Giấy phép lưu hành không do cơ quan có thẩm quyền cấp;\nb) Chở hàng siêu trường, siêu trọng có Giấy phép lưu hành còn giá trị sử dụng nhưng tổng trọng lượng (sau khi đã xếp hàng lên xe) vượt quá quy định trong Giấy phép lưu hành;\nc) Chở hàng siêu trường, siêu trọng có Giấy phép lưu hành còn giá trị sử dụng nhưng đi không đúng tuyến đường quy định trong Giấy phép lưu hành;\nd) Chở hàng siêu trường, siêu trọng có Giấy phép lưu hành còn giá trị sử dụng nhưng chở không đúng loại hàng quy định trong Giấy phép lưu hành.\n4. Ngoài việc bị phạt tiền, người thực hiện hành vi vi phạm còn bị áp dụng các hình thức xử phạt bổ sung sau đây:\na) Thực hiện hành vi quy định tại khoản 1 Điều này bị tước quyền sử dụng Giấy phép lái xe từ 01 tháng đến 03 tháng;\nb) Thực hiện hành vi quy định tại khoản 2, khoản 3 Điều này bị tước quyền sử dụng Giấy phép lái xe từ 02 tháng đến 04 tháng;\nc) Thực hiện hành vi quy định tại điểm a khoản 3 Điều này bị tịch thu Giấy phép lưu hành đã hết giá trị sử dụng hoặc không do cơ quan có thẩm quyền cấp.\n5. Ngoài việc bị áp dụng hình thức xử phạt, người thực hiện hành vi vi phạm quy định tại khoản 1, khoản 2, khoản 3 Điều này nếu gây hư hại cầu, đường còn bị áp dụng biện pháp khắc phục hậu quả: Buộc khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra.”."
+      },
+      {
+        "number": "15",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 58,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 28 như sau:"
+      },
+      {
+        "number": "16",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 59,
+        "content": "Sửa đổi Điều 29 như sau:\n“Điều 29. Xử phạt hành vi sản xuất, lắp ráp trái phép phương tiện giao thông cơ giới đường bộ; sản xuất, bán biển số phương tiện giao thông cơ giới đường bộ trái phép\n1. Phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với cá nhân, từ 20.000.000 đồng đến 24.000.000 đồng đối với tổ chức thực hiện hành vi bán biển số phương tiện giao thông cơ giới đường bộ không phải là biển số do cơ quan nhà nước có thẩm quyền sản xuất hoặc không được cơ quan nhà nước có thẩm quyền cho phép.\n2. Phạt tiền từ 30.000.000 đồng đến 35.000.000 đồng đối với cá nhân, từ 60.000.000 đồng đến 70.000.000 đồng đối với tổ chức thực hiện hành vi sản xuất biển số trái phép hoặc sản xuất, lắp ráp trái phép phương tiện giao thông cơ giới đường bộ.\n3. Ngoài việc bị phạt tiền, cá nhân, tổ chức thực hiện hành vi vi phạm quy định tại khoản 1, khoản 2 Điều này còn bị áp dụng hình thức xử phạt bổ sung tịch thu biển số, phương tiện sản xuất, lắp ráp trái phép.\n4. Ngoài việc bị áp dụng hình thức xử phạt, cá nhân, tổ chức thực hiện hành vi quy định tại khoản 1, khoản 2 Điều này còn bị áp dụng biện pháp khắc phục hậu quả: Buộc nộp lại số lợi bất hợp pháp có được do thực hiện vi phạm hành chính.”."
+      },
+      {
+        "number": "17",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 60,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 30 như sau:"
+      },
+      {
+        "number": "18",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 61,
+        "content": "Sửa đổi Điều 33 như sau:\n“Điều 33. Xử phạt người điều khiển xe bánh xích; xe quá tải trọng, quá khổ giới hạn của cầu, đường (kể cả xe ô tô chở hành khách)\n1. Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với hành vi không thực hiện đúng quy định trong Giấy phép lưu hành, trừ các hành vi vi phạm quy định tại điểm a, điểm b khoản 3; điểm b, điểm c khoản 4 Điều này.\n2. Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với hành vi điều khiển xe mà tổng trọng lượng (khối lượng toàn bộ) của xe vượt quá tải trọng cho phép của cầu, đường trên 10% đến 20%, trừ trường hợp có Giấy phép lưu hành còn giá trị sử dụng.\n3. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Chở hàng vượt khổ giới hạn của cầu, đường ghi trong Giấy phép lưu hành;\nb) Điều khiển xe bánh xích tham gia giao thông không có Giấy phép lưu hành hoặc có Giấy phép lưu hành nhưng không còn giá trị sử dụng theo quy định hoặc lưu thông trực tiếp trên đường mà không thực hiện biện pháp bảo vệ đường theo quy định;\nc) Điều khiển xe vượt quá khổ giới hạn của cầu, đường hoặc chở hàng vượt khổ giới hạn của cầu, đường tham gia giao thông, trừ trường hợp có Giấy phép lưu hành còn giá trị sử dụng.\n4. Phạt tiền từ 13.000.000 đồng đến 15.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe mà tổng trọng lượng (khối lượng toàn bộ) của xe hoặc tải trọng trục xe (bao gồm cả hàng hóa xếp trên xe, người được chở trên xe) vượt quá tải trọng cho phép của cầu, đường trên 20% đến 50%, trừ trường hợp có Giấy phép lưu hành còn giá trị sử dụng;\nb) Điều khiển xe có Giấy phép lưu hành còn giá trị sử dụng nhưng tổng trọng lượng (khối lượng toàn bộ) của xe hoặc tải trọng trục xe (bao gồm cả hàng hóa xếp trên xe nếu có) vượt quá quy định trong Giấy phép lưu hành;\nc) Điều khiển xe có Giấy phép lưu hành còn giá trị sử dụng nhưng đi không đúng tuyến đường quy định trong Giấy phép lưu hành.\n5. Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển xe mà tổng trọng lượng (khối lượng toàn bộ) của xe hoặc tải trọng trục xe (bao gồm cả hàng hóa xếp trên xe, người được chở trên xe) vượt quá tải trọng cho phép của cầu, đường trên 50%, trừ trường hợp có Giấy phép lưu hành còn giá trị sử dụng;\nb) Không chấp hành việc kiểm tra tải trọng, khổ giới hạn xe khi có tín hiệu, hiệu lệnh yêu cầu kiểm tra tải trọng, khổ giới hạn xe; chuyển tải hoặc dùng các thủ đoạn khác để trốn tránh việc phát hiện xe chở quá tải, quá khổ.\n6. Ngoài việc bị phạt tiền, người điều khiển phương tiện thực hiện hành vi vi phạm còn bị áp dụng các hình thức xử phạt bổ sung sau đây:\na) Thực hiện hành vi quy định tại khoản 1, khoản 3, điểm a khoản 4 Điều này còn bị tước quyền sử dụng Giấy phép lái xe (khi điều khiển ô tô, máy kéo và các loại xe tương tự ô tô), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 01 tháng đến 03 tháng;\nb) Thực hiện hành vi quy định tại điểm b, điểm c khoản 4 Điều này còn bị tước quyền sử dụng Giấy phép lái xe (khi điều khiển ô tô, máy kéo và các loại xe tương tự ô tô), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 02 tháng đến 04 tháng;\nc) Thực hiện hành vi quy định tại khoản 5 Điều này còn bị tước quyền sử dụng Giấy phép lái xe (khi điều khiển ô tô, máy kéo và các loại xe tương tự ô tô), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 03 tháng đến 05 tháng.\n7. Ngoài việc bị áp dụng hình thức xử phạt, người điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 1, khoản 2, khoản 3, khoản 4, khoản 5 Điều này nếu gây hư hại cầu, đường còn bị áp dụng biện pháp khắc phục hậu quả: Buộc phải khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra.”."
+      },
+      {
+        "number": "19",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 62,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản Điều 34 như sau:"
+      },
+      {
+        "number": "20",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 63,
+        "content": "Sửa đổi Điều 35 như sau:\n“Điều 35. Xử phạt người điều khiển phương tiện giao thông cơ giới đường bộ gắn biển số nước ngoài\n1. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với người điều khiển phương tiện giao thông cơ giới đường bộ gắn biển số nước ngoài thực hiện một trong các hành vi vi phạm sau đây:\na) Giấy tờ của phương tiện không có bản dịch sang tiếng Anh hoặc tiếng Việt theo quy định;\nb) Xe chở khách không có danh sách hành khách theo quy định.\n2. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển phương tiện không gắn ký hiệu phân biệt quốc gia theo quy định;\nb) Điều khiển phương tiện không có Giấy phép vận tải quốc tế, phù hiệu vận tải quốc tế liên vận theo quy định hoặc có nhưng đã hết giá trị sử dụng;\nc) Vận chuyển hành khách hoặc hàng hóa không đúng với quy định tại Hiệp định vận tải đường bộ, Nghị định thư đã ký kết, trừ các hành vi vi phạm quy định tại khoản 1, khoản 3, khoản 4, khoản 5 Điều này.\n3. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Điều khiển phương tiện không gắn biển số tạm thời hoặc gắn biển số tạm thời không do cơ quan có thẩm quyền cấp (nếu có quy định phải gắn biển số tạm thời);\nb) Điều khiển xe ô tô có tay lái bên phải, xe ô tô hoặc xe mô tô của người nước ngoài vào Việt Nam du lịch tham gia giao thông mà không có xe dẫn đường theo quy định;\nc) Điều khiển xe ô tô có tay lái bên phải, xe ô tô gắn biển số nước ngoài tham gia giao thông mà người điều khiển xe không đúng quốc tịch theo quy định.\n4. Phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với một trong các hành vi vi phạm sau đây:\na) Hoạt động quá phạm vi được phép hoạt động;\nb) Lưu hành phương tiện trên lãnh thổ Việt Nam quá thời hạn quy định dưới 30 ngày.\n5. Phạt tiền từ 30.000.000 đồng đến 35.000.000 đồng đối với hành vi lưu hành phương tiện trên lãnh thổ Việt Nam quá thời hạn quy định từ 30 ngày trở lên.\n6. Ngoài việc bị áp dụng hình thức xử phạt, người điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm b, điểm c khoản 2; điểm a khoản 3; điểm b khoản 4; khoản 5 Điều này còn bị áp dụng biện pháp khắc phục hậu quả: Buộc tái xuất phương tiện khỏi Việt Nam.”."
+      },
+      {
+        "number": "21",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 64,
+        "content": "Bổ sung điểm d vào sau điểm c khoản 2 Điều 37 như sau:\n“d) Tổ chức đào tạo cho học viên chưa có đủ hồ sơ của người học lái xe theo quy định.”;"
+      },
+      {
+        "number": "22",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 65,
+        "content": "Bổ sung điểm c vào sau điểm b khoản 1 Điều 38 như sau:\n“c) Thực hiện không đúng nhiệm vụ được phân công.”."
+      },
+      {
+        "number": "23",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 66,
+        "content": "Sửa đổi đoạn mở đầu và điểm a khoản 3 của Điều 44 như sau:"
+      },
+      {
+        "number": "24",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 67,
+        "content": "Sửa đổi tên điều và một số điểm, khoản của Điều 66 như sau:"
+      },
+      {
+        "number": "25",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 68,
+        "content": "Sửa đổi điểm a khoản 1 Điều 67 như sau:\n“a) Không tổ chức kiểm tra sức khỏe cho nhân viên đường sắt trực tiếp phục vụ chạy tàu trong phạm vi quản lý của doanh nghiệp theo quy định của pháp luật;”."
+      },
+      {
+        "number": "26",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 69,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 74 như sau:"
+      },
+      {
+        "number": "27",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 70,
+        "content": "Sửa đổi Điều 75 như sau:\n“Điều 75. Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân các cấp\n1. Chủ tịch Ủy ban nhân dân cấp xã có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 5.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính có giá trị không vượt quá 10.000.000 đồng;\nd) Áp dụng biện pháp khắc phục hậu quả quy định tại các điểm a, điểm b và điểm c khoản 1 Điều 4 Nghị định này.\n2. Chủ tịch Ủy ban nhân dân cấp huyện có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 37.500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính;\nđ) Áp dụng biện pháp khắc phục hậu quả quy định tại các điểm a, điểm b, c, điểm đ và điểm e khoản 1 Điều 4 Nghị định này.\n3. Chủ tịch Ủy ban nhân dân cấp tỉnh có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 75.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính;\nđ) Áp dụng biện pháp khắc phục hậu quả quy định tại khoản 1 Điều 4 Nghị định này.”."
+      },
+      {
+        "number": "28",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 71,
+        "content": "Sửa đổi Điều 76 như sau:\n“Điều 76. Thẩm quyền xử phạt của Công an nhân dân\n1. Chiến sĩ Công an nhân dân đang thi hành công vụ có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt.\n2. Thủ trưởng đơn vị Cảnh sát cơ động cấp đại đội, Trưởng trạm, Đội trưởng của người quy định tại khoản 1 Điều này có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 1.500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt.\n3. Trưởng Công an cấp xã, Trưởng đồn Công an, Trưởng trạm Công an cửa khẩu, khu chế xuất, Tiểu đoàn trưởng Tiểu đoàn Cảnh sát cơ động có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 2.500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính có giá trị không vượt quá 5.000.000 đồng;\nd) Áp dụng biện pháp khắc phục hậu quả quy định tại các điểm a và điểm c khoản 1 Điều 4 của Nghị định này.\n4. Trưởng Công an cấp huyện; Trưởng phòng nghiệp vụ thuộc Cục Cảnh sát giao thông; Trưởng phòng nghiệp vụ thuộc Cục Cảnh sát quản lý hành chính về trật tự xã hội, Trưởng, phòng nghiệp vụ thuộc Cục Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ; Trưởng phòng Công an cấp tỉnh gồm Trưởng phòng Cảnh sát quản lý hành chính về trật tự xã hội, Trưởng phòng Cảnh sát giao thông, Trưởng phòng Cảnh sát giao thông đường bộ - đường sắt, Trưởng phòng Cảnh sát giao thông đường bộ, Trưởng phòng Cảnh sát cơ động, Trưởng phòng Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ, Trung đoàn trưởng Trung đoàn Cảnh sát cơ động có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 15.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính có giá trị không vượt quá 30.000.000 đồng;\nđ) Áp dụng biện pháp khắc phục hậu quả quy định tại các điểm a, điểm c và điểm e khoản 1 Điều 4 Nghị định này.\n5. Giám đốc Công an cấp tỉnh có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 37.500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính;\nđ) Áp dụng các biện pháp khắc phục hậu quả quy định tại các điểm a, điểm c, điểm đ và điểm e khoản 1 Điều 4 Nghị định này.\n6. Cục trưởng Cục Cảnh sát giao thông, Cục trưởng Cục Cảnh sát quản lý hành chính về trật tự xã hội, Cục trưởng Cục Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ, Tư lệnh Cảnh sát cơ động có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 75.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính;\nđ) Áp dụng các biện pháp khắc phục hậu quả quy định tại các điểm a, điểm c, điểm đ và điểm e khoản 1 Điều 4 Nghị định này.”."
+      },
+      {
+        "number": "29",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 72,
+        "content": "Sửa đổi Điều 77 như sau:\n“Điều 77. Thẩm quyền xử phạt của Thanh tra chuyên ngành, Cảng vụ hàng hải, Cảng vụ hàng không, Cảng vụ đường thủy nội địa\n1. Thanh tra viên, người được giao thực hiện nhiệm vụ thanh tra chuyên ngành đang thi hành công vụ có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính có giá trị không vượt quá 1.000.000 đồng;\nd) Áp dụng các biện pháp khắc phục hậu quả quy định tại các điểm a và điểm c khoản 1 Điều 4 Nghị định này.\n2. Chánh Thanh tra Sở Giao thông vận tải, Chánh Thanh tra Sở Tài nguyên và Môi trường, Chánh Thanh tra Cục Hàng không Việt Nam, Chánh Thanh tra Cục Hàng hải Việt Nam, Thủ trưởng cơ quan quản lý đường bộ ở khu vực thuộc Tổng cục Đường bộ Việt Nam, Trưởng đoàn thanh tra chuyên ngành của Sở Giao thông vận tải, Trưởng đoàn thanh tra chuyên ngành của Sở Tài nguyên và Môi trường, Trưởng đoàn thanh tra chuyên ngành của Tổng cục Môi trường, Trưởng đoàn thanh tra chuyên ngành của Tổng cục Đường bộ Việt Nam, Trưởng đoàn thanh tra chuyên ngành của Cục Đường sắt Việt Nam, Trưởng đoàn thanh tra chuyên ngành của cơ quan quản lý đường bộ ở khu vực thuộc Tổng cục Đường bộ Việt Nam có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 37.500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính có giá trị không vượt quá 75.000.000 đồng;\nđ) Áp dụng các biện pháp khắc phục hậu quả quy định tại khoản 1 Điều 4 Nghị định này.\n3. Trưởng đoàn thanh tra chuyên ngành của Bộ Giao thông vận tải, Trưởng đoàn thanh tra chuyên ngành của Bộ Tài nguyên và Môi trường có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 52.500.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền, sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính có giá trị không vượt quá 105.000.000 đồng;\nđ) Áp dụng các biện pháp khắc phục hậu quả quy định tại khoản 1 Điều 4 Nghị định này.\n4. Chánh Thanh tra Bộ Giao thông vận tải, Chánh Thanh tra Bộ Tài nguyên và Môi trường, Tổng cục trưởng Tổng cục Môi trường, Tổng cục trưởng Tổng cục Đường bộ Việt Nam, Cục trưởng Cục Đường sắt Việt Nam, Cục trưởng Cục Hàng hải Việt Nam, Cục trưởng Cục Hàng không Việt Nam, Cục trưởng Cục Đường thủy nội địa Việt Nam có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 75.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ, đường sắt;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính;\nđ) Áp dụng các biện pháp khắc phục hậu quả quy định tại khoản 1 Điều 4 Nghị định này.\n5. Trưởng đại diện Cảng vụ hàng hải, Trưởng đại diện Cảng vụ hàng không, Trưởng đại diện Cảng vụ đường thủy nội địa có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 10.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ.\n6. Giám đốc Cảng vụ hàng hải, Giám đốc Cảng vụ hàng không, Giám đốc Cảng vụ đường thủy nội địa có quyền:\na) Phạt cảnh cáo;\nb) Phạt tiền đến 50.000.000 đồng đối với hành vi vi phạm trong lĩnh vực giao thông đường bộ;\nc) Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn;\nd) Tịch thu tang vật, phương tiện được sử dụng để vi phạm hành chính;\nđ) Áp dụng các biện pháp khắc phục hậu quả quy định tại các điểm a, điểm b, điểm c, điểm đ và điểm e khoản 1 Điều 4 Nghị định này.”."
+      },
+      {
+        "number": "30",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 73,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 80 như sau:"
+      },
+      {
+        "number": "31",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 74,
+        "content": "Sửa đổi khoản 2 Điều 81 như sau:\n“2. Trường hợp một cá nhân, tổ chức vi phạm hành chính nhiều lần mà bị xử phạt trong cùng một lần thì bị xử phạt tiền đối với từng hành vi vi phạm, nếu hành vi vi phạm đó có quy định tước quyền sử dụng giấy phép, chứng chỉ hành nghề thì chỉ bị tước quyền sử dụng giấy phép, chứng chỉ hành nghề 01 lần với thời hạn tước là mức tối đa của khung thời hạn tước quyền sử dụng đối với hành vi có thời hạn tước dài nhất.”."
+      },
+      {
+        "number": "32",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 75,
+        "content": "Sửa đổi, bổ sung một số điểm, khoản của Điều 82 như sau:"
+      },
+      {
+        "number": "33",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 76,
+        "content": "Bổ sung một số từ, cụm từ tại một số điều, khoản, điểm sau đây:"
+      },
+      {
+        "number": "34",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 77,
+        "content": "Thay một số từ, cụm từ tại một số điều, khoản, điểm sau đây:"
+      },
+      {
+        "number": "35",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 78,
+        "content": "Bỏ một số từ, cụm từ tại một số điều, khoản, điểm sau đây:"
+      },
+      {
+        "number": "36",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "order": 79,
+        "content": "Bãi bỏ các điểm, khoản, điều sau đây:"
+      }
+    ],
+    "points": [
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "3",
+        "order": 17,
+        "content": "Sửa đổi điểm k khoản 3 Điều 5 như sau:\n“k) Quay đầu xe tại nơi đường bộ giao nhau cùng mức với đường sắt; quay đầu xe tại nơi đường hẹp, đường dốc, đoạn đường cong tầm nhìn bị che khuất, nơi có biển báo hiệu có nội dung cấm quay đầu đối với loại phương tiện đang điều khiển; điều khiển xe rẽ trái tại nơi có biển báo hiệu có nội dung cấm rẽ trái đối với loại phương tiện đang điều khiển; điều khiển xe rẽ phải tại nơi có biển báo hiệu có nội dung cấm rẽ phải đối với loại phương tiện đang điều khiển;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "3",
+        "order": 18,
+        "content": "Sửa đổi điểm c khoản 4 Điều 5 như sau:\n“c) Điều khiển xe không đủ điều kiện để thu phí theo hình thức điện tử tự động không dừng (xe không gắn thẻ đầu cuối hoặc gắn thẻ đầu cuối mà số tiền trong tài khoản thu phí không đủ để chi trả khi qua làn thu phí điện tử tự động không dừng) đi vào làn đường dành riêng thu phí theo hình thức điện tử tự động không dừng tại các trạm thu phí;”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "3",
+        "order": 19,
+        "content": "Sửa đổi điểm b khoản 6 Điều 5 như sau:\n“b) Không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ;”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "3",
+        "order": 20,
+        "content": "Bổ sung điểm d vào sau điểm c khoản 7 Điều 5 như sau:\n“d) Dừng xe, đỗ xe trên đường cao tốc không đúng nơi quy định; không có báo hiệu để người lái xe khác biết khi buộc phải dừng xe, đỗ xe trên đường cao tốc không đúng nơi quy định; quay đầu xe trên đường cao tốc;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "4",
+        "order": 21,
+        "content": "Sửa đổi điểm a khoản 3 Điều 6 như sau:\n“a) Chuyển hướng không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ (trừ trường hợp điều khiển xe đi theo hướng cong của đoạn đường bộ ở nơi đường không giao nhau cùng mức); điều khiển xe rẽ trái tại nơi có biển báo hiệu có nội dung cấm rẽ trái đối với loại phương tiện đang điều khiển; điều khiển xe rẽ phải tại nơi có biển báo hiệu có nội dung cấm rẽ phải đối với loại phương tiện đang điều khiển;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "4",
+        "order": 22,
+        "content": "Bổ sung điểm n, điểm o vào sau điểm m khoản 3 Điều 6 như sau:\n“n) Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ;\no) Chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "4",
+        "order": 23,
+        "content": "Sửa đổi khoản 5 Điều 6 như sau:\n“5. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây:\na) Đi ngược chiều của đường một chiều, đi ngược chiều trên đường có biển “Cấm đi ngược chiều”, trừ hành vi vi phạm quy định tại điểm b khoản 6 Điều này và các trường hợp xe ưu tiên đang đi làm nhiệm vụ khẩn cấp theo quy định;\nb) Không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ.”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "4",
+        "order": 24,
+        "content": "Sửa đổi điểm c khoản 10 Điều 6 như sau:\n“c) Thực hiện hành vi quy định tại điểm a khoản 6; điểm a, điểm b khoản 7; điểm a, điểm b, điểm c, điểm d khoản 8 Điều này bị tước quyền sử dụng Giấy phép lái xe từ 02 tháng đến 04 tháng; tái phạm hoặc vi phạm nhiều lần hành vi quy định tại điểm a, điểm b, điểm c, điểm d khoản 8 Điều này bị tịch thu phương tiện. Thực hiện hành vi quy định tại một trong các điểm, khoản sau của Điều này mà gây tai nạn giao thông thì bị tước quyền sử dụng Giấy phép lái xe từ 02 tháng đến 04 tháng: điểm a, điểm g, điểm h, điểm k, điểm l, điểm m, điểm n, điểm q khoản 1; điểm b, điểm d, điểm e, điểm g, điểm l, điểm m khoản 2; điểm a, điểm b, điểm c, điểm k, điểm m khoản 3; điểm e, điểm g, điểm h khoản 4; điểm b khoản 5 Điều này;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "12",
+        "order": 25,
+        "content": "Sửa đổi điểm p khoản 5 Điều 23 như sau:\n“p) Điều khiển xe ô tô kinh doanh vận tải hành khách không lắp camera theo quy định (đối với loại xe có quy định phải lắp camera) hoặc có lắp camera nhưng không ghi, không lưu trữ được hình ảnh trên xe (bao gồm cả lái xe và cửa lên xuống của xe) trong quá trình xe tham gia giao thông theo quy định hoặc sử dụng biện pháp kỹ thuật, trang thiết bị ngoại vi, các biện pháp khác làm sai lệch dữ liệu của camera lắp trên xe ô tô;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "12",
+        "order": 26,
+        "content": "Sửa đổi điểm đ khoản 6 Điều 23 như sau:\n“đ) Điều khiển xe tham gia kinh doanh vận tải hành khách không gắn thiết bị giám sát hành trình của xe theo quy định hoặc có gắn thiết bị giám sát hành trình của xe nhưng thiết bị không hoạt động theo quy định hoặc sử dụng biện pháp kỹ thuật, trang thiết bị ngoại vi, các biện pháp khác làm sai lệch dữ liệu của thiết bị giám sát hành trình của xe ô tô;”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "12",
+        "order": 27,
+        "content": "Bổ sung khoản 7a vào sau khoản 7 Điều 23 như sau:\n“7a. Phạt tiền từ 10.000.000 đồng đến 12.000.0000 đồng đối với người điều khiển xe thực hiện hành vi đón, trả hành khách trên đường cao tốc.”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "12",
+        "order": 28,
+        "content": "Sửa đổi điểm b khoản 8 Điều 23 như sau:\n“b) Thực hiện hành vi quy định tại khoản 7a Điều này bị tước quyền sử dụng Giấy phép lái xe từ 02 tháng đến 04 tháng;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "13",
+        "order": 29,
+        "content": "Sửa đổi điểm c khoản 3 Điều 24 như sau:\n“c) Điều khiển xe ô tô kinh doanh vận tải hàng hóa không lắp camera theo quy định (đối với loại xe có quy định phải lắp camera) hoặc có lắp camera nhưng không ghi, không lưu trữ được hình ảnh của người lái xe trong quá trình điều khiển xe tham gia giao thông theo quy định hoặc sử dụng biện pháp kỹ thuật, trang thiết bị ngoại vi, các biện pháp khác làm sai lệch dữ liệu của camera lắp trên xe ô tô;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "13",
+        "order": 30,
+        "content": "Sửa đổi điểm c khoản 5 Điều 24 như sau:\n“c) Điều khiển xe tham gia kinh doanh vận tải hàng hóa không gắn thiết bị giám sát hành trình của xe theo quy định hoặc có gắn thiết bị giám sát hành trình của xe nhưng thiết bị không hoạt động theo quy định hoặc sử dụng biện pháp kỹ thuật, trang thiết bị ngoại vi, các biện pháp khác làm sai lệch dữ liệu của thiết bị giám sát hành trình của xe ô tô;”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "13",
+        "order": 31,
+        "content": "Bổ sung khoản 8a vào sau khoản 8 Điều 24 như sau:\n“8a. Phạt tiền từ 10.000.000 đồng đến 12.000.0000 đồng đối với người điều khiển xe thực hiện hành vi nhận, trả hàng trên đường cao tốc.”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "13",
+        "order": 32,
+        "content": "Sửa đổi điểm b khoản 9 Điều 24 như sau:\n“b) Thực hiện hành vi quy định tại khoản 7, điểm c khoản 8, khoản 8a Điều này bị tước quyền sử dụng Giấy phép lái xe từ 02 tháng đến 04 tháng;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 33,
+        "content": "Sửa đổi điểm e khoản 2 Điều 28 như sau:\n“e) Không đánh số thứ tự ghế ngồi, giường nằm trên xe ô tô chở hành khách theo quy định;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 34,
+        "content": "Bổ sung điểm i vào sau điểm h khoản 2 Điều 28 như sau:\n“i) Không thanh toán tiền vé cho hành khách theo quy định đối với tuyến cố định có cự ly từ 300 km trở xuống.”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 35,
+        "content": "Sửa đổi khoản 3 Điều 28 như sau:\n“3. Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với cá nhân, từ 4.000.000 đồng đến 6.000.000 đồng đối với tổ chức thực hiện một trong các hành vi vi phạm sau đây:\na) xếp hàng hóa lên mỗi xe ô tô (kể cả rơ moóc và sơ mi rơ moóc) vượt quá trọng tải (khối lượng hàng chuyên chở) cho phép tham gia giao thông được ghi trong Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe trên 50% đến 100%;\nb) Không thanh toán tiền vé cho hành khách theo quy định đối với tuyến cố định có cự ly trên 300 km;\nc) Không nộp lại phù hiệu về Sở Giao thông vận tải theo quy định.”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 36,
+        "content": "Sửa đổi điểm d khoản 4 Điều 28 như sau:\n“d) Sử dụng xe taxi chở hành khách không gắn hộp đèn với chữ \"TAXI\" trên nóc xe hoặc không niêm yết cụm từ “XE TAXI” trên kính phía trước, kính phía sau xe theo quy định hoặc có gắn hộp đèn, có niêm yết cụm từ “XE TAXI” nhưng không cố định, không đúng kích thước, không làm bằng vật liệu phản quang theo quy định; không có hoặc có số điện thoại giao dịch ghi trên xe không đúng với đăng ký của doanh nghiệp (hợp tác xã);”;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 37,
+        "content": "Sửa đổi điểm o khoản 6 Điều 28 như sau:\n“o) Sử dụng xe ô tô kinh doanh vận tải không lắp camera theo quy định (đối với loại xe có quy định phải lắp camera) hoặc có lắp camera nhưng không ghi, không lưu trữ được hình ảnh trên xe (bao gồm, cả lái xe và cửa lên xuống của xe) trong quá trình xe tham gia giao thông theo quy định hoặc sử dụng biện pháp kỹ thuật, trang thiết bị ngoại vi, các biện pháp khác làm sai lệch dữ liệu của camera lắp trên xe ô tô;”;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 38,
+        "content": "Sửa đổi điểm p khoản 6 Điều 28 như sau:\n“p) Không thực hiện việc cung cấp, cập nhật, truyền, lưu trữ, quản lý dữ liệu hình ảnh từ camera lắp trên xe ô tô theo quy định, không cung cấp tài khoản truy cập vào máy chủ của đơn vị cho cơ quan nhà nước có thẩm quyền theo quy định;”;"
+      },
+      {
+        "letter": "g",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 39,
+        "content": "Sửa đổi khoản 8 Điều 28 như sau:\n“8. Phạt tiền từ 20.000.000 đồng đến 40.000.000 đồng đối với đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô, đơn vị cung cấp phần mềm ứng dụng hỗ trợ kết nối vận tải thực hiện một trong các hành vi sau:\na) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô không có nhân sự cho từng vị trí công việc theo quy định;\nb) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô không báo cáo về việc cập nhật, thay đổi Firmware của thiết bị theo quy định;\nc) Đơn vị cung cấp phần mềm ứng dụng hỗ trợ kết nối vận tải không thực hiện đúng quy định về cung cấp phần mềm ứng dụng hỗ trợ kết nối vận tải; không công bố quy trình giải quyết khiếu nại của khách hàng, không có hệ thống lưu trữ các khiếu nại của khách hàng theo quy định;\nd) Đơn vị cung cấp phần mềm ứng dụng hỗ trợ kết nối vận tải không cung cấp cho cơ quan quản lý danh sách các đơn vị kinh doanh vận tải, xe ô tô và lái xe của các đơn vị vận tải hợp tác với đơn vị cung cấp phần mềm ứng dụng hỗ trợ kết nối vận tải hoặc không cung cấp tài khoản truy cập vào phần mềm ứng dụng hỗ trợ kết nối vận tải cho cơ quan quản lý khi có yêu cầu hoặc không thực hiện lưu trữ theo quy định.”;"
+      },
+      {
+        "letter": "h",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "15",
+        "order": 40,
+        "content": "Sửa đổi khoản 9 Điều 28 như sau:\n“9. Phạt tiền từ 40.000.000 đồng đến 60.000.000 đồng đối với đơn vị sản xuất, lắp ráp, nhập khẩu camera lắp trên xe ô tô, thiết bị giám sát hành trình của xe ô tô; đơn vị cung cấp dịch vụ giám sát hành trình của xe ô tô; đơn vị cung cấp dịch vụ phần cứng, phần mềm xử lý dữ liệu, truyền dẫn dữ liệu của camera lắp trên xe ô tô thực hiện một trong các hành vi vi phạm sau đây:\na) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô, đơn vị cung cấp dịch vụ giám sát hành trình của xe ô tô làm sai lệch các thông tin, dữ liệu của thiết bị giám sát hành trình của xe ô tô;\nb) Đơn vị sản xuất, lắp ráp, nhập khẩu camera lắp trên xe ô tô, đơn vị cung cấp dịch vụ phần cứng, phần mềm xử lý dữ liệu, truyền dẫn dữ liệu của camera lắp trên xe ô tô làm sai lệch các thông tin, dữ liệu của camera lắp trên xe ô tô.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 41,
+        "content": "Sửa đổi khoản 3 Điều 30 như sau:\n“3. Phạt tiền từ 400.000 đồng đến 600.000 đồng trên mỗi người vượt quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng đối với chủ phương tiện là cá nhân, từ 800.000 đồng đến 1.200.000 đồng trên mỗi người vượt quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 150.000.000 đồng đối với chủ phương tiện là tổ chức giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2 Điều 23 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2 Điều 23 Nghị định này.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 42,
+        "content": "Sửa đổi điểm b khoản 4 Điều 30 như sau:\n“b) Không làm thủ tục đổi lại Giấy đăng ký xe theo quy định khi thay đổi địa chỉ của chủ xe hoặc các trường hợp khác theo quy định;”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 43,
+        "content": "Bổ sung khoản 4a vào sau khoản 4 Điều 30 như sau:\n“4a. Phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với cá nhân, từ 1.600.000 đồng đến 2.000.000 đồng đối với tổ chức là chủ xe mô tô, xe gắn máy và các loại xe tương tự xe mô tô không thực hiện đúng quy định về biển số, trừ các hành vi vi phạm quy định tại điểm i, điểm k khoản 5 Điều này.”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 44,
+        "content": "Sửa đổi điểm g khoản 5 Điều 30 như sau:\n“g) Đưa phương tiện không có Giấy đăng ký xe tham gia giao thông hoặc có nhưng đã hết hạn sử dụng; đưa phương tiện có Giấy chứng nhận đăng ký xe tạm thời, phương tiện có phạm vi hoạt động hạn chế tham gia giao thông quá thời hạn, tuyến đường, phạm vi cho phép;”;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 45,
+        "content": "Sửa đổi khoản 6 Điều 30 như sau:\n“6. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng trên mỗi người vượt quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng đối với chủ phương tiện là cá nhân, từ 2.000.000 đồng đến 4.000.000 đồng trên mỗi người vượt quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 150.000.000 đồng đối với chủ phương tiện là tổ chức giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 4 Điều 23 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 4 Điều 23 Nghị định này.”;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 46,
+        "content": "Sửa đổi điểm d khoản 7 Điều 30 như sau:\n“d) Không làm thủ tục đổi lại Giấy đăng ký xe theo quy định khi xe đã được cải tạo hoặc khi thay đổi địa chỉ của chủ xe hoặc các trường hợp khác theo quy định;”;"
+      },
+      {
+        "letter": "g",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 47,
+        "content": "Sửa đổi điểm m khoản 7 Điều 30 như sau:\n“m) Tự ý thay đổi màu sơn của xe không đúng với màu sơn ghi trong Giấy đăng ký xe.”;"
+      },
+      {
+        "letter": "h",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 48,
+        "content": "Sửa đổi điểm g khoản 8 Điều 30 như sau:\n“g) Không thực hiện đúng quy định về biển số, quy định về kẻ chữ trên thành xe và cửa xe (kể cả rơ moóc và sơ mi rơ moóc), trừ các hành vi vi phạm quy định tại: điểm i khoản 9 Điều này và các hành vi vi phạm quy định tại điểm a, điểm b, điểm c, điểm d, điểm đ khoản 2 Điều 28; điểm b khoản 3 Điều 37 Nghị định này;”;"
+      },
+      {
+        "letter": "i",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 49,
+        "content": "Sửa đổi điểm a khoản 9 Điều 30 như sau:\n“a) Tự ý thay đổi tổng thành khung, tổng thành máy (động cơ), hệ thống phanh, hệ thống truyền động (truyền lực), hệ thống chuyển động hoặc tự ý cải tạo kết cấu, hình dáng, kích thước của xe không đúng thiết kế của nhà sản xuất hoặc thiết kế trong hồ sơ đã nộp cho cơ quan đăng ký xe hoặc thiết kế cải tạo đã được cơ quan có thẩm quyền phê duyệt; tự ý thay đổi tính năng sử dụng của xe hoặc tự ý lắp đặt thêm cơ cấu nâng hạ thùng xe, nâng hạ công-ten-nơ trên xe (kể cả rơ moóc và sơ mi rơ moóc);”;"
+      },
+      {
+        "letter": "k",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 50,
+        "content": "Sửa đổi điểm đ khoản 9 Điều 30 như sau:\n“đ) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2 Điều 33 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2 Điều 33 Nghị định này;”;"
+      },
+      {
+        "letter": "l",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 51,
+        "content": "Sửa đổi điểm e, điểm g khoản 9 Điều 30 như sau:\n“e) Đưa xe ô tô tải (kể cả rơ moóc và sơ mi rơ moóc) có kích thước thùng xe không đúng với thông số kỹ thuật được ghi trong Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe tham gia giao thông;\ng) Đưa xe ô tô kinh doanh vận tải hành khách lắp thêm hoặc tháo bớt ghế, giường nằm hoặc có kích thước khoang chở hành lý (hầm xe) không đúng với thông số kỹ thuật được ghi trong Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe tham gia giao thông;”;"
+      },
+      {
+        "letter": "m",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 52,
+        "content": "Bổ sung điểm i vào sau điểm h khoản 9 Điều 30 như sau:\n“i) Đưa phương tiện không gắn biển số (đối với loại xe có quy định phải gắn biển số) tham gia giao thông; đưa phương tiện gắn biển số không đúng với Giấy đăng ký xe hoặc gắn biển số không do cơ quan có thẩm quyền cấp (kể cả rơ moóc và sơ mi rơ moóc) tham gia giao thông;”;"
+      },
+      {
+        "letter": "n",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 53,
+        "content": "Sửa đổi khoản 10 Điều 30 như sau:\n“10. Phạt tiền từ 14.000.000 đồng đến 16.000.000 đồng đối với cá nhân, từ 28.000.000 đồng đến 32.000.000 đồng đối với tổ chức là chủ xe ô tô, máy kéo, xe máy chuyên dùng và các loại xe tương tự xe ô tô thực hiện một trong các hành vi vi phạm sau đây:\na) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a, điểm b khoản 6 Điều 24 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a, điểm b khoản 6 Điều 24 Nghị định này;\nb) Đưa phương tiện không có Giấy đăng ký xe tham gia giao thông hoặc có nhưng đã hết hạn sử dụng; đưa phương tiện có Giấy chứng nhận đăng ký xe tạm thời, phương tiện có phạm vi hoạt động hạn chế tham gia giao thông quá thời hạn, tuyến đường, phạm vi cho phép.”;"
+      },
+      {
+        "letter": "o",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 54,
+        "content": "Sửa đổi khoản 12 Điều 30 như sau:\n“12. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với cá nhân, từ 36.000.000 đồng đến 40.000.000 đồng đối với tổ chức là chủ xe ô tô, máy kéo, xe máy chuyên dùng và các loại xe tương tự xe ô tô thực hiện một trong các hành vi vi phạm sau đây:\na) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a, điểm b khoản 8 Điều 24 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a, điểm b khoản 8 Điều 24 Nghị định này;\nb) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2 Điều 25 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2 Điều 25 Nghị định này;\nc) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 3 Điều 33 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 3 Điều 33 Nghị định này.”;\nр) Sửa đổi khoản 13 Điều 30 như sau:\n“13. Phạt tiền từ 28.000.000 đồng đến 32.000.000 đồng đối với cá nhân, từ 56.000.000 đồng đến 64.000.000 đồng đối với tổ chức là chủ xe ô tô, máy kéo, xe máy chuyên dùng và các loại xe tương tự xe ô tô thực hiện một trong các hành vi vi phạm sau đây:\na) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a khoản 3 Điều 25 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a khoản 3 Điều 25 Nghị định này;\nb) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm b khoản 3 Điều 25 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm b khoản 3 Điều 25 Nghị định này;\nс) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm c khoản 3 Điều 25 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm c khoản 3 Điều 25 Nghị định này;\nd) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm d khoản 3 Điều 25 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm d khoản 3 Điều 25 Nghị định này;\nđ) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a khoản 4 Điều 33 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a khoản 4 Điều 33 Nghị định này;\ne) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm b khoản 4 Điều 33 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm b khoản 4 Điều 33 Nghị định này;\ng) Giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm c khoản 4 Điều 33 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm c khoản 4 Điều 33 Nghị định này.”;"
+      },
+      {
+        "letter": "q",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 55,
+        "content": "Sửa đổi khoản 14 Điều 30 như sau:\n“14. Phạt tiền từ 70.000.000 đồng đến 75.000.000 đồng đối với cá nhân, từ 140.000.000 đồng đến 150.000.000 đồng đối với tổ chức là chủ xe ô tô, máy kéo, xe máy chuyên dùng và các loại xe tương tự xe ô tô khi thực hiện hành vi giao phương tiện hoặc để cho người làm công, người đại diện điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a khoản 5 Điều 33 Nghị định này hoặc trực tiếp điều khiển phương tiện thực hiện hành vi vi phạm quy định tại điểm a khoản 5 Điều 33 Nghị định này.”;"
+      },
+      {
+        "letter": "r",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 56,
+        "content": "Sửa đổi khoản 15 Điều 30 như sau:\n“15. Ngoài việc bị phạt tiền, cá nhân, tổ chức thực hiện hành vi vi phạm còn bị áp dụng các hình thức xử phạt bổ sung sau đây:\na) Thực hiện hành vi quy định tại điểm b, điểm d, điểm h, điểm i, điểm k khoản 5; điểm b, điểm e khoản 7; điểm e, điểm i khoản 8; điểm i khoản 9 Điều này bị tịch thu biển số, Giấy đăng ký xe (trường hợp đã được cấp lại); tịch thu hồ sơ, các loại giấy tờ, tài liệu giả mạo; tịch thu biển số, thiết bị thay đổi biển số, Giấy đăng ký xe, Giấy chứng nhận, tem kiểm định an toàn kỹ thuật và bảo vệ môi trường của phương tiện, Giấy chứng nhận đăng ký xe tạm thời không đúng quy định hoặc bị tẩy xóa;\nb) Thực hiện hành vi quy định tại điểm a khoản 5, điểm a khoản 7, điểm đ khoản 8, điểm b khoản 9 Điều này bị tịch thu phương tiện;\nc) Thực hiện hành vi quy định tại điểm g, điểm h khoản 5; điểm e khoản 8, điểm b khoản 10 Điều này trong trường hợp không có Giấy đăng ký xe hoặc có Giấy đăng ký xe nhưng không do cơ quan có thẩm quyền cấp, không đúng số khung, số máy của xe hoặc bị tẩy xóa (kể cả rơ moóc và sơ mi rơ moóc) mà không chứng minh được nguồn gốc xuất xứ của phương tiện (không có giấy tờ, chứng từ chuyển quyền sở hữu xe hoặc giấy tờ, chứng từ nguồn gốc xe hợp pháp) thì bị tịch thu phương tiện;\nd) Thực hiện hành vi quy định tại điểm g, điểm h, điểm i, điểm k khoản 5; điểm g, điểm i khoản 7; điểm b, điểm c, điểm d, điểm đ, điểm e, điểm i khoản 8; điểm c, điểm d, điểm h, điểm i khoản 9; khoản 10; điểm c khoản 12; điểm đ khoản 13 Điều này trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện còn bị tước quyền sử dụng Giấy phép lái xe (khi điều khiển xe cơ giới), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 01 tháng đến 03 tháng;\nđ) Thực hiện hành vi quy định tại khoản 11; điểm b khoản 12; điểm a, điểm b, điểm c, điểm d, điểm e, điểm g khoản 13 Điều này trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện còn bị tước quyền sử dụng Giấy phép lái xe (khi điều khiển xe cơ giới), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 02 tháng đến 04 tháng;\ne) Thực hiện hành vi quy định tại điểm a khoản 12, khoản 14 Điều này trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện còn bị tước quyền sử dụng Giấy phép lái xe (khi điều khiển xe cơ giới), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 03 tháng đến 05 tháng;\ng) Thực hiện hành vi quy định tại khoản 3, khoản 6 Điều này trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện chở vượt trên 50% đến 100% số người quy định được phép chở của phương tiện, còn bị tước quyền sử dụng Giấy phép lái xe từ 01 tháng đến 03 tháng;\nh) Thực hiện hành vi quy định tại khoản 3, khoản 6 Điều này trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện chở vượt trên 100% số người quy định được phép chở của phương tiện, còn bị tước quyền sử dụng Giấy phép lái xe từ 03 tháng đến 05 tháng;\ni) Thực hiện hành vi quy định tại điểm h khoản 7, điểm d khoản 9, điểm a khoản 10, khoản 11, điểm a khoản 12 Điều này mà phương tiện đó có thùng xe, khối lượng hàng hóa cho phép chuyên chở không đúng theo quy định hiện hành thì còn bị tước quyền sử dụng Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường và Tem kiểm định của phương tiện từ 01 tháng đến 03 tháng;\nk) Thực hiện hành vi quy định tại điểm a, điểm e, điểm g khoản 9 Điều này bị tước quyền sử dụng Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường và Tem kiểm định của phương tiện từ 01 tháng đến 03 tháng;\nl) Thực hiện hành vi quy định tại khoản 3, khoản 6 Điều này trong trường hợp chở vượt trên 50% số người quy định được phép chở của phương tiện còn bị tước quyền sử dụng phù hiệu (biển hiệu) từ 01 tháng đến 03 tháng (nếu có). Thực hiện hành vi quy định tại điểm h, điểm i khoản 7; điểm c, điểm d khoản 9; điểm a khoản 10; khoản 11; khoản 12; khoản 13; khoản 14 Điều này còn bị tước quyền sử dụng phù hiệu (biển hiệu) từ 01 tháng đến 03 tháng (nếu có).”;"
+      },
+      {
+        "letter": "s",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "17",
+        "order": 57,
+        "content": "Bổ sung khoản 16 vào sau khoản 15 Điều 30 như sau:\n“16. Ngoài việc bị áp dụng hình thức xử phạt, cá nhân, tổ chức thực hiện hành vi vi phạm còn bị áp dụng các biện pháp khắc phục hậu quả sau đây:\na) Thực hiện hành vi quy định tại khoản 1; điểm m khoản 7 Điều này buộc phải khôi phục lại nhãn hiệu, màu sơn ghi trong Giấy đăng ký xe theo quy định;\nb) Thực hiện hành vi quy định tại điểm a khoản 2 Điều này buộc phải thay thế thiết bị đủ tiêu chuẩn an toàn kỹ thuật theo quy định (lắp đúng loại kính an toàn);\nc) Thực hiện hành vi quy định tại khoản 4a, điểm g khoản 8 Điều này buộc phải thực hiện đúng quy định về biển số, quy định về kẻ chữ trên thành xe và cửa xe;\nd) Thực hiện hành vi quy định tại điểm a, điểm e, điểm g khoản 9 Điều này buộc phải khôi phục lại hình dáng, kích thước, tình trạng an toàn kỹ thuật ban đầu của xe và đăng kiểm lại trước khi đưa phương tiện ra tham gia giao thông;\nđ) Thực hiện hành vi quy định tại điểm h khoản 7, điểm d khoản 9, điểm a khoản 10, khoản 11, điểm a khoản 12 Điều này mà phương tiện đó có thùng xe, khối lượng hàng hóa cho phép chuyên chở không đúng theo quy định hiện hành thì còn bị buộc phải thực hiện điều chỉnh thùng xe theo đúng quy định hiện hành, đăng kiểm lại và điều chỉnh lại khối lượng hàng hóa cho phép chuyên chở ghi trong Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường theo quy định hiện hành trước khi đưa phương tiện ra tham gia giao thông;\ne) Thực hiện hành vi vi phạm quy định tại điểm g, điểm h, điểm i khoản 7; điểm c khoản 8; điểm d, điểm đ khoản 9; điểm a khoản 10; khoản 11; khoản 12; khoản 13; khoản 14 Điều này nếu gây hư hại cầu, đường phải khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra;\ng) Thực hiện hành vi vi phạm quy định tại điểm b khoản 4; điểm e, điểm g khoản 5; điểm c, điểm d, điểm l khoản 7; điểm b khoản 10 Điều này buộc phải làm thủ tục đăng ký xe, đăng ký sang tên, đổi lại, thu hồi Giấy đăng ký xe, biển số xe, Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường theo quy định (trừ trường hợp bị tịch thu phương tiện).”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "19",
+        "order": 58,
+        "content": "Sửa đổi khoản 2 Điều 34 như sau:\n“2. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối với người đua xe mô tô, xe gắn máy, xe máy điện trái phép.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "19",
+        "order": 59,
+        "content": "Sửa đổi khoản 3 Điều 34 như sau:\n“3. Phạt tiền từ 20.000.000 đồng đến 25.000.000 đồng đối với người đua xe ô tô trái phép.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "23",
+        "order": 60,
+        "content": "Sửa đổi đoạn mở đầu khoản 3 Điều 44 như sau:\n“3. Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với lái tàu, trưởng tàu, phó trưởng tàu khách phụ trách an toàn thực hiện một trong các hành vi vi phạm sau đây:”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "23",
+        "order": 61,
+        "content": "Sửa đổi điểm a khoản 3 Điều 44 như sau:\n“a) Lái tàu, trưởng tàu, phó trưởng tàu khách phụ trách an toàn cho tàu chạy khi chưa nhận được tín hiệu an toàn của trực ban chạy tàu ga hoặc người làm tín hiệu truyền;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "24",
+        "order": 62,
+        "content": "Sửa đổi tên Điều 66 như sau:\n“Điều 66. Xử phạt đối với lái tàu, phụ lái tàu, người trực tiếp điều khiển phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "24",
+        "order": 63,
+        "content": "Sửa đổi đoạn mở đầu khoản 3 Điều 66 như sau:\n“3. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với lái tàu, người trực tiếp điều khiển phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp thực hiện một trong các hành vi vi phạm sau đây:”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "24",
+        "order": 64,
+        "content": "Sửa đổi điểm c khoản 3 Điều 66 như sau:\n“c) Điều khiển tàu, phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp chạy quá tốc độ quy định của Công lệnh tốc độ đến 10 km/h.”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "24",
+        "order": 65,
+        "content": "Sửa đổi khoản 4 Điều 66 như sau:\n“4. Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với lái tàu, người trực tiếp điều khiển phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp điều khiển tàu, phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp chạy quá tốc độ quy định của Công lệnh tốc độ trên 10 km/h đến 20 km/h.”;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "24",
+        "order": 66,
+        "content": "Sửa đổi đoạn mở đầu khoản 5 Điều 66 như sau:\n“5. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với lái tàu, người trực tiếp điều khiển phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp thực hiện một trong các hành vi vi phạm sau đây:”;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "24",
+        "order": 67,
+        "content": "Sửa đổi điểm a khoản 5 Điều 66 như sau:\n“a) Điều khiển tàu, phương tiện giao thông đường sắt phục vụ dây chuyền công nghệ của doanh nghiệp chạy quá tốc độ quy định của Công lệnh tốc độ trên 20 km/h;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 68,
+        "content": "Sửa đổi điểm e, điểm g khoản 2 Điều 74 như sau:\n“e) Khoản 1; khoản 2; điểm a khoản 3; điểm a, điểm b, điểm c, điểm d, điểm đ, điểm e, điểm p, điểm q khoản 4; khoản 5; điểm d, điểm đ, điểm e, điểm i, điểm m, điểm n, điểm o, điểm p, điểm q khoản 6; điểm a, điểm b, điểm c, điểm h, điểm i khoản 7 Điều 28;\ng) Điều 29, Điều 30, Điều 31, Điều 32, Điều 33, Điều 34, Điều 35 (trừ điểm b, điểm c khoản 2; điểm a khoản 3; điểm b khoản 4; khoản 5 Điều 35), Điều 36;”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 69,
+        "content": "Sửa đổi điểm a, điểm b khoản 3 Điều 74 như sau:\n“a) Điểm đ, điểm g khoản 1; điểm g, điểm h khoản 2; điểm b, điểm d, điểm đ, điểm e, điểm k, điểm r, điểm s khoản 3; điểm b, điểm d, điểm đ, điểm g, điểm i khoản 4; điểm b, điểm c khoản 5; điểm b, điểm c khoản 6; điểm b khoản 7; điểm c khoản 8; khoản 9; khoản 10 Điều 5;\nb) Điểm g, điểm n khoản 1; điểm a, điểm đ, điểm h, điểm l khoản 2; điểm b, điểm c, điểm d, điểm đ, điểm e, điểm i, điểm k, điểm m, điểm n, điểm o khoản 3; điểm b, điểm d, điểm e, điểm g, điểm h khoản 4; khoản 5; điểm a, điểm c khoản 6; điểm c khoản 7; khoản 8; khoản 9 Điều 6;”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 70,
+        "content": "Sửa đổi điểm h khoản 3 Điều 74 như sau:\n“h) Điểm b khoản 3; điểm a, điểm b, điểm c, điểm đ, điểm e, điểm k khoản 5; điểm a, điểm b, điểm c khoản 6; khoản 7a Điều 23;”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 71,
+        "content": "Bổ sung khoản 3a vào sau khoản 3 Điều 74 như sau:\n“3a. Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ trong phạm vi chức năng, nhiệm vụ được giao có liên quan đến trật tự an toàn giao thông đường bộ, đường sắt có thẩm quyền xử phạt đối với các hành vi vi phạm quy định tại điểm a khoản 2 Điều 16; điểm a khoản 6 Điều 23; điểm a khoản 2 Điều 32; điểm b khoản 3 Điều 40; điểm c khoản 2 Điều 51; điểm d khoản 2 Điều 73.”;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 72,
+        "content": "Sửa đổi tên khoản 4 Điều 74 như sau:\n“4. Trưởng Công an cấp xã, Trưởng đồn Công an, Trưởng trạm Công an cửa khẩu, khu chế xuất trong phạm vi chức năng, nhiệm vụ được giao có liên quan đến trật tự an toàn giao thông đường bộ, đường sắt có thẩm quyền xử phạt đối với các hành vi vi phạm quy định tại các điểm, khoản, điều của Nghị định này như sau:”;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 73,
+        "content": "Sửa đổi điểm b khoản 4 Điều 74 như sau:\n“b) Điểm g, điểm n khoản 1; điểm a, điểm đ, điểm h, điểm l khoản 2; điểm c, điểm d, điểm đ, điểm k, điểm m, điểm n, điểm o khoản 3; điểm b, điểm d khoản 4 Điều 6, trừ trường hợp gây tai nạn giao thông;”;"
+      },
+      {
+        "letter": "g",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 74,
+        "content": "Sửa đổi điểm e khoản 4 Điều 74 như sau:\n“e) Khoản 1, khoản 2, khoản 6, khoản 7 Điều 11;”;"
+      },
+      {
+        "letter": "h",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 75,
+        "content": "Sửa đổi điểm g khoản 5 Điều 74 như sau:\n“g) Khoản 1; khoản 2; khoản 3; khoản 4; khoản 5; khoản 6; điểm b khoản 7 Điều 16;”;"
+      },
+      {
+        "letter": "i",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 76,
+        "content": "Sửa đổi điểm i khoản 5 Điều 74 như sau:\n“i) Khoản 3; điểm b khoản 4; khoản 6; khoản 8; khoản 9 Điều 21;”;"
+      },
+      {
+        "letter": "k",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 77,
+        "content": "Sửa đổi l khoản 5 Điều 74 như sau:\n“l) Điểm a, điểm b khoản 1; điểm a, điểm b, điểm d, điểm đ khoản 2; khoản 3; khoản 4; khoản 5; khoản 6; khoản 7; điểm a, điểm b khoản 8; khoản 8a Điều 24;”;"
+      },
+      {
+        "letter": "l",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 78,
+        "content": "Sửa đổi điểm n khoản 5 Điều 74 như sau:\n“n) Điểm a khoản 2; khoản 3; khoản 6; điểm a, điểm g, điểm h, điểm i, điểm m khoản 7; khoản 8; khoản 9; khoản 10; khoản 11; khoản 12; khoản 13; khoản 14 Điều 30;”;"
+      },
+      {
+        "letter": "m",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "26",
+        "order": 79,
+        "content": "Sửa đổi điểm p khoản 5 Điều 74 như sau:\n“p) Khoản 1; điểm b, điểm c khoản 2; điểm c khoản 3; khoản 4; khoản 5 Điều 35;”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 80,
+        "content": "Sửa đổi khoản 1 Điều 80 như sau:\n“1. Trong trường hợp chủ phương tiện vi phạm có mặt tại nơi xảy ra vi phạm, thì người có thẩm quyền căn cứ vào hành vi vi phạm để lập biên bản vi phạm hành chính, ra quyết định xử phạt vi phạm hành chính theo các điểm, khoản tương ứng của Điều 30 Nghị định này.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 81,
+        "content": "Sửa đổi khoản 2 Điều 80 như sau:\n“2. Trong trường hợp chủ phương tiện vi phạm không có mặt tại nơi xảy ra vi phạm, thì người có thẩm quyền căn cứ vào hành vi vi phạm để lập biên bản vi phạm hành chính đối với chủ phương tiện và tiến hành xử phạt theo quy định của pháp luật, người điều khiển phương tiện phải ký vào biên bản vi phạm hành chính với tư cách là người chứng kiến.”;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 82,
+        "content": "Sửa đổi điểm a khoản 3 Điều 80 như sau:\n“a) Các hành vi vi phạm quy định về biển số, Giấy đăng ký xe, Giấy chứng nhận đăng ký xe tạm thời quy định tại Điều 16 (điểm a, điểm b khoản 4; điểm a, điểm b, điểm d khoản 6; điểm a khoản 7), Điều 17 (khoản 2; điểm a khoản 3), Điều 19 (điểm a khoản 1; điểm a, điểm d, điểm đ, điểm e khoản 2) và các hành vi vi phạm tương ứng quy định tại Điều 30 (khoản 4a; điểm g, điểm h, điểm k khoản 5; điểm e, điểm g khoản 8; điểm i khoản 9; điểm b khoản 10), trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện thì bị xử phạt theo quy định tại các điểm, khoản tương ứng của Điều 30 Nghị định này;”;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 83,
+        "content": "Sửa đổi điểm b khoản 3 Điều 80 như sau:\n“b) Các hành vi vi phạm quy định về Giấy chứng nhận, tem kiểm định an toàn kỹ thuật và bảo vệ môi trường của xe quy định tại Điều 16 (điểm a khoản 5; điểm b, điểm c khoản 6), Điều 19 (điểm đ khoản 1; điểm c, điểm e khoản 2) và các hành vi vi phạm tương ứng quy định tại Điều 30 (điểm b, điểm e khoản 8; điểm c khoản 9), trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện thì bị xử phạt theo quy định tại các điểm, khoản tương ứng của Điều 30 Nghị định này;”;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 84,
+        "content": "Sửa đổi điểm d, điểm đ, điểm e khoản 3 Điều 80 như sau:\n“d) Các hành vi vi phạm quy định về niên hạn sử dụng của phương tiện quy định tại Điều 16 (điểm b khoản 7) và các hành vi vi phạm tương ứng quy định tại Điều 28 (điểm i khoản 6), Điều 30 (điểm đ khoản 8), trong trường hợp chủ phương tiện hoặc cá nhân kinh doanh vận tải là người trực tiếp điều khiển phương tiện thì bị xử phạt theo quy định tại điểm i khoản 6 Điều 28 hoặc điểm đ khoản 8 Điều 30 của Nghị định này;\nđ) Các hành vi vi phạm quy định về kích thước thùng xe, khoang chở hành lý (hầm xe), lắp thêm hoặc tháo bớt ghế, giường nằm trên xe ô tô quy định tại Điều 16 (điểm d khoản 3, điểm c khoản 4) và các hành vi vi phạm tương ứng quy định tại Điều 30 (điểm e, điểm g khoản 9), trong trường hợp chủ phương tiện là người trực tiếp điều khiển phương tiện thì bị xử phạt theo quy định tại các điểm, khoản tương ứng của Điều 30 Nghị định này;\ne) Các hành vi vi phạm quy định về lắp đặt, sử dụng thiết bị giám sát hành trình, camera trên xe ô tô quy định tại Điều 23 (điểm p khoản 5; điểm đ khoản 6), Điều 24 (điểm c khoản 3; điểm c khoản 5) và các hành vi vi phạm tương ứng quy định tại Điều 28 (điểm đ, điểm o khoản 6), trong trường hợp cá nhân kinh doanh vận tải là người trực tiếp điều khiển phương tiện thì bị xử phạt theo quy định tại các điểm, khoản tương ứng của Điều 28 Nghị định này;”;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 85,
+        "content": "Sửa đổi điểm k khoản 3 Điều 80 như sau:\n“k) Các hành vi vi phạm quy định về đón, trả khách; nhận, trả hàng quy định tại Điều 23 (khoản 7a), Điều 24 (khoản 8a) và các hành vi vi phạm tương ứng quy định tại Điều 28 (điểm i khoản 7), trong trường hợp cá nhân kinh doanh vận tải là người trực tiếp điều khiển phương tiện thì bị xử phạt theo quy định tại điểm i khoản 7 Điều 28 của Nghị định này;”;"
+      },
+      {
+        "letter": "g",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 86,
+        "content": "Sửa đổi khoản 4 Điều 80 như sau:\n“4. Đối với những hành vi vi phạm quy định về tải trọng, khổ giới hạn của phương tiện, của cầu, đường được quy định tại Điều 24, Điều 33 của Nghị định này, trong trường hợp chủ phương tiện, người điều khiển phương tiện vừa thực hiện hành vi vi phạm quy định tại Điều 24, vừa thực hiện hành vi vi phạm quy định tại Điều 33 của Nghị định này thì bị xử phạt về từng hành vi vi phạm; đối với những hành vi vi phạm được quy định tại điểm a khoản 4, điểm a khoản 5 Điều 33 của Nghị định này, trong trường hợp chủ phương tiện, người điều khiển phương tiện vừa thực hiện hành vi vi phạm quy định về tổng trọng lượng (khối lượng toàn bộ) của xe, vừa thực hiện hành vi vi phạm quy định về tải trọng trục xe thì bị xử phạt theo quy định của hành vi vi phạm có mức phạt tiền lớn hơn.”;"
+      },
+      {
+        "letter": "h",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 87,
+        "content": "Sửa đổi điểm c khoản 5 Điều 80 như sau:\n“c) Thực hiện hành vi vi phạm quy định tại điểm g, điểm h, điểm i khoản 7; điểm c khoản 8; điểm d, điểm đ khoản 9; điểm a khoản 10; khoản 11; khoản 12; khoản 13; khoản 14 Điều 30 buộc phải hạ phần hàng quá tải, dỡ phần hàng quá khổ theo hướng dẫn của lực lượng chức năng tại nơi phát hiện vi phạm;”;"
+      },
+      {
+        "letter": "i",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 88,
+        "content": "Bổ sung điểm e vào sau điểm đ khoản 5 Điều 80 như sau:\n“e) Thực hiện hành vi vi phạm quy định tại khoản 2, khoản 4 Điều 23; khoản 3, khoản 6 Điều 30 (trường hợp chở hành khách) buộc phải bố trí phương tiện khác để chở số hành khách vượt quá quy định được phép chở của phương tiện.”;"
+      },
+      {
+        "letter": "k",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "30",
+        "order": 89,
+        "content": "Sửa đổi khoản 7 Điều 80 như sau:\n“7. Khi xử phạt đối với chủ phương tiện quy định tại khoản 6 Điều này, thời hạn ra quyết định xử phạt có thể được kéo dài để xác minh đối tượng bị xử phạt theo quy định tại khoản 1 Điều 66 Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung năm 2020) nhưng tối đa không quá 02 tháng.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "32",
+        "order": 90,
+        "content": "Sửa đổi khoản 1 Điều 82 như sau:\n“1. Để ngăn chặn ngay vi phạm hành chính, người có thẩm quyền được phép tạm giữ phương tiện trước khi ra quyết định xử phạt theo quy định tại khoản 2, khoản 8 Điều 125 Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung năm 2020) đối với những hành vi vi phạm được quy định tại các điều, khoản, điểm sau đây của Nghị định này:\na) Điểm c khoản 6; điểm a, điểm c khoản 8; khoản 10 Điều 5;\nb) Điểm b, điểm c khoản 6; điểm c khoản 7; điểm a, điểm b, điểm c, điểm d, điểm e, điểm g, điểm h, điểm i khoản 8; khoản 9 Điều 6;\nc) Điểm c khoản 6; điểm b khoản 7; điểm a, điểm b khoản 8; khoản 9 Điều 7;\nd) Điểm q khoản 1; điểm e khoản 3; điểm a, điểm c, điểm d, điểm đ (trong trường hợp người vi phạm là người dưới 16 tuổi và điều khiển phương tiện), điểm g (trong trường hợp người vi phạm là người dưới 16 tuổi và điều khiển phương tiện) khoản 4 Điều 8;\nđ) Khoản 9 Điều 11;\ne) Điểm a, điểm b khoản 4; khoản 5; điểm a, điểm b, điểm c khoản 6 Điều 16;\ng) Điểm a, điểm b, điểm c khoản 2 Điều 17;\nh) Điểm b, điểm đ khoản 1; điểm c, điểm d, điểm đ, điểm e khoản 2 Điều 19;\ni) Khoản 1; điểm a khoản 4; khoản 5; khoản 6; khoản 7; khoản 8; khoản 9 Điều 21;\nk) Điểm đ, điểm g, điểm h, điểm k khoản 5; điểm b, điểm e, điểm h khoản 8; điểm c, điểm i khoản 9; điểm b khoản 10 Điều 30;\nl) Điểm b khoản 5 Điều 33.”;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "32",
+        "order": 91,
+        "content": "Sửa đổi khoản 2 Điều 82 như sau:\n“2. Để bảo đảm thi hành quyết định xử phạt vi phạm hành chính hoặc để xác minh tình tiết làm căn cứ ra quyết định xử phạt, người có thẩm quyền xử phạt còn có thể quyết định tạm giữ phương tiện, giấy tờ có liên quan đến người điều khiển và phương tiện vi phạm một trong các hành vi quy định tại Nghị định này theo quy định tại khoản 6, khoản 8 Điều 125 của Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung năm 2020). Khi bị tạm giữ giấy tờ theo quy định tại khoản 6 Điều 125 của Luật Xử lý vi phạm hành chính, nếu quá thời hạn hẹn đến giải quyết vụ việc vi phạm ghi trong biên bản vi phạm hành chính, người vi phạm chưa đến trụ sở của người có thẩm quyền xử phạt để giải quyết vụ việc vi phạm mà vẫn tiếp tục điều khiển phương tiện hoặc đưa phương tiện ra tham gia giao thông, sẽ bị áp dụng xử phạt như hành vi không có giấy tờ.”."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "33",
+        "order": 92,
+        "content": "Bổ sung cụm từ “khoản 4a,” vào trước cụm từ “khoản 5” tại điểm d khoản 2, điểm e khoản 3 Điều 74;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "33",
+        "order": 93,
+        "content": "Bổ sung cụm từ “điểm d khoản 7;” vào sau cụm từ “khoản 6” tại điểm a khoản 5 Điều 74;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "33",
+        "order": 94,
+        "content": "Bổ sung cụm từ “điểm a” vào trước cụm từ “khoản 3” tại khoản 6 Điều 74; điểm đ khoản 1 Điều 79; điểm b khoản 5 Điều 80."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 95,
+        "content": "Thay cụm từ “điểm a, điểm b khoản 6; điểm a, điểm c khoản 7” bằng cụm từ “điểm a khoản 6; điểm a, điểm c, điểm d khoản 7” tại điểm a khoản 1 Điều 5;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 96,
+        "content": "Thay cụm từ “điểm b khoản 6” bằng cụm từ “điểm d khoản 7” tại điểm h khoản 2, điểm e khoản 3, điểm d khoản 4 Điều 5;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 97,
+        "content": "Thay cụm từ “điểm h, điểm i khoản 5” bằng cụm từ “điểm i khoản 5” tại điểm b khoản 11 Điều 5;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 98,
+        "content": "Thay cụm từ “1.000.000 đồng đến 2.000.000 đồng” bằng cụm từ “2.000.000 đồng đến 3.000.000 đồng” tại tên khoản 4 Điều 5, khoản 5 Điều 7, khoản 7 Điều 47;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 99,
+        "content": "Thay cụm từ “3.000.000 đồng đến 5.000.000 đồng” bằng cụm từ “4.000.000 đồng đến 6.000.000 đồng” tại tên khoản 5 Điều 5, khoản 8 Điều 47;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 100,
+        "content": "Thay cụm từ “điểm d, điểm g, điểm i, điểm m khoản 3” bằng cụm từ “điểm a, điểm d, điểm g, điểm i, điểm m khoản 3” tại điểm a khoản 1 Điều 6;"
+      },
+      {
+        "letter": "g",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 101,
+        "content": "Thay cụm từ “600.000 đồng đến 1.000.000 đồng” bằng cụm từ “800.000 đồng đến 1.000.000 đồng” tại khoản 4 Điều 6, khoản 5 Điều 47;"
+      },
+      {
+        "letter": "h",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 102,
+        "content": "Thay cụm từ “điểm b khoản 6 Điều 33” bằng cụm từ “điểm b khoản 5 Điều 33” tại khoản 9 Điều 11;"
+      },
+      {
+        "letter": "i",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 103,
+        "content": "Thay cụm từ “200.000 đồng đến 400.000 đồng” bằng cụm từ “300.000 đồng đến 400.000 đồng” tại tên khoản 1 Điều 5, khoản 2 Điều 7, khoản 1 Điều 42, khoản 1 Điều 43, khoản 1 Điều 46;"
+      },
+      {
+        "letter": "k",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 104,
+        "content": "Thay cụm từ “200.000 đồng đến 300.000 đồng” bằng cụm từ “300.000 đồng đến 400.000 đồng” tại tên khoản 2 Điều 6, khoản 3 Điều 8, khoản 2 Điều 18, khoản 4 Điều 47;"
+      },
+      {
+        "letter": "l",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 105,
+        "content": "Thay cụm từ “từ 200.000 đồng đến 300.000 đồng đối với cá nhân, từ 400.000 đồng đến 600.000 đồng đối với tổ chức” bằng cụm từ “từ 300.000 đồng đến 400.000 đồng đối với cá nhân, từ 600.000 đồng đến 800.000 đồng đối với tổ chức” tại tên khoản 2 Điều 15;"
+      },
+      {
+        "letter": "m",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 106,
+        "content": "Thay cụm từ “300.000 đồng đến 400.000 đồng” bằng cụm từ “800.000 đồng đến 1.000.000 đồng” tại tên khoản 2 Điều 17, khoản 1 Điều 19;"
+      },
+      {
+        "letter": "n",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 107,
+        "content": "Thay cụm từ “800.000 đồng đến 1.000.000 đồng” bằng cụm từ “2.000.000 đồng đến 3.000.000 đồng” tại tên khoản 3 Điều 17;"
+      },
+      {
+        "letter": "o",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 108,
+        "content": "Thay cụm từ “tổng mức phạt tiền tối đa không vượt quá 40.000.000 đồng” bằng cụm từ “tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng” tại khoản 2, khoản 4 Điều 23;"
+      },
+      {
+        "letter": "p",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 109,
+        "content": "Thay cụm từ “điểm a khoản 7” bằng cụm từ “khoản 7a” tại điểm đ, điểm e, điểm k khoản 5 Điều 23;"
+      },
+      {
+        "letter": "q",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 110,
+        "content": "Thay cụm từ “có thiết kế từ từ 09 chỗ” bằng cụm từ “có thiết kế từ 09 chỗ” tại điểm c khoản 4 Điều 28;"
+      },
+      {
+        "letter": "r",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 111,
+        "content": "Thay cụm từ “từ 7.000.000 đồng đến 10.000.000 đồng đối với cá nhân, từ 14.000.000 đồng đến 20.000.000 đồng đối với tổ chức” bằng cụm từ “từ 10.000.000 đồng đến 12.000.000 đồng đối với cá nhân, từ 20.000.000 đồng đến 24.000.000 đồng đối với tổ chức” tại tên khoản 7 Điều 28;"
+      },
+      {
+        "letter": "s",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 112,
+        "content": "Thay cụm từ “tháo dỡ” bằng cụm từ “phá dỡ” tại điểm b khoản 1, điểm a khoản 2, điểm l khoản 3 Điều 4; điểm a khoản 12 Điều 11; điểm đ khoản 10 Điều 12; điểm a khoản 2 Điều 14; điểm g khoản 6 Điều 51; điểm b khoản 4 Điều 52; điểm d, điểm đ, điểm e, điểm g khoản 5 Điều 53; điểm đ khoản 2, điểm c khoản 5 Điều 54;"
+      },
+      {
+        "letter": "t",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "34",
+        "order": 113,
+        "content": "Thay cụm từ “Đối với những hành vi vi phạm quy định về tải trọng, khổ giới hạn của phương tiện, của cầu, đường được quy định tại Điều 24, Điều 28, Điều 30, Điều 33, Điều 65 của Nghị định này” bằng cụm từ “Đối với các hành vi vi phạm quy định về chở người vượt quá quy định được phép chở của phương tiện, vi phạm quy định về tải trọng, khổ giới hạn của phương tiện, của cầu, đường được quy định tại Điều 23, Điều 24, Điều 28, Điều 30, Điều 33, Điều 65 của Nghị định này” tại tên khoản 5 Điều 80."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "35",
+        "order": 114,
+        "content": "Bỏ cụm từ \"công lập\" tại điểm c khoản 2 Điều 2; bãi bỏ cụm từ \", tổ hợp tác” tại khoản 3 Điều 2;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "35",
+        "order": 115,
+        "content": "Bỏ cụm từ “hoặc tái phạm hành vi quy định tại điểm b khoản 7 Điều này,” tại điểm d khoản 11 Điều 5;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "35",
+        "order": 116,
+        "content": "Bỏ cụm từ “điểm đ,” tại điểm b khoản 10 Điều 6;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "35",
+        "order": 117,
+        "content": "Bỏ cụm từ “kinh doanh vận tải, dịch vụ hỗ trợ vận tải” tại tên khoản 1 Điều 28."
+      },
+      {
+        "letter": "a",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 118,
+        "content": "Bãi bỏ điểm h khoản 5 Điều 5;"
+      },
+      {
+        "letter": "b",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 119,
+        "content": "Bãi bỏ điểm i, điểm k khoản 2; điểm đ khoản 4 Điều 6;"
+      },
+      {
+        "letter": "c",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 120,
+        "content": "Bãi bỏ điểm d, điểm đ khoản 3 Điều 8;"
+      },
+      {
+        "letter": "d",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 121,
+        "content": "Bãi bỏ khoản 3 Điều 11;"
+      },
+      {
+        "letter": "đ",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 122,
+        "content": "Bãi bỏ điểm b khoản 1 Điều 17;"
+      },
+      {
+        "letter": "e",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 123,
+        "content": "Bãi bỏ điểm g khoản 5, điểm a khoản 7 Điều 23;"
+      },
+      {
+        "letter": "g",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 124,
+        "content": "Bãi bỏ điểm a khoản 3, điểm c khoản 6 Điều 24;"
+      },
+      {
+        "letter": "h",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 125,
+        "content": "Bãi bỏ điểm b khoản 2; điểm c khoản 4; điểm đ, điểm k khoản 7 Điều 30;"
+      },
+      {
+        "letter": "i",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 126,
+        "content": "Bãi bỏ khoản 11 Điều 80;"
+      },
+      {
+        "letter": "k",
+        "doc_identity": "123/2021/NĐ-CP",
+        "parent_article": "2",
+        "parent_clause": "36",
+        "order": 127,
+        "content": "Bãi bỏ Điều 83."
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "BELONGS_TO_GROUP",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "DocumentGroup",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_TYPE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "DocumentType",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_STATUS",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "EffectStatus",
+      "to_id": "2"
+    },
+    {
+      "type": "ISSUED_BY",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Organization",
+      "to_id": "93"
+    },
+    {
+      "type": "SIGNED_BY",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Signer",
+      "to_id": "1992"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Field",
+      "to_id": "28"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Field",
+      "to_id": "26"
+    },
+    {
+      "type": "IN_FIELD",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Field",
+      "to_id": "193"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "120/2021/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "118/2021/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "116/2021/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "2162/QĐ-BGTVT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "3278/QĐ-BVHTTDL"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "20/2021/TT-BCT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "22/2021/TT-BCT"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "102/2021/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "100/2021/NĐ-CP"
+    },
+    {
+      "type": "RELATED_TO",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Document",
+      "to_id": "13/2021/TT-BLĐTBXH"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Article",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Article",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Article",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Article",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Article",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_ARTICLE",
+      "from_label": "Document",
+      "from_id": "123/2021/NĐ-CP",
+      "to_label": "Article",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "18"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "19"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "20"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "21"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "22"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "23"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "24"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "25"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "26"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "27"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "28"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "29"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "30"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "31"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "32"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "33"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "34"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "35"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "36"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "37"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "38"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "39"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "40"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "41"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "42"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "43"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "1",
+      "to_label": "Clause",
+      "to_id": "44"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "18"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "19"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "20"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "21"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "22"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "23"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "24"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "25"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "26"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "27"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "28"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "29"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "30"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "31"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "32"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "33"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "34"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "35"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "2",
+      "to_label": "Clause",
+      "to_id": "36"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "1"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "2"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "3"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "4"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "5"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "6"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "7"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "8"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "9"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "10"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "11"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "12"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "13"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "14"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "15"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "16"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "17"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "18"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "19"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "20"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "21"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "22"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "23"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "24"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "25"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "26"
+    },
+    {
+      "type": "HAS_CLAUSE",
+      "from_label": "Article",
+      "from_id": "3",
+      "to_label": "Clause",
+      "to_id": "27"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.5",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.5",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.5",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.7",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.7",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.7",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.7",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.22",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.22",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.23",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.23",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.36",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.36",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.36",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.36",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.37",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "1.37",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.3",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.3",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.4",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.4",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.12",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.12",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.12",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.12",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.13",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.13",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.13",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.13",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.15",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "k"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "l"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "m"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "n"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "o"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "q"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "r"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.17",
+      "to_label": "Point",
+      "to_id": "s"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.19",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.19",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.23",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.23",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.24",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.24",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.24",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.24",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.24",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.24",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "k"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "l"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.26",
+      "to_label": "Point",
+      "to_id": "m"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.30",
+      "to_label": "Point",
+      "to_id": "k"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.32",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.32",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.33",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.33",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.33",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "k"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "l"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "m"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "n"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "o"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "p"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "q"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "r"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "s"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.34",
+      "to_label": "Point",
+      "to_id": "t"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.35",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.35",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.35",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.35",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "2.36",
+      "to_label": "Point",
+      "to_id": "k"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.3",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.4",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "e"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "g"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "h"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.8",
+      "to_label": "Point",
+      "to_id": "i"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.9",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.9",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.9",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.9",
+      "to_label": "Point",
+      "to_id": "d"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.9",
+      "to_label": "Point",
+      "to_id": "đ"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.12",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.12",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.15",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.15",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.15",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.17",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.17",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.17",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.20",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.20",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.20",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.21",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.21",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.21",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.22",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.22",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.24",
+      "to_label": "Point",
+      "to_id": "a"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.24",
+      "to_label": "Point",
+      "to_id": "b"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.24",
+      "to_label": "Point",
+      "to_id": "c"
+    },
+    {
+      "type": "HAS_POINT",
+      "from_label": "Clause",
+      "from_id": "3.24",
+      "to_label": "Point",
+      "to_id": "d"
+    }
+  ],
+  "preamble": "CHÍNH PHỦ\n_______\nSố: 123/2021/NĐ-CP\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập - Tự do - Hạnh phúc\n________________________\nHà Nội, ngày 28 tháng 12 năm 2021\nNGHỊ ĐỊNH\nSửa đổi, bổ sung một số điều của các Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực hàng hải; giao thông đường bộ, đường sắt; hàng không dân dụng\n__________\nCăn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012 và Luật sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính ngày 13 tháng 11 năm 2020;\nCăn cứ Bộ luật Hàng hải Việt Nam ngày 25 tháng 11 năm 2015;\nCăn cứ Luật Hàng không dân dụng Việt Nam ngày 29 tháng 6 năm 2006 và Luật sửa đổi, bổ sung một số điều của Luật Hàng không dân dụng Việt Nam ngày 21 tháng 11 năm 2014;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định sửa đổi, bổ sung một số điều của các Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực hàng hải; giao thông đường bộ, đường sắt; hàng không dân dụng.",
+  "footer": "Nơi nhận:\n\n- Ban Bí thư Trung ương Đảng;\n\n- Thủ tướng, các Phó Thủ tướng Chính phủ;\n\n- Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ;\n\n- HĐND, UBND các tỉnh, thành phố trực thuộc trung ương;\n\n- Văn phòng Trung ương và các Ban của Đảng;\n\n- Văn phòng Tổng Bí thư;\n\n- Văn phòng Chủ tịch nước;\n\n- Hội đồng Dân tộc và các Ủy ban của Quốc hội;\n\n- Văn phòng Quốc hội;\n\n- Tòa án nhân dân tối cao;\n\n- Viện kiểm sát nhân dân tối cao;\n\n- Kiểm toán nhà nước;\n\n- Ủy ban Giám sát tài chính Quốc gia;\n\n- Ngân hàng Chính sách xã hội;\n\n- Ngân hàng Phát triển Việt Nam;\n\n- Ủy ban trung ương Mặt trận Tổ quốc Việt Nam;\n\n- Cơ quan trung ương của các đoàn thể;\n\n- Ủy ban An toàn giao thông Quốc gia;\n\n- VPCP: BTCN, các PCN, Trợ lý TTg, TGĐ Cổng TTĐT,\n\ncác Vụ, Cục, đơn vị trực thuộc, Công báo;\n\n- Lưu: VT, CN (3b) PVCương\n\n\n\nTM. CHÍNH PHỦ\n\n\n\t\t\tKT. THỦ TƯỚNG\n\nPHÓ THỦ TƯỚNG\n\n \n\n \n\n \n\n \n\nLê Văn Thành\n\n\n\n\n\n \n\n \n\n(*) Nguồn dữ liệu được lấy từ cơ sở dữ liệu của LuatVietnam.vn, có tính chất tham khảo."
+}
