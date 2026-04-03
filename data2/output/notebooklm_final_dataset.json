@@ -1,0 +1,86 @@
+{
+  "task1": [
+    {
+      "question": "Theo Nghị định 168/2024/NĐ-CP, trường hợp số điểm còn lại của giấy phép lái xe ít hơn số điểm bị trừ thì cơ quan chức năng sẽ không thực hiện trừ điểm nữa, đúng hay sai?",
+      "answer": "No",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Dữ liệu về điểm, trừ điểm, phục hồi điểm giấy phép lái xe được quản lý, lưu trữ trên môi trường điện tử trong Cơ sở dữ liệu do Bộ Công an xây dựng, quản lý và vận hành, đúng hay sai?",
+      "answer": "Yes",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Giấy phép lái xe bị trừ hết điểm sẽ tự động được phục hồi đủ 12 điểm sau 12 tháng mà người lái xe không cần qua kiểm tra kiến thức pháp luật, đúng hay sai?",
+      "answer": "No",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Người điều khiển xe ô tô không chấp hành hiệu lệnh của đèn tín hiệu giao thông sẽ bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng, đúng hay sai?",
+      "answer": "Yes",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Không trừ điểm giấy phép lái xe khi giấy phép lái xe đó đang trong thời hạn bị tước quyền sử dụng, đúng hay sai?",
+      "answer": "Yes",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    }
+  ],
+  "task2": [
+    {
+      "question": "Theo Nghị định 168/2024/NĐ-CP, giấy phép lái xe được tự động phục hồi đủ 12 điểm (đối với trường hợp chưa bị trừ hết điểm và không bị trừ điểm thêm) khi đáp ứng điều kiện nào sau đây?",
+      "options": [
+        "A. Khi đủ thời hạn 06 tháng kể từ ngày bị trừ điểm gần nhất.",
+        "B. Khi đủ thời hạn 12 tháng kể từ ngày bị trừ điểm gần nhất.",
+        "C. Khi đủ thời hạn 24 tháng kể từ ngày bị trừ điểm gần nhất.",
+        "D. Khi người vi phạm hoàn thành việc nộp tiền phạt vi phạm hành chính."
+      ],
+      "answer": "B",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Mức phạt tiền đối với người điều khiển xe mô tô, xe gắn máy trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở là bao nhiêu?",
+      "options": [
+        "A. Từ 4.000.000 đồng đến 6.000.000 đồng",
+        "B. Từ 6.000.000 đồng đến 8.000.000 đồng",
+        "C. Từ 8.000.000 đồng đến 10.000.000 đồng",
+        "D. Từ 10.000.000 đồng đến 14.000.000 đồng"
+      ],
+      "answer": "C",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Trường hợp cá nhân thực hiện nhiều hành vi vi phạm hành chính trong cùng một lần, nếu có từ 02 hành vi vi phạm trở lên theo quy định bị trừ điểm giấy phép lái xe thì nguyên tắc trừ điểm là gì?",
+      "options": [
+        "A. Cộng dồn số điểm bị trừ của tất cả các hành vi vi phạm.",
+        "B. Chỉ áp dụng trừ điểm đối với hành vi vi phạm bị trừ ít điểm nhất.",
+        "C. Chỉ áp dụng trừ điểm đối với hành vi vi phạm bị trừ nhiều điểm nhất.",
+        "D. Bị tước quyền sử dụng giấy phép lái xe ngay lập tức thay vì trừ điểm."
+      ],
+      "answer": "C",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Người điều khiển xe ô tô có hành vi lạng lách, đánh võng trên đường bộ sẽ bị xử lý với mức tiền phạt là bao nhiêu?",
+      "options": [
+        "A. Từ 10.000.000 đồng đến 20.000.000 đồng",
+        "B. Từ 20.000.000 đồng đến 30.000.000 đồng",
+        "C. Từ 30.000.000 đồng đến 40.000.000 đồng",
+        "D. Từ 40.000.000 đồng đến 50.000.000 đồng"
+      ],
+      "answer": "D",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "question": "Theo Nghị định 168/2024/NĐ-CP, thời hiệu xử phạt vi phạm hành chính về trật tự, an toàn giao thông trong lĩnh vực giao thông đường bộ được quy định là bao lâu?",
+      "options": [
+        "A. 06 tháng",
+        "B. 01 năm",
+        "C. 02 năm",
+        "D. 03 năm"
+      ],
+      "answer": "B",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    }
+  ]
+}

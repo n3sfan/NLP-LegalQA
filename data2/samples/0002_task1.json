@@ -1,0 +1,11 @@
+{
+  "question": "Theo quy định về phục hồi điểm Giấy phép lái xe, trong trường hợp Giấy phép lái xe chưa bị trừ hết điểm, dữ liệu điểm sẽ được tự động phục hồi đủ 12 điểm khi thỏa mãn điều kiện nào sau đây?",
+  "choices": [
+    "Tự động phục hồi vào ngày 01 tháng 01 của năm dương lịch tiếp theo.",
+    "Khi đủ thời hạn 12 tháng, kể từ ngày bị trừ điểm giấy phép lái xe gần nhất.",
+    "Ngay sau khi người vi phạm chấp hành xong quyết định nộp phạt vi phạm hành chính.",
+    "Sau 06 tháng kể từ ngày vi phạm cuối cùng nếu không tái phạm."
+  ],
+  "answer": 1,
+  "reasoning": "<think> Căn cứ điểm a khoản 2 Điều 51 Nghị định 168/2024/NĐ-CP [3], khi đủ thời hạn 12 tháng kể từ ngày bị trừ điểm giấy phép lái xe gần nhất (và GPLX chưa bị trừ hết điểm), dữ liệu điểm giấy phép lái xe sẽ được tự động phục hồi đủ 12 điểm. Không có quy định phục hồi theo năm dương lịch, chỉ dựa vào việc nộp phạt, hoặc mốc thời gian 6 tháng. </think>"
+}

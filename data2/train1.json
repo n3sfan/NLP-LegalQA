@@ -1,0 +1,60 @@
+{
+    "task1": [
+        {
+            "legal_document": "Khoản 12 Điều 6 Nghị định 168/2024/NĐ-CP: Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng đối với người điều khiển xe thực hiện hành vi điều khiển xe lạng lách, đánh võng trên đường bộ; chạy quá tốc độ đuổi nhau trên đường bộ; dùng chân điều khiển vô lăng xe khi xe đang chạy trên đường bộ.",
+            "specific_question": "Hành vi dùng chân điều khiển vô lăng xe ô tô khi xe đang chạy trên đường bộ sẽ bị cơ quan chức năng xử phạt bao nhiêu tiền?",
+            "question": "Điều luật được cung cấp có thể dùng để trả lời câu hỏi trên hay không?",
+            "choices": [
+                "Có",
+                "Không"
+            ],
+            "answer": 0,
+            "reasoning": "<think>Trích dẫn từ Khoản 12 Điều 6 nêu rõ mức phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng đối với người điều khiển xe có hành vi dùng chân điều khiển vô lăng xe khi xe đang chạy trên đường bộ, do đó thông tin này hoàn toàn đủ để trả lời chính xác câu hỏi được đặt ra.</think>"
+        },
+        {
+            "legal_document": "Điểm c Khoản 1 Điều 50 Nghị định 168/2024/NĐ-CP: Trường hợp số điểm còn lại của giấy phép lái xe ít hơn số điểm bị trừ thì áp dụng trừ hết số điểm còn lại của giấy phép lái xe đó;",
+            "specific_question": "Người lái xe khi bị trừ điểm Giấy phép lái xe thì phải nộp một khoản tiền phạt quy đổi tương ứng với mỗi điểm bị trừ là bao nhiêu?",
+            "question": "Điều luật được cung cấp có thể dùng để trả lời câu hỏi trên hay không?",
+            "choices": [
+                "Có",
+                "Không"
+            ],
+            "answer": 1,
+            "reasoning": "<think>Trích dẫn (Điều 50) chỉ quy định về nguyên tắc xử lý khi số điểm còn lại của Giấy phép lái xe ít hơn số điểm bị trừ (sẽ áp dụng trừ hết số điểm còn lại). Đoạn trích này không hề đề cập đến việc quy đổi điểm bị trừ thành tiền phạt, do đó không thể dùng để trả lời câu hỏi.</think>"
+        }
+    ],
+    "task2": [
+        {
+            "question": "Theo Nghị định 168/2024/NĐ-CP, người điều khiển xe ô tô chạy quá tốc độ quy định trên 35 km/h sẽ bị áp dụng mức phạt tiền nào dưới đây?",
+            "choices": [
+                "Từ 8.000.000 đồng đến 10.000.000 đồng.",
+                "Từ 10.000.000 đồng đến 12.000.000 đồng.",
+                "Từ 12.000.000 đồng đến 14.000.000 đồng.",
+                "Từ 18.000.000 đồng đến 20.000.000 đồng."
+            ],
+            "answer": 2,
+            "reasoning": "<think>Căn cứ điểm a khoản 7 Điều 6 Nghị định 168/2024/NĐ-CP quy định: 'Phạt tiền từ 12.000.000 đồng đến 14.000.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây: a) Điều khiển xe chạy quá tốc độ quy định trên 35 km/h'. Do đó, đáp án đúng là chỉ số 2 (Lựa chọn C). Các đáp án còn lại cung cấp mức phạt sai lệch so với quy định pháp luật.</think>"
+        },
+        {
+            "question": "Theo Nghị định 168/2024/NĐ-CP, trường hợp một người lái xe thực hiện nhiều hành vi vi phạm hành chính trong cùng một lần, nếu có từ 02 hành vi vi phạm trở lên bị trừ điểm Giấy phép lái xe thì nguyên tắc trừ điểm sẽ được áp dụng như thế nào?",
+            "choices": [
+                "Cộng dồn tất cả số điểm bị trừ của các hành vi vi phạm lại với nhau.",
+                "Chỉ áp dụng trừ điểm đối với hành vi vi phạm bị trừ nhiều điểm nhất.",
+                "Lấy số điểm của hành vi bị trừ nhiều điểm nhất cộng thêm 02 điểm.",
+                "Chỉ trừ điểm đối với hành vi vi phạm đầu tiên được ghi nhận trong biên bản."
+            ],
+            "answer": 1,
+            "reasoning": "<think>Căn cứ điểm b khoản 1 Điều 50 Nghị định 168/2024/NĐ-CP quy định về nguyên tắc trừ điểm giấy phép lái xe: 'Trường hợp cá nhân thực hiện nhiều hành vi vi phạm hành chính hoặc vi phạm hành chính nhiều lần mà bị xử phạt trong cùng một lần, nếu có từ 02 hành vi vi phạm trở lên theo quy định bị trừ điểm giấy phép lái xe thì chỉ áp dụng trừ điểm đối với hành vi vi phạm bị trừ nhiều điểm nhất'. Vì vậy, đáp án đúng là chỉ số 1 (Lựa chọn B).</think>"
+        }
+    ],
+    "task3": [
+        {
+            "question": "Anh Bình điều khiển xe ô tô cá nhân đi vào đường ngược chiều của đường một chiều. Tổ Cảnh sát giao thông đã phát hiện, lập biên bản và ra quyết định xử phạt vi phạm hành chính. Anh Bình sẽ bị phạt tiền với mức bao nhiêu và có bị trừ điểm Giấy phép lái xe hay không? (Biết anh Bình không điều khiển xe ưu tiên đang đi làm nhiệm vụ khẩn cấp).",
+            "answer": "<think>Căn cứ điểm d khoản 9 Điều 6 Nghị định 168/2024/NĐ-CP, người điều khiển xe ô tô đi ngược chiều của đường một chiều sẽ bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng. Đồng thời, căn cứ điểm b khoản 16 Điều 6, hành vi quy định tại điểm d khoản 9 sẽ bị trừ 04 điểm Giấy phép lái xe. Cấu trúc câu trả lời sử dụng suy luận diễn dịch.</think>\n\n* Tiền đề lớn: Theo điểm d khoản 9 và điểm b khoản 16 Điều 6 Nghị định 168/2024/NĐ-CP, người điều khiển xe ô tô có hành vi đi ngược chiều của đường một chiều (không thuộc trường hợp xe ưu tiên đang đi làm nhiệm vụ khẩn cấp) sẽ bị áp dụng mức phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng, đồng thời bị áp dụng hình thức trừ điểm Giấy phép lái xe với mức trừ là 04 điểm.\n* Tiền đề nhỏ: Anh Bình điều khiển xe ô tô đi vào đường ngược chiều của đường một chiều và không thuộc đối tượng điều khiển xe ưu tiên làm nhiệm vụ.\n* Kết luận: Anh Bình sẽ phải chịu mức phạt tiền dao động từ 18.000.000 đồng đến 20.000.000 đồng và bị trừ 04 điểm trên Giấy phép lái xe của mình."
+        },
+        {
+            "question": "Người lái xe sau khi bị trừ điểm Giấy phép lái xe thì cần đáp ứng điều kiện gì và sau thời gian bao lâu sẽ được hệ thống tự động phục hồi đủ 12 điểm?",
+            "answer": "<think>Căn cứ Điều 51 Nghị định 168/2024/NĐ-CP quy định về trình tự, thủ tục phục hồi điểm giấy phép lái xe đối với trường hợp GPLX chưa bị trừ hết điểm. Theo điểm a khoản 2 Điều này, điều kiện để được tự động phục hồi đủ 12 điểm là GPLX chưa bị trừ hết điểm và không bị trừ thêm điểm nào trong thời hạn 12 tháng kể từ ngày bị trừ điểm gần nhất. Cấu trúc câu trả lời sử dụng suy luận diễn dịch.</think>\n\n* Tiền đề lớn: Theo điểm a khoản 2 Điều 51 Nghị định 168/2024/NĐ-CP, khi đủ thời hạn 12 tháng kể từ ngày bị trừ điểm giấy phép lái xe gần nhất, dữ liệu điểm giấy phép lái xe sẽ được hệ thống tự động phục hồi đủ 12 điểm. Điều kiện để áp dụng việc phục hồi tự động này là giấy phép lái xe chưa bị trừ hết điểm và người lái xe không bị trừ thêm điểm nào trong suốt thời hạn 12 tháng đó.\n* Tiền đề nhỏ: Một người lái xe bị trừ điểm Giấy phép lái xe (nhưng chưa bị trừ hết điểm) và có mong muốn được phục hồi đủ điểm theo quy định của pháp luật.\n* Kết luận: Để được hệ thống tự động phục hồi đủ 12 điểm, người lái xe này phải đảm bảo không vi phạm và không bị trừ thêm bất kỳ điểm nào trong vòng 12 tháng liên tục kể từ lần bị trừ điểm gần nhất."
+        }
+    ]
+}

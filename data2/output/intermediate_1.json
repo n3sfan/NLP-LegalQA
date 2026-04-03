@@ -1,0 +1,44 @@
+{
+  "task1": [
+    {
+      "khía_cạnh": "Xử phạt vi phạm hành chính về trật tự, an toàn giao thông đường bộ",
+      "question": "Theo Nghị định 168/2024/NĐ-CP, hành vi điều khiển xe ô tô chạy quá tốc độ quy định trên 35 km/h sẽ bị xử phạt tiền ở mức nào?",
+      "choices": [
+        "Từ 4.000.000 đồng đến 6.000.000 đồng",
+        "Từ 6.000.000 đồng đến 8.000.000 đồng",
+        "Từ 12.000.000 đồng đến 14.000.000 đồng",
+        "Từ 18.000.000 đồng đến 20.000.000 đồng"
+      ],
+      "answer": 2,
+      "reasoning": "<think> Dựa vào Điều 6, khoản 7, điểm a của Nghị định 168/2024/NĐ-CP, mức phạt đối với hành vi điều khiển xe chạy quá tốc độ quy định trên 35 km/h là từ 12.000.000 đồng đến 14.000.000 đồng. Các phương án khác không khớp với quy định tại điều khoản này. </think>",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "khía_cạnh": "Quy định trừ điểm và phục hồi điểm Giấy phép lái xe",
+      "question": "Trường hợp giấy phép lái xe bị trừ hết điểm, người lái xe cần làm gì để được phục hồi đủ 12 điểm?",
+      "choices": [
+        "Đợi sau 12 tháng kể từ ngày bị trừ hết điểm",
+        "Nộp đơn xin phục hồi điểm tại cơ quan Cảnh sát giao thông",
+        "Tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ và đạt yêu cầu",
+        "Tự động được phục hồi điểm sau 06 tháng"
+      ],
+      "answer": 2,
+      "reasoning": "<think> Theo Điều 51, khoản 3, điểm a của Nghị định 168/2024/NĐ-CP, sau khi người có giấy phép lái xe bị trừ hết điểm tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ và đạt yêu cầu, dữ liệu điểm giấy phép lái xe mới được phục hồi đủ 12 điểm. </think>",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    }
+  ],
+  "task2": [
+    {
+      "khía_cạnh": "Xử phạt vi phạm hành chính về trật tự, an toàn giao thông đường bộ",
+      "question": "Ông A điều khiển xe ô tô chở hành khách thực hiện hành vi đón, trả khách trên đường cao tốc. Hãy phân tích các hình thức xử phạt có thể áp dụng đối với ông A theo quy định của Nghị định 168/2024/NĐ-CP.",
+      "answer": "<think> Dựa vào Điều 20, khoản 8, hành vi đón, trả hành khách trên đường cao tốc bị phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng. Ngoài ra, theo khoản 10, điểm c cùng điều này, người vi phạm còn bị trừ 06 điểm giấy phép lái xe. </think>\n* Tiền đề lớn: Nghị định 168/2024/NĐ-CP quy định cụ thể mức phạt tiền và hình thức xử phạt bổ sung đối với từng hành vi vi phạm trật tự, an toàn giao thông.\n* Tiền đề nhỏ: Hành vi đón, trả hành khách trên đường cao tốc được quy định tại khoản 8 Điều 20, đồng thời áp dụng hình thức xử phạt bổ sung trừ 06 điểm giấy phép lái xe tại điểm c khoản 10 Điều 20.\n* Kết luận: Ông A sẽ bị phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng và bị trừ 06 điểm giấy phép lái xe.",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    },
+    {
+      "khía_cạnh": "Quy định trừ điểm và phục hồi điểm Giấy phép lái xe",
+      "question": "Nếu một người lái xe thực hiện nhiều hành vi vi phạm hành chính trong cùng một lần bị xử phạt, và có từ 02 hành vi trở lên bị trừ điểm giấy phép lái xe, cơ quan chức năng sẽ áp dụng nguyên tắc trừ điểm như thế nào?",
+      "answer": "<think> Theo Điều 50, khoản 1, điểm b của Nghị định 168/2024/NĐ-CP, trường hợp cá nhân thực hiện nhiều hành vi vi phạm hành chính hoặc vi phạm hành chính nhiều lần mà bị xử phạt trong cùng một lần, nếu có từ 02 hành vi vi phạm trở lên theo quy định bị trừ điểm giấy phép lái xe thì chỉ áp dụng trừ điểm đối với hành vi vi phạm bị trừ nhiều điểm nhất. </think>\n* Tiền đề lớn: Nghị định 168/2024/NĐ-CP thiết lập các nguyên tắc cụ thể cho việc trừ điểm giấy phép lái xe để đảm bảo tính công bằng và nhất quán.\n* Tiền đề nhỏ: Điểm b khoản 1 Điều 50 quy định rõ trường hợp bị xử phạt cùng một lần cho nhiều hành vi vi phạm có quy định trừ điểm.\n* Kết luận: Cơ quan chức năng chỉ áp dụng trừ số điểm của hành vi có mức trừ điểm cao nhất trong số các hành vi vi phạm đó.",
+      "document_name": "Nghị định 168/2024/NĐ-CP"
+    }
+  ]
+}

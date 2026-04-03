@@ -1,0 +1,11 @@
+{
+  "question": "Theo Nghị định 168/2024/NĐ-CP, người điều khiển xe ô tô thực hiện hành vi không chấp hành hiệu lệnh của đèn tín hiệu giao thông (ví dụ: vượt đèn đỏ) sẽ bị phạt tiền ở mức nào?",
+  "choices": [
+    "Từ 4.000.000 đồng đến 6.000.000 đồng",
+    "Từ 6.000.000 đồng đến 8.000.000 đồng",
+    "Từ 12.000.000 đồng đến 14.000.000 đồng",
+    "Từ 18.000.000 đồng đến 20.000.000 đồng"
+  ],
+  "answer": 3,
+  "reasoning": "<think> Căn cứ theo điểm b khoản 9 Điều 6 Nghị định 168/2024/NĐ-CP [1, 2], hành vi không chấp hành hiệu lệnh của đèn tín hiệu giao thông đối với người điều khiển xe ô tô bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng. Các lựa chọn còn lại là các mức phạt áp dụng cho các hành vi vi phạm khác nhẹ hơn, không đúng với quy định đối với lỗi vượt đèn đỏ của xe ô tô. </think>"
+}
