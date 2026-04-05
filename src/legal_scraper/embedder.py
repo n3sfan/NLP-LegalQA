@@ -1,8 +1,36 @@
 from collections import namedtuple
+from typing import List
 
 from neo4j import GraphDatabase
+from pyvi.ViTokenizer import tokenize
 
 SearchResult = namedtuple("SearchResult", ["uid", "label", "score"])
+
+
+class VietnameseEmbeddings:
+    """Custom LangChain Embeddings wrapper for Vietnamese word segmentation.
+
+    Wraps :class:`langchain_huggingface.HuggingFaceEmbeddings` and
+    automatically applies :func:`pyvi.ViTokenizer.tokenize` (underscore-style)
+    before embedding both documents and queries.
+    """
+
+    def __init__(self, model_name: str = "bkai-foundation-models/vietnamese-bi-encoder", **model_kwargs):
+        from langchain_huggingface import HuggingFaceEmbeddings
+
+        self._embeddings = HuggingFaceEmbeddings(
+            model_name=model_name,
+            **model_kwargs,
+        )
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        """Tokenize each document and embed via the underlying model."""
+        tokenized = [tokenize(text) for text in texts]
+        return self._embeddings.embed_documents(tokenized)
+
+    def embed_query(self, text: str) -> List[float]:
+        """Tokenize the query and embed via the underlying model."""
+        return self._embeddings.embed_query(tokenize(text))
 
 
 class Neo4jEmbedder:
@@ -30,10 +58,9 @@ class Neo4jEmbedder:
         if isinstance(labels, str):
             labels = [labels]
 
-        from langchain_huggingface import HuggingFaceEmbeddings
         from langchain_neo4j import Neo4jVector
 
-        embedding_model = HuggingFaceEmbeddings(
+        embedding_model = VietnameseEmbeddings(
             model_name="bkai-foundation-models/vietnamese-bi-encoder",
             model_kwargs={"device": "cuda"},
             encode_kwargs={"normalize_embeddings": True},
@@ -71,13 +98,12 @@ class Neo4jEmbedder:
         Returns:
             List of SearchResult(uid, label, score), sorted by score descending.
         """
-        from langchain_huggingface import HuggingFaceEmbeddings
         from langchain_neo4j import Neo4jVector
 
         if isinstance(labels, str):
             labels = [labels]
 
-        embedding_model = HuggingFaceEmbeddings(
+        embedding_model = VietnameseEmbeddings(
             model_name="bkai-foundation-models/vietnamese-bi-encoder",
             model_kwargs={"device": "cuda"},
             encode_kwargs={"normalize_embeddings": True},

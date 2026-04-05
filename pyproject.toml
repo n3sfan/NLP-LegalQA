@@ -11,7 +11,8 @@ dependencies = [
     "langchain-neo4j>=0.8.0",
     "langchain-community>=0.4.1",
     "sentence-transformers>=5.3.0",
-    "underthesea>=9.2.11",
+    "pyvi>=0.1.1",
+    "pandas>=2.2.0",
 ]
 
 [project.optional-dependencies]
