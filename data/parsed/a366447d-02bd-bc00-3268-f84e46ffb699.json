@@ -162,6 +162,7 @@
         "title": "VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
+        "parent_part": null,
         "order": 0,
         "content": ""
       },
@@ -170,6 +171,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
+        "parent_part": null,
         "order": 1,
         "content": ""
       },
@@ -178,6 +180,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
+        "parent_part": null,
         "order": 2,
         "content": ""
       },
@@ -186,6 +189,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
+        "parent_part": null,
         "order": 3,
         "content": ""
       },
@@ -194,6 +198,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ VẬN TẢI ĐƯỜNG BỘ",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
+        "parent_part": null,
         "order": 4,
         "content": ""
       },
@@ -202,6 +207,7 @@
         "title": "CÁC VI PHẠM KHÁC LIÊN QUAN ĐẾN GIAO THÔNG ĐƯỜNG BỘ",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
+        "parent_part": null,
         "order": 5,
         "content": ""
       },
@@ -210,6 +216,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ TÍN HIỆU, QUY TẮC GIAO THÔNG ĐƯỜNG SẮT VÀ BẢO ĐẢM TRẬT TỰ, AN TOÀN GIAO THÔNG ĐƯỜNG SẮT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
+        "parent_part": null,
         "order": 6,
         "content": ""
       },
@@ -218,6 +225,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ KẾT CẤU HẠ TẦNG ĐƯỜNG SẮT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
+        "parent_part": null,
         "order": 7,
         "content": ""
       },
@@ -226,6 +234,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ PHƯƠNG TIỆN GIAO THÔNG ĐƯỜNG SẮT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
+        "parent_part": null,
         "order": 8,
         "content": ""
       },
@@ -234,6 +243,7 @@
         "title": "VI PHẠM QUY ĐỊNH ĐỐI VỚI NHÂN VIÊN ĐƯỜNG SẮT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
+        "parent_part": null,
         "order": 9,
         "content": ""
       },
@@ -242,6 +252,7 @@
         "title": "VI PHẠM QUY ĐỊNH VỀ KINH DOANH ĐƯỜNG SẮT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
+        "parent_part": null,
         "order": 10,
         "content": ""
       },
@@ -250,6 +261,7 @@
         "title": "VI PHẠM KHÁC CÓ LIÊN QUAN ĐẾN GIAO THÔNG ĐƯỜNG SẮT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
+        "parent_part": null,
         "order": 11,
         "content": ""
       },
@@ -258,6 +270,7 @@
         "title": "THẨM QUYỀN XỬ PHẠT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
+        "parent_part": null,
         "order": 12,
         "content": ""
       },
@@ -266,6 +279,7 @@
         "title": "THỦ TỤC XỬ PHẠT",
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
+        "parent_part": null,
         "order": 13,
         "content": ""
       }
@@ -277,6 +291,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 0,
         "content": ""
       },
@@ -286,6 +301,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 1,
         "content": ""
       },
@@ -295,6 +311,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 2,
         "content": "\nTrong Nghị định này, các từ ngữ dưới đây được hiểu như sau:"
       },
@@ -304,6 +321,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 3,
         "content": ""
       },
@@ -313,6 +331,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 4,
         "content": ""
       },
@@ -322,6 +341,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 5,
         "content": ""
       },
@@ -331,6 +351,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 6,
         "content": ""
       },
@@ -340,6 +361,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 7,
         "content": ""
       },
@@ -349,6 +371,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 8,
         "content": ""
       },
@@ -358,6 +381,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 9,
         "content": ""
       },
@@ -367,6 +391,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "1",
+        "parent_part": null,
         "order": 10,
         "content": ""
       },
@@ -376,6 +401,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "2",
+        "parent_part": null,
         "order": 11,
         "content": ""
       },
@@ -385,6 +411,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "2",
+        "parent_part": null,
         "order": 12,
         "content": ""
       },
@@ -394,6 +421,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "2",
+        "parent_part": null,
         "order": 13,
         "content": ""
       },
@@ -403,6 +431,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "2",
+        "parent_part": null,
         "order": 14,
         "content": ""
       },
@@ -412,6 +441,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "3",
+        "parent_part": null,
         "order": 15,
         "content": ""
       },
@@ -421,6 +451,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "3",
+        "parent_part": null,
         "order": 16,
         "content": ""
       },
@@ -430,6 +461,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "3",
+        "parent_part": null,
         "order": 17,
         "content": ""
       },
@@ -439,6 +471,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "3",
+        "parent_part": null,
         "order": 18,
         "content": ""
       },
@@ -448,6 +481,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "3",
+        "parent_part": null,
         "order": 19,
         "content": ""
       },
@@ -457,6 +491,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "4",
+        "parent_part": null,
         "order": 20,
         "content": ""
       },
@@ -466,6 +501,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "4",
+        "parent_part": null,
         "order": 21,
         "content": ""
       },
@@ -475,6 +511,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "5",
+        "parent_part": null,
         "order": 22,
         "content": ""
       },
@@ -484,6 +521,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "5",
+        "parent_part": null,
         "order": 23,
         "content": ""
       },
@@ -493,6 +531,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "5",
+        "parent_part": null,
         "order": 24,
         "content": ""
       },
@@ -502,6 +541,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "5",
+        "parent_part": null,
         "order": 25,
         "content": ""
       },
@@ -511,6 +551,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "5",
+        "parent_part": null,
         "order": 26,
         "content": ""
       },
@@ -520,6 +561,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "5",
+        "parent_part": null,
         "order": 27,
         "content": ""
       },
@@ -529,6 +571,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 28,
         "content": ""
       },
@@ -538,6 +581,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 29,
         "content": ""
       },
@@ -547,6 +591,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 30,
         "content": ""
       },
@@ -556,6 +601,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 31,
         "content": ""
       },
@@ -565,6 +611,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 32,
         "content": ""
       },
@@ -574,6 +621,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 33,
         "content": ""
       },
@@ -583,6 +631,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 34,
         "content": ""
       },
@@ -592,6 +641,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 35,
         "content": ""
       },
@@ -601,6 +651,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 36,
         "content": ""
       },
@@ -610,6 +661,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": "6",
+        "parent_part": null,
         "order": 37,
         "content": ""
       },
@@ -619,6 +671,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 38,
         "content": ""
       },
@@ -628,6 +681,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 39,
         "content": ""
       },
@@ -637,6 +691,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 40,
         "content": ""
       },
@@ -646,6 +701,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 41,
         "content": ""
       },
@@ -655,6 +711,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 42,
         "content": ""
       },
@@ -664,6 +721,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 43,
         "content": ""
       },
@@ -673,6 +731,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 44,
         "content": ""
       },
@@ -682,6 +741,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 45,
         "content": ""
       },
@@ -691,6 +751,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 46,
         "content": ""
       },
@@ -700,6 +761,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 47,
         "content": ""
       },
@@ -709,6 +771,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 48,
         "content": ""
       },
@@ -718,6 +781,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": null,
         "order": 49,
         "content": ""
       },
@@ -727,6 +791,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 50,
         "content": ""
       },
@@ -736,6 +801,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 51,
         "content": ""
       },
@@ -745,6 +811,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 52,
         "content": ""
       },
@@ -754,6 +821,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 53,
         "content": ""
       },
@@ -763,6 +831,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 54,
         "content": ""
       },
@@ -772,6 +841,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 55,
         "content": ""
       },
@@ -781,6 +851,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": null,
         "order": 56,
         "content": ""
       },
@@ -790,6 +861,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": null,
         "order": 57,
         "content": ""
       },
@@ -799,6 +871,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": null,
         "order": 58,
         "content": ""
       },
@@ -808,6 +881,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": null,
         "order": 59,
         "content": ""
       },
@@ -817,6 +891,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": null,
         "order": 60,
         "content": ""
       },
@@ -826,6 +901,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 61,
         "content": ""
       },
@@ -835,6 +911,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 62,
         "content": ""
       },
@@ -844,6 +921,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 63,
         "content": ""
       },
@@ -853,6 +931,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 64,
         "content": ""
       },
@@ -862,6 +941,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 65,
         "content": ""
       },
@@ -871,6 +951,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 66,
         "content": ""
       },
@@ -880,6 +961,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 67,
         "content": ""
       },
@@ -889,6 +971,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "4",
+        "parent_part": null,
         "order": 68,
         "content": ""
       },
@@ -898,6 +981,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "5",
+        "parent_part": null,
         "order": 69,
         "content": ""
       },
@@ -907,6 +991,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "5",
+        "parent_part": null,
         "order": 70,
         "content": ""
       },
@@ -916,6 +1001,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "5",
+        "parent_part": null,
         "order": 71,
         "content": ""
       },
@@ -925,6 +1011,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": "6",
+        "parent_part": null,
         "order": 72,
         "content": ""
       },
@@ -934,6 +1021,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 73,
         "content": ""
       },
@@ -943,6 +1031,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 74,
         "content": ""
       },
@@ -952,6 +1041,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 75,
         "content": ""
       },
@@ -961,6 +1051,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 76,
         "content": ""
       },
@@ -970,6 +1061,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 77,
         "content": ""
       },
@@ -979,6 +1071,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 78,
         "content": ""
       },
@@ -988,6 +1081,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 79,
         "content": ""
       },
@@ -997,6 +1091,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 80,
         "content": ""
       },
@@ -1006,6 +1101,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 81,
         "content": ""
       },
@@ -1015,6 +1111,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 82,
         "content": ""
       },
@@ -1024,6 +1121,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 83,
         "content": ""
       },
@@ -1033,6 +1131,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 84,
         "content": "\nĐối với các hành vi vi phạm hành chính trong lĩnh vực giao thông đường bộ, đường sắt xảy ra trước ngày Nghị định này có hiệu lực thi hành mà sau đó mới bị phát hiện hoặc đang xem xét giải quyết thì áp dụng các quy định có lợi cho tổ chức, cá nhân vi phạm."
       },
@@ -1042,6 +1141,7 @@
         "doc_identity": "100/2019/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 85,
         "content": "\nCác Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương chịu trách nhiệm thi hành Nghị định này./."
       }
@@ -15115,98 +15215,98 @@
       "from_label": "Chapter",
       "from_id": "II",
       "to_label": "Section",
-      "to_id": "1"
+      "to_id": "II.1"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "II",
       "to_label": "Section",
-      "to_id": "2"
+      "to_id": "II.2"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "II",
       "to_label": "Section",
-      "to_id": "3"
+      "to_id": "II.3"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "II",
       "to_label": "Section",
-      "to_id": "4"
+      "to_id": "II.4"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "II",
       "to_label": "Section",
-      "to_id": "5"
+      "to_id": "II.5"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "II",
       "to_label": "Section",
-      "to_id": "6"
+      "to_id": "II.6"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "III",
       "to_label": "Section",
-      "to_id": "1"
+      "to_id": "III.1"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "III",
       "to_label": "Section",
-      "to_id": "2"
+      "to_id": "III.2"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "III",
       "to_label": "Section",
-      "to_id": "3"
+      "to_id": "III.3"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "III",
       "to_label": "Section",
-      "to_id": "4"
+      "to_id": "III.4"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "III",
       "to_label": "Section",
-      "to_id": "5"
+      "to_id": "III.5"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "III",
       "to_label": "Section",
-      "to_id": "6"
+      "to_id": "III.6"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "IV",
       "to_label": "Section",
-      "to_id": "1"
+      "to_id": "IV.1"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "IV",
       "to_label": "Section",
-      "to_id": "2"
+      "to_id": "IV.2"
     },
     {
       "type": "HAS_ARTICLE",
@@ -15239,553 +15339,553 @@
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "5"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "6"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "7"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "8"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "9"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "10"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "II.1",
       "to_label": "Article",
       "to_id": "11"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "II.2",
       "to_label": "Article",
       "to_id": "12"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "II.2",
       "to_label": "Article",
       "to_id": "13"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "II.2",
       "to_label": "Article",
       "to_id": "14"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "II.2",
       "to_label": "Article",
       "to_id": "15"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "II.3",
       "to_label": "Article",
       "to_id": "16"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "II.3",
       "to_label": "Article",
       "to_id": "17"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "II.3",
       "to_label": "Article",
       "to_id": "18"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "II.3",
       "to_label": "Article",
       "to_id": "19"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "II.3",
       "to_label": "Article",
       "to_id": "20"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "II.4",
       "to_label": "Article",
       "to_id": "21"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "II.4",
       "to_label": "Article",
       "to_id": "22"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "II.5",
       "to_label": "Article",
       "to_id": "23"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "II.5",
       "to_label": "Article",
       "to_id": "24"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "II.5",
       "to_label": "Article",
       "to_id": "25"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "II.5",
       "to_label": "Article",
       "to_id": "26"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "II.5",
       "to_label": "Article",
       "to_id": "27"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "II.5",
       "to_label": "Article",
       "to_id": "28"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "29"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "30"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "31"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "32"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "33"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "34"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "35"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "36"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "37"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "II.6",
       "to_label": "Article",
       "to_id": "38"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "39"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "40"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "41"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "42"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "43"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "44"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "45"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "46"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "47"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "48"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "49"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "III.1",
       "to_label": "Article",
       "to_id": "50"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "51"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "52"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "53"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "54"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "55"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "56"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "III.2",
       "to_label": "Article",
       "to_id": "57"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "III.3",
       "to_label": "Article",
       "to_id": "58"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "III.3",
       "to_label": "Article",
       "to_id": "59"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "III.3",
       "to_label": "Article",
       "to_id": "60"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "III.3",
       "to_label": "Article",
       "to_id": "61"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "62"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "63"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "64"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "65"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "66"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "67"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "68"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "4",
+      "from_id": "III.4",
       "to_label": "Article",
       "to_id": "69"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "III.5",
       "to_label": "Article",
       "to_id": "70"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "III.5",
       "to_label": "Article",
       "to_id": "71"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "5",
+      "from_id": "III.5",
       "to_label": "Article",
       "to_id": "72"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "6",
+      "from_id": "III.6",
       "to_label": "Article",
       "to_id": "73"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "74"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "75"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "76"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "77"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "78"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "79"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "80"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "81"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "82"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "83"
     },

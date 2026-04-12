@@ -17,12 +17,20 @@ def build_part_uid(doc_identity: str, number: str) -> str:
     return f"{doc_identity}::part::{number}"
 
 
-def build_chapter_uid(doc_identity: str, number: str) -> str:
+def build_chapter_uid(doc_identity: str, number: str, parent_part: str | None = None) -> str:
+    if parent_part:
+        return f"{doc_identity}::part::{parent_part}::chapter::{number}"
     return f"{doc_identity}::chapter::{number}"
 
 
-def build_section_uid(doc_identity: str, number: str) -> str:
-    return f"{doc_identity}::section::{number}"
+def build_section_uid(doc_identity: str, number: str, parent_chapter: str | None = None, parent_part: str | None = None) -> str:
+    uid = f"{doc_identity}"
+    if parent_part:
+        uid += f"::part::{parent_part}"
+    if parent_chapter:
+        uid += f"::chapter::{parent_chapter}"
+    uid += f"::section::{number}"
+    return uid
 
 
 def build_article_uid(doc_identity: str, number: str) -> str:
@@ -357,7 +365,7 @@ class Neo4jImporter:
 
         # Chapters
         for ch in nodes.get("chapters", []):
-            uid = build_chapter_uid(doc_identity, ch["number"])
+            uid = build_chapter_uid(doc_identity, ch["number"], ch.get("parent_part"))
             tx.run(
                 """
                 MERGE (n:Chapter {uid: $uid})
@@ -377,7 +385,9 @@ class Neo4jImporter:
 
         # Sections
         for sec in nodes.get("sections", []):
-            uid = build_section_uid(doc_identity, sec["number"])
+            uid = build_section_uid(
+                doc_identity, sec["number"], sec.get("parent_chapter"), sec.get("parent_part")
+            )
             tx.run(
                 """
                 MERGE (n:Section {uid: $uid})
@@ -511,9 +521,17 @@ class Neo4jImporter:
         if from_label == "Part":
             return build_part_uid(doc_identity, from_id)
         if from_label == "Chapter":
-            return build_chapter_uid(doc_identity, from_id)
+            parts = from_id.split(".")
+            if len(parts) == 2:
+                return build_chapter_uid(doc_identity, parts[1], parts[0])
+            return build_chapter_uid(doc_identity, parts[0])
         if from_label == "Section":
-            return build_section_uid(doc_identity, from_id)
+            parts = from_id.split(".")
+            if len(parts) == 3:
+                return build_section_uid(doc_identity, parts[2], parts[1], parts[0])
+            if len(parts) == 2:
+                return build_section_uid(doc_identity, parts[1], parts[0])
+            return build_section_uid(doc_identity, parts[0])
         if from_label == "Article":
             return build_article_uid(doc_identity, from_id)
         if from_label == "Clause":
@@ -532,9 +550,17 @@ class Neo4jImporter:
         if to_label == "Part":
             return build_part_uid(doc_identity, to_id)
         if to_label == "Chapter":
-            return build_chapter_uid(doc_identity, to_id)
+            parts = to_id.split(".")
+            if len(parts) == 2:
+                return build_chapter_uid(doc_identity, parts[1], parts[0])
+            return build_chapter_uid(doc_identity, parts[0])
         if to_label == "Section":
-            return build_section_uid(doc_identity, to_id)
+            parts = to_id.split(".")
+            if len(parts) == 3:
+                return build_section_uid(doc_identity, parts[2], parts[1], parts[0])
+            if len(parts) == 2:
+                return build_section_uid(doc_identity, parts[1], parts[0])
+            return build_section_uid(doc_identity, parts[0])
         if to_label == "Article":
             return build_article_uid(doc_identity, to_id)
         if to_label == "Clause":

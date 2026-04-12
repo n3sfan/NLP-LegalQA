@@ -257,6 +257,7 @@
         "title": "CÁC HÌNH THỨC XỬ PHẠT",
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
+        "parent_part": "HAI",
         "order": 0,
         "content": ""
       },
@@ -265,6 +266,7 @@
         "title": "CÁC BIỆN PHÁP KHẮC PHỤC HẬU QUẢ",
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
+        "parent_part": "HAI",
         "order": 1,
         "content": ""
       },
@@ -273,6 +275,7 @@
         "title": "THỦ TỤC XỬ PHẠT",
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
+        "parent_part": "HAI",
         "order": 2,
         "content": ""
       },
@@ -281,6 +284,7 @@
         "title": "THI HÀNH QUYẾT ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH",
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
+        "parent_part": "HAI",
         "order": 3,
         "content": ""
       },
@@ -289,6 +293,7 @@
         "title": "CƯỠNG CHẾ THI HÀNH QUYẾT ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH",
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
+        "parent_part": "HAI",
         "order": 4,
         "content": ""
       }
@@ -300,6 +305,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 0,
         "content": "\nLuật này quy định về xử phạt vi phạm hành chính và các biện pháp xử lý hành chính."
       },
@@ -309,6 +315,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 1,
         "content": "\nTrong Luật này, các từ ngữ dưới đây được hiểu như sau:"
       },
@@ -318,6 +325,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 2,
         "content": ""
       },
@@ -327,6 +335,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 3,
         "content": "\nCăn cứ quy định của Luật này, Chính phủ quy định hành vi vi phạm hành chính; hình thức xử phạt, mức xử phạt, biện pháp khắc phục hậu quả đối với từng hành vi vi phạm hành chính; thẩm quyền xử phạt, mức phạt tiền cụ thể theo từng chức danh và thẩm quyền lập biên bản đối với vi phạm hành chính trong từng lĩnh vực quản lý nhà nước; chế độ áp dụng các biện pháp xử lý hành chính và quy định mẫu biên bản, mẫu quyết định sử dụng trong xử phạt vi phạm hành chính."
       },
@@ -336,6 +345,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 4,
         "content": ""
       },
@@ -345,6 +355,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 5,
         "content": ""
       },
@@ -354,6 +365,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 6,
         "content": ""
       },
@@ -363,6 +375,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 7,
         "content": ""
       },
@@ -372,6 +385,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 8,
         "content": "\nNhững tình tiết sau đây là tình tiết giảm nhẹ:"
       },
@@ -381,6 +395,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 9,
         "content": ""
       },
@@ -390,6 +405,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 10,
         "content": "\nKhông xử phạt vi phạm hành chính đối với các trường hợp sau đây:"
       },
@@ -399,6 +415,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 11,
         "content": ""
       },
@@ -408,6 +425,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 12,
         "content": ""
       },
@@ -417,6 +435,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 13,
         "content": ""
       },
@@ -426,6 +445,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 14,
         "content": ""
       },
@@ -435,6 +455,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 15,
         "content": ""
       },
@@ -444,6 +465,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 16,
         "content": ""
       },
@@ -453,6 +475,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 17,
         "content": ""
       },
@@ -462,6 +485,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 18,
         "content": "\nQuốc hội, các cơ quan của Quốc hội, Hội đồng nhân dân các cấp, đại biểu Quốc hội, đại biểu Hội đồng nhân dân, Mặt trận Tổ quốc Việt Nam, các tổ chức thành viên của Mặt trận và mọi công dân giám sát hoạt động của cơ quan, người có thẩm quyền xử lý vi phạm hành chính; khi phát hiện hành vi trái pháp luật của cơ quan, người có thẩm quyền xử lý vi phạm hành chính thì có quyền yêu cầu, kiến nghị với cơ quan, người có thẩm quyền xem xét, giải quyết, xử lý theo quy định của pháp luật.\nCơ quan, người có thẩm quyền xử lý vi phạm hành chính phải xem xét, giải quyết và trả lời yêu cầu, kiến nghị đó theo quy định của pháp luật."
       },
@@ -471,6 +495,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "NHẤT",
         "order": 19,
         "content": "\nCông dân, tổ chức Việt Nam vi phạm pháp luật hành chính của nước Cộng hòa xã hội chủ nghĩa Việt Nam ngoài lãnh thổ Việt Nam có thể bị xử phạt vi phạm hành chính theo quy định của Luật này."
       },
@@ -480,6 +505,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 20,
         "content": ""
       },
@@ -489,6 +515,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 21,
         "content": "\nCảnh cáo được áp dụng đối với cá nhân, tổ chức vi phạm hành chính không nghiêm trọng, có tình tiết giảm nhẹ và theo quy định thì bị áp dụng hình thức xử phạt cảnh cáo hoặc đối với mọi hành vi vi phạm hành chính do người chưa thành niên từ đủ 14 tuổi đến dưới 16 tuổi thực hiện. Cảnh cáo được quyết định bằng văn bản."
       },
@@ -498,6 +525,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 22,
         "content": ""
       },
@@ -507,6 +535,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 23,
         "content": ""
       },
@@ -516,6 +545,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 24,
         "content": ""
       },
@@ -525,6 +555,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 25,
         "content": "\nTịch thu tang vật, phương tiện vi phạm hành chính là việc sung vào ngân sách nhà nước vật, tiền, hàng hoá, phương tiện có liên quan trực tiếp đến vi phạm hành chính, được áp dụng đối với vi phạm hành chính nghiêm trọng do lỗi cố ý của cá nhân, tổ chức.\nViệc xử lý tang vật, phương tiện vi phạm hành chính bị tịch thu được thực hiện theo quy định tại Điều 82 của Luật này."
       },
@@ -534,6 +565,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 26,
         "content": ""
       },
@@ -543,6 +575,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 27,
         "content": ""
       },
@@ -552,6 +585,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 28,
         "content": "\nCá nhân, tổ chức vi phạm hành chính phải khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính của mình gây ra; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -561,6 +595,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 29,
         "content": "\nCá nhân, tổ chức vi phạm hành chính phải tháo dỡ công trình, phần công trình xây dựng không có giấy phép hoặc xây dựng không đúng với giấy phép; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -570,6 +605,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 30,
         "content": "\nCá nhân, tổ chức vi phạm hành chính phải thực hiện biện pháp để khắc phục tình trạng ô nhiễm môi trường, lây lan dịch bệnh; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -579,6 +615,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 31,
         "content": "\nCá nhân, tổ chức vi phạm hành chính phải đưa ra khỏi lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam hoặc tái xuất hàng hoá, vật phẩm, phương tiện được đưa vào lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam, nhập khẩu trái với quy định của pháp luật hoặc được tạm nhập, tái xuất nhưng không tái xuất theo đúng quy định của pháp luật.\nBiện pháp khắc phục hậu quả này cũng được áp dụng đối với hàng hóa nhập khẩu, quá cảnh xâm phạm quyền sở hữu trí tuệ, hàng hóa giả mạo quyền sở hữu trí tuệ, phương tiện, nguyên liệu, vật liệu nhập khẩu được sử dụng chủ yếu để sản xuất, kinh doanh hàng hóa giả mạo về sở hữu trí tuệ sau khi đã loại bỏ yếu tố vi phạm; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -588,6 +625,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 32,
         "content": "\nCá nhân, tổ chức vi phạm hành chính phải tiêu hủy hàng hóa, vật phẩm gây hại cho sức khoẻ con người, vật nuôi, cây trồng và môi trường, văn hoá phẩm có nội dung độc hại hoặc tang vật khác thuộc đối tượng bị tiêu hủy theo quy định của pháp luật; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -597,6 +635,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 33,
         "content": "\nCá nhân, tổ chức vi phạm hành chính phải cải chính thông tin sai sự thật hoặc gây nhầm lẫn đã được công bố, đưa tin trên chính phương tiện thông tin đại chúng, trang thông tin điện tử đã công bố, đưa tin; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -606,6 +645,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 34,
         "content": "\nCá nhân, tổ chức sản xuất, kinh doanh hàng hóa hoặc sử dụng phương tiện kinh doanh, vật phẩm chứa yếu tố vi phạm trên hàng hóa, bao bì hàng hóa, phương tiện kinh doanh, vật phẩm thì phải loại bỏ các yếu tố vi phạm đó; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -615,6 +655,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 35,
         "content": "\nCá nhân, tổ chức sản xuất, kinh doanh sản phẩm, hàng hóa không bảo đảm chất lượng đã đăng ký hoặc công bố và hàng hóa khác không bảo đảm chất lượng, điều kiện lưu thông thì phải thu hồi các sản phẩm, hàng hóa vi phạm đang lưu thông trên thị trường; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -624,6 +665,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 36,
         "content": "\nCá nhân, tổ chức vi phạm phải nộp lại số lợi bất hợp pháp là tiền, tài sản, giấy tờ và vật có giá có được từ vi phạm hành chính mà cá nhân, tổ chức đó đã thực hiện để sung vào ngân sách nhà nước hoặc hoàn trả cho đối tượng bị chiếm đoạt; phải nộp lại số tiền bằng với giá trị tang vật, phương tiện vi phạm hành chính nếu tang vật, phương tiện đó đã bị tiêu thụ, tẩu tán, tiêu hủy trái quy định của pháp luật; nếu cá nhân, tổ chức vi phạm hành chính không tự nguyện thực hiện thì bị cưỡng chế thực hiện."
       },
@@ -633,6 +675,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 37,
         "content": ""
       },
@@ -642,6 +685,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 38,
         "content": ""
       },
@@ -651,6 +695,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 39,
         "content": ""
       },
@@ -660,6 +705,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 40,
         "content": ""
       },
@@ -669,6 +715,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 41,
         "content": ""
       },
@@ -678,6 +725,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 42,
         "content": ""
       },
@@ -687,6 +735,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 43,
         "content": ""
       },
@@ -696,6 +745,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 44,
         "content": ""
       },
@@ -705,6 +755,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 45,
         "content": ""
       },
@@ -714,6 +765,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 46,
         "content": ""
       },
@@ -723,6 +775,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 47,
         "content": ""
       },
@@ -732,6 +785,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 48,
         "content": ""
       },
@@ -741,6 +795,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 49,
         "content": "\nCục trưởng Cục Quản lý lao động ngoài nước có quyền:"
       },
@@ -750,6 +805,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 50,
         "content": "\nNgười đứng đầu cơ quan đại diện ngoại giao, cơ quan lãnh sự, cơ quan khác được ủy quyền thực hiện chức năng lãnh sự của nước Cộng hòa xã hội chủ nghĩa Việt Nam ở nước ngoài có quyền:"
       },
@@ -759,6 +815,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 51,
         "content": ""
       },
@@ -768,6 +825,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 52,
         "content": "\nTrường hợp chức danh có thẩm quyền xử phạt vi phạm hành chính quy định tại Luật này có sự thay đổi về tên gọi thì chức danh đó có thẩm quyền xử phạt."
       },
@@ -777,6 +835,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "HAI",
         "order": 53,
         "content": ""
       },
@@ -786,6 +845,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 54,
         "content": "\nBuộc chấm dứt hành vi vi phạm hành chính được người có thẩm quyền đang thi hành công vụ áp dụng đối với hành vi vi phạm hành chính đang diễn ra nhằm chấm dứt ngay hành vi vi phạm. Buộc chấm dứt hành vi vi phạm hành chính được thực hiện bằng lời nói, còi, hiệu lệnh, văn bản hoặc hình thức khác theo quy định của pháp luật."
       },
@@ -795,6 +855,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 55,
         "content": ""
       },
@@ -804,6 +865,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 56,
         "content": ""
       },
@@ -813,6 +875,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 57,
         "content": ""
       },
@@ -822,6 +885,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 58,
         "content": ""
       },
@@ -831,6 +895,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 59,
         "content": ""
       },
@@ -840,6 +905,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 60,
         "content": ""
       },
@@ -849,6 +915,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 61,
         "content": ""
       },
@@ -858,6 +925,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 62,
         "content": ""
       },
@@ -867,6 +935,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 63,
         "content": ""
       },
@@ -876,6 +945,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 64,
         "content": ""
       },
@@ -885,6 +955,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 65,
         "content": ""
       },
@@ -894,6 +965,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 66,
         "content": ""
       },
@@ -903,6 +975,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "1",
+        "parent_part": "HAI",
         "order": 67,
         "content": ""
       },
@@ -912,6 +985,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 68,
         "content": ""
       },
@@ -921,6 +995,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 69,
         "content": "\nTrong thời hạn 02 ngày làm việc, kể từ ngày ra quyết định xử phạt vi phạm hành chính có lập biên bản, người có thẩm quyền đã ra quyết định xử phạt phải gửi cho cá nhân, tổ chức bị xử phạt, cơ quan thu tiền phạt và cơ quan liên quan khác (nếu có) để thi hành.\nQuyết định xử phạt vi phạm hành chính được giao trực tiếp hoặc gửi qua bưu điện bằng hình thức bảo đảm và thông báo cho cá nhân, tổ chức bị xử phạt biết.\nĐối với trường hợp quyết định được giao trực tiếp mà cá nhân, tổ chức vi phạm cố tình không nhận quyết định thì người có thẩm quyền lập biên bản về việc không nhận quyết định có xác nhận của chính quyền địa phương và được coi là quyết định đã được giao.\nĐối với trường hợp gửi qua bưu điện bằng hình thức bảo đảm, nếu sau thời hạn 10 ngày, kể từ ngày quyết định xử phạt đã được gửi qua đường bưu điện đến lần thứ ba mà bị trả lại do cá nhân, tổ chức vi phạm cố tình không nhận; quyết định xử phạt đã được niêm yết tại nơi cư trú của cá nhân, trụ sở của tổ chức bị xử phạt hoặc có căn cứ cho rằng người vi phạm trốn tránh không nhận quyết định xử phạt thì được coi là quyết định đã được giao."
       },
@@ -930,6 +1005,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 70,
         "content": ""
       },
@@ -939,6 +1015,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 71,
         "content": ""
       },
@@ -948,6 +1025,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 72,
         "content": ""
       },
@@ -957,6 +1035,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 73,
         "content": ""
       },
@@ -966,6 +1045,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 74,
         "content": "\nTrường hợp người bị xử phạt chết, mất tích, tổ chức bị xử phạt giải thể, phá sản thì không thi hành quyết định phạt tiền nhưng vẫn thi hành hình thức xử phạt tịch thu tang vật, phương tiện vi phạm hành chính và biện pháp khắc phục hậu quả được ghi trong quyết định.\nChính phủ quy định chi tiết Điều này."
       },
@@ -975,6 +1055,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 75,
         "content": ""
       },
@@ -984,6 +1065,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 76,
         "content": ""
       },
@@ -993,6 +1075,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 77,
         "content": ""
       },
@@ -1002,6 +1085,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 78,
         "content": ""
       },
@@ -1011,6 +1095,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 79,
         "content": ""
       },
@@ -1020,6 +1105,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 80,
         "content": ""
       },
@@ -1029,6 +1115,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 81,
         "content": ""
       },
@@ -1038,6 +1125,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 82,
         "content": ""
       },
@@ -1047,6 +1135,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 83,
         "content": ""
       },
@@ -1056,6 +1145,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "2",
+        "parent_part": "HAI",
         "order": 84,
         "content": ""
       },
@@ -1065,6 +1155,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": "HAI",
         "order": 85,
         "content": ""
       },
@@ -1074,6 +1165,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": "HAI",
         "order": 86,
         "content": ""
       },
@@ -1083,6 +1175,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": "3",
+        "parent_part": "HAI",
         "order": 87,
         "content": ""
       },
@@ -1092,6 +1185,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 88,
         "content": ""
       },
@@ -1101,6 +1195,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 89,
         "content": ""
       },
@@ -1110,6 +1205,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 90,
         "content": ""
       },
@@ -1119,6 +1215,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 91,
         "content": ""
       },
@@ -1128,6 +1225,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 92,
         "content": ""
       },
@@ -1137,6 +1235,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 93,
         "content": ""
       },
@@ -1146,6 +1245,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 94,
         "content": ""
       },
@@ -1155,6 +1255,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 95,
         "content": ""
       },
@@ -1164,6 +1265,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 96,
         "content": ""
       },
@@ -1173,6 +1275,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 97,
         "content": ""
       },
@@ -1182,6 +1285,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 98,
         "content": ""
       },
@@ -1191,6 +1295,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 99,
         "content": ""
       },
@@ -1200,6 +1305,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 100,
         "content": ""
       },
@@ -1209,6 +1315,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 101,
         "content": ""
       },
@@ -1218,6 +1325,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 102,
         "content": ""
       },
@@ -1227,6 +1335,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 103,
         "content": ""
       },
@@ -1236,6 +1345,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 104,
         "content": ""
       },
@@ -1245,6 +1355,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "III",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 105,
         "content": "\nỦy ban thường vụ Quốc hội quy định trình tự, thủ tục Tòa án nhân dân xem xét, quyết định việc áp dụng các biện pháp đưa vào trường giáo dưỡng, đưa vào cơ sở giáo dục bắt buộc, đưa vào cơ sở cai nghiện bắt buộc."
       },
@@ -1254,6 +1365,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 106,
         "content": "\nTrong thời hạn 03 ngày, kể từ ngày quyết định áp dụng biện pháp xử lý hành chính có hiệu lực, Tòa án nhân dân đã ra quyết định phải gửi cho người bị áp dụng, Trưởng Công an cấp huyện và Trưởng phòng Lao động - Thương binh và Xã hội cấp huyện nơi đã gửi hồ sơ đề nghị áp dụng biện pháp xử lý hành chính, Ủy ban nhân dân cấp xã nơi người đó cư trú và các cơ quan hữu quan để thi hành theo quy định của pháp luật; quyết định áp dụng biện pháp đưa vào trường giáo dưỡng còn được gửi cho cha mẹ hoặc người đại diện hợp pháp của họ."
       },
@@ -1263,6 +1375,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 107,
         "content": ""
       },
@@ -1272,6 +1385,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 108,
         "content": ""
       },
@@ -1281,6 +1395,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 109,
         "content": ""
       },
@@ -1290,6 +1405,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 110,
         "content": ""
       },
@@ -1299,6 +1415,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 111,
         "content": ""
       },
@@ -1308,6 +1425,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 112,
         "content": ""
       },
@@ -1317,6 +1435,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "IV",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 113,
         "content": ""
       },
@@ -1326,6 +1445,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 114,
         "content": ""
       },
@@ -1335,6 +1455,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 115,
         "content": ""
       },
@@ -1344,6 +1465,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 116,
         "content": "\nTrường hợp phát hiện người bị áp dụng biện pháp xử lý hành chính đã thực hiện hành vi phạm tội trước hoặc trong thời gian chấp hành quyết định, thì theo yêu cầu của cơ quan tiến hành tố tụng hình sự có thẩm quyền, Chủ tịch Uỷ ban nhân dân cấp xã nơi đang thi hành biện pháp giáo dục tại xã, phường, thị trấn hoặc Hiệu trưởng trường giáo dưỡng, Giám đốc cơ sở giáo dục bắt buộc, Giám đốc cơ sở cai nghiện bắt buộc phải ra quyết định tạm đình chỉ thi hành quyết định đối với người đó và chuyển hồ sơ của đối tượng cho cơ quan tiến hành tố tụng hình sự; trường hợp bị Toà án xử phạt tù thì người đó được miễn chấp hành phần thời gian còn lại trong quyết định áp dụng biện pháp xử lý hành chính; nếu hình phạt được áp dụng không phải là hình phạt tù thì người đó có thể phải tiếp tục chấp hành quyết định áp dụng biện pháp xử lý hành chính."
       },
@@ -1353,6 +1475,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": "BA",
         "order": 117,
         "content": ""
       },
@@ -1362,6 +1485,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 118,
         "content": "\nTrong trường hợp cần ngăn chặn kịp thời vi phạm hành chính hoặc để bảo đảm việc xử lý vi phạm hành chính, người có thẩm quyền có thể áp dụng các biện pháp sau đây theo thủ tục hành chính:"
       },
@@ -1371,6 +1495,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 119,
         "content": ""
       },
@@ -1380,6 +1505,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 120,
         "content": ""
       },
@@ -1389,6 +1515,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 121,
         "content": ""
       },
@@ -1398,6 +1525,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 122,
         "content": ""
       },
@@ -1407,6 +1535,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 123,
         "content": ""
       },
@@ -1416,6 +1545,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 124,
         "content": ""
       },
@@ -1425,6 +1555,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 125,
         "content": ""
       },
@@ -1434,6 +1565,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 126,
         "content": ""
       },
@@ -1443,6 +1575,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 127,
         "content": ""
       },
@@ -1452,6 +1585,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 128,
         "content": ""
       },
@@ -1461,6 +1595,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 129,
         "content": ""
       },
@@ -1470,6 +1605,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 130,
         "content": ""
       },
@@ -1479,6 +1615,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "TƯ",
         "order": 131,
         "content": ""
       },
@@ -1488,6 +1625,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 132,
         "content": "\nViệc xử lý đối với người chưa thành niên vi phạm hành chính thực hiện theo quy định của Phần thứ năm và các quy định khác có liên quan của Luật này."
       },
@@ -1497,6 +1635,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 133,
         "content": "\nNgoài những nguyên tắc xử lý vi phạm hành chính quy định tại Điều 3 của Luật này, việc xử lý đối với người chưa thành niên còn được áp dụng các nguyên tắc sau đây:"
       },
@@ -1506,6 +1645,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 134,
         "content": ""
       },
@@ -1515,6 +1655,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 135,
         "content": ""
       },
@@ -1524,6 +1665,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 136,
         "content": ""
       },
@@ -1533,6 +1675,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 137,
         "content": "\nCác biện pháp thay thế xử lý vi phạm hành chính đối với người chưa thành niên bao gồm:"
       },
@@ -1542,6 +1685,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 138,
         "content": ""
       },
@@ -1551,6 +1695,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": "NĂM",
         "order": 139,
         "content": ""
       },
@@ -1560,6 +1705,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "SÁU",
         "order": 140,
         "content": ""
       },
@@ -1569,6 +1715,7 @@
         "doc_identity": "15/2012/QH13",
         "parent_chapter": null,
         "parent_section": null,
+        "parent_part": "SÁU",
         "order": 141,
         "content": "\nChính phủ, Tòa án nhân dân tối cao quy định chi tiết, hướng dẫn thi hành các điều, khoản được giao trong Luật.\nLuật này đã được Quốc hội nước Cộng hoà xã hội chủ nghĩa Việt Nam khoá XIII, kỳ họp thứ 3 thông qua ngày 20 tháng 6 năm 2012."
       }
@@ -8106,119 +8253,119 @@
       "from_label": "Part",
       "from_id": "HAI",
       "to_label": "Chapter",
-      "to_id": "I"
+      "to_id": "HAI.I"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "HAI",
       "to_label": "Chapter",
-      "to_id": "II"
+      "to_id": "HAI.II"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "HAI",
       "to_label": "Chapter",
-      "to_id": "III"
+      "to_id": "HAI.III"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "BA",
       "to_label": "Chapter",
-      "to_id": "I"
+      "to_id": "BA.I"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "BA",
       "to_label": "Chapter",
-      "to_id": "II"
+      "to_id": "BA.II"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "BA",
       "to_label": "Chapter",
-      "to_id": "III"
+      "to_id": "BA.III"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "BA",
       "to_label": "Chapter",
-      "to_id": "IV"
+      "to_id": "BA.IV"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "BA",
       "to_label": "Chapter",
-      "to_id": "V"
+      "to_id": "BA.V"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "TƯ",
       "to_label": "Chapter",
-      "to_id": "I"
+      "to_id": "TƯ.I"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "TƯ",
       "to_label": "Chapter",
-      "to_id": "II"
+      "to_id": "TƯ.II"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "NĂM",
       "to_label": "Chapter",
-      "to_id": "I"
+      "to_id": "NĂM.I"
     },
     {
       "type": "HAS_CHAPTER",
       "from_label": "Part",
       "from_id": "NĂM",
       "to_label": "Chapter",
-      "to_id": "II"
+      "to_id": "NĂM.II"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "HAI.I",
       "to_label": "Section",
-      "to_id": "1"
+      "to_id": "HAI.I.1"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "HAI.I",
       "to_label": "Section",
-      "to_id": "2"
+      "to_id": "HAI.I.2"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
-      "from_id": "III",
+      "from_id": "HAI.III",
       "to_label": "Section",
-      "to_id": "1"
+      "to_id": "HAI.III.1"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
-      "from_id": "III",
+      "from_id": "HAI.III",
       "to_label": "Section",
-      "to_id": "2"
+      "to_id": "HAI.III.2"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
-      "from_id": "III",
+      "from_id": "HAI.III",
       "to_label": "Section",
-      "to_id": "3"
+      "to_id": "HAI.III.3"
     },
     {
       "type": "HAS_ARTICLE",
@@ -8363,840 +8510,840 @@
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "21"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "22"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "23"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "24"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "25"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "26"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.I.1",
       "to_label": "Article",
       "to_id": "27"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "28"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "29"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "30"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "31"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "32"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "33"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "34"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "35"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "36"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.I.2",
       "to_label": "Article",
       "to_id": "37"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "38"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "39"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "40"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "41"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "42"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "43"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "44"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "45"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "46"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "47"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "48"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "49"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "50"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "51"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "52"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "53"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "HAI.II",
       "to_label": "Article",
       "to_id": "54"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "55"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "56"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "57"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "58"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "59"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "60"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "61"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "62"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "63"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "64"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "65"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "66"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "67"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "HAI.III.1",
       "to_label": "Article",
       "to_id": "68"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "69"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "70"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "71"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "72"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "73"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "74"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "75"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "76"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "77"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "78"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "79"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "80"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "81"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "82"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "83"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "84"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "HAI.III.2",
       "to_label": "Article",
       "to_id": "85"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "HAI.III.3",
       "to_label": "Article",
       "to_id": "86"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "HAI.III.3",
       "to_label": "Article",
       "to_id": "87"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "HAI.III.3",
       "to_label": "Article",
       "to_id": "88"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "89"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "90"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "91"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "92"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "93"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "94"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "95"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "BA.I",
       "to_label": "Article",
       "to_id": "96"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "97"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "98"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "99"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "100"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "101"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "102"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "103"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "BA.II",
       "to_label": "Article",
       "to_id": "104"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "III",
+      "from_id": "BA.III",
       "to_label": "Article",
       "to_id": "105"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "III",
+      "from_id": "BA.III",
       "to_label": "Article",
       "to_id": "106"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "107"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "108"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "109"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "110"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "111"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "112"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "113"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "IV",
+      "from_id": "BA.IV",
       "to_label": "Article",
       "to_id": "114"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "V",
+      "from_id": "BA.V",
       "to_label": "Article",
       "to_id": "115"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "V",
+      "from_id": "BA.V",
       "to_label": "Article",
       "to_id": "116"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "V",
+      "from_id": "BA.V",
       "to_label": "Article",
       "to_id": "117"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "V",
+      "from_id": "BA.V",
       "to_label": "Article",
       "to_id": "118"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "TƯ.I",
       "to_label": "Article",
       "to_id": "119"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "TƯ.I",
       "to_label": "Article",
       "to_id": "120"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "TƯ.I",
       "to_label": "Article",
       "to_id": "121"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "122"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "123"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "124"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "125"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "126"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "127"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "128"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "129"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "130"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "131"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "TƯ.II",
       "to_label": "Article",
       "to_id": "132"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "NĂM.I",
       "to_label": "Article",
       "to_id": "133"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "NĂM.I",
       "to_label": "Article",
       "to_id": "134"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "NĂM.I",
       "to_label": "Article",
       "to_id": "135"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "NĂM.I",
       "to_label": "Article",
       "to_id": "136"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "I",
+      "from_id": "NĂM.I",
       "to_label": "Article",
       "to_id": "137"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "NĂM.II",
       "to_label": "Article",
       "to_id": "138"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "NĂM.II",
       "to_label": "Article",
       "to_id": "139"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Chapter",
-      "from_id": "II",
+      "from_id": "NĂM.II",
       "to_label": "Article",
       "to_id": "140"
     },

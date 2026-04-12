@@ -174,6 +174,7 @@
         "title": "THANH TOÁN TIỀN SỬ DỤNG ĐƯỜNG BỘ",
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
+        "parent_part": null,
         "order": 0,
         "content": ""
       },
@@ -182,6 +183,7 @@
         "title": "THANH TOÁN CÁC LOẠI PHÍ, GIÁ, TIỀN DỊCH VỤ KHÁC",
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
+        "parent_part": null,
         "order": 1,
         "content": ""
       },
@@ -190,6 +192,7 @@
         "title": "THÔNG TIN, BÁO CÁO VÀ BẢO MẬT, AN TOÀN THÔNG TIN",
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
+        "parent_part": null,
         "order": 2,
         "content": ""
       }
@@ -201,6 +204,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 0,
         "content": "\nNghị định này quy định chi tiết về thanh toán điện tử giao thông đường bộ: tài khoản giao thông; thanh toán tiền sử dụng đường bộ trên đường cao tốc; cơ sở dữ liệu thanh toán điện tử giao thông đường bộ."
       },
@@ -210,6 +214,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 1,
         "content": "\nNghị định này áp dụng đối với các tổ chức, cá nhân liên quan đến hoạt động thanh toán điện tử giao thông đường bộ."
       },
@@ -219,6 +224,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 2,
         "content": "\nTrong Nghị định này, các từ ngữ dưới đây được hiểu như sau:"
       },
@@ -228,6 +234,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 3,
         "content": ""
       },
@@ -237,6 +244,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "I",
         "parent_section": null,
+        "parent_part": null,
         "order": 4,
         "content": ""
       },
@@ -246,6 +254,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": null,
         "order": 5,
         "content": ""
       },
@@ -255,6 +264,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": null,
         "order": 6,
         "content": ""
       },
@@ -264,6 +274,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": null,
         "order": 7,
         "content": ""
       },
@@ -273,6 +284,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": null,
         "order": 8,
         "content": ""
       },
@@ -282,6 +294,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "II",
         "parent_section": null,
+        "parent_part": null,
         "order": 9,
         "content": ""
       },
@@ -291,6 +304,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": null,
+        "parent_part": null,
         "order": 10,
         "content": ""
       },
@@ -300,6 +314,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": null,
+        "parent_part": null,
         "order": 11,
         "content": ""
       },
@@ -309,6 +324,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": null,
+        "parent_part": null,
         "order": 12,
         "content": ""
       },
@@ -318,6 +334,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "III",
         "parent_section": null,
+        "parent_part": null,
         "order": 13,
         "content": ""
       },
@@ -327,6 +344,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 14,
         "content": ""
       },
@@ -336,6 +354,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 15,
         "content": ""
       },
@@ -345,6 +364,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 16,
         "content": ""
       },
@@ -354,6 +374,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 17,
         "content": ""
       },
@@ -363,6 +384,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "1",
+        "parent_part": null,
         "order": 18,
         "content": ""
       },
@@ -372,6 +394,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 19,
         "content": ""
       },
@@ -381,6 +404,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 20,
         "content": ""
       },
@@ -390,6 +414,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 21,
         "content": ""
       },
@@ -399,6 +424,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 22,
         "content": ""
       },
@@ -408,6 +434,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "2",
+        "parent_part": null,
         "order": 23,
         "content": ""
       },
@@ -417,6 +444,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "3",
+        "parent_part": null,
         "order": 24,
         "content": ""
       },
@@ -426,6 +454,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "3",
+        "parent_part": null,
         "order": 25,
         "content": ""
       },
@@ -435,6 +464,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "3",
+        "parent_part": null,
         "order": 26,
         "content": ""
       },
@@ -444,6 +474,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "IV",
         "parent_section": "3",
+        "parent_part": null,
         "order": 27,
         "content": "\nNhà cung cấp dịch vụ thanh toán điện tử giao thông, đơn vị vận hành thu phải áp dụng các biện pháp bảo đảm an toàn trong thanh toán theo quy định của pháp luật. Chủ phương tiện có nghĩa vụ tuân thủ các biện pháp bảo đảm an toàn trong thanh toán theo quy định và hướng dẫn của Nhà cung cấp dịch vụ thanh toán điện tử giao thông."
       },
@@ -453,6 +484,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 28,
         "content": ""
       },
@@ -462,6 +494,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 29,
         "content": ""
       },
@@ -471,6 +504,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 30,
         "content": ""
       },
@@ -480,6 +514,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 31,
         "content": ""
       },
@@ -489,6 +524,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 32,
         "content": ""
       },
@@ -498,6 +534,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 33,
         "content": ""
       },
@@ -507,6 +544,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "V",
         "parent_section": null,
+        "parent_part": null,
         "order": 34,
         "content": ""
       },
@@ -516,6 +554,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "VI",
         "parent_section": null,
+        "parent_part": null,
         "order": 35,
         "content": ""
       },
@@ -525,6 +564,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "VI",
         "parent_section": null,
+        "parent_part": null,
         "order": 36,
         "content": ""
       },
@@ -534,6 +574,7 @@
         "doc_identity": "119/2024/NĐ-CP",
         "parent_chapter": "VI",
         "parent_section": null,
+        "parent_part": null,
         "order": 37,
         "content": "\nCác Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương và các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này./."
       }
@@ -2442,21 +2483,21 @@
       "from_label": "Chapter",
       "from_id": "IV",
       "to_label": "Section",
-      "to_id": "1"
+      "to_id": "IV.1"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "IV",
       "to_label": "Section",
-      "to_id": "2"
+      "to_id": "IV.2"
     },
     {
       "type": "HAS_SECTION",
       "from_label": "Chapter",
       "from_id": "IV",
       "to_label": "Section",
-      "to_id": "3"
+      "to_id": "IV.3"
     },
     {
       "type": "HAS_ARTICLE",
@@ -2559,98 +2600,98 @@
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "15"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "16"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "17"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "18"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "1",
+      "from_id": "IV.1",
       "to_label": "Article",
       "to_id": "19"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "20"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "21"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "22"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "23"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "2",
+      "from_id": "IV.2",
       "to_label": "Article",
       "to_id": "24"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "IV.3",
       "to_label": "Article",
       "to_id": "25"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "IV.3",
       "to_label": "Article",
       "to_id": "26"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "IV.3",
       "to_label": "Article",
       "to_id": "27"
     },
     {
       "type": "HAS_ARTICLE",
       "from_label": "Section",
-      "from_id": "3",
+      "from_id": "IV.3",
       "to_label": "Article",
       "to_id": "28"
     },

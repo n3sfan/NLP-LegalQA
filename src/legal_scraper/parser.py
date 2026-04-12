@@ -272,6 +272,7 @@ class ContentParser:
                     number=m.group(1), title=m.group(2).strip(),
                     doc_identity=doc_identity,
                     parent_chapter=cur_chapter.number if cur_chapter else None,
+                    parent_part=cur_part.number if cur_part else None,
                     order=len(sections),
                 )
                 sections.append(cur_section)
@@ -285,6 +286,7 @@ class ContentParser:
                     doc_identity=doc_identity,
                     parent_chapter=cur_chapter.number if cur_chapter else None,
                     parent_section=cur_section.number if cur_section else None,
+                    parent_part=cur_part.number if cur_part else None,
                     order=len(articles),
                 )
                 articles.append(cur_article)
@@ -333,7 +335,7 @@ class ContentParser:
                 relationships.append(asdict(Relationship(
                     type="HAS_CHAPTER",
                     from_label="Part", from_id=ch.parent_part,
-                    to_label="Chapter", to_id=ch.number,
+                    to_label="Chapter", to_id=f"{ch.parent_part}.{ch.number}",
                 )))
             else:
                 relationships.append(asdict(Relationship(
@@ -343,30 +345,34 @@ class ContentParser:
                 )))
 
         for sec in sections:
+            to_id = f"{sec.parent_part}.{sec.parent_chapter}.{sec.number}" if sec.parent_part else f"{sec.parent_chapter}.{sec.number}"
             if sec.parent_chapter:
+                from_id = f"{sec.parent_part}.{sec.parent_chapter}" if sec.parent_part else sec.parent_chapter
                 relationships.append(asdict(Relationship(
                     type="HAS_SECTION",
-                    from_label="Chapter", from_id=sec.parent_chapter,
-                    to_label="Section", to_id=sec.number,
+                    from_label="Chapter", from_id=from_id,
+                    to_label="Section", to_id=to_id,
                 )))
             else:
                 relationships.append(asdict(Relationship(
                     type="HAS_SECTION",
                     from_label="Document", from_id=doc_identity,
-                    to_label="Section", to_id=sec.number,
+                    to_label="Section", to_id=to_id,
                 )))
 
         for art in articles:
             if art.parent_section:
+                from_id = f"{art.parent_part}.{art.parent_chapter}.{art.parent_section}" if art.parent_part else f"{art.parent_chapter}.{art.parent_section}"
                 relationships.append(asdict(Relationship(
                     type="HAS_ARTICLE",
-                    from_label="Section", from_id=art.parent_section,
+                    from_label="Section", from_id=from_id,
                     to_label="Article", to_id=art.number,
                 )))
             elif art.parent_chapter:
+                from_id = f"{art.parent_part}.{art.parent_chapter}" if art.parent_part else art.parent_chapter
                 relationships.append(asdict(Relationship(
                     type="HAS_ARTICLE",
-                    from_label="Chapter", from_id=art.parent_chapter,
+                    from_label="Chapter", from_id=from_id,
                     to_label="Article", to_id=art.number,
                 )))
             else:
