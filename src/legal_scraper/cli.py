@@ -4,8 +4,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
 
 from legal_scraper.parser import LegalDocumentParser
 from legal_scraper.scraper import LegalDocumentScraper
@@ -14,6 +16,7 @@ from legal_scraper.embedder import Neo4jEmbedder
 
 
 def main(argv: list[str] | None = None) -> None:
+    load_dotenv()
     parser = argparse.ArgumentParser(description="Scrape Vietnamese legal documents from phapluat.gov.vn")
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -46,18 +49,18 @@ def main(argv: list[str] | None = None) -> None:
     # --- import-neo4j ---
     p_import = sub.add_parser("import-neo4j", help="Import parsed JSON into Neo4j")
     p_import.add_argument("-i", "--input", default="data/parsed", help="Directory with parsed JSON files")
-    p_import.add_argument("--uri", required=True, help="Neo4j URI (e.g. neo4j://localhost:7687)")
-    p_import.add_argument("--user", required=True, help="Neo4j username")
-    p_import.add_argument("--password", required=True, help="Neo4j password")
-    p_import.add_argument("--database", default="neo4j", help="Neo4j database name (default: neo4j)")
+    p_import.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"), help="Neo4j URI (e.g. neo4j://localhost:7687)")
+    p_import.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"), help="Neo4j username")
+    p_import.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"), help="Neo4j password")
+    p_import.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"), help="Neo4j database name (default: neo4j)")
     p_import.add_argument("--fail-fast", action="store_true", help="Stop on first import error")
 
     # --- embed ---
     p_embed = sub.add_parser("embed", help="Generate vector embeddings for Neo4j nodes")
-    p_embed.add_argument("--uri", required=True, help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
-    p_embed.add_argument("--user", required=True)
-    p_embed.add_argument("--password", required=True)
-    p_embed.add_argument("--database", default="neo4j")
+    p_embed.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"), help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
+    p_embed.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_embed.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_embed.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
     p_embed.add_argument(
         "--node-labels",
         nargs="+",
@@ -74,10 +77,10 @@ def main(argv: list[str] | None = None) -> None:
 
     # --- vector-search ---
     p_vs = sub.add_parser("vector-search", help="Search Neo4j vector indexes and return ranked results with content")
-    p_vs.add_argument("--uri", required=True, help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
-    p_vs.add_argument("--user", required=True)
-    p_vs.add_argument("--password", required=True)
-    p_vs.add_argument("--database", default="neo4j")
+    p_vs.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"), help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
+    p_vs.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_vs.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_vs.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
     p_vs.add_argument("--query", "-q", required=True, help="Vietnamese text query")
     p_vs.add_argument(
         "--labels",
