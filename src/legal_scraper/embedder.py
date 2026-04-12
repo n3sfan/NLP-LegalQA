@@ -131,6 +131,31 @@ class Neo4jEmbedder:
         all_results.sort(key=lambda r: r.score, reverse=True)
         return all_results
 
+    def fetch_nodes(self, uids: list[str], labels: list[str]) -> dict[tuple[str, str], dict]:
+        """Fetch content and title for nodes by (uid, label).
+
+        Uses a single Cypher query per label.
+        Returns a dict keyed by (uid, label) → {"content": str, "title": str|None}.
+        Title is non-null only for Article nodes.
+        Missing nodes are silently omitted from the result dict.
+        """
+        with self._get_driver().session(database=self.database) as session:
+            result: dict[tuple[str, str], dict] = {}
+            for label in labels:
+                records = session.run(
+                    f"MATCH (n:{label}) WHERE n.uid IN $uids "
+                    "RETURN n.uid AS uid, n.content AS content, n.title AS title",
+                    uids=uids,
+                )
+                for record in records:
+                    uid = record["uid"]
+                    title = record["title"]
+                    result[(uid, label)] = {
+                        "content": record["content"] or "",
+                        "title": title if title else None,
+                    }
+            return result
+
     def close(self) -> None:
         if self._driver:
             self._driver.close()

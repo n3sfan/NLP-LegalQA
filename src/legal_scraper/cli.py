@@ -72,6 +72,23 @@ def main(argv: list[str] | None = None) -> None:
         help="Batch size for embedding (default: 32)",
     )
 
+    # --- vector-search ---
+    p_vs = sub.add_parser("vector-search", help="Search Neo4j vector indexes and return ranked results with content")
+    p_vs.add_argument("--uri", required=True, help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
+    p_vs.add_argument("--user", required=True)
+    p_vs.add_argument("--password", required=True)
+    p_vs.add_argument("--database", default="neo4j")
+    p_vs.add_argument("--query", "-q", required=True, help="Vietnamese text query")
+    p_vs.add_argument(
+        "--labels",
+        nargs="+",
+        default=["Article"],
+        choices=["Article", "Clause", "Point"],
+        help="Node labels to search (default: Article)",
+    )
+    p_vs.add_argument("--k", type=int, default=5, help="Top-k results per label (default: 5)")
+    p_vs.add_argument("--full", action="store_true", help="Show full content instead of truncated")
+
     args = parser.parse_args(argv)
 
     if args.command == "search":
@@ -141,6 +158,50 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Embedding {args.node_labels} nodes...")
             embedder.embed_label(args.node_labels, batch_size=args.batch_size)
             print("  Done.")
+        finally:
+            embedder.close()
+        return
+
+    elif args.command == "vector-search":
+        embedder = Neo4jEmbedder(
+            uri=args.uri,
+            user=args.user,
+            password=args.password,
+            database=args.database,
+        )
+        try:
+            results = embedder.search(args.labels, args.query, k=args.k)
+            if not results:
+                print("No results found.")
+                return
+
+            uids_by_label: dict[str, list[str]] = {}
+            for r in results:
+                uids_by_label.setdefault(r.label, []).append(r.uid)
+
+            all_labels = list(uids_by_label.keys())
+            all_uids = [r.uid for r in results]
+            node_data = embedder.fetch_nodes(all_uids, all_labels)
+
+            for rank, r in enumerate(results, 1):
+                key = (r.uid, r.label)
+                data = node_data.get(key, {"content": "[not found]", "title": None})
+
+                title = data["title"]
+                content = data["content"]
+
+                if args.full:
+                    content_display = content
+                else:
+                    if len(content) > 300:
+                        content_display = content[:300] + f"\n  ... ({len(content)} chars total)"
+                    else:
+                        content_display = content
+
+                print(f"[{rank}] [{r.label}] score={r.score:.4f}  uid={r.uid}")
+                if r.label == "Article" and title:
+                    print(f"  Title: {title}")
+                print(f"  ---\n  {content_display}\n  ---")
         finally:
             embedder.close()
         return
