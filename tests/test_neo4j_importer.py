@@ -1,11 +1,24 @@
 # tests/test_neo4j_importer.py
 from legal_scraper.neo4j_importer import (
+    build_chapter_uid,
+    build_section_uid,
     build_article_uid,
     build_clause_uid,
     build_point_uid,
     get_constraint_statements,
     load_parsed_payload,
 )
+
+
+def test_build_chapter_uid_handles_parent_part():
+    assert build_chapter_uid("doc_1", "I") == "doc_1::chapter::I"
+    assert build_chapter_uid("doc_1", "I", "3") == "doc_1::part::3::chapter::I"
+
+
+def test_build_section_uid_handles_parent_chapter_and_part():
+    assert build_section_uid("doc_1", "2") == "doc_1::section::2"
+    assert build_section_uid("doc_1", "2", parent_chapter="II") == "doc_1::chapter::II::section::2"
+    assert build_section_uid("doc_1", "2", parent_chapter="II", parent_part="1") == "doc_1::part::1::chapter::II::section::2"
 
 
 def test_build_article_uid_is_document_scoped():
