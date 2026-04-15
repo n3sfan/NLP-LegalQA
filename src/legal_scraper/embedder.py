@@ -40,6 +40,16 @@ class Neo4jEmbedder:
         self.password = password
         self.database = database
         self._driver = None
+        self._embedding_model = None
+
+    def _get_embedding_model(self):
+        if self._embedding_model is None:
+            self._embedding_model = VietnameseEmbeddings(
+                model_name="bkai-foundation-models/vietnamese-bi-encoder",
+                model_kwargs={"device": "cuda"},
+                encode_kwargs={"normalize_embeddings": True},
+            )
+        return self._embedding_model
 
     def _get_driver(self):
         if self._driver is None:
@@ -60,11 +70,7 @@ class Neo4jEmbedder:
 
         from langchain_neo4j import Neo4jVector
 
-        embedding_model = VietnameseEmbeddings(
-            model_name="bkai-foundation-models/vietnamese-bi-encoder",
-            model_kwargs={"device": "cuda"},
-            encode_kwargs={"normalize_embeddings": True},
-        )
+        embedding_model = self._get_embedding_model()
 
         for label in labels:
             Neo4jVector.from_existing_graph(
@@ -103,11 +109,7 @@ class Neo4jEmbedder:
         if isinstance(labels, str):
             labels = [labels]
 
-        embedding_model = VietnameseEmbeddings(
-            model_name="bkai-foundation-models/vietnamese-bi-encoder",
-            model_kwargs={"device": "cuda"},
-            encode_kwargs={"normalize_embeddings": True},
-        )
+        embedding_model = self._get_embedding_model()
 
         all_results: list[SearchResult] = []
 
@@ -155,6 +157,62 @@ class Neo4jEmbedder:
                         "title": title if title else None,
                     }
             return result
+
+    def fetch_node_hierarchy(self, uids: list[str]) -> dict[str, str]:
+        """Fetch nodes and format their parent hierarchy into context text.
+        
+        Uses a variable-length path query from Document down to the target node
+        to reconstruct the full context (e.g., Chapter > Section > Article > Clause).
+        The Document node itself is dropped from the returned string, per user request.
+        
+        Returns a dict mapping uid -> formatted context string.
+        """
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH path = (d:Document)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *]->(target)
+        WHERE target.uid = target_uid
+        RETURN target.uid AS uid, nodes(path)[1..] AS hierarchy_nodes
+        """
+        result_map: dict[str, str] = {}
+        with self._get_driver().session(database=self.database) as session:
+            result = session.run(query, uids=uids)
+            for record in result:
+                uid = record["uid"]
+                hierarchy_nodes = record["hierarchy_nodes"] or []
+                
+                context_lines = []
+                for n in hierarchy_nodes:
+                    labels = list(n.labels)
+                    label = labels[0] if labels else ""
+                    
+                    if label == "Part":
+                        title = n.get("title")
+                        context_lines.append(f"Phần {n.get('number')}: {title}" if title else f"Phần {n.get('number')}")
+                    elif label == "Chapter":
+                        title = n.get("title")
+                        context_lines.append(f"Chương {n.get('number')}: {title}" if title else f"Chương {n.get('number')}")
+                    elif label == "Section":
+                        title = n.get("title")
+                        context_lines.append(f"Mục {n.get('number')}: {title}" if title else f"Mục {n.get('number')}")
+                    elif label == "Article":
+                        title = n.get("title")
+                        context_lines.append(f"Điều {n.get('number')}: {title}" if title else f"Điều {n.get('number')}")
+                    elif label == "Clause":
+                        context_lines.append(f"Khoản {n.get('number')}.")
+                    elif label == "Point":
+                        context_lines.append(f"Điểm {n.get('letter')}.")
+
+                # The last node is the target itself. We can extract its content explicitly 
+                # (though it might already have been hit by the loop above, we'll append the detailed content)
+                target_node = hierarchy_nodes[-1] if hierarchy_nodes else None
+                main_content = target_node.get("content", "") if target_node else ""
+                
+                # Combine headers and full content
+                header_text = "\n".join(context_lines)
+                full_text = header_text + "\nNội dung: " + main_content if main_content else header_text
+                result_map[uid] = full_text.strip()
+                
+        return result_map
 
     def close(self) -> None:
         if self._driver:

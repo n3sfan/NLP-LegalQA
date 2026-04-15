@@ -14,6 +14,9 @@ dependencies = [
     "pyvi>=0.1.1",
     "pandas>=2.2.0",
     "python-dotenv>=1.0.1",
+    "sentencepiece>=0.2.1",
+    "tiktoken>=0.12.0",
+    "protobuf>=7.34.1",
 ]
 
 [project.optional-dependencies]

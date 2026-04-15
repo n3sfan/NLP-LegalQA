@@ -1,0 +1,291 @@
+[1] Connecting to DB & loading models...
+
+[2] Executing Vector Search for: 'không đội mũ bảo hiểm phạt bao nhiêu'
+    Found 30 relevant nodes from vector search.
+
+[3] Fetching Context Hierarchies from Neo4j...
+    Mapped hierarchies for 30 nodes.
+
+[4] Reranking Results (Cross-Encoder)...
+
+=== TOP 30 RESULTS (RERANKED) ===
+Rank 1 | Reranker Score: 0.7500 | Original Vector Score: 0.7208
+UID: 123/2021/NĐ-CP::article::2::clause::7
+--------------------------------------------------
+Điều 2: Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt
+Khoản 7.
+Nội dung: Sửa đổi khoản 6 Điều 11 như sau:
+“6. Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với người được chở trên xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô, các loại xe tương tự xe gắn máy, xe đạp máy (kể cả xe đạp điện) thực hiện một trong các hành vi vi phạm sau đây:
+a) Bám, kéo, đẩy xe khác, vật khác, dẫn dắt súc vật, mang vác vật cồng kềnh, đứng trên yên, giá đèo hàng hoặc ngồi trên tay lái;
+b) Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ.”.
+================================================================================
+Rank 2 | Reranker Score: 0.2837 | Original Vector Score: 0.8155
+UID: 100/2019/NĐ-CP::article::11::clause::3
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 11: Xử phạt các hành vi vi phạm khác về quy tắc giao thông đường bộ
+Khoản 3.
+Nội dung: Phạt tiền từ 200.000 đồng đến 300.000 đồng đối với người được chở trên xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô, các loại xe tương tự xe gắn máy, xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ.
+================================================================================
+Rank 3 | Reranker Score: -1.5283 | Original Vector Score: 0.7217
+UID: 123/2021/NĐ-CP::article::2::clause::6
+--------------------------------------------------
+Điều 2: Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt
+Khoản 6.
+Nội dung: Bổ sung điểm đ, điểm e vào sau điểm d khoản 4 Điều 8 như sau:
+“đ) Người điều khiển xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ;
+e) Chở người ngồi trên xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.”.
+================================================================================
+Rank 4 | Reranker Score: -1.9053 | Original Vector Score: 0.7274
+UID: 100/2019/NĐ-CP::article::8::clause::3::point::d
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 8: Xử phạt người điều khiển xe đạp, xe đạp máy (kể cả xe đạp điện), người điều khiển xe thô sơ khác vi phạm quy tắc giao thông đường bộ
+Khoản 3.
+Điểm d.
+Nội dung: Người điều khiển xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ;
+================================================================================
+Rank 5 | Reranker Score: -2.1855 | Original Vector Score: 0.7454
+UID: 123/2021/NĐ-CP::article::2::clause::4::point::b
+--------------------------------------------------
+Điều 2: Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt
+Khoản 4.
+Điểm b.
+Nội dung: Bổ sung điểm n, điểm o vào sau điểm m khoản 3 Điều 6 như sau:
+“n) Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ;
+o) Chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.”;
+================================================================================
+Rank 6 | Reranker Score: -2.3262 | Original Vector Score: 0.7118
+UID: 100/2019/NĐ-CP::article::8::clause::3::point::đ
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 8: Xử phạt người điều khiển xe đạp, xe đạp máy (kể cả xe đạp điện), người điều khiển xe thô sơ khác vi phạm quy tắc giao thông đường bộ
+Khoản 3.
+Điểm đ.
+Nội dung: Chở người ngồi trên xe đạp máy (kể cả xe đạp điện) không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật;
+================================================================================
+Rank 7 | Reranker Score: -2.4746 | Original Vector Score: 0.7404
+UID: 100/2019/NĐ-CP::article::6::clause::2::point::i
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 6: Xử phạt người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ
+Khoản 2.
+Điểm i.
+Nội dung: Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ;
+================================================================================
+Rank 8 | Reranker Score: -2.7520 | Original Vector Score: 0.7217
+UID: 100/2019/NĐ-CP::article::6::clause::2::point::k
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 6: Xử phạt người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ
+Khoản 2.
+Điểm k.
+Nội dung: Chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật;
+================================================================================
+Rank 9 | Reranker Score: -3.1289 | Original Vector Score: 0.7150
+UID: 168/2024/NĐ-CP::article::9::clause::4::point::đ
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 9: Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe thô sơ khác vi phạm quy tắc giao thông đường bộ
+Khoản 4.
+Điểm đ.
+Nội dung: Chở người ngồi trên xe đạp máy không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.
+================================================================================
+Rank 10 | Reranker Score: -3.6172 | Original Vector Score: 0.7216
+UID: 168/2024/NĐ-CP::article::7::clause::2::point::i
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 7: Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ
+Khoản 2.
+Điểm i.
+Nội dung: Chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật;
+================================================================================
+Rank 11 | Reranker Score: -4.0469 | Original Vector Score: 0.7466
+UID: 168/2024/NĐ-CP::article::12::clause::5::point::b
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 12: Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm khác về quy tắc giao thông đường bộ; sử dụng lòng đường, vỉa hè vào mục đích khác
+Khoản 5.
+Điểm b.
+Nội dung: Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ.
+================================================================================
+Rank 12 | Reranker Score: -4.1250 | Original Vector Score: 0.7408
+UID: 168/2024/NĐ-CP::article::7::clause::2::point::h
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 7: Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ
+Khoản 2.
+Điểm h.
+Nội dung: Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ;
+================================================================================
+Rank 13 | Reranker Score: -7.5781 | Original Vector Score: 0.6983
+UID: 36/2024/QH15::article::31::clause::3
+--------------------------------------------------
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 31: Người điều khiển, người được chở, hàng hóa xếp trên xe thô sơ
+Khoản 3.
+Nội dung: Người điều khiển, người được chở trên xe đạp máy phải đội mũ bảo hiểm theo đúng quy chuẩn kỹ thuật quốc gia và cài quai đúng quy cách.
+================================================================================
+Rank 14 | Reranker Score: -8.0312 | Original Vector Score: 0.7123
+UID: 15/2012/QH13::article::23::clause::1
+--------------------------------------------------
+Phần HAI: XỬ PHẠT VI PHẠM HÀNH CHÍNH
+Chương I: CÁC HÌNH THỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ
+Mục 1: CÁC HÌNH THỨC XỬ PHẠT
+Điều 23: Phạt tiền
+Khoản 1.
+Nội dung: Mức phạt tiền trong xử phạt vi phạm hành chính từ 50.000 đồng đến 1.000.000.000 đồng đối với cá nhân, từ 100.000 đồng đến 2.000.000.000 đồng đối với tổ chức, trừ trường hợp quy định tại khoản 3 Điều 24 của Luật này.
+Đối với khu vực nội thành của thành phố trực thuộc trung ương thì mức phạt tiền có thể cao hơn, nhưng tối đa không quá 02 lần mức phạt chung áp dụng đối với cùng hành vi vi phạm trong các lĩnh vực giao thông đường bộ; bảo vệ môi trường; an ninh trật tự, an toàn xã hội.
+================================================================================
+Rank 15 | Reranker Score: -8.3359 | Original Vector Score: 0.7464
+UID: 36/2024/QH15::article::33::clause::2
+--------------------------------------------------
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 33: Người lái xe, người được chở, hàng hóa xếp trên xe mô tô, xe gắn máy
+Khoản 2.
+Nội dung: Người lái xe, người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy phải đội mũ bảo hiểm theo đúng quy chuẩn kỹ thuật quốc gia và cài quai đúng quy cách.
+================================================================================
+Rank 16 | Reranker Score: -8.8672 | Original Vector Score: 0.6969
+UID: 100/2019/NĐ-CP::article::16::clause::1
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 3: VI PHẠM QUY ĐỊNH VỀ PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
+Điều 16: Xử phạt người điều khiển xe ô tô (bao gồm cả rơ moóc hoặc sơ mi rơ moóc được kéo theo) và các loại xe tương tự xe ô tô vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông
+Khoản 1.
+Nội dung: Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với hành vi điều khiển xe không có kính chắn gió hoặc có nhưng vỡ hoặc có nhưng không có tác dụng (đối với xe có thiết kế lắp kính chắn gió).
+================================================================================
+Rank 17 | Reranker Score: -9.0703 | Original Vector Score: 0.7168
+UID: 168/2024/NĐ-CP::article::12::clause::4
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 12: Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm khác về quy tắc giao thông đường bộ; sử dụng lòng đường, vỉa hè vào mục đích khác
+Khoản 4.
+Nội dung: Phạt tiền từ 350.000 đồng đến 400.000 đồng đối với người được chở trên xe ô tô không thắt dây đai an toàn (tại vị trí có trang bị dây đai an toàn) khi xe đang chạy.
+================================================================================
+Rank 18 | Reranker Score: -9.1562 | Original Vector Score: 0.6946
+UID: 100/2019/NĐ-CP::article::47::clause::4
+--------------------------------------------------
+Chương III: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG SẮT
+Mục 1: VI PHẠM QUY ĐỊNH VỀ TÍN HIỆU, QUY TẮC GIAO THÔNG ĐƯỜNG SẮT VÀ BẢO ĐẢM TRẬT TỰ, AN TOÀN GIAO THÔNG ĐƯỜNG SẮT
+Điều 47: Xử phạt các hành vi vi phạm quy định về quy tắc giao thông tại đường ngang, cầu chung, hầm đường sắt
+Khoản 4.
+Nội dung: Phạt tiền từ 200.000 đồng đến 300.000 đồng đối với người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy dừng xe, đỗ xe trong phạm vi an toàn đường ngang, cầu chung; không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường khi đi qua đường ngang, cầu chung.
+================================================================================
+Rank 19 | Reranker Score: -9.2578 | Original Vector Score: 0.7018
+UID: 168/2024/NĐ-CP::article::37::clause::2
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 5: CÁC VI PHẠM KHÁC LIÊN QUAN ĐẾN TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Điều 37: Xử phạt người điều khiển phương tiện giao thông cơ giới đường bộ gắn biển số nước ngoài
+Khoản 2.
+Nội dung: Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với hành vi điều khiển xe tham gia giao thông tại Việt Nam không có văn bản chấp thuận hoặc cấp phép của cơ quan có thẩm quyền cấp theo quy định (đối với loại xe tham gia giao thông tại Việt Nam có quy định phải được chấp thuận hoặc cấp phép).
+================================================================================
+Rank 20 | Reranker Score: -9.7578 | Original Vector Score: 0.7009
+UID: 168/2024/NĐ-CP::article::13::clause::1
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 2: VI PHẠM QUY ĐỊNH VỀ PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
+Điều 13: Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô (bao gồm cả rơ moóc hoặc sơ mi rơ moóc được kéo theo), xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông
+Khoản 1.
+Nội dung: Phạt tiền từ 200.000 đồng đến 400.000 đồng đối với hành vi điều khiển xe không có kính chắn gió hoặc có nhưng vỡ không có tác dụng (đối với xe có thiết kế lắp kính chắn gió).
+================================================================================
+Rank 21 | Reranker Score: -9.7656 | Original Vector Score: 0.7189
+UID: 100/2019/NĐ-CP::article::11::clause::5
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 11: Xử phạt các hành vi vi phạm khác về quy tắc giao thông đường bộ
+Khoản 5.
+Nội dung: Phạt tiền từ 300.000 đồng đến 500.000 đồng đối với người được chở trên xe ô tô không thắt dây an toàn (tại vị trí có trang bị dây an toàn) khi xe đang chạy.
+================================================================================
+Rank 22 | Reranker Score: -9.7969 | Original Vector Score: 0.7065
+UID: 168/2024/NĐ-CP::article::15::clause::1
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 2: VI PHẠM QUY ĐỊNH VỀ PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
+Điều 15: Xử phạt người điều khiển xe thô sơ vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông
+Khoản 1.
+Nội dung: Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với hành vi điều khiển xe không có bộ phận phát âm thanh cảnh báo (còi, chuông); không có đèn chiếu sáng hoặc tấm phản quang phía trước; không có đèn tín hiệu hoặc tấm phản quang phía sau xe (đối với loại xe quy định phải có bộ phận này).
+================================================================================
+Rank 23 | Reranker Score: -9.9688 | Original Vector Score: 0.6955
+UID: 100/2019/NĐ-CP::article::43::clause::3
+--------------------------------------------------
+Chương III: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG SẮT
+Mục 1: VI PHẠM QUY ĐỊNH VỀ TÍN HIỆU, QUY TẮC GIAO THÔNG ĐƯỜNG SẮT VÀ BẢO ĐẢM TRẬT TỰ, AN TOÀN GIAO THÔNG ĐƯỜNG SẮT
+Điều 43: Xử phạt các hành vi vi phạm quy định về đón, gửi tàu
+Khoản 3.
+Nội dung: Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với nhân viên gác đường ngang, cầu chung không đóng chắn hoặc đóng chắn không đúng thời gian quy định.
+================================================================================
+Rank 24 | Reranker Score: -10.1094 | Original Vector Score: 0.6950
+UID: 36/2024/QH15::article::87::clause::6
+--------------------------------------------------
+Chương VIII: QUẢN LÝ NHÀ NƯỚC VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG ĐƯỜNG BỘ
+Điều 87: Trách nhiệm quản lý nhà nước về trật tự, an toàn giao thông đường bộ
+Khoản 6.
+Nội dung: Bộ Khoa học và Công nghệ ban hành quy chuẩn kỹ thuật quốc gia về mũ bảo hiểm cho người đi xe mô tô, xe gắn máy, xe đạp máy.
+================================================================================
+Rank 25 | Reranker Score: -10.2031 | Original Vector Score: 0.6961
+UID: 168/2024/NĐ-CP::article::6::clause::8
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 6: Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô vi phạm quy tắc giao thông đường bộ
+Khoản 8.
+Nội dung: Phạt tiền từ 16.000.000 đồng đến 18.000.000 đồng đối với người điều khiển xe thực hiện hành vi vi phạm gây tai nạn giao thông không dừng ngay phương tiện, không giữ nguyên hiện trường, không trợ giúp người bị nạn, không ở lại hiện trường hoặc không đến trình báo ngay với cơ quan công an, Ủy ban nhân dân nơi gần nhất.
+================================================================================
+Rank 26 | Reranker Score: -10.4844 | Original Vector Score: 0.6942
+UID: 100/2019/NĐ-CP::article::18::clause::1
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 3: VI PHẠM QUY ĐỊNH VỀ PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
+Điều 18: Xử phạt người điều khiển xe thô sơ vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông
+Khoản 1.
+Nội dung: Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với hành vi điều khiển xe không có đăng ký, không gắn biển số (đối với loại xe có quy định phải đăng ký và gắn biển số).
+================================================================================
+Rank 27 | Reranker Score: -10.7344 | Original Vector Score: 0.7191
+UID: 168/2024/NĐ-CP::article::12::clause::3
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 12: Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm khác về quy tắc giao thông đường bộ; sử dụng lòng đường, vỉa hè vào mục đích khác
+Khoản 3.
+Nội dung: Phạt tiền từ 250.000 đồng đến 350.000 đồng đối với cá nhân, từ 500.000 đồng đến 700.000 đồng đối với tổ chức để vật che khuất biển báo hiệu đường bộ, đèn tín hiệu giao thông.
+================================================================================
+Rank 28 | Reranker Score: -10.9297 | Original Vector Score: 0.7018
+UID: 168/2024/NĐ-CP::article::12::clause::13
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 12: Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm khác về quy tắc giao thông đường bộ; sử dụng lòng đường, vỉa hè vào mục đích khác
+Khoản 13.
+Nội dung: Phạt tiền từ 30.000.000 đồng đến 32.000.000 đồng đối với cá nhân, từ 60.000.000 đồng đến 64.000.000 đồng đối với tổ chức thực hiện hành vi không khai báo, khai báo gian dối hoặc cung cấp thông tin, tài liệu không đúng sự thật để trốn tránh trách nhiệm khi bị phát hiện vi phạm pháp luật về trật tự, an toàn giao thông đường bộ.
+================================================================================
+Rank 29 | Reranker Score: -11.2734 | Original Vector Score: 0.6943
+UID: 100/2019/NĐ-CP::article::23::clause::1::point::b
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 5: VI PHẠM QUY ĐỊNH VỀ VẬN TẢI ĐƯỜNG BỘ
+Điều 23: Xử phạt người điều khiển xe ô tô chở hành khách, ô tô chở người và các loại xe tương tự xe ô tô chở hành khách, chở người vi phạm quy định về vận tải đường bộ
+Khoản 1.
+Điểm b.
+Nội dung: Không mặc đồng phục, không đeo thẻ tên của lái xe theo quy định.
+================================================================================
+Rank 30 | Reranker Score: -11.4688 | Original Vector Score: 0.6939
+UID: 100/2019/NĐ-CP::article::27::clause::1
+--------------------------------------------------
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 5: VI PHẠM QUY ĐỊNH VỀ VẬN TẢI ĐƯỜNG BỘ
+Điều 27: Xử phạt người điều khiển xe vệ sinh môi trường, xe ô tô chở phế thải, vật liệu rời và xe chở hàng khác thực hiện hành vi vi phạm quy định về hoạt động vận tải trong đô thị
+Khoản 1.
+Nội dung: Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với hành vi điều khiển xe không chạy đúng tuyến, phạm vi, thời gian quy định.
+================================================================================
