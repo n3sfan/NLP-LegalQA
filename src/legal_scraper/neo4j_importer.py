@@ -616,6 +616,107 @@ class Neo4jImporter:
             "errors": errors,
         }
 
+    # ── Amends import ────────────────────────────────────────────────────────
+
+    def import_amends_directory(
+        self,
+        input_dir: Path,
+        pattern: str = "*.json",
+        fail_fast: bool = False,
+    ) -> dict[str, Any]:
+        """
+        Import all 'amends' JSON files from *input_dir*.
+
+        Returns a summary dict:
+          total, succeeded, failed, rel_count, errors
+        """
+        files = sorted(input_dir.glob(pattern))
+        succeeded = 0
+        failed = 0
+        rel_count = 0
+        errors: list[dict[str, str]] = []
+
+        for path in files:
+            try:
+                counters = self.import_amends_file(path)
+                rel_count += counters.get("rels", 0)
+                succeeded += 1
+            except Exception as exc:  # pragma: no cover
+                errors.append({"file": path.name, "error": str(exc)})
+                failed += 1
+                if fail_fast:
+                    break
+
+        return {
+            "total": len(files),
+            "succeeded": succeeded,
+            "failed": failed,
+            "rel_count": rel_count,
+            "errors": errors,
+        }
+
+    def import_amends_file(self, path: Path) -> dict[str, int]:
+        """
+        Import relationships from a single amends JSON file into Neo4j.
+        """
+        payload = load_parsed_payload(path)
+        amends: list[dict[str, Any]] = payload.get("amends", [])
+
+        if not amends:
+            return {"rels": 0}
+
+        counters: dict[str, int] = {"rels": 0}
+
+        with self.driver.session(database=self.database) as session:
+            result = session.execute_write(self._tx_import_amends, amends)
+            counters.update(result)
+
+        return counters
+
+    def _tx_import_amends(self, tx, amends_list: list[dict[str, Any]]) -> dict[str, int]:
+        count = 0
+        for amend in amends_list:
+            # Source resolution
+            src_doc = amend.get("amending_doc_identity")
+            src_art = amend.get("amending_article")
+            src_cl  = amend.get("amending_clause")
+            src_pt  = amend.get("amending_point")
+            src_label, src_uid = self._resolve_amend_node_uid(src_doc, src_art, src_cl, src_pt)
+
+            # Target resolution
+            tgt_doc = amend.get("target_doc_identity")
+            tgt_art = amend.get("target_article")
+            tgt_cl  = amend.get("target_clause")
+            tgt_pt  = amend.get("target_point")
+            tgt_label, tgt_uid = self._resolve_amend_node_uid(tgt_doc, tgt_art, tgt_cl, tgt_pt)
+
+            amend_type = amend.get("amend_type", "sửa đổi")
+
+            tx.run(
+                f"""
+                MATCH (source:{src_label} {{uid: $src_uid}})
+                MATCH (target:{tgt_label} {{uid: $tgt_uid}})
+                MERGE (source)-[r:AMENDS]->(target)
+                SET r.type = $amend_type
+                """,
+                src_uid=src_uid,
+                tgt_uid=tgt_uid,
+                amend_type=amend_type,
+            )
+            count += 1
+
+        return {"rels": count}
+
+    def _resolve_amend_node_uid(
+        self, doc_identity: str, article: str | None, clause: str | None, point: str | None
+    ) -> tuple[str, str]:
+        if point:
+            return "Point", build_point_uid(doc_identity, article, clause, point)
+        elif clause:
+            return "Clause", build_clause_uid(doc_identity, article, clause)
+        else:
+            return "Article", build_article_uid(doc_identity, article)
+
 
 # ── ID property helpers ──────────────────────────────────────────────────────
 

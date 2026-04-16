@@ -49,6 +49,7 @@ def main(argv: list[str] | None = None) -> None:
     # --- import-neo4j ---
     p_import = sub.add_parser("import-neo4j", help="Import parsed JSON into Neo4j")
     p_import.add_argument("-i", "--input", default="data/parsed", help="Directory with parsed JSON files")
+    p_import.add_argument("-a", "--amends-input", default="data/amends", help="Directory with amends JSON files")
     p_import.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"), help="Neo4j URI (e.g. neo4j://localhost:7687)")
     p_import.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"), help="Neo4j username")
     p_import.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"), help="Neo4j password")
@@ -142,11 +143,24 @@ def main(argv: list[str] | None = None) -> None:
         )
         try:
             importer.ensure_constraints()
+            print(f"Importing parsed directory: {args.input}")
             summary = importer.import_parsed_directory(
                 Path(args.input),
                 fail_fast=args.fail_fast,
             )
             print(json.dumps(summary, ensure_ascii=False, indent=2))
+            
+            amends_dir = Path(args.amends_input)
+            if amends_dir.exists() and amends_dir.is_dir():
+                print(f"Importing amends directory: {args.amends_input}")
+                amends_summary = importer.import_amends_directory(
+                    amends_dir,
+                    fail_fast=args.fail_fast,
+                )
+                print(json.dumps(amends_summary, ensure_ascii=False, indent=2))
+            else:
+                print(f"Amends directory not found or not a directory: {args.amends_input}")
+
         finally:
             importer.close()
 
