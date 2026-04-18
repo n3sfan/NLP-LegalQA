@@ -1,23 +1,36 @@
 from dotenv import load_dotenv
 load_dotenv()
 import os
+import sys
+sys.stdout.reconfigure(encoding="utf-8")
 
 from legal_scraper.embedder import Neo4jEmbedder
 
 e = Neo4jEmbedder(
-    uri="neo4j+ssc://nguyenhoangquan.com:7687",
-    user="neo4j",
-    password="Neoneo4j",
+    uri=os.environ["NEO4J_URI"],
+    user=os.environ["NEO4J_USER"],
+    password=os.environ["NEO4J_PASSWORD"],
+    database=os.environ.get("NEO4J_DATABASE", "neo4j"),
     openrouter_api_key=os.environ["OPENROUTER_API_KEY"],
 )
 
-result = e.decompose_query_debug("Theo quy định mới nhất, trẻ em phải đạt tối thiểu bao nhiêu tuổi VÀ chiều cao bao nhiêu thì mới được phép ngồi ở hàng ghế cạnh người lái xe (ghế phụ phía trước) của ô tô?")
+# Bước 1: decompose
+decomp = e.decompose_query_debug("So sánh mức phạt vượt đèn đỏ của xe ô tô và xe máy?")
 
 print("=== REASONING (CoT) ===")
-print(result.reasoning)
+print(decomp.reasoning)
 print("\n=== SUB-QUERIES ===")
-for sq in result.sub_queries:
-    print(f"  [{sq['label']}] {sq['text']}")
-print(f"\nSuccess: {result.success}")
+for i, sq in enumerate(decomp.sub_queries):
+    print(f"  [{i}] {sq.get('query', sq)}")
+print(f"\nSuccess: {decomp.success}")
+
+if decomp.sub_queries:
+    results = e.multi_search(decomp.sub_queries, k=3)
+    print("\n=== SEARCH RESULTS ===")
+    for idx, hits in results.items():
+        sq = decomp.sub_queries[idx]
+        print(f"\nSQ[{idx}]: {sq.get('query', sq)}")
+        for r in hits:
+            print(f"  uid={r.uid} | label={r.label} | score={r.score:.4f}")
 
 e.close()

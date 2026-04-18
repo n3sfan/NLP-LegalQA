@@ -19,6 +19,7 @@ QUY TẮC TÁCH CÂU HỎI:
    (VD: Câu gốc nhắc đến "xe máy", thì chữ "xe máy" phải xuất hiện trong mọi sub-query để không bị mất bối cảnh khi tìm kiếm độc lập).
 3. Tối thiểu 1 sub-query, tối đa 6 sub-queries.
 4. Chỉ tách câu hỏi, TUYỆT ĐỐI không tự suy diễn câu trả lời.
+5. Nếu câu hỏi dùng từ ngữ đời thường (VD: lấn tuyến, vượt đèn đỏ), hãy chuẩn hóa nó sang thuật ngữ pháp lý tương đương (VD: đi không đúng phần đường, không chấp hành hiệu lệnh đèn tín hiệu) trong sub-query.
 
 Trả lời bằng định dạng JSON array chính xác như sau:
 ```json
@@ -129,7 +130,7 @@ class Neo4jEmbedder:
         if self._embedding_model is None:
             self._embedding_model = VietnameseEmbeddings(
                 model_name="bkai-foundation-models/vietnamese-bi-encoder",
-                model_kwargs={"device": "cuda"},
+                model_kwargs={"device": "cpu"},
                 encode_kwargs={"normalize_embeddings": True},
             )
         return self._embedding_model
@@ -297,6 +298,38 @@ class Neo4jEmbedder:
                 
         return result_map
 
+    def multi_search(
+        self, sub_queries: List[SubQuery], k: int = 5
+    ) -> dict[int, list["SearchResult"]]:
+        """Search each sub-query independently against all node labels.
+
+        Each sub-query is searched against ALL labels (Article, Clause, Point).
+        Results are NOT merged or deduplicated — each sub-query keeps its own results.
+        This preserves independence: the same node can appear in multiple sub-query results.
+
+        Args:
+            sub_queries: List of {"query": "..."} from decompose_query().
+            k: Number of results per label per sub-query.
+
+        Returns:
+            Dict mapping sub-query index -> list of SearchResult.
+        """
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+
+        all_labels = ["Article", "Clause", "Point"]
+        results: dict[int, list[SearchResult]] = {i: [] for i in range(len(sub_queries))}
+
+        with ThreadPoolExecutor(max_workers=min(6, len(sub_queries))) as executor:
+            futures = {
+                executor.submit(self.search, all_labels, sq["query"], k): i
+                for i, sq in enumerate(sub_queries)
+            }
+            for future in as_completed(futures):
+                idx = futures[future]
+                results[idx] = future.result()
+
+        return results
+
     def decompose_query(self, query: str) -> List[SubQuery]:
         """Decompose a complex legal question into independent sub-queries.
 
@@ -349,18 +382,20 @@ class Neo4jEmbedder:
             if not isinstance(parsed, list):
                 return DecomposeResult(sub_queries=[], reasoning=str(raw), success=False)
             validated: List[SubQuery] = [
-                {"label": str(item["label"]), "text": str(item["text"])}
+                {"query": str(item["query"])}
                 for item in parsed
-                if isinstance(item, dict) and "label" in item and "text" in item
+                if isinstance(item, dict) and "query" in item
             ]
             return DecomposeResult(sub_queries=validated, reasoning=str(raw), success=True)
         except Exception:
             # Parser failed: try extracting JSON from raw text instead
-            fallback = _parse_json_fallback(raw.content if hasattr(raw, "content") else str(raw))
+            raw_str = raw.content if hasattr(raw, "content") else str(raw)
+            fallback = _parse_json_fallback(raw_str)
+            validated = [{"query": str(item["query"])} for item in fallback if isinstance(item, dict) and "query" in item]
             return DecomposeResult(
-                sub_queries=fallback,
+                sub_queries=validated,
                 reasoning=str(raw),
-                success=len(fallback) > 0,
+                success=len(validated) > 0,
             )
 
     def decompose_query(self, query: str) -> List[SubQuery]:
@@ -423,17 +458,18 @@ class Neo4jEmbedder:
             if not isinstance(parsed, list):
                 return DecomposeResult(sub_queries=[], reasoning=raw_str, success=False)
             validated: List[SubQuery] = [
-                {"label": str(item["label"]), "text": str(item["text"])}
+                {"query": str(item["query"])}
                 for item in parsed
-                if isinstance(item, dict) and "label" in item and "text" in item
+                if isinstance(item, dict) and "query" in item
             ]
             return DecomposeResult(sub_queries=validated, reasoning=raw_str, success=True)
         except Exception:
             fallback = _parse_json_fallback(raw_str)
+            validated = [{"query": str(item["query"])} for item in fallback if isinstance(item, dict) and "query" in item]
             return DecomposeResult(
-                sub_queries=fallback,
+                sub_queries=validated,
                 reasoning=raw_str,
-                success=len(fallback) > 0,
+                success=len(validated) > 0,
             )
 
     def close(self) -> None:
