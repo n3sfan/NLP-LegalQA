@@ -1,10 +1,60 @@
 from collections import namedtuple
-from typing import List
+from dataclasses import dataclass
+from typing import List, Optional
+import json
 
 from neo4j import GraphDatabase
 from pyvi.ViTokenizer import tokenize
 
 SearchResult = namedtuple("SearchResult", ["uid", "label", "score"])
+
+
+_DECOMPOSE_SYSTEM_PROMPT = """Bạn là hệ thống tiền xử lý truy vấn pháp lý.
+Nhiệm vụ của bạn là phân tích câu hỏi phức tạp của người dùng thành các câu hỏi con (sub-queries) đơn giản và hoàn toàn độc lập, yêu cầu là phải sử dụng các thuật ngữ pháp luật giống với hệ thống pháp luật việt nam.
+
+QUY TẮC TÁCH CÂU HỎI:
+1. Tách bạch các hành vi, đối tượng hoặc vấn đề khác nhau thành các sub-queries riêng biệt. 
+   (VD: "Đi máy vượt đèn đỏ và quên mang bằng lái thì phạt sao?" -> Tách thành 2 truy vấn riêng cho 2 lỗi).
+2. TRUYỀN NGỮ CẢNH: Mỗi sub-query phải tự chứa đầy đủ ngữ cảnh của câu gốc. 
+   (VD: Câu gốc nhắc đến "xe máy", thì chữ "xe máy" phải xuất hiện trong mọi sub-query để không bị mất bối cảnh khi tìm kiếm độc lập).
+3. Tối thiểu 1 sub-query, tối đa 6 sub-queries.
+4. Chỉ tách câu hỏi, TUYỆT ĐỐI không tự suy diễn câu trả lời.
+
+Trả lời bằng định dạng JSON array chính xác như sau:
+```json
+[
+  {{"query": "nội dung câu hỏi con 1 đã có đủ ngữ cảnh"}},
+  {{"query": "nội dung câu hỏi con 2 đã có đủ ngữ cảnh"}}
+]
+```"""
+
+_DECOMPOSE_USER_PROMPT = """Câu hỏi cần phân tích:
+{query}
+
+Hãy suy nghĩ từng bước (chain-of-thought), sau đó trả lời JSON array."""
+
+
+def _parse_json_fallback(text: str) -> List[dict]:
+    """Try to extract JSON array from LLM output, handling markdown code blocks."""
+    text = text.strip()
+    if text.startswith("```"):
+        lines = text.split("\n")
+        text = "\n".join(lines[1:-1])
+    try:
+        parsed = json.loads(text)
+        if isinstance(parsed, list):
+            return parsed
+        return [parsed]
+    except json.JSONDecodeError:
+        # Try extracting first JSON-like block
+        start = text.find("[")
+        end = text.rfind("]") + 1
+        if start != -1 and end > start:
+            try:
+                return json.loads(text[start:end])
+            except json.JSONDecodeError:
+                pass
+        return []
 
 
 class VietnameseEmbeddings:
@@ -33,14 +83,47 @@ class VietnameseEmbeddings:
         return self._embeddings.embed_query(tokenize(text))
 
 
+SubQuery = dict  # {"label": str, "text": str}
+
+
+@dataclass
+class DecomposeResult:
+    """Result of decompose_query_debug(). Holds sub-queries + CoT reasoning."""
+
+    sub_queries: List[SubQuery]
+    reasoning: str  # full raw LLM output (CoT + JSON)
+    success: bool  # True if JSON parsed successfully
+
+
 class Neo4jEmbedder:
-    def __init__(self, uri: str, user: str, password: str, database: str = "neo4j"):
+    def __init__(
+        self,
+        uri: str,
+        user: str,
+        password: str,
+        database: str = "neo4j",
+        openrouter_api_key: Optional[str] = None,
+    ):
         self.uri = uri
         self.user = user
         self.password = password
         self.database = database
         self._driver = None
         self._embedding_model = None
+        self._openrouter_api_key = openrouter_api_key
+        self._llm_model: Optional["ChatOpenAI"] = None
+
+    def _get_llm_model(self) -> "ChatOpenAI":
+        if self._llm_model is None:
+            from langchain_openai import ChatOpenAI  # type: ignore[attr-defined]
+
+            self._llm_model = ChatOpenAI(
+                model="google/gemma-4-26b-a4b-it:free",
+                api_key=self._openrouter_api_key,
+                base_url="https://openrouter.ai/api/v1",
+                timeout=60,
+            )
+        return self._llm_model
 
     def _get_embedding_model(self):
         if self._embedding_model is None:
@@ -137,7 +220,7 @@ class Neo4jEmbedder:
         """Fetch content and title for nodes by (uid, label).
 
         Uses a single Cypher query per label.
-        Returns a dict keyed by (uid, label) → {"content": str, "title": str|None}.
+        Returns a dict keyed by (uid, label) -> {"content": str, "title": str|None}.
         Title is non-null only for Article nodes.
         Missing nodes are silently omitted from the result dict.
         """
@@ -213,6 +296,145 @@ class Neo4jEmbedder:
                 result_map[uid] = full_text.strip()
                 
         return result_map
+
+    def decompose_query(self, query: str) -> List[SubQuery]:
+        """Decompose a complex legal question into independent sub-queries.
+
+        Calls OpenRouter (gemma-4-26b-it) to split the original question into
+        a list of sub-queries, each targeting the correct node type
+        (Article / Clause / Point).
+        Automatically retries with exponential backoff on 429 rate-limit errors.
+
+        Args:
+            query: Original Vietnamese question.
+
+        Returns:
+            List of {"label": "Article"|"Clause"|"Point", "text": str}.
+            Returns empty list if LLM output cannot be parsed as JSON.
+
+        Raises:
+            RuntimeError: If openrouter_api_key was not set at init.
+        """
+        if self._openrouter_api_key is None:
+            raise RuntimeError(
+                "openrouter_api_key not set. "
+                "Pass openrouter_api_key when initializing Neo4jEmbedder."
+            )
+
+        from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+        from langchain_core.messages import HumanMessage, SystemMessage
+        from langchain_core.output_parsers import JsonOutputParser
+
+        llm = self._get_llm_model()
+        parser = JsonOutputParser()
+        messages = [
+            SystemMessage(content=_DECOMPOSE_SYSTEM_PROMPT),
+            HumanMessage(content=_DECOMPOSE_USER_PROMPT.format(query=query)),
+        ]
+
+        @retry(
+            retry=retry_if_exception_type(Exception),
+            stop=stop_after_attempt(5),
+            wait=wait_exponential(multiplier=10, min=10, max=120),
+            reraise=True,
+        )
+        def _call_llm():
+            return llm.invoke(messages)
+
+        # Call LLM once with retry — do NOT call again in except block
+        raw = _call_llm()
+
+        try:
+            parsed = parser.invoke(raw)
+            if not isinstance(parsed, list):
+                return DecomposeResult(sub_queries=[], reasoning=str(raw), success=False)
+            validated: List[SubQuery] = [
+                {"label": str(item["label"]), "text": str(item["text"])}
+                for item in parsed
+                if isinstance(item, dict) and "label" in item and "text" in item
+            ]
+            return DecomposeResult(sub_queries=validated, reasoning=str(raw), success=True)
+        except Exception:
+            # Parser failed: try extracting JSON from raw text instead
+            fallback = _parse_json_fallback(raw.content if hasattr(raw, "content") else str(raw))
+            return DecomposeResult(
+                sub_queries=fallback,
+                reasoning=str(raw),
+                success=len(fallback) > 0,
+            )
+
+    def decompose_query(self, query: str) -> List[SubQuery]:
+        """Alias for decompose_query_debug(). Returns only sub-queries list.
+
+        Args:
+            query: Original Vietnamese question.
+
+        Returns:
+            List of {"label": "Article"|"Clause"|"Point", "text": str}.
+            Returns empty list if LLM output cannot be parsed as JSON.
+        """
+        result = self.decompose_query_debug(query)
+        return result.sub_queries
+
+    def decompose_query_debug(self, query: str) -> DecomposeResult:
+        """Decompose a complex legal question into independent sub-queries (debug mode).
+
+        Calls OpenRouter (gemma-4-26b-a4b-it:free) to split the original question.
+        Returns DecomposeResult with sub-queries, full CoT reasoning, and success flag.
+        Useful for inspecting how the model decomposes the query.
+
+        Args:
+            query: Original Vietnamese question.
+
+        Returns:
+            DecomposeResult(sub_queries, reasoning, success).
+        """
+        if self._openrouter_api_key is None:
+            raise RuntimeError(
+                "openrouter_api_key not set. "
+                "Pass openrouter_api_key when initializing Neo4jEmbedder."
+            )
+
+        from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+        from langchain_core.messages import HumanMessage, SystemMessage
+        from langchain_core.output_parsers import JsonOutputParser
+
+        llm = self._get_llm_model()
+        parser = JsonOutputParser()
+        messages = [
+            SystemMessage(content=_DECOMPOSE_SYSTEM_PROMPT),
+            HumanMessage(content=_DECOMPOSE_USER_PROMPT.format(query=query)),
+        ]
+
+        @retry(
+            retry=retry_if_exception_type(Exception),
+            stop=stop_after_attempt(5),
+            wait=wait_exponential(multiplier=10, min=10, max=120),
+            reraise=True,
+        )
+        def _call_llm():
+            return llm.invoke(messages)
+
+        raw = _call_llm()
+        raw_str = raw.content if hasattr(raw, "content") else str(raw)
+
+        try:
+            parsed = parser.invoke(raw)
+            if not isinstance(parsed, list):
+                return DecomposeResult(sub_queries=[], reasoning=raw_str, success=False)
+            validated: List[SubQuery] = [
+                {"label": str(item["label"]), "text": str(item["text"])}
+                for item in parsed
+                if isinstance(item, dict) and "label" in item and "text" in item
+            ]
+            return DecomposeResult(sub_queries=validated, reasoning=raw_str, success=True)
+        except Exception:
+            fallback = _parse_json_fallback(raw_str)
+            return DecomposeResult(
+                sub_queries=fallback,
+                reasoning=raw_str,
+                success=len(fallback) > 0,
+            )
 
     def close(self) -> None:
         if self._driver:

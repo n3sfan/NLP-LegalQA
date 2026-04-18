@@ -28,12 +28,6 @@ uv run legal-scraper parse -i data/ -o data/parsed/
 # Parse a single document by GUID stem
 uv run legal-scraper parse -d e97b70fe-0672-4800-3bfb-39d6be8eb58d
 
-# Extract amendment relationships from parsed documents
-uv run legal-scraper amend -i data/parsed/ -o data/amends/
-
-# Extract amendments from a single document
-uv run legal-scraper amend -d e97b70fe-0672-4800-3bfb-39d6be8eb58d -i data/parsed/ -o data/amends/
-
 # Import parsed JSON into Neo4j
 uv run legal-scraper import-neo4j \
   -i data/parsed \
@@ -48,6 +42,24 @@ uv run legal-scraper embed \
   --user neo4j \
   --password <password> \
   --node-labels Article Clause Point
+
+# Search vector indexes and return ranked results with content
+uv run legal-scraper vector-search \
+  --uri "neo4j+ssc://<host>:7687" \
+  --user neo4j \
+  --password <password> \
+  --query "không đội mũ bảo hiểm phạt bao nhiêu" \
+  --labels Article Clause Point --k 5
+
+# Start the QA annotation web tool (requires annotate extra)
+uv run annotate
+```
+
+## Running Tests
+
+```bash
+uv run pytest                    # all tests
+uv run pytest tests/test_neo4j_importer.py  # single file
 ```
 
 ## Project Structure
@@ -58,16 +70,23 @@ src/legal_scraper/
   scraper.py          - High-level scraper: search, fetch, parse HTML, save .txt + .json
   parser.py           - Metadata + content parsers producing Neo4j-ready structured JSON
   models.py           - Dataclasses for all graph node types (Document, Chapter, Article, etc.)
-  amend_extractor.py  - Amendment extraction using NuExtract API
   neo4j_importer.py   - MERGE-based importer for parsed JSON into Neo4j (single-pass, idempotent)
-  embedder.py         - Neo4j vector embedding via LangChain HuggingFaceEmbeddings + Neo4jVector
-  cli.py              - CLI entry point (search, scrape, get, parse, amend, import-neo4j, embed commands)
+  embedder.py         - Neo4j vector embedding via LangChain + Neo4jVector; also handles vector search
+                        and hierarchy fetching (variable-length path queries)
+  reranker.py         - Vietnamese cross-encoder reranker (AITeamVN/Vietnamese_Reranker, FP16)
+  cli.py              - CLI entry point (search, scrape, get, parse, import-neo4j, embed, vector-search)
+src/annotate_qa/       - Standalone FastAPI server for QA reference annotation
+  server.py           - FastAPI app: serves index.html, exposes /api/search and /api/article endpoints
+  search.py           - In-memory SearchIndex (ArticleEntry, ClauseEntry, PointEntry)
+  static/index.html   - Frontend for browsing and annotating QA references
 data/                - Scraped document output (plain text + JSON metadata)
 data/parsed/         - Parsed structured JSON output (one file per document)
 data/amends/         - Extracted amendment relationships JSON output
-docs/plans/          - Design and implementation plans
 tests/
-  test_neo4j_importer.py  - Unit tests for Neo4j importer
+  test_neo4j_importer.py  - Unit tests for UID builders, constraint statements, payload loading
+  test_embedder.py         - Unit tests for Neo4jEmbedder init and lazy driver
+  test_hierarchy_fetch.py  - Integration script: fetch_node_hierarchy via variable-length path query
+  test_reranker.py         - Integration script: vector search → fetch hierarchy → cross-encoder rerank
 ```
 
 ## API Endpoints
@@ -178,15 +197,4 @@ e.close()
 
 Returns `List[SearchResult(uid, label, score)]`, sorted by cosine similarity descending. Pass a single label string instead of a list to search just one index.
 
-### CLI embed command
-
-```bash
-# Generate embeddings for specified node labels
-uv run legal-scraper embed \
-  --uri "neo4j+ssc://<host>:7687" \
-  --user neo4j \
-  --password <password> \
-  --node-labels Article Clause Point
-```
-
-Embeddings are stored in the `embedding` property on each node. The command is idempotent — nodes that already have an embedding are skipped on re-run.
+Vector indexes are created per node label (e.g. `Article_embedding_index`). Embeddings are idempotent — re-runs skip nodes that already have an embedding.
