@@ -20,7 +20,8 @@ QUY TẮC TÁCH CÂU HỎI:
 3. Tối thiểu 1 sub-query, tối đa 6 sub-queries.
 4. Chỉ tách câu hỏi, TUYỆT ĐỐI không tự suy diễn câu trả lời.
 5. Nếu câu hỏi dùng từ ngữ đời thường (VD: lấn tuyến, vượt đèn đỏ), hãy chuẩn hóa nó sang thuật ngữ pháp lý tương đương (VD: đi không đúng phần đường, không chấp hành hiệu lệnh đèn tín hiệu) trong sub-query.
-
+6. Biến đổi query gốc dạng câu hỏi thành dạng không câu hỏi (declarative statement) trong sub-query để tăng khả năng tìm kiếm chính xác của vector search.
+   (VD: "Đi máy vượt đèn đỏ thì bị phạt thế nào?" -> "Không chấp hành hiệu lệnh đèn tín hiệu.").
 Trả lời bằng định dạng JSON array chính xác như sau:
 ```json
 [
