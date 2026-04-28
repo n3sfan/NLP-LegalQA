@@ -17,12 +17,20 @@ def build_part_uid(doc_identity: str, number: str) -> str:
     return f"{doc_identity}::part::{number}"
 
 
-def build_chapter_uid(doc_identity: str, number: str) -> str:
+def build_chapter_uid(doc_identity: str, number: str, parent_part: str | None = None) -> str:
+    if parent_part:
+        return f"{doc_identity}::part::{parent_part}::chapter::{number}"
     return f"{doc_identity}::chapter::{number}"
 
 
-def build_section_uid(doc_identity: str, number: str) -> str:
-    return f"{doc_identity}::section::{number}"
+def build_section_uid(doc_identity: str, number: str, parent_chapter: str | None = None, parent_part: str | None = None) -> str:
+    uid = f"{doc_identity}"
+    if parent_part:
+        uid += f"::part::{parent_part}"
+    if parent_chapter:
+        uid += f"::chapter::{parent_chapter}"
+    uid += f"::section::{number}"
+    return uid
 
 
 def build_article_uid(doc_identity: str, number: str) -> str:
@@ -357,7 +365,7 @@ class Neo4jImporter:
 
         # Chapters
         for ch in nodes.get("chapters", []):
-            uid = build_chapter_uid(doc_identity, ch["number"])
+            uid = build_chapter_uid(doc_identity, ch["number"], ch.get("parent_part"))
             tx.run(
                 """
                 MERGE (n:Chapter {uid: $uid})
@@ -377,7 +385,9 @@ class Neo4jImporter:
 
         # Sections
         for sec in nodes.get("sections", []):
-            uid = build_section_uid(doc_identity, sec["number"])
+            uid = build_section_uid(
+                doc_identity, sec["number"], sec.get("parent_chapter"), sec.get("parent_part")
+            )
             tx.run(
                 """
                 MERGE (n:Section {uid: $uid})
@@ -511,9 +521,17 @@ class Neo4jImporter:
         if from_label == "Part":
             return build_part_uid(doc_identity, from_id)
         if from_label == "Chapter":
-            return build_chapter_uid(doc_identity, from_id)
+            parts = from_id.split(".")
+            if len(parts) == 2:
+                return build_chapter_uid(doc_identity, parts[1], parts[0])
+            return build_chapter_uid(doc_identity, parts[0])
         if from_label == "Section":
-            return build_section_uid(doc_identity, from_id)
+            parts = from_id.split(".")
+            if len(parts) == 3:
+                return build_section_uid(doc_identity, parts[2], parts[1], parts[0])
+            if len(parts) == 2:
+                return build_section_uid(doc_identity, parts[1], parts[0])
+            return build_section_uid(doc_identity, parts[0])
         if from_label == "Article":
             return build_article_uid(doc_identity, from_id)
         if from_label == "Clause":
@@ -532,9 +550,17 @@ class Neo4jImporter:
         if to_label == "Part":
             return build_part_uid(doc_identity, to_id)
         if to_label == "Chapter":
-            return build_chapter_uid(doc_identity, to_id)
+            parts = to_id.split(".")
+            if len(parts) == 2:
+                return build_chapter_uid(doc_identity, parts[1], parts[0])
+            return build_chapter_uid(doc_identity, parts[0])
         if to_label == "Section":
-            return build_section_uid(doc_identity, to_id)
+            parts = to_id.split(".")
+            if len(parts) == 3:
+                return build_section_uid(doc_identity, parts[2], parts[1], parts[0])
+            if len(parts) == 2:
+                return build_section_uid(doc_identity, parts[1], parts[0])
+            return build_section_uid(doc_identity, parts[0])
         if to_label == "Article":
             return build_article_uid(doc_identity, to_id)
         if to_label == "Clause":
@@ -589,6 +615,107 @@ class Neo4jImporter:
             "rel_count": rel_count,
             "errors": errors,
         }
+
+    # ── Amends import ────────────────────────────────────────────────────────
+
+    def import_amends_directory(
+        self,
+        input_dir: Path,
+        pattern: str = "*.json",
+        fail_fast: bool = False,
+    ) -> dict[str, Any]:
+        """
+        Import all 'amends' JSON files from *input_dir*.
+
+        Returns a summary dict:
+          total, succeeded, failed, rel_count, errors
+        """
+        files = sorted(input_dir.glob(pattern))
+        succeeded = 0
+        failed = 0
+        rel_count = 0
+        errors: list[dict[str, str]] = []
+
+        for path in files:
+            try:
+                counters = self.import_amends_file(path)
+                rel_count += counters.get("rels", 0)
+                succeeded += 1
+            except Exception as exc:  # pragma: no cover
+                errors.append({"file": path.name, "error": str(exc)})
+                failed += 1
+                if fail_fast:
+                    break
+
+        return {
+            "total": len(files),
+            "succeeded": succeeded,
+            "failed": failed,
+            "rel_count": rel_count,
+            "errors": errors,
+        }
+
+    def import_amends_file(self, path: Path) -> dict[str, int]:
+        """
+        Import relationships from a single amends JSON file into Neo4j.
+        """
+        payload = load_parsed_payload(path)
+        amends: list[dict[str, Any]] = payload.get("amends", [])
+
+        if not amends:
+            return {"rels": 0}
+
+        counters: dict[str, int] = {"rels": 0}
+
+        with self.driver.session(database=self.database) as session:
+            result = session.execute_write(self._tx_import_amends, amends)
+            counters.update(result)
+
+        return counters
+
+    def _tx_import_amends(self, tx, amends_list: list[dict[str, Any]]) -> dict[str, int]:
+        count = 0
+        for amend in amends_list:
+            # Source resolution
+            src_doc = amend.get("amending_doc_identity")
+            src_art = amend.get("amending_article")
+            src_cl  = amend.get("amending_clause")
+            src_pt  = amend.get("amending_point")
+            src_label, src_uid = self._resolve_amend_node_uid(src_doc, src_art, src_cl, src_pt)
+
+            # Target resolution
+            tgt_doc = amend.get("target_doc_identity")
+            tgt_art = amend.get("target_article")
+            tgt_cl  = amend.get("target_clause")
+            tgt_pt  = amend.get("target_point")
+            tgt_label, tgt_uid = self._resolve_amend_node_uid(tgt_doc, tgt_art, tgt_cl, tgt_pt)
+
+            amend_type = amend.get("amend_type", "sửa đổi")
+
+            tx.run(
+                f"""
+                MATCH (source:{src_label} {{uid: $src_uid}})
+                MATCH (target:{tgt_label} {{uid: $tgt_uid}})
+                MERGE (source)-[r:AMENDS]->(target)
+                SET r.type = $amend_type
+                """,
+                src_uid=src_uid,
+                tgt_uid=tgt_uid,
+                amend_type=amend_type,
+            )
+            count += 1
+
+        return {"rels": count}
+
+    def _resolve_amend_node_uid(
+        self, doc_identity: str, article: str | None, clause: str | None, point: str | None
+    ) -> tuple[str, str]:
+        if point:
+            return "Point", build_point_uid(doc_identity, article, clause, point)
+        elif clause:
+            return "Clause", build_clause_uid(doc_identity, article, clause)
+        else:
+            return "Article", build_article_uid(doc_identity, article)
 
 
 # ── ID property helpers ──────────────────────────────────────────────────────

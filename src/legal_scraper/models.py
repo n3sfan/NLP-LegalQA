@@ -93,6 +93,7 @@ class Section:
     title: str
     doc_identity: str
     parent_chapter: Optional[str]
+    parent_part: Optional[str]
     order: int
     content: str = ""
 
@@ -104,6 +105,7 @@ class Article:
     doc_identity: str
     parent_chapter: Optional[str]
     parent_section: Optional[str]
+    parent_part: Optional[str]
     order: int
     content: str = ""
 
