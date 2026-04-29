@@ -283,7 +283,14 @@ class Neo4jEmbedder:
                         title = n.get("title")
                         context_lines.append(f"Điều {n.get('number')}: {title}" if title else f"Điều {n.get('number')}")
                     elif label == "Clause":
-                        context_lines.append(f"Khoản {n.get('number')}.")
+                        if n == hierarchy_nodes[-1]:
+                            context_lines.append(f"Khoản {n.get('number')}.")
+                        else:
+                            clause_content = n.get('content', '').strip()
+                            if clause_content:
+                                context_lines.append(f"Khoản {n.get('number')}.\n{clause_content}")
+                            else:
+                                context_lines.append(f"Khoản {n.get('number')}.")
                     elif label == "Point":
                         context_lines.append(f"Điểm {n.get('letter')}.")
 
@@ -297,6 +304,49 @@ class Neo4jEmbedder:
                 full_text = header_text + "\nNội dung: " + main_content if main_content else header_text
                 result_map[uid] = full_text.strip()
                 
+        return result_map
+
+    def fetch_amends(self, uids: list[str]) -> dict[str, list[dict]]:
+        """Fetch amends for the given node UIDs.
+        
+        An item is considered amended if it is amended directly or if any of its parent nodes
+        (Article, Chapter, etc.) are amended.
+        Returns a mapping from target_uid to a list of amendment dictionaries.
+        """
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH path = (d:Document)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *]->(target)
+        WHERE target.uid = target_uid
+        WITH target_uid, nodes(path) AS hierarchy_nodes
+        UNWIND hierarchy_nodes AS h_node
+        MATCH (amending_doc:Document)-[*]->(amending_node)-[r:AMENDS]->(h_node)
+        RETURN target_uid,
+               amending_node.uid AS amending_uid,
+               amending_doc.effect_date AS effect_date,
+               labels(amending_node) AS amending_labels,
+               amending_node.content AS amending_content,
+               h_node.uid AS amended_uid,
+               labels(h_node) AS amended_labels
+        """
+        result_map: dict[str, list[dict]] = {uid: [] for uid in uids}
+        if not uids:
+            return result_map
+            
+        with self._get_driver().session(database=self.database) as session:
+            result = session.run(query, uids=uids)
+            for record in result:
+                target_uid = record["target_uid"]
+                amending_labels = record["amending_labels"]
+                amended_labels = record["amended_labels"]
+                
+                result_map[target_uid].append({
+                    "amending_uid": record["amending_uid"],
+                    "effect_date": record["effect_date"],
+                    "amending_label": amending_labels[0] if amending_labels else "Unknown",
+                    "amending_content": record["amending_content"],
+                    "amended_uid": record["amended_uid"],
+                    "amended_label": amended_labels[0] if amended_labels else "Unknown"
+                })
         return result_map
 
     def multi_search(

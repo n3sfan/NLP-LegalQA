@@ -276,6 +276,9 @@ def main(argv: list[str] | None = None) -> None:
             print("Reranking results...")
             reranked = reranker.rerank(args.query, documents, top_k=args.top_k)
 
+            top_k_uids = [valid_results[idx].uid for (idx, _) in reranked]
+            amends_map = embedder.fetch_amends(top_k_uids)
+
             print("\n=== TOP RESULTS (RERANKED) ===")
             for rank, (idx, rerank_score) in enumerate(reranked, 1):
                 orig_res = valid_results[idx]
@@ -289,8 +292,17 @@ def main(argv: list[str] | None = None) -> None:
                 else:
                     content_display = content
 
-                print(f"[{rank}] [{orig_res.label}] rerank_score={rerank_score:.4f}  (vec_score={orig_res.score:.4f})  uid={orig_res.uid}")
+                print(f"\n[{rank}] [{orig_res.label}] rerank_score={rerank_score:.4f}  (vec_score={orig_res.score:.4f})  uid={orig_res.uid}")
                 print(f"  ---\n  {content_display}\n  ---")
+                
+                amends = amends_map.get(orig_res.uid, [])
+                if amends:
+                    print(f"  [!] NOTE: This content or its parent has been amended ({len(amends)} items):")
+                    for amend in amends:
+                        eff_date = amend.get('effect_date')
+                        eff_str = f" (Effective: {eff_date[:10]})" if eff_date and len(eff_date) >= 10 else ""
+                        print(f"      - Amended by: {amend['amending_uid']}{eff_str} (applied to {amend['amended_label']} {amend['amended_uid']})")
+                        print(f"        Content: {amend['amending_content']}")
         finally:
             embedder.close()
         return
