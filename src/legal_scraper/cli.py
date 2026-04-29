@@ -93,6 +93,24 @@ def main(argv: list[str] | None = None) -> None:
     p_vs.add_argument("--k", type=int, default=5, help="Top-k results per label (default: 5)")
     p_vs.add_argument("--full", action="store_true", help="Show full content instead of truncated")
 
+    # --- search-rerank ---
+    p_vsr = sub.add_parser("search-rerank", help="Perform vector search and rerank results with cross-encoder")
+    p_vsr.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"), help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
+    p_vsr.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_vsr.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_vsr.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
+    p_vsr.add_argument("--query", "-q", required=True, help="Vietnamese text query")
+    p_vsr.add_argument(
+        "--labels",
+        nargs="+",
+        default=["Article", "Clause", "Point"],
+        choices=["Article", "Clause", "Point"],
+        help="Node labels to search (default: Article Clause Point)",
+    )
+    p_vsr.add_argument("--fetch-k", type=int, default=30, help="Initial top-k candidates per label from vector search (default: 30)")
+    p_vsr.add_argument("--top-k", type=int, default=5, help="Final top-k results to display after reranking (default: 5)")
+    p_vsr.add_argument("--full", action="store_true", help="Show full content instead of truncated")
+
     args = parser.parse_args(argv)
 
     if args.command == "search":
@@ -218,6 +236,60 @@ def main(argv: list[str] | None = None) -> None:
                 print(f"[{rank}] [{r.label}] score={r.score:.4f}  uid={r.uid}")
                 if r.label == "Article" and title:
                     print(f"  Title: {title}")
+                print(f"  ---\n  {content_display}\n  ---")
+        finally:
+            embedder.close()
+        return
+
+    elif args.command == "search-rerank":
+        from legal_scraper.reranker import VietnameseReranker
+        embedder = Neo4jEmbedder(
+            uri=args.uri,
+            user=args.user,
+            password=args.password,
+            database=args.database,
+        )
+        try:
+            print(f"Executing Vector Search for: '{args.query}'...")
+            search_results = embedder.search(args.labels, args.query, k=args.fetch_k)
+            search_results = search_results[:args.fetch_k]
+            
+            if not search_results:
+                print("No results found.")
+                return
+
+            uids = [res.uid for res in search_results]
+            print(f"Found {len(search_results)} relevant nodes. Fetching context hierarchies...")
+            hierarchy_map = embedder.fetch_node_hierarchy(uids)
+
+            documents = []
+            valid_results = []
+            
+            for res in search_results:
+                if res.uid in hierarchy_map:
+                    documents.append(hierarchy_map[res.uid])
+                    valid_results.append(res)
+            
+            print(f"Mapped hierarchies for {len(documents)} nodes. Loading reranker...")
+            reranker = VietnameseReranker()
+            
+            print("Reranking results...")
+            reranked = reranker.rerank(args.query, documents, top_k=args.top_k)
+
+            print("\n=== TOP RESULTS (RERANKED) ===")
+            for rank, (idx, rerank_score) in enumerate(reranked, 1):
+                orig_res = valid_results[idx]
+                content = documents[idx]
+
+                if not args.full:
+                    if len(content) > 300:
+                        content_display = content[:300] + f"\n  ... ({len(content)} chars total)"
+                    else:
+                        content_display = content
+                else:
+                    content_display = content
+
+                print(f"[{rank}] [{orig_res.label}] rerank_score={rerank_score:.4f}  (vec_score={orig_res.score:.4f})  uid={orig_res.uid}")
                 print(f"  ---\n  {content_display}\n  ---")
         finally:
             embedder.close()
