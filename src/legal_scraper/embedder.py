@@ -1,4 +1,5 @@
 from collections import namedtuple
+import os
 from dataclasses import dataclass
 from typing import List, Optional
 import json
@@ -8,34 +9,83 @@ from pyvi.ViTokenizer import tokenize
 
 SearchResult = namedtuple("SearchResult", ["uid", "label", "score"])
 
+_DECOMPOSE_SYSTEM_PROMPT = """Bạn là chuyên gia tiền xử lý truy vấn pháp lý cho hệ thống RAG.
 
-_DECOMPOSE_SYSTEM_PROMPT = """Bạn là hệ thống tiền xử lý truy vấn pháp lý.
-Nhiệm vụ của bạn là phân tích câu hỏi phức tạp của người dùng thành các câu hỏi con (sub-queries) đơn giản và hoàn toàn độc lập, yêu cầu là phải sử dụng các thuật ngữ pháp luật giống với hệ thống pháp luật việt nam.
+Nhiệm vụ:
+Phân tích câu hỏi của người dùng thành các sub-query ngắn, độc lập, chuẩn hóa theo thuật ngữ pháp luật Việt Nam, để phục vụ tìm kiếm văn bản pháp luật.
 
-QUY TẮC TÁCH CÂU HỎI:
-1. Tách bạch các hành vi, đối tượng hoặc vấn đề khác nhau thành các sub-queries riêng biệt. 
-   (VD: "Đi máy vượt đèn đỏ và quên mang bằng lái thì phạt sao?" -> Tách thành 2 truy vấn riêng cho 2 lỗi).
-2. TRUYỀN NGỮ CẢNH: Mỗi sub-query phải tự chứa đầy đủ ngữ cảnh của câu gốc. 
-   (VD: Câu gốc nhắc đến "xe máy", thì chữ "xe máy" phải xuất hiện trong mọi sub-query để không bị mất bối cảnh khi tìm kiếm độc lập).
-3. Tối thiểu 1 sub-query, tối đa 6 sub-queries.
-4. Chỉ tách câu hỏi, TUYỆT ĐỐI không tự suy diễn câu trả lời.
-5. Nếu câu hỏi dùng từ ngữ đời thường (VD: lấn tuyến, vượt đèn đỏ), hãy chuẩn hóa nó sang thuật ngữ pháp lý tương đương (VD: đi không đúng phần đường, không chấp hành hiệu lệnh đèn tín hiệu) trong sub-query.
-6. Biến đổi query gốc dạng câu hỏi thành dạng không câu hỏi (declarative statement) trong sub-query để tăng khả năng tìm kiếm chính xác của vector search.
-   (VD: "Đi máy vượt đèn đỏ thì bị phạt thế nào?" -> "Không chấp hành hiệu lệnh đèn tín hiệu.").
-Trả lời bằng định dạng JSON array chính xác như sau:
-```json
+Nguyên tắc bắt buộc:
+1. Chỉ tách khi thật sự có nhiều vấn đề pháp lý khác nhau.
+   - Nếu câu hỏi chỉ chứa 1 hành vi, 1 yêu cầu, hoặc 1 vấn đề pháp lý duy nhất, KHÔNG tách nhỏ.
+   - Khi đó, chỉ trả về 1 sub-query đã được chuẩn hóa.
+
+2. Tách đúng một vấn đề pháp lý cho mỗi sub-query.
+   - Mỗi hành vi vi phạm, mỗi nghĩa vụ, mỗi quyền, mỗi yêu cầu xử lý pháp lý phải là một sub-query riêng.
+   - Không gộp nhiều lỗi hoặc nhiều căn cứ pháp lý khác nhau trong cùng một sub-query.
+
+3. Giữ đủ ngữ cảnh cần thiết.
+   - Mỗi sub-query phải tự đủ nghĩa khi đứng một mình.
+   - Phải giữ các thông tin quan trọng như: chủ thể, phương tiện, hành vi, hậu quả, quan hệ pháp lý.
+   - Nếu phương tiện được suy ra rõ từ ngữ cảnh, hãy nêu rõ theo cách pháp lý phù hợp.
+
+4. Chuẩn hóa sang thuật ngữ pháp luật Việt Nam.
+   - Dùng ngôn ngữ pháp lý hoặc hành chính tương ứng.
+   - Chuyển từ ngữ đời thường sang cách diễn đạt chính thức.
+   - Ví dụ:
+     - "nhậu xỉn", "say xỉn" -> "điều khiển phương tiện mà trong máu hoặc hơi thở có nồng độ cồn"
+     - "lấn tuyến" -> "đi không đúng phần đường, làn đường"
+     - "tông xe làm hư xe người ta" -> "gây tai nạn giao thông làm hư hỏng tài sản của người khác"
+
+5. Bảo toàn mục đích tra cứu.
+   - Nếu câu hỏi gốc hỏi về mức phạt, phải giữ các từ khóa như "mức xử phạt", "xử phạt vi phạm hành chính".
+   - Nếu hỏi về bồi thường, phải giữ "trách nhiệm bồi thường thiệt hại".
+   - Nếu hỏi về hình sự, phải giữ "truy cứu trách nhiệm hình sự" hoặc cụm tương đương phù hợp.
+
+6. Viết sub-query dưới dạng cụm từ tìm kiếm, không viết thành câu hỏi.
+   - Không dùng từ nghi vấn như: ai, gì, thế nào, bao nhiêu, không hay chỉ.
+   - Ưu tiên cụm danh từ hoặc cụm pháp lý ngắn, rõ ràng.
+
+7. Chỉ dùng dữ kiện có thật trong câu gốc.
+   - Không tự suy diễn thêm lỗi, hậu quả, hay căn cứ pháp lý không được nêu ra.
+   - Không tự mở rộng sang hành vi khác nếu người dùng không nhắc đến.
+
+8. Số lượng:
+   - Tối thiểu 1 sub-query, tối đa 6 sub-queries.
+   - Nếu chỉ có một vấn đề pháp lý duy nhất, trả về đúng 1 sub-query.
+   - Loại bỏ các sub-query trùng ý hoặc quá gần nhau.
+
+Quy tắc đầu ra:
+- Chỉ trả về JSON array hợp lệ.
+- Mỗi phần tử có đúng một khóa: "query".
+- Không bọc trong markdown.
+- Không giải thích.
+- Không thêm bất kỳ văn bản nào khác.
+
+Định dạng bắt buộc:
 [
-  {{"query": "nội dung câu hỏi con 1 đã có đủ ngữ cảnh"}},
-  {{"query": "nội dung câu hỏi con 2 đã có đủ ngữ cảnh"}}
+  {"query": "sub-query 1"},
+  {"query": "sub-query 2"}
 ]
-```"""
+Ví dụ mẫu:
+User: "Chạy xe máy vượt đèn đỏ tông hư rào nhà người ta thì đi tù không hay chỉ đền tiền?"
+Output:
+[
+  {"query": "Mức xử phạt vi phạm hành chính hành vi điều khiển xe mô tô, xe gắn máy không chấp hành hiệu lệnh đèn tín hiệu giao thông"},
+  {"query": "Trách nhiệm bồi thường thiệt hại dân sự do tai nạn giao thông gây thiệt hại tài sản của người khác"},
+  {"query": "Căn cứ truy cứu trách nhiệm hình sự đối với hành vi vi phạm quy định về tham gia giao thông đường bộ gây thiệt hại tài sản"}
+]
+"""
 
 _DECOMPOSE_USER_PROMPT = """Câu hỏi cần phân tích:
 {query}
 
-Hãy suy nghĩ từng bước (chain-of-thought), sau đó trả lời JSON array."""
-
-
+Yêu cầu:
+- Trả về đúng một JSON array.
+- Không dùng markdown, không dùng code fence.
+- Không giải thích, không bình luận, không thêm chữ ngoài JSON.
+- Nếu câu hỏi chỉ có một vấn đề pháp lý duy nhất, chỉ trả về 1 phần tử đã chuẩn hóa.
+- Output phải bắt đầu bằng [ và kết thúc bằng ].
+"""
 def _parse_json_fallback(text: str) -> List[dict]:
     """Try to extract JSON array from LLM output, handling markdown code blocks."""
     text = text.strip()
@@ -104,7 +154,7 @@ class Neo4jEmbedder:
         user: str,
         password: str,
         database: str = "neo4j",
-        openrouter_api_key: Optional[str] = None,
+        local_model_url: Optional[str] = None,
     ):
         self.uri = uri
         self.user = user
@@ -112,20 +162,9 @@ class Neo4jEmbedder:
         self.database = database
         self._driver = None
         self._embedding_model = None
-        self._openrouter_api_key = openrouter_api_key
-        self._llm_model: Optional["ChatOpenAI"] = None
-
-    def _get_llm_model(self) -> "ChatOpenAI":
-        if self._llm_model is None:
-            from langchain_openai import ChatOpenAI  # type: ignore[attr-defined]
-
-            self._llm_model = ChatOpenAI(
-                model="google/gemma-4-26b-a4b-it:free",
-                api_key=self._openrouter_api_key,
-                base_url="https://openrouter.ai/api/v1",
-                timeout=60,
-            )
-        return self._llm_model
+        self.local_model_url = local_model_url or os.getenv(
+            "LOCAL_MODEL_URL", "https://vitalize-compacter-nephew.ngrok-free.dev/generate"
+        )
 
     def _get_embedding_model(self):
         if self._embedding_model is None:
@@ -397,56 +436,44 @@ class Neo4jEmbedder:
     def decompose_query_debug(self, query: str) -> DecomposeResult:
         """Decompose a complex legal question into independent sub-queries (debug mode).
 
-        Calls OpenRouter (gemma-4-26b-a4b-it:free) to split the original question.
-        Returns DecomposeResult with sub-queries, full CoT reasoning, and success flag.
+        Calls local Gemma model to split the original question.
+        Returns DecomposeResult with sub-queries, raw response, and success flag.
         Useful for inspecting how the model decomposes the query.
 
         Args:
             query: Original Vietnamese question.
 
         Returns:
-            DecomposeResult(sub_queries, reasoning, success).
+            DecomposeResult(sub_queries, raw_response, success).
         """
-        if self._openrouter_api_key is None:
-            raise RuntimeError(
-                "openrouter_api_key not set. "
-                "Pass openrouter_api_key when initializing Neo4jEmbedder."
-            )
-
+        import requests
         from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
-        from langchain_core.messages import HumanMessage, SystemMessage
-        from langchain_core.output_parsers import JsonOutputParser
 
-        llm = self._get_llm_model()
-        parser = JsonOutputParser()
-        messages = [
-            SystemMessage(content=_DECOMPOSE_SYSTEM_PROMPT),
-            HumanMessage(content=_DECOMPOSE_USER_PROMPT.format(query=query)),
-        ]
+        prompt_text = f"<start_of_turn>user\n{_DECOMPOSE_SYSTEM_PROMPT}\n\n{_DECOMPOSE_USER_PROMPT.format(query=query)}<end_of_turn>\n<start_of_turn>model\n"
 
         @retry(
             retry=retry_if_exception_type(Exception),
-            stop=stop_after_attempt(5),
+            stop=stop_after_attempt(3),
             wait=wait_exponential(multiplier=10, min=10, max=120),
             reraise=True,
         )
         def _call_llm():
-            return llm.invoke(messages)
-
-        raw = _call_llm()
-        raw_str = raw.content if hasattr(raw, "content") else str(raw)
+            data = {
+                "prompt": prompt_text,
+                "max_new_tokens": 512,
+                "temperature": 0.1
+            }
+            headers = {
+                "ngrok-skip-browser-warning": "true",
+                "Content-Type": "application/json"
+            }
+            response = requests.post(self.local_model_url, json=data, headers=headers)
+            response.raise_for_status()
+            return response.json()["response"]
 
         try:
-            parsed = parser.invoke(raw)
-            if not isinstance(parsed, list):
-                return DecomposeResult(sub_queries=[], reasoning=raw_str, success=False)
-            validated: List[SubQuery] = [
-                {"query": str(item["query"])}
-                for item in parsed
-                if isinstance(item, dict) and "query" in item
-            ]
-            return DecomposeResult(sub_queries=validated, reasoning=raw_str, success=True)
-        except Exception:
+            raw_str = _call_llm()
+            print(f"--- RAW LLM OUTPUT ---\n{raw_str}\n----------------------") # Add this line
             fallback = _parse_json_fallback(raw_str)
             validated = [{"query": str(item["query"])} for item in fallback if isinstance(item, dict) and "query" in item]
             return DecomposeResult(
@@ -454,6 +481,8 @@ class Neo4jEmbedder:
                 reasoning=raw_str,
                 success=len(validated) > 0,
             )
+        except Exception as e:
+            return DecomposeResult(sub_queries=[], reasoning=str(e), success=False)
 
     def close(self) -> None:
         if self._driver:
