@@ -23,7 +23,6 @@ def embedder():
         user=os.environ["NEO4J_USER"],
         password=os.environ["NEO4J_PASSWORD"],
         database=os.environ.get("NEO4J_DATABASE", "neo4j"),
-        local_model_url=os.environ.get("LOCAL_MODEL_URL", "https://vitalize-compacter-nephew.ngrok-free.dev/generate"),
     )
     yield e
     e.close()
@@ -161,21 +160,28 @@ def test_full_retrieval_pipeline_with_rerank(embedder):
 
 def test_decompose_demo(embedder, capsys):
     """Demo: full decompose → multi_search → fetch → rerank workflow."""
+    from legal_scraper.query_parser import QueryDecomposer
+    decomposer = QueryDecomposer()
+    
     query = "Tui nhậu xỉn xong lái xe mà đụng xe, làm hư điện thoại của người khác xong làm người ta bị thương, đồng thời vượt đèn đỏ thì bị phạt bao nhiêu?"
-    decomp = embedder.decompose_query_debug(query)
+    try:
+        sub_queries = decomposer.decompose(query)
+        success = True
+    except Exception as e:
+        print(f"Decomposition failed: {e}")
+        sub_queries = []
+        success = False
 
-    print("=== RAW LLM RESPONSE ===")
-    print(decomp.reasoning)
     print("\n=== SUB-QUERIES ===")
-    for i, sq in enumerate(decomp.sub_queries):
+    for i, sq in enumerate(sub_queries):
         print(f"  [{i}] {sq.get('query', sq)}")
-    print(f"\nSuccess: {decomp.success}")
+    print(f"\nSuccess: {success}")
 
-    if not decomp.sub_queries:
+    if not sub_queries:
         pytest.skip("Decomposition failed, skipping rerank demo")
         return
 
-    results = embedder.multi_search(decomp.sub_queries, k=5)
+    results = embedder.multi_search(sub_queries, k=5)
     all_uids = [r.uid for hits in results.values() for r in hits]
     all_labels = list({r.label for hits in results.values() for r in hits})
     node_contents = embedder.fetch_nodes(all_uids, list(set(all_labels)))
@@ -184,7 +190,7 @@ def test_decompose_demo(embedder, capsys):
 
     print("\n=== SCORE COMPARISON ===")
     for idx, hits in results.items():
-        sq = decomp.sub_queries[idx]
+        sq = sub_queries[idx]
         query_text = sq.get("query", sq)
         docs, doc_map = [], []
         for r in hits:

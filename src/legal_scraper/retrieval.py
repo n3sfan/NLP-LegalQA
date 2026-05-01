@@ -113,8 +113,12 @@ def full_retrieval_pipeline(
         Final list of SearchResult, sorted by final score.
     """
     if decomposition:
-        sub_queries = embedder.decompose_query(query)
-        if not sub_queries:
+        from legal_scraper.query_parser import QueryDecomposer
+        try:
+            decomposer = QueryDecomposer()
+            sub_queries = decomposer.decompose(query)
+        except Exception as e:
+            print(f"Decomposition failed, falling back to original query: {e}")
             sub_queries = [{"query": query}]
     else:
         sub_queries = [{"query": query}]

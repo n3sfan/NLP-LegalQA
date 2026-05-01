@@ -9,105 +9,6 @@ from pyvi.ViTokenizer import tokenize
 
 SearchResult = namedtuple("SearchResult", ["uid", "label", "score"])
 
-_DECOMPOSE_SYSTEM_PROMPT = """Bạn là chuyên gia tiền xử lý truy vấn pháp lý cho hệ thống RAG.
-
-Nhiệm vụ:
-Phân tích câu hỏi của người dùng thành các sub-query ngắn, độc lập, chuẩn hóa theo thuật ngữ pháp luật Việt Nam, để phục vụ tìm kiếm văn bản pháp luật.
-
-Nguyên tắc bắt buộc:
-1. Chỉ tách khi thật sự có nhiều vấn đề pháp lý khác nhau.
-   - Nếu câu hỏi chỉ chứa 1 hành vi, 1 yêu cầu, hoặc 1 vấn đề pháp lý duy nhất, KHÔNG tách nhỏ.
-   - Khi đó, chỉ trả về 1 sub-query đã được chuẩn hóa.
-
-2. Tách đúng một vấn đề pháp lý cho mỗi sub-query.
-   - Mỗi hành vi vi phạm, mỗi nghĩa vụ, mỗi quyền, mỗi yêu cầu xử lý pháp lý phải là một sub-query riêng.
-   - Không gộp nhiều lỗi hoặc nhiều căn cứ pháp lý khác nhau trong cùng một sub-query.
-
-3. Giữ đủ ngữ cảnh cần thiết.
-   - Mỗi sub-query phải tự đủ nghĩa khi đứng một mình.
-   - Phải giữ các thông tin quan trọng như: chủ thể, phương tiện, hành vi, hậu quả, quan hệ pháp lý.
-   - Nếu phương tiện được suy ra rõ từ ngữ cảnh, hãy nêu rõ theo cách pháp lý phù hợp.
-
-4. Chuẩn hóa sang thuật ngữ pháp luật Việt Nam.
-   - Dùng ngôn ngữ pháp lý hoặc hành chính tương ứng.
-   - Chuyển từ ngữ đời thường sang cách diễn đạt chính thức.
-   - Ví dụ:
-     - "nhậu xỉn", "say xỉn" -> "điều khiển phương tiện mà trong máu hoặc hơi thở có nồng độ cồn"
-     - "lấn tuyến" -> "đi không đúng phần đường, làn đường"
-     - "tông xe làm hư xe người ta" -> "gây tai nạn giao thông làm hư hỏng tài sản của người khác"
-
-5. Bảo toàn mục đích tra cứu.
-   - Nếu câu hỏi gốc hỏi về mức phạt, phải giữ các từ khóa như "mức xử phạt", "xử phạt vi phạm hành chính".
-   - Nếu hỏi về bồi thường, phải giữ "trách nhiệm bồi thường thiệt hại".
-   - Nếu hỏi về hình sự, phải giữ "truy cứu trách nhiệm hình sự" hoặc cụm tương đương phù hợp.
-
-6. Viết sub-query dưới dạng cụm từ tìm kiếm, không viết thành câu hỏi.
-   - Không dùng từ nghi vấn như: ai, gì, thế nào, bao nhiêu, không hay chỉ.
-   - Ưu tiên cụm danh từ hoặc cụm pháp lý ngắn, rõ ràng.
-
-7. Chỉ dùng dữ kiện có thật trong câu gốc.
-   - Không tự suy diễn thêm lỗi, hậu quả, hay căn cứ pháp lý không được nêu ra.
-   - Không tự mở rộng sang hành vi khác nếu người dùng không nhắc đến.
-
-8. Số lượng:
-   - Tối thiểu 1 sub-query, tối đa 6 sub-queries.
-   - Nếu chỉ có một vấn đề pháp lý duy nhất, trả về đúng 1 sub-query.
-   - Loại bỏ các sub-query trùng ý hoặc quá gần nhau.
-
-Quy tắc đầu ra:
-- Chỉ trả về JSON array hợp lệ.
-- Mỗi phần tử có đúng một khóa: "query".
-- Không bọc trong markdown.
-- Không giải thích.
-- Không thêm bất kỳ văn bản nào khác.
-
-Định dạng bắt buộc:
-[
-  {"query": "sub-query 1"},
-  {"query": "sub-query 2"}
-]
-Ví dụ mẫu:
-User: "Chạy xe máy vượt đèn đỏ tông hư rào nhà người ta thì đi tù không hay chỉ đền tiền?"
-Output:
-[
-  {"query": "Mức xử phạt vi phạm hành chính hành vi điều khiển xe mô tô, xe gắn máy không chấp hành hiệu lệnh đèn tín hiệu giao thông"},
-  {"query": "Trách nhiệm bồi thường thiệt hại dân sự do tai nạn giao thông gây thiệt hại tài sản của người khác"},
-  {"query": "Căn cứ truy cứu trách nhiệm hình sự đối với hành vi vi phạm quy định về tham gia giao thông đường bộ gây thiệt hại tài sản"}
-]
-"""
-
-_DECOMPOSE_USER_PROMPT = """Câu hỏi cần phân tích:
-{query}
-
-Yêu cầu:
-- Trả về đúng một JSON array.
-- Không dùng markdown, không dùng code fence.
-- Không giải thích, không bình luận, không thêm chữ ngoài JSON.
-- Nếu câu hỏi chỉ có một vấn đề pháp lý duy nhất, chỉ trả về 1 phần tử đã chuẩn hóa.
-- Output phải bắt đầu bằng [ và kết thúc bằng ].
-"""
-def _parse_json_fallback(text: str) -> List[dict]:
-    """Try to extract JSON array from LLM output, handling markdown code blocks."""
-    text = text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        text = "\n".join(lines[1:-1])
-    try:
-        parsed = json.loads(text)
-        if isinstance(parsed, list):
-            return parsed
-        return [parsed]
-    except json.JSONDecodeError:
-        # Try extracting first JSON-like block
-        start = text.find("[")
-        end = text.rfind("]") + 1
-        if start != -1 and end > start:
-            try:
-                return json.loads(text[start:end])
-            except json.JSONDecodeError:
-                pass
-        return []
-
 
 class VietnameseEmbeddings:
     """Custom LangChain Embeddings wrapper for Vietnamese word segmentation.
@@ -135,17 +36,6 @@ class VietnameseEmbeddings:
         return self._embeddings.embed_query(tokenize(text))
 
 
-SubQuery = dict  # {"label": str, "text": str}
-
-
-@dataclass
-class DecomposeResult:
-    """Result of decompose_query_debug(). Holds sub-queries + CoT reasoning."""
-
-    sub_queries: List[SubQuery]
-    reasoning: str  # full raw LLM output (CoT + JSON)
-    success: bool  # True if JSON parsed successfully
-
 
 class Neo4jEmbedder:
     def __init__(
@@ -154,7 +44,6 @@ class Neo4jEmbedder:
         user: str,
         password: str,
         database: str = "neo4j",
-        local_model_url: Optional[str] = None,
     ):
         self.uri = uri
         self.user = user
@@ -162,9 +51,6 @@ class Neo4jEmbedder:
         self.database = database
         self._driver = None
         self._embedding_model = None
-        self.local_model_url = local_model_url or os.getenv(
-            "LOCAL_MODEL_URL", "https://vitalize-compacter-nephew.ngrok-free.dev/generate"
-        )
 
     def _get_embedding_model(self):
         if self._embedding_model is None:
@@ -389,7 +275,7 @@ class Neo4jEmbedder:
         return result_map
 
     def multi_search(
-        self, sub_queries: List[SubQuery], k: int = 5
+        self, sub_queries: List[dict], k: int = 5
     ) -> dict[int, list["SearchResult"]]:
         """Search each sub-query independently against all node labels.
 
@@ -420,69 +306,6 @@ class Neo4jEmbedder:
 
         return results
 
-    def decompose_query(self, query: str) -> List[SubQuery]:
-        """Alias for decompose_query_debug(). Returns only sub-queries list.
-
-        Args:
-            query: Original Vietnamese question.
-
-        Returns:
-            List of {"label": "Article"|"Clause"|"Point", "text": str}.
-            Returns empty list if LLM output cannot be parsed as JSON.
-        """
-        result = self.decompose_query_debug(query)
-        return result.sub_queries
-
-    def decompose_query_debug(self, query: str) -> DecomposeResult:
-        """Decompose a complex legal question into independent sub-queries (debug mode).
-
-        Calls local Gemma model to split the original question.
-        Returns DecomposeResult with sub-queries, raw response, and success flag.
-        Useful for inspecting how the model decomposes the query.
-
-        Args:
-            query: Original Vietnamese question.
-
-        Returns:
-            DecomposeResult(sub_queries, raw_response, success).
-        """
-        import requests
-        from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
-
-        prompt_text = f"<start_of_turn>user\n{_DECOMPOSE_SYSTEM_PROMPT}\n\n{_DECOMPOSE_USER_PROMPT.format(query=query)}<end_of_turn>\n<start_of_turn>model\n"
-
-        @retry(
-            retry=retry_if_exception_type(Exception),
-            stop=stop_after_attempt(3),
-            wait=wait_exponential(multiplier=10, min=10, max=120),
-            reraise=True,
-        )
-        def _call_llm():
-            data = {
-                "prompt": prompt_text,
-                "max_new_tokens": 512,
-                "temperature": 0.1
-            }
-            headers = {
-                "ngrok-skip-browser-warning": "true",
-                "Content-Type": "application/json"
-            }
-            response = requests.post(self.local_model_url, json=data, headers=headers)
-            response.raise_for_status()
-            return response.json()["response"]
-
-        try:
-            raw_str = _call_llm()
-            print(f"--- RAW LLM OUTPUT ---\n{raw_str}\n----------------------") # Add this line
-            fallback = _parse_json_fallback(raw_str)
-            validated = [{"query": str(item["query"])} for item in fallback if isinstance(item, dict) and "query" in item]
-            return DecomposeResult(
-                sub_queries=validated,
-                reasoning=raw_str,
-                success=len(validated) > 0,
-            )
-        except Exception as e:
-            return DecomposeResult(sub_queries=[], reasoning=str(e), success=False)
 
     def close(self) -> None:
         if self._driver:

@@ -339,9 +339,12 @@ def main(argv: list[str] | None = None) -> None:
         try:
             # Step 1: Retrieval (decompose or single search)
             if args.decompose:
-                sub_queries = embedder.decompose_query(args.query)
-                if not sub_queries:
-                    print("Decomposition failed, falling back to single query.")
+                from legal_scraper.query_parser import QueryDecomposer
+                try:
+                    decomposer = QueryDecomposer()
+                    sub_queries = decomposer.decompose(args.query)
+                except Exception as e:
+                    print(f"Decomposition failed: {e}. Falling back to single query.")
                     sub_queries = [{"query": args.query}]
                 raw_results = embedder.multi_search(sub_queries, k=args.fetch_k)
                 search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
