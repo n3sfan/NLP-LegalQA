@@ -44,6 +44,10 @@ def load_template(filename: str) -> str:
         raise FileNotFoundError(f"Template not found: {filename}")
     return p.read_text(encoding="utf-8")
 
+def is_relevant(retrieved_uid: str, reference: str) -> bool:
+    """Return True if `retrieved_uid` shares a prefix with `reference`."""
+    return str(retrieved_uid).startswith(str(reference))
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Core Logic
 # ─────────────────────────────────────────────────────────────────────────────
@@ -62,6 +66,7 @@ async def evaluate_qa(
     batch_size: int = 10,
     limit: Optional[int] = None,
     print_every: int = 5,
+    start_index: int = 0,
 ):
     """Main evaluation loop for Legal QA using ground truth references."""
     output_p = Path(output_dir)
@@ -77,8 +82,11 @@ async def evaluate_qa(
     if limit:
         df = df.head(limit)
     
+    if start_index > 0:
+        df = df.iloc[start_index:]
+    
     n_questions = len(df)
-    log.info("Starting QA generation on %d questions", n_questions)
+    log.info("Starting QA generation on %d questions (from index %d)", n_questions, start_index)
 
     # Initialize Neo4j driver
     driver = GraphDatabase.driver(
@@ -114,22 +122,39 @@ async def evaluate_qa(
         csv.DictWriter(f, fieldnames=fieldnames).writeheader()
 
     for idx, row in enumerate(df.itertuples(), 1):
-        qid = str(row.id)
-        question = str(row.question)
-        expert_answer = str(row.answer)
+        # Safely get columns, handle potential NaN values
+        def get_val(attr, default=""):
+            val = getattr(row, attr, default)
+            return str(val).strip() if pd.notna(val) else default
+
+        qid = get_val("id", str(idx))
+        question = get_val("question")
+        expert_answer = get_val("answer", get_val("references"))
         
-        # Parse reference UIDs (ground truth)
-        raw_refs = str(getattr(row, "reference", "")).strip()
-        # Split by comma or semicolon
-        uids = [r.strip() for r in raw_refs.replace(";", ",").split(",") if r.strip()]
+        # Parse reference UIDs: Prioritize top 5 from retrieved_uids if available
+        if hasattr(row, "retrieved_uids"):
+            raw_retrieved = getattr(row, "retrieved_uids", "")
+            if pd.isna(raw_retrieved): raw_retrieved = ""
+            uids = [r.strip() for r in str(raw_retrieved).split(";") if r.strip()][:5]
+        else:
+            raw_refs = get_val("reference", get_val("references"))
+            uids = [r.strip() for r in raw_refs.replace(";", ",").split(",") if r.strip()]
+
+        # Parse ground-truth references to check for full coverage
+        ref_list = [r.strip() for r in get_val("references").replace(";", ",").split(",") if r.strip()]
+        
+        # Check if all ground-truth references are present in the top-5 uids (Recall@5 == 1.0)
+        found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
+        if ref_list and len(found_refs) < len(ref_list):
+            if (idx-1) % print_every == 0 or idx == n_questions:
+                log.info("[%d/%d] Skipping QID: %s (Recall@5 < 1.0)", idx, n_questions, qid)
+            continue
 
         if (idx-1) % print_every == 0 or idx == n_questions:
             log.info("[%d/%d] Processing QID: %s", idx, n_questions, qid)
 
         # 1. Fetch Law Text
-        uid_to_text, _ = fetch_law_texts(driver, uids, batch_size=batch_size)
-        # Join all referenced law texts
-        law_text = "\n\n".join(uid_to_text.values())
+        _, _, law_text = fetch_law_texts(driver, uids, batch_size=batch_size)
 
         if not law_text:
             log.warning("No law text found for QID %s (references: %s)", qid, uids)
@@ -162,7 +187,7 @@ async def evaluate_qa(
                 "generated_answer": generated_answer,
                 "expert_answer": expert_answer,
                 "latency_ms": round(duration, 1),
-                "law_text_preview": law_text[:500].replace("\n", " ") if law_text else ""
+                "law_text_preview": law_text if law_text else ""
             }
             
             with open(results_path, "a", newline="", encoding="utf-8") as f:
@@ -178,8 +203,8 @@ async def evaluate_qa(
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Generate Legal QA answers from ground truth references")
-    parser.add_argument("--dataset", type=str, default="qa_dataset/QA_NLP.csv", help="QA dataset path")
-    parser.add_argument("--output", type=str, default="eval_results/", help="Output directory")
+    parser.add_argument("--dataset", type=str, default="eval_results_reranker/row_results_reranker.csv", help="QA dataset path")
+    parser.add_argument("--output", type=str, default="eval_results_qa_reranker/", help="Output directory")
     parser.add_argument("--prompt-template", type=str, default="prompt_qa_0shot.md", help="QA prompt template filename")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
     parser.add_argument("--backend", type=str, default="vllm", help="Backend type")
@@ -192,6 +217,7 @@ def main():
     parser.add_argument("--password", type=str, default="Neoneo4j", help="Neo4j password")
     parser.add_argument("--database", type=str, default="neo4j", help="Neo4j database name")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
+    parser.add_argument("--start-index", type=int, default=0, help="Starting row index in the dataset (0-based)")
 
     args = parser.parse_args()
 
@@ -207,7 +233,8 @@ def main():
         neo4j_password=args.password,
         neo4j_database=args.database,
         limit=args.limit,
-        print_every=args.print_every
+        print_every=args.print_every,
+        start_index=args.start_index
     ))
 
 if __name__ == "__main__":

@@ -22,10 +22,15 @@ def test_fetch_article():
     print(f"--- Testing fetch_law_texts for UID: {uid} ---")
     
     try:
-        uid_to_text, nodes = fetch_law_texts(driver, [uid])
+        uid_to_text, nodes, merged_text = fetch_law_texts(driver, [uid])
         
+        print("\n[ASSEMBLED LAW TEXT (MERGED)]")
+        print("--------------------")
+        print(merged_text)
+        print("--------------------")
+
+        print("\n[PER-UID LAW TEXT]")
         text = uid_to_text.get(uid, "NOT FOUND")
-        print("\n[ASSEMBLED LAW TEXT]")
         print("--------------------")
         print(text)
         print("--------------------")

@@ -412,6 +412,141 @@ def compute_model_metrics(rows: list[dict], model: str) -> dict:
     }
 
 
+def assemble_merged_law_text(uids: list[str], nodes: dict[str, dict], doc_names: dict[str, str]) -> str:
+    """Assembles a single clean text from multiple UIDs, avoiding duplicate headers.
+
+    Groups by Law -> Article -> Clause -> Point.
+    Matches hierarchy in _build_law_text for Articles (includes all descendants).
+    """
+    if not uids:
+        return ""
+
+    # Group by Law -> Article -> Clause -> Point
+    hierarchy: dict[str, dict] = {}
+    for uid in uids:
+        parts = uid.split("::")
+        doc_id = parts[0]
+        if doc_id not in hierarchy:
+            hierarchy[doc_id] = {}
+
+        if len(parts) >= 3 and parts[1] == "article":
+            art_id = parts[2]
+            if art_id not in hierarchy[doc_id]:
+                hierarchy[doc_id][art_id] = {}
+
+            if len(parts) >= 5 and parts[3] == "clause":
+                cl_id = parts[4]
+                if cl_id not in hierarchy[doc_id][art_id]:
+                    hierarchy[doc_id][art_id][cl_id] = []
+
+                if len(parts) >= 7 and parts[5] == "point":
+                    pt_letter = parts[6]
+                    if pt_letter not in hierarchy[doc_id][art_id][cl_id]:
+                        hierarchy[doc_id][art_id][cl_id].append(pt_letter)
+                else:
+                    if None not in hierarchy[doc_id][art_id][cl_id]:
+                        hierarchy[doc_id][art_id][cl_id].append(None)
+            else:
+                if None not in hierarchy[doc_id][art_id]:
+                    hierarchy[doc_id][art_id][None] = []
+
+    def _sort_key(x):
+        try:
+            return int(x)
+        except (ValueError, TypeError):
+            return x or ""
+
+    final_output = []
+    for doc_id in sorted(hierarchy.keys()):
+        doc_header = (doc_names.get(doc_id) or "").strip()
+        doc_articles = []
+
+        articles = hierarchy[doc_id]
+        for art_id in sorted(articles.keys(), key=_sort_key):
+            art_lines = []
+            art_uid = f"{doc_id}::article::{art_id}"
+            art_node = nodes.get(art_uid)
+            if not art_node:
+                continue
+
+            art_title = _prefix_article_title((art_node.get("title") or "").strip(), art_uid)
+            art_lines.append(art_title)
+
+            if None in articles[art_id]:
+                # Article itself requested -> show content + ALL descendants
+                art_c = (art_node.get("content") or "").strip()
+                if art_c:
+                    art_lines.append(art_c)
+
+                # All clauses from nodes
+                art_prefix = art_uid + "::clause::"
+                sub_cl_uids = sorted(
+                    [u for u in nodes if u.startswith(art_prefix) and len(u.split("::")) == 5],
+                    key=lambda u: _sort_key(u.split("::")[4])
+                )
+                for cuid in sub_cl_uids:
+                    cn = nodes[cuid]
+                    cc = (cn.get("content") or "").strip()
+                    if cc:
+                        art_lines.append(_prefix_clause_content(cc, cuid))
+
+                    pt_prefix = cuid + "::point::"
+                    sub_pt_uids = sorted(
+                        [u for u in nodes if u.startswith(pt_prefix) and len(u.split("::")) == 7],
+                        key=lambda u: u.split("::")[-1]
+                    )
+                    for puid in sub_pt_uids:
+                        pn = nodes[puid]
+                        pc = (pn.get("content") or "").strip()
+                        if pc:
+                            art_lines.append(_prefix_point_content(pc, puid))
+            else:
+                # Selective clauses/points
+                clauses = articles[art_id]
+                for cl_id in sorted(clauses.keys(), key=_sort_key):
+                    cl_uid = f"{art_uid}::clause::{cl_id}"
+                    cl_node = nodes.get(cl_uid)
+                    if not cl_node:
+                        continue
+
+                    cc = (cl_node.get("content") or "").strip()
+                    if cc:
+                        art_lines.append(_prefix_clause_content(cc, cl_uid))
+
+                    if None in clauses[cl_id]:
+                        # Clause itself requested -> include ALL points under it
+                        pt_prefix = cl_uid + "::point::"
+                        sub_pt_uids = sorted(
+                            [u for u in nodes if u.startswith(pt_prefix) and len(u.split("::")) == 7],
+                            key=lambda u: u.split("::")[-1]
+                        )
+                        for puid in sub_pt_uids:
+                            pn = nodes[puid]
+                            pc = (pn.get("content") or "").strip()
+                            if pc:
+                                art_lines.append(_prefix_point_content(pc, puid))
+                    else:
+                        # Only explicitly requested points
+                        pt_letters = sorted([p for p in clauses[cl_id] if p is not None])
+                        for pt_letter in pt_letters:
+                            puid = f"{cl_uid}::point::{pt_letter}"
+                            pn = nodes.get(puid)
+                            if pn:
+                                pc = (pn.get("content") or "").strip()
+                                if pc:
+                                    art_lines.append(_prefix_point_content(pc, puid))
+            
+            doc_articles.append("\n".join(art_lines))
+
+        doc_body = "\n\n".join(doc_articles)
+        if doc_header:
+            final_output.append(f"{doc_header}\n{doc_body}")
+        else:
+            final_output.append(doc_body)
+
+    return "\n\n".join(final_output)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Incremental CSV writer (append-safe, no duplicates on re-run)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -429,14 +564,14 @@ def _write_rows_incremental(path: Path, rows: list[dict], fieldnames: list[str])
 # Reusable Law Text Fetching
 # ─────────────────────────────────────────────────────────────────────────────
 
-def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict[str, str], dict[str, dict]]:
+def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict[str, str], dict[str, dict], str]:
     """Fetches law nodes from Neo4j and assembles context-aware law text strings.
 
     Returns:
-        (uid_to_text, all_nodes_map)
+        (uid_to_text, all_nodes_map, merged_text)
     """
     if not uids:
-        return {}, {}
+        return {}, {}, ""
 
     # 1. Collect all parent UIDs needed for Article/Clause context
     all_needed: set[str] = set()
@@ -455,13 +590,13 @@ def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict
         batch = list(all_needed)[batch_start:batch_start + batch_size]
         nodes.update(_fetch_nodes_sync(driver, batch))
 
-    # 2.5 Fetch all descendants for Article nodes among requested UIDs
-    article_uids = [
+    # 2.5 Fetch all descendants for Article/Clause nodes among requested UIDs
+    parent_uids = [
         uid for uid in uids
-        if nodes.get(uid, {}).get("label") == "Article"
+        if nodes.get(uid, {}).get("label") in ["Article", "Clause"]
     ]
-    if article_uids:
-        nodes.update(_fetch_descendants_sync(driver, article_uids))
+    if parent_uids:
+        nodes.update(_fetch_descendants_sync(driver, parent_uids))
 
     # 3. Resolve doc_name per unique doc_identity
     identities = list({
@@ -486,7 +621,10 @@ def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict
         doc_name = doc_names.get(doc_identity) if doc_identity else None
         uid_to_text[uid] = _build_law_text(node, parent_article, parent_clause, doc_name, nodes)
 
-    return uid_to_text, nodes
+    # 5. Build single merged text (deduplicated headers)
+    merged_text = assemble_merged_law_text(uids, nodes, doc_names)
+
+    return uid_to_text, nodes, merged_text
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -513,9 +651,12 @@ async def evaluate(
     n_gpu_layers: int = 0,
     n_ctx: int = 4096,
     print_every: int = 5,
+    start_index: int = 0,
 ) -> None:
     df = pd.read_csv(input_path)
-    log.info("Loaded %d rows from %s", len(df), input_path)
+    if start_index > 0:
+        df = df.iloc[start_index:]
+    log.info("Loaded dataset. Processing from index %d (%d rows) from %s", start_index, len(df), input_path)
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -604,7 +745,7 @@ async def evaluate(
                 continue
 
             # Fetch law texts and metadata for all retrieved UIDs
-            uid_to_law_text, nodes = fetch_law_texts(driver, retrieved_uids, batch_size=batch_size)
+            uid_to_law_text, nodes, _ = fetch_law_texts(driver, retrieved_uids, batch_size=batch_size)
 
             for uid in retrieved_uids:
                 law_text = uid_to_law_text.get(uid, "")
@@ -811,13 +952,9 @@ def main():
         default=0,
         help="Number of GPU layers for llama_cpp (0 = CPU, increase for GPU offload; T4: try 20-35)",
     )
-    parser.add_argument(
-        "--n-ctx",
-        type=int,
-        default=4096,
-        help="Context window size for llama_cpp",
-    )
+    parser.add_argument("--n-ctx", type=int, default=4096, help="Context window size for llama_cpp")
     parser.add_argument("--batch-size", type=int, default=10, help="Neo4j fetch batch size")
+    parser.add_argument("--start-index", type=int, default=0, help="Starting row index in the dataset (0-based)")
     args = parser.parse_args()
 
     # Env var fallbacks
@@ -845,6 +982,7 @@ def main():
         n_gpu_layers=args.n_gpu_layers,
         n_ctx=args.n_ctx,
         print_every=args.print_every,
+        start_index=args.start_index,
     ))
 
 
