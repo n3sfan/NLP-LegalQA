@@ -31,6 +31,7 @@ uv run legal-scraper parse -d e97b70fe-0672-4800-3bfb-39d6be8eb58d
 # Import parsed JSON into Neo4j
 uv run legal-scraper import-neo4j \
   -i data/parsed \
+  -a data/amends \
   --uri "neo4j+ssc://<host>:7687" \
   --user neo4j \
   --password <password> \
@@ -41,7 +42,8 @@ uv run legal-scraper embed \
   --uri "neo4j+ssc://<host>:7687" \
   --user neo4j \
   --password <password> \
-  --node-labels Article Clause Point
+  --node-labels Article Clause Point \
+  --batch-size 32
 
 # Search vector indexes and return ranked results with content
 uv run legal-scraper vector-search \
@@ -49,9 +51,17 @@ uv run legal-scraper vector-search \
   --user neo4j \
   --password <password> \
   --query "không đội mũ bảo hiểm phạt bao nhiêu" \
-  --labels Article Clause Point --k 5
+  --labels Article Clause Point --k 5 --full
 
-# Start the QA annotation web tool (requires annotate extra)
+# Perform vector search followed by cross-encoder reranking
+uv run legal-scraper search-rerank \
+  --uri "neo4j+ssc://<host>:7687" \
+  --user neo4j \
+  --password <password> \
+  --query "không đội mũ bảo hiểm phạt bao nhiêu" \
+  --fetch-k 30 --top-k 5 --full
+
+# Start the QA annotation web tool
 uv run annotate
 ```
 
@@ -89,11 +99,34 @@ tests/
   test_reranker.py         - Integration script: vector search → fetch hierarchy → cross-encoder rerank
 ```
 
-## API Endpoints
+## External API Endpoints (phapluat.gov.vn)
 
 - `POST /api/legal-documents` — search with keywords, date range, filters
 - `GET /api/legal-documents/detail?docGUId=...&tabName=tomtat` — document summary/metadata
 - `GET /api/legal-documents/detail?docGUId=...&tabName=noidung` — full document content (HTML)
+
+## QA Annotation Tool
+
+A standalone FastAPI server (`src/annotate_qa`) with an integrated frontend for browsing, searching, and annotating reference answers. It writes directly to `qa_dataset/QA_NLP.csv` and builds an in-memory search index from the `data/parsed` JSONs.
+
+### Run Server
+
+```bash
+uv run annotate
+```
+*Server runs at `http://localhost:8000`*
+
+### Endpoints
+
+**CSV Management:**
+- `GET /api/rows` — get all QA rows
+- `GET /api/rows/{row_id}` — get a single row
+- `POST /api/rows/{row_id}` — update the `reference` of a row
+- `POST /api/save` — save all modified rows to CSV
+
+**Entity Search:**
+- `GET /api/search?q=...` — semantic search returning matching articles, clauses, and points
+- `GET /api/article?doc_identity=...&article_num=...` — fetch children of an article
 
 ## Knowledge Graph Schema
 
@@ -127,6 +160,7 @@ tests/
 ```bash
 uv run legal-scraper import-neo4j \
   -i data/parsed \
+  -a data/amends \
   --uri "neo4j+ssc://<host>:7687" \
   --user neo4j \
   --password <password> \

@@ -17,6 +17,7 @@ from legal_scraper.embedder import Neo4jEmbedder
 
 def main(argv: list[str] | None = None) -> None:
     load_dotenv()
+    sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Scrape Vietnamese legal documents from phapluat.gov.vn")
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -92,6 +93,47 @@ def main(argv: list[str] | None = None) -> None:
     )
     p_vs.add_argument("--k", type=int, default=5, help="Top-k results per label (default: 5)")
     p_vs.add_argument("--full", action="store_true", help="Show full content instead of truncated")
+
+    # --- search-rerank ---
+    p_vsr = sub.add_parser("search-rerank", help="Perform vector search and rerank results with cross-encoder")
+    p_vsr.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"), help="Neo4j connection URI (e.g. neo4j+ssc://host:7687)")
+    p_vsr.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_vsr.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_vsr.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
+    p_vsr.add_argument("--query", "-q", required=True, help="Vietnamese text query")
+    p_vsr.add_argument(
+        "--labels",
+        nargs="+",
+        default=["Article", "Clause", "Point"],
+        choices=["Article", "Clause", "Point"],
+        help="Node labels to search (default: Article Clause Point)",
+    )
+    p_vsr.add_argument("--fetch-k", type=int, default=30, help="Initial top-k candidates per label from vector search (default: 30)")
+    p_vsr.add_argument("--top-k", type=int, default=5, help="Final top-k results to display after reranking (default: 5)")
+    p_vsr.add_argument("--full", action="store_true", help="Show full content instead of truncated")
+
+    # --- query (full pipeline) ---
+    p_query = sub.add_parser("query", help="Full retrieval pipeline: decompose → search → aggregate → rerank with amends")
+    p_query.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"))
+    p_query.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_query.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_query.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
+    p_query.add_argument("--query", "-q", required=True, help="Vietnamese text query")
+    p_query.add_argument(
+        "--labels",
+        nargs="+",
+        default=["Article", "Clause", "Point"],
+        choices=["Article", "Clause", "Point"],
+    )
+    p_query.add_argument("--decompose", dest="decompose", action="store_true", help="Enable query decomposition (default)")
+    p_query.add_argument("--no-decompose", dest="decompose", action="store_false", help="Disable query decomposition")
+    p_query.set_defaults(decompose=True)
+    p_query.add_argument("--aggregate", choices=["rrf", "borda", "max"], default="rrf", help="Aggregation strategy (default: rrf)")
+    p_query.add_argument("--fetch-k", type=int, default=30, help="Initial candidates per sub-query/label (default: 30)")
+    p_query.add_argument("--top-k", type=int, default=5, help="Final results after reranking (default: 5)")
+    p_query.add_argument("--full", action="store_true", help="Show full content")
+    p_query.add_argument("--no-hierarchy", dest="hierarchy", action="store_false", help="Skip hierarchy fetching (default: fetch)")
+    p_query.set_defaults(hierarchy=True)
 
     args = parser.parse_args(argv)
 
@@ -219,6 +261,150 @@ def main(argv: list[str] | None = None) -> None:
                 if r.label == "Article" and title:
                     print(f"  Title: {title}")
                 print(f"  ---\n  {content_display}\n  ---")
+        finally:
+            embedder.close()
+        return
+
+    elif args.command == "search-rerank":
+        from legal_scraper.reranker import VietnameseReranker
+        embedder = Neo4jEmbedder(
+            uri=args.uri,
+            user=args.user,
+            password=args.password,
+            database=args.database,
+        )
+        try:
+            print(f"Executing Vector Search for: '{args.query}'...")
+            search_results = embedder.search(args.labels, args.query, k=args.fetch_k)
+            search_results = search_results[:args.fetch_k]
+            
+            if not search_results:
+                print("No results found.")
+                return
+
+            uids = [res.uid for res in search_results]
+            print(f"Found {len(search_results)} relevant nodes. Fetching context hierarchies...")
+            hierarchy_map = embedder.fetch_node_hierarchy(uids)
+
+            documents = []
+            valid_results = []
+            
+            for res in search_results:
+                if res.uid in hierarchy_map:
+                    documents.append(hierarchy_map[res.uid])
+                    valid_results.append(res)
+            
+            print(f"Mapped hierarchies for {len(documents)} nodes. Loading reranker...")
+            reranker = VietnameseReranker()
+            
+            print("Reranking results...")
+            reranked = reranker.rerank(args.query, documents, top_k=args.top_k)
+
+            top_k_uids = [valid_results[idx].uid for (idx, _) in reranked]
+            amends_map = embedder.fetch_amends(top_k_uids)
+
+            print("\n=== TOP RESULTS (RERANKED) ===")
+            for rank, (idx, rerank_score) in enumerate(reranked, 1):
+                orig_res = valid_results[idx]
+                content = documents[idx]
+
+                if not args.full:
+                    if len(content) > 300:
+                        content_display = content[:300] + f"\n  ... ({len(content)} chars total)"
+                    else:
+                        content_display = content
+                else:
+                    content_display = content
+
+                print(f"\n[{rank}] [{orig_res.label}] rerank_score={rerank_score:.4f}  (vec_score={orig_res.score:.4f})  uid={orig_res.uid}")
+                print(f"  ---\n  {content_display}\n  ---")
+                
+                amends = amends_map.get(orig_res.uid, [])
+                if amends:
+                    print(f"  [!] NOTE: This content or its parent has been amended ({len(amends)} items):")
+                    for amend in amends:
+                        eff_date = amend.get('effect_date')
+                        eff_str = f" (Effective: {eff_date[:10]})" if eff_date and len(eff_date) >= 10 else ""
+                        print(f"      - Amended by: {amend['amending_uid']}{eff_str} (applied to {amend['amended_label']} {amend['amended_uid']})")
+                        print(f"        Content: {amend['amending_content']}")
+        finally:
+            embedder.close()
+        return
+
+    elif args.command == "query":
+        from legal_scraper.retrieval import aggregate_search_results, fetch_context_for_results
+        from legal_scraper.reranker import VietnameseReranker
+
+        embedder = Neo4jEmbedder(uri=args.uri, user=args.user, password=args.password, database=args.database)
+        try:
+            # Step 1: Retrieval (decompose or single search)
+            if args.decompose:
+                from legal_scraper.query_parser import QueryDecomposer
+                try:
+                    decomposer = QueryDecomposer()
+                    sub_queries = decomposer.decompose(args.query)
+                except Exception as e:
+                    print(f"Decomposition failed: {e}. Falling back to single query.")
+                    sub_queries = [{"query": args.query}]
+                raw_results = embedder.multi_search(sub_queries, k=args.fetch_k)
+                search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
+            else:
+                search_results = embedder.search(args.labels, args.query, k=args.fetch_k)[:args.fetch_k]
+
+            if not search_results:
+                print("No results found.")
+                return
+
+            # Step 2: Fetch context (hierarchy or basic)
+            context_map = fetch_context_for_results(embedder, search_results, include_hierarchy=args.hierarchy)
+
+            # Step 3: Optional reranking
+            final_results = search_results
+            rerank_scores = {}
+            if args.top_k > 0 and len(search_results) > 0:
+                documents = [context_map.get((r.uid, r.label), "") for r in search_results]
+                reranker = VietnameseReranker(device="cpu")
+                reranked_indices = reranker.rerank(args.query, documents, top_k=min(args.top_k, len(search_results)))
+                # Reorder search_results accordingly
+                final_results = [search_results[idx] for idx, _ in reranked_indices]
+                # Build score mapping: original index -> rerank score
+                rerank_scores = {idx: score for idx, score in reranked_indices}
+
+            # Step 4: Fetch amends for top results
+            top_k_uids = [r.uid for r in final_results[:args.top_k]]
+            amends_map = embedder.fetch_amends(top_k_uids)
+
+            # Step 5: Display results
+            print(f"\nQuery: {args.query}")
+            print(f"Decompose: {args.decompose}, Aggregate: {args.aggregate}, Rerank: {bool(args.top_k > 0)}")
+            print(f"\nTop {len(final_results)} results:\n")
+
+            score_label = "agg_score" if args.decompose else "vec_score"
+
+            for rank, r in enumerate(final_results, 1):
+                ctx = context_map.get((r.uid, r.label), "[no content]")
+                if not args.full and len(ctx) > 300:
+                    ctx_display = ctx[:300] + f"\n... ({len(ctx)} chars total)"
+                else:
+                    ctx_display = ctx
+
+                # Get original index in search_results for rerank score lookup
+                orig_idx = search_results.index(r)
+                if orig_idx in rerank_scores:
+                    score = rerank_scores[orig_idx]
+                    print(f"[{rank}] [{r.label}] rerank_score={score:.4f}  ({score_label}={r.score:.4f})  uid={r.uid}")
+                else:
+                    print(f"[{rank}] [{r.label}] {score_label}={r.score:.4f}  uid={r.uid}")
+                print(f"  ---\n  {ctx_display}\n  ---")
+
+                amends = amends_map.get(r.uid, [])
+                if amends:
+                    print(f"  [!] NOTE: This content or its parent has been amended ({len(amends)} items):")
+                    for amend in amends:
+                        eff_date = amend.get('effect_date')
+                        eff_str = f" (Effective: {eff_date[:10]})" if eff_date and len(eff_date) >= 10 else ""
+                        print(f"      - Amended by: {amend['amending_uid']}{eff_str} (applied to {amend['amended_label']} {amend['amended_uid']})")
+                        print(f"        Content: {amend['amending_content'][:200]}...")
         finally:
             embedder.close()
         return
