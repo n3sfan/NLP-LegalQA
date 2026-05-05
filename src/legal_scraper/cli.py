@@ -319,14 +319,9 @@ def main(argv: list[str] | None = None) -> None:
                 print(f"\n[{rank}] [{orig_res.label}] rerank_score={rerank_score:.4f}  (vec_score={orig_res.score:.4f})  uid={orig_res.uid}")
                 print(f"  ---\n  {content_display}\n  ---")
                 
-                amends = amends_map.get(orig_res.uid, [])
-                if amends:
-                    print(f"  [!] NOTE: This content or its parent has been amended ({len(amends)} items):")
-                    for amend in amends:
-                        eff_date = amend.get('effect_date')
-                        eff_str = f" (Effective: {eff_date[:10]})" if eff_date and len(eff_date) >= 10 else ""
-                        print(f"      - Amended by: {amend['amending_uid']}{eff_str} (applied to {amend['amended_label']} {amend['amended_uid']})")
-                        print(f"        Content: {amend['amending_content']}")
+                amends_text = Neo4jEmbedder.format_amends(amends_map, [orig_res.uid])
+                if amends_text:
+                    print(amends_text)
         finally:
             embedder.close()
         return
@@ -397,14 +392,9 @@ def main(argv: list[str] | None = None) -> None:
                     print(f"[{rank}] [{r.label}] {score_label}={r.score:.4f}  uid={r.uid}")
                 print(f"  ---\n  {ctx_display}\n  ---")
 
-                amends = amends_map.get(r.uid, [])
-                if amends:
-                    print(f"  [!] NOTE: This content or its parent has been amended ({len(amends)} items):")
-                    for amend in amends:
-                        eff_date = amend.get('effect_date')
-                        eff_str = f" (Effective: {eff_date[:10]})" if eff_date and len(eff_date) >= 10 else ""
-                        print(f"      - Amended by: {amend['amending_uid']}{eff_str} (applied to {amend['amended_label']} {amend['amended_uid']})")
-                        print(f"        Content: {amend['amending_content'][:200]}...")
+                amends_text = Neo4jEmbedder.format_amends(amends_map, [r.uid])
+                if amends_text:
+                    print(amends_text)
         finally:
             embedder.close()
         return

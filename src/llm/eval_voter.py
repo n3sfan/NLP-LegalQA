@@ -61,13 +61,10 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from voter import (  # noqa: E402  (sys.path set above)
-    LegalVoter,
-    LlamaCppBackend,
-    OllamaBackend,
-    VLLMBackend,
     VoteResult,
     load_prompt_template,
 )
+from legal_scraper.embedder import Neo4jEmbedder
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -144,17 +141,23 @@ def _fetch_nodes_sync(driver, uids: list[str]) -> dict[str, dict]:
         return {row["uid"]: dict(row) for row in records}
 
 
-def _fetch_documents_sync(driver, identities: list[str]) -> dict[str, str]:
-    """Fetch doc_name by doc_identity."""
+def _fetch_documents_sync(driver, identities: list[str]) -> dict[str, dict]:
+    """Fetch doc_name and effect_date by doc_identity."""
     if not identities:
         return {}
     with driver.session() as session:
         records = session.run(
             "MATCH (d:Document) WHERE d.doc_identity IN $identities "
-            "RETURN d.doc_identity AS doc_identity, d.doc_name AS doc_name",
+            "RETURN d.doc_identity AS doc_identity, d.doc_name AS doc_name, d.effect_date AS effect_date",
             identities=identities,
         )
-        return {row["doc_identity"]: row["doc_name"] for row in records if row["doc_name"]}
+        return {
+            row["doc_identity"]: {
+                "name": row["doc_name"], 
+                "effect_date": row["effect_date"]
+            } 
+            for row in records if row["doc_name"]
+        }
 
 
 def _fetch_descendants_sync(driver, article_uids: list[str]) -> dict[str, dict]:
@@ -564,14 +567,16 @@ def _write_rows_incremental(path: Path, rows: list[dict], fieldnames: list[str])
 # Reusable Law Text Fetching
 # ─────────────────────────────────────────────────────────────────────────────
 
-def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict[str, str], dict[str, dict], str]:
+def fetch_law_texts(embedder, uids: list[str], batch_size: int = 10) -> tuple[dict[str, str], dict[str, dict], str, str]:
     """Fetches law nodes from Neo4j and assembles context-aware law text strings.
 
     Returns:
-        (uid_to_text, all_nodes_map, merged_text)
+        (uid_to_text, all_nodes_map, merged_text, extra_info)
     """
     if not uids:
-        return {}, {}, ""
+        return {}, {}, "", ""
+    
+    driver = embedder._get_driver()
 
     # 1. Collect all parent UIDs needed for Article/Clause context
     all_needed: set[str] = set()
@@ -604,13 +609,19 @@ def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict
         for u in all_needed
         if nodes.get(u, {}).get("doc_identity")
     })
-    doc_names: dict[str, str] = {}
+    doc_meta: dict[str, dict] = {}
     for batch_start in range(0, len(identities), batch_size):
         batch = identities[batch_start:batch_start + batch_size]
-        doc_names.update(_fetch_documents_sync(driver, batch))
+        doc_meta.update(_fetch_documents_sync(driver, batch))
 
     # 4. Build law texts
+    import re
+    def get_short_name(full_name, identity):
+        type_match = re.match(r"^(Luật|Nghị định|Thông tư|Nghị quyết|Quyết định|Sắc lệnh|Sắc luật|Hiến pháp)", full_name, re.IGNORECASE)
+        return f"{type_match.group(1)} {identity}" if type_match else identity
+
     uid_to_text: dict[str, str] = {}
+    doc_names = {i: get_short_name(d["name"], i) for i, d in doc_meta.items()}
     for uid in uids:
         node = nodes.get(uid, {})
         article_uid = _parent_article_uid(uid)
@@ -624,7 +635,25 @@ def fetch_law_texts(driver, uids: list[str], batch_size: int = 10) -> tuple[dict
     # 5. Build single merged text (deduplicated headers)
     merged_text = assemble_merged_law_text(uids, nodes, doc_names)
 
-    return uid_to_text, nodes, merged_text
+    # 6. Extra metadata (amends and effect dates)
+    amends_map = embedder.fetch_amends(uids)
+    amends_info = embedder.format_amends(amends_map, uids)
+    
+    date_lines = []
+    for d_id in sorted(doc_meta.keys()):
+        m = doc_meta[d_id]
+        eff = m["effect_date"]
+        eff_str = f" (Ngày hiệu lực: {eff[:10]})" if eff else ""
+        short_name = doc_names.get(d_id, d_id)
+        date_lines.append(f"- {short_name}{eff_str}")
+    
+    extra_info = ""
+    if date_lines:
+        extra_info += "Danh sách văn bản hiệu lực:\n" + "\n".join(date_lines) + "\n"
+    if amends_info:
+        extra_info += "\nThông tin sửa đổi:\n" + amends_info + "\n"
+
+    return uid_to_text, nodes, merged_text, extra_info
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -661,7 +690,7 @@ async def evaluate(
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    driver = GraphDatabase.driver(uri, auth=(user, password), database=database)
+    embedder = Neo4jEmbedder(uri=uri, user=user, password=password, database=database)
 
     # Resolve per-voter model names
     if models is not None:
@@ -745,7 +774,7 @@ async def evaluate(
                 continue
 
             # Fetch law texts and metadata for all retrieved UIDs
-            uid_to_law_text, nodes, _ = fetch_law_texts(driver, retrieved_uids, batch_size=batch_size)
+            uid_to_law_text, nodes, _, _ = fetch_law_texts(embedder, retrieved_uids, batch_size=batch_size)
 
             for uid in retrieved_uids:
                 law_text = uid_to_law_text.get(uid, "")

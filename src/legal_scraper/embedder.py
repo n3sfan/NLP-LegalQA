@@ -5,7 +5,6 @@ from typing import List, Optional
 import json
 
 from neo4j import GraphDatabase
-from pyvi.ViTokenizer import tokenize
 
 SearchResult = namedtuple("SearchResult", ["uid", "label", "score"])
 
@@ -28,11 +27,13 @@ class VietnameseEmbeddings:
 
     def embed_documents(self, texts: List[str]) -> List[List[float]]:
         """Tokenize each document and embed via the underlying model."""
+        from pyvi.ViTokenizer import tokenize
         tokenized = [tokenize(text) for text in texts]
         return self._embeddings.embed_documents(tokenized)
 
     def embed_query(self, text: str) -> List[float]:
         """Tokenize the query and embed via the underlying model."""
+        from pyvi.ViTokenizer import tokenize
         return self._embeddings.embed_query(tokenize(text))
 
 
@@ -231,6 +232,61 @@ class Neo4jEmbedder:
                 
         return result_map
 
+    @staticmethod
+    def format_uid_vn(uid: str) -> str:
+        """Format a technical UID into a Vietnamese legal reference.
+        
+        Example: "168/2024/NĐ-CP::article::52::clause::8::point::d" 
+                 -> "Điểm d Khoản 8 Điều 52 168/2024/NĐ-CP"
+        """
+        if "::" not in uid:
+            return uid
+            
+        parts = uid.split("::")
+        doc_id = parts[0]
+        segments = parts[1:]
+        
+        label_map = {
+            "article": "Điều",
+            "clause": "Khoản",
+            "point": "Điểm",
+            "section": "Mục",
+            "chapter": "Chương",
+            "part": "Phần"
+        }
+        
+        formatted_segments = []
+        for i in range(0, len(segments), 2):
+            if i + 1 >= len(segments):
+                break
+            label = segments[i].lower()
+            val = segments[i+1]
+            vn_label = label_map.get(label, label.capitalize())
+            formatted_segments.append(f"{vn_label} {val}")
+            
+        # Reverse to get smaller units first (Point -> Clause -> Article)
+        formatted_segments.reverse()
+        return " ".join(formatted_segments + [doc_id])
+
+    @staticmethod
+    def format_amends(amends_map: dict[str, list[dict]], uids: list[str]) -> str:
+        """Format amendment metadata into a readable string (reused from cli.py)."""
+        output = []
+        for uid in uids:
+            amends = amends_map.get(uid, [])
+            if amends:
+                # User requested to remove the "[!] NOTE:" line from prompt
+                for amend in amends:
+                    eff_date = amend.get('effect_date')
+                    eff_str = f" (Effective: {eff_date[:10]})" if eff_date and len(eff_date) >= 10 else ""
+                    
+                    amending_vn = Neo4jEmbedder.format_uid_vn(amend['amending_uid'])
+                    amended_vn = Neo4jEmbedder.format_uid_vn(amend['amended_uid'])
+                    
+                    output.append(f"      - Amended by: {amending_vn}{eff_str} (applied to {amended_vn})")
+                    output.append(f"        Content: {amend['amending_content']}")
+        return "\n".join(output)
+
     def fetch_amends(self, uids: list[str]) -> dict[str, list[dict]]:
         """Fetch amends for the given node UIDs.
         
@@ -240,10 +296,13 @@ class Neo4jEmbedder:
         """
         query = """
         UNWIND $uids AS target_uid
-        MATCH path = (d:Document)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *]->(target)
-        WHERE target.uid = target_uid
-        WITH target_uid, nodes(path) AS hierarchy_nodes
-        UNWIND hierarchy_nodes AS h_node
+        MATCH (target) WHERE target.uid = target_uid
+        // Match the target itself, its parents (up to Document), and its descendants
+        MATCH (h_node)
+        WHERE (h_node)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *0..]->(target)
+           OR (target)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *0..]->(h_node)
+        
+        WITH DISTINCT target_uid, h_node
         MATCH (amending_doc:Document)-[*]->(amending_node)-[r:AMENDS]->(h_node)
         RETURN target_uid,
                amending_node.uid AS amending_uid,

@@ -16,6 +16,7 @@ sys.path.append(os.getcwd())
 
 from voter import VLLMBackend
 from eval_voter import fetch_law_texts
+from legal_scraper.embedder import Neo4jEmbedder
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Logging Setup
@@ -88,112 +89,109 @@ async def evaluate_qa(
     n_questions = len(df)
     log.info("Starting QA generation on %d questions (from index %d)", n_questions, start_index)
 
-    # Initialize Neo4j driver
-    driver = GraphDatabase.driver(
-        neo4j_uri, 
-        auth=(neo4j_user, neo4j_password),
-        database=neo4j_database
-    )
-
-    # Initialize Backends (Increment port for each model like eval_voter.py)
-    backends = []
-    for i, m in enumerate(models):
-        port = base_port + i
-        url = f"http://localhost:{port}/v1"
-        log.info("Initializing model %s at %s", m, url)
-        backends.append(VLLMBackend(model=m, base_url=url, api_key=api_key))
-
-    # Load templates
-    try:
-        qa_template = load_template(prompt_template_name)
-    except FileNotFoundError as e:
-        log.error(e)
-        return
-
-    # Results CSV setup
-    fieldnames = [
-        "id", "question", "model", "generated_answer", "expert_answer", 
-        "latency_ms", "law_text_preview"
-    ]
-    results_path = output_p / "row_qa_results.csv"
+    # Initialize Neo4j driver and embedder
+    embedder = Neo4jEmbedder(uri=neo4j_uri, user=neo4j_user, password=neo4j_password, database=neo4j_database)
     
-    # Write header
-    with open(results_path, "w", newline="", encoding="utf-8") as f:
-        csv.DictWriter(f, fieldnames=fieldnames).writeheader()
+    try:
+        # Initialize Backends (Increment port for each model like eval_voter.py)
+        backends = []
+        for i, m in enumerate(models):
+            port = base_port + i
+            url = f"http://localhost:{port}/v1"
+            log.info("Initializing model %s at %s", m, url)
+            backends.append(VLLMBackend(model=m, base_url=url, api_key=api_key))
 
-    for idx, row in enumerate(df.itertuples(), 1):
-        # Safely get columns, handle potential NaN values
-        def get_val(attr, default=""):
-            val = getattr(row, attr, default)
-            return str(val).strip() if pd.notna(val) else default
+        # Load templates
+        try:
+            qa_template = load_template(prompt_template_name)
+        except FileNotFoundError as e:
+            log.error(e)
+            return
 
-        qid = get_val("id", str(idx))
-        question = get_val("question")
-        expert_answer = get_val("answer", get_val("references"))
+        # Results CSV setup
+        fieldnames = [
+            "id", "question", "model", "generated_answer", "expert_answer", 
+            "latency_ms", "law_text_preview"
+        ]
+        results_path = output_p / "row_qa_results.csv"
         
-        # Parse reference UIDs: Prioritize top 5 from retrieved_uids if available
-        if hasattr(row, "retrieved_uids"):
-            raw_retrieved = getattr(row, "retrieved_uids", "")
-            if pd.isna(raw_retrieved): raw_retrieved = ""
-            uids = [r.strip() for r in str(raw_retrieved).split(";") if r.strip()][:5]
-        else:
-            raw_refs = get_val("reference", get_val("references"))
-            uids = [r.strip() for r in raw_refs.replace(";", ",").split(",") if r.strip()]
+        # Write header
+        with open(results_path, "w", newline="", encoding="utf-8") as f:
+            csv.DictWriter(f, fieldnames=fieldnames).writeheader()
 
-        # Parse ground-truth references to check for full coverage
-        ref_list = [r.strip() for r in get_val("references").replace(";", ",").split(",") if r.strip()]
-        
-        # Check if all ground-truth references are present in the top-5 uids (Recall@5 == 1.0)
-        found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
-        if ref_list and len(found_refs) < len(ref_list):
-            if (idx-1) % print_every == 0 or idx == n_questions:
-                log.info("[%d/%d] Skipping QID: %s (Recall@5 < 1.0)", idx, n_questions, qid)
-            continue
+        for idx, row in enumerate(df.itertuples(), 1):
+            # Safely get columns, handle potential NaN values
+            def get_val(attr, default=""):
+                val = getattr(row, attr, default)
+                return str(val).strip() if pd.notna(val) else default
 
-        if (idx-1) % print_every == 0 or idx == n_questions:
-            log.info("[%d/%d] Processing QID: %s", idx, n_questions, qid)
-
-        # 1. Fetch Law Text
-        _, _, law_text = fetch_law_texts(driver, uids, batch_size=batch_size)
-
-        if not law_text:
-            log.warning("No law text found for QID %s (references: %s)", qid, uids)
-            law_text = ""
-
-        # 2. QA (Answer Generation) - Run all models in parallel
-        qa_prompt = qa_template.format(question=question, law_text=law_text)
-        
-        async def ask_model(backend, model_name):
-            start = time.perf_counter()
-            try:
-                print('prompt', qa_prompt)
-                ans = await backend.ask(qa_prompt)
-                print('ans', ans)
-            except Exception as e:
-                log.error("Model %s failed for QID %s: %s", model_name, qid, e)
-                ans = f"ERROR: {e}"
-            duration = (time.perf_counter() - start) * 1000
-            return model_name, ans, duration
-
-        tasks = [ask_model(b, m) for b, m in zip(backends, models)]
-        results = await asyncio.gather(*tasks)
-
-        # 3. Log Results
-        for model_name, generated_answer, duration in results:
-            result_row = {
-                "id": qid,
-                "question": question,
-                "model": model_name,
-                "generated_answer": generated_answer,
-                "expert_answer": expert_answer,
-                "latency_ms": round(duration, 1),
-                "law_text_preview": law_text if law_text else ""
-            }
+            qid = get_val("id", str(idx))
+            question = get_val("question")
+            expert_answer = get_val("answer", get_val("references"))
             
-            with open(results_path, "a", newline="", encoding="utf-8") as f:
-                csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore").writerow(result_row)
+            # Parse reference UIDs: Prioritize top 5 from retrieved_uids if available
+            if hasattr(row, "retrieved_uids"):
+                raw_retrieved = getattr(row, "retrieved_uids", "")
+                if pd.isna(raw_retrieved): raw_retrieved = ""
+                uids = [r.strip() for r in str(raw_retrieved).split(";") if r.strip()][:5]
+            else:
+                raw_refs = get_val("reference", get_val("references"))
+                uids = [r.strip() for r in raw_refs.replace(";", ",").split(",") if r.strip()]
 
-    driver.close()
+            # Parse ground-truth references to check for full coverage
+            ref_list = [r.strip() for r in get_val("references").replace(";", ",").split(",") if r.strip()]
+            
+            # Check if all ground-truth references are present in the top-5 uids (Recall@5 == 1.0)
+            found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
+            if ref_list and len(found_refs) < len(ref_list):
+                if (idx-1) % print_every == 0 or idx == n_questions:
+                    log.info("[%d/%d] Skipping QID: %s (Recall@5 < 1.0)", idx, n_questions, qid)
+                continue
+
+            if (idx-1) % print_every == 0 or idx == n_questions:
+                log.info("[%d/%d] Processing QID: %s", idx, n_questions, qid)
+
+            # 1. Fetch Law Text
+            _, _, law_text, extra_info = fetch_law_texts(embedder, uids, batch_size=batch_size)
+
+            if not law_text:
+                log.warning("No law text found for QID %s (references: %s)", qid, uids)
+                law_text = ""
+
+            # 2. QA (Answer Generation) - Run all models in parallel
+            qa_prompt = qa_template.format(question=question, law_text=law_text, extra_info=extra_info)
+            
+            async def ask_model(backend, model_name):
+                start = time.perf_counter()
+                try:
+                    print('prompt', qa_prompt)
+                    ans = await backend.ask(qa_prompt)
+                    print('ans', ans)
+                except Exception as e:
+                    log.error("Model %s failed for QID %s: %s", model_name, qid, e)
+                    ans = f"ERROR: {e}"
+                duration = (time.perf_counter() - start) * 1000
+                return model_name, ans, duration
+
+            tasks = [ask_model(b, m) for b, m in zip(backends, models)]
+            results = await asyncio.gather(*tasks)
+
+            # 3. Log Results
+            for model_name, generated_answer, duration in results:
+                result_row = {
+                    "id": qid,
+                    "question": question,
+                    "model": model_name,
+                    "generated_answer": generated_answer,
+                    "expert_answer": expert_answer,
+                    "latency_ms": round(duration, 1),
+                    "law_text_preview": law_text if law_text else ""
+                }
+                
+                with open(results_path, "a", newline="", encoding="utf-8") as f:
+                    csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore").writerow(result_row)
+    finally:
+        embedder.close()
     log.info("QA Generation complete. Results saved to %s", results_path)
 
 # ─────────────────────────────────────────────────────────────────────────────
