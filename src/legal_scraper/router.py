@@ -78,3 +78,72 @@ class QueryRouter:
                 return "reject"
         
         return "retrieve"
+
+ComplexityType = Literal["simple", "complex"]
+
+class ComplexityAnalyzer:
+    """Analyzes if a query has a single behavior (simple) or multiple behaviors (complex)."""
+    
+    def __init__(self, local_model_url: str = None):
+        self.local_model_url = local_model_url or os.getenv(
+            "LOCAL_MODEL_URL", "https://vitalize-compacter-nephew.ngrok-free.dev/generate"
+        )
+        from legal_scraper.prompts import _COMPLEXITY_SYSTEM_PROMPT, _COMPLEXITY_USER_PROMPT
+        self.system_prompt = _COMPLEXITY_SYSTEM_PROMPT
+        self.user_prompt = _COMPLEXITY_USER_PROMPT
+
+    def analyze(self, query: str) -> ComplexityType:
+        prompt_text = f"<start_of_turn>user\n{self.system_prompt}\n\n{self.user_prompt.format(query=query)}<end_of_turn>\n<start_of_turn>model\n"
+        
+        @retry(
+            stop=stop_after_attempt(2),
+            wait=wait_exponential(multiplier=1, min=2, max=5),
+            retry=retry_if_exception_type((requests.exceptions.RequestException, ValueError)),
+            reraise=True,
+        )
+        def _call_llm() -> str:
+            payload = {
+                "prompt": prompt_text,
+                "max_new_tokens": 32,
+                "temperature": 0.1
+            }
+            headers = {
+                "ngrok-skip-browser-warning": "true",
+                "Content-Type": "application/json"
+            }
+            response = requests.post(self.local_model_url, json=payload, headers=headers, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            if "response" in data:
+                return data["response"].strip()
+            return ""
+
+        try:
+            raw_response = _call_llm()
+            return self._parse_complexity(raw_response)
+        except Exception as e:
+            print(f"Complexity analysis error: {e}. Falling back to 'simple'.")
+            return "simple"
+
+    def _parse_complexity(self, response_text: str) -> ComplexityType:
+        text = response_text.strip()
+        if text.startswith("```"):
+            lines = text.split("\n")
+            if lines[0].startswith("```"):
+                lines = lines[1:]
+            if lines[-1].startswith("```"):
+                lines = lines[:-1]
+            text = "\n".join(lines).strip()
+            
+        try:
+            data = json.loads(text)
+            complexity = data.get("complexity", "simple").lower()
+            if complexity in ["simple", "complex"]:
+                return complexity
+        except json.JSONDecodeError:
+            if '"complexity": "complex"' in text or "'complexity': 'complex'" in text:
+                return "complex"
+            elif '"complexity": "simple"' in text or "'complexity': 'simple'" in text:
+                return "simple"
+        
+        return "simple"

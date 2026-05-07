@@ -359,15 +359,33 @@ def main(argv: list[str] | None = None) -> None:
                 print(ans)
                 return
 
-            # Step 1: Retrieval (decompose or single search)
+            # Step 1: Retrieval (decompose, rewrite, or single search)
             if args.decompose:
-                from legal_scraper.query_parser import QueryDecomposer
+                from legal_scraper.router import ComplexityAnalyzer
+                from legal_scraper.query_parser import QueryDecomposer, QueryRewriter
+                
+                print("Analyzing query complexity...")
+                analyzer = ComplexityAnalyzer()
+                complexity = analyzer.analyze(args.query)
+                print(f"Complexity classified as: {complexity}")
+                
                 try:
-                    decomposer = QueryDecomposer()
-                    sub_queries = decomposer.decompose(args.query)
+                    if complexity == "simple":
+                        print("Query is simple. Rewriting to formal legal terms...")
+                        rewriter = QueryRewriter()
+                        sub_queries = rewriter.rewrite(args.query)
+                        print(f"Rewrote to: {[sq['query'] for sq in sub_queries]}")
+                    else:
+                        print("Query is complex. Decomposing...")
+                        decomposer = QueryDecomposer()
+                        sub_queries = decomposer.decompose(args.query)
+                        print(f"Decomposed into {len(sub_queries)} sub-queries:")
+                        for i, sq in enumerate(sub_queries):
+                            print(f"  {i+1}. {sq['query']}")
                 except Exception as e:
-                    print(f"Decomposition failed: {e}. Falling back to single query.")
+                    print(f"Processing failed: {e}. Falling back to single query.")
                     sub_queries = [{"query": args.query}]
+                
                 raw_results = embedder.multi_search(sub_queries, k=args.fetch_k)
                 search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
             else:
@@ -380,7 +398,6 @@ def main(argv: list[str] | None = None) -> None:
             # Step 2: Fetch context (hierarchy or basic)
             context_map = fetch_context_for_results(embedder, search_results, include_hierarchy=args.hierarchy)
 
-            # Step 3: Optional reranking
             final_results = search_results
             rerank_scores = {}
             if args.top_k > 0 and len(search_results) > 0:
