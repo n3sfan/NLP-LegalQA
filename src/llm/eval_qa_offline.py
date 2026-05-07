@@ -91,14 +91,37 @@ async def run_offline_inference(cfg: EvalConfig):
         #     log.info("[%d/%d] Generating answer for QID: %s", idx, n_items, qid)
 
         # Build prompt
-        qa_prompt = qa_template.format(question=question, law_text=law_text, extra_info=extra_info)
+        # We use a dict to safely format only the keys present in the template
+        prompt_kwargs = {
+            "question": question, 
+            "law_text": law_text, 
+            "extra_info": extra_info,
+            "top_k": item.get("top_k", cfg.top_k)
+        }
+        # Filter kwargs to only those present in the template to avoid KeyError
+        import re
+        needed_keys = re.findall(r"\{(\w+)\}", qa_template)
+        filtered_kwargs = {k: v for k, v in prompt_kwargs.items() if k in needed_keys}
+        qa_prompt = qa_template.format(**filtered_kwargs)
         
         async def ask_model(backend, model_name):
+            current_prompt = qa_prompt
+            if "gemma" in model_name.lower():
+                # Specific mappings for Gemma 3 / Fine-tuned templates
+                current_prompt = current_prompt.replace("<|im_start|>user", "<|turn>user")
+                current_prompt = current_prompt.replace("<|im_start|>assistant", "<|turn>model")
+                # Fallback / General tokens
+                current_prompt = current_prompt.replace("<|im_start|>", "<|turn>")
+                current_prompt = current_prompt.replace("<|im_end|>", "<turn|>")
+                # Thinking / Reasoning tokens
+                current_prompt = current_prompt.replace("<think>", "<|channel>thought")
+                current_prompt = current_prompt.replace("</think>", "<channel|>")
+            
             max_retries = 3
             for attempt in range(max_retries):
                 start = time.perf_counter()
                 try:
-                    ans = await backend.ask(qa_prompt)
+                    ans = await backend.ask(current_prompt)
                     duration = (time.perf_counter() - start) * 1000
                     if ans and ans.strip():
                         return model_name, ans, duration
@@ -147,6 +170,7 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
     parser.add_argument("--start-index", type=int, default=0, help="Starting index in payload list")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
+    parser.add_argument("--top-k", type=int, default=5, help="Top-K context size (fallback if not in payload)")
 
     args = parser.parse_args()
     
@@ -160,7 +184,8 @@ def main():
         base_port=args.base_port,
         limit=args.limit,
         start_index=args.start_index,
-        print_every=args.print_every
+        print_every=args.print_every,
+        top_k=args.top_k
     )
     
     asyncio.run(run_offline_inference(cfg))

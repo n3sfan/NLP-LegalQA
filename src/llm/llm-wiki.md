@@ -7,8 +7,10 @@ This wiki document serves as the "source of truth" for AI agents and developers 
 - **`voter.py`**: Contains backend abstractions (`VLLMBackend`, `LlamaCppBackend`, `OllamaBackend`) and the `LegalVoter` orchestrator.
 - **`eval_voter.py`**: The main evaluation script for the "Voter" phase. It handles data fetching from Neo4j and calculates metrics (Recall, Precision, MRR).
 - **`eval_qa.py`**: Specialised script for the "Answer Generation" phase. It uses retrieved law context to generate natural language answers.
-- **`eval_qa_online.py`**: Prepares "payload" files by fetching law context from Neo4j.
-- **`eval_qa_offline.py`**: Executes LLM inference using pre-fetched payloads, requiring no network access.
+- **`eval_qa_online.py`**: Online phase script; fetches law context from Neo4j and prepares `.jsonl` payload files.
+- **`eval_qa_offline.py`**: Offline inference script; executes LLM answer generation using payloads (network-independent).
+- **`eval_qa_utils.py`**: Shared utilities and the `EvalConfig` schema used by all evaluation scripts.
+- **`make_kaggle_cell.py`**: Tool to bundle all `src/llm/` logic into a single notebook-ready Python cell (`cellcode.py`).
 
 ## 2. Core Implementation Decisions
 
@@ -33,7 +35,19 @@ This wiki document serves as the "source of truth" for AI agents and developers 
 
 ### 2.4. Template Management
 - **Context Manager**: `_swap_prompt_template` in `eval_voter.py` allows temporary overrides of the default prompt files.
-- **Loading**: `load_template(filename)` in `eval_qa.py` searches current and parent directories for `.md` files.
+- **Loading**: `load_template(filename)` searches current and parent directories for `.md` files.
+- **Placeholders**: Standard templates expect `{question}`, `{law_text}`, `{extra_info}`, and optionally `{ground_truth}` and `{top_k}`.
+
+### 2.6. Robust Retry Mechanism
+- **Logic**: If an LLM returns an empty string or the backend throws an error, the agent will **retry up to 3 times** with a 1-second `asyncio.sleep` between attempts.
+
+### 2.7. Gemma & Fine-tuned Token Mapping
+- **Problem**: Many fine-tuned models (Gemma 3, Qwen) use custom ChatML tags that may not align with base-model templates.
+- **Solution**: The `ask_model` and `evaluate_qa` functions include a mapping block for Gemma:
+    - `<|im_start|>user` -> `<|turn>user`
+    - `<|im_start|>assistant` -> `<turn|>model`
+    - `<think>` -> `<|channel>thought`
+
 
 ### 2.5. Metadata & Amendment Injection
 **Utility**: `Neo4jEmbedder.format_amends` and `Neo4jEmbedder.format_uid_vn`.
@@ -72,6 +86,9 @@ This wiki document serves as the "source of truth" for AI agents and developers 
     - **Mistake**: Using the UID as the expert answer text for text-to-text comparison.
 3.  **Encoding**: Vietnamese text MUST be handled with `encoding="utf-8"`. Failure to do so will corrupt the legal articles and LLM outputs.
 4.  **Incremental Saving**: Both evaluation scripts append to CSVs row-by-row (`open(..., 'a')`). This allows resuming from crashes using `--start-index`.
+5.  **Numeric IDs vs String IDs**:
+    - Pandas often loads IDs like `1` as `1.0` (float). 
+    - **Fix**: Use `clean_id(s)` helper: `str(s).strip().replace(".0", "")`. This ensures robust matching between results CSV, GT CSV, and Payload JSONL.
 
 ## 5. Usage Patterns
 
@@ -92,7 +109,7 @@ _, _, law_text, extra_info = fetch_law_texts(embedder, uids, batch_size=batch_si
 prompt = template.format(question=q, law_text=law_text, extra_info=extra_info)
 ```
 
-## 6. Offline Evaluation Workflow
+## 6. Offline Evaluation QA Workflow
 
 To decouple network-heavy law fetching from GPU-heavy LLM inference:
 
@@ -108,3 +125,18 @@ To decouple network-heavy law fetching from GPU-heavy LLM inference:
    ```bash
    python eval_qa_offline.py --models Qwen/Qwen2-7B-Instruct --base-port 8080
    ```
+
+3. **Judge Evaluation (Scoring)**:
+   Use `eval_voter.py` with `--mode eval_qa` to score the generated results using an LLM-as-a-judge.
+   ```bash
+   python eval_voter.py \
+       --mode eval_qa \
+       --input eval_results_qa_offline/row_qa_results_offline.csv \
+       --gt-dataset qa_dataset/QA_NLP.csv \
+       --payload-dir offline_payloads/ \
+       --dataset eval_results_v2/row_results_decomposition.csv
+   ```
+
+## 7. Key Parameters
+- **`top_k`**: Controls the number of retrieved context snippets used. Configured in `EvalConfig` and passed through the payload. Default: `5`.
+- **`backend`**: Supports `vllm` (preferred for GPU).

@@ -62,11 +62,11 @@ async def generate_payload(cfg: EvalConfig):
                 question = get_val(row, "question")
                 expert_answer = get_val(row, "answer", get_val(row, "references"))
                 
-                # Parse UIDs (top 5 retrieved or references)
+                # Parse UIDs (top k retrieved or references)
                 if hasattr(row, "retrieved_uids"):
                     raw_retrieved = getattr(row, "retrieved_uids", "")
                     if pd.isna(raw_retrieved): raw_retrieved = ""
-                    uids = [r.strip() for r in str(raw_retrieved).split(";") if r.strip()][:5]
+                    uids = [r.strip() for r in str(raw_retrieved).split(";") if r.strip()][:cfg.top_k]
                 else:
                     raw_refs = get_val(row, "reference", get_val(row, "references"))
                     uids = [r.strip() for r in raw_refs.replace(";", ",").split(",") if r.strip()]
@@ -74,11 +74,11 @@ async def generate_payload(cfg: EvalConfig):
                 # Parse ground-truth references
                 ref_list = [r.strip() for r in get_val(row, "references").replace(";", ",").split(",") if r.strip()]
                 
-                # Check Recall@5 == 1.0 logic
+                # Check Recall@k == 1.0 logic
                 found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
                 if ref_list and len(found_refs) < len(ref_list):
                     if (idx-1) % cfg.print_every == 0 or idx == n_questions:
-                        log.info("[%d/%d] Skipping QID: %s (Recall@5 < 1.0)", idx, n_questions, qid)
+                        log.info("[%d/%d] Skipping QID: %s (Recall@%d < 1.0)", idx, n_questions, qid, cfg.top_k)
                     continue
 
                 if (idx-1) % cfg.print_every == 0 or idx == n_questions:
@@ -93,7 +93,8 @@ async def generate_payload(cfg: EvalConfig):
                     "expert_answer": expert_answer,
                     "uids": uids,
                     "law_text": law_text or "",
-                    "extra_info": extra_info or ""
+                    "extra_info": extra_info or "",
+                    "top_k": cfg.top_k
                 }
                 f.write(json.dumps(payload_item, ensure_ascii=False) + "\n")
                 
@@ -115,6 +116,7 @@ def main():
     parser.add_argument("--start-index", type=int, default=0, help="Starting row index")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
     parser.add_argument("--batch-size", type=int, default=10, help="Neo4j batch size")
+    parser.add_argument("--top-k", type=int, default=5, help="Top-K retrieved UIDs to include")
 
     args = parser.parse_args()
     
@@ -128,7 +130,8 @@ def main():
         limit=args.limit,
         start_index=args.start_index,
         print_every=args.print_every,
-        batch_size=args.batch_size
+        batch_size=args.batch_size,
+        top_k=args.top_k
     )
     
     asyncio.run(generate_payload(cfg))

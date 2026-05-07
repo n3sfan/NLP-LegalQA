@@ -46,14 +46,16 @@ Usage (vllm):
 import argparse
 import asyncio
 import csv
+import json
 import logging
 import os
+import re
 import sys
+import time
 from contextlib import contextmanager
 from pathlib import Path
 
 import pandas as pd
-from neo4j import GraphDatabase
 
 # Repo root is the parent of src/ (NLP-LegalQA/)
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -64,10 +66,15 @@ from voter import (  # noqa: E402  (sys.path set above)
     VoteResult,
     load_prompt_template,
 )
-from legal_scraper.embedder import Neo4jEmbedder
+from eval_qa_utils import get_payload_path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
+
+# Silence noisy third-party logs
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
+logging.getLogger("openai").setLevel(logging.WARNING)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -576,6 +583,7 @@ def fetch_law_texts(embedder, uids: list[str], batch_size: int = 10) -> tuple[di
     if not uids:
         return {}, {}, "", ""
     
+    from legal_scraper.embedder import Neo4jEmbedder
     driver = embedder._get_driver()
 
     # 1. Collect all parent UIDs needed for Article/Clause context
@@ -656,6 +664,219 @@ def fetch_law_texts(embedder, uids: list[str], batch_size: int = 10) -> tuple[di
     return uid_to_text, nodes, merged_text, extra_info
 
 
+def parse_eval_score(raw: str) -> int | None:
+    """Extracts 'Score: [N]' or 'Score: N' from LLM response, handling bolding markers."""
+    # Look for Score: [0-5], **Score:** 5, etc.
+    # Pattern: 'Score' -> optional colon/stars -> optional brackets -> digit
+    match = re.search(r"Score[:\s*]*\**\s*\[?(\d)\]?", raw, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    return None
+
+
+async def evaluate_qa(
+    input_path: str,
+    output_dir: str,
+    prompt_template_path: str,
+    backends: list,
+    model_names: list[str],
+    gt_dataset_path: str | None = None,
+    payload_dir: str | None = None,
+    dataset_path: str | None = None,
+    print_every: int = 5,
+    start_index: int = 0,
+) -> None:
+    """Evaluates QA answers using a single LLM as a judge."""
+    df = pd.read_csv(input_path)
+    
+    # 1. Merge with Offline Payload if provided (for full context)
+    def clean_id(s):
+        s = str(s).strip()
+        if s.endswith(".0"):
+            s = s[:-2]
+        return s
+
+    if payload_dir and dataset_path:
+        p_path = get_payload_path(dataset_path, payload_dir)
+        if p_path.exists():
+            log.info("Loading full context from payload: %s", p_path)
+            payload_data = {}
+            with open(p_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    item = json.loads(line)
+                    pid = clean_id(item["id"])
+                    payload_data[pid] = {
+                        "law_text": item.get("law_text", ""),
+                        "extra_info": item.get("extra_info", ""),
+                    }
+            
+            # Map payload data back to df
+            df["id_str"] = df["id"].apply(clean_id)
+            df["law_text_full"] = df["id_str"].map(lambda x: payload_data.get(x, {}).get("law_text", ""))
+            df["extra_info_full"] = df["id_str"].map(lambda x: payload_data.get(x, {}).get("extra_info", ""))
+            
+            # Use full text from payload, fallback to existing columns ONLY if payload is empty
+            df["law_text_preview"] = df["law_text_full"].where(df["law_text_full"] != "", df["law_text_preview"])
+            df["extra_info"] = df["extra_info_full"].where(df["extra_info_full"] != "", df.get("extra_info", ""))
+            
+            df.drop(columns=["id_str", "law_text_full", "extra_info_full"], inplace=True)
+        else:
+            log.warning("Payload file not found at %s", p_path)
+
+    # 2. Merge with Ground Truth dataset if provided
+    if gt_dataset_path:
+        log.info("Merging with Ground Truth dataset: %s", gt_dataset_path)
+        gt_df = pd.read_csv(gt_dataset_path)
+        
+        # Robust ID matching: strip and convert to string, remove .0 from numeric IDs
+        def clean_id(s):
+            s = str(s).strip()
+            if s.endswith(".0"):
+                s = s[:-2]
+            return s
+
+        df["id"] = df["id"].apply(clean_id)
+        gt_df["id"] = gt_df["id"].apply(clean_id)
+        
+        # Rename 'answer' to 'expert_answer' in GT df if it exists
+        if "answer" in gt_df.columns and "expert_answer" not in gt_df.columns:
+            gt_df = gt_df.rename(columns={"answer": "expert_answer"})
+            
+        # We want GT to be the STRICT source for expert_answer
+        if "expert_answer" in df.columns and "expert_answer" in gt_df.columns:
+            df.drop(columns=["expert_answer"], inplace=True)
+
+        # Merge on 'id', keeping only necessary GT columns (ignore extra_info from GT as we want it from payload)
+        gt_cols = ["id", "expert_answer"]
+        if "question" in gt_df.columns and "question" not in df.columns:
+            gt_cols.append("question")
+            
+        df = df.merge(gt_df[gt_cols], on="id", how="left")
+        
+        # Verify if ground truth was successfully merged
+        missing_gt = df["expert_answer"].isna().sum()
+        if missing_gt > 0:
+            log.warning("Ground truth missing for %d rows after merge", missing_gt)
+
+    if start_index > 0:
+        df = df.iloc[start_index:]
+    
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    template = Path(prompt_template_path).read_text(encoding="utf-8")
+    backend = backends[0]
+    eval_model_name = model_names[0]
+    
+    results_path = output_dir / "row_qa_eval_scores.csv"
+    fieldnames = ["id", "question", "score", "reasoning", "comparison", "raw_eval", "latency_ms"]
+    
+    if not results_path.exists() or start_index == 0:
+        with open(results_path, "w", newline="", encoding="utf-8") as f:
+            csv.DictWriter(f, fieldnames=fieldnames).writeheader()
+
+    all_scores = []
+    log.info("Starting QA Evaluation using judge model: %s", eval_model_name)
+
+    from tqdm.auto import tqdm
+    for idx, row in enumerate(tqdm(df.itertuples(), total=len(df), desc="QA Eval"), 1):
+        qid = str(getattr(row, "id", idx + start_index))
+        question = str(getattr(row, "question", ""))
+        
+        # Helper to safely get values and avoid 'nan' strings
+        def get_val(attr, default=""):
+            v = getattr(row, attr, default)
+            return str(v) if pd.notna(v) and v is not None else default
+
+        expert_answer = get_val("expert_answer", "")
+        llm_answer = get_val("generated_answer", get_val("raw_response", ""))
+        law_text = get_val("law_text_preview", "")
+        extra_info = get_val("extra_info", "")
+
+        # Build prompt
+        # The template has: {law_text}, {extra_info}, {question}, {ground_truth}, {llm_answer}
+        prompt = template.format(
+            question=question,
+            law_text=law_text,
+            extra_info=f"Thông tin bổ sung: \n{extra_info}" if extra_info else "",
+            ground_truth=expert_answer,
+            llm_answer=llm_answer
+        )
+
+        # Apply Gemma token fixes if needed
+        if "gemma" in eval_model_name.lower():
+            # Specific mappings for Gemma 3 / Fine-tuned templates
+            prompt = prompt.replace("<|im_start|>user", "<|turn>user")
+            prompt = prompt.replace("<|im_start|>assistant", "<|turn>model")
+            # Fallback / General tokens
+            prompt = prompt.replace("<|im_start|>", "<|turn>")
+            prompt = prompt.replace("<|im_end|>", "<turn|>")
+            # Thinking / Reasoning tokens
+            prompt = prompt.replace("<think>", "<|channel>thought")
+            prompt = prompt.replace("</think>", "<channel|>")
+        
+
+        # Retry logic for empty or failed responses
+        max_retries = 3
+        raw_eval = ""
+        duration_ms = 0
+        score = None
+        
+        for attempt in range(max_retries):
+            start_t = time.perf_counter()
+            try:
+                raw_eval = await backend.ask(prompt)
+                duration_ms = (time.perf_counter() - start_t) * 1000
+                # print('prompt', prompt)
+                # print('answer', raw_eval)
+                if raw_eval and raw_eval.strip():
+                    score = parse_eval_score(raw_eval)
+                    break
+                else:
+                    log.warning("Empty evaluation response from judge (attempt %d/%d)", attempt+1, max_retries)
+            except Exception as e:
+                log.error("Judge failed for qid=%s (attempt %d/%d): %s", qid, attempt+1, max_retries, e)
+                raw_eval = f"ERROR: {e}"
+                duration_ms = (time.perf_counter() - start_t) * 1000
+            
+            if attempt < max_retries - 1:
+                await asyncio.sleep(1)
+
+        is_pass = (score >= 3) if score is not None else False
+        if score is not None:
+            all_scores.append(score)
+
+        # Basic parsing for reasoning/comparison/score using robust regex
+        reasoning = ""
+        comparison = ""
+        
+        # Regex to find sections: - **Field:** Content
+        r_match = re.search(r"Reasoning[:\s*]*\**\s*(.*?)(?=- \*\*|- Score:|$)", raw_eval, re.DOTALL | re.IGNORECASE)
+        if r_match:
+            reasoning = r_match.group(1).strip().strip(":")
+            
+        c_match = re.search(r"Comparison[:\s*]*\**\s*(.*?)(?=- \*\*|- Score:|$)", raw_eval, re.DOTALL | re.IGNORECASE)
+        if c_match:
+            comparison = c_match.group(1).strip().strip(":")
+
+        result_row = {
+            "id": qid,
+            "question": question,
+            "score": score,
+            "reasoning": reasoning[:500],
+            "comparison": comparison[:500],
+            "raw_eval": raw_eval[:1000],
+            "latency_ms": round(duration_ms, 1)
+        }
+        
+        _write_rows_incremental(results_path, [result_row], fieldnames)
+
+    if all_scores:
+        avg_score = sum(all_scores) / len(all_scores)
+        pass_rate = sum(1 for s in all_scores if s >= 3) / len(all_scores)
+        log.info("QA Eval Summary: Avg Score = %.2f, Pass Rate (>=3) = %.2f%%", avg_score, pass_rate * 100)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Main evaluation
 # ─────────────────────────────────────────────────────────────────────────────
@@ -681,18 +902,16 @@ async def evaluate(
     n_ctx: int = 4096,
     print_every: int = 5,
     start_index: int = 0,
+    mode: str = "classify",
+    gt_dataset: str | None = None,
+    payload_dir: str | None = None,
+    dataset_path: str | None = None,
 ) -> None:
-    df = pd.read_csv(input_path)
-    if start_index > 0:
-        df = df.iloc[start_index:]
-    log.info("Loaded dataset. Processing from index %d (%d rows) from %s", start_index, len(df), input_path)
-
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    embedder = Neo4jEmbedder(uri=uri, user=user, password=password, database=database)
-
-    # Resolve per-voter model names
+    # 1. Initialize Backends
+    voter_models = []
     if models is not None:
         if len(models) != n_voters:
             raise ValueError(f"--models ({len(models)}) must match --n-voters ({n_voters})")
@@ -708,38 +927,52 @@ async def evaluate(
     else:
         raise ValueError("Must provide either --model or --models for non-llama_cpp backends")
 
-    _backends: list = []
+    _backends = []
     if backend == "llama_cpp":
+        from voter import LlamaCppBackend
         for m in voter_models:
-            _backends.append(
-                LlamaCppBackend(
-                    model_path=m,
-                    n_gpu_layers=n_gpu_layers,
-                    n_ctx=n_ctx,
-                )
-            )
+            _backends.append(LlamaCppBackend(model_path=m, n_gpu_layers=n_gpu_layers, n_ctx=n_ctx))
         model_names = [Path(m).stem for m in voter_models]
-        log.info("Using LlamaCpp backend — n_gpu_layers=%d, n_ctx=%d, voters=%s",
-                 n_gpu_layers, n_ctx, model_names)
-
     elif backend == "vllm":
+        from voter import VLLMBackend
         for i, m in enumerate(voter_models):
             port = base_port + i
-            _backends.append(
-                VLLMBackend(model=m, base_url=f"http://localhost:{port}/v1", api_key=api_key)
-            )
+            _backends.append(VLLMBackend(model=m, base_url=f"http://localhost:{port}/v1", api_key=api_key))
         model_names = voter_models
-        log.info("Using VLLM backend — voter i → localhost:%d+i, models=%s",
-                 base_port, voter_models)
-
     else:  # ollama
+        from voter import OllamaBackend
         _url = base_url or "http://localhost:11434"
         for m in voter_models:
             _backends.append(OllamaBackend(model=m, base_url=_url))
         model_names = voter_models
-        log.info("Using Ollama backend — base_url=%s, models=%s", _url, voter_models)
 
+    # 2. Dispatch to Mode
+    if mode == "eval_qa":
+        await evaluate_qa(
+            input_path=input_path,
+            output_dir=output_dir,
+            prompt_template_path=prompt_template or "src/llm/prompt_eval_qa.md",
+            backends=_backends,
+            model_names=model_names,
+            gt_dataset_path=gt_dataset,
+            payload_dir=payload_dir,
+            dataset_path=dataset_path,
+            print_every=print_every,
+            start_index=start_index
+        )
+        return
+
+    # Default: classify mode (Voter Relevance)
+    from voter import LegalVoter
+    from legal_scraper.embedder import Neo4jEmbedder
     voter = LegalVoter(backends=_backends, model_names=model_names)
+    
+    df = pd.read_csv(input_path)
+    if start_index > 0:
+        df = df.iloc[start_index:]
+    log.info("Loaded dataset. Mode: classify. Processing from index %d (%d rows)", start_index, len(df))
+
+    embedder = Neo4jEmbedder(uri=uri, user=user, password=password, database=database)
 
     # Collect distinct model names now (needed inside the loop for incremental print)
     all_model_names: list[str] = list(dict.fromkeys(model_names))
@@ -751,9 +984,12 @@ async def evaluate(
     ]
     row_results_path = output_dir / "row_voter_results.csv"
     # Pre-create / wipe to write fresh headers on re-run
-    with open(row_results_path, "w", newline="", encoding="utf-8") as f:
-        csv.DictWriter(f, fieldnames=uid_fieldnames).writeheader()
+    if not row_results_path.exists() or start_index == 0:
+        with open(row_results_path, "w", newline="", encoding="utf-8") as f:
+            csv.DictWriter(f, fieldnames=uid_fieldnames).writeheader()
+    
     last_save_len = 0  # track how many rows were saved; only append new ones
+    driver = embedder._get_driver()
 
     with _swap_prompt_template(prompt_template):
         n_questions = len(df)
@@ -915,7 +1151,11 @@ async def evaluate(
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate voter on RAG results")
-    parser.add_argument("--input", required=True, help="Path to row_results.csv")
+    parser.add_argument("--mode", choices=["classify", "eval_qa"], default="classify", help="Evaluation mode")
+    parser.add_argument("--input", required=True, help="Path to input CSV (row_results.csv or row_qa_results_offline.csv)")
+    parser.add_argument("--gt-dataset", help="Optional path to ground truth dataset (e.g. QA_NLP.csv) to merge by 'id'")
+    parser.add_argument("--payload-dir", help="Directory where offline payloads (.jsonl) are stored")
+    parser.add_argument("--dataset", help="Original dataset path (used to find payload filename)")
     parser.add_argument("--output", required=True, help="Output directory")
     # Neo4j
     parser.add_argument("--uri", default="neo4j+ssc://nguyenhoangquan.com:7687", help="Neo4j URI (e.g. neo4j+ssc://host:7687)")
@@ -1012,6 +1252,10 @@ def main():
         n_ctx=args.n_ctx,
         print_every=args.print_every,
         start_index=args.start_index,
+        mode=args.mode,
+        gt_dataset=args.gt_dataset,
+        payload_dir=args.payload_dir,
+        dataset_path=args.dataset,
     ))
 
 

@@ -291,26 +291,32 @@ class VoterAgent:
         template = load_prompt_template()
         prompt = template.format(question=question, law_text=law_text)
         # print('Vote prompt:', prompt)
-        t0 = time.monotonic()
-        try:
-            raw = await self.backend.ask(prompt)
-        except Exception as exc:
-            logger.error(
-                "[%s] backend.ask() raised — type=%s msg=%s prompt_preview=%r",
-                self.model_name,
-                type(exc).__name__,
-                exc,
-                prompt[:300],
-            )
-            raise
-        elapsed_ms = (time.monotonic() - t0) * 1000
-        if not raw or not raw.strip():
-            logger.warning(
-                "[%s] empty response from backend — elapsed_ms=%.1f prompt_preview=%r",
-                self.model_name,
-                elapsed_ms,
-                prompt[:300],
-            )
+        max_retries = 3
+        raw = ""
+        elapsed_ms = 0
+        
+        for attempt in range(max_retries):
+            t0 = time.monotonic()
+            try:
+                raw = await self.backend.ask(prompt)
+                elapsed_ms = (time.monotonic() - t0) * 1000
+                if raw and raw.strip():
+                    break
+                else:
+                    logger.warning(
+                        "[%s] empty response from backend (attempt %d/%d) — elapsed_ms=%.1f",
+                        self.model_name, attempt+1, max_retries, elapsed_ms
+                    )
+            except Exception as exc:
+                elapsed_ms = (time.monotonic() - t0) * 1000
+                logger.error(
+                    "[%s] backend.ask() failed (attempt %d/%d) — type=%s msg=%s",
+                    self.model_name, attempt+1, max_retries, type(exc).__name__, exc
+                )
+                raw = f"ERROR: {exc}"
+            
+            if attempt < max_retries - 1:
+                await asyncio.sleep(1)
         parsed = parse_vote_response(raw)
         if parsed is None:
             parsed = False  # ambiguous → vote No
