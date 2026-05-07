@@ -7,6 +7,8 @@ This wiki document serves as the "source of truth" for AI agents and developers 
 - **`voter.py`**: Contains backend abstractions (`VLLMBackend`, `LlamaCppBackend`, `OllamaBackend`) and the `LegalVoter` orchestrator.
 - **`eval_voter.py`**: The main evaluation script for the "Voter" phase. It handles data fetching from Neo4j and calculates metrics (Recall, Precision, MRR).
 - **`eval_qa.py`**: Specialised script for the "Answer Generation" phase. It uses retrieved law context to generate natural language answers.
+- **`eval_qa_online.py`**: Prepares "payload" files by fetching law context from Neo4j.
+- **`eval_qa_offline.py`**: Executes LLM inference using pre-fetched payloads, requiring no network access.
 
 ## 2. Core Implementation Decisions
 
@@ -89,3 +91,20 @@ _, _, law_text, extra_info = fetch_law_texts(embedder, uids, batch_size=batch_si
 # The prompt template should contain both {law_text} and {extra_info}
 prompt = template.format(question=q, law_text=law_text, extra_info=extra_info)
 ```
+
+## 6. Offline Evaluation Workflow
+
+To decouple network-heavy law fetching from GPU-heavy LLM inference:
+
+1. **Online Phase (Data Preparation)**:
+   Run `eval_qa_online.py` on a machine with Neo4j access.
+   ```bash
+   python eval_qa_online.py --dataset eval_results_v2/row_results_decomposition.csv
+   ```
+   This generates a `.jsonl` file in `offline_payloads/`.
+
+2. **Offline Phase (Inference)**:
+   Transfer the payload to a GPU machine and run `eval_qa_offline.py`.
+   ```bash
+   python eval_qa_offline.py --models Qwen/Qwen2-7B-Instruct --base-port 8080
+   ```

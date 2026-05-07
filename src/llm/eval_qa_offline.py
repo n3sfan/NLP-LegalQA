@@ -1,0 +1,169 @@
+import asyncio
+import csv
+import json
+import logging
+import os
+import sys
+import time
+from pathlib import Path
+from typing import List, Optional
+
+import pandas as pd
+from tqdm.auto import tqdm
+
+# Add project root to path
+sys.path.append(os.getcwd())
+
+from voter import VLLMBackend
+from eval_qa_utils import EvalConfig, load_template, get_payload_path
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+log = logging.getLogger("eval_qa_offline")
+
+# Silence noisy third-party logs
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
+logging.getLogger("openai").setLevel(logging.WARNING)
+
+async def run_offline_inference(cfg: EvalConfig):
+    """Loads offline payloads and performs heavy GPU inference."""
+    payload_path = get_payload_path(cfg.dataset_path, cfg.payload_dir)
+    if not payload_path.exists():
+        log.error("Payload file not found: %s. Run eval_qa_online.py first.", payload_path)
+        return
+
+    log.info("Loading payloads from %s", payload_path)
+    payloads = []
+    with open(payload_path, "r", encoding="utf-8") as f:
+        for line in f:
+            payloads.append(json.loads(line))
+    
+    if cfg.limit:
+        payloads = payloads[:cfg.limit]
+    
+    if cfg.start_index > 0:
+        payloads = payloads[cfg.start_index:]
+        
+    n_items = len(payloads)
+    log.info("Starting offline inference on %d items", n_items)
+
+    # Initialize Backends
+    backends = []
+    for i, m in enumerate(cfg.models):
+        port = cfg.base_port + i
+        url = f"http://localhost:{port}/v1"
+        log.info("Initializing model %s at %s", m, url)
+        backends.append(VLLMBackend(model=m, base_url=url, api_key=cfg.api_key))
+
+    # Load prompt template
+    try:
+        qa_template = load_template(cfg.prompt_template_name)
+    except FileNotFoundError as e:
+        log.error(e)
+        return
+
+    # Results CSV setup
+    output_p = Path(cfg.output_dir)
+    output_p.mkdir(parents=True, exist_ok=True)
+    fieldnames = [
+        "id", "question", "model", "generated_answer", "expert_answer", 
+        "latency_ms", "law_text_preview"
+    ]
+    results_path = output_p / "row_qa_results_offline.csv"
+    
+    # Write header if not exists or if starting from 0
+    if not results_path.exists() or cfg.start_index == 0:
+        with open(results_path, "w", newline="", encoding="utf-8") as f:
+            csv.DictWriter(f, fieldnames=fieldnames).writeheader()
+
+    for idx, item in enumerate(tqdm(payloads, desc="Offline Inference"), 1):
+        qid = item["id"]
+        question = item["question"]
+        expert_answer = item["expert_answer"]
+        law_text = item["law_text"]
+        extra_info = item["extra_info"]
+
+        # if (idx-1) % cfg.print_every == 0 or idx == n_items:
+        #     log.info("[%d/%d] Generating answer for QID: %s", idx, n_items, qid)
+
+        # Build prompt
+        qa_prompt = qa_template.format(question=question, law_text=law_text, extra_info=extra_info)
+        
+        async def ask_model(backend, model_name):
+            max_retries = 3
+            for attempt in range(max_retries):
+                start = time.perf_counter()
+                try:
+                    ans = await backend.ask(qa_prompt)
+                    duration = (time.perf_counter() - start) * 1000
+                    if ans and ans.strip():
+                        return model_name, ans, duration
+                    else:
+                        log.warning("Empty response from %s (attempt %d/%d)", model_name, attempt+1, max_retries)
+                except Exception as e:
+                    log.error("Model %s failed for QID %s (attempt %d/%d): %s", model_name, qid, attempt+1, max_retries, e)
+                    ans = f"ERROR: {e}"
+                    duration = (time.perf_counter() - start) * 1000
+                
+                if attempt < max_retries - 1:
+                    await asyncio.sleep(1) # Small backoff
+            
+            return model_name, ans, duration
+
+        tasks = [ask_model(b, m) for b, m in zip(backends, cfg.models)]
+        results = await asyncio.gather(*tasks)
+
+        # Log Results
+        for model_name, generated_answer, duration in results:
+            result_row = {
+                "id": qid,
+                "question": question,
+                "model": model_name,
+                "generated_answer": generated_answer,
+                # "expert_answer": expert_answer,
+                "latency_ms": round(duration, 1),
+                "law_text_preview": law_text[:200] + "..." if law_text else ""
+            }
+            
+            with open(results_path, "a", newline="", encoding="utf-8") as f:
+                csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore").writerow(result_row)
+
+    log.info("Offline inference complete. Results saved to %s", results_path)
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Run offline LLM inference for Legal QA")
+    parser.add_argument("--dataset", type=str, default="eval_results_v2/row_results_decomposition.csv", help="Original dataset path (used to find payload)")
+    parser.add_argument("--output", type=str, default="eval_results_qa_offline/", help="Output directory")
+    parser.add_argument("--payload-dir", type=str, default="offline_payloads/", help="Directory where payloads are stored")
+    parser.add_argument("--prompt-template", type=str, default="prompt_qa_0shot.md", help="QA prompt template filename")
+    parser.add_argument("--models", nargs="+", default=["Qwen/Qwen3-4B"], help="List of model names")
+    parser.add_argument("--api-key", type=str, default="vllm-secret-key", help="API key")
+    parser.add_argument("--base-port", type=int, default=8080, help="Starting port for vllm")
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
+    parser.add_argument("--start-index", type=int, default=0, help="Starting index in payload list")
+    parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
+
+    args = parser.parse_args()
+    
+    cfg = EvalConfig(
+        dataset_path=args.dataset,
+        output_dir=args.output,
+        payload_dir=args.payload_dir,
+        prompt_template_name=args.prompt_template,
+        models=args.models,
+        api_key=args.api_key,
+        base_port=args.base_port,
+        limit=args.limit,
+        start_index=args.start_index,
+        print_every=args.print_every
+    )
+    
+    asyncio.run(run_offline_inference(cfg))
+
+if __name__ == "__main__":
+    main()

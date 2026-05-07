@@ -33,8 +33,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Protocol, runtime_checkable
 
-from langchain_ollama import ChatOllama
-
 logger = logging.getLogger(__name__)
 
 
@@ -91,6 +89,7 @@ class OllamaBackend:
     timeout: float = 60.0
 
     async def ask(self, prompt: str) -> str:
+        from langchain_ollama import ChatOllama
         llm = ChatOllama(
             model=self.model,
             base_url=self.base_url,
@@ -192,7 +191,7 @@ class VLLMBackend:
             default_headers={"Authorization": f"Bearer {self.api_key}"},
             max_tokens=self.max_tokens,
             temperature=self.temperature,
-            # timeout=self.timeout,
+            timeout=self.timeout,
         )
         raw = await asyncio.to_thread(llm.invoke, prompt)
 
