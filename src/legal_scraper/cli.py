@@ -7,6 +7,10 @@ import json
 import os
 import sys
 from pathlib import Path
+
+# Add src/ to path so imports like 'from legal_scraper...' work when running via python -m
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from dotenv import load_dotenv
 
 from legal_scraper.parser import LegalDocumentParser
@@ -332,6 +336,29 @@ def main(argv: list[str] | None = None) -> None:
 
         embedder = Neo4jEmbedder(uri=args.uri, user=args.user, password=args.password, database=args.database)
         try:
+            from legal_scraper.router import QueryRouter
+            from legal_scraper.generator import AnswerGenerator
+            
+            # Step 0: Routing
+            print(f"Routing query: '{args.query}'...")
+            router = QueryRouter()
+            intent = router.route(args.query)
+            print(f"Intent classified as: {intent}")
+            
+            generator = AnswerGenerator()
+            
+            if intent == "reject":
+                print("\n=== TRẢ LỜI ===")
+                print("Xin lỗi, tôi là một chatbot pháp luật giao thông đường bộ Việt Nam. Câu hỏi của bạn nằm ngoài phạm vi tư vấn của tôi.")
+                return
+                
+            elif intent == "direct_answer":
+                print("\nGenerating direct answer...")
+                ans = generator.generate_direct_answer(args.query)
+                print("\n=== TRẢ LỜI ===")
+                print(ans)
+                return
+
             # Step 1: Retrieval (decompose or single search)
             if args.decompose:
                 from legal_scraper.query_parser import QueryDecomposer
@@ -395,6 +422,25 @@ def main(argv: list[str] | None = None) -> None:
                 amends_text = Neo4jEmbedder.format_amends(amends_map, [r.uid])
                 if amends_text:
                     print(amends_text)
+
+            # Step 6: Generate final RAG answer
+            print("\nGenerating final answer from retrieved contexts...")
+            context_blocks = []
+            for r in final_results[:args.top_k]:
+                ctx = context_map.get((r.uid, r.label), "")
+                amends = amends_map.get(r.uid, [])
+                if amends:
+                    amend_str = "\n".join([f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends])
+                    ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
+                context_blocks.append(ctx)
+            
+            context_str = "\n\n---\n\n".join(context_blocks)
+            final_answer = generator.generate_rag_answer(args.query, context_str)
+            print("\n=== TRẢ LỜI ===")
+            print(final_answer)
         finally:
             embedder.close()
         return
+
+if __name__ == "__main__":
+    main()
