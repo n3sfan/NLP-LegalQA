@@ -144,6 +144,131 @@ class Neo4jEmbedder:
         all_results.sort(key=lambda r: r.score, reverse=True)
         return all_results
 
+    def create_fulltext_indexes(self) -> None:
+        """Create fulltext indexes for Article, Clause, and Point nodes.
+        
+        These indexes enable BM25 keyword search. Safe to call multiple times
+        (uses IF NOT EXISTS). Does NOT modify any node data.
+        """
+        index_definitions = [
+            ("Article_fulltext_index", "Article", ["title", "content"]),
+            ("Clause_fulltext_index", "Clause", ["content"]),
+            ("Point_fulltext_index", "Point", ["content"]),
+        ]
+        with self._get_driver().session(database=self.database) as session:
+            for index_name, label, properties in index_definitions:
+                props = ", ".join([f"n.{p}" for p in properties])
+                cypher = f"CREATE FULLTEXT INDEX {index_name} IF NOT EXISTS FOR (n:{label}) ON EACH [{props}]"
+                session.run(cypher)
+                print(f"  Created/verified fulltext index: {index_name}")
+
+    def keyword_search(
+        self,
+        labels: str | list[str],
+        query: str,
+        k: int = 5,
+    ) -> list[SearchResult]:
+        """Search using Neo4j fulltext (BM25) indexes.
+
+        Args:
+            labels: Single label or list of labels to search.
+            query: Raw Vietnamese text query.
+            k: Number of results to return per label.
+
+        Returns:
+            List of SearchResult(uid, label, score), sorted by score descending.
+        """
+        if isinstance(labels, str):
+            labels = [labels]
+
+        all_results: list[SearchResult] = []
+
+        with self._get_driver().session(database=self.database) as session:
+            for label in labels:
+                index_name = f"{label}_fulltext_index"
+                # Escape special Lucene characters in the query
+                safe_query = self._escape_lucene_query(query)
+                cypher = (
+                    f'CALL db.index.fulltext.queryNodes("{index_name}", $search_text) '
+                    "YIELD node, score "
+                    "RETURN node.uid AS uid, score "
+                    "LIMIT $k"
+                )
+                try:
+                    result = session.run(cypher, search_text=safe_query, k=k)
+                    for record in result:
+                        uid = record["uid"]
+                        if uid:
+                            all_results.append(SearchResult(uid=uid, label=label, score=record["score"]))
+                except Exception as e:
+                    print(f"Keyword search failed for {label}: {e}")
+
+        all_results.sort(key=lambda r: r.score, reverse=True)
+        return all_results
+
+    @staticmethod
+    def _escape_lucene_query(query: str) -> str:
+        """Escape special Lucene characters to prevent query syntax errors."""
+        special_chars = r'+-&|!(){}[]^"~*?:\/'
+        escaped = []
+        for ch in query:
+            if ch in special_chars:
+                escaped.append(f"\\{ch}")
+            else:
+                escaped.append(ch)
+        return "".join(escaped)
+
+    def hybrid_search(
+        self,
+        labels: str | list[str],
+        query: str,
+        k: int = 5,
+    ) -> list[SearchResult]:
+        """Hybrid search combining vector similarity and BM25 keyword search.
+
+        Results are fused using Reciprocal Rank Fusion (RRF).
+
+        Args:
+            labels: Single label or list of labels to search.
+            query: Raw Vietnamese text query.
+            k: Number of results to return per label for each method.
+
+        Returns:
+            Fused list of SearchResult, sorted by RRF score descending.
+        """
+        from concurrent.futures import ThreadPoolExecutor
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            vec_future = executor.submit(self.search, labels, query, k)
+            kw_future = executor.submit(self.keyword_search, labels, query, k)
+            vector_results = vec_future.result()
+            keyword_results = kw_future.result()
+
+        # RRF fusion: score = sum(1 / (rank + K)) across both lists
+        rrf_k = 60  # standard RRF constant
+        rrf_scores: dict[tuple[str, str], float] = {}
+        result_map: dict[tuple[str, str], SearchResult] = {}
+
+        for rank, r in enumerate(vector_results):
+            key = (r.uid, r.label)
+            rrf_scores[key] = rrf_scores.get(key, 0.0) + 1.0 / (rank + 1 + rrf_k)
+            if key not in result_map:
+                result_map[key] = r
+
+        for rank, r in enumerate(keyword_results):
+            key = (r.uid, r.label)
+            rrf_scores[key] = rrf_scores.get(key, 0.0) + 1.0 / (rank + 1 + rrf_k)
+            if key not in result_map:
+                result_map[key] = r
+
+        # Build fused results
+        fused = [
+            SearchResult(uid=result_map[key].uid, label=result_map[key].label, score=score)
+            for key, score in rrf_scores.items()
+        ]
+        fused.sort(key=lambda r: r.score, reverse=True)
+        return fused
+
     def fetch_nodes(self, uids: list[str], labels: list[str]) -> dict[tuple[str, str], dict]:
         """Fetch content and title for nodes by (uid, label).
 
@@ -334,7 +459,7 @@ class Neo4jEmbedder:
         return result_map
 
     def multi_search(
-        self, sub_queries: List[dict], k: int = 5
+        self, sub_queries: List[dict], k: int = 5, hybrid: bool = False
     ) -> dict[int, list["SearchResult"]]:
         """Search each sub-query independently against all node labels.
 
@@ -345,6 +470,7 @@ class Neo4jEmbedder:
         Args:
             sub_queries: List of {"query": "..."} from decompose_query().
             k: Number of results per label per sub-query.
+            hybrid: If True, use hybrid search (vector + BM25 keyword).
 
         Returns:
             Dict mapping sub-query index -> list of SearchResult.
@@ -352,11 +478,12 @@ class Neo4jEmbedder:
         from concurrent.futures import ThreadPoolExecutor, as_completed
 
         all_labels = ["Article", "Clause", "Point"]
+        search_fn = self.hybrid_search if hybrid else self.search
         results: dict[int, list[SearchResult]] = {i: [] for i in range(len(sub_queries))}
 
         with ThreadPoolExecutor(max_workers=min(6, len(sub_queries))) as executor:
             futures = {
-                executor.submit(self.search, all_labels, sq["query"], k): i
+                executor.submit(search_fn, all_labels, sq["query"], k): i
                 for i, sq in enumerate(sub_queries)
             }
             for future in as_completed(futures):

@@ -203,8 +203,31 @@ Quy tắc:
 5. Không giải thích, không thêm text bên ngoài JSON.
 6. Tuyệt đối không sử dụng code fence hay bọc markdown (VD: KHÔNG dùng ```json ... ```). Output phải là raw text JSON hợp lệ.
 
+Bảng ánh xạ thuật ngữ quan trọng (phải ưu tiên dùng):
+- "lấn làn", "đi sai làn", "lấn làn BRT", "đi vào làn xe buýt" -> "điều khiển xe đi không đúng phần đường hoặc làn đường quy định"
+- "vượt đèn đỏ" -> "không chấp hành hiệu lệnh của đèn tín hiệu giao thông"
+- "xe máy" -> "xe mô tô, xe gắn máy"
+- "đi ngược chiều" -> "đi ngược chiều của đường một chiều"
+- "không đội mũ bảo hiểm" -> "người điều khiển, người ngồi trên xe mô tô không đội mũ bảo hiểm"
+- "say xỉn", "uống bia/rượu" -> "điều khiển phương tiện khi trong máu hoặc hơi thở có nồng độ cồn"
+- "không có bằng lái" -> "điều khiển phương tiện không có giấy phép lái xe"
+
 Ví dụ:
 Input: "Lỗi chạy xe máy không đội mũ bảo hiểm phạt bao nhiêu"
-Output: [{"query": "xử phạt vi phạm hành chính người điều khiển xe mô tô không đội mũ bảo hiểm"}]"""
+Output: [{"query": "xử phạt vi phạm hành chính người điều khiển xe mô tô không đội mũ bảo hiểm"}]
 
+Input: "Xe máy lấn sang làn BRT bị phạt sao"
+Output: [{"query": "xử phạt người điều khiển xe mô tô điều khiển xe đi không đúng phần đường hoặc làn đường quy định"}]
+
+Input: "Vượt đèn đỏ phạt bao nhiêu"
+Output: [{"query": "xử phạt vi phạm hành chính không chấp hành hiệu lệnh của đèn tín hiệu giao thông"}]
+
+Input: "Thổi nồng độ cồn mức kịch khung với ô tô là mấy tiền"
+Output: [{"query": "xử phạt điều khiển xe ô tô trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 80 miligam trên 100 mililít máu hoặc vượt quá 0,4 miligam trên 1 lít khí thở"}]
+
+Input: "Bị bắn tốc độ quá 15km/h xe máy"
+Output: [{"query": "xử phạt người điều khiển xe mô tô chạy quá tốc độ quy định từ 10 km/h đến 20 km/h"}]
+
+Input: "Quên mang bằng lái xe máy"
+Output: [{"query": "xử phạt người điều khiển xe mô tô không mang theo Giấy phép lái xe"}]}"""
 _REWRITE_USER_PROMPT = """[Câu hỏi]: {query}"""

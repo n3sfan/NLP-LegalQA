@@ -116,6 +116,13 @@ def main(argv: list[str] | None = None) -> None:
     p_vsr.add_argument("--top-k", type=int, default=5, help="Final top-k results to display after reranking (default: 5)")
     p_vsr.add_argument("--full", action="store_true", help="Show full content instead of truncated")
 
+    # --- create-fulltext-index ---
+    p_fti = sub.add_parser("create-fulltext-index", help="Create fulltext (BM25) indexes on Neo4j for hybrid search")
+    p_fti.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"))
+    p_fti.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_fti.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_fti.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
+
     # --- query (full pipeline) ---
     p_query = sub.add_parser("query", help="Full retrieval pipeline: decompose → search → aggregate → rerank with amends")
     p_query.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"))
@@ -132,6 +139,9 @@ def main(argv: list[str] | None = None) -> None:
     p_query.add_argument("--decompose", dest="decompose", action="store_true", help="Enable query decomposition (default)")
     p_query.add_argument("--no-decompose", dest="decompose", action="store_false", help="Disable query decomposition")
     p_query.set_defaults(decompose=True)
+    p_query.add_argument("--hybrid", dest="hybrid", action="store_true", help="Enable hybrid search: vector + BM25 keyword (default)")
+    p_query.add_argument("--no-hybrid", dest="hybrid", action="store_false", help="Disable hybrid search, use vector only")
+    p_query.set_defaults(hybrid=True)
     p_query.add_argument("--aggregate", choices=["rrf", "borda", "max"], default="rrf", help="Aggregation strategy (default: rrf)")
     p_query.add_argument("--fetch-k", type=int, default=30, help="Initial candidates per sub-query/label (default: 30)")
     p_query.add_argument("--top-k", type=int, default=5, help="Final results after reranking (default: 5)")
@@ -221,6 +231,21 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Embedding {args.node_labels} nodes...")
             embedder.embed_label(args.node_labels, batch_size=args.batch_size)
             print("  Done.")
+        finally:
+            embedder.close()
+        return
+
+    elif args.command == "create-fulltext-index":
+        embedder = Neo4jEmbedder(
+            uri=args.uri,
+            user=args.user,
+            password=args.password,
+            database=args.database,
+        )
+        try:
+            print("Creating fulltext indexes for hybrid search...")
+            embedder.create_fulltext_indexes()
+            print("Done. Fulltext indexes are ready.")
         finally:
             embedder.close()
         return
@@ -386,10 +411,11 @@ def main(argv: list[str] | None = None) -> None:
                     print(f"Processing failed: {e}. Falling back to single query.")
                     sub_queries = [{"query": args.query}]
                 
-                raw_results = embedder.multi_search(sub_queries, k=args.fetch_k)
+                raw_results = embedder.multi_search(sub_queries, k=args.fetch_k, hybrid=args.hybrid)
                 search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
             else:
-                search_results = embedder.search(args.labels, args.query, k=args.fetch_k)[:args.fetch_k]
+                search_fn = embedder.hybrid_search if args.hybrid else embedder.search
+                search_results = search_fn(args.labels, args.query, k=args.fetch_k)[:args.fetch_k]
 
             if not search_results:
                 print("No results found.")
@@ -415,7 +441,7 @@ def main(argv: list[str] | None = None) -> None:
 
             # Step 5: Display results
             print(f"\nQuery: {args.query}")
-            print(f"Decompose: {args.decompose}, Aggregate: {args.aggregate}, Rerank: {bool(args.top_k > 0)}")
+            print(f"Decompose: {args.decompose}, Hybrid: {args.hybrid}, Aggregate: {args.aggregate}, Rerank: {bool(args.top_k > 0)}")
             print(f"\nTop {len(final_results)} results:\n")
 
             score_label = "agg_score" if args.decompose else "vec_score"
