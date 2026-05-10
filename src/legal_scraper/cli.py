@@ -384,38 +384,32 @@ def main(argv: list[str] | None = None) -> None:
                 print(ans)
                 return
 
-            # Step 1: Retrieval (decompose, rewrite, or single search)
+            # Step 1: Retrieval (decompose or single search)
             if args.decompose:
-                from legal_scraper.router import ComplexityAnalyzer
-                from legal_scraper.query_parser import QueryDecomposer, QueryRewriter
+                from legal_scraper.query_parser import QueryDecomposer
                 
-                print("Analyzing query complexity...")
-                analyzer = ComplexityAnalyzer()
-                complexity = analyzer.analyze(args.query)
-                print(f"Complexity classified as: {complexity}")
+                print("Decomposing query...")
+                decomposer = QueryDecomposer()
                 
                 try:
-                    if complexity == "simple":
-                        print("Query is simple. Rewriting to formal legal terms...")
-                        rewriter = QueryRewriter()
-                        sub_queries = rewriter.rewrite(args.query)
-                        print(f"Rewrote to: {[sq['query'] for sq in sub_queries]}")
-                    else:
-                        print("Query is complex. Decomposing...")
-                        decomposer = QueryDecomposer()
-                        sub_queries = decomposer.decompose(args.query)
-                        print(f"Decomposed into {len(sub_queries)} sub-queries:")
-                        for i, sq in enumerate(sub_queries):
-                            print(f"  {i+1}. {sq['query']}")
+                    sub_queries = decomposer.decompose(args.query)
+                    # Always include original query as fallback for BM25 keyword coverage
+                    sub_queries.append({"query": args.query})
+                    print(f"Decomposed into {len(sub_queries)} sub-queries (incl. original):")
+                    for i, sq in enumerate(sub_queries):
+                        print(f"  {i+1}. {sq['query']}")
                 except Exception as e:
-                    print(f"Processing failed: {e}. Falling back to single query.")
+                    print(f"Decomposition failed: {e}. Falling back to single query.")
                     sub_queries = [{"query": args.query}]
                 
                 raw_results = embedder.multi_search(sub_queries, k=args.fetch_k, hybrid=args.hybrid)
                 search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
+                # Use the rewritten/decomposed query for reranking (exclude original to keep legal precision)
+                rerank_query = " ".join([sq["query"] for sq in sub_queries[:-1]])
             else:
                 search_fn = embedder.hybrid_search if args.hybrid else embedder.search
                 search_results = search_fn(args.labels, args.query, k=args.fetch_k)[:args.fetch_k]
+                rerank_query = args.query  # no rewrite available, use original
 
             if not search_results:
                 print("No results found.")
@@ -429,7 +423,7 @@ def main(argv: list[str] | None = None) -> None:
             if args.top_k > 0 and len(search_results) > 0:
                 documents = [context_map.get((r.uid, r.label), "") for r in search_results]
                 reranker = VietnameseReranker(device="cpu")
-                reranked_indices = reranker.rerank(args.query, documents, top_k=min(args.top_k, len(search_results)))
+                reranked_indices = reranker.rerank(rerank_query, documents, top_k=min(args.top_k, len(search_results)))
                 # Reorder search_results accordingly
                 final_results = [search_results[idx] for idx, _ in reranked_indices]
                 # Build score mapping: original index -> rerank score
@@ -478,7 +472,7 @@ def main(argv: list[str] | None = None) -> None:
                 context_blocks.append(ctx)
             
             context_str = "\n\n---\n\n".join(context_blocks)
-            final_answer = generator.generate_rag_answer(args.query, context_str)
+            final_answer = generator.generate_rag_answer(rerank_query, context_str)
             print("\n=== TRẢ LỜI ===")
             print(final_answer)
         finally:
