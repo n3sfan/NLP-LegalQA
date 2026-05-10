@@ -6,6 +6,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 # Add src/ to path so imports like 'from legal_scraper...' work when running via python -m
@@ -144,10 +145,34 @@ def main(argv: list[str] | None = None) -> None:
     p_query.set_defaults(hybrid=True)
     p_query.add_argument("--aggregate", choices=["rrf", "borda", "max"], default="rrf", help="Aggregation strategy (default: rrf)")
     p_query.add_argument("--fetch-k", type=int, default=30, help="Initial candidates per sub-query/label (default: 30)")
-    p_query.add_argument("--top-k", type=int, default=5, help="Final results after reranking (default: 5)")
+    p_query.add_argument("--rerank-top", type=int, default=15, help="Number of candidates to rerank with cross-encoder (default: 15)")
+    p_query.add_argument("--top-k", type=int, default=5, help="Final results for QA context after reranking (default: 5)")
     p_query.add_argument("--full", action="store_true", help="Show full content")
     p_query.add_argument("--no-hierarchy", dest="hierarchy", action="store_false", help="Skip hierarchy fetching (default: fetch)")
     p_query.set_defaults(hierarchy=True)
+
+    # --- chat (interactive multi-turn REPL) ---
+    p_chat = sub.add_parser("chat", help="Interactive multi-turn chat with conversation history")
+    p_chat.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"))
+    p_chat.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_chat.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_chat.add_argument("--database", default=os.getenv("NEO4J_DATABASE", "neo4j"))
+    p_chat.add_argument(
+        "--labels",
+        nargs="+",
+        default=["Article", "Clause", "Point"],
+        choices=["Article", "Clause", "Point"],
+    )
+    p_chat.add_argument("--fetch-k", type=int, default=30)
+    p_chat.add_argument("--rerank-top", type=int, default=15, help="Candidates to rerank with cross-encoder (default: 15)")
+    p_chat.add_argument("--top-k", type=int, default=8, help="Final results for QA context (default: 8)")
+    p_chat.add_argument("--max-history", type=int, default=10, help="Max conversation turns to keep (default: 10)")
+    p_chat.add_argument("--provider", choices=["local", "openrouter"], default=None, help="LLM provider override (default: from LLM_PROVIDER env)")
+    p_chat.add_argument("--no-decompose", dest="decompose", action="store_false")
+    p_chat.set_defaults(decompose=True)
+    p_chat.add_argument("--no-hybrid", dest="hybrid", action="store_false")
+    p_chat.set_defaults(hybrid=True)
+    p_chat.add_argument("--aggregate", choices=["rrf", "borda", "max"], default="rrf")
 
     args = parser.parse_args(argv)
 
@@ -420,12 +445,16 @@ def main(argv: list[str] | None = None) -> None:
 
             final_results = search_results
             rerank_scores = {}
-            if args.top_k > 0 and len(search_results) > 0:
-                documents = [context_map.get((r.uid, r.label), "") for r in search_results]
+            rerank_pool = args.rerank_top if hasattr(args, 'rerank_top') else 15
+            if rerank_pool > 0 and len(search_results) > 0:
+                # Rerank a wider pool, then take top_k for QA context
+                pool_size = min(rerank_pool, len(search_results))
+                documents = [context_map.get((r.uid, r.label), "") for r in search_results[:pool_size]]
                 reranker = VietnameseReranker(device="cpu")
-                reranked_indices = reranker.rerank(rerank_query, documents, top_k=min(args.top_k, len(search_results)))
-                # Reorder search_results accordingly
-                final_results = [search_results[idx] for idx, _ in reranked_indices]
+                reranked_indices = reranker.rerank(rerank_query, documents, top_k=pool_size)
+                # Take top_k from the reranked pool for final results
+                top_indices = reranked_indices[:args.top_k]
+                final_results = [search_results[idx] for idx, _ in top_indices]
                 # Build score mapping: original index -> rerank score
                 rerank_scores = {idx: score for idx, score in reranked_indices}
 
@@ -475,6 +504,169 @@ def main(argv: list[str] | None = None) -> None:
             final_answer = generator.generate_rag_answer(rerank_query, context_str)
             print("\n=== TRẢ LỜI ===")
             print(final_answer)
+        finally:
+            embedder.close()
+        return
+
+    elif args.command == "chat":
+        from legal_scraper.retrieval import aggregate_search_results, fetch_context_for_results
+        from legal_scraper.reranker import VietnameseReranker
+        from legal_scraper.query_rewriter import QueryRewriter
+        from legal_scraper.router import QueryRouter
+        from legal_scraper.generator import AnswerGenerator
+
+        embedder = Neo4jEmbedder(uri=args.uri, user=args.user, password=args.password, database=args.database)
+        try:
+            # Initialise components
+            print("[*] Initializing components...")
+            t_init = time.time()
+            rewriter = QueryRewriter()  # uses LLM_PROVIDER env
+            router = QueryRouter()
+            generator = AnswerGenerator()
+            reranker = VietnameseReranker(device="cpu")
+            print(f"[*] Components ready ({time.time() - t_init:.1f}s)")
+            provider = os.getenv("LLM_PROVIDER", "local")
+            print(f"[*] LLM Provider: {provider}")
+            print(f"[*] Model:    {rewriter.llm.model_name}")
+            print(f"[*] Base URL: {rewriter.llm.openai_api_base}")
+
+            chat_history: list[dict] = []
+
+            print("\n" + "=" * 60)
+            print("  Legal QA Chat (multi-turn) — type 'exit' or 'quit' to stop")
+            print("  Type '/clear' to reset conversation history")
+            print("=" * 60 + "\n")
+
+            while True:
+                try:
+                    user_input = input("[USER]: ").strip()
+                except (EOFError, KeyboardInterrupt):
+                    print("\nGoodbye!")
+                    break
+
+                if not user_input:
+                    continue
+                if user_input.lower() in ("exit", "quit"):
+                    print("Goodbye!")
+                    break
+                if user_input.lower() == "/clear":
+                    chat_history.clear()
+                    print("[*] Conversation history cleared.\n")
+                    continue
+
+                # --- Step 0: Rewrite query using conversation history ---
+                t0 = time.time()
+                rewritten_query = rewriter.rewrite(chat_history, user_input)
+                t_rewrite = time.time() - t0
+
+                if rewritten_query != user_input:
+                    print(f"[*] Rewritten: '{user_input}' → '{rewritten_query}' ({t_rewrite:.2f}s)")
+                else:
+                    print(f"[*] Query unchanged (no rewrite needed, {t_rewrite:.2f}s)")
+
+                # --- Step 1: Route ---
+                t1 = time.time()
+                intent = router.route(rewritten_query)
+                t_route = time.time() - t1
+                print(f"[*] Route: {intent} ({t_route:.2f}s)")
+
+                if intent == "reject":
+                    answer = "Xin lỗi, tôi là chatbot pháp luật giao thông đường bộ Việt Nam. Câu hỏi của bạn nằm ngoài phạm vi tư vấn của tôi."
+                    print(f"\n[ASSISTANT]: {answer}\n")
+                    chat_history.append({"role": "user", "content": user_input})
+                    chat_history.append({"role": "assistant", "content": answer})
+
+                elif intent == "direct_answer":
+                    t2 = time.time()
+                    answer = generator.generate_direct_answer(rewritten_query)
+                    t_gen = time.time() - t2
+                    print(f"\n[ASSISTANT]: {answer}")
+                    print(f"[*] Generation: {t_gen:.2f}s\n")
+                    chat_history.append({"role": "user", "content": user_input})
+                    chat_history.append({"role": "assistant", "content": answer})
+
+                else:  # retrieve
+                    # --- Step 2: Decompose ---
+                    if args.decompose:
+                        from legal_scraper.query_parser import QueryDecomposer
+                        t2 = time.time()
+                        decomposer = QueryDecomposer()
+                        try:
+                            sub_queries = decomposer.decompose(rewritten_query)
+                            sub_queries.append({"query": rewritten_query})
+                            t_decompose = time.time() - t2
+                            print(f"[*] Decomposed into {len(sub_queries)} sub-queries ({t_decompose:.2f}s):")
+                            for i, sq in enumerate(sub_queries):
+                                print(f"    {i+1}. {sq['query']}")
+                        except Exception as e:
+                            print(f"[!] Decomposition failed: {e}. Using single query.")
+                            sub_queries = [{"query": rewritten_query}]
+
+                        raw_results = embedder.multi_search(sub_queries, k=args.fetch_k, hybrid=args.hybrid)
+                        search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
+                        rerank_query = " ".join([sq["query"] for sq in sub_queries[:-1]])
+                    else:
+                        t2 = time.time()
+                        search_fn = embedder.hybrid_search if args.hybrid else embedder.search
+                        search_results = search_fn(args.labels, rewritten_query, k=args.fetch_k)[:args.fetch_k]
+                        rerank_query = rewritten_query
+                        print(f"[*] Search: {time.time() - t2:.2f}s")
+
+                    if not search_results:
+                        answer = "Không tìm thấy kết quả phù hợp trong cơ sở dữ liệu pháp luật."
+                        print(f"\n[ASSISTANT]: {answer}\n")
+                        chat_history.append({"role": "user", "content": user_input})
+                        chat_history.append({"role": "assistant", "content": answer})
+                        continue
+
+                    # --- Step 3: Fetch context & rerank ---
+                    t3 = time.time()
+                    # Rerank a wider pool, then take top_k for final QA context
+                    rerank_pool = min(args.rerank_top, len(search_results))
+                    context_map = fetch_context_for_results(embedder, search_results[:rerank_pool], include_hierarchy=True)
+                    documents = [context_map.get((r.uid, r.label), "") for r in search_results[:rerank_pool]]
+                    reranked_indices = reranker.rerank(rerank_query, documents, top_k=rerank_pool)
+                    final_results = [search_results[idx] for idx, _ in reranked_indices[:args.top_k]]
+                    t_rerank = time.time() - t3
+                    print(f"[*] Context + Rerank: {t_rerank:.2f}s (reranked {rerank_pool} → top {len(final_results)} results)")
+
+                    # --- Step 4: Build context & generate ---
+                    top_k_uids = [r.uid for r in final_results]
+                    amends_map = embedder.fetch_amends(top_k_uids)
+
+                    # Debug: show retrieved results
+                    print(f"\n[DEBUG] Top {len(final_results)} reranked results:")
+                    for rank, (r, (_, score)) in enumerate(zip(final_results, reranked_indices[:args.top_k]), 1):
+                        amend_count = len(amends_map.get(r.uid, []))
+                        amend_tag = f" [+{amend_count} amends]" if amend_count else ""
+                        uid_short = Neo4jEmbedder.format_uid_vn(r.uid)
+                        print(f"  {rank}. [{r.label}] score={score:.4f} {uid_short}{amend_tag}")
+
+                    context_blocks = []
+                    for r in final_results:
+                        ctx = context_map.get((r.uid, r.label), "")
+                        amends = amends_map.get(r.uid, [])
+                        if amends:
+                            amend_str = "\n".join([f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends])
+                            ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
+                        context_blocks.append(ctx)
+                    context_str = "\n\n---\n\n".join(context_blocks)
+
+                    t4 = time.time()
+                    answer = generator.generate_rag_answer(rerank_query, context_str)
+                    t_gen = time.time() - t4
+
+                    print(f"\n[ASSISTANT]: {answer}")
+                    print(f"[*] Generation: {t_gen:.2f}s\n")
+
+                    chat_history.append({"role": "user", "content": user_input})
+                    chat_history.append({"role": "assistant", "content": answer})
+
+                # Trim history to max_history turns (each turn = 2 messages)
+                max_msgs = args.max_history * 2
+                if len(chat_history) > max_msgs:
+                    chat_history = chat_history[-max_msgs:]
+
         finally:
             embedder.close()
         return

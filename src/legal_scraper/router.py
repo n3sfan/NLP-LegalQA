@@ -1,52 +1,42 @@
 import os
 import json
-import requests
 from typing import Literal
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+
 from legal_scraper.prompts import _ROUTER_SYSTEM_PROMPT, _ROUTER_USER_PROMPT
+from legal_scraper.query_rewriter import create_chat_llm
 
 IntentType = Literal["direct_answer", "retrieve", "reject"]
 
 class QueryRouter:
     """Classifies user queries to determine the appropriate response strategy."""
     
-    def __init__(self, local_model_url: str = None):
-        self.local_model_url = local_model_url or os.getenv(
-            "LOCAL_MODEL_URL", "https://vitalize-compacter-nephew.ngrok-free.dev/generate"
+    def __init__(self, llm=None):
+        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=64)
+        self.chain = (
+            ChatPromptTemplate.from_messages([
+                ("system", _ROUTER_SYSTEM_PROMPT),
+                ("human", "{query}"),
+            ])
+            | self.llm
+            | StrOutputParser()
         )
-        self.system_prompt = _ROUTER_SYSTEM_PROMPT
-        self.user_prompt = _ROUTER_USER_PROMPT
 
     def route(self, query: str) -> IntentType:
         """Classify the user query. Fallback to 'retrieve' on failure."""
-        prompt_text = f"<start_of_turn>user\n{self.system_prompt}\n\n{self.user_prompt.format(query=query)}<end_of_turn>\n<start_of_turn>model\n"
-        
         @retry(
             stop=stop_after_attempt(2),
             wait=wait_exponential(multiplier=1, min=2, max=5),
-            retry=retry_if_exception_type((requests.exceptions.RequestException, ValueError)),
             reraise=True,
         )
-        def _call_llm() -> str:
-            payload = {
-                "prompt": prompt_text,
-                "max_new_tokens": 64,
-                "temperature": 0.1
-            }
-            headers = {
-                "ngrok-skip-browser-warning": "true",
-                "Content-Type": "application/json"
-            }
-            response = requests.post(self.local_model_url, json=payload, headers=headers, timeout=60)
-            response.raise_for_status()
-            data = response.json()
-            if "response" in data:
-                return data["response"].strip()
-            return ""
+        def _call():
+            return self.chain.invoke({"query": _ROUTER_USER_PROMPT.format(query=query)})
 
         try:
-            raw_response = _call_llm()
+            raw_response = _call()
             return self._parse_intent(raw_response)
         except Exception as e:
             print(f"Router error: {e}. Falling back to 'retrieve'.")
