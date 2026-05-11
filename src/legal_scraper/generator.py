@@ -33,10 +33,12 @@ class AnswerGenerator:
             
         return _do_request()
 
-    def generate_rag_answer(self, query: str, context: str) -> str:
+    def generate_rag_answer(self, query: str, context: str, current_date: str | None = None) -> str:
         """Generate answer using retrieved legal context."""
+        from datetime import datetime
+        date_str = current_date or datetime.now().strftime("%Y-%m-%d")
         try:
-            user_prompt = _QA_USER_PROMPT.format(query=query, context=context)
+            user_prompt = _QA_USER_PROMPT.format(query=query, context=context, current_date=date_str)
             return self._call_llm(_QA_SYSTEM_PROMPT, user_prompt)
         except Exception as e:
             print(f"RAG Generation error: {e}")
@@ -44,8 +46,10 @@ class AnswerGenerator:
 
     def generate_direct_answer(self, query: str) -> str:
         """Generate answer directly without context (for chitchat)."""
+        from datetime import datetime
+        date_str = datetime.now().strftime("%Y-%m-%d")
         try:
-            sys_prompt = "Bạn là một Chatbot hỗ trợ tư vấn pháp luật giao thông đường bộ Việt Nam. Hãy trả lời câu hỏi của người dùng một cách thân thiện và ngắn gọn."
+            sys_prompt = f"Bạn là một Chatbot hỗ trợ tư vấn pháp luật giao thông đường bộ Việt Nam. Hãy trả lời câu hỏi của người dùng một cách thân thiện và ngắn gọn. Ngày hiện tại: {date_str}."
             return self._call_llm(sys_prompt, f"Câu hỏi: {query}")
         except Exception as e:
             print(f"Direct Generation error: {e}")

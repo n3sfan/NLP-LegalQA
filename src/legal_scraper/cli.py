@@ -173,6 +173,9 @@ def main(argv: list[str] | None = None) -> None:
     p_chat.add_argument("--no-hybrid", dest="hybrid", action="store_false")
     p_chat.set_defaults(hybrid=True)
     p_chat.add_argument("--aggregate", choices=["rrf", "borda", "max"], default="rrf")
+    p_chat.add_argument("--expand", dest="expand", action="store_true", help="Enable Article/Clause children + sibling Points expansion")
+    p_chat.add_argument("--no-expand", dest="expand", action="store_false", help="Disable expansion (default)")
+    p_chat.set_defaults(expand=False)
 
     args = parser.parse_args(argv)
 
@@ -450,7 +453,7 @@ def main(argv: list[str] | None = None) -> None:
                 # Rerank a wider pool, then take top_k for QA context
                 pool_size = min(rerank_pool, len(search_results))
                 documents = [context_map.get((r.uid, r.label), "") for r in search_results[:pool_size]]
-                reranker = VietnameseReranker(device="cpu")
+                reranker = VietnameseReranker()
                 reranked_indices = reranker.rerank(rerank_query, documents, top_k=pool_size)
                 # Take top_k from the reranked pool for final results
                 top_indices = reranked_indices[:args.top_k]
@@ -523,7 +526,7 @@ def main(argv: list[str] | None = None) -> None:
             rewriter = QueryRewriter()  # uses LLM_PROVIDER env
             router = QueryRouter()
             generator = AnswerGenerator()
-            reranker = VietnameseReranker(device="cpu")
+            reranker = VietnameseReranker()
             print(f"[*] Components ready ({time.time() - t_init:.1f}s)")
             provider = os.getenv("LLM_PROVIDER", "local")
             print(f"[*] LLM Provider: {provider}")
@@ -621,30 +624,118 @@ def main(argv: list[str] | None = None) -> None:
 
                     # --- Step 3: Fetch context & rerank ---
                     t3 = time.time()
-                    # Rerank a wider pool, then take top_k for final QA context
+                    # Rerank a wider pool, then apply graph-based score adjustments
                     rerank_pool = min(args.rerank_top, len(search_results))
                     context_map = fetch_context_for_results(embedder, search_results[:rerank_pool], include_hierarchy=True)
                     documents = [context_map.get((r.uid, r.label), "") for r in search_results[:rerank_pool]]
                     reranked_indices = reranker.rerank(rerank_query, documents, top_k=rerank_pool)
-                    final_results = [search_results[idx] for idx, _ in reranked_indices[:args.top_k]]
                     t_rerank = time.time() - t3
-                    print(f"[*] Context + Rerank: {t_rerank:.2f}s (reranked {rerank_pool} → top {len(final_results)} results)")
+                    print(f"[*] Context + Rerank: {t_rerank:.2f}s ({rerank_pool} candidates)")
+
+                    # --- Step 3b: Graph-based score adjustments ---
+                    t3b = time.time()
+                    pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
+                    
+                    # Check abolished/replaced status
+                    abolished_map = embedder.fetch_abolished_uids(pool_uids)
+                    
+                    # Get document effect dates for recency boost
+                    doc_ids = list({uid.split("::")[0] for uid in pool_uids})
+                    effect_dates = embedder.fetch_doc_effect_dates(doc_ids)
+                    
+                    from datetime import datetime, date
+                    today = date.today()
+                    
+                    adjusted_indices = []
+                    for idx, score in reranked_indices:
+                        uid = search_results[idx].uid
+                        doc_id = uid.split("::")[0]
+                        
+                        # Additive penalty for abolished/replaced provisions
+                        # (multiplicative breaks for negative cross-encoder scores)
+                        amend_types = abolished_map.get(uid, [])
+                        if "bãi bỏ" in amend_types:
+                            score -= 5.0  # heavy penalty
+                        elif "thay thế" in amend_types:
+                            score -= 3.0
+                        
+                        # Additive recency boost: newer documents score higher
+                        eff_str = effect_dates.get(doc_id)
+                        if eff_str:
+                            try:
+                                eff_date = datetime.strptime(eff_str, "%Y-%m-%d").date()
+                                years_old = max(0, (today - eff_date).days) / 365.0
+                                recency_bonus = max(0, 2.0 - 0.3 * years_old)  # +2 for brand new, 0 for 6+ years old
+                                score += recency_bonus
+                            except ValueError:
+                                pass
+                        
+                        adjusted_indices.append((idx, score))
+                    
+                    # Re-sort by adjusted score and take top_k
+                    adjusted_indices.sort(key=lambda x: x[1], reverse=True)
+                    final_results = [search_results[idx] for idx, _ in adjusted_indices[:args.top_k]]
+                    final_scores = adjusted_indices[:args.top_k]
+                    
+                    t_boost = time.time() - t3b
+                    print(f"[*] Graph boost: {t_boost:.2f}s (abolished penalties + recency boost applied)")
 
                     # --- Step 4: Build context & generate ---
                     top_k_uids = [r.uid for r in final_results]
                     amends_map = embedder.fetch_amends(top_k_uids)
+                    
+                    # Expand context: sibling points + article/clause children
+                    # Context expansion (disable with --no-expand for local LLMs)
+                    siblings_map = {}
+                    children_map = {}
+                    if args.expand:
+                        point_uids = [r.uid for r in final_results if r.label == "Point"]
+                        siblings_map = embedder.fetch_sibling_points(point_uids) if point_uids else {}
+                        parent_uids = [r.uid for r in final_results if r.label in ("Article", "Clause")]
+                        children_map = embedder.fetch_children_context(parent_uids) if parent_uids else {}
 
-                    # Debug: show retrieved results
-                    print(f"\n[DEBUG] Top {len(final_results)} reranked results:")
-                    for rank, (r, (_, score)) in enumerate(zip(final_results, reranked_indices[:args.top_k]), 1):
+                    # Debug: show retrieved results with hierarchy content
+                    print(f"\n[DEBUG] Top {len(final_results)} results (after graph boost):")
+                    for rank, (r, (_, score)) in enumerate(zip(final_results, final_scores), 1):
                         amend_count = len(amends_map.get(r.uid, []))
                         amend_tag = f" [+{amend_count} amends]" if amend_count else ""
+                        abolished_types = abolished_map.get(r.uid, [])
+                        abolished_tag = f" [{'|'.join(abolished_types)}]" if abolished_types else ""
                         uid_short = Neo4jEmbedder.format_uid_vn(r.uid)
-                        print(f"  {rank}. [{r.label}] score={score:.4f} {uid_short}{amend_tag}")
+                        print(f"\n  {rank}. [{r.label}] score={score:.4f} {uid_short}{amend_tag}{abolished_tag}")
+                        # Print the hierarchy context (what the LLM sees for this node)
+                        ctx = context_map.get((r.uid, r.label), "[no context]")
+                        print(f"     [Hierarchy context]:")
+                        for line in ctx.split("\n"):
+                            print(f"       {line}")
+                        # Print siblings if any
+                        if r.uid in siblings_map:
+                            print(f"     [Siblings added by --expand]:")
+                            for line in siblings_map[r.uid].split("\n"):
+                                print(f"       {line}")
+
+                    if not args.expand:
+                        print("\n[DEBUG] --expand OFF, skipping sibling/children fetch.")
 
                     context_blocks = []
                     for r in final_results:
                         ctx = context_map.get((r.uid, r.label), "")
+                        
+                        # Tag abolished provisions
+                        abolished_types = abolished_map.get(r.uid, [])
+                        if "bãi bỏ" in abolished_types:
+                            ctx = f"[ĐÃ BỊ BÃI BỎ bởi văn bản mới hơn]\n{ctx}"
+                        elif "thay thế" in abolished_types:
+                            ctx = f"[ĐÃ BỊ THAY THẾ bởi văn bản mới hơn]\n{ctx}"
+                        
+                        # Append sibling points for Point nodes
+                        if r.uid in siblings_map:
+                            ctx += f"\n\n[Các điểm khác cùng khoản]:\n{siblings_map[r.uid]}"
+                        
+                        # Expand Article/Clause nodes with children content
+                        if r.uid in children_map:
+                            ctx += f"\n\n[Nội dung chi tiết]:\n{children_map[r.uid]}"
+                        
                         amends = amends_map.get(r.uid, [])
                         if amends:
                             amend_str = "\n".join([f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends])
@@ -659,8 +750,13 @@ def main(argv: list[str] | None = None) -> None:
                     print(f"\n[ASSISTANT]: {answer}")
                     print(f"[*] Generation: {t_gen:.2f}s\n")
 
+                    # Sanitize surrogates from LLM responses (OpenRouter sometimes returns them)
+                    def _sanitize(text: str) -> str:
+                        return text.encode("utf-8", errors="replace").decode("utf-8")
+                    
+                    clean_answer = _sanitize(answer)
                     chat_history.append({"role": "user", "content": user_input})
-                    chat_history.append({"role": "assistant", "content": answer})
+                    chat_history.append({"role": "assistant", "content": clean_answer})
 
                 # Trim history to max_history turns (each turn = 2 messages)
                 max_msgs = args.max_history * 2

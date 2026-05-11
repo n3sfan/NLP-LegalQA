@@ -130,7 +130,7 @@ def full_retrieval_pipeline(
         rerank_q = rerank_query or query
         context_map = fetch_context_for_results(embedder, aggregated[:rerank_top], include_hierarchy=False)
         docs = [context_map.get((r.uid, r.label), "") for r in aggregated[:rerank_top]]
-        reranker = VietnameseReranker(device="cpu")
+        reranker = VietnameseReranker()
         reranked_indices = reranker.rerank(rerank_q, docs, top_k=len(docs), batch_size=4)
         reranked = [aggregated[idx] for idx, _ in reranked_indices]
         for i, (_, score) in enumerate(reranked_indices):

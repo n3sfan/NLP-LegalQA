@@ -307,7 +307,8 @@ class Neo4jEmbedder:
         UNWIND $uids AS target_uid
         MATCH path = (d:Document)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *]->(target)
         WHERE target.uid = target_uid
-        RETURN target.uid AS uid, nodes(path)[1..] AS hierarchy_nodes
+        RETURN target.uid AS uid, nodes(path)[1..] AS hierarchy_nodes,
+               d.doc_identity AS doc_identity, d.effect_date AS effect_date
         """
         result_map: dict[str, str] = {}
         with self._get_driver().session(database=self.database) as session:
@@ -350,9 +351,16 @@ class Neo4jEmbedder:
                 target_node = hierarchy_nodes[-1] if hierarchy_nodes else None
                 main_content = target_node.get("content", "") if target_node else ""
                 
+                # Build document header
+                doc_id = record["doc_identity"] or ""
+                eff_date = record["effect_date"]
+                eff_str = str(eff_date)[:10] if eff_date else "N/A"
+                doc_header = f"[Văn bản: {doc_id} — Hiệu lực: {eff_str}]"
+
                 # Combine headers and full content
                 header_text = "\n".join(context_lines)
                 full_text = header_text + "\nNội dung: " + main_content if main_content else header_text
+                full_text = doc_header + "\n" + full_text
                 result_map[uid] = full_text.strip()
                 
         return result_map
@@ -457,6 +465,128 @@ class Neo4jEmbedder:
                     "amended_label": amended_labels[0] if amended_labels else "Unknown"
                 })
         return result_map
+
+    def fetch_abolished_uids(self, uids: list[str]) -> dict[str, list[str]]:
+        """Check which UIDs have been abolished/replaced via AMENDS edges.
+
+        Returns dict mapping uid -> list of amend_types (e.g., ['bãi bỏ']).
+        UIDs with no such amendments return empty lists.
+        """
+        if not uids:
+            return {}
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH (target) WHERE target.uid = target_uid
+        OPTIONAL MATCH ()-[r:AMENDS]->(target)
+        WHERE r.type IN ['bãi bỏ', 'thay thế']
+        RETURN target.uid AS uid, collect(DISTINCT r.type) AS amend_types
+        """
+        result: dict[str, list[str]] = {uid: [] for uid in uids}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, uids=uids):
+                types = [t for t in (record["amend_types"] or []) if t]
+                result[record["uid"]] = types
+        return result
+
+    def fetch_doc_effect_dates(self, doc_identities: list[str]) -> dict[str, str | None]:
+        """Get effect_date for documents by doc_identity."""
+        if not doc_identities:
+            return {}
+        query = """
+        UNWIND $doc_ids AS did
+        MATCH (d:Document {doc_identity: did})
+        RETURN d.doc_identity AS doc_id, d.effect_date AS effect_date
+        """
+        result: dict[str, str | None] = {}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, doc_ids=doc_identities):
+                eff = record["effect_date"]
+                result[record["doc_id"]] = str(eff)[:10] if eff else None
+        return result
+
+    def fetch_sibling_points(self, uids: list[str]) -> dict[str, str]:
+        """For Point nodes, fetch all sibling Points under the same Clause.
+
+        Returns dict mapping uid -> formatted text of sibling points.
+        Only returns entries for Point nodes that have siblings.
+        """
+        if not uids:
+            return {}
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH (target:Point {uid: target_uid})
+        MATCH (clause:Clause)-[:HAS_POINT]->(target)
+        MATCH (clause)-[:HAS_POINT]->(sibling:Point)
+        WHERE sibling.uid <> target_uid
+        RETURN target.uid AS uid,
+               collect({letter: sibling.letter, content: sibling.content}) AS siblings
+        """
+        result: dict[str, str] = {}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, uids=uids):
+                siblings = record["siblings"] or []
+                if siblings:
+                    siblings.sort(key=lambda s: s.get("letter", ""))
+                    lines = []
+                    for s in siblings:
+                        letter = s.get("letter", "?")
+                        content = (s.get("content") or "").strip()
+                        if content:
+                            lines.append(f"  Điểm {letter}. {content}")
+                    if lines:
+                        result[record["uid"]] = "\n".join(lines)
+        return result
+
+    def fetch_children_context(self, uids: list[str]) -> dict[str, str]:
+        """For Article/Clause nodes, fetch all descendant content.
+
+        When an Article is retrieved, its own content is often just a title.
+        This method fetches all child Clauses and Points to provide full context.
+        Returns dict mapping uid -> formatted children text.
+        """
+        if not uids:
+            return {}
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH (target) WHERE target.uid = target_uid
+        OPTIONAL MATCH (target)-[:HAS_CLAUSE|HAS_POINT*1..2]->(child)
+        WITH target.uid AS uid, labels(target)[0] AS target_label,
+             collect({
+                label: labels(child)[0],
+                number: child.number,
+                letter: child.letter,
+                content: child.content,
+                uid: child.uid
+             }) AS children
+        RETURN uid, target_label, children
+        """
+        result: dict[str, str] = {}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, uids=uids):
+                target_label = record["target_label"]
+                if target_label not in ("Article", "Clause"):
+                    continue
+                children = [c for c in (record["children"] or []) if c.get("content")]
+                if not children:
+                    continue
+                # Sort by uid to maintain document order
+                children.sort(key=lambda c: c.get("uid", ""))
+                lines = []
+                for c in children:
+                    label = c.get("label", "")
+                    content = (c.get("content") or "").strip()
+                    if not content:
+                        continue
+                    if label == "Clause":
+                        num = c.get("number", "?")
+                        lines.append(f"Khoản {num}. {content}")
+                    elif label == "Point":
+                        letter = c.get("letter", "?")
+                        lines.append(f"  Điểm {letter}. {content}")
+                if lines:
+                    result[record["uid"]] = "\n".join(lines)
+        return result
+
 
     def multi_search(
         self, sub_queries: List[dict], k: int = 5, hybrid: bool = False
