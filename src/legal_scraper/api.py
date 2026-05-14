@@ -191,15 +191,13 @@ async def chat(req: ChatRequest):
     if len(history_dicts) > max_msgs:
         history_dicts = history_dicts[-max_msgs:]
 
-    # --- Step 0: Rewrite ---
+    # --- Step 0: Route the ORIGINAL query first ---
+    # This must happen BEFORE rewriting, because the rewriter will
+    # incorporate chat history and transform greetings like "hello" into
+    # legal questions, preventing the router from recognising them.
     t0 = time.time()
-    rewritten_query = rewriter.rewrite(history_dicts, req.query)
-    timings["rewrite"] = round(time.time() - t0, 3)
-
-    # --- Step 1: Route ---
-    t1 = time.time()
-    intent = router.route(rewritten_query)
-    timings["route"] = round(time.time() - t1, 3)
+    intent = router.route(req.query)
+    timings["route"] = round(time.time() - t0, 3)
 
     if intent == "reject":
         answer = "Xin lỗi, tôi là chatbot pháp luật giao thông đường bộ Việt Nam. Câu hỏi của bạn nằm ngoài phạm vi tư vấn của tôi."
@@ -207,19 +205,22 @@ async def chat(req: ChatRequest):
             answer=answer,
             intent=intent,
             timings=timings,
-            rewritten_query=rewritten_query if rewritten_query != req.query else None,
         )
 
     if intent == "direct_answer":
-        t2 = time.time()
-        answer = generator.generate_direct_answer(rewritten_query)
-        timings["generation"] = round(time.time() - t2, 3)
+        t1 = time.time()
+        answer = generator.generate_direct_answer(req.query)
+        timings["generation"] = round(time.time() - t1, 3)
         return ChatResponse(
             answer=answer,
             intent=intent,
             timings=timings,
-            rewritten_query=rewritten_query if rewritten_query != req.query else None,
         )
+
+    # --- Step 1: Rewrite (only for "retrieve" intent) ---
+    t1 = time.time()
+    rewritten_query = rewriter.rewrite(history_dicts, req.query)
+    timings["rewrite"] = round(time.time() - t1, 3)
 
     # --- intent == "retrieve" ---
     # Step 2: Decompose → Search
