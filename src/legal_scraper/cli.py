@@ -384,7 +384,6 @@ def main(argv: list[str] | None = None) -> None:
         return
 
     elif args.command == "query":
-        from legal_scraper.retrieval import aggregate_search_results, fetch_context_for_results
         from legal_scraper.reranker import VietnameseReranker
 
         embedder = Neo4jEmbedder(uri=args.uri, user=args.user, password=args.password, database=args.database)
@@ -412,99 +411,57 @@ def main(argv: list[str] | None = None) -> None:
                 print(ans)
                 return
 
-            # Step 1: Retrieval (decompose or single search)
-            if args.decompose:
-                from legal_scraper.query_parser import QueryDecomposer
-                
-                print("Decomposing query...")
-                decomposer = QueryDecomposer()
-                
-                try:
-                    sub_queries = decomposer.decompose(args.query)
-                    # Always include original query as fallback for BM25 keyword coverage
-                    sub_queries.append({"query": args.query})
-                    print(f"Decomposed into {len(sub_queries)} sub-queries (incl. original):")
-                    for i, sq in enumerate(sub_queries):
-                        print(f"  {i+1}. {sq['query']}")
-                except Exception as e:
-                    print(f"Decomposition failed: {e}. Falling back to single query.")
-                    sub_queries = [{"query": args.query}]
-                
-                raw_results = embedder.multi_search(sub_queries, k=args.fetch_k, hybrid=args.hybrid)
-                search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
-                # Use the rewritten/decomposed query for reranking (exclude original to keep legal precision)
-                rerank_query = " ".join([sq["query"] for sq in sub_queries[:-1]])
-            else:
-                search_fn = embedder.hybrid_search if args.hybrid else embedder.search
-                search_results = search_fn(args.labels, args.query, k=args.fetch_k)[:args.fetch_k]
-                rerank_query = args.query  # no rewrite available, use original
+            # Step 1-5: Shared retrieval pipeline
+            from legal_scraper.retrieval import retrieve_and_build_context
 
-            if not search_results:
+            reranker = VietnameseReranker()
+            rr = retrieve_and_build_context(
+                embedder=embedder,
+                reranker=reranker,
+                query=args.query,
+                decompose=args.decompose,
+                hybrid=args.hybrid,
+                aggregate=args.aggregate,
+                fetch_k=args.fetch_k,
+                rerank_top=args.rerank_top,
+                top_k=args.top_k,
+                labels=args.labels,
+                expand=False,
+            )
+
+            if not rr.final_results:
                 print("No results found.")
                 return
 
-            # Step 2: Fetch context (hierarchy or basic)
-            context_map = fetch_context_for_results(embedder, search_results, include_hierarchy=args.hierarchy)
-
-            final_results = search_results
-            rerank_scores = {}
-            rerank_pool = args.rerank_top if hasattr(args, 'rerank_top') else 15
-            if rerank_pool > 0 and len(search_results) > 0:
-                # Rerank a wider pool, then take top_k for QA context
-                pool_size = min(rerank_pool, len(search_results))
-                documents = [context_map.get((r.uid, r.label), "") for r in search_results[:pool_size]]
-                reranker = VietnameseReranker()
-                reranked_indices = reranker.rerank(rerank_query, documents, top_k=pool_size)
-                # Take top_k from the reranked pool for final results
-                top_indices = reranked_indices[:args.top_k]
-                final_results = [search_results[idx] for idx, _ in top_indices]
-                # Build score mapping: original index -> rerank score
-                rerank_scores = {idx: score for idx, score in reranked_indices}
-
-            # Step 4: Fetch amends for top results
-            top_k_uids = [r.uid for r in final_results[:args.top_k]]
-            amends_map = embedder.fetch_amends(top_k_uids)
-
-            # Step 5: Display results
+            # Display results
             print(f"\nQuery: {args.query}")
-            print(f"Decompose: {args.decompose}, Hybrid: {args.hybrid}, Aggregate: {args.aggregate}, Rerank: {bool(args.top_k > 0)}")
-            print(f"\nTop {len(final_results)} results:\n")
+            print(f"Decompose: {args.decompose}, Hybrid: {args.hybrid}, Aggregate: {args.aggregate}")
+            if rr.sub_queries:
+                print(f"Sub-queries ({len(rr.sub_queries)}):")
+                for i, sq in enumerate(rr.sub_queries):
+                    print(f"  {i+1}. {sq}")
+            for step, elapsed in rr.timings.items():
+                print(f"  {step}: {elapsed:.2f}s")
 
-            score_label = "agg_score" if args.decompose else "vec_score"
-
-            for rank, r in enumerate(final_results, 1):
-                ctx = context_map.get((r.uid, r.label), "[no content]")
+            print(f"\nTop {len(rr.final_results)} results:\n")
+            for rank, (r, (_, score)) in enumerate(zip(rr.final_results, rr.final_scores), 1):
+                ctx = rr.context_map.get((r.uid, r.label), "[no content]")
                 if not args.full and len(ctx) > 300:
                     ctx_display = ctx[:300] + f"\n... ({len(ctx)} chars total)"
                 else:
                     ctx_display = ctx
 
-                # Get original index in search_results for rerank score lookup
-                orig_idx = search_results.index(r)
-                if orig_idx in rerank_scores:
-                    score = rerank_scores[orig_idx]
-                    print(f"[{rank}] [{r.label}] rerank_score={score:.4f}  ({score_label}={r.score:.4f})  uid={r.uid}")
-                else:
-                    print(f"[{rank}] [{r.label}] {score_label}={r.score:.4f}  uid={r.uid}")
+                uid_short = Neo4jEmbedder.format_uid_vn(r.uid)
+                print(f"[{rank}] [{r.label}] score={score:.4f}  uid={uid_short}")
                 print(f"  ---\n  {ctx_display}\n  ---")
 
-                amends_text = Neo4jEmbedder.format_amends(amends_map, [r.uid])
+                amends_text = Neo4jEmbedder.format_amends(rr.amends_map, [r.uid])
                 if amends_text:
                     print(amends_text)
 
-            # Step 6: Generate final RAG answer
+            # Generate final RAG answer
             print("\nGenerating final answer from retrieved contexts...")
-            context_blocks = []
-            for r in final_results[:args.top_k]:
-                ctx = context_map.get((r.uid, r.label), "")
-                amends = amends_map.get(r.uid, [])
-                if amends:
-                    amend_str = "\n".join([f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends])
-                    ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
-                context_blocks.append(ctx)
-            
-            context_str = "\n\n---\n\n".join(context_blocks)
-            final_answer = generator.generate_rag_answer(args.query, context_str)
+            final_answer = generator.generate_rag_answer(args.query, rr.context_str)
             print("\n=== TRẢ LỜI ===")
             print(final_answer)
         finally:
@@ -512,7 +469,6 @@ def main(argv: list[str] | None = None) -> None:
         return
 
     elif args.command == "chat":
-        from legal_scraper.retrieval import aggregate_search_results, fetch_context_for_results
         from legal_scraper.reranker import VietnameseReranker
         from legal_scraper.query_rewriter import QueryRewriter
         from legal_scraper.router import QueryRouter
@@ -589,172 +545,68 @@ def main(argv: list[str] | None = None) -> None:
                     chat_history.append({"role": "assistant", "content": answer})
 
                 else:  # retrieve
-                    # --- Step 2: Decompose ---
-                    if args.decompose:
-                        from legal_scraper.query_parser import QueryDecomposer
-                        t2 = time.time()
-                        decomposer = QueryDecomposer()
-                        try:
-                            sub_queries = decomposer.decompose(rewritten_query)
-                            sub_queries.append({"query": rewritten_query})
-                            t_decompose = time.time() - t2
-                            print(f"[*] Decomposed into {len(sub_queries)} sub-queries ({t_decompose:.2f}s):")
-                            for i, sq in enumerate(sub_queries):
-                                print(f"    {i+1}. {sq['query']}")
-                        except Exception as e:
-                            print(f"[!] Decomposition failed: {e}. Using single query.")
-                            sub_queries = [{"query": rewritten_query}]
+                    from legal_scraper.retrieval import retrieve_and_build_context
 
-                        raw_results = embedder.multi_search(sub_queries, k=args.fetch_k, hybrid=args.hybrid)
-                        search_results = aggregate_search_results(raw_results, strategy=args.aggregate)[:args.fetch_k]
-                        rerank_query = " ".join([sq["query"] for sq in sub_queries[:-1]])
-                    else:
-                        t2 = time.time()
-                        search_fn = embedder.hybrid_search if args.hybrid else embedder.search
-                        search_results = search_fn(args.labels, rewritten_query, k=args.fetch_k)[:args.fetch_k]
-                        rerank_query = rewritten_query
-                        print(f"[*] Search: {time.time() - t2:.2f}s")
+                    rr = retrieve_and_build_context(
+                        embedder=embedder,
+                        reranker=reranker,
+                        query=rewritten_query,
+                        decompose=args.decompose,
+                        hybrid=args.hybrid,
+                        aggregate=args.aggregate,
+                        fetch_k=args.fetch_k,
+                        rerank_top=args.rerank_top,
+                        top_k=args.top_k,
+                        labels=args.labels,
+                        expand=args.expand,
+                    )
 
-                    if not search_results:
+                    # Print timing & sub-query info
+                    for step, elapsed in rr.timings.items():
+                        print(f"[*] {step}: {elapsed:.2f}s")
+                    if rr.sub_queries:
+                        print(f"[*] Sub-queries ({len(rr.sub_queries)}):")
+                        for i, sq in enumerate(rr.sub_queries):
+                            print(f"    {i+1}. {sq}")
+
+                    if not rr.final_results:
                         answer = "Không tìm thấy kết quả phù hợp trong cơ sở dữ liệu pháp luật."
                         print(f"\n[ASSISTANT]: {answer}\n")
                         chat_history.append({"role": "user", "content": user_input})
                         chat_history.append({"role": "assistant", "content": answer})
                         continue
 
-                    # --- Step 3: Fetch context & rerank ---
-                    t3 = time.time()
-                    # Rerank a wider pool, then apply graph-based score adjustments
-                    rerank_pool = min(args.rerank_top, len(search_results))
-                    context_map = fetch_context_for_results(embedder, search_results[:rerank_pool], include_hierarchy=True)
-                    documents = [context_map.get((r.uid, r.label), "") for r in search_results[:rerank_pool]]
-                    reranked_indices = reranker.rerank(rerank_query, documents, top_k=rerank_pool)
-                    t_rerank = time.time() - t3
-                    print(f"[*] Context + Rerank: {t_rerank:.2f}s ({rerank_pool} candidates)")
-
-                    # --- Step 3b: Graph-based score adjustments ---
-                    t3b = time.time()
-                    pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
-                    
-                    # Check abolished/replaced status
-                    abolished_map = embedder.fetch_abolished_uids(pool_uids)
-                    
-                    # Get document effect dates for recency boost
-                    doc_ids = list({uid.split("::")[0] for uid in pool_uids})
-                    effect_dates = embedder.fetch_doc_effect_dates(doc_ids)
-                    
-                    from datetime import datetime, date
-                    today = date.today()
-                    
-                    adjusted_indices = []
-                    for idx, score in reranked_indices:
-                        uid = search_results[idx].uid
-                        doc_id = uid.split("::")[0]
-                        
-                        # Additive penalty for abolished/replaced provisions
-                        # (multiplicative breaks for negative cross-encoder scores)
-                        amend_types = abolished_map.get(uid, [])
-                        if "bãi bỏ" in amend_types:
-                            score -= 5.0  # heavy penalty
-                        elif "thay thế" in amend_types:
-                            score -= 3.0
-                        
-                        # Additive recency boost: newer documents score higher
-                        eff_str = effect_dates.get(doc_id)
-                        if eff_str:
-                            try:
-                                eff_date = datetime.strptime(eff_str, "%Y-%m-%d").date()
-                                years_old = max(0, (today - eff_date).days) / 365.0
-                                recency_bonus = max(0, 2.0 - 0.3 * years_old)  # +2 for brand new, 0 for 6+ years old
-                                score += recency_bonus
-                            except ValueError:
-                                pass
-                        
-                        adjusted_indices.append((idx, score))
-                    
-                    # Re-sort by adjusted score and take top_k
-                    adjusted_indices.sort(key=lambda x: x[1], reverse=True)
-                    final_results = [search_results[idx] for idx, _ in adjusted_indices[:args.top_k]]
-                    final_scores = adjusted_indices[:args.top_k]
-                    
-                    t_boost = time.time() - t3b
-                    print(f"[*] Graph boost: {t_boost:.2f}s (abolished penalties + recency boost applied)")
-
-                    # --- Step 4: Build context & generate ---
-                    top_k_uids = [r.uid for r in final_results]
-                    amends_map = embedder.fetch_amends(top_k_uids)
-                    
-                    # Expand context: sibling points + article/clause children
-                    # Context expansion (disable with --no-expand for local LLMs)
-                    siblings_map = {}
-                    children_map = {}
-                    if args.expand:
-                        point_uids = [r.uid for r in final_results if r.label == "Point"]
-                        siblings_map = embedder.fetch_sibling_points(point_uids) if point_uids else {}
-                        parent_uids = [r.uid for r in final_results if r.label in ("Article", "Clause")]
-                        children_map = embedder.fetch_children_context(parent_uids) if parent_uids else {}
-
-                    # Debug: show retrieved results with hierarchy content
-                    print(f"\n[DEBUG] Top {len(final_results)} results (after graph boost):")
-                    for rank, (r, (_, score)) in enumerate(zip(final_results, final_scores), 1):
-                        amend_count = len(amends_map.get(r.uid, []))
+                    # Debug: show retrieved results
+                    print(f"\n[DEBUG] Top {len(rr.final_results)} results (after graph boost):")
+                    for rank, (r, (_, score)) in enumerate(zip(rr.final_results, rr.final_scores), 1):
+                        amend_count = len(rr.amends_map.get(r.uid, []))
                         amend_tag = f" [+{amend_count} amends]" if amend_count else ""
-                        abolished_types = abolished_map.get(r.uid, [])
+                        abolished_types = rr.abolished_map.get(r.uid, [])
                         abolished_tag = f" [{'|'.join(abolished_types)}]" if abolished_types else ""
                         uid_short = Neo4jEmbedder.format_uid_vn(r.uid)
                         print(f"\n  {rank}. [{r.label}] score={score:.4f} {uid_short}{amend_tag}{abolished_tag}")
-                        # Print the hierarchy context (what the LLM sees for this node)
-                        ctx = context_map.get((r.uid, r.label), "[no context]")
+                        ctx = rr.context_map.get((r.uid, r.label), "[no context]")
                         print(f"     [Hierarchy context]:")
                         for line in ctx.split("\n"):
                             print(f"       {line}")
-                        # Print siblings if any
-                        if r.uid in siblings_map:
+                        if r.uid in rr.siblings_map:
                             print(f"     [Siblings added by --expand]:")
-                            for line in siblings_map[r.uid].split("\n"):
+                            for line in rr.siblings_map[r.uid].split("\n"):
                                 print(f"       {line}")
 
                     if not args.expand:
                         print("\n[DEBUG] --expand OFF, skipping sibling/children fetch.")
 
-                    context_blocks = []
-                    for r in final_results:
-                        ctx = context_map.get((r.uid, r.label), "")
-                        
-                        # Tag abolished provisions
-                        abolished_types = abolished_map.get(r.uid, [])
-                        if "bãi bỏ" in abolished_types:
-                            ctx = f"[ĐÃ BỊ BÃI BỎ bởi văn bản mới hơn]\n{ctx}"
-                        elif "thay thế" in abolished_types:
-                            ctx = f"[ĐÃ BỊ THAY THẾ bởi văn bản mới hơn]\n{ctx}"
-                        
-                        # Append sibling points for Point nodes
-                        if r.uid in siblings_map:
-                            ctx += f"\n\n[Các điểm khác cùng khoản]:\n{siblings_map[r.uid]}"
-                        
-                        # Expand Article/Clause nodes with children content
-                        if r.uid in children_map:
-                            ctx += f"\n\n[Nội dung chi tiết]:\n{children_map[r.uid]}"
-                        
-                        amends = amends_map.get(r.uid, [])
-                        if amends:
-                            amend_str = "\n".join([f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends])
-                            ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
-                        context_blocks.append(ctx)
-                    context_str = "\n\n---\n\n".join(context_blocks)
-
+                    # Generate answer
                     t4 = time.time()
-                    answer = generator.generate_rag_answer(user_input, context_str)
+                    answer = generator.generate_rag_answer(user_input, rr.context_str)
                     t_gen = time.time() - t4
 
                     print(f"\n[ASSISTANT]: {answer}")
                     print(f"[*] Generation: {t_gen:.2f}s\n")
 
-                    # Sanitize surrogates from LLM responses (OpenRouter sometimes returns them)
-                    def _sanitize(text: str) -> str:
-                        return text.encode("utf-8", errors="replace").decode("utf-8")
-                    
-                    clean_answer = _sanitize(answer)
+                    # Sanitize surrogates from LLM responses
+                    clean_answer = answer.encode("utf-8", errors="replace").decode("utf-8")
                     chat_history.append({"role": "user", "content": user_input})
                     chat_history.append({"role": "assistant", "content": clean_answer})
 
