@@ -59,7 +59,7 @@ for q_idx, query in enumerate(QUERIES, 1):
     documents = [context_map.get((r.uid, r.label), "") for r in search_results[:rerank_pool]]
     reranked_indices = reranker.rerank(query, documents, top_k=rerank_pool)
     
-    # Graph boost
+    # Post-retrieval heuristic re-ranking
     pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
     abolished_map = embedder.fetch_abolished_uids(pool_uids)
     doc_ids = list({uid.split("::")[0] for uid in pool_uids})
@@ -90,7 +90,7 @@ for q_idx, query in enumerate(QUERIES, 1):
     final_scores = adjusted_indices[:TOP_K]
     
     # Show results
-    print(f"\n[DEBUG] Top {len(final_results)} results (after graph boost):")
+    print(f"\n[DEBUG] Top {len(final_results)} results (after heuristic re-ranking):")
     for rank, (r, (_, score)) in enumerate(zip(final_results, final_scores), 1):
         abolished_types = abolished_map.get(r.uid, [])
         abolished_tag = f" [{'|'.join(abolished_types)}]" if abolished_types else ""

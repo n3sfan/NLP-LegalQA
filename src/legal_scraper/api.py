@@ -1,7 +1,7 @@
 """FastAPI backend exposing the Legal QA chat pipeline.
 
 Mirrors the CLI ``chat`` command:  rewrite → route → decompose → search →
-rerank → graph-boost → expand → generate.
+rerank → heuristic-rerank → expand → generate.
 
 All heavyweight components (Neo4jEmbedder, QueryRewriter, QueryRouter,
 AnswerGenerator, VietnameseReranker) are initialised **once** at startup and

@@ -144,8 +144,8 @@ def test_retrieve_and_build_context_with_decompose(embedder):
     assert len(rr.context_str) > 0
 
 
-def test_retrieve_and_build_context_graph_boost(embedder):
-    """Test that graph boost timings are recorded."""
+def test_retrieve_and_build_context_heuristic_rerank(embedder):
+    """Test that heuristic re-ranking timings are recorded."""
     from legal_scraper.retrieval import retrieve_and_build_context, RetrievalResult
     from legal_scraper.reranker import VietnameseReranker
 
@@ -159,7 +159,7 @@ def test_retrieve_and_build_context_graph_boost(embedder):
         top_k=3,
     )
     assert isinstance(rr, RetrievalResult)
-    assert "graph_boost" in rr.timings
+    assert "heuristic_rerank" in rr.timings
     assert "rerank" in rr.timings
 
 

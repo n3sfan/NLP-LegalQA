@@ -577,7 +577,7 @@ def main(argv: list[str] | None = None) -> None:
                         continue
 
                     # Debug: show retrieved results
-                    print(f"\n[DEBUG] Top {len(rr.final_results)} results (after graph boost):")
+                    print(f"\n[DEBUG] Top {len(rr.final_results)} results (after heuristic re-ranking):")
                     for rank, (r, (_, score)) in enumerate(zip(rr.final_results, rr.final_scores), 1):
                         amend_count = len(rr.amends_map.get(r.uid, []))
                         amend_tag = f" [+{amend_count} amends]" if amend_count else ""

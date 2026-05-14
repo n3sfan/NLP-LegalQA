@@ -156,7 +156,7 @@ def retrieve_and_build_context(
         1. Decompose → multi-search  (or single search)
         2. Aggregate results (RRF / Borda / Max)
         3. Fetch hierarchy context & cross-encoder rerank
-        4. Graph-based score adjustments (abolished penalty + recency boost)
+        4. Post-retrieval heuristic re-ranking (abolished penalty + recency bonus)
         5. Context expansion (sibling points, children content)
         6. Build final context string with abolished/amends tags
 
@@ -233,7 +233,7 @@ def retrieve_and_build_context(
     reranked_indices = reranker.rerank(rerank_query, documents, top_k=rerank_pool)
     timings["rerank"] = round(time.time() - t, 3)
 
-    # ── Step 3: Graph-based score adjustments ───────────────────────────
+    # ── Step 3: Post-retrieval heuristic re-ranking ─────────────────────
 
     t = time.time()
     pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
@@ -271,7 +271,7 @@ def retrieve_and_build_context(
     adjusted_indices.sort(key=lambda x: x[1], reverse=True)
     final_results = [search_results[idx] for idx, _ in adjusted_indices[:top_k]]
     final_scores = adjusted_indices[:top_k]
-    timings["graph_boost"] = round(time.time() - t, 3)
+    timings["heuristic_rerank"] = round(time.time() - t, 3)
 
     # ── Step 4: Fetch amends & expand context ───────────────────────────
 
