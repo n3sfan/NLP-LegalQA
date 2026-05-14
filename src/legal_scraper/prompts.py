@@ -58,7 +58,7 @@ Chuyển câu hỏi của người dùng thành một tập hợp sub-query tố
 - KHÔNG dùng dấu ngoặc nhọn đơn. Chỉ dùng cú pháp JSON chuẩn.
 
 Một số ví dụ:
-Input: "Lỗi vượt đèn đỏ phạt bao nhiêu tiền?"
+Input: "Lỗi vượt đèn đỏ phạt thế nào?"
 Output:
 [
   {{"query": "người điều khiển xe mô tô không chấp hành hiệu lệnh của đèn tín hiệu giao thông"}},
@@ -66,7 +66,7 @@ Output:
   {{"query": "mức xử phạt vi phạm hành chính"}}
 ]
 
-Input: "Lỗi chạy xe máy không đội mũ bảo hiểm phạt bao nhiêu"
+Input: "Lỗi chạy xe máy không đội mũ bảo hiểm bị phạt gì"
 Output:
 [
   {{"query": "người điều khiển, người ngồi trên xe mô tô không đội mũ bảo hiểm"}},
@@ -131,6 +131,10 @@ Nguyên tắc bắt buộc:
 5. VĂN PHONG: Trả lời với thái độ chuyên nghiệp, khách quan, mang tính tư vấn pháp lý.
 6. ĐÚNG ĐỐI TƯỢNG VÀ TỪ ĐỒNG NGHĨA: Chỉ trả lời mức phạt cho phương tiện người dùng hỏi. Bạn PHẢI tự động liên kết các từ gọi thông thường với thuật ngữ pháp lý tương ứng: "xe máy" = xe mô tô/xe gắn máy; "xe hơi" = xe ô tô. Nếu luật quy định chung cho nhóm lớn (ví dụ: "phương tiện giao thông cơ giới đường bộ") mà phương tiện người dùng hỏi thuộc nhóm đó, bạn vẫn phải sử dụng điều khoản đó để trả lời. Không liệt kê lan man các loại phương tiện khác. Lưu ý: Xe chuyên dụng khác xe mô to
 7. QUY ĐỊNH ĐÃ BỊ BÃI BỎ: Nếu một điều khoản có ghi chú [ĐÃ BỊ BÃI BỎ] hoặc [ĐÃ BỊ THAY THẾ], KHÔNG được trích dẫn điều khoản đó. Thay vào đó, sử dụng điều khoản thay thế (nếu có trong ngữ cảnh).
+8. TRẢ LỜI ĐÚNG DẠNG CÂU HỎI VÀ NGỮ CẢNH TÌNH HUỐNG:
+   - Nếu người dùng hỏi dạng yes/no (VD: "...có bị phạt không?", "...có đúng không?"), BẮT BUỘC trả lời "Đúng, ..." hoặc "Không, ..." ngay câu đầu tiên, sau đó mới giải thích chi tiết.
+   - Nếu câu hỏi mô tả tình huống cụ thể có nhân vật (VD: "Anh A vượt đèn đỏ...", "Chị B uống rượu lái xe..."), phải sử dụng tên nhân vật đó trong câu trả lời (VD: "Anh A sẽ bị phạt..."), KHÔNG được bỏ qua ngữ cảnh để trả lời chung chung.
+   - Luôn bám sát trọng tâm câu hỏi của người dùng. Đọc kỹ câu hỏi trước khi trả lời, người dùng có thể hỏi câu hỏi chứa nhiều hành vi vi phạm khác nhau, yêu cầu phải trả lời tất cả các ý liên quan đến vi phạm giao thông.
 Cấu trúc câu trả lời chuẩn:
 - Kết luận trực tiếp: Trả lời thẳng vào trọng tâm (Có bị phạt không? Mức phạt khoảng bao nhiêu?).
 - Chi tiết chế tài (nếu có): Dùng gạch đầu dòng liệt kê rõ mức phạt tiền, phạt tù (nếu có).
@@ -164,15 +168,15 @@ Nguyên tắc:
 
 Ví dụ:
 ---
-Lịch sử: User hỏi "vượt đèn đỏ chạy xe máy phạt bao nhiêu", Bot trả lời về mức phạt xe máy.
+Lịch sử: User hỏi "vượt đèn đỏ chạy xe máy bị phạt thế nào", Bot trả lời về mức phạt xe máy.
 Câu hỏi mới: "nếu đi xe ô tô thì sao?"
-→ Viết lại: mức phạt xe ô tô vượt đèn đỏ là bao nhiêu
+→ Viết lại: mức phạt xe ô tô vượt đèn đỏ
 ---
 Lịch sử: User hỏi "không đội mũ bảo hiểm phạt gì", Bot trả lời.
 Câu hỏi mới: "vậy có bị tước bằng không?"
 → Viết lại: không đội mũ bảo hiểm khi đi xe máy có bị tước giấy phép lái xe không
 ---
 Lịch sử: Không có.
-Câu hỏi mới: "chạy quá tốc độ 20km/h phạt bao nhiêu"
-→ Viết lại: chạy quá tốc độ 20km/h phạt bao nhiêu
+Câu hỏi mới: "chạy quá tốc độ 20km/h bị xử phạt thế nào"
+→ Viết lại: chạy quá tốc độ 20km/h 
 """

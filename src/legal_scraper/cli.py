@@ -504,7 +504,7 @@ def main(argv: list[str] | None = None) -> None:
                 context_blocks.append(ctx)
             
             context_str = "\n\n---\n\n".join(context_blocks)
-            final_answer = generator.generate_rag_answer(rerank_query, context_str)
+            final_answer = generator.generate_rag_answer(args.query, context_str)
             print("\n=== TRẢ LỜI ===")
             print(final_answer)
         finally:
@@ -744,7 +744,7 @@ def main(argv: list[str] | None = None) -> None:
                     context_str = "\n\n---\n\n".join(context_blocks)
 
                     t4 = time.time()
-                    answer = generator.generate_rag_answer(rerank_query, context_str)
+                    answer = generator.generate_rag_answer(user_input, context_str)
                     t_gen = time.time() - t4
 
                     print(f"\n[ASSISTANT]: {answer}")

@@ -351,7 +351,7 @@ async def chat(req: ChatRequest):
     context_str = "\n\n---\n\n".join(context_blocks)
 
     t4 = time.time()
-    answer = generator.generate_rag_answer(rerank_query, context_str)
+    answer = generator.generate_rag_answer(req.query, context_str)
     timings["generation"] = round(time.time() - t4, 3)
 
     # Sanitize surrogates
