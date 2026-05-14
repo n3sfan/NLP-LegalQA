@@ -16,7 +16,7 @@ from annotate_qa.search import ArticleEntry, SearchIndex
 # Config
 APP_DIR = Path(__file__).parent
 SRC_DIR = APP_DIR.parent.parent          # repo root
-CSV_PATH = SRC_DIR / "qa_dataset" / "QA_NLP.csv"
+CSV_PATH = SRC_DIR / "qa_dataset" / "QA_Part2.csv"
 PARSED_DIR = SRC_DIR / "data" / "parsed"
 
 
