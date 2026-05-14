@@ -1,21 +1,28 @@
 import os
 import json
-import requests
 from typing import List
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+
 from legal_scraper.prompts import _DECOMPOSE_SYSTEM_PROMPT, _DECOMPOSE_USER_PROMPT
+from legal_scraper.query_rewriter import create_chat_llm
 
 SubQuery = dict
 
 class QueryDecomposer:
-    """Handles parsing and decomposing user queries into subqueries using a local LLM API."""
-    def __init__(self, local_model_url: str = None):
-        self.local_model_url = local_model_url or os.getenv(
-            "LOCAL_MODEL_URL", "https://vitalize-compacter-nephew.ngrok-free.dev/generate"
+    """Handles parsing and decomposing user queries into subqueries using LangChain."""
+    def __init__(self, llm=None):
+        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=512)
+        self.chain = (
+            ChatPromptTemplate.from_messages([
+                ("system", _DECOMPOSE_SYSTEM_PROMPT),
+                ("human", "{query}"),
+            ])
+            | self.llm
+            | StrOutputParser()
         )
-        self.system_prompt = _DECOMPOSE_SYSTEM_PROMPT
-        self.user_prompt = _DECOMPOSE_USER_PROMPT
 
     def _parse_json_fallback(self, text: str) -> List[dict]:
         """Try to extract JSON array from LLM output, handling markdown code blocks."""
@@ -43,32 +50,15 @@ class QueryDecomposer:
 
     def decompose(self, query: str) -> List[SubQuery]:
         """Decompose a user query into a list of SubQuery dictionaries."""
-        prompt_text = f"<start_of_turn>user\n{self.system_prompt}\n\n{self.user_prompt.format(query=query)}<end_of_turn>\n<start_of_turn>model\n"
-        
         @retry(
             stop=stop_after_attempt(3),
             wait=wait_exponential(multiplier=1, min=2, max=10),
-            retry=retry_if_exception_type((requests.exceptions.RequestException, ValueError)),
             reraise=True,
         )
-        def _call_llm() -> str:
-            payload = {
-                "prompt": prompt_text,
-                "max_new_tokens": 512,
-                "temperature": 0.1
-            }
-            headers = {
-                "ngrok-skip-browser-warning": "true",
-                "Content-Type": "application/json"
-            }
-            response = requests.post(self.local_model_url, json=payload, headers=headers, timeout=120)
-            response.raise_for_status()
-            data = response.json()
-            if "response" in data:
-                return data["response"].strip()
-            return ""
+        def _call():
+            return self.chain.invoke({"query": _DECOMPOSE_USER_PROMPT.format(query=query)})
 
-        raw_str = _call_llm()
+        raw_str = _call()
         fallback = self._parse_json_fallback(raw_str)
         validated = [{"query": str(item["query"])} for item in fallback if isinstance(item, dict) and "query" in item]
         

@@ -144,6 +144,131 @@ class Neo4jEmbedder:
         all_results.sort(key=lambda r: r.score, reverse=True)
         return all_results
 
+    def create_fulltext_indexes(self) -> None:
+        """Create fulltext indexes for Article, Clause, and Point nodes.
+        
+        These indexes enable BM25 keyword search. Safe to call multiple times
+        (uses IF NOT EXISTS). Does NOT modify any node data.
+        """
+        index_definitions = [
+            ("Article_fulltext_index", "Article", ["title", "content"]),
+            ("Clause_fulltext_index", "Clause", ["content"]),
+            ("Point_fulltext_index", "Point", ["content"]),
+        ]
+        with self._get_driver().session(database=self.database) as session:
+            for index_name, label, properties in index_definitions:
+                props = ", ".join([f"n.{p}" for p in properties])
+                cypher = f"CREATE FULLTEXT INDEX {index_name} IF NOT EXISTS FOR (n:{label}) ON EACH [{props}]"
+                session.run(cypher)
+                print(f"  Created/verified fulltext index: {index_name}")
+
+    def keyword_search(
+        self,
+        labels: str | list[str],
+        query: str,
+        k: int = 5,
+    ) -> list[SearchResult]:
+        """Search using Neo4j fulltext (BM25) indexes.
+
+        Args:
+            labels: Single label or list of labels to search.
+            query: Raw Vietnamese text query.
+            k: Number of results to return per label.
+
+        Returns:
+            List of SearchResult(uid, label, score), sorted by score descending.
+        """
+        if isinstance(labels, str):
+            labels = [labels]
+
+        all_results: list[SearchResult] = []
+
+        with self._get_driver().session(database=self.database) as session:
+            for label in labels:
+                index_name = f"{label}_fulltext_index"
+                # Escape special Lucene characters in the query
+                safe_query = self._escape_lucene_query(query)
+                cypher = (
+                    f'CALL db.index.fulltext.queryNodes("{index_name}", $search_text) '
+                    "YIELD node, score "
+                    "RETURN node.uid AS uid, score "
+                    "LIMIT $k"
+                )
+                try:
+                    result = session.run(cypher, search_text=safe_query, k=k)
+                    for record in result:
+                        uid = record["uid"]
+                        if uid:
+                            all_results.append(SearchResult(uid=uid, label=label, score=record["score"]))
+                except Exception as e:
+                    print(f"Keyword search failed for {label}: {e}")
+
+        all_results.sort(key=lambda r: r.score, reverse=True)
+        return all_results
+
+    @staticmethod
+    def _escape_lucene_query(query: str) -> str:
+        """Escape special Lucene characters to prevent query syntax errors."""
+        special_chars = r'+-&|!(){}[]^"~*?:\/'
+        escaped = []
+        for ch in query:
+            if ch in special_chars:
+                escaped.append(f"\\{ch}")
+            else:
+                escaped.append(ch)
+        return "".join(escaped)
+
+    def hybrid_search(
+        self,
+        labels: str | list[str],
+        query: str,
+        k: int = 5,
+    ) -> list[SearchResult]:
+        """Hybrid search combining vector similarity and BM25 keyword search.
+
+        Results are fused using Reciprocal Rank Fusion (RRF).
+
+        Args:
+            labels: Single label or list of labels to search.
+            query: Raw Vietnamese text query.
+            k: Number of results to return per label for each method.
+
+        Returns:
+            Fused list of SearchResult, sorted by RRF score descending.
+        """
+        from concurrent.futures import ThreadPoolExecutor
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            vec_future = executor.submit(self.search, labels, query, k)
+            kw_future = executor.submit(self.keyword_search, labels, query, k)
+            vector_results = vec_future.result()
+            keyword_results = kw_future.result()
+
+        # RRF fusion: score = sum(1 / (rank + K)) across both lists
+        rrf_k = 60  # standard RRF constant
+        rrf_scores: dict[tuple[str, str], float] = {}
+        result_map: dict[tuple[str, str], SearchResult] = {}
+
+        for rank, r in enumerate(vector_results):
+            key = (r.uid, r.label)
+            rrf_scores[key] = rrf_scores.get(key, 0.0) + 1.0 / (rank + 1 + rrf_k)
+            if key not in result_map:
+                result_map[key] = r
+
+        for rank, r in enumerate(keyword_results):
+            key = (r.uid, r.label)
+            rrf_scores[key] = rrf_scores.get(key, 0.0) + 1.0 / (rank + 1 + rrf_k)
+            if key not in result_map:
+                result_map[key] = r
+
+        # Build fused results
+        fused = [
+            SearchResult(uid=result_map[key].uid, label=result_map[key].label, score=score)
+            for key, score in rrf_scores.items()
+        ]
+        fused.sort(key=lambda r: r.score, reverse=True)
+        return fused
+
     def fetch_nodes(self, uids: list[str], labels: list[str]) -> dict[tuple[str, str], dict]:
         """Fetch content and title for nodes by (uid, label).
 
@@ -182,7 +307,8 @@ class Neo4jEmbedder:
         UNWIND $uids AS target_uid
         MATCH path = (d:Document)-[:HAS_PART|HAS_CHAPTER|HAS_SECTION|HAS_ARTICLE|HAS_CLAUSE|HAS_POINT *]->(target)
         WHERE target.uid = target_uid
-        RETURN target.uid AS uid, nodes(path)[1..] AS hierarchy_nodes
+        RETURN target.uid AS uid, nodes(path)[1..] AS hierarchy_nodes,
+               d.doc_identity AS doc_identity, d.effect_date AS effect_date
         """
         result_map: dict[str, str] = {}
         with self._get_driver().session(database=self.database) as session:
@@ -225,9 +351,16 @@ class Neo4jEmbedder:
                 target_node = hierarchy_nodes[-1] if hierarchy_nodes else None
                 main_content = target_node.get("content", "") if target_node else ""
                 
+                # Build document header
+                doc_id = record["doc_identity"] or ""
+                eff_date = record["effect_date"]
+                eff_str = str(eff_date)[:10] if eff_date else "N/A"
+                doc_header = f"[Văn bản: {doc_id} — Hiệu lực: {eff_str}]"
+
                 # Combine headers and full content
                 header_text = "\n".join(context_lines)
                 full_text = header_text + "\nNội dung: " + main_content if main_content else header_text
+                full_text = doc_header + "\n" + full_text
                 result_map[uid] = full_text.strip()
                 
         return result_map
@@ -333,8 +466,130 @@ class Neo4jEmbedder:
                 })
         return result_map
 
+    def fetch_abolished_uids(self, uids: list[str]) -> dict[str, list[str]]:
+        """Check which UIDs have been abolished/replaced via AMENDS edges.
+
+        Returns dict mapping uid -> list of amend_types (e.g., ['bãi bỏ']).
+        UIDs with no such amendments return empty lists.
+        """
+        if not uids:
+            return {}
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH (target) WHERE target.uid = target_uid
+        OPTIONAL MATCH ()-[r:AMENDS]->(target)
+        WHERE r.type IN ['bãi bỏ', 'thay thế']
+        RETURN target.uid AS uid, collect(DISTINCT r.type) AS amend_types
+        """
+        result: dict[str, list[str]] = {uid: [] for uid in uids}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, uids=uids):
+                types = [t for t in (record["amend_types"] or []) if t]
+                result[record["uid"]] = types
+        return result
+
+    def fetch_doc_effect_dates(self, doc_identities: list[str]) -> dict[str, str | None]:
+        """Get effect_date for documents by doc_identity."""
+        if not doc_identities:
+            return {}
+        query = """
+        UNWIND $doc_ids AS did
+        MATCH (d:Document {doc_identity: did})
+        RETURN d.doc_identity AS doc_id, d.effect_date AS effect_date
+        """
+        result: dict[str, str | None] = {}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, doc_ids=doc_identities):
+                eff = record["effect_date"]
+                result[record["doc_id"]] = str(eff)[:10] if eff else None
+        return result
+
+    def fetch_sibling_points(self, uids: list[str]) -> dict[str, str]:
+        """For Point nodes, fetch all sibling Points under the same Clause.
+
+        Returns dict mapping uid -> formatted text of sibling points.
+        Only returns entries for Point nodes that have siblings.
+        """
+        if not uids:
+            return {}
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH (target:Point {uid: target_uid})
+        MATCH (clause:Clause)-[:HAS_POINT]->(target)
+        MATCH (clause)-[:HAS_POINT]->(sibling:Point)
+        WHERE sibling.uid <> target_uid
+        RETURN target.uid AS uid,
+               collect({letter: sibling.letter, content: sibling.content}) AS siblings
+        """
+        result: dict[str, str] = {}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, uids=uids):
+                siblings = record["siblings"] or []
+                if siblings:
+                    siblings.sort(key=lambda s: s.get("letter", ""))
+                    lines = []
+                    for s in siblings:
+                        letter = s.get("letter", "?")
+                        content = (s.get("content") or "").strip()
+                        if content:
+                            lines.append(f"  Điểm {letter}. {content}")
+                    if lines:
+                        result[record["uid"]] = "\n".join(lines)
+        return result
+
+    def fetch_children_context(self, uids: list[str]) -> dict[str, str]:
+        """For Article/Clause nodes, fetch all descendant content.
+
+        When an Article is retrieved, its own content is often just a title.
+        This method fetches all child Clauses and Points to provide full context.
+        Returns dict mapping uid -> formatted children text.
+        """
+        if not uids:
+            return {}
+        query = """
+        UNWIND $uids AS target_uid
+        MATCH (target) WHERE target.uid = target_uid
+        OPTIONAL MATCH (target)-[:HAS_CLAUSE|HAS_POINT*1..2]->(child)
+        WITH target.uid AS uid, labels(target)[0] AS target_label,
+             collect({
+                label: labels(child)[0],
+                number: child.number,
+                letter: child.letter,
+                content: child.content,
+                uid: child.uid
+             }) AS children
+        RETURN uid, target_label, children
+        """
+        result: dict[str, str] = {}
+        with self._get_driver().session(database=self.database) as session:
+            for record in session.run(query, uids=uids):
+                target_label = record["target_label"]
+                if target_label not in ("Article", "Clause"):
+                    continue
+                children = [c for c in (record["children"] or []) if c.get("content")]
+                if not children:
+                    continue
+                # Sort by uid to maintain document order
+                children.sort(key=lambda c: c.get("uid", ""))
+                lines = []
+                for c in children:
+                    label = c.get("label", "")
+                    content = (c.get("content") or "").strip()
+                    if not content:
+                        continue
+                    if label == "Clause":
+                        num = c.get("number", "?")
+                        lines.append(f"Khoản {num}. {content}")
+                    elif label == "Point":
+                        letter = c.get("letter", "?")
+                        lines.append(f"  Điểm {letter}. {content}")
+                if lines:
+                    result[record["uid"]] = "\n".join(lines)
+        return result
+
+
     def multi_search(
-        self, sub_queries: List[dict], k: int = 5
+        self, sub_queries: List[dict], k: int = 5, hybrid: bool = False
     ) -> dict[int, list["SearchResult"]]:
         """Search each sub-query independently against all node labels.
 
@@ -345,6 +600,7 @@ class Neo4jEmbedder:
         Args:
             sub_queries: List of {"query": "..."} from decompose_query().
             k: Number of results per label per sub-query.
+            hybrid: If True, use hybrid search (vector + BM25 keyword).
 
         Returns:
             Dict mapping sub-query index -> list of SearchResult.
@@ -352,11 +608,12 @@ class Neo4jEmbedder:
         from concurrent.futures import ThreadPoolExecutor, as_completed
 
         all_labels = ["Article", "Clause", "Point"]
+        search_fn = self.hybrid_search if hybrid else self.search
         results: dict[int, list[SearchResult]] = {i: [] for i in range(len(sub_queries))}
 
         with ThreadPoolExecutor(max_workers=min(6, len(sub_queries))) as executor:
             futures = {
-                executor.submit(self.search, all_labels, sq["query"], k): i
+                executor.submit(search_fn, all_labels, sq["query"], k): i
                 for i, sq in enumerate(sub_queries)
             }
             for future in as_completed(futures):
