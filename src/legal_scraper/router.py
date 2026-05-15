@@ -15,7 +15,7 @@ class QueryRouter:
     """Classifies user queries to determine the appropriate response strategy."""
     
     def __init__(self, llm=None):
-        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=64)
+        self.llm = llm or create_chat_llm(temperature=0, max_tokens=64)
         self.chain = (
             ChatPromptTemplate.from_messages([
                 ("system", _ROUTER_SYSTEM_PROMPT),

@@ -115,7 +115,7 @@ class QueryRewriter:
     """
 
     def __init__(self, llm: Optional[BaseChatModel] = None):
-        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=256)
+        self.llm = llm or create_chat_llm(temperature=0, max_tokens=256)
 
         self.chain = (
             ChatPromptTemplate.from_messages([
@@ -131,8 +131,14 @@ class QueryRewriter:
     @staticmethod
     def _to_langchain_messages(
         chat_history: List[Dict[str, str]],
+        max_assistant_chars: int = 200,
     ) -> List[HumanMessage | AIMessage]:
-        """Convert ``[{"role": ..., "content": ...}]`` to LangChain messages."""
+        """Convert ``[{"role": ..., "content": ...}]`` to LangChain messages.
+
+        Assistant messages are truncated to ``max_assistant_chars`` to prevent
+        the rewriter LLM from mimicking long answer styles instead of producing
+        a short standalone query.
+        """
         messages = []
         for msg in chat_history:
             role = msg.get("role", "user")
@@ -140,6 +146,9 @@ class QueryRewriter:
             if role == "user":
                 messages.append(HumanMessage(content=content))
             else:
+                # Truncate long assistant responses — rewriter only needs the gist
+                if len(content) > max_assistant_chars:
+                    content = content[:max_assistant_chars] + "..."
                 messages.append(AIMessage(content=content))
         return messages
 

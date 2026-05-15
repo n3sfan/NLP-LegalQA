@@ -262,7 +262,7 @@ async def chat(req: ChatRequest):
 
     # Generate answer
     t4 = time.time()
-    answer = generator.generate_rag_answer(req.query, retrieval_result.context_str)
+    answer = generator.generate_rag_answer(req.query, retrieval_result.context_str, rewritten_query=rewritten_query)
     timings["generation"] = round(time.time() - t4, 3)
 
     # Sanitize surrogates

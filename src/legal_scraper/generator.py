@@ -11,7 +11,7 @@ class AnswerGenerator:
     """Generates answers based on retrieved context or directly for conversational queries."""
     
     def __init__(self, llm=None):
-        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=1024)
+        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=4096)
 
     def _call_llm(self, system_prompt: str, user_prompt: str) -> str:
         chain = (
@@ -33,12 +33,17 @@ class AnswerGenerator:
             
         return _do_request()
 
-    def generate_rag_answer(self, query: str, context: str, current_date: str | None = None) -> str:
+    def generate_rag_answer(self, query: str, context: str, current_date: str | None = None, rewritten_query: str | None = None) -> str:
         """Generate answer using retrieved legal context."""
         from datetime import datetime
         date_str = current_date or datetime.now().strftime("%Y-%m-%d")
+        # Build optional rewritten query section
+        if rewritten_query and rewritten_query != query:
+            rewritten_section = f"\n[Câu hỏi đã được làm rõ (dùng để tra cứu)]:\n{rewritten_query}"
+        else:
+            rewritten_section = ""
         try:
-            user_prompt = _QA_USER_PROMPT.format(query=query, context=context, current_date=date_str)
+            user_prompt = _QA_USER_PROMPT.format(query=query, context=context, current_date=date_str, rewritten_section=rewritten_section)
             return self._call_llm(_QA_SYSTEM_PROMPT, user_prompt)
         except Exception as e:
             print(f"RAG Generation error: {e}")

@@ -149,6 +149,7 @@ def retrieve_and_build_context(
     top_k: int = 8,
     labels: list[str] | None = None,
     expand: bool = False,
+    heuristic: bool = True,
 ) -> RetrievalResult:
     """Execute the full retrieval pipeline and build LLM context.
 
@@ -177,6 +178,8 @@ def retrieve_and_build_context(
         top_k: Final number of results for LLM context.
         labels: Node labels to search (default: Article, Clause, Point).
         expand: Whether to expand context with sibling points and children.
+        heuristic: Whether to apply post-retrieval heuristic re-ranking
+            (abolished penalty + recency bonus).  Set to False for ablation.
 
     Returns:
         A ``RetrievalResult`` containing the final results, context string,
@@ -235,43 +238,51 @@ def retrieve_and_build_context(
 
     # ── Step 3: Post-retrieval heuristic re-ranking ─────────────────────
 
-    t = time.time()
-    pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
+    if heuristic:
+        t = time.time()
+        pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
 
-    abolished_map = embedder.fetch_abolished_uids(pool_uids)
-    doc_ids = list({uid.split("::")[0] for uid in pool_uids})
-    effect_dates = embedder.fetch_doc_effect_dates(doc_ids)
-    today = date.today()
+        abolished_map = embedder.fetch_abolished_uids(pool_uids)
+        doc_ids = list({uid.split("::")[0] for uid in pool_uids})
+        effect_dates = embedder.fetch_doc_effect_dates(doc_ids)
+        today = date.today()
 
-    adjusted_indices: list[tuple[int, float]] = []
-    for idx, score in reranked_indices:
-        uid = search_results[idx].uid
-        doc_id = uid.split("::")[0]
+        adjusted_indices: list[tuple[int, float]] = []
+        for idx, score in reranked_indices:
+            uid = search_results[idx].uid
+            doc_id = uid.split("::")[0]
 
-        # Additive penalty for abolished/replaced provisions
-        amend_types = abolished_map.get(uid, [])
-        if "bãi bỏ" in amend_types:
-            score -= 5.0
-        elif "thay thế" in amend_types:
-            score -= 3.0
+            # Additive penalty for abolished/replaced provisions
+            amend_types = abolished_map.get(uid, [])
+            if "bãi bỏ" in amend_types:
+                score -= 5.0
+            elif "thay thế" in amend_types:
+                score -= 3.0
 
-        # Additive recency boost: newer documents score higher
-        eff_str = effect_dates.get(doc_id)
-        if eff_str:
-            try:
-                eff_date = datetime.strptime(eff_str, "%Y-%m-%d").date()
-                years_old = max(0, (today - eff_date).days) / 365.0
-                recency_bonus = max(0, 2.0 - 0.3 * years_old)
-                score += recency_bonus
-            except ValueError:
-                pass
+            # Additive recency boost: newer documents score higher
+            eff_str = effect_dates.get(doc_id)
+            if eff_str:
+                try:
+                    eff_date = datetime.strptime(eff_str, "%Y-%m-%d").date()
+                    years_old = max(0, (today - eff_date).days) / 365.0
+                    recency_bonus = max(0, 2.0 - 0.3 * years_old)
+                    score += recency_bonus
+                except ValueError:
+                    pass
 
-        adjusted_indices.append((idx, score))
+            adjusted_indices.append((idx, score))
 
-    adjusted_indices.sort(key=lambda x: x[1], reverse=True)
+        adjusted_indices.sort(key=lambda x: x[1], reverse=True)
+        timings["heuristic_rerank"] = round(time.time() - t, 3)
+    else:
+        # Skip heuristic scoring: use cross-encoder scores directly
+        adjusted_indices = list(reranked_indices)
+        # Still fetch abolished_map — needed for context tagging in Step 5
+        pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
+        abolished_map = embedder.fetch_abolished_uids(pool_uids)
+
     final_results = [search_results[idx] for idx, _ in adjusted_indices[:top_k]]
     final_scores = adjusted_indices[:top_k]
-    timings["heuristic_rerank"] = round(time.time() - t, 3)
 
     # ── Step 4: Fetch amends & expand context ───────────────────────────
 

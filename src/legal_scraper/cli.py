@@ -599,7 +599,7 @@ def main(argv: list[str] | None = None) -> None:
 
                     # Generate answer
                     t4 = time.time()
-                    answer = generator.generate_rag_answer(user_input, rr.context_str)
+                    answer = generator.generate_rag_answer(user_input, rr.context_str, rewritten_query=rewritten_query)
                     t_gen = time.time() - t4
 
                     print(f"\n[ASSISTANT]: {answer}")
