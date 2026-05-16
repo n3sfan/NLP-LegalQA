@@ -237,8 +237,8 @@ def evaluate_config(
                 hybrid=config.hybrid,
                 aggregate=config.aggregate,
                 fetch_k=30,
-                rerank_top=15,
-                top_k=10,  # Need at least 10 for recall@10
+                rerank_top=30,
+                top_k=30,  # Need at least 10 for recall@10
                 labels=["Article", "Clause", "Point"],
                 expand=config.expand,
                 heuristic=config.heuristic,
@@ -486,7 +486,7 @@ def main():
     t_init = time.time()
 
     embedder = Neo4jEmbedder(args.uri, args.user, args.password, args.database)
-    reranker = VietnameseReranker(device="cpu")
+    reranker = VietnameseReranker()
 
     print(f"Components ready ({time.time() - t_init:.1f}s)")
 
