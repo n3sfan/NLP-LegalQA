@@ -13,3 +13,5 @@ uv.lock
 .env
 offline_payloads/
 offline_packages/
+
+.claude/
