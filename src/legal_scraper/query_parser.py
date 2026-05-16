@@ -14,7 +14,7 @@ SubQuery = dict
 class QueryDecomposer:
     """Handles parsing and decomposing user queries into subqueries using LangChain."""
     def __init__(self, llm=None):
-        self.llm = llm or create_chat_llm(temperature=0.1, max_tokens=512)
+        self.llm = llm or create_chat_llm(temperature=0, max_tokens=512)
         self.chain = (
             ChatPromptTemplate.from_messages([
                 ("system", _DECOMPOSE_SYSTEM_PROMPT),

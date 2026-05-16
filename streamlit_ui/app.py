@@ -18,7 +18,7 @@ import streamlit as st
 # ---------------------------------------------------------------------------
 
 st.set_page_config(
-    page_title="Legal QA - Tư vấn pháp luật giao thông",
+    page_title="Legal QA - Traffic Law Consultation",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -178,7 +178,7 @@ if "chat_history" not in st.session_state:
 
 with st.sidebar:
     st.markdown("### Legal QA")
-    st.caption("Hệ thống tư vấn pháp luật giao thông")
+    st.caption("Vietnamese Traffic Law Q&A System")
 
     st.markdown('<div class="sidebar-section-title">API Status</div>', unsafe_allow_html=True)
     try:
@@ -198,28 +198,28 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<div class="sidebar-section-title">Pipeline Configuration</div>', unsafe_allow_html=True)
 
-    decompose = st.toggle("Query Decomposition", value=True, help="Tách câu hỏi thành nhiều sub-query")
+    decompose = st.toggle("Query Decomposition", value=True, help="Split the question into multiple sub-queries")
     hybrid = st.toggle("Hybrid Search", value=True, help="Vector + BM25 keyword search")
-    expand = st.toggle("Context Expansion", value=True, help="Mở rộng nội dung con (Clause/Point) cho Article")
+    expand = st.toggle("Context Expansion", value=True, help="Expand child content (Clause/Point) for Articles")
 
-    aggregate = st.selectbox("Aggregation", ["rrf", "borda", "max"], index=0, help="Chiến lược tổng hợp kết quả")
+    aggregate = st.selectbox("Aggregation", ["rrf", "borda", "max"], index=0, help="Result aggregation strategy")
 
     labels = st.multiselect(
         "Node Labels",
         ["Article", "Clause", "Point"],
         default=["Article", "Clause", "Point"],
-        help="Loại node tìm kiếm",
+        help="Node types to search",
     )
 
     st.markdown('<div class="sidebar-section-title">Retrieval Tuning</div>', unsafe_allow_html=True)
 
     fetch_k = st.slider("Fetch K (candidates per search)", 5, 100, 30, step=5)
-    rerank_top = st.slider("Rerank Pool", 5, 50, 15, step=5, help="Số lượng ứng viên rerank bằng cross-encoder")
-    top_k = st.slider("Top K (final results)", 1, 20, 8, help="Số kết quả cuối cùng để tạo câu trả lời")
-    max_history = st.slider("Max History (turns)", 1, 30, 10, help="Số lượt hội thoại tối đa lưu trữ")
+    rerank_top = st.slider("Rerank Pool", 5, 50, 15, step=5, help="Number of candidates to rerank via cross-encoder")
+    top_k = st.slider("Top K (final results)", 1, 20, 8, help="Number of final results used for answer generation")
+    max_history = st.slider("Max History (turns)", 1, 30, 10, help="Maximum conversation turns to keep")
 
     st.markdown("---")
-    if st.button("Clear Conversation", use_container_width=True, type="secondary"):
+    if st.button("✕  Clear Conversation", use_container_width=True, type="secondary"):
         st.session_state.messages.clear()
         st.session_state.chat_history.clear()
         st.rerun()
@@ -232,7 +232,7 @@ with st.sidebar:
 st.markdown("""
 <div class="header-container">
     <p class="header-title">Legal QA Chat</p>
-    <p class="header-subtitle">Hệ thống hỏi đáp pháp luật giao thông đường bộ Việt Nam</p>
+    <p class="header-subtitle">Vietnamese Traffic Law Question & Answer System</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -247,7 +247,7 @@ for msg in st.session_state.messages:
 
         # Show sources if available
         if msg["role"] == "assistant" and msg.get("sources"):
-            with st.expander(f"Nguồn tham khảo ({len(msg['sources'])} kết quả)", expanded=False):
+            with st.expander(f"Sources ({len(msg['sources'])} results)", expanded=False):
                 for src in msg["sources"]:
                     st.markdown(f"""
                     <div class="source-card">
@@ -271,7 +271,7 @@ for msg in st.session_state.messages:
 # Chat input
 # ---------------------------------------------------------------------------
 
-if prompt := st.chat_input("Nhập câu hỏi pháp luật giao thông…"):
+if prompt := st.chat_input("Ask a traffic law question…"):
     # Show user message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
@@ -279,7 +279,7 @@ if prompt := st.chat_input("Nhập câu hỏi pháp luật giao thông…"):
 
     # Call API
     with st.chat_message("assistant"):
-        with st.spinner("Đang phân tích và tìm kiếm…"):
+        with st.spinner("Analyzing and searching…"):
             try:
                 payload = {
                     "query": prompt,
@@ -298,7 +298,7 @@ if prompt := st.chat_input("Nhập câu hỏi pháp luật giao thông…"):
                 resp.raise_for_status()
                 data = resp.json()
 
-                answer = data.get("answer", "Không nhận được câu trả lời.")
+                answer = data.get("answer", "No answer received.")
                 sources = data.get("sources", [])
                 timings = data.get("timings", {})
                 rewritten = data.get("rewritten_query")
@@ -306,7 +306,7 @@ if prompt := st.chat_input("Nhập câu hỏi pháp luật giao thông…"):
 
                 # Show rewritten query if different
                 if rewritten:
-                    st.caption(f"Query rewritten: _{rewritten}_")
+                    st.caption(f"Rewritten query: _{rewritten}_")
 
                 # Show sub-queries
                 if sub_queries and len(sub_queries) > 1:
@@ -350,14 +350,14 @@ if prompt := st.chat_input("Nhập câu hỏi pháp luật giao thông…"):
                 st.session_state.chat_history.append({"role": "assistant", "content": answer})
 
             except requests.exceptions.ConnectionError:
-                error_msg = f"Không thể kết nối đến API server tại `{API_BASE}`. Hãy chắc chắn rằng server đang chạy."
+                error_msg = f"Cannot connect to the API server at `{API_BASE}`. Please make sure the server is running."
                 st.error(error_msg)
                 st.session_state.messages.append({"role": "assistant", "content": error_msg})
             except requests.exceptions.Timeout:
-                error_msg = "Request timeout — server mất quá nhiều thời gian để phản hồi."
+                error_msg = "Request timeout — the server took too long to respond."
                 st.error(error_msg)
                 st.session_state.messages.append({"role": "assistant", "content": error_msg})
             except Exception as e:
-                error_msg = f"Lỗi: {e}"
+                error_msg = f"Error: {e}"
                 st.error(error_msg)
                 st.session_state.messages.append({"role": "assistant", "content": error_msg})

@@ -101,61 +101,66 @@ def test_fetch_context_for_results_no_hierarchy(embedder):
     assert len(ctx[key]) > 0
 
 
-def test_full_retrieval_pipeline_no_decompose(embedder):
-    """Test pipeline with decomposition disabled."""
-    query = "Vượt đèn đỏ phạt bao nhiêu?"
-    results = retrieval.full_retrieval_pipeline(
+def test_retrieve_and_build_context_no_decompose(embedder):
+    """Test shared pipeline with decomposition disabled."""
+    from legal_scraper.retrieval import retrieve_and_build_context, RetrievalResult
+    from legal_scraper.reranker import VietnameseReranker
+
+    reranker = VietnameseReranker(device="cpu")
+    query = "Vượt đèn đỏ bị xử phạt thế nào"
+    rr = retrieve_and_build_context(
         embedder=embedder,
+        reranker=reranker,
         query=query,
-        k=3,
-        decomposition=False,
-        aggregation_strategy="rrf",
-        rerank_top=0,
+        decompose=False,
+        top_k=3,
     )
-    assert isinstance(results, list)
-    assert len(results) <= 3
-    for r in results:
+    assert isinstance(rr, RetrievalResult)
+    assert len(rr.final_results) <= 3
+    for r in rr.final_results:
         assert isinstance(r, SearchResult)
         assert r.uid
         assert r.label in ["Article", "Clause", "Point"]
-        assert r.score >= 0
+    assert len(rr.context_str) > 0
 
 
-def test_full_retrieval_pipeline_with_decompose(embedder):
-    """Test pipeline with decomposition enabled."""
-    query = "Không đội mũ bảo hiểm và vượt đèn đỏ thì bị phạt thế nào?"
-    results = retrieval.full_retrieval_pipeline(
+def test_retrieve_and_build_context_with_decompose(embedder):
+    """Test shared pipeline with decomposition enabled."""
+    from legal_scraper.retrieval import retrieve_and_build_context, RetrievalResult
+    from legal_scraper.reranker import VietnameseReranker
+
+    reranker = VietnameseReranker(device="cpu")
+    query = "Không đội mũ bảo hiểm và vượt đèn đỏ bị xử phạt thế nào"
+    rr = retrieve_and_build_context(
         embedder=embedder,
+        reranker=reranker,
         query=query,
-        k=5,
-        decomposition=True,
-        aggregation_strategy="rrf",
-        rerank_top=0,
+        decompose=True,
+        top_k=5,
     )
-    assert isinstance(results, list)
-    assert len(results) <= 5
-    for r in results:
-        assert isinstance(r, SearchResult)
-        assert r.uid
-        assert r.score >= 0
+    assert isinstance(rr, RetrievalResult)
+    assert len(rr.final_results) <= 5
+    assert len(rr.sub_queries) > 0
+    assert len(rr.context_str) > 0
 
 
-def test_full_retrieval_pipeline_with_rerank(embedder):
-    """Test pipeline with reranking enabled."""
-    query = "Phạt xe quá tải là bao nhiêu?"
-    results = retrieval.full_retrieval_pipeline(
+def test_retrieve_and_build_context_heuristic_rerank(embedder):
+    """Test that heuristic re-ranking timings are recorded."""
+    from legal_scraper.retrieval import retrieve_and_build_context, RetrievalResult
+    from legal_scraper.reranker import VietnameseReranker
+
+    reranker = VietnameseReranker(device="cpu")
+    query = "Phạt xe quá tải"
+    rr = retrieve_and_build_context(
         embedder=embedder,
+        reranker=reranker,
         query=query,
-        k=3,
-        decomposition=False,
-        aggregation_strategy="rrf",
-        rerank_top=5,
+        decompose=False,
+        top_k=3,
     )
-    assert isinstance(results, list)
-    assert len(results) <= 3
-    for r in results:
-        assert isinstance(r, SearchResult)
-        assert r.score >= 0
+    assert isinstance(rr, RetrievalResult)
+    assert "heuristic_rerank" in rr.timings
+    assert "rerank" in rr.timings
 
 
 def test_decompose_demo(embedder, capsys):

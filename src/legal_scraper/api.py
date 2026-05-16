@@ -1,7 +1,7 @@
 """FastAPI backend exposing the Legal QA chat pipeline.
 
 Mirrors the CLI ``chat`` command:  rewrite → route → decompose → search →
-rerank → graph-boost → expand → generate.
+rerank → heuristic-rerank → expand → generate.
 
 All heavyweight components (Neo4jEmbedder, QueryRewriter, QueryRouter,
 AnswerGenerator, VietnameseReranker) are initialised **once** at startup and
@@ -24,7 +24,7 @@ from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -173,7 +173,6 @@ async def health():
 async def chat(req: ChatRequest):
     """Full chat pipeline: rewrite → route → decompose → search → rerank → generate."""
     from legal_scraper.embedder import Neo4jEmbedder
-    from legal_scraper.retrieval import aggregate_search_results, fetch_context_for_results
 
     embedder: Neo4jEmbedder = _components["embedder"]
     rewriter = _components["rewriter"]
@@ -223,31 +222,25 @@ async def chat(req: ChatRequest):
     timings["rewrite"] = round(time.time() - t1, 3)
 
     # --- intent == "retrieve" ---
-    # Step 2: Decompose → Search
-    if req.decompose:
-        from legal_scraper.query_parser import QueryDecomposer
+    from legal_scraper.retrieval import retrieve_and_build_context, RetrievalResult
 
-        t2 = time.time()
-        decomposer = QueryDecomposer()
-        try:
-            sub_queries = decomposer.decompose(rewritten_query)
-            sub_queries.append({"query": rewritten_query})
-        except Exception:
-            sub_queries = [{"query": rewritten_query}]
-        timings["decompose"] = round(time.time() - t2, 3)
-        sub_query_texts = [sq["query"] for sq in sub_queries]
+    retrieval_result = retrieve_and_build_context(
+        embedder=embedder,
+        reranker=reranker,
+        query=rewritten_query,
+        decompose=req.decompose,
+        hybrid=req.hybrid,
+        aggregate=req.aggregate,
+        fetch_k=req.fetch_k,
+        rerank_top=req.rerank_top,
+        top_k=req.top_k,
+        labels=req.labels,
+        expand=req.expand,
+    )
+    timings.update(retrieval_result.timings)
+    sub_query_texts = retrieval_result.sub_queries
 
-        raw_results = embedder.multi_search(sub_queries, k=req.fetch_k, hybrid=req.hybrid)
-        search_results = aggregate_search_results(raw_results, strategy=req.aggregate)[:req.fetch_k]
-        rerank_query = " ".join([sq["query"] for sq in sub_queries[:-1]])
-    else:
-        t2 = time.time()
-        search_fn = embedder.hybrid_search if req.hybrid else embedder.search
-        search_results = search_fn(req.labels, rewritten_query, k=req.fetch_k)[:req.fetch_k]
-        rerank_query = rewritten_query
-        timings["search"] = round(time.time() - t2, 3)
-
-    if not search_results:
+    if not retrieval_result.final_results:
         return ChatResponse(
             answer="Không tìm thấy kết quả phù hợp trong cơ sở dữ liệu pháp luật.",
             intent=intent,
@@ -256,67 +249,9 @@ async def chat(req: ChatRequest):
             sub_queries=sub_query_texts,
         )
 
-    # Step 3: Fetch context & rerank
-    t3 = time.time()
-    rerank_pool = min(req.rerank_top, len(search_results))
-    context_map = fetch_context_for_results(embedder, search_results[:rerank_pool], include_hierarchy=True)
-    documents = [context_map.get((r.uid, r.label), "") for r in search_results[:rerank_pool]]
-    reranked_indices = reranker.rerank(rerank_query, documents, top_k=rerank_pool)
-    timings["rerank"] = round(time.time() - t3, 3)
-
-    # Step 3b: Graph-based score adjustments
-    t3b = time.time()
-    pool_uids = [search_results[idx].uid for idx, _ in reranked_indices]
-
-    abolished_map = embedder.fetch_abolished_uids(pool_uids)
-    doc_ids = list({uid.split("::")[0] for uid in pool_uids})
-    effect_dates = embedder.fetch_doc_effect_dates(doc_ids)
-    today = date.today()
-
-    adjusted_indices = []
-    for idx, score in reranked_indices:
-        uid = search_results[idx].uid
-        doc_id = uid.split("::")[0]
-
-        amend_types = abolished_map.get(uid, [])
-        if "bãi bỏ" in amend_types:
-            score -= 5.0
-        elif "thay thế" in amend_types:
-            score -= 3.0
-
-        eff_str = effect_dates.get(doc_id)
-        if eff_str:
-            try:
-                eff_date = datetime.strptime(eff_str, "%Y-%m-%d").date()
-                years_old = max(0, (today - eff_date).days) / 365.0
-                recency_bonus = max(0, 2.0 - 0.3 * years_old)
-                score += recency_bonus
-            except ValueError:
-                pass
-
-        adjusted_indices.append((idx, score))
-
-    adjusted_indices.sort(key=lambda x: x[1], reverse=True)
-    final_results = [search_results[idx] for idx, _ in adjusted_indices[:req.top_k]]
-    final_scores = adjusted_indices[:req.top_k]
-    timings["graph_boost"] = round(time.time() - t3b, 3)
-
-    # Step 4: Build context & generate
-    top_k_uids = [r.uid for r in final_results]
-    amends_map = embedder.fetch_amends(top_k_uids)
-
-    # Context expansion (controllable via expand flag)
-    siblings_map: dict = {}
-    children_map: dict = {}
-    if req.expand:
-        point_uids = [r.uid for r in final_results if r.label == "Point"]
-        siblings_map = embedder.fetch_sibling_points(point_uids) if point_uids else {}
-        parent_uids = [r.uid for r in final_results if r.label in ("Article", "Clause")]
-        children_map = embedder.fetch_children_context(parent_uids) if parent_uids else {}
-
     # Build source items for the response
-    for r, (_, adj_score) in zip(final_results, final_scores):
-        ctx = context_map.get((r.uid, r.label), "")
+    for r, (_, adj_score) in zip(retrieval_result.final_results, retrieval_result.final_scores):
+        ctx = retrieval_result.context_map.get((r.uid, r.label), "")
         sources.append(SourceItem(
             uid=r.uid,
             label=r.label,
@@ -325,33 +260,9 @@ async def chat(req: ChatRequest):
             context_snippet=ctx[:300] if ctx else "",
         ))
 
-    # Build full context string for generation
-    context_blocks = []
-    for r in final_results:
-        ctx = context_map.get((r.uid, r.label), "")
-
-        abolished_types = abolished_map.get(r.uid, [])
-        if "bãi bỏ" in abolished_types:
-            ctx = f"[ĐÃ BỊ BÃI BỎ bởi văn bản mới hơn]\n{ctx}"
-        elif "thay thế" in abolished_types:
-            ctx = f"[ĐÃ BỊ THAY THẾ bởi văn bản mới hơn]\n{ctx}"
-
-        if r.uid in siblings_map:
-            ctx += f"\n\n[Các điểm khác cùng khoản]:\n{siblings_map[r.uid]}"
-
-        if r.uid in children_map:
-            ctx += f"\n\n[Nội dung chi tiết]:\n{children_map[r.uid]}"
-
-        amends = amends_map.get(r.uid, [])
-        if amends:
-            amend_str = "\n".join([f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends])
-            ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
-        context_blocks.append(ctx)
-
-    context_str = "\n\n---\n\n".join(context_blocks)
-
+    # Generate answer
     t4 = time.time()
-    answer = generator.generate_rag_answer(rerank_query, context_str)
+    answer = generator.generate_rag_answer(req.query, retrieval_result.context_str, rewritten_query=rewritten_query)
     timings["generation"] = round(time.time() - t4, 3)
 
     # Sanitize surrogates
