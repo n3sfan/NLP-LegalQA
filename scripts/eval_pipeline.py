@@ -36,10 +36,10 @@ Usage:
         --configs full_pipeline no_hybrid
 
     # Compare with v2 results
-    uv run scripts/eval_pipeline.py \\
-        --input qa_dataset/QA_Part2.csv \\
-        --output eval_results_v4 \\
-        --ablation \\
+    uv run scripts/eval_pipeline.py \
+        --input qa_dataset/QA_Part2.csv \
+        --output eval_results_v4 \
+        --ablation \
         --compare eval_results_v2/metrics_summary_decomposition.csv
 """
 
