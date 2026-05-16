@@ -56,6 +56,8 @@ from contextlib import contextmanager
 from pathlib import Path
 
 import pandas as pd
+import evaluate
+import nltk
 
 # Repo root is the parent of src/ (NLP-LegalQA/)
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -666,9 +668,8 @@ def fetch_law_texts(embedder, uids: list[str], batch_size: int = 10) -> tuple[di
 
 def parse_eval_score(raw: str) -> int | None:
     """Extracts 'Score: [N]' or 'Score: N' from LLM response, handling bolding markers."""
-    # Look for Score: [0-5], **Score:** 5, etc.
-    # Pattern: 'Score' -> optional colon/stars -> optional brackets -> digit
-    match = re.search(r"Score[:\s*]*\**\s*\[?(\d)\]?", raw, re.IGNORECASE)
+    # Pattern: 'Score' -> optional colon/stars -> optional brackets -> 1 or 2 digits
+    match = re.search(r"Score[:\s*]*\**\s*\[?(\d{1,2})\]?", raw, re.IGNORECASE)
     if match:
         return int(match.group(1))
     return None
@@ -761,15 +762,31 @@ async def evaluate_qa(
     if start_index > 0:
         df = df.iloc[start_index:]
     
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    out_p = Path(output_dir)
+    out_p.mkdir(parents=True, exist_ok=True)
     
     template = Path(prompt_template_path).read_text(encoding="utf-8")
     backend = backends[0]
     eval_model_name = model_names[0]
     
-    results_path = output_dir / "row_qa_eval_scores.csv"
-    fieldnames = ["id", "question", "score", "reasoning", "comparison", "raw_eval", "latency_ms"]
+    log.info("Loading metrics...")
+    try:
+        nltk.download('wordnet', quiet=True)
+        nltk.download('punkt', quiet=True)
+        nltk.download('omw-1.4', quiet=True)
+    except:
+        pass
+        
+    metric_bleu = evaluate.load("bleu")
+    metric_rouge = evaluate.load("rouge")
+    metric_meteor = evaluate.load("meteor")
+    metric_bertscore = evaluate.load("bertscore")
+
+    results_path = out_p / "row_qa_eval_scores.csv"
+    fieldnames = [
+        "id", "question", "score", "bleu", "rougeL", "meteor", "bert_f1",
+        "reasoning", "comparison", "raw_eval", "latency_ms"
+    ]
     
     if not results_path.exists() or start_index == 0:
         with open(results_path, "w", newline="", encoding="utf-8") as f:
@@ -842,9 +859,31 @@ async def evaluate_qa(
             if attempt < max_retries - 1:
                 await asyncio.sleep(1)
 
-        is_pass = (score >= 3) if score is not None else False
+        is_pass = (score >= 7) if score is not None else False
         if score is not None:
             all_scores.append(score)
+
+        # Calculate additional metrics
+        bleu_val, rougeL_val, meteor_val, bert_f1_val = 0.0, 0.0, 0.0, 0.0
+        if llm_answer and expert_answer and not llm_answer.startswith("ERROR:"):
+            try:
+                preds = [llm_answer]
+                refs = [expert_answer]
+                
+                b_res = metric_bleu.compute(predictions=preds, references=[refs])
+                bleu_val = round(b_res["bleu"], 4) if b_res else 0.0
+                
+                r_res = metric_rouge.compute(predictions=preds, references=refs)
+                rougeL_val = round(r_res["rougeL"], 4) if r_res else 0.0
+                
+                m_res = metric_meteor.compute(predictions=preds, references=refs)
+                meteor_val = round(m_res["meteor"], 4) if m_res else 0.0
+                
+                # Use PhoBERT for Vietnamese Legal QA
+                bert_res = metric_bertscore.compute(predictions=preds, references=refs, model_type="vinai/phobert-base")
+                bert_f1_val = round(bert_res["f1"][0], 4) if bert_res else 0.0
+            except Exception as e:
+                log.warning("Failed to compute metrics for QID %s: %s", qid, e)
 
         # Basic parsing for reasoning/comparison/score using robust regex
         reasoning = ""
@@ -863,6 +902,10 @@ async def evaluate_qa(
             "id": qid,
             "question": question,
             "score": score,
+            "bleu": bleu_val,
+            "rougeL": rougeL_val,
+            "meteor": meteor_val,
+            "bert_f1": bert_f1_val,
             "reasoning": reasoning[:500],
             "comparison": comparison[:500],
             "raw_eval": raw_eval[:1000],
@@ -873,8 +916,8 @@ async def evaluate_qa(
 
     if all_scores:
         avg_score = sum(all_scores) / len(all_scores)
-        pass_rate = sum(1 for s in all_scores if s >= 3) / len(all_scores)
-        log.info("QA Eval Summary: Avg Score = %.2f, Pass Rate (>=3) = %.2f%%", avg_score, pass_rate * 100)
+        pass_rate = sum(1 for s in all_scores if s >= 7) / len(all_scores)
+        log.info("QA Eval Summary: Avg Score = %.2f, Pass Rate (>=7) = %.2f%%", avg_score, pass_rate * 100)
 
 
 # ─────────────────────────────────────────────────────────────────────────────

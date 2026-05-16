@@ -2,6 +2,7 @@ import asyncio
 import json
 import logging
 import os
+import re
 import sys
 from pathlib import Path
 from typing import List, Optional
@@ -38,6 +39,13 @@ async def generate_payload(cfg: EvalConfig):
     
     if cfg.start_index > 0:
         df = df.iloc[cfg.start_index:]
+
+    recall_candidates = []
+    for col in df.columns:
+        match = re.fullmatch(r"recall@(\d+)", str(col))
+        if match and int(match.group(1)) <= cfg.top_k:
+            recall_candidates.append((int(match.group(1)), str(col)))
+    recall_cutoff, recall_col = max(recall_candidates, default=(cfg.top_k, None))
     
     n_questions = len(df)
     log.info("Preparing payloads for %d questions (from index %d)", n_questions, cfg.start_index)
@@ -73,12 +81,21 @@ async def generate_payload(cfg: EvalConfig):
 
                 # Parse ground-truth references
                 ref_list = [r.strip() for r in get_val(row, "references").replace(";", ",").split(",") if r.strip()]
-                
-                # Check Recall@k == 1.0 logic
-                found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
-                if ref_list and len(found_refs) < len(ref_list):
+
+                # Prefer the nearest available recall@N column where N <= top_k.
+                # Fall back to exact top-k matching when per-row recall columns are absent.
+                if ref_list and recall_col:
+                    recall_value = getattr(row, recall_col, None)
+                    recall_check_failed = pd.isna(recall_value) or float(recall_value) < 1.0
+                elif ref_list:
+                    found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
+                    recall_check_failed = len(found_refs) < len(ref_list)
+                else:
+                    recall_check_failed = False
+
+                if recall_check_failed:
                     if (idx-1) % cfg.print_every == 0 or idx == n_questions:
-                        log.info("[%d/%d] Skipping QID: %s (Recall@%d < 1.0)", idx, n_questions, qid, cfg.top_k)
+                        log.info("[%d/%d] Skipping QID: %s (Recall@%d < 1.0)", idx, n_questions, qid, recall_cutoff)
                     continue
 
                 if (idx-1) % cfg.print_every == 0 or idx == n_questions:

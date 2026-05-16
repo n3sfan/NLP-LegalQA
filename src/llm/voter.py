@@ -27,6 +27,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
 from os import environ
 import re
 from dataclasses import dataclass, field
@@ -197,6 +198,40 @@ class VLLMBackend:
 
         if 'VOTER_TESTING' in environ:
             print(raw)
+        return raw.content
+
+
+# ---------------------------------------------------------------------------
+# OpenRouter Backend
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class OpenRouterBackend:
+    """Calls OpenRouter via its OpenAI-compatible chat completions API."""
+
+    model: str = "google/gemma-4-26b-a4b-it:free"
+    api_key: str | None = None
+    timeout: float = 120.0
+    temperature: float = None
+    max_tokens: int = None
+
+    async def ask(self, prompt: str) -> str:
+        from langchain_openai import ChatOpenAI
+
+        api_key = self.api_key or os.getenv("OPENROUTER_API_KEY")
+        if not api_key:
+            raise ValueError("OPENROUTER_API_KEY must be set for OpenRouter inference")
+
+        llm = ChatOpenAI(
+            model=self.model,
+            base_url="https://openrouter.ai/api/v1",
+            api_key=api_key,
+            max_tokens=self.max_tokens,
+            temperature=self.temperature,
+            timeout=self.timeout,
+        )
+        raw = await asyncio.to_thread(llm.invoke, prompt)
         return raw.content
 
 

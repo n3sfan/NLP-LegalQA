@@ -3,6 +3,7 @@ import csv
 import json
 import logging
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -11,10 +12,11 @@ from typing import List, Optional
 import pandas as pd
 from tqdm.auto import tqdm
 
+
 # Add project root to path
 sys.path.append(os.getcwd())
 
-from voter import VLLMBackend
+from voter import OpenRouterBackend, VLLMBackend
 from eval_qa_utils import EvalConfig, load_template, get_payload_path
 
 logging.basicConfig(
@@ -28,6 +30,40 @@ log = logging.getLogger("eval_qa_offline")
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("httpcore").setLevel(logging.WARNING)
 logging.getLogger("openai").setLevel(logging.WARNING)
+
+DEFAULT_VLLM_MODEL = "Qwen/Qwen3-4B"
+DEFAULT_OPENROUTER_MODEL = "google/gemma-4-26b-a4b-it:free"
+
+
+def _resolve_model_names(cfg: EvalConfig) -> list[str]:
+    if cfg.backend_type == "openrouter" and cfg.models == [DEFAULT_VLLM_MODEL]:
+        return [os.getenv("OPENROUTER_MODEL", DEFAULT_OPENROUTER_MODEL)]
+    return cfg.models
+
+
+def _build_backends(cfg: EvalConfig):
+    model_names = _resolve_model_names(cfg)
+    backends = []
+
+    if cfg.backend_type == "openrouter":
+        api_key = cfg.api_key
+        if not api_key or api_key == "vllm-secret-key":
+            api_key = os.getenv("OPENROUTER_API_KEY")
+        if not api_key:
+            raise ValueError("OPENROUTER_API_KEY must be set when using --openrouter")
+
+        for model_name in model_names:
+            log.info("Initializing OpenRouter model %s", model_name)
+            backends.append(OpenRouterBackend(model=model_name, api_key=api_key))
+    else:
+        for i, model_name in enumerate(model_names):
+            port = cfg.base_port + i
+            url = f"http://localhost:{port}/v1"
+            log.info("Initializing model %s at %s", model_name, url)
+            backends.append(VLLMBackend(model=model_name, base_url=url, api_key=cfg.api_key))
+
+    return model_names, backends
+
 
 async def run_offline_inference(cfg: EvalConfig):
     """Loads offline payloads and performs heavy GPU inference."""
@@ -52,12 +88,11 @@ async def run_offline_inference(cfg: EvalConfig):
     log.info("Starting offline inference on %d items", n_items)
 
     # Initialize Backends
-    backends = []
-    for i, m in enumerate(cfg.models):
-        port = cfg.base_port + i
-        url = f"http://localhost:{port}/v1"
-        log.info("Initializing model %s at %s", m, url)
-        backends.append(VLLMBackend(model=m, base_url=url, api_key=cfg.api_key))
+    try:
+        models, backends = _build_backends(cfg)
+    except ValueError as e:
+        log.error(e)
+        return
 
     # Load prompt template
     try:
@@ -69,6 +104,7 @@ async def run_offline_inference(cfg: EvalConfig):
     # Results CSV setup
     output_p = Path(cfg.output_dir)
     output_p.mkdir(parents=True, exist_ok=True)
+    
     fieldnames = [
         "id", "question", "model", "generated_answer", "expert_answer", 
         "latency_ms", "law_text_preview"
@@ -99,7 +135,6 @@ async def run_offline_inference(cfg: EvalConfig):
             "top_k": item.get("top_k", cfg.top_k)
         }
         # Filter kwargs to only those present in the template to avoid KeyError
-        import re
         needed_keys = re.findall(r"\{(\w+)\}", qa_template)
         filtered_kwargs = {k: v for k, v in prompt_kwargs.items() if k in needed_keys}
         qa_prompt = qa_template.format(**filtered_kwargs)
@@ -137,7 +172,7 @@ async def run_offline_inference(cfg: EvalConfig):
             
             return model_name, ans, duration
 
-        tasks = [ask_model(b, m) for b, m in zip(backends, cfg.models)]
+        tasks = [ask_model(b, m) for b, m in zip(backends, models)]
         results = await asyncio.gather(*tasks)
 
         # Log Results
@@ -147,7 +182,7 @@ async def run_offline_inference(cfg: EvalConfig):
                 "question": question,
                 "model": model_name,
                 "generated_answer": generated_answer,
-                # "expert_answer": expert_answer,
+                "expert_answer": expert_answer,
                 "latency_ms": round(duration, 1),
                 "law_text_preview": law_text[:200] + "..." if law_text else ""
             }
@@ -167,6 +202,7 @@ def main():
     parser.add_argument("--models", nargs="+", default=["Qwen/Qwen3-4B"], help="List of model names")
     parser.add_argument("--api-key", type=str, default="vllm-secret-key", help="API key")
     parser.add_argument("--base-port", type=int, default=8080, help="Starting port for vllm")
+    parser.add_argument("--openrouter", action="store_true", help="Use OpenRouter instead of local vLLM ports")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
     parser.add_argument("--start-index", type=int, default=0, help="Starting index in payload list")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
@@ -179,6 +215,7 @@ def main():
         output_dir=args.output,
         payload_dir=args.payload_dir,
         prompt_template_name=args.prompt_template,
+        backend_type="openrouter" if args.openrouter else "vllm",
         models=args.models,
         api_key=args.api_key,
         base_port=args.base_port,
