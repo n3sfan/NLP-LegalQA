@@ -132,6 +132,7 @@ async def run_offline_inference(cfg: EvalConfig):
             "question": question, 
             "law_text": law_text, 
             "extra_info": extra_info,
+            "top_k": item.get("top_k", cfg.top_k)
         }
         # Filter kwargs to only those present in the template to avoid KeyError
         needed_keys = re.findall(r"\{(\w+)\}", qa_template)
@@ -205,7 +206,7 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
     parser.add_argument("--start-index", type=int, default=0, help="Starting index in payload list")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
-    # parser.add_argument("--top-k", type=int, default=5, help="Top-K context size (fallback if not in payload)")
+    parser.add_argument("--top-k", type=int, default=5, help="Top-K context size (fallback if not in payload)")
 
     args = parser.parse_args()
     

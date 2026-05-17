@@ -23,7 +23,6 @@ class EvalConfig:
     start_index: int = 0
     batch_size: int = 10
     top_k: int = 5
-    chk_recall: bool = False
 
 def load_template(filename: str) -> str:
     # Try current dir first, then src/llm/
@@ -47,12 +46,6 @@ def get_payload_path(dataset_path: str, payload_dir: str) -> Path:
     if p.suffix == ".jsonl" or p.is_file():
         return p
     dataset_name = Path(dataset_path).stem
-    if dataset_name.startswith("row_results"):
-        suffix = dataset_name.removeprefix("row_results").strip("_")
-        payload_name = "row_results_payload"
-        if suffix:
-            payload_name = f"{payload_name}_{suffix}"
-        return p / f"{payload_name}.jsonl"
     return p / f"{dataset_name}_payload.jsonl"
 
 def get_val(row: Any, attr: str, default: str = "") -> str:
