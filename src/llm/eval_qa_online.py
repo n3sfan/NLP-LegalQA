@@ -24,6 +24,13 @@ logging.basicConfig(
 )
 log = logging.getLogger("eval_qa_online")
 
+
+def _apply_top_k(uids: list[str], top_k: int) -> list[str]:
+    """Return all UIDs when top_k == -1, otherwise trim to top_k."""
+    if top_k == -1:
+        return uids
+    return uids[:top_k]
+
 async def generate_payload(cfg: EvalConfig):
     """Fetches law context and saves it to an offline payload file."""
     dataset_p = Path(cfg.dataset_path)
@@ -40,12 +47,23 @@ async def generate_payload(cfg: EvalConfig):
     if cfg.start_index > 0:
         df = df.iloc[cfg.start_index:]
 
-    recall_candidates = []
-    for col in df.columns:
-        match = re.fullmatch(r"recall@(\d+)", str(col))
-        if match and int(match.group(1)) <= cfg.top_k:
-            recall_candidates.append((int(match.group(1)), str(col)))
-    recall_cutoff, recall_col = max(recall_candidates, default=(cfg.top_k, None))
+    recall_cutoff = cfg.top_k
+    recall_col = None
+    if cfg.chk_recall:
+        recall_candidates = []
+        for col in df.columns:
+            match = re.fullmatch(r"recall@(\d+)", str(col))
+            if not match:
+                continue
+
+            recall_at = int(match.group(1))
+            if cfg.top_k == -1 or recall_at <= cfg.top_k:
+                recall_candidates.append((recall_at, str(col)))
+
+        if cfg.top_k == -1:
+            recall_cutoff, recall_col = min(recall_candidates, default=(-1, None))
+        else:
+            recall_cutoff, recall_col = max(recall_candidates, default=(cfg.top_k, None))
     
     n_questions = len(df)
     log.info("Preparing payloads for %d questions (from index %d)", n_questions, cfg.start_index)
@@ -74,7 +92,10 @@ async def generate_payload(cfg: EvalConfig):
                 if hasattr(row, "retrieved_uids"):
                     raw_retrieved = getattr(row, "retrieved_uids", "")
                     if pd.isna(raw_retrieved): raw_retrieved = ""
-                    uids = [r.strip() for r in str(raw_retrieved).split(";") if r.strip()][:cfg.top_k]
+                    uids = _apply_top_k(
+                        [r.strip() for r in str(raw_retrieved).split(";") if r.strip()],
+                        cfg.top_k,
+                    )
                 else:
                     raw_refs = get_val(row, "reference", get_val(row, "references"))
                     uids = [r.strip() for r in raw_refs.replace(";", ",").split(",") if r.strip()]
@@ -84,14 +105,14 @@ async def generate_payload(cfg: EvalConfig):
 
                 # Prefer the nearest available recall@N column where N <= top_k.
                 # Fall back to exact top-k matching when per-row recall columns are absent.
-                if ref_list and recall_col:
-                    recall_value = getattr(row, recall_col, None)
-                    recall_check_failed = pd.isna(recall_value) or float(recall_value) < 1.0
-                elif ref_list:
-                    found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
-                    recall_check_failed = len(found_refs) < len(ref_list)
-                else:
-                    recall_check_failed = False
+                recall_check_failed = False
+                if cfg.chk_recall:
+                    if ref_list and recall_col:
+                        recall_value = getattr(row, recall_col, None)
+                        recall_check_failed = pd.isna(recall_value) or float(recall_value) < 1.0
+                    elif ref_list:
+                        found_refs = {ref for u in uids for ref in ref_list if is_relevant(u, ref)}
+                        recall_check_failed = len(found_refs) < len(ref_list)
 
                 if recall_check_failed:
                     if (idx-1) % cfg.print_every == 0 or idx == n_questions:
@@ -133,7 +154,8 @@ def main():
     parser.add_argument("--start-index", type=int, default=0, help="Starting row index")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
     parser.add_argument("--batch-size", type=int, default=10, help="Neo4j batch size")
-    parser.add_argument("--top-k", type=int, default=5, help="Top-K retrieved UIDs to include")
+    parser.add_argument("--top-k", type=int, default=5, help="Top-K retrieved UIDs to include (-1 to use all)")
+    parser.add_argument("--chk-recall", action="store_true", help="Only keep rows where recall is 1.0")
 
     args = parser.parse_args()
     
@@ -148,7 +170,8 @@ def main():
         start_index=args.start_index,
         print_every=args.print_every,
         batch_size=args.batch_size,
-        top_k=args.top_k
+        top_k=args.top_k,
+        chk_recall=args.chk_recall,
     )
     
     asyncio.run(generate_payload(cfg))
