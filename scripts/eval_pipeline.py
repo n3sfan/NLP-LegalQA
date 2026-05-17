@@ -34,13 +34,6 @@ Usage:
         --input qa_dataset/QA_Part2.csv \\
         --output eval_results_v4 \\
         --configs full_pipeline no_hybrid
-
-    # Compare with v2 results
-    uv run scripts/eval_pipeline.py \
-        --input qa_dataset/QA_Part2.csv \
-        --output eval_results_v4 \
-        --ablation \
-        --compare eval_results_v2/metrics_summary_decomposition.csv
 """
 
 import argparse
@@ -177,7 +170,7 @@ def evaluate_config(
     embedder: Neo4jEmbedder,
     reranker: VietnameseReranker,
     out_dir: Path,
-    sleep_seconds: float = 3.0,
+    sleep_seconds: float = 1.0,
 ) -> dict | None:
     """Run evaluation for a single ablation config. Returns summary dict or None."""
 
@@ -228,33 +221,27 @@ def evaluate_config(
         print(f"\n  [{row_id}/{len(df)}] Q: {question[:80]}{'...' if len(question) > 80 else ''}")
 
         # --- Run retrieval pipeline ---
-        try:
-            rr = retrieve_and_build_context(
-                embedder=embedder,
-                reranker=reranker,
-                query=question,
-                decompose=True,  # Always ON
-                hybrid=config.hybrid,
-                aggregate=config.aggregate,
-                fetch_k=30,
-                rerank_top=30,
-                top_k=30,  # Need at least 10 for recall@10
-                labels=["Article", "Clause", "Point"],
-                expand=config.expand,
-                heuristic=config.heuristic,
-            )
-        except Exception as e:
-            # Check if it's an LLM backend error (critical — stop immediately)
-            error_str = str(e).lower()
-            if any(kw in error_str for kw in ["connection", "timeout", "api", "500", "503"]):
-                print(f"\n  [CRITICAL ERROR] LLM/API backend failed at row {idx} (ID: {row_id}).")
-                print(f"  Error: {e}")
-                print("  Stopping evaluation. Re-run to resume from this row.")
-                sys.exit(1)
-            # Non-critical error — skip this row
-            print(f"  [ERROR] Row {row_id}: {e} — skipped")
-            skipped += 1
-            continue
+        while True:
+            try:
+                rr = retrieve_and_build_context(
+                    embedder=embedder,
+                    reranker=reranker,
+                    query=question,
+                    decompose=True,  # Always ON
+                    hybrid=config.hybrid,
+                    aggregate=config.aggregate,
+                    fetch_k=30,
+                    rerank_top=30,
+                    top_k=30,  # Need at least 10 for recall@10
+                    labels=["Article", "Clause", "Point"],
+                    expand=config.expand,
+                    heuristic=config.heuristic,
+                )
+                break
+            except Exception as e:
+                print(f"  [ERROR] Row {row_id} failed: {e}")
+                print(f"  Retrying in {sleep_seconds} seconds...")
+                time.sleep(sleep_seconds)
 
         # Extract UIDs from final results
         retrieved_uids = [r.uid for r in rr.final_results]
@@ -331,7 +318,7 @@ def evaluate_config(
 # Comparison & Dashboard
 # ─────────────────────────────────────────────────────────────────────────────
 
-def print_summary_table(summaries: list[dict], compare_path: str | None = None):
+def print_summary_table(summaries: list[dict]):
     """Print a formatted comparison table of all configs."""
 
     print(f"\n{'=' * 80}")
@@ -345,23 +332,6 @@ def print_summary_table(summaries: list[dict], compare_path: str | None = None):
         header += f" {m:>10}"
     print(header)
     print(f"  {'─' * (20 + 11 * len(header_metrics))}")
-
-    # Load v2 baseline if provided
-    v2_summary = None
-    if compare_path and Path(compare_path).exists():
-        try:
-            v2_df = pd.read_csv(compare_path)
-            v2_summary = v2_df.iloc[0].to_dict()
-        except Exception:
-            pass
-
-    if v2_summary:
-        row_str = f"  {'[v2 baseline]':<20}"
-        for m in header_metrics:
-            val = v2_summary.get(m, 0.0)
-            row_str += f" {val:>10.4f}"
-        print(row_str)
-        print(f"  {'─' * (20 + 11 * len(header_metrics))}")
 
     # Print each config
     baseline = summaries[0] if summaries else None
@@ -380,18 +350,6 @@ def print_summary_table(summaries: list[dict], compare_path: str | None = None):
                 sign = "+" if delta >= 0 else ""
                 delta_str += f" {sign}{delta:>9.4f}"
             print(delta_str)
-
-    # Print delta vs v2 for baseline
-    if v2_summary and baseline:
-        print(f"\n  {'─' * (20 + 11 * len(header_metrics))}")
-        delta_str = f"  {'  Δ v4 vs v2':<20}"
-        for m in header_metrics:
-            v2_val = v2_summary.get(m, 0.0)
-            v4_val = baseline.get(m, 0.0)
-            delta = v4_val - v2_val
-            sign = "+" if delta >= 0 else ""
-            delta_str += f" {sign}{delta:>9.4f}"
-        print(delta_str)
 
 
 def save_ablation_comparison(summaries: list[dict], out_dir: Path):
@@ -438,19 +396,12 @@ def parse_args():
         help="Run specific config(s) by name",
     )
 
-    # Optional comparison
-    parser.add_argument(
-        "--compare",
-        default=None,
-        help="Path to v2 metrics_summary CSV for comparison",
-    )
-
     # Tuning
     parser.add_argument(
         "--sleep",
         type=float,
-        default=3.0,
-        help="Seconds to sleep between LLM requests (default: 3.0)",
+        default=1.0,
+        help="Seconds to sleep between LLM requests (default: 1.0)",
     )
 
     return parser.parse_args()
@@ -512,7 +463,7 @@ def main():
 
     # Print and save comparison
     if summaries:
-        print_summary_table(summaries, args.compare)
+        print_summary_table(summaries)
         save_ablation_comparison(summaries, out_dir)
 
     print(f"\nAll done. Results saved to {out_dir}/")
