@@ -4,9 +4,9 @@ Reranker Evaluation Script
 Evaluates Neo4j vector search + Cross-Encoder reranking on the legal QA dataset.
 
 Usage:
-    uv run scripts/eval_rag_reranker.py \
-        --input qa_dataset/QA_NLP.csv \
-        --output eval_results_reranker \
+    uv run scripts/eval_basic_reranker.py \
+        --input qa_dataset/QA_Part2.csv \
+        --output eval_results/eval_results_basic_reranker \
         --uri "neo4j+ssc://host:7687" \
         --user neo4j \
         --password "..." \
