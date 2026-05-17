@@ -4,10 +4,11 @@ Voter Evaluation on RAG Results.
 Evaluates how well the majority voter classifies retrieved documents
 as relevant (Có) or irrelevant (Không) for each question in row_results.csv.
 
-Supports three backends:
+Supports four backends:
     --backend=llama_cpp  (default) — loads GGUF directly via llama-cpp-python
     --backend=ollama     — local Ollama server
     --backend=vllm      — vLLM OpenAI-compatible server (one per voter on 8000+i)
+    --backend=openrouter — OpenRouter OpenAI-compatible API
 
 Usage (llama_cpp — default):
     uv run python -m src.llm.eval_voter \
@@ -41,6 +42,18 @@ Usage (vllm):
 
     # with custom prompt template:
     --prompt-template src/llm/prompt_classify_zero_shot.md
+
+Usage (OpenRouter judge for QA evaluation):
+    uv run python -m src.llm.eval_voter \
+        --mode eval_qa \
+        --backend openrouter \
+        --input eval_results_qa_offline/row_qa_results_offline.csv \
+        --output eval_results_qa_judge/ \
+        --gt-dataset qa_dataset/QA_NLP.csv \
+        --payload-dir offline_payloads/ \
+        --dataset eval_results_v2/row_results.csv \
+        --prompt-template src/llm/prompts/prompt_eval_qa_fewshot.md \
+        --model google/gemma-4-26b-a4b-it:free
 """
 
 import argparse
@@ -54,9 +67,11 @@ import sys
 import time
 from contextlib import contextmanager
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 import pandas as pd
-import evaluate
+import evaluate as hf_evaluate
 import nltk
 
 # Repo root is the parent of src/ (NLP-LegalQA/)
@@ -72,6 +87,8 @@ from eval_qa_utils import get_payload_path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
+
+DEFAULT_OPENROUTER_MODEL = "google/gemma-4-26b-a4b-it:free"
 
 # Silence noisy third-party logs
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -777,15 +794,16 @@ async def evaluate_qa(
     except:
         pass
         
-    metric_bleu = evaluate.load("bleu")
-    metric_rouge = evaluate.load("rouge")
-    metric_meteor = evaluate.load("meteor")
-    metric_bertscore = evaluate.load("bertscore")
+    metric_bleu = hf_evaluate.load("bleu")
+    metric_rouge = hf_evaluate.load("rouge")
+    metric_meteor = hf_evaluate.load("meteor")
+    metric_bertscore = hf_evaluate.load("bertscore")
 
     results_path = out_p / "row_qa_eval_scores.csv"
     fieldnames = [
         "id", "question", "score", "bleu", "rougeL", "meteor", "bert_f1",
-        "reasoning", "comparison", "raw_eval", "latency_ms"
+        # "reasoning",
+        "comparison", "raw_eval", "latency_ms"
     ]
     
     if not results_path.exists() or start_index == 0:
@@ -880,7 +898,7 @@ async def evaluate_qa(
                 meteor_val = round(m_res["meteor"], 4) if m_res else 0.0
                 
                 # Use PhoBERT for Vietnamese Legal QA
-                bert_res = metric_bertscore.compute(predictions=preds, references=refs, model_type="vinai/phobert-base")
+                bert_res = metric_bertscore.compute(predictions=preds, references=refs, model_type="vinai/phobert-base", num_layers=9)
                 bert_f1_val = round(bert_res["f1"][0], 4) if bert_res else 0.0
             except Exception as e:
                 log.warning("Failed to compute metrics for QID %s: %s", qid, e)
@@ -906,9 +924,9 @@ async def evaluate_qa(
             "rougeL": rougeL_val,
             "meteor": meteor_val,
             "bert_f1": bert_f1_val,
-            "reasoning": reasoning[:500],
-            "comparison": comparison[:500],
-            "raw_eval": raw_eval[:1000],
+            # "reasoning": reasoning,
+            "comparison": comparison,
+            "raw_eval": raw_eval,
             "latency_ms": round(duration_ms, 1)
         }
         
@@ -923,6 +941,75 @@ async def evaluate_qa(
 # ─────────────────────────────────────────────────────────────────────────────
 # Main evaluation
 # ─────────────────────────────────────────────────────────────────────────────
+
+def _qa_result_path_for_config(input_root: Path, config_name: str) -> Path | None:
+    """Find generated QA answers for a row_results config."""
+    suffix = config_name.removeprefix("row_results_")
+    candidates = [
+        input_root / config_name / "row_qa_results_offline.csv",
+        input_root / f"{config_name}.csv",
+        input_root / f"row_qa_results_offline_{suffix}.csv",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return None
+
+
+async def evaluate_qa_many_configs(
+    input_root: str,
+    output_root: str,
+    dataset_root: str,
+    prompt_template_path: str,
+    backends: list,
+    model_names: list[str],
+    gt_dataset_path: str | None = None,
+    payload_dir: str | None = None,
+    print_every: int = 5,
+    start_index: int = 0,
+) -> None:
+    """Evaluate QA answers for every row_results*.csv config in a directory."""
+    input_root_p = Path(input_root)
+    output_root_p = Path(output_root)
+    dataset_root_p = Path(dataset_root)
+
+    if not input_root_p.is_dir():
+        raise ValueError(f"--input must be a directory for multi-config eval_qa: {input_root}")
+    if not dataset_root_p.is_dir():
+        raise ValueError(f"--dataset must be a directory for multi-config eval_qa: {dataset_root}")
+
+    jobs = []
+    for dataset_path in sorted(dataset_root_p.glob("row_results*.csv")):
+        config_name = dataset_path.stem
+        input_path = _qa_result_path_for_config(input_root_p, config_name)
+        if input_path is None:
+            log.warning("Skipping %s: no generated QA results found under %s", config_name, input_root_p)
+            continue
+        jobs.append((config_name, input_path, dataset_path, output_root_p / config_name))
+
+    if not jobs:
+        raise ValueError(
+            f"No eval_qa jobs found. Expected row_results*.csv under {dataset_root_p} "
+            f"and matching row_qa_results_offline.csv outputs under {input_root_p}."
+        )
+
+    output_root_p.mkdir(parents=True, exist_ok=True)
+    log.info("Starting multi-config QA evaluation for %d configs", len(jobs))
+    for idx, (config_name, input_path, dataset_path, output_dir) in enumerate(jobs, 1):
+        log.info("[%d/%d] Evaluating %s", idx, len(jobs), config_name)
+        await evaluate_qa(
+            input_path=str(input_path),
+            output_dir=str(output_dir),
+            prompt_template_path=prompt_template_path,
+            backends=backends,
+            model_names=model_names,
+            gt_dataset_path=gt_dataset_path,
+            payload_dir=payload_dir,
+            dataset_path=str(dataset_path),
+            print_every=print_every,
+            start_index=start_index,
+        )
+
 
 async def evaluate(
     input_path: str,
@@ -956,17 +1043,21 @@ async def evaluate(
     # 1. Initialize Backends
     voter_models = []
     if models is not None:
-        if len(models) != n_voters:
+        if mode != "eval_qa" and len(models) != n_voters:
             raise ValueError(f"--models ({len(models)}) must match --n-voters ({n_voters})")
         voter_models = models
     elif model is not None:
-        voter_models = [model] * n_voters
+        count = 1 if mode == "eval_qa" else n_voters
+        voter_models = [model] * count
     elif backend == "llama_cpp":
         voter_models = [
             "/content/drive/MyDrive/HCMUS/NLP-LegalQA/models/Qwen3-4B-Q4_K_M.gguf",
             "/content/drive/MyDrive/HCMUS/NLP-LegalQA/models/nanbeige4.1-Q4_K_M.gguf",
         ] * (n_voters // 2 + 1)
         voter_models = voter_models[:n_voters]
+    elif backend == "openrouter":
+        count = 1 if mode == "eval_qa" else n_voters
+        voter_models = [os.getenv("OPENROUTER_MODEL", DEFAULT_OPENROUTER_MODEL)] * count
     else:
         raise ValueError("Must provide either --model or --models for non-llama_cpp backends")
 
@@ -982,6 +1073,14 @@ async def evaluate(
             port = base_port + i
             _backends.append(VLLMBackend(model=m, base_url=f"http://localhost:{port}/v1", api_key=api_key))
         model_names = voter_models
+    elif backend == "openrouter":
+        from voter import OpenRouterBackend
+        openrouter_api_key = api_key
+        if not openrouter_api_key or openrouter_api_key == "vllm-secret-key":
+            openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
+        for m in voter_models:
+            _backends.append(OpenRouterBackend(model=m, api_key=openrouter_api_key))
+        model_names = voter_models
     else:  # ollama
         from voter import OllamaBackend
         _url = base_url or "http://localhost:11434"
@@ -991,6 +1090,21 @@ async def evaluate(
 
     # 2. Dispatch to Mode
     if mode == "eval_qa":
+        if Path(input_path).is_dir() or (dataset_path and Path(dataset_path).is_dir()):
+            await evaluate_qa_many_configs(
+                input_root=input_path,
+                output_root=str(output_dir),
+                dataset_root=dataset_path or "",
+                prompt_template_path=prompt_template or "src/llm/prompt_eval_qa.md",
+                backends=_backends,
+                model_names=model_names,
+                gt_dataset_path=gt_dataset,
+                payload_dir=payload_dir,
+                print_every=print_every,
+                start_index=start_index,
+            )
+            return
+
         await evaluate_qa(
             input_path=input_path,
             output_dir=output_dir,
@@ -1195,10 +1309,10 @@ async def evaluate(
 def main():
     parser = argparse.ArgumentParser(description="Evaluate voter on RAG results")
     parser.add_argument("--mode", choices=["classify", "eval_qa"], default="classify", help="Evaluation mode")
-    parser.add_argument("--input", required=True, help="Path to input CSV (row_results.csv or row_qa_results_offline.csv)")
+    parser.add_argument("--input", required=True, help="Path to input CSV, or a root directory of per-config QA outputs in eval_qa mode")
     parser.add_argument("--gt-dataset", help="Optional path to ground truth dataset (e.g. QA_NLP.csv) to merge by 'id'")
     parser.add_argument("--payload-dir", help="Directory where offline payloads (.jsonl) are stored")
-    parser.add_argument("--dataset", help="Original dataset path (used to find payload filename)")
+    parser.add_argument("--dataset", help="Original dataset path, or a directory of row_results*.csv configs in eval_qa mode")
     parser.add_argument("--output", required=True, help="Output directory")
     # Neo4j
     parser.add_argument("--uri", default="neo4j+ssc://nguyenhoangquan.com:7687", help="Neo4j URI (e.g. neo4j+ssc://host:7687)")
@@ -1209,14 +1323,14 @@ def main():
     parser.add_argument("--top-k", type=int, default=5, help="Top-K retrieved UIDs to evaluate")
     parser.add_argument(
         "--prompt-template",
-        default="src/llm/prompt_classify.md",
-        help="Path to custom prompt .md template (default: src/llm/prompt_classify.md)",
+        default=None,
+        help="Path to custom prompt .md template",
     )
     parser.add_argument(
         "--backend",
-        choices=["llama_cpp", "ollama", "vllm"],
+        choices=["llama_cpp", "ollama", "vllm", "openrouter"],
         default="llama_cpp",
-        help="LLM backend: 'llama_cpp' (loads GGUF directly, default), 'ollama', or 'vllm'",
+        help="LLM backend: 'llama_cpp' (loads GGUF directly, default), 'ollama', 'vllm', or 'openrouter'",
     )
     parser.add_argument(
         "--n-voters",
@@ -1233,13 +1347,13 @@ def main():
     parser.add_argument(
         "--model",
         default=None,
-        help="Single model name (vllm) or GGUF path (llama_cpp/ollama when n_voters=1)",
+        help="Single model name (vllm/openrouter) or GGUF path (llama_cpp/ollama when n_voters=1)",
     )
     parser.add_argument(
         "--models",
         nargs="+",
         default=None,
-        help="GGUF paths (llama_cpp) or model names (ollama). "
+        help="GGUF paths (llama_cpp) or model names (ollama/vllm/openrouter). "
              "Length must equal n-voters. Overrides --model.",
     )
     parser.add_argument(
@@ -1256,7 +1370,7 @@ def main():
     parser.add_argument(
         "--api-key",
         default="vllm-secret-key",
-        help="API key for vllm server auth",
+        help="API key for vllm server auth or OpenRouter. OpenRouter also reads OPENROUTER_API_KEY.",
     )
     parser.add_argument(
         "--n-gpu-layers",

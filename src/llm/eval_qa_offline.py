@@ -206,7 +206,6 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
     parser.add_argument("--start-index", type=int, default=0, help="Starting index in payload list")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
-    parser.add_argument("--top-k", type=int, default=5, help="Top-K context size (fallback if not in payload)")
 
     args = parser.parse_args()
     
@@ -222,7 +221,6 @@ def main():
         limit=args.limit,
         start_index=args.start_index,
         print_every=args.print_every,
-        top_k=args.top_k
     )
     
     asyncio.run(run_offline_inference(cfg))

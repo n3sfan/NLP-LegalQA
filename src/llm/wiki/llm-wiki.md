@@ -4,7 +4,7 @@ This wiki document serves as the "source of truth" for AI agents and developers 
 
 ## 1. Directory Overview
 
-- **`voter.py`**: Contains backend abstractions (`VLLMBackend`, `LlamaCppBackend`, `OllamaBackend`) and the `LegalVoter` orchestrator.
+- **`voter.py`**: Contains backend abstractions (`VLLMBackend`, `OpenRouterBackend`, `LlamaCppBackend`, `OllamaBackend`) and the `LegalVoter` orchestrator.
 - **`eval_voter.py`**: The main evaluation script for the "Voter" phase. It handles data fetching from Neo4j and calculates metrics (Recall, Precision, MRR).
 - **`eval_qa.py`**: Specialised script for the "Answer Generation" phase. It uses retrieved law context to generate natural language answers.
 - **`eval_qa_online.py`**: Online phase script; fetches law context from Neo4j and prepares `.jsonl` payload files.
@@ -137,6 +137,20 @@ To decouple network-heavy law fetching from GPU-heavy LLM inference:
        --dataset eval_results_v2/row_results_decomposition.csv
    ```
 
+   OpenRouter can be used as the judge backend. Set `OPENROUTER_API_KEY` or pass `--api-key`.
+   ```bash
+   python eval_voter.py \
+       --mode eval_qa \
+       --backend openrouter \
+       --input eval_results_qa_offline/row_qa_results_offline.csv \
+       --output eval_results_qa_judge/ \
+       --gt-dataset qa_dataset/QA_NLP.csv \
+       --payload-dir offline_payloads/ \
+       --dataset eval_results_v2/row_results.csv \
+       --prompt-template prompts/prompt_eval_qa_fewshot.md \
+       --model google/gemma-4-26b-a4b-it:free
+   ```
+
 ## 7. Key Parameters
 - **`top_k`**: Controls the number of retrieved context snippets used. Configured in `EvalConfig` and passed through the payload. Default: `5`.
-- **`backend`**: Supports `vllm` (preferred for GPU).
+- **`backend`**: Supports `vllm` (preferred for GPU), `openrouter` (remote API judge), `llama_cpp`, and `ollama`.
