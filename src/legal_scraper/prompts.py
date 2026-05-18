@@ -134,6 +134,8 @@ Nguyên tắc bắt buộc:
 8. TRẢ LỜI ĐÚNG DẠNG CÂU HỎI VÀ NGỮ CẢNH TÌNH HUỐNG:
    - Nếu câu hỏi mô tả tình huống cụ thể có nhân vật (VD: "Anh A vượt đèn đỏ...", "Chị B uống rượu lái xe..."), phải sử dụng tên nhân vật đó trong câu trả lời (VD: "Anh A sẽ bị phạt..."), KHÔNG được bỏ qua ngữ cảnh để trả lời chung chung.
    - Luôn bám sát trọng tâm câu hỏi của người dùng. Đọc kỹ câu hỏi trước khi trả lời, người dùng có thể hỏi câu hỏi chứa nhiều hành vi vi phạm khác nhau, yêu cầu phải trả lời tất cả các ý liên quan đến vi phạm giao thông.
+9. Một số lưu ý về thứ tự các điểm: Các điểm cần được liệt kê theo đúng thứ tự như sau: a, b, c, d, đ, e,... (tức là đ trước e).
+10. Nên sử dụng các câu gốc từ văn bản pháp luật, hạn chế viết lại hoặc gộp các phần tử.
 Cấu trúc câu trả lời chuẩn:
 - Kết luận trực tiếp: Trả lời thẳng vào trọng tâm (Có bị phạt không? Mức phạt khoảng bao nhiêu?).
 - Chi tiết chế tài (nếu có): Dùng gạch đầu dòng liệt kê rõ mức phạt tiền, phạt tù (nếu có).
@@ -179,4 +181,36 @@ Câu hỏi mới: "vậy có bị tước bằng không?"
 Lịch sử: Không có.
 Câu hỏi mới: "chạy quá tốc độ 20km/h bị xử phạt thế nào"
 → Viết lại: chạy quá tốc độ 20km/h 
+"""
+
+_JUDGE_SYSTEM_PROMPT = """Bạn là một giám khảo đánh giá câu trả lời của AI cho câu hỏi của người dùng trong lĩnh vực Pháp luật Giao thông Đường bộ Việt Nam."""
+
+_JUDGE_USER_PROMPT = """[Câu hỏi]: {query}
+[Các điều luật đã được trích xuất và cung cấp cho AI trả lời]:
+{context}
+
+[Câu trả lời ground truth]: {ground_truth}
+[Câu trả lời của AI]: {generated_answer}
+
+Hãy đánh giá câu trả lời của AI dựa trên các tiêu chí nghiêm ngặt sau, so sánh đối chiếu với câu trả lời ground truth:
+
+1. Chính xác pháp lý (2 điểm): AI có trả lời đúng bản chất pháp lý không? Các mốc định lượng (độ tuổi, nồng độ cồn, tốc độ,...) và mức phạt (hành chính, hình sự,...) có khớp với câu trả lời ground truth không?
+2. Trích dẫn chính xác (2 điểm): AI có trích dẫn đúng các điều luật như trong câu trả lời ground truth hay không? Có nêu rõ Điều, Khoản, Điểm, thuộc văn bản nào hay không?
+3. Tính đầy đủ (2 điểm): AI có liệt kê đầy đủ các hình phạt chính và hình phạt bổ sung (tước quyền sử dụng giấy phép lái xe, tạm giữ phương tiện,...) như trong ground truth hay không?
+4. Không bịa đặt (2 điểm): AI có bịa ra nội dung điều luật không?
+5. Cấu trúc & Xử lý tình huống (2 điểm): AI có trả lời trực tiếp vào trọng tâm câu hỏi của người dùng không (ví dụ câu hỏi là dạng Có/ Không thì phải trả lời Có/ Không trước rồi mới giải thích)? Nếu câu hỏi có nhân vật cụ thể (Anh A, Chị B), AI có xưng hô đúng ngữ cảnh không hay chỉ trả lời chung chung nội dung các điều luật?
+
+Dựa trên các tiêu chí trên, hãy chấm điểm từng tiêu chí theo thang điểm đã quy định bên trên (có thể chấm điểm lẻ đến 0.5, ví dụ: 0, 0.5, 1, 1.5, 2).
+
+Trả về kết quả dưới định dạng JSON hợp lệ (không chứa markdown, không giải thích thêm). LƯU Ý: Không sử dụng dấu xuống dòng (newline) bên trong chuỗi JSON (đặc biệt là phần "reasoning"), hãy viết trên một dòng:
+{{
+  "reasoning": "<phân tích chi tiết từng tiêu chí và giải thích lý do chấm điểm>",
+  "scores": {{
+    "legal_accuracy": <điểm>,
+    "correct_citation": <điểm>,
+    "completeness": <điểm>,
+    "hallucination_citation": <điểm>,
+    "structure": <điểm>
+  }}
+}}
 """
