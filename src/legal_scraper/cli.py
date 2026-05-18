@@ -18,6 +18,7 @@ from legal_scraper.parser import LegalDocumentParser
 from legal_scraper.scraper import LegalDocumentScraper
 from legal_scraper.neo4j_importer import Neo4jImporter
 from legal_scraper.embedder import Neo4jEmbedder
+from legal_scraper.text2cypher import Neo4jGeminiQuery
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -176,6 +177,13 @@ def main(argv: list[str] | None = None) -> None:
     p_chat.add_argument("--expand", dest="expand", action="store_true", help="Enable Article/Clause children + sibling Points expansion")
     p_chat.add_argument("--no-expand", dest="expand", action="store_false", help="Disable expansion (default)")
     p_chat.set_defaults(expand=False)
+
+    # --- cypher-query ---
+    p_cypher = sub.add_parser("cypher-query", help="Generate Cypher queries to query a Neo4j graph database based on the provided schema definition")
+    p_cypher.add_argument("--uri", default=os.getenv("NEO4J_URI"), required=not os.getenv("NEO4J_URI"))
+    p_cypher.add_argument("--user", default=os.getenv("NEO4J_USER"), required=not os.getenv("NEO4J_USER"))
+    p_cypher.add_argument("--password", default=os.getenv("NEO4J_PASSWORD"), required=not os.getenv("NEO4J_PASSWORD"))
+    p_cypher.add_argument("--question", required=True, help="Vietnamese text question")
 
     args = parser.parse_args(argv)
 
@@ -617,6 +625,18 @@ def main(argv: list[str] | None = None) -> None:
 
         finally:
             embedder.close()
+        return
+    
+    elif args.command == "cypher-query":
+        api_key = os.environ.get("OPENROUTER_API_KEY")
+        gds_db = Neo4jGeminiQuery(
+            url=args.uri,
+            user=args.user,
+            password=args.password,
+            gemini_api_key=api_key,
+        )
+        result = gds_db.run(args.question)
+        print(result)
         return
 
 if __name__ == "__main__":
