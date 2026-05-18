@@ -153,6 +153,7 @@ def main():
     print(f"Merged dataframe contains {len(merged_df)} questions.")
 
     out_path = Path(args.output)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     processed_ids = set()
     records = []
     
