@@ -120,7 +120,9 @@ def _process_dataset(dataset_p: Path, cfg: EvalConfig, embedder: Neo4jEmbedder) 
 
             # Prefer the nearest available recall@N column where N <= top_k.
             # Fall back to exact top-k matching when per-row recall columns are absent.
-            if ref_list and recall_col:
+            if cfg.skip_recall_check:
+                recall_check_failed = False
+            elif ref_list and recall_col:
                 recall_value = row.get(recall_col)
                 recall_check_failed = pd.isna(recall_value) or float(recall_value) < 1.0
             elif ref_list:
@@ -201,6 +203,7 @@ def main():
     parser.add_argument("--dataset", type=str, default="eval_results_v2/row_results_decomposition.csv", help="QA row_results CSV path or directory")
     parser.add_argument("--payload-dir", type=str, default="offline_payloads/", help="Directory to save payloads, or a .jsonl path for one CSV")
     parser.add_argument("--top-k", type=int, default=30, help="Top-K retrieved UIDs to include")
+    parser.add_argument("--no-skip-recall-check", action="store_false", dest="skip_recall_check", default=True, help="Do not skip recall check (enforce recall filtration)")
 
     parser.add_argument("--uri", type=str, default="neo4j+ssc://nguyenhoangquan.com:7687", help="Neo4j URI")
     parser.add_argument("--user", type=str, default="neo4j", help="Neo4j user")
@@ -224,7 +227,8 @@ def main():
         start_index=args.start_index,
         print_every=args.print_every,
         batch_size=args.batch_size,
-        top_k=args.top_k
+        top_k=args.top_k,
+        skip_recall_check=args.skip_recall_check
     )
     
     asyncio.run(generate_payload(cfg))

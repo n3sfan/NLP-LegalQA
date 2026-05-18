@@ -23,6 +23,7 @@ class EvalConfig:
     start_index: int = 0
     batch_size: int = 10
     top_k: int = 5
+    skip_recall_check: bool = True
 
 def load_template(filename: str) -> str:
     # Try current dir first, then src/llm/
