@@ -1,156 +1,83 @@
-# Legal QA: LLM & Evaluation Knowledge Base
+# Legal QA LLM Wiki
 
-This wiki document serves as the "source of truth" for AI agents and developers working on the `src/llm/` directory. It documents the core architecture, design decisions, and common pitfalls to avoid.
+Compact reference for `src/llm/`: how evaluation scripts fit together, what context builder to use, and the gotchas that tend to cause bad runs.
 
-## 1. Directory Overview
+## Files
 
-- **`voter.py`**: Contains backend abstractions (`VLLMBackend`, `OpenRouterBackend`, `LlamaCppBackend`, `OllamaBackend`) and the `LegalVoter` orchestrator.
-- **`eval_voter.py`**: The main evaluation script for the "Voter" phase. It handles data fetching from Neo4j and calculates metrics (Recall, Precision, MRR).
-- **`eval_qa.py`**: Specialised script for the "Answer Generation" phase. It uses retrieved law context to generate natural language answers.
-- **`eval_qa_online.py`**: Online phase script; fetches law context from Neo4j and prepares `.jsonl` payload files.
-- **`eval_qa_offline.py`**: Offline inference script; executes LLM answer generation using payloads (network-independent).
-- **`eval_qa_utils.py`**: Shared utilities and the `EvalConfig` schema used by all evaluation scripts.
-- **`make_kaggle_cell.py`**: Tool to bundle all `src/llm/` logic into a single notebook-ready Python cell (`cellcode.py`).
+- `voter.py`: backend wrappers (`VLLMBackend`, `OpenRouterBackend`, `LlamaCppBackend`, `OllamaBackend`) plus `LegalVoter`.
+- `eval_voter.py`: voter/classification evaluation and QA judge mode (`--mode eval_qa`).
+- `eval_qa_online.py`: Neo4j-connected payload builder for offline QA inference.
+- `eval_qa_offline.py`: network-free QA generation from payload JSONL; supports local vLLM ports and `--openrouter`.
+- `eval_qa_utils.py`: shared `EvalConfig`, template loading, payload path resolution, UID relevance helper.
+- `make_kaggle_cell.py`: bundles `src/llm/` logic into notebook-ready `cellcode.py`.
 
-## 2. Core Implementation Decisions
+## Context Builders
 
-### 2.1. Hierarchical Law Fetching (`fetch_law_texts`)
-**Function**: `fetch_law_texts(embedder, uids, batch_size)` in `eval_voter.py`.
-- **Decision**: Law retrieval must NOT be a simple node fetch. Vietnamese legal documents follow a strict hierarchy: **Document -> Article -> Clause -> Point**.
-- **Logic**: This function fetches the target UID and its parents (Article/Document) to build a human-readable text. It avoids redundant headers when merging multiple UIDs.
-- **Dynamic Context**: It also retrieves document metadata (effective dates) and **amendments** (via `AMENDS` relationships).
-- **Short Names**: The system automatically extracts document types (e.g., "Nghị định", "Luật") and pairs them with IDs for concise headers (e.g., "Nghị định 100/2019/NĐ-CP").
-- **Important**: Use this for tasks requiring law grounding. It returns a 4-tuple: `(uid_to_text, nodes_metadata, merged_text, extra_info)`.
+Use `fetch_law_texts(embedder, uids, batch_size)` when you already have law UIDs.
 
-### 2.2. Multi-Model Backend Logic
-**Class**: `VLLMBackend` in `voter.py`.
-- **Backend**: Uses `langchain_openai.ChatOpenAI`. It is compatible with both `vLLM` and `llama.cpp` servers.
-- **Port Incrementing**: To evaluate multiple models in parallel, the scripts use a `base_port + i` convention.
-    - *Example*: Model 0 → Port 8080, Model 1 → Port 8081.
-- **Mistake Avoidance**: When adding new model support, ensure the port logic matches this pattern so that separate server instances are correctly addressed.
+- Defined in `eval_voter.py`.
+- Input: selected UIDs from `references`, `retrieved_uids`, or an offline payload step.
+- Output: `(uid_to_text, nodes_metadata, merged_text, extra_info)`.
+- Fetches target nodes plus parent Article/Clause, descendants for Article/Clause inputs, document metadata, effect dates, and amendments.
+- The prompt-ready values are usually:
 
-### 2.3. Asynchronous Execution
-- **Parallelism**: Both `LegalVoter` and `eval_qa.py` heavily use `asyncio.gather` to query models in parallel.
-- **Decision**: For QA generation, all models should be queried concurrently for the same question to minimize evaluation time.
-
-### 2.4. Template Management
-- **Context Manager**: `_swap_prompt_template` in `eval_voter.py` allows temporary overrides of the default prompt files.
-- **Loading**: `load_template(filename)` searches current and parent directories for `.md` files.
-- **Placeholders**: Standard templates expect `{question}`, `{law_text}`, `{extra_info}`, and optionally `{ground_truth}` and `{top_k}`.
-
-### 2.6. Robust Retry Mechanism
-- **Logic**: If an LLM returns an empty string or the backend throws an error, the agent will **retry up to 3 times** with a 1-second `asyncio.sleep` between attempts.
-
-### 2.7. Gemma & Fine-tuned Token Mapping
-- **Problem**: Many fine-tuned models (Gemma 3, Qwen) use custom ChatML tags that may not align with base-model templates.
-- **Solution**: The `ask_model` and `evaluate_qa` functions include a mapping block for Gemma:
-    - `<|im_start|>user` -> `<|turn>user`
-    - `<|im_start|>assistant` -> `<turn|>model`
-    - `<think>` -> `<|channel>thought`
-
-
-### 2.5. Metadata & Amendment Injection
-**Utility**: `Neo4jEmbedder.format_amends` and `Neo4jEmbedder.format_uid_vn`.
-- **Amendment Retrieval**: The system fetches amendments for both ancestor and descendant nodes (e.g., if an Article is requested, it finds amends for its Clauses/Points too).
-- **Vietnamese Legal Formatting**: UIDs are automatically formatted into standard Vietnamese citations (e.g., `168/2024/NĐ-CP::article::52::clause::8` -> `Khoản 8 Điều 52 168/2024/NĐ-CP`) before injection.
-- **Prompt Integration**: Amendments and effective dates are bundled into an `extra_info` string and injected via the `{extra_info}` placeholder in prompt templates.
-
-## 3. Data Structures
-
-- **`VoteResult`**: Returned by `LegalVoter.vote()`. Contains:
-    - `verdict`: Boolean (Majority vote).
-    - `votes`: List of individual boolean results.
-    - `models`: List of model names used.
-    - `raw_responses`: The full text returned by each LLM.
-- **`extra_info`**: A pre-formatted string containing:
-    - **Danh sách văn bản**: List of governing documents with their effective dates.
-    - **Thông tin sửa đổi**: Formatted list of amendments (if any) using Vietnamese citation style.
-- **UID Format**: `[DocID]::article::[N]::clause::[M]`.
-- **Vietnamese Format**: `Điểm [P] Khoản [M] Điều [N] [DocID]`.
-- **CSV Columns**:
-    - `references`: Gold standard UIDs (ground truth).
-    - `retrieved_uids`: UIDs returned by the search engine.
-- **Neo4j URI**: Remote connections **must** use the `+ssc` protocol (e.g., `neo4j+ssc://...`).
-- **Base Ports**: 
-    - `eval_voter`: `8000`
-    - `eval_qa`: `8080`
-
-## 4. Common Pitfalls (Where Agents Make Mistakes)
-
-1.  **Relative Imports**: The scripts are designed to be run from inside `src/llm/`. 
-    - *Correct*: `from voter import ...`
-    - *Incorrect*: `from src.llm.voter import ...` (unless the package is installed or the root is in PYTHONPATH).
-2.  **Expert Answers vs. References**:
-    - In the reranker results CSV, the `references` column contains UIDs.
-    - The actual text of the expert answer is found in the original `qa_dataset/QA_NLP.csv` in the `answer` column.
-    - **Mistake**: Using the UID as the expert answer text for text-to-text comparison.
-3.  **Encoding**: Vietnamese text MUST be handled with `encoding="utf-8"`. Failure to do so will corrupt the legal articles and LLM outputs.
-4.  **Incremental Saving**: Both evaluation scripts append to CSVs row-by-row (`open(..., 'a')`). This allows resuming from crashes using `--start-index`.
-5.  **Numeric IDs vs String IDs**:
-    - Pandas often loads IDs like `1` as `1.0` (float). 
-    - **Fix**: Use `clean_id(s)` helper: `str(s).strip().replace(".0", "")`. This ensures robust matching between results CSV, GT CSV, and Payload JSONL.
-
-## 5. Usage Patterns
-
-### Asking a Model (QA)
 ```python
-# Standard pattern in eval_qa.py
-tasks = [ask_model(backend, model_name) for backend, model_name in zip(backends, models)]
-results = await asyncio.gather(*tasks)
-```
-
-### Fetching Law Text
-```python
-# Standard pattern in eval_voter.py
-# The 3rd and 4th return values are pre-formatted context strings
 _, _, law_text, extra_info = fetch_law_texts(embedder, uids, batch_size=batch_size)
-
-# The prompt template should contain both {law_text} and {extra_info}
-prompt = template.format(question=q, law_text=law_text, extra_info=extra_info)
 ```
 
-## 6. Offline Evaluation QA Workflow
 
-To decouple network-heavy law fetching from GPU-heavy LLM inference:
+## QA Workflow
 
-1. **Online Phase (Data Preparation)**:
-   Run `eval_qa_online.py` on a machine with Neo4j access.
-   ```bash
-   python eval_qa_online.py --dataset eval_results_v2/row_results_decomposition.csv
-   ```
-   This generates a `.jsonl` file in `offline_payloads/`.
+1. Build retrieval results, e.g. `scripts/eval_pipeline.py`, producing rows with `retrieved_uids`, references, and recall columns.
+2. Generate offline payloads on a machine with Neo4j access:
 
-2. **Offline Phase (Inference)**:
-   Transfer the payload to a GPU machine and run `eval_qa_offline.py`.
-   ```bash
-   python eval_qa_offline.py --models Qwen/Qwen2-7B-Instruct --base-port 8080
-   ```
+```bash
+python src/llm/eval_qa_online.py --dataset eval_results_v4/row_results_full_pipeline.csv
+```
 
-3. **Judge Evaluation (Scoring)**:
-   Use `eval_voter.py` with `--mode eval_qa` to score the generated results using an LLM-as-a-judge.
-   ```bash
-   python eval_voter.py \
-       --mode eval_qa \
-       --input eval_results_qa_offline/row_qa_results_offline.csv \
-       --gt-dataset qa_dataset/QA_NLP.csv \
-       --payload-dir offline_payloads/ \
-       --dataset eval_results_v2/row_results_decomposition.csv
-   ```
+3. Run LLM inference from payloads:
 
-   OpenRouter can be used as the judge backend. Set `OPENROUTER_API_KEY` or pass `--api-key`.
-   ```bash
-   python eval_voter.py \
-       --mode eval_qa \
-       --backend openrouter \
-       --input eval_results_qa_offline/row_qa_results_offline.csv \
-       --output eval_results_qa_judge/ \
-       --gt-dataset qa_dataset/QA_NLP.csv \
-       --payload-dir offline_payloads/ \
-       --dataset eval_results_v2/row_results.csv \
-       --prompt-template prompts/prompt_eval_qa_fewshot.md \
-       --model google/gemma-4-26b-a4b-it:free
-   ```
+```bash
+python src/llm/eval_qa_offline.py \
+  --dataset eval_results_v4/row_results_full_pipeline.csv \
+  --models Qwen/Qwen3-4B \
+  --base-port 8080
+```
 
-## 7. Key Parameters
-- **`top_k`**: Controls the number of retrieved context snippets used. Configured in `EvalConfig` and passed through the payload. Default: `5`.
-- **`backend`**: Supports `vllm` (preferred for GPU), `openrouter` (remote API judge), `llama_cpp`, and `ollama`.
+For OpenRouter:
+
+```bash
+OPENROUTER_API_KEY=... python src/llm/eval_qa_offline.py \
+  --dataset eval_results_v4/row_results_full_pipeline.csv \
+  --openrouter
+```
+
+4. Score generated answers with judge mode:
+
+```bash
+python src/llm/eval_voter.py \
+  --mode eval_qa \
+  --input eval_results_qa_offline/row_qa_results_offline.csv \
+  --gt-dataset qa_dataset/QA_NLP.csv \
+  --payload-dir offline_payloads/ \
+  --dataset eval_results_v4/row_results_full_pipeline.csv \
+  --output eval_results_qa_eval/
+```
+
+## Operational Notes
+
+- Remote Neo4j should use `neo4j+ssc://...`.
+- vLLM uses one server per model: `base_port + i`. QA defaults to `8080`; voter evaluation defaults to `8000`.
+- `eval_qa_online.py` prefers the nearest available `recall@N` column where `N <= top_k`; if absent, it falls back to UID prefix matching.
+- `get_payload_path(dataset_path, payload_dir)` maps `row_results_full_pipeline.csv` to `offline_payloads/row_results_full_pipeline_payload.jsonl` unless `payload_dir` is already a `.jsonl` path.
+- Prompt templates may use `{question}`, `{law_text}`, `{extra_info}`, and sometimes `{top_k}`, `{ground_truth}`, or `{llm_answer}` depending on phase.
+- Inference retries empty/error responses up to 3 times with a short backoff.
+- Gemma-style model names trigger ChatML token remapping in offline QA/judge flows.
+
+## Common Pitfalls
+
+- `references` are UIDs, not expert answer text. For text comparison, merge the original QA dataset `answer` column via `--gt-dataset`.
+- Preserve UTF-8 for Vietnamese legal text and CSV/JSONL files.
+- Pandas may turn IDs into floats (`1` -> `1.0`). Use the existing `clean_id`/string normalization patterns when joining outputs, GT rows, and payloads.
+- Most scripts are easiest to run from the repo root or `src/llm/`; imports are intentionally lightweight rather than packaged.
+- Output CSVs are append/resume friendly. Use `--start-index` deliberately, and avoid rerunning from `0` unless you want headers/results reset.
