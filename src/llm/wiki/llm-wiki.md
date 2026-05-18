@@ -13,17 +13,20 @@ Compact reference for `src/llm/`: how evaluation scripts fit together, what cont
 
 ## Context Builders
 
-Use `fetch_law_texts(embedder, uids, batch_size)` when you already have law UIDs.
+Use `build_context_str_for_uids(embedder, uids, expand=False)` for QA payloads built from retrieval `row_results`.
 
-- Defined in `eval_voter.py`.
-- Input: selected UIDs from `references`, `retrieved_uids`, or an offline payload step.
-- Output: `(uid_to_text, nodes_metadata, merged_text, extra_info)`.
-- Fetches target nodes plus parent Article/Clause, descendants for Article/Clause inputs, document metadata, effect dates, and amendments.
-- The prompt-ready values are usually:
+- Defined in `legal_scraper.retrieval`.
+- Input: final ranked UIDs from `retrieved_uids` in `row_results*.csv`.
+- Output: prompt-ready `law_text` using the same context style as `retrieve_and_build_context().context_str`.
+- Rebuilds the missing post-retrieval context steps from UIDs: hierarchy text, abolished/replaced tags, amendments, and optional sibling/child expansion.
+- The prompt-ready value is usually:
 
 ```python
-_, _, law_text, extra_info = fetch_law_texts(embedder, uids, batch_size=batch_size)
+law_text = build_context_str_for_uids(embedder, uids, expand=False)
+extra_info = ""
 ```
+
+Use `fetch_law_texts(embedder, uids, batch_size)` only for voter/classification flows that need per-UID law text and metadata.
 
 
 ## QA Workflow
@@ -33,6 +36,15 @@ _, _, law_text, extra_info = fetch_law_texts(embedder, uids, batch_size=batch_si
 
 ```bash
 python src/llm/eval_qa_online.py --dataset eval_results_v4/row_results_full_pipeline.csv
+```
+
+For an ablation folder, pass the folder and one payload JSONL will be written for each `row_results*.csv`:
+
+```bash
+python src/llm/eval_qa_online.py \
+  --dataset eval_results/eval_results_pipeline_all_ablations_gemma4_rerank_top_30 \
+  --payload-dir offline_payloads/ \
+  --top-k 30
 ```
 
 3. Run LLM inference from payloads:
@@ -69,6 +81,7 @@ python src/llm/eval_voter.py \
 - Remote Neo4j should use `neo4j+ssc://...`.
 - vLLM uses one server per model: `base_port + i`. QA defaults to `8080`; voter evaluation defaults to `8000`.
 - `eval_qa_online.py` prefers the nearest available `recall@N` column where `N <= top_k`; if absent, it falls back to UID prefix matching.
+- `eval_qa_online.py` accepts either one row-results CSV or a directory containing `row_results*.csv`.
 - `get_payload_path(dataset_path, payload_dir)` maps `row_results_full_pipeline.csv` to `offline_payloads/row_results_full_pipeline_payload.jsonl` unless `payload_dir` is already a `.jsonl` path.
 - Prompt templates may use `{question}`, `{law_text}`, `{extra_info}`, and sometimes `{top_k}`, `{ground_truth}`, or `{llm_answer}` depending on phase.
 - Inference retries empty/error responses up to 3 times with a short backoff.

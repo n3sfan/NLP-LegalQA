@@ -132,6 +132,92 @@ def fetch_context_for_results(
         return result
 
 
+def build_context_str(
+    final_results: list[SearchResult],
+    context_map: dict[tuple[str, str], str],
+    abolished_map: dict[str, list[str]] | None = None,
+    amends_map: dict[str, list[dict]] | None = None,
+    siblings_map: dict[str, str] | None = None,
+    children_map: dict[str, str] | None = None,
+) -> str:
+    """Build the final LLM context string from selected retrieval results."""
+    abolished_map = abolished_map or {}
+    amends_map = amends_map or {}
+    siblings_map = siblings_map or {}
+    children_map = children_map or {}
+
+    context_blocks: list[str] = []
+    for r in final_results:
+        ctx = context_map.get((r.uid, r.label), "")
+
+        # Tag abolished provisions
+        abolished_types = abolished_map.get(r.uid, [])
+        if "bãi bỏ" in abolished_types:
+            ctx = f"[ĐÃ BỊ BÃI BỎ bởi văn bản mới hơn]\n{ctx}"
+        elif "thay thế" in abolished_types:
+            ctx = f"[ĐÃ BỊ THAY THẾ bởi văn bản mới hơn]\n{ctx}"
+
+        # Sibling points
+        if r.uid in siblings_map:
+            ctx += f"\n\n[Các điểm khác cùng khoản]:\n{siblings_map[r.uid]}"
+
+        # Children content
+        if r.uid in children_map:
+            ctx += f"\n\n[Nội dung chi tiết]:\n{children_map[r.uid]}"
+
+        # Amends
+        amends = amends_map.get(r.uid, [])
+        if amends:
+            amend_str = "\n".join(
+                [f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends]
+            )
+            ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
+
+        context_blocks.append(ctx)
+
+    return "\n\n---\n\n".join(context_blocks)
+
+
+def _label_from_uid(uid: str) -> str:
+    if "::point::" in uid:
+        return "Point"
+    if "::clause::" in uid:
+        return "Clause"
+    return "Article"
+
+
+def build_context_str_for_uids(
+    embedder: Neo4jEmbedder,
+    uids: list[str],
+    expand: bool = False,
+) -> str:
+    """Build retrieval-style context_str when the caller already has final UIDs."""
+    final_results = [
+        SearchResult(uid=uid, label=_label_from_uid(uid), score=0.0)
+        for uid in uids
+    ]
+    context_map = fetch_context_for_results(embedder, final_results, include_hierarchy=True)
+    abolished_map = embedder.fetch_abolished_uids(uids)
+    amends_map = embedder.fetch_amends(uids)
+
+    siblings_map: dict[str, str] = {}
+    children_map: dict[str, str] = {}
+    if expand:
+        point_uids = [r.uid for r in final_results if r.label == "Point"]
+        siblings_map = embedder.fetch_sibling_points(point_uids) if point_uids else {}
+        parent_uids = [r.uid for r in final_results if r.label in ("Article", "Clause")]
+        children_map = embedder.fetch_children_context(parent_uids) if parent_uids else {}
+
+    return build_context_str(
+        final_results,
+        context_map,
+        abolished_map=abolished_map,
+        amends_map=amends_map,
+        siblings_map=siblings_map,
+        children_map=children_map,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Shared retrieval pipeline
 # ---------------------------------------------------------------------------
@@ -299,36 +385,14 @@ def retrieve_and_build_context(
 
     # ── Step 5: Build context string for LLM ────────────────────────────
 
-    context_blocks: list[str] = []
-    for r in final_results:
-        ctx = context_map.get((r.uid, r.label), "")
-
-        # Tag abolished provisions
-        abolished_types = abolished_map.get(r.uid, [])
-        if "bãi bỏ" in abolished_types:
-            ctx = f"[ĐÃ BỊ BÃI BỎ bởi văn bản mới hơn]\n{ctx}"
-        elif "thay thế" in abolished_types:
-            ctx = f"[ĐÃ BỊ THAY THẾ bởi văn bản mới hơn]\n{ctx}"
-
-        # Sibling points
-        if r.uid in siblings_map:
-            ctx += f"\n\n[Các điểm khác cùng khoản]:\n{siblings_map[r.uid]}"
-
-        # Children content
-        if r.uid in children_map:
-            ctx += f"\n\n[Nội dung chi tiết]:\n{children_map[r.uid]}"
-
-        # Amends
-        amends = amends_map.get(r.uid, [])
-        if amends:
-            amend_str = "\n".join(
-                [f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends]
-            )
-            ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
-
-        context_blocks.append(ctx)
-
-    context_str = "\n\n---\n\n".join(context_blocks)
+    context_str = build_context_str(
+        final_results,
+        context_map,
+        abolished_map=abolished_map,
+        amends_map=amends_map,
+        siblings_map=siblings_map,
+        children_map=children_map,
+    )
 
     # ── Pack result ─────────────────────────────────────────────────────
 

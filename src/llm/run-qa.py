@@ -19,15 +19,15 @@ LOG_FILE_PATH = "eval_qa_log.txt"
 
 
 def _dataset_name_from_payload(payload_name: str) -> str | None:
-    if not payload_name.startswith("row_results_payload_") or not payload_name.endswith(".jsonl"):
+    if not payload_name.startswith("row_results") or not payload_name.endswith("_payload.jsonl"):
         return None
-    suffix = payload_name[len("row_results_payload_") : -len(".jsonl")]
-    return f"row_results_{suffix}.csv"
+    return payload_name[: -len("_payload.jsonl")] + ".csv"
 
 
 def _build_jobs() -> list[dict[str, str]]:
     payload_names = sorted(
-        name for name in os.listdir(PAYLOAD_DIR) if name.startswith("row_results_payload_")
+        name for name in os.listdir(PAYLOAD_DIR)
+        if name.startswith("row_results") and name.endswith("_payload.jsonl")
     )
     jobs: list[dict[str, str]] = []
 
