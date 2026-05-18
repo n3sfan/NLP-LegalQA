@@ -18,7 +18,7 @@ import streamlit as st
 # ---------------------------------------------------------------------------
 
 st.set_page_config(
-    page_title="Legal QA - Traffic Law Consultation",
+    page_title="Hỏi đáp và tư vấn pháp luật về giao thông",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -177,8 +177,8 @@ if "chat_history" not in st.session_state:
 # ---------------------------------------------------------------------------
 
 with st.sidebar:
-    st.markdown("### Legal QA")
-    st.caption("Vietnamese Traffic Law Q&A System")
+    st.markdown("### Hỏi đáp Pháp luật")
+    st.caption("Hỏi đáp và tư vấn luật Giao thông")
 
     st.markdown('<div class="sidebar-section-title">API Status</div>', unsafe_allow_html=True)
     try:
@@ -219,7 +219,7 @@ with st.sidebar:
     max_history = st.slider("Max History (turns)", 1, 30, 10, help="Maximum conversation turns to keep")
 
     st.markdown("---")
-    if st.button("✕  Clear Conversation", use_container_width=True, type="secondary"):
+    if st.button("✕  Xóa cuộc trò chuyện", use_container_width=True, type="secondary"):
         st.session_state.messages.clear()
         st.session_state.chat_history.clear()
         st.rerun()
@@ -231,8 +231,8 @@ with st.sidebar:
 
 st.markdown("""
 <div class="header-container">
-    <p class="header-title">Legal QA Chat</p>
-    <p class="header-subtitle">Vietnamese Traffic Law Question & Answer System</p>
+    <p class="header-title">Hỏi đáp và tư vấn về luật Giao thông</p>
+    <p class="header-subtitle">Nhập môn ngôn ngữ học thống kê và ứng dụng</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -271,7 +271,7 @@ for msg in st.session_state.messages:
 # Chat input
 # ---------------------------------------------------------------------------
 
-if prompt := st.chat_input("Ask a traffic law question…"):
+if prompt := st.chat_input("Đặt câu hỏi..."):
     # Show user message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
