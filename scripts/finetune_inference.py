@@ -35,7 +35,7 @@ def main():
     user_content = f"Dựa vào ngữ cảnh pháp lý sau:\n{args.context}\n\nCâu hỏi: {args.question}"
     
     messages = [
-        {"role": "user", "content": user_content}
+        {"role": "user", "content": [{"type": "text", "text": user_content}]}
     ]
 
     print("\nPreparing generation inputs...")
