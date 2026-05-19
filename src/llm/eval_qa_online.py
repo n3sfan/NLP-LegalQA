@@ -84,7 +84,7 @@ def _process_dataset(dataset_p: Path, cfg: EvalConfig, embedder: Neo4jEmbedder) 
         df = df.iloc[cfg.start_index:]
 
     recall_cutoff, recall_col = _find_recall_column(df, cfg.top_k)
-    expand = _infer_expand(dataset_p, df)
+    expand = True
 
     n_questions = len(df)
     log.info(
@@ -175,6 +175,21 @@ async def generate_payload(cfg: EvalConfig):
         log.error("No row_results*.csv files found under %s", cfg.dataset_path)
         return
 
+    # Filter datasets by config if dataset_path is a directory and configs are specified
+    if Path(cfg.dataset_path).is_dir() and cfg.configs:
+        selected_configs = {c.strip() for c in cfg.configs if c.strip()}
+        filtered_datasets = []
+        for dataset_p in datasets:
+            config_name = dataset_p.stem
+            config_key = config_name[len("row_results_"):] if config_name.startswith("row_results_") else config_name
+            if config_key in selected_configs or config_name in selected_configs:
+                filtered_datasets.append(dataset_p)
+        datasets = filtered_datasets
+
+    if not datasets:
+        log.error("No matching row_results*.csv files found under %s with configs %s", cfg.dataset_path, cfg.configs)
+        return
+
     payload_dir = Path(cfg.payload_dir)
     if payload_dir.suffix == ".jsonl" and len(datasets) > 1:
         log.error("--payload-dir must be a directory when --dataset points to multiple CSVs")
@@ -213,6 +228,7 @@ def main():
     parser.add_argument("--start-index", type=int, default=0, help="Starting row index")
     parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
     parser.add_argument("--batch-size", type=int, default=10, help="Neo4j batch size")
+    parser.add_argument("--configs", nargs="+", default=["full_pipeline"], help="Config names to process (default: full_pipeline)")
 
     args = parser.parse_args()
     
@@ -228,7 +244,8 @@ def main():
         print_every=args.print_every,
         batch_size=args.batch_size,
         top_k=args.top_k,
-        skip_recall_check=args.skip_recall_check
+        skip_recall_check=args.skip_recall_check,
+        configs=args.configs
     )
     
     asyncio.run(generate_payload(cfg))
