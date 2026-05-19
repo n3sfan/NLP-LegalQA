@@ -16,9 +16,12 @@ def main():
         context = row.get('article_content', '')
         qa_pairs = row.get('generated_qa_pairs', [])
         
-        if isinstance(qa_pairs, list):
+        if hasattr(qa_pairs, 'tolist'):
+            qa_pairs = qa_pairs.tolist()
+
+        if isinstance(qa_pairs, (list, tuple)):
             for qa in qa_pairs:
-                if 'question' in qa and 'answer' in qa:
+                if isinstance(qa, dict) and 'question' in qa and 'answer' in qa:
                     records.append({
                         "conversations": [
                             {"role": "user", "content": f"Dựa vào ngữ cảnh pháp lý sau:\n{context}\n\nCâu hỏi: {qa['question']}"},
