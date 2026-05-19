@@ -90,10 +90,13 @@ def main():
             per_device_train_batch_size = 1,
             gradient_accumulation_steps = 4,
             warmup_steps = 5,
-            max_steps = 60, # Uncomment to run a quick test
-            #num_train_epochs = 1, # Full training run
+            # max_steps = 60, # Uncomment to run a quick test
+            num_train_epochs = 1, # Full training run
             learning_rate = 2e-4,
             logging_steps = 1,
+            save_strategy = "steps",
+            save_steps = 100,
+            save_total_limit = 2,
             optim = "adamw_8bit",
             weight_decay = 0.001,
             lr_scheduler_type = "linear",
@@ -112,7 +115,14 @@ def main():
 
     # 8. Start training
     print("Starting training...")
-    trainer_stats = trainer.train()
+    
+    # Check if there's a checkpoint to resume from
+    import os
+    resume_from_checkpoint = True if os.path.exists("outputs") and any(f.startswith("checkpoint") for f in os.listdir("outputs")) else False
+    if resume_from_checkpoint:
+        print("Resuming from latest checkpoint found in outputs/...")
+        
+    trainer_stats = trainer.train(resume_from_checkpoint=resume_from_checkpoint)
 
     # 9. Save the finetuned model (LoRA adapters)
     output_model_dir = "models/gemma-4-E4B-legal-qa-lora"

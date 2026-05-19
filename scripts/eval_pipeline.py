@@ -231,7 +231,7 @@ def evaluate_config(
                     hybrid=config.hybrid,
                     aggregate=config.aggregate,
                     fetch_k=30,
-                    rerank_top=15,
+                    rerank_top=30,
                     top_k=30,  # Need at least 10 for recall@10
                     labels=["Article", "Clause", "Point"],
                     expand=config.expand,
