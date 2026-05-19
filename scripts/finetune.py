@@ -58,10 +58,9 @@ def main():
     # 3. Load Unsloth model
     model, tokenizer = FastModel.from_pretrained(
         model_name = "unsloth/gemma-4-E4B-it",
-        max_seq_length = 2048,
+        max_seq_length = 8192,
         load_in_4bit = True,
         full_finetuning = False,
-        use_gradient_checkpointing = "unsloth"
     )
 
     # 4. Apply LoRA parameters
