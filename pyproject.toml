@@ -39,6 +39,11 @@ dev = [
 ui = [
     "streamlit>=1.35.0",
 ]
+finetune = [
+    "unsloth",
+    "trl",
+    "datasets",
+]
 
 [project.scripts]
 legal-scraper = "legal_scraper.cli:main"
