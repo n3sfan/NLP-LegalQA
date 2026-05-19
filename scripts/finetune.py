@@ -9,6 +9,27 @@ def main():
     print("Loading and preprocessing dataset...")
     # 1. Load dataset
     df = pd.read_parquet('data/finetune/legal-qa.parquet')
+    
+    # Filter for traffic-related documents
+    traffic_docs = [
+        'Dự thảo Luật Bảo đảm trật tự, an toàn giao thông đường bộ lần 5',
+        'Dự thảo Luật Giao thông đường bộ (sửa đổi) lần 1',
+        'Dự thảo Luật Giao thông đường bộ (sửa đổi) lần 3',
+        'Dự thảo Luật Giao thông đường bộ (sửa đổi) lần 4',
+        'Dự thảo Luật Trật tự, an toàn giao thông đường bộ',
+        'Dự thảo Luật Trật tự, an toàn giao thông đường bộ (Dự thảo 4)',
+        'Dự thảo Luật Đường bộ',
+        'Dự thảo Luật Đường bộ (T5/2024)',
+        'Luật Giao thông đường bộ số 23/2008/QH12 của Quốc hội',
+        'Luật Trật tự, an toàn giao thông đường bộ của Quốc hội, số 36/2024/QH15',
+        'Luật của Quốc hội số 26/2001/QH10 về Giao thông đường bộ',
+        'Luật Đường bộ của Quốc hội, số 35/2024/QH15'
+    ]
+    if 'doc_name' in df.columns:
+        df = df[df['doc_name'].isin(traffic_docs)]
+        print(f"Filtered dataset to {len(df)} traffic-related documents.")
+    else:
+        print("Warning: 'doc_name' column not found, skipping filter.")
 
     # 2. Explode the QA pairs into conversations
     records = []
