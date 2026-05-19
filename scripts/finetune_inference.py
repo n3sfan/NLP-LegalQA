@@ -45,6 +45,7 @@ def main():
         add_generation_prompt=True,
         enable_thinking=False,
         tokenize=True,
+        return_dict=True,
         return_tensors="pt"
     ).to("cuda")
 
@@ -52,7 +53,7 @@ def main():
 
     print("\n--- Model Output ---")
     _ = model.generate(
-        inputs,
+        **inputs,
         streamer=text_streamer,
         max_new_tokens=1024,
         use_cache=True,
