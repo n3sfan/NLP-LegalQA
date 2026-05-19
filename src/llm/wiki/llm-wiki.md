@@ -67,13 +67,17 @@ OPENROUTER_API_KEY=... python src/llm/eval_qa_offline.py \
 4. Score generated answers with judge mode:
 
 ```bash
-python src/llm/eval_voter.py \
-  --mode eval_qa \
-  --input eval_results_qa_offline/row_qa_results_offline.csv \
-  --gt-dataset qa_dataset/QA_NLP.csv \
-  --payload-dir offline_payloads/ \
-  --dataset eval_results_v4/row_results_full_pipeline.csv \
-  --output eval_results_qa_eval/
+uv run .\src\llm\eval_voter.py `
+--mode eval_qa `
+--backend openrouter `
+--input eval_results\llm\gemma_4_e2b_results_qa_pipeline_all_ablations_gemma4_rerank_top_30 `
+--dataset .\eval_results\eval_results_pipeline_all_ablations_geminiflash_rerank_top_30 `
+--gt-dataset qa_dataset/QA_Part2.csv `
+--payload-dir .\offline_payloads `
+--output .\eval_results\eval_llm\eval_results_eval_gemma-4-e2b_qa_pipeline_all_ablations_gemma4_rerank_top_30_judge `
+--prompt-template .\src\llm\prompts\prompt_eval_qa_fewshot.md `
+--model google/gemma-4-26b-a4b-it `
+--print-every 5
 ```
 
 ## Operational Notes

@@ -30,7 +30,9 @@ Dựa trên quy định pháp luật và thông tin bổ sung được cung cấ
 **Nghị định 100/2019/NĐ-CP**
 **Điều 6. Xử phạt người điều khiển xe mô tô, xe gắn máy vi phạm quy tắc giao thông đường bộ** (Sửa đổi bởi Khoản 34 Điều 2 Nghị định 123/2021/NĐ-CP)
 2. Phạt tiền từ 300.000 đồng đến 400.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây:
-k) Điều khiển xe chạy quá tốc độ quy định từ 05 km/h đến dưới 10 km/h. <|im_end|>
+k) Điều khiển xe chạy quá tốc độ quy định từ 05 km/h đến dưới 10 km/h. 
+
+Vậy xe máy bị phạt 300.000 đồng đến 400.000 đồng. <|im_end|>
 
 <|im_start|>user
 Các điều luật: 
@@ -50,7 +52,9 @@ Dựa trên quy định pháp luật được cung cấp:
 
 **Điều 5. Xử phạt người điều khiển xe ô tô vi phạm quy tắc giao thông đường bộ**
 8. Phạt tiền từ 16.000.000 đồng đến 18.000.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây:
-c) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililét máu hoặc vượt quá 0,25 miligam đến 0,4 miligam/1 lít khí thở. <|im_end|>
+c) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililét máu hoặc vượt quá 0,25 miligam đến 0,4 miligam/1 lít khí thở. 
+
+Vậy xe ô tô bị phạt 16.000.000 đồng đến 18.000.000 đồng.<|im_end|>
 
 <|im_start|>user
 Các điều luật: 

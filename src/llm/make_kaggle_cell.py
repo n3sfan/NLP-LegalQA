@@ -1,10 +1,10 @@
 import os
 import sys
-import argparse
 
-def generate(output_path=None):
+def generate():
     src_dir = 'src/llm'
     target_dir = 'llm'
+    include_dirs = ['prompts']
     
     if not os.path.exists(src_dir):
         print(f"Error: Source directory {src_dir} not found.")
@@ -14,13 +14,15 @@ def generate(output_path=None):
     output = []
     output.append("import os")
     output.append(f"os.makedirs('{target_dir}', exist_ok=True)")
+    for dirname in include_dirs:
+        output.append(f"os.makedirs('{target_dir}/{dirname}', exist_ok=True)")
 
     # List and sort files for consistent output
     files = sorted([f for f in os.listdir(src_dir) if os.path.isfile(os.path.join(src_dir, f))])
 
     for filename in files:
         # Skip the generator itself if it's in the same folder
-        if filename in ('generate_export.py', 'make_kaggle_cell.py'):
+        if filename in ('generate_export.py', 'make_kaggle_cell.py', 'cellcode.py'):
             continue
             
         path = os.path.join(src_dir, filename)
@@ -58,24 +60,11 @@ def generate(output_path=None):
             except Exception as e:
                 output.append(f"\n# Error reading {dirname}/{filename}: {e}")
 
-    rendered = "\n".join(output)
-    if output_path:
-        with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
-            f.write(rendered)
-        return
-
     # Print the final result to stdout
-    print(rendered)
+    with open('src/llm/cellcode.py', 'w', encoding='utf-8') as f:
+        f.write("\n".join(output))
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate a Kaggle notebook cell that recreates src/llm files.")
-    parser.add_argument(
-        "-o",
-        "--output",
-        help="Optional output file path. Writes UTF-8 directly instead of printing to stdout.",
-    )
-    args = parser.parse_args()
-
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding='utf-8')
-    generate(output_path=args.output)
+    generate()

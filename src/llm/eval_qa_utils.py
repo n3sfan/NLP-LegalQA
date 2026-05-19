@@ -10,6 +10,7 @@ class EvalConfig:
     payload_dir: str = "offline_payloads/"
     prompt_template_name: str = "prompt_qa_0shot.md"
     print_every: int = 5
+    parallel: int = 4
     backend_type: str = "vllm"
     n_voters: int = 1
     models: List[str] = field(default_factory=lambda: ["Qwen/Qwen3-4B"])

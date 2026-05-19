@@ -73,6 +73,11 @@ load_dotenv()
 import pandas as pd
 import evaluate as hf_evaluate
 import nltk
+try:
+    from transformers import AutoConfig, AutoTokenizer
+except ImportError:  # pragma: no cover - optional at import time
+    AutoConfig = None
+    AutoTokenizer = None
 
 # Repo root is the parent of src/ (NLP-LegalQA/)
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -89,6 +94,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 DEFAULT_OPENROUTER_MODEL = "google/gemma-4-26b-a4b-it:free"
+_BERTSCORE_MODEL_TYPE = "vinai/phobert-base"
+_BERTSCORE_NUM_LAYERS = 9
+_bertscore_truncation_cache: dict[str, tuple[object | None, int | None]] = {}
 
 # Silence noisy third-party logs
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -382,6 +390,53 @@ def compute_metrics(rows: list[dict]) -> dict:
     }
 
 
+def _get_bertscore_truncation(model_type: str) -> tuple[object | None, int | None]:
+    """Derive a safe text token limit for the chosen BERTScore encoder."""
+    if model_type in _bertscore_truncation_cache:
+        return _bertscore_truncation_cache[model_type]
+
+    if AutoTokenizer is None or AutoConfig is None:
+        _bertscore_truncation_cache[model_type] = (None, None)
+        return _bertscore_truncation_cache[model_type]
+
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_type)
+        config = AutoConfig.from_pretrained(model_type)
+        max_positions = getattr(config, "max_position_embeddings", None)
+        # Provide a generous buffer (e.g. 15 instead of 2) because decoding the truncated 
+        # sequence and then having BERTScore re-tokenize it can occasionally inflate the 
+        # token count due to BPE spacing and punctuation detokenization behaviors.
+        text_token_limit = max_positions - 15 if isinstance(max_positions, int) and max_positions > 15 else None
+        _bertscore_truncation_cache[model_type] = (tokenizer, text_token_limit)
+    except Exception as e:
+        log.warning("Could not prepare BERTScore truncation for %s: %s", model_type, e)
+        _bertscore_truncation_cache[model_type] = (None, None)
+
+    return _bertscore_truncation_cache[model_type]
+
+
+def _truncate_text_for_bertscore(text: str, tokenizer, text_token_limit: int | None) -> str:
+    """Trim text to the encoder's supported window before running BERTScore."""
+    if not text or tokenizer is None or not text_token_limit or text_token_limit <= 0:
+        return text
+
+    try:
+        input_ids = tokenizer.encode(
+            text,
+            add_special_tokens=False,
+            truncation=True,
+            max_length=text_token_limit,
+        )
+        return tokenizer.decode(
+            input_ids,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=False,
+        )
+    except Exception as e:
+        log.warning("Failed to truncate text for BERTScore safely: %s", e)
+        return text
+
+
 def compute_model_metrics(rows: list[dict], model: str) -> dict:
     """Per-model metrics: accuracy, precision, recall, avg_latency_ms."""
     model_rows = [r for r in rows if r.get("model") == model]
@@ -589,6 +644,11 @@ def _write_rows_incremental(path: Path, rows: list[dict], fieldnames: list[str])
         writer.writerows(rows)
 
 
+def _chunked(seq, size):
+    for start in range(0, len(seq), size):
+        yield seq[start : start + size]
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Reusable Law Text Fetching
 # ─────────────────────────────────────────────────────────────────────────────
@@ -703,6 +763,7 @@ async def evaluate_qa(
     dataset_path: str | None = None,
     print_every: int = 5,
     start_index: int = 0,
+    parallel: int = 4,
 ) -> None:
     """Evaluates QA answers using a single LLM as a judge."""
     df = pd.read_csv(input_path)
@@ -798,6 +859,7 @@ async def evaluate_qa(
     metric_rouge = hf_evaluate.load("rouge")
     metric_meteor = hf_evaluate.load("meteor")
     metric_bertscore = hf_evaluate.load("bertscore")
+    bertscore_tokenizer, bertscore_text_token_limit = _get_bertscore_truncation(_BERTSCORE_MODEL_TYPE)
 
     results_path = out_p / "row_qa_eval_scores.csv"
     fieldnames = [
@@ -812,9 +874,10 @@ async def evaluate_qa(
 
     all_scores = []
     log.info("Starting QA Evaluation using judge model: %s", eval_model_name)
+    parallel = max(1, parallel)
+    log.info("Using eval_qa request parallelism=%d", parallel)
 
-    from tqdm.auto import tqdm
-    for idx, row in enumerate(tqdm(df.itertuples(), total=len(df), desc="QA Eval"), 1):
+    async def evaluate_qa_row(row, idx: int) -> dict:
         qid = str(getattr(row, "id", idx + start_index))
         question = str(getattr(row, "question", ""))
         
@@ -877,31 +940,48 @@ async def evaluate_qa(
             if attempt < max_retries - 1:
                 await asyncio.sleep(1)
 
-        is_pass = (score >= 7) if score is not None else False
-        if score is not None:
-            all_scores.append(score)
-
         # Calculate additional metrics
         bleu_val, rougeL_val, meteor_val, bert_f1_val = 0.0, 0.0, 0.0, 0.0
         if llm_answer and expert_answer and not llm_answer.startswith("ERROR:"):
+            preds = [llm_answer]
+            refs = [expert_answer]
+
             try:
-                preds = [llm_answer]
-                refs = [expert_answer]
-                
                 b_res = metric_bleu.compute(predictions=preds, references=[refs])
                 bleu_val = round(b_res["bleu"], 4) if b_res else 0.0
-                
+            except Exception as e:
+                log.warning("Failed to compute BLEU for QID %s: %s", qid, e)
+
+            try:
                 r_res = metric_rouge.compute(predictions=preds, references=refs)
                 rougeL_val = round(r_res["rougeL"], 4) if r_res else 0.0
-                
+            except Exception as e:
+                log.warning("Failed to compute ROUGE-L for QID %s: %s", qid, e)
+
+            try:
                 m_res = metric_meteor.compute(predictions=preds, references=refs)
                 meteor_val = round(m_res["meteor"], 4) if m_res else 0.0
-                
-                # Use PhoBERT for Vietnamese Legal QA
-                bert_res = metric_bertscore.compute(predictions=preds, references=refs, model_type="vinai/phobert-base", num_layers=9)
+            except Exception as e:
+                log.warning("Failed to compute METEOR for QID %s: %s", qid, e)
+
+            try:
+                bert_preds = [
+                    _truncate_text_for_bertscore(text, bertscore_tokenizer, bertscore_text_token_limit)
+                    for text in preds
+                ]
+                bert_refs = [
+                    _truncate_text_for_bertscore(text, bertscore_tokenizer, bertscore_text_token_limit)
+                    for text in refs
+                ]
+                bert_res = metric_bertscore.compute(
+                    predictions=bert_preds,
+                    references=bert_refs,
+                    model_type=_BERTSCORE_MODEL_TYPE,
+                    num_layers=_BERTSCORE_NUM_LAYERS,
+                )
                 bert_f1_val = round(bert_res["f1"][0], 4) if bert_res else 0.0
             except Exception as e:
-                log.warning("Failed to compute metrics for QID %s: %s", qid, e)
+                log.warning("Failed to compute BERTScore for QID %s: %s", qid, e)
 
         # Basic parsing for reasoning/comparison/score using robust regex
         reasoning = ""
@@ -916,7 +996,7 @@ async def evaluate_qa(
         if c_match:
             comparison = c_match.group(1).strip().strip(":")
 
-        result_row = {
+        return {
             "id": qid,
             "question": question,
             "score": score,
@@ -929,8 +1009,18 @@ async def evaluate_qa(
             "raw_eval": raw_eval,
             "latency_ms": round(duration_ms, 1)
         }
-        
-        _write_rows_incremental(results_path, [result_row], fieldnames)
+
+    rows = list(df.itertuples())
+    processed = 0
+    for row_chunk in _chunked(rows, parallel):
+        chunk_results = await asyncio.gather(
+            *(evaluate_qa_row(row, idx) for idx, row in enumerate(row_chunk, processed + 1))
+        )
+        _write_rows_incremental(results_path, chunk_results, fieldnames)
+        all_scores.extend(result["score"] for result in chunk_results if result["score"] is not None)
+        processed += len(row_chunk)
+        if print_every > 0 and (processed % print_every == 0 or processed == len(rows)):
+            log.info("Processed %d/%d QA eval requests", processed, len(rows))
 
     if all_scores:
         avg_score = sum(all_scores) / len(all_scores)
@@ -956,6 +1046,10 @@ def _qa_result_path_for_config(input_root: Path, config_name: str) -> Path | Non
     return None
 
 
+def _config_key(config_name: str) -> str:
+    return config_name.removeprefix("row_results_")
+
+
 async def evaluate_qa_many_configs(
     input_root: str,
     output_root: str,
@@ -967,11 +1061,14 @@ async def evaluate_qa_many_configs(
     payload_dir: str | None = None,
     print_every: int = 5,
     start_index: int = 0,
+    configs: list[str] | None = None,
+    parallel: int = 4,
 ) -> None:
     """Evaluate QA answers for every row_results*.csv config in a directory."""
     input_root_p = Path(input_root)
     output_root_p = Path(output_root)
     dataset_root_p = Path(dataset_root)
+    selected_configs = {config.strip() for config in (configs or []) if config.strip()}
 
     if not input_root_p.is_dir():
         raise ValueError(f"--input must be a directory for multi-config eval_qa: {input_root}")
@@ -981,6 +1078,8 @@ async def evaluate_qa_many_configs(
     jobs = []
     for dataset_path in sorted(dataset_root_p.glob("row_results*.csv")):
         config_name = dataset_path.stem
+        if selected_configs and _config_key(config_name) not in selected_configs:
+            continue
         input_path = _qa_result_path_for_config(input_root_p, config_name)
         if input_path is None:
             log.warning("Skipping %s: no generated QA results found under %s", config_name, input_root_p)
@@ -995,6 +1094,8 @@ async def evaluate_qa_many_configs(
 
     output_root_p.mkdir(parents=True, exist_ok=True)
     log.info("Starting multi-config QA evaluation for %d configs", len(jobs))
+    if selected_configs:
+        log.info("Selected configs: %s", sorted(selected_configs))
     for idx, (config_name, input_path, dataset_path, output_dir) in enumerate(jobs, 1):
         log.info("[%d/%d] Evaluating %s", idx, len(jobs), config_name)
         await evaluate_qa(
@@ -1008,6 +1109,7 @@ async def evaluate_qa_many_configs(
             dataset_path=str(dataset_path),
             print_every=print_every,
             start_index=start_index,
+            parallel=parallel,
         )
 
 
@@ -1036,6 +1138,8 @@ async def evaluate(
     gt_dataset: str | None = None,
     payload_dir: str | None = None,
     dataset_path: str | None = None,
+    configs: list[str] | None = None,
+    parallel: int = 4,
 ) -> None:
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -1102,6 +1206,8 @@ async def evaluate(
                 payload_dir=payload_dir,
                 print_every=print_every,
                 start_index=start_index,
+                configs=configs,
+                parallel=parallel,
             )
             return
 
@@ -1115,7 +1221,8 @@ async def evaluate(
             payload_dir=payload_dir,
             dataset_path=dataset_path,
             print_every=print_every,
-            start_index=start_index
+            start_index=start_index,
+            parallel=parallel,
         )
         return
 
@@ -1381,6 +1488,13 @@ def main():
     parser.add_argument("--n-ctx", type=int, default=4096, help="Context window size for llama_cpp")
     parser.add_argument("--batch-size", type=int, default=10, help="Neo4j fetch batch size")
     parser.add_argument("--start-index", type=int, default=0, help="Starting row index in the dataset (0-based)")
+    parser.add_argument("--parallel", type=int, default=4, help="Number of QA eval requests to process concurrently")
+    parser.add_argument(
+        "--configs",
+        nargs="+",
+        default=["full_pipeline"],
+        help="Config names for eval_qa multi-config mode (default: full_pipeline)",
+    )
     args = parser.parse_args()
 
     # Env var fallbacks
@@ -1413,6 +1527,8 @@ def main():
         gt_dataset=args.gt_dataset,
         payload_dir=args.payload_dir,
         dataset_path=args.dataset,
+        configs=args.configs,
+        parallel=args.parallel,
     ))
 
 

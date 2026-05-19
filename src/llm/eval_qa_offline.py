@@ -10,7 +10,6 @@ from pathlib import Path
 from typing import List, Optional
 
 import pandas as pd
-from tqdm.auto import tqdm
 
 
 # Add project root to path
@@ -65,6 +64,94 @@ def _build_backends(cfg: EvalConfig):
     return model_names, backends
 
 
+def _chunked(seq, size):
+    for start in range(0, len(seq), size):
+        yield seq[start : start + size]
+
+
+async def _run_one_item(
+    item: dict,
+    cfg: EvalConfig,
+    qa_template: str,
+    needed_keys: list[str],
+    backends: list,
+    models: list[str],
+) -> list[dict[str, str | float]]:
+    qid = item["id"]
+    question = item["question"]
+    expert_answer = item["expert_answer"]
+    law_text = item["law_text"]
+    extra_info = item["extra_info"]
+
+    prompt_kwargs = {
+        "question": question,
+        "law_text": law_text,
+        "extra_info": extra_info,
+        "top_k": item.get("top_k", cfg.top_k),
+    }
+    filtered_kwargs = {k: v for k, v in prompt_kwargs.items() if k in needed_keys}
+    qa_prompt = qa_template.format(**filtered_kwargs)
+
+    async def ask_model(backend, model_name):
+        current_prompt = qa_prompt
+        if "gemma" in model_name.lower():
+            # Specific mappings for Gemma 3 / Fine-tuned templates
+            current_prompt = current_prompt.replace("<|im_start|>user", "<|turn>user")
+            current_prompt = current_prompt.replace("<|im_start|>assistant", "<|turn>model")
+            # Fallback / General tokens
+            current_prompt = current_prompt.replace("<|im_start|>", "<|turn>")
+            current_prompt = current_prompt.replace("<|im_end|>", "<turn|>")
+            # Thinking / Reasoning tokens
+            current_prompt = current_prompt.replace("<think>", "<|channel>thought")
+            current_prompt = current_prompt.replace("</think>", "<channel|>")
+
+        max_retries = 3
+        for attempt in range(max_retries):
+            start = time.perf_counter()
+            try:
+                ans = await backend.ask(current_prompt)
+                duration = (time.perf_counter() - start) * 1000
+                if ans and ans.strip():
+                    return model_name, ans, duration
+                log.warning(
+                    "Empty response from %s for QID %s (attempt %d/%d)",
+                    model_name,
+                    qid,
+                    attempt + 1,
+                    max_retries,
+                )
+            except Exception as e:
+                log.error(
+                    "Model %s failed for QID %s (attempt %d/%d): %s",
+                    model_name,
+                    qid,
+                    attempt + 1,
+                    max_retries,
+                    e,
+                )
+                ans = f"ERROR: {e}"
+                duration = (time.perf_counter() - start) * 1000
+
+            if attempt < max_retries - 1:
+                await asyncio.sleep(1)
+
+        return model_name, ans, duration
+
+    results = await asyncio.gather(*(ask_model(b, m) for b, m in zip(backends, models)))
+    return [
+        {
+            "id": qid,
+            "question": question,
+            "model": model_name,
+            "generated_answer": generated_answer,
+            "expert_answer": expert_answer,
+            "latency_ms": round(duration, 1),
+            "law_text_preview": law_text[:200] + "..." if law_text else "",
+        }
+        for model_name, generated_answer, duration in results
+    ]
+
+
 async def run_offline_inference(cfg: EvalConfig):
     """Loads offline payloads and performs heavy GPU inference."""
     payload_path = get_payload_path(cfg.dataset_path, cfg.payload_dir)
@@ -100,6 +187,7 @@ async def run_offline_inference(cfg: EvalConfig):
     except FileNotFoundError as e:
         log.error(e)
         return
+    needed_keys = re.findall(r"\{(\w+)\}", qa_template)
 
     # Results CSV setup
     output_p = Path(cfg.output_dir)
@@ -116,79 +204,24 @@ async def run_offline_inference(cfg: EvalConfig):
         with open(results_path, "w", newline="", encoding="utf-8") as f:
             csv.DictWriter(f, fieldnames=fieldnames).writeheader()
 
-    for idx, item in enumerate(tqdm(payloads, desc="Offline Inference"), 1):
-        qid = item["id"]
-        question = item["question"]
-        expert_answer = item["expert_answer"]
-        law_text = item["law_text"]
-        extra_info = item["extra_info"]
+    parallel = max(1, cfg.parallel)
+    print_every = max(1, cfg.print_every)
+    log.info("Using request parallelism=%d", parallel)
 
-        # if (idx-1) % cfg.print_every == 0 or idx == n_items:
-        #     log.info("[%d/%d] Generating answer for QID: %s", idx, n_items, qid)
-
-        # Build prompt
-        # We use a dict to safely format only the keys present in the template
-        prompt_kwargs = {
-            "question": question, 
-            "law_text": law_text, 
-            "extra_info": extra_info,
-            "top_k": item.get("top_k", cfg.top_k)
-        }
-        # Filter kwargs to only those present in the template to avoid KeyError
-        needed_keys = re.findall(r"\{(\w+)\}", qa_template)
-        filtered_kwargs = {k: v for k, v in prompt_kwargs.items() if k in needed_keys}
-        qa_prompt = qa_template.format(**filtered_kwargs)
-        
-        async def ask_model(backend, model_name):
-            current_prompt = qa_prompt
-            if "gemma" in model_name.lower():
-                # Specific mappings for Gemma 3 / Fine-tuned templates
-                current_prompt = current_prompt.replace("<|im_start|>user", "<|turn>user")
-                current_prompt = current_prompt.replace("<|im_start|>assistant", "<|turn>model")
-                # Fallback / General tokens
-                current_prompt = current_prompt.replace("<|im_start|>", "<|turn>")
-                current_prompt = current_prompt.replace("<|im_end|>", "<turn|>")
-                # Thinking / Reasoning tokens
-                current_prompt = current_prompt.replace("<think>", "<|channel>thought")
-                current_prompt = current_prompt.replace("</think>", "<channel|>")
-            
-            max_retries = 3
-            for attempt in range(max_retries):
-                start = time.perf_counter()
-                try:
-                    ans = await backend.ask(current_prompt)
-                    duration = (time.perf_counter() - start) * 1000
-                    if ans and ans.strip():
-                        return model_name, ans, duration
-                    else:
-                        log.warning("Empty response from %s (attempt %d/%d)", model_name, attempt+1, max_retries)
-                except Exception as e:
-                    log.error("Model %s failed for QID %s (attempt %d/%d): %s", model_name, qid, attempt+1, max_retries, e)
-                    ans = f"ERROR: {e}"
-                    duration = (time.perf_counter() - start) * 1000
-                
-                if attempt < max_retries - 1:
-                    await asyncio.sleep(1) # Small backoff
-            
-            return model_name, ans, duration
-
-        tasks = [ask_model(b, m) for b, m in zip(backends, models)]
-        results = await asyncio.gather(*tasks)
-
-        # Log Results
-        for model_name, generated_answer, duration in results:
-            result_row = {
-                "id": qid,
-                "question": question,
-                "model": model_name,
-                "generated_answer": generated_answer,
-                "expert_answer": expert_answer,
-                "latency_ms": round(duration, 1),
-                "law_text_preview": law_text[:200] + "..." if law_text else ""
-            }
-            
-            with open(results_path, "a", newline="", encoding="utf-8") as f:
-                csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore").writerow(result_row)
+    with open(results_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        processed = 0
+        for chunk in _chunked(payloads, parallel):
+            chunk_results = await asyncio.gather(
+                *(_run_one_item(item, cfg, qa_template, needed_keys, backends, models) for item in chunk)
+            )
+            for item_results in chunk_results:
+                for result_row in item_results:
+                    writer.writerow(result_row)
+            processed += len(chunk)
+            if processed % print_every == 0 or processed == n_items:
+                log.info("Processed %d/%d requests", processed, n_items)
+            f.flush()
 
     log.info("Offline inference complete. Results saved to %s", results_path)
 
@@ -205,7 +238,8 @@ def main():
     parser.add_argument("--openrouter", action="store_true", help="Use OpenRouter instead of local vLLM ports")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions")
     parser.add_argument("--start-index", type=int, default=0, help="Starting index in payload list")
-    parser.add_argument("--print-every", type=int, default=5, help="Logging frequency")
+    parser.add_argument("--parallel", type=int, default=4, help="Number of questions to process concurrently")
+    parser.add_argument("--print-every", type=int, default=4, help="Log progress every N requests")
 
     args = parser.parse_args()
     
@@ -220,6 +254,7 @@ def main():
         base_port=args.base_port,
         limit=args.limit,
         start_index=args.start_index,
+        parallel=args.parallel,
         print_every=args.print_every,
     )
     
