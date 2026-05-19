@@ -178,7 +178,7 @@ class VLLMBackend:
     model: str = "Qwen/Qwen3-4B"
     base_url: str = "http://localhost:8000/v1"
     api_key: str = "vllm-secret-key"
-    timeout: float = 120.0
+    timeout: float | None = None  # None disables timeout for slow startup
     temperature: float = None
     max_tokens: int = None
 
@@ -212,7 +212,7 @@ class OpenRouterBackend:
 
     model: str = "google/gemma-4-26b-a4b-it:free"
     api_key: str | None = None
-    timeout: float = 120.0
+    timeout: float | None = None  # None disables timeout for slow startup
     temperature: float = None
     max_tokens: int = None
 

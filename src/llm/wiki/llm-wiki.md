@@ -35,16 +35,16 @@ Use `fetch_law_texts(embedder, uids, batch_size)` only for voter/classification 
 2. Generate offline payloads on a machine with Neo4j access:
 
 ```bash
-python src/llm/eval_qa_online.py --dataset eval_results_v4/row_results_full_pipeline.csv
+uv run src/llm/eval_qa_online.py --dataset eval_results_v4/row_results_full_pipeline.csv
 ```
 
 For an ablation folder, pass the folder and one payload JSONL will be written for each `row_results*.csv`:
 
 ```bash
-python src/llm/eval_qa_online.py \
-  --dataset eval_results/eval_results_pipeline_all_ablations_gemma4_rerank_top_30 \
-  --payload-dir offline_payloads/ \
-  --top-k 30
+uv run src/llm/eval_qa_online.py `
+  --dataset eval_results/eval_results_pipeline_all_ablations_geminiflash_rerank_top_30 `
+  --payload-dir offline_payloads/ `
+  --top-k 30 
 ```
 
 3. Run LLM inference from payloads:
