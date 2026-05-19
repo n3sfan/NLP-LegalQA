@@ -22,11 +22,16 @@ Usage:
         --output eval_results/QA_Part2/eval_finetuned_results.csv
 """
 
+import unsloth # Must be imported before other libraries like transformers
+from unsloth import FastModel
+from unsloth.chat_templates import get_chat_template
+
 import argparse
 import json
 import os
 import sys
 import time
+import ssl
 from pathlib import Path
 from datetime import datetime
 
@@ -51,6 +56,13 @@ from legal_scraper.prompts import _QA_SYSTEM_PROMPT, _QA_USER_PROMPT, _JUDGE_SYS
 load_dotenv()
 
 # Attempt to download required NLTK resources
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
 try:
     nltk.data.find("tokenizers/punkt")
 except LookupError:
@@ -142,9 +154,6 @@ def parse_args():
 
 
 def run_generate(args, merged_df):
-    from unsloth import FastModel
-    from unsloth.chat_templates import get_chat_template
-    
     gen_out_path = Path(args.output).with_suffix(".generated.csv")
     gen_out_path.parent.mkdir(parents=True, exist_ok=True)
     processed_ids = set()
