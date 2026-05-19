@@ -36,7 +36,7 @@ def main():
     print("Loading Unsloth model...")
     # 3. Load Unsloth model
     model, tokenizer = FastModel.from_pretrained(
-        model_name = "unsloth/gemma-4-26B-A4B-it",
+        model_name = "unsloth/gemma-4-E4B-it",
         max_seq_length = 8192,
         load_in_4bit = True,
         full_finetuning = False,
@@ -61,7 +61,7 @@ def main():
     print("Formatting dataset with Gemma 4 template...")
     tokenizer = get_chat_template(
         tokenizer,
-        chat_template = "gemma-4-thinking",
+        chat_template = "gemma-4",
     )
 
     def formatting_prompts_func(examples):
@@ -115,7 +115,7 @@ def main():
     trainer_stats = trainer.train()
 
     # 9. Save the finetuned model (LoRA adapters)
-    output_model_dir = "models/gemma-4-26B-A4B-legal-qa-lora"
+    output_model_dir = "models/gemma-4-E4B-legal-qa-lora"
     print(f"Training complete. Saving LoRA adapters to {output_model_dir}...")
     model.save_pretrained(output_model_dir)
     tokenizer.save_pretrained(output_model_dir)

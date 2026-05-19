@@ -8,7 +8,7 @@ def main():
     parser = argparse.ArgumentParser(description="Test inference on the fine-tuned Gemma 4 model.")
     parser.add_argument("--context", type=str, required=True, help="The legal context to ground the answer.")
     parser.add_argument("--question", type=str, required=True, help="The question to ask.")
-    parser.add_argument("--model-dir", type=str, default="models/gemma-4-26B-A4B-legal-qa-lora", help="Path to the saved LoRA adapters.")
+    parser.add_argument("--model-dir", type=str, default="models/gemma-4-E4B-legal-qa-lora", help="Path to the saved LoRA adapters.")
     args = parser.parse_args()
 
     print(f"Loading model and LoRA from {args.model_dir}...")
@@ -28,7 +28,7 @@ def main():
     print("Applying Gemma 4 Chat Template...")
     tokenizer = get_chat_template(
         tokenizer,
-        chat_template="gemma-4-thinking",
+        chat_template="gemma-4",
     )
 
     # Format the input using the exact prompt structure from finetune.py
