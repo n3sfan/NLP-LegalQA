@@ -214,8 +214,8 @@ with st.sidebar:
     st.markdown('<div class="sidebar-section-title">Retrieval Tuning</div>', unsafe_allow_html=True)
 
     fetch_k = st.slider("Fetch K (candidates per search)", 5, 100, 30, step=5)
-    rerank_top = st.slider("Rerank Pool", 5, 50, 15, step=5, help="Number of candidates to rerank via cross-encoder")
-    top_k = st.slider("Top K (final results)", 1, 20, 8, help="Number of final results used for answer generation")
+    rerank_top = st.slider("Rerank Pool", 5, 50, 30, step=5, help="Number of candidates to rerank via cross-encoder")
+    top_k = st.slider("Top K (final results)", 1, 20, 15, help="Number of final results used for answer generation")
     max_history = st.slider("Max History (turns)", 1, 30, 10, help="Maximum conversation turns to keep")
 
     st.markdown("---")
