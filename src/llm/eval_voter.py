@@ -752,6 +752,19 @@ def parse_eval_score(raw: str) -> int | None:
     return None
 
 
+def clean_json_response(text: str) -> str:
+    """Clean markdown formatting from LLM JSON output."""
+    text = text.strip()
+    if text.startswith("```json"):
+        text = text[7:]
+    elif text.startswith("```"):
+        text = text[3:]
+    if text.endswith("```"):
+        text = text[:-3]
+    return text.strip()
+
+
+
 async def evaluate_qa(
     input_path: str,
     output_dir: str,
@@ -918,7 +931,6 @@ async def evaluate_qa(
         max_retries = 3
         raw_eval = ""
         duration_ms = 0
-        score = None
         
         for attempt in range(max_retries):
             start_t = time.perf_counter()
@@ -928,8 +940,15 @@ async def evaluate_qa(
                 # print('prompt', prompt)
                 # print('answer', raw_eval)
                 if raw_eval and raw_eval.strip():
-                    score = parse_eval_score(raw_eval)
-                    break
+                    clean_eval = clean_json_response(raw_eval)
+                    if clean_eval.startswith("{") and clean_eval.endswith("}"):
+                        try:
+                            json.loads(clean_eval)
+                            break
+                        except Exception:
+                            pass
+                    if parse_eval_score(raw_eval) is not None:
+                        break
                 else:
                     log.warning("Empty evaluation response from judge (attempt %d/%d)", attempt+1, max_retries)
             except Exception as e:
@@ -983,18 +1002,44 @@ async def evaluate_qa(
             except Exception as e:
                 log.warning("Failed to compute BERTScore for QID %s: %s", qid, e)
 
-        # Basic parsing for reasoning/comparison/score using robust regex
+        # Clean and parse JSON/non-JSON response
+        clean_eval = clean_json_response(raw_eval)
+        is_json = False
+        judge_result = {}
+        if clean_eval.startswith("{") and clean_eval.endswith("}"):
+            try:
+                judge_result = json.loads(clean_eval)
+                is_json = True
+            except Exception:
+                pass
+
         reasoning = ""
         comparison = ""
-        
-        # Regex to find sections: - **Field:** Content
-        r_match = re.search(r"Reasoning[:\s*]*\**\s*(.*?)(?=- \*\*|- Score:|$)", raw_eval, re.DOTALL | re.IGNORECASE)
-        if r_match:
-            reasoning = r_match.group(1).strip().strip(":")
-            
-        c_match = re.search(r"Comparison[:\s*]*\**\s*(.*?)(?=- \*\*|- Score:|$)", raw_eval, re.DOTALL | re.IGNORECASE)
-        if c_match:
-            comparison = c_match.group(1).strip().strip(":")
+        score = None
+
+        if is_json:
+            reasoning = judge_result.get("reasoning", "")
+            comparison = judge_result.get("comparison", "")
+            scores = judge_result.get("scores", {})
+            if isinstance(scores, dict):
+                score = sum(
+                    scores.get(k, 0)
+                    for k in ["legal_accuracy", "correct_citation", "completeness", "hallucination_citation", "structure"]
+                )
+            else:
+                score = judge_result.get("score", None)
+        else:
+            # Basic parsing for reasoning/comparison/score using robust regex
+            # Regex to find sections: - **Field:** Content
+            r_match = re.search(r"Reasoning[:\s*]*\**\s*(.*?)(?=- \*\*|- Score:|$)", raw_eval, re.DOTALL | re.IGNORECASE)
+            if r_match:
+                reasoning = r_match.group(1).strip().strip(":")
+                
+            c_match = re.search(r"Comparison[:\s*]*\**\s*(.*?)(?=- \*\*|- Score:|$)", raw_eval, re.DOTALL | re.IGNORECASE)
+            if c_match:
+                comparison = c_match.group(1).strip().strip(":")
+                
+            score = parse_eval_score(raw_eval)
 
         return {
             "id": qid,
