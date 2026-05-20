@@ -172,7 +172,7 @@ def run_generate(args, merged_df):
     try:
         model, tokenizer = FastModel.from_pretrained(
             model_name=args.model_dir,
-            max_seq_length=65000,
+            max_seq_length=32000,
             load_in_4bit=True,
         )
     except Exception as e:
@@ -247,7 +247,7 @@ def run_generate(args, merged_df):
         t0 = time.time()
         outputs = model.generate(
             **inputs,
-            max_new_tokens=1024,
+            max_new_tokens=10000,
             use_cache=True,
             temperature=1.0, 
             top_p=0.95, 
