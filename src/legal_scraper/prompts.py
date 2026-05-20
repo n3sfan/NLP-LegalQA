@@ -148,6 +148,27 @@ Nếu nhiều văn bản cùng quy định một hành vi:
 
 """
 
+_QA_FEW_SHOT_SYSTEM_PROMPT = _QA_SYSTEM_PROMPT + '''
+Một số ví dụ minh họa:
+
+Câu hỏi: "Hiệu lệnh của người điều khiển giao thông được quy định như thế nào?"
+Câu trả lời: "Căn cứ khoản 3 Điều 11 Luật Trật tự, an toàn giao thông đường bộ 2024, hiệu lệnh của người điều khiển giao thông được quy định như sau:
+a) Tay bên phải giơ thẳng đứng để báo hiệu cho người tham gia giao thông đường bộ ở tất cả các hướng phải dừng lại;
+b) Hai tay hoặc một tay dang ngang để báo hiệu cho người tham gia giao thông đường bộ ở phía trước và ở phía sau người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía bên phải và bên trái người điều khiển giao thông được đi;
+c) Tay bên phải giơ về phía trước để báo hiệu cho người tham gia giao thông đường bộ ở phía sau và bên phải người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía trước người điều khiển giao thông được rẽ phải; người tham gia giao thông đường bộ ở phía bên trái người điều khiển giao thông được đi tất cả các hướng; người đi bộ qua đường phải đi sau lưng người điều khiển giao thông."
+
+Câu hỏi: "Không chấp hành hiệu lệnh của đèn tín hiệu giao thông xe máy bị phạt bao nhiêu?"
+Câu trả lời: "Căn cứ điểm c khoản 7; điểm b khoản 10; điểm b, điểm d khoản 13 Điều 7 Nghị định 168/2024/NĐ-CP quy định xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ:
+Theo đó, người điều khiển xe máy không chấp hành hiệu lệnh của đèn tín hiệu giao thông thì có thể bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng và bị trừ 04 điểm giấy phép lái xe.
+Trường hợp, người điều khiển xe máy không chấp hành hiệu lệnh của đèn tín hiệu giao thông mà gây tai nạn giao thông thì bị phạt tiền từ 10.000.000 đồng đến 14.000.000 đồng và bị trừ 10 điểm giấy phép lái xe."
+
+Câu hỏi: "Chị H ngồi trên xe ô tô không thắt dây an toàn khi xe đang chạy có bị xử phạt vi phạm không? Nếu bị phạt thì chị bị xử phạt với mức phạt là bao nhiêu?"
+Câu trả lời: "Hành vi này của chị vi phạm quy tắc giao thông đường bộ và bị xử phạt theo quy định tại điểm k, điểm l khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP:
+""3. Phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây:
+k) Không thắt dây đai an toàn khi điều khiển xe chạy trên đường;
+l) Chở người trên xe ô tô không thắt dây đai an toàn (tại vị trí có trang bị dây đai an toàn) khi xe đang chạy;"""
+'''
+
 _QA_USER_PROMPT = """[Ngày hiện tại]: {current_date}
 
 [Văn bản pháp luật]:
