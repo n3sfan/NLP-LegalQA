@@ -1,0 +1,1003 @@
+id,question,ground_truth,generated_answer,bleu,rougeL,meteor,judge_legal_accuracy,judge_correct_citation,judge_completeness,judge_hallucination_citation,judge_structure,judge_overall_score,judge_reasoning,gen_time,judge_time
+1,Người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ theo thứ tự ưu tiên nào?,"Căn cứ khoản 2 Điều 11 Luật Trật tự, an toàn giao thông đường bộ 2024, người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ theo thứ tự ưu tiên từ trên xuống dưới như sau:
+(i) Hiệu lệnh của người điều khiển giao thông.
+(ii) Tín hiệu đèn giao thông.
+(iii) Biển báo hiệu đường bộ.
+(iv) Vạch kẻ đường và các dấu hiệu khác trên mặt đường.
+(v) Cọc tiêu, tường bảo vệ, rào chắn, đinh phản quang, tiêu phản quang, cột Km, cọc H.
+(vi) Thiết bị âm thanh báo hiệu đường bộ.","Căn cứ theo Khoản 2, Điều 11, Chương II, Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ 2025-01-01), người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ theo thứ tự ưu tiên từ trên xuống dưới như sau:
+
+a. Hiệu lệnh của người điều khiển giao thông;
+b. Tín hiệu đèn giao thông;
+c. Biển báo hiệu đường bộ;
+d. Vạch kẻ đường và các dấu hiệu khác trên mặt đường;
+đ. Cọc tiêu, tường bảo vệ, rào chắn, đinh phản quang, tiêu phản quang, cột Km, cọc H;
+e. Thiết bị âm thanh báo hiệu đường bộ.",0.6493,0.8981,0.8035,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý, liệt kê đầy đủ và chính xác thứ tự ưu tiên các báo hiệu đường bộ theo quy định tại Khoản 2 Điều 11 Luật Trật tự, an toàn giao thông đường bộ 2024. AI đã trích dẫn chính xác điều luật và văn bản pháp luật. Câu trả lời không bịa đặt thông tin. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề.",1.93,1.47
+2,Dừng xe che khuất biển báo hiệu đường bộ bị phạt bao nhiêu tiền?,"(i) Đối với xe ô tô:
+Người điều khiển xe ô tô dừng xe che khuất biển báo hiệu đường bộ bị phạt tiền 800 nghìn - 01 triệu đồng (theo điểm đ khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP).
+(ii) Đối với xe máy chuyên dùng:
+Người điều khiển xe máy chuyên dùng dừng xe che khuất biển báo hiệu đường bộ bị phạt tiền tù 600 - 800 nghìn đồng (theo điểm b khoản 2 Điều 8 Nghị định 168/2024/NĐ-CP).","Căn cứ theo Điểm n, Khoản 4, Điều 18 Luật Giao thông đường bộ số 36/2024/QH15, hành vi dừng xe che khuất biển báo hiệu đường bộ là hành vi không được phép.
+
+Mức phạt tiền đối với hành vi này được quy định như sau:
+
+*   **Đối với người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy:**
+    *   Căn cứ theo Điểm a, Khoản 1, Điều 7 Nghị định 168/2024/NĐ-CP, người điều khiển xe thực hiện hành vi không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường sẽ bị phạt tiền từ 200.000 đồng đến 400.000 đồng.
+*   **Đối với người điều khiển xe máy chuyên dùng:**
+    *   Căn cứ theo Điểm b, Khoản 2, Điều 8 Nghị định 168/2024/NĐ-CP, người điều khiển xe thực hiện hành vi dừng xe tại vị trí che khuất biển báo hiệu đường bộ sẽ bị phạt tiền từ 600.000 đồng đến 800.000 đồng.
+*   **Đối với người điều khiển xe đạp, xe đạp máy, người điều khiển xe thô sơ khác:**
+    *   Căn cứ theo Điểm c, Khoản 1, Điều 9 Nghị định 168/2024/NĐ-CP, người điều khiển xe thực hiện hành vi không chấp hành hiệu lệnh hoặc chỉ dẫn của biển báo hiệu, vạch kẻ đường sẽ bị phạt tiền từ 100.000 đồng đến 200.000 đồng.
+
+Ngoài ra, căn cứ theo Khoản 3, Điều 12 Nghị định 168/2024/NĐ-CP, cá nhân, tổ chức để vật che khuất biển báo hiệu đường bộ, đèn tín hiệu giao thông sẽ bị phạt tiền từ 250.000 đồng đến 350.000 đồng đối với cá nhân, từ 500.000 đồng đến 700.000 đồng đối với tổ chức.
+
+Đồng thời, căn cứ theo Điểm a, Khoản 16, Điều 12 Nghị định 168/2024/NĐ-CP và Điểm đ, Khoản 3, Điều 3 Nghị định 168/2024/NĐ-CP, cá nhân, tổ chức thực hiện hành vi này còn bị áp dụng biện pháp khắc phục hậu quả là buộc phá dỡ các vật che khuất biển báo hiệu đường bộ, đèn tín hiệu giao thông.",0.0855,0.2874,0.442,1.0,1.5,1.0,2.0,2.0,7.5,"AI đã trả lời đúng bản chất pháp lý về hành vi dừng xe che khuất biển báo hiệu đường bộ là hành vi không được phép theo Luật Giao thông đường bộ số 36/2024/QH15. Tuy nhiên, AI đã không tìm thấy mức phạt cho xe ô tô, đây là một thiếu sót lớn so với ground truth. AI đã trích dẫn đúng các điều luật cho xe máy chuyên dùng, xe mô tô/gắn máy và xe đạp/thô sơ, cũng như các biện pháp khắc phục hậu quả. Tuy nhiên, việc thiếu mức phạt cho xe ô tô làm giảm tính đầy đủ của câu trả lời. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, phân loại theo từng loại phương tiện và đưa ra các biện pháp khắc phục hậu quả.",3.33,2.21
+3,Hiệu lệnh của người điều khiển giao thông được quy định như thế nào?,"Căn cứ khoản 3 Điều 11 Luật Trật tự, an toàn giao thông đường bộ 2024, hiệu lệnh của người điều khiển giao thông được quy định như sau:
+a) Tay bên phải giơ thẳng đứng để báo hiệu cho người tham gia giao thông đường bộ ở tất cả các hướng phải dừng lại;
+b) Hai tay hoặc một tay dang ngang để báo hiệu cho người tham gia giao thông đường bộ ở phía trước và ở phía sau người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía bên phải và bên trái người điều khiển giao thông được đi;
+c) Tay bên phải giơ về phía trước để báo hiệu cho người tham gia giao thông đường bộ ở phía sau và bên phải người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía trước người điều khiển giao thông được rẽ phải; người tham gia giao thông đường bộ ở phía bên trái người điều khiển giao thông được đi tất cả các hướng; người đi bộ qua đường phải đi sau lưng người điều khiển giao thông.","Căn cứ theo Khoản 3, Điều 11, Chương II, Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), hiệu lệnh của người điều khiển giao thông được quy định như sau:
+
+*   **Điểm a:** Tay bên phải giơ thẳng đứng để báo hiệu cho người tham gia giao thông đường bộ ở tất cả các hướng phải dừng lại.
+*   **Điểm b:** Hai tay hoặc một tay dang ngang để báo hiệu cho người tham gia giao thông đường bộ ở phía trước và ở phía sau người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía bên phải và bên trái người điều khiển giao thông được đi.
+*   **Điểm c:** Tay bên phải giơ về phía trước để báo hiệu cho người tham gia giao thông đường bộ ở phía sau và bên phải người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía trước người điều khiển giao thông được rẽ phải; người tham gia giao thông đường bộ ở phía bên trái người điều khiển giao thông được đi tất cả các hướng; người đi bộ qua đường phải đi sau lưng người điều khiển giao thông.",0.7855,0.9509,0.9447,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời chính xác về mặt pháp lý, trích dẫn đúng điều luật và nội dung của hiệu lệnh người điều khiển giao thông. Câu trả lời đầy đủ các điểm a, b, c như trong ground truth. AI không bịa đặt thông tin và cấu trúc câu trả lời rõ ràng, đi thẳng vào trọng tâm câu hỏi.",1.8,1.31
+4,"Người điều khiển xe mô tô phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp nào?","Căn cứ khoản 3 Điều 12 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định người điều khiển xe mô tô phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp sau đây:
+- Tại nơi có vạch kẻ đường hoặc báo hiệu khác dành cho người đi bộ hoặc tại nơi mà người đi bộ, xe lăn của người khuyết tật đang qua đường;
+- Có báo hiệu cảnh báo nguy hiểm hoặc có chướng ngại vật trên đường;
+- Chuyển hướng xe chạy hoặc tầm nhìn bị hạn chế;
+- Nơi đường bộ giao nhau cùng mức với đường bộ, đường bộ giao nhau cùng mức với đường sắt; đường hẹp, đường vòng, đường quanh co, đường đèo, dốc;
+- Nơi cầu, cống hẹp, đập tràn, đường ngầm, hầm chui, hầm đường bộ;
+- Khu vực có trường học, bệnh viện, bến xe, công trình công cộng tập trung đông người, khu vực đông dân cư, chợ, khu vực đang thi công trên đường bộ, hiện trường vụ tai nạn giao thông đường bộ;
+- Có vật nuôi đi trên đường hoặc chăn thả ở ven đường;
+- Tránh xe đi ngược chiều hoặc khi cho xe đi phía sau vượt; khi có tín hiệu xin đường, tín hiệu khẩn cấp của xe đi cùng chiều phía trước;
+- Điểm dừng xe, đỗ xe trên đường bộ có khách đang lên, xuống xe;
+- Gặp xe vận chuyển hàng siêu trường, siêu trọng, hàng hóa nguy hiểm; đoàn người đi bộ;
+- Gặp xe ưu tiên;
+- Điều kiện trời mưa, gió, sương, khói, bụi, mặt đường trơn trượt, lầy lội, có nhiều đất đá, vật liệu rơi vãi ảnh hưởng đến an toàn giao thông đường bộ;
+- Khu vực đang tổ chức kiểm soát giao thông đường bộ.","Căn cứ theo Khoản 3, Điều 12, Chương II, Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), người điều khiển xe mô tô phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp sau đây:
+
+*   Tại nơi có vạch kẻ đường hoặc báo hiệu khác dành cho người đi bộ hoặc tại nơi mà người đi bộ, xe lăn của người khuyết tật đang qua đường;
+*   Có báo hiệu cảnh báo nguy hiểm hoặc có chướng ngại vật trên đường;
+*   Chuyển hướng xe chạy hoặc tầm nhìn bị hạn chế;
+*   Nơi đường bộ giao nhau cùng mức với đường bộ, đường bộ giao nhau cùng mức với đường sắt; đường hẹp, đường vòng, đường quanh co, đường đèo, dốc;
+*   Nơi cầu, cống hẹp, đập tràn, đường ngầm, hầm chui, hầm đường bộ;
+*   Khu vực có trường học, bệnh viện, bến xe, công trình công cộng tập trung đông người, khu vực đông dân cư, chợ, khu vực đang thi công trên đường bộ, hiện trường vụ tai nạn giao thông đường bộ;
+*   Có vật nuôi đi trên đường hoặc chăn thả ở ven đường;
+*   Tránh xe đi ngược chiều hoặc khi cho xe đi phía sau vượt; khi có tín hiệu xin đường, tín hiệu khẩn cấp của xe đi cùng chiều phía trước;
+*   Điểm dừng xe, đỗ xe trên đường bộ có khách đang lên, xuống xe;
+*   Gặp xe vận chuyển hàng siêu trường, siêu trọng, hàng hóa nguy hiểm; đoàn người đi bộ;
+*   Gặp xe ưu tiên;
+*   Điều kiện trời mưa, gió, sương, khói, bụi, mặt đường trơn trượt, lầy lội, có nhiều đất đá, vật liệu rơi vãi ảnh hưởng đến an toàn giao thông đường bộ;
+*   Khu vực đang tổ chức kiểm soát giao thông đường bộ.",0.8515,0.9731,0.9427,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời chính xác và đầy đủ các trường hợp người điều khiển xe mô tô phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn, dựa trên Khoản 3 Điều 12 Luật Trật tự, an toàn giao thông đường bộ 2024. Các điểm liệt kê hoàn toàn trùng khớp với ground truth. AI cũng trích dẫn đúng điều luật và văn bản pháp luật. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề.",2.69,2.19
+5,"Hành vi không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ và chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật bị xử phạt vi phạm hành chính như thế nào?","Tại điểm h, i Khoản 2 Điều 7 Nghị định 168/2024/NĐ-CP quy định như sau:
+Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây: Không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ và chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.","Căn cứ theo Điểm h, Khoản 2, Điều 7 và Điểm i, Khoản 2, Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025), hành vi không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ và chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật sẽ bị xử phạt vi phạm hành chính như sau:
+
+*   **Đối với người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy:**
+    *   Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với hành vi không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ.
+    *   Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với hành vi chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.",0.4083,0.5978,0.852,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý, mức phạt tiền và các trường hợp ngoại lệ theo quy định tại Nghị định 168/2024/NĐ-CP. AI đã trích dẫn chính xác các điều luật liên quan (Điểm h, i Khoản 2 Điều 7 Nghị định 168/2024/NĐ-CP). Câu trả lời đầy đủ về mức phạt tiền. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, trực tiếp đi vào trọng tâm câu hỏi.",2.52,12.56
+6,Xe ô tô không chấp hành hiệu lệnh của đèn tín hiệu giao thông bị phạt bao nhiêu?,"Căn cứ điểm b khoản 9; điểm b khoản 10; điểm b, điểm d khoản 16 Điều 6 Nghị định 168/2024/NĐ-CP quy định xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô vi phạm quy tắc giao thông đường bộ:
+Theo đó, người điều khiển xe ô tô tham gia giao thông không chấp hành hiệu lệnh của đèn tín hiệu giao thông thì bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng và bị trừ 04 điểm giấy phép lái xe.
+Trường hợp, người điều khiển xe ô tô tham gia giao thông không chấp hành hiệu lệnh của đèn tín hiệu giao thông mà gây tai nạn giao thông thì bị phạt tiền từ 20.000.000 đồng đến 22.000.000 đồng và bị trừ 10 điểm giấy phép lái xe.","Căn cứ theo Điểm b, Khoản 9, Điều 6 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025), xe ô tô không chấp hành hiệu lệnh của đèn tín hiệu giao thông sẽ bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng.",0.0394,0.391,0.2257,2.0,2.0,1.0,2.0,2.0,9.0,"AI đã trả lời đúng bản chất pháp lý về mức phạt tiền cho hành vi không chấp hành hiệu lệnh đèn tín hiệu giao thông đối với xe ô tô theo Nghị định 168/2024/NĐ-CP. Mức phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng là chính xác. Tuy nhiên, AI chưa đề cập đến hình phạt bổ sung là trừ điểm giấy phép lái xe, và cũng chưa đề cập đến trường hợp gây tai nạn giao thông như trong ground truth. Do đó, tính đầy đủ chưa đạt. AI trích dẫn đúng Điều, Khoản, Điểm và văn bản pháp luật. AI không bịa đặt nội dung điều luật. Câu trả lời của AI trực tiếp vào trọng tâm câu hỏi.",1.25,1.8
+7,Không chấp hành hiệu lệnh của đèn tín hiệu giao thông xe máy bị phạt bao nhiêu?,"Căn cứ điểm c khoản 7; điểm b khoản 10; điểm b, điểm d khoản 13 Điều 7 Nghị định 168/2024/NĐ-CP quy định xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ:
+Theo đó, người điều khiển xe máy không chấp hành hiệu lệnh của đèn tín hiệu giao thông thì có thể bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng và bị trừ 04 điểm giấy phép lái xe.
+Trường hợp, người điều khiển xe máy không chấp hành hiệu lệnh của đèn tín hiệu giao thông mà gây tai nạn giao thông thì bị phạt tiền từ 10.000.000 đồng đến 14.000.000 đồng và bị trừ 10 điểm giấy phép lái xe.","Căn cứ theo Điểm c, Khoản 7, Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025), người điều khiển xe máy (xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy) không chấp hành hiệu lệnh của đèn tín hiệu giao thông sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng.",0.2382,0.5546,0.3876,2.0,2.0,1.0,2.0,2.0,9.0,"AI đã trả lời đúng bản chất pháp lý về mức phạt tiền cho hành vi không chấp hành hiệu lệnh đèn tín hiệu giao thông đối với xe máy theo Nghị định 168/2024/NĐ-CP. Tuy nhiên, AI chưa đề cập đến việc trừ điểm giấy phép lái xe và trường hợp gây tai nạn giao thông, điều này làm giảm tính đầy đủ của câu trả lời so với ground truth. AI trích dẫn đúng Điều, Khoản, Điểm và văn bản pháp luật. AI không bịa đặt nội dung điều luật. AI trả lời trực tiếp vào trọng tâm câu hỏi.",1.63,1.64
+8,Vượt đường ngang khi đèn đỏ bật sáng bị phạt bao nhiêu tiền?,"Tại Điều 47 Nghị định 100/2019/NĐ-CP được sửa đổi bởi khoản 34 Điều 2 Nghị định 123/2021/NĐ-CP có quy định về lỗi vượt đường ngang khi đèn đỏ bật sáng sẽ bị xử phạt như sau:
+- Phạt tiền từ 60.000 đồng đến 100.000 đồng đối với người đi bộ
+- Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với xe đạp, xe đạp máy, người điều khiển xe thô sơ
+- Phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy
+- Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với xe ô tô, các loại xe tương tự xe ô tô
+- Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với máy kéo, xe máy chuyên dùng
+Ngoài ra, còn bị áp dụng hình thức xử phạt bổ sung tước quyền sử dụng Giấy phép lái xe (khi điều khiển phương tiện giao thông cơ giới đường bộ), chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ (khi điều khiển xe máy chuyên dùng) từ 01 tháng đến 03 tháng.","Căn cứ theo Điểm c, Khoản 4, Điều 11 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025) quy định tín hiệu đèn màu đỏ là cấm đi.
+
+Hành vi vượt đường ngang khi đèn đỏ đã bật sáng sẽ bị xử phạt như sau:
+
+*   **Đối với người đi bộ:**
+    *   Phạt tiền từ 60.000 đồng đến 100.000 đồng.
+    *   Căn cứ theo Khoản 1, Điều 47 Nghị định 100/2019/NĐ-CP (có hiệu lực từ ngày 01/01/2020).
+
+*   **Đối với người điều khiển xe đạp, xe đạp máy, người điều khiển xe thô sơ:**
+    *   Phạt tiền từ 100.000 đồng đến 200.000 đồng.
+    *   Căn cứ theo Khoản 3, Điều 47 Nghị định 100/2019/NĐ-CP (có hiệu lực từ ngày 01/01/2020).
+
+*   **Đối với người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy:**
+    *   Phạt tiền từ 800.000 đồng đến 1.000.000 đồng.
+    *   Căn cứ theo Khoản 5, Điều 47 Nghị định 100/2019/NĐ-CP (có hiệu lực từ ngày 01/01/2020), được sửa đổi bởi Điểm g, Khoản 34, Điều 2 Nghị định 123/2021/NĐ-CP.
+
+*   **Đối với người điều khiển xe ô tô, các loại xe tương tự xe ô tô:**
+    *   Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng.
+    *   Căn cứ theo Khoản 8, Điều 47 Nghị định 100/2019/NĐ-CP (có hiệu lực từ ngày 01/01/2020), được sửa đổi bởi Điểm đ, Khoản 34, Điều 2 Nghị định 123/2021/NĐ-CP.",0.3626,0.5089,0.5087,2.0,2.0,1.5,2.0,2.0,9.5,"AI đã trả lời đúng bản chất pháp lý về mức phạt cho hành vi vượt đường ngang khi đèn đỏ bật sáng, phân loại theo từng đối tượng (người đi bộ, xe đạp/thô sơ, xe mô tô, xe ô tô). Các mức phạt tiền đều khớp với ground truth và các điều luật được trích dẫn cũng chính xác, bao gồm cả các sửa đổi. Tuy nhiên, AI thiếu một đối tượng bị phạt là 'máy kéo, xe máy chuyên dùng' và mức phạt tương ứng, cũng như thiếu thông tin về hình phạt bổ sung (tước quyền sử dụng Giấy phép lái xe/chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ). Do đó, tính đầy đủ bị ảnh hưởng. AI không bịa đặt thông tin. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề.",3.08,2.33
+9,Quy định bật đèn xe? Bật đèn xe vào giờ nào để không bị xử phạt?,"Căn cứ Điều 20 Luật Trật tự an toàn giao thông đường bộ 2024, người lái xe, người điều khiển xe máy chuyên dùng tham gia giao thông đường bộ phải bật đèn chiếu sáng phía trước trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn.
+[1] Đối với người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy
+Căn cứ điểm g khoản 1 Điều 7 Nghị định 168/2024/NĐ-CP quy định như sau:
+Người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không sử dụng đèn chiếu sáng trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn sẽ bị phạt tiền từ 200.000 đồng đến 400.000 đồng theo quy định của pháp luật
+[2] Đối với người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô
+Căn cứ điểm g khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP quy định như sau:
+Người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô không sử dụng hoặc sử dụng không đủ đèn chiếu sáng trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng.","Dựa trên các văn bản pháp luật được cung cấp, tôi sẽ trả lời câu hỏi của bạn về quy định bật đèn xe và thời gian bật đèn xe để không bị xử phạt.
+
+**Căn cứ pháp lý:**
+
+*   Điều 20, Điều 26 Luật Giao thông đường bộ số 36/2024/QH15 (có hiệu lực từ 2025-01-01)
+*   Điểm g, Khoản 1, Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Điểm g, Khoản 3, Điều 6 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Điểm c, Khoản 3, Điều 8 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Điểm đ, Khoản 1, Điều 14 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Điểm a, Khoản 2, Điều 13 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Khoản 1, Điều 15 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+
+**Quy định bật đèn xe và thời gian bật đèn xe để không bị xử phạt:**
+
+**1. Quy định chung về sử dụng đèn:**
+
+*   **Thời gian bắt buộc bật đèn chiếu sáng phía trước:** Người lái xe, người điều khiển xe máy chuyên dùng tham gia giao thông đường bộ phải bật đèn chiếu sáng phía trước trong thời gian từ **18 giờ ngày hôm trước đến 06 giờ ngày hôm sau** hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn. (Khoản 1, Điều 20, Luật 36/2024/QH15)
+*   **Trong hầm đường bộ:**
+    *   Xe cơ giới, xe máy chuyên dùng phải bật đèn chiếu gần.
+    *   Xe thô sơ phải bật đèn hoặc có vật phát sáng báo hiệu. (Khoản 1, Điều 26, Luật 36/2024/QH15)
+*   **Khi thực hiện công việc trên đường bộ:** Người lái xe, người điều khiển xe máy chuyên dùng phải bật sáng đèn cảnh báo màu vàng. (Khoản 3, Điều 20, Luật 36/2024/QH15)
+*   **Khi gặp các trường hợp cụ thể, phải tắt đèn chiếu xa, bật đèn chiếu gần:**
+    *   Khi gặp người đi bộ qua đường.
+    *   Khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động.
+    *   Khi gặp xe đi ngược chiều, trừ trường hợp dải phân cách có khả năng chống chói.
+    *   Khi chuyển hướng xe tại nơi đường giao nhau. (Khoản 2, Điều 20, Luật 36/2024/QH15)
+
+**2. Các hành vi vi phạm liên quan đến đèn xe và mức xử phạt (có hiệu lực từ 2025-01-01):**
+
+*   **Đối với người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy:**
+    *   **Không sử dụng đèn chiếu sáng trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn:** Phạt tiền từ 200.000 đồng đến 400.000 đồng. (Điểm g, Khoản 1, Điều 7, Nghị định 168/2024/NĐ-CP)
+    *   **Điều khiển xe lắp đèn chiếu sáng về phía sau xe:** Phạt tiền từ 400.000 đồng đến 600.000 đồng. (Điểm đ, Khoản 1, Điều 14, Nghị định 168/2024/NĐ-CP)
+    *   **Điều khiển xe không có đèn chiếu sáng gần, xa hoặc có nhưng không có tác dụng, không đúng tiêu chuẩn thiết kế:** Phạt tiền từ 400.000 đồng đến 600.000 đồng. (Điểm c, Khoản 1, Điều 14, Nghị định 168/2024/NĐ-CP)
+    *   **Điều khiển xe không có đèn tín hiệu hoặc có nhưng không có tác dụng:** Phạt tiền từ 400.000 đồng đến 600.000 đồng. (Điểm b, Khoản 1, Điều 14, Nghị định 168/2024/NĐ-CP)
+    *   **Điều khiển xe không có đèn soi biển số; đèn báo hãm hoặc có nhưng không có tác dụng:** Phạt tiền từ 400.000 đồng đến 600.000 đồng. (Điểm a, Khoản 1, Điều 14, Nghị định 168/2024/NĐ-CP)
+
+*   **Đối với người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô:**
+    *   **Không sử dụng hoặc sử dụng không đủ đèn chiếu sáng trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn:** Phạt tiền từ 800.000 đồng đến 1.000.000 đồng. (Điểm g, Khoản 3, Điều 6, Nghị định 168/2024/NĐ-CP)
+    *   **Điều khiển xe không có đủ đèn chiếu sáng, đèn soi biển số, đèn báo hãm, đèn tín hiệu hoặc có những thiết bị đó nhưng không có tác dụng, không đúng tiêu chuẩn thiết kế:** Phạt tiền từ 400.000 đồng đến 600.000 đồng. (Điểm a, Khoản 2, Điều 13, Nghị định 168/2024/NĐ-CP)
+
+*   **Đối với người điều khiển xe máy chuyên dùng:**
+    *   **Không sử dụng hoặc sử dụng không đủ đèn chiếu sáng trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn:** Phạt tiền từ 800.000 đồng đến 1.000.000 đồng. (Điểm c, Khoản 3, Điều 8, Nghị định 168/2024/NĐ-CP)
+
+*   **Đối với người điều khiển xe thô sơ:**
+    *   **Điều khiển xe không có đèn chiếu sáng hoặc tấm phản quang phía trước; không có đèn tín hiệu hoặc tấm phản quang phía sau xe (đối với loại xe quy định phải có bộ phận này):** Phạt tiền từ 100.000 đồng đến 200.000 đồng. (Khoản 1, Điều 15, Nghị định 168/2024/NĐ-CP)
+
+Để không bị xử phạt, bạn cần đảm bảo bật đèn chiếu sáng phía trước trong khoảng thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau, hoặc khi thời tiết xấu làm hạn chế tầm nhìn. Ngoài ra, cần tuân thủ các quy định về sử dụng đèn trong hầm đường bộ, khi thực hiện công việc trên đường bộ và khi gặp các tình huống cụ thể như gặp người đi bộ, xe ngược chiều, hoặc trong khu dân cư có chiếu sáng. Đồng thời, xe của bạn phải có đầy đủ các loại đèn theo quy định và các đèn này phải hoạt động tốt, đúng tiêu chuẩn thiết kế.",0.197,0.409,0.5462,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý về quy định bật đèn xe và thời gian bật đèn xe để không bị xử phạt. Các mốc định lượng về thời gian bật đèn (18h hôm trước đến 6h hôm sau) và mức phạt đều khớp với ground truth. AI đã trích dẫn chính xác các điều luật, khoản, điểm và văn bản pháp luật liên quan, bao gồm cả các văn bản có hiệu lực từ 2025-01-01. AI đã liệt kê đầy đủ các hành vi vi phạm và mức xử phạt tương ứng cho từng loại phương tiện, tương tự như ground truth. AI không bịa đặt bất kỳ nội dung điều luật nào. Cấu trúc câu trả lời rõ ràng, đi thẳng vào trọng tâm câu hỏi, phân loại theo quy định chung và các hành vi vi phạm theo từng loại phương tiện, giúp người đọc dễ hiểu và nắm bắt thông tin.",8.94,2.25
+10,Thay đổi kết cấu xe có thể được hiểu là gì? Lỗi thay đổi kết cấu xe máy phạt bao nhiêu?,"Theo quy định tại khoản 7 Điều 2; khoản 11 Điều 9 Luật Trật tự, an toàn giao thông đường bộ 2024:
+Thay đổi kết cấu xe có thể được hiểu là việc cải tạo làm thay đổi đặc điểm của xe đã đăng ký hoặc xe nhập khẩu đã qua sử dụng, dẫn đến thay đổi kiểu loại xe theo quy định của cơ quan có thẩm quyền. Pháp luật nghiêm cấm các hành vi cải tạo trái phép (trừ mục đích quốc phòng, an ninh), và các can thiệp làm sai lệch thông số kỹ thuật của xe.
+Theo quy định tại khoản 8 Điều 32 Nghị định 168/2024/NĐ-CP thì mức phạt đối với hành vi thay đổi kết cấu xe máy trái phép cụ thể, như sau:
+- Từ 4.000.000 đồng đến 6.000.000 đồng đối với cá nhân;
+- Từ 8.000.000 đồng đến 12.000.000 đồng đối với tổ chức chủ xe mô tô, xe gắn máy;
+Các hành vi vi phạm trên bao gồm tự ý thay đổi khung, máy, hình dáng, kích thước, đặc tính của xe.","Dựa trên dữ liệu pháp luật hiện tại, tôi xin trả lời câu hỏi của bạn như sau:
+
+**1. Thay đổi kết cấu xe có thể được hiểu là gì?**
+
+Căn cứ theo Khoản 7, Điều 2, Chương I, Văn bản 36/2024/QH15 (Hiệu lực: 2025-01-01):
+""Cải tạo xe (sau đây gọi là cải tạo) là việc thay đổi đặc điểm của xe đã được cấp đăng ký xe, biển số xe hoặc xe đã qua sử dụng được nhập khẩu dẫn đến thay đổi về kiểu loại xe theo quy định của cơ quan có thẩm quyền.""
+
+**2. Lỗi thay đổi kết cấu xe máy phạt bao nhiêu?**
+
+Căn cứ theo Điểm b, Khoản 8, Điều 32, Mục 5, Chương II, Văn bản 168/2024/NĐ-CP (Hiệu lực: 2025-01-01):
+""Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với cá nhân, từ 8.000.000 đến 12.000.000 đồng đối với tổ chức là chủ xe mô tô, xe gắn máy và các loại xe tương tự xe mô tô, các loại xe tương tự xe gắn máy thực hiện một trong các hành vi vi phạm sau đây:
+b) Tự ý thay đổi khung, máy, hình dáng, kích thước, đặc tính của xe;""
+
+Như vậy, nếu bạn là chủ xe mô tô, xe gắn máy và các loại xe tương tự xe mô tô, các loại xe tương tự xe gắn máy mà tự ý thay đổi khung, máy, hình dáng, kích thước, đặc tính của xe, bạn sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng.",0.2852,0.4846,0.566,2.0,2.0,1.5,2.0,2.0,9.5,"AI trả lời đúng bản chất pháp lý về khái niệm thay đổi kết cấu xe và mức phạt cho hành vi này đối với xe máy. AI trích dẫn chính xác các điều luật liên quan, bao gồm cả văn bản có hiệu lực trong tương lai (168/2024/NĐ-CP và 36/2024/QH15), điều này là phù hợp vì câu hỏi không yêu cầu áp dụng luật tại thời điểm hiện tại mà là giải thích khái niệm và mức phạt. Tuy nhiên, AI chưa liệt kê đầy đủ các hình phạt bổ sung và biện pháp khắc phục hậu quả có thể áp dụng cho hành vi này theo quy định của Nghị định 168/2024/NĐ-CP (ví dụ: buộc khôi phục lại hình dáng, kích thước, tình trạng an toàn kỹ thuật ban đầu của xe và đăng kiểm lại trước khi đưa phương tiện ra tham gia giao thông). AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề.",2.95,2.11
+11,"Xử phạt vi phạm hành chính trong lĩnh vực giao thông ngoài hình thức xử phạt chính, người có thẩm quyền có thể áp dụng những biện pháp khắc phục hậu quả nào?","Theo quy định tại khoản 1, khoản 2 Điều 4 Nghị định số 100/2019/NĐCP (sửa đổi, bổ sung tại khoản 34 Điều 2 Nghị định số 123/2021/NĐ-CP) có 28 biện pháp khắc phục hậu quả mà cá nhân có thẩm quyền có thể áp dụng đối với người có hành vi vi phạm hành chính trong lĩnh vực giao thông đường bộ, trong đó các biện pháp phổ biến được áp dụng như:
+Buộc khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra;
+Buộc phá dỡ công trình, phần công trình xây dựng không có giấy phép hoặc xây dựng không đúng với giấy phép;
+Buộc thực hiện biện pháp để khắc phục tình trạng ô nhiễm môi trường do vi phạm hành chính gây ra;
+Buộc tái xuất phương tiện khỏi Việt Nam;
+Buộc nộp lại số lợi bất hợp pháp có được do thực hiện vi phạm hành chính;
+Buộc phải bố trí phương tiện khác để chở số hành khách vượt quá quy định được phép chở của phương tiện;
+Buộc phải đăng ký, niêm yết đầy đủ, chính xác các thông tin theo quy định;
+Buộc phải khôi phục lại nhãn hiệu, màu sơn ghi trong Giấy đăng ký xe theo quy định hoặc buộc phải thực hiện đúng quy định về biển số, quy định về kẻ chữ trên thành xe và cửa xe;
+Buộc phải khôi phục lại hình dáng, kích thước, tình trạng an toàn kỹ thuật ban đầu của xe và đăng kiểm lại trước khi đưa phương tiện ra tham gia giao thông;
+Buộc phải làm thủ tục đăng ký xe, đăng ký sang tên hoặc thủ tục đổi lại, thu hồi Giấy đăng ký xe, biển số xe, Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường theo quy định;...
+Và các biện pháp khắc phục hậu quả khác được quy định tại khoản 2, Điều 4 Nghị định số 100/2019/NĐ-CP.","Căn cứ theo các văn bản pháp luật có hiệu lực tại thời điểm hiện tại (2026-05-20), khi xử phạt vi phạm hành chính trong lĩnh vực giao thông, ngoài hình thức xử phạt chính, người có thẩm quyền có thể áp dụng các biện pháp khắc phục hậu quả sau:
+
+**1. Đối với lĩnh vực giao thông đường bộ:**
+
+*   **Biện pháp khắc phục hậu quả chung cho người điều khiển xe ô tô (bao gồm cả rơ moóc hoặc sơ mi rơ moóc được kéo theo), xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông:**
+    *   Buộc lắp đầy đủ thiết bị hoặc thay thế thiết bị đủ tiêu chuẩn, quy chuẩn an toàn kỹ thuật hoặc khôi phục lại tính năng kỹ thuật của thiết bị theo quy định.
+    *   Buộc thực hiện đúng quy định về biển số hoặc khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra.
+    *   Buộc tháo bỏ những thiết bị lắp thêm không đúng quy định.
+    *   Buộc khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra.
+    *   Buộc nộp lại chứng nhận đăng ký xe (hoặc bản sao chứng nhận đăng ký xe có chứng thực kèm theo bản gốc giấy biên nhận của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài trong trường hợp tổ chức tín dụng, chi nhánh ngân hàng nước ngoài giữ bản gốc chứng nhận đăng ký xe), giấy chứng nhận, tem kiểm định an toàn kỹ thuật và bảo vệ môi trường, chứng nhận đăng ký xe bị tẩy xóa.
+    (Căn cứ Điểm a, Điểm b, Điểm c, Điểm d Khoản 11 Điều 13 Nghị định 168/2024/NĐ-CP)
+
+*   **Biện pháp khắc phục hậu quả chung cho người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy định về điều kiện của phương tiện khi tham gia giao thông:**
+    *   Buộc thay thế thiết bị đủ tiêu chuẩn an toàn kỹ thuật hoặc khôi phục tính năng kỹ thuật của thiết bị theo quy định.
+    *   Buộc nộp lại chứng nhận đăng ký xe (hoặc bản sao chứng nhận đăng ký xe có chứng thực kèm theo bản gốc giấy biên nhận của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài trong trường hợp tổ chức tín dụng, chi nhánh ngân hàng nước ngoài giữ bản gốc chứng nhận đăng ký xe) đã bị tẩy xóa.
+    (Căn cứ Điểm a, Điểm b Khoản 6 Điều 14 Nghị định 168/2024/NĐ-CP)
+
+*   **Biện pháp khắc phục hậu quả chung cho cá nhân, tổ chức thực hiện hành vi vi phạm quy định về vận tải đường bộ, dịch vụ hỗ trợ vận tải đường bộ:**
+    *   Buộc phải đăng ký, niêm yết đầy đủ, chính xác các thông tin theo quy định.
+    *   Buộc phải gắn hộp đèn với chữ “TAXI” hoặc buộc phải niêm yết cụm từ “XE TAXI”, “XE HỢP ĐỒNG”, “XE DU LỊCH” theo đúng quy định.
+    *   Buộc phải cấp “thẻ nhận dạng lái xe” cho lái xe theo quy định.
+    *   Buộc phải tổ chức tập huấn nghiệp vụ hoặc tổ chức khám sức khỏe định kỳ cho lái xe và nhân viên phục vụ trên xe theo quy định.
+    *   Buộc phải xây dựng và thực hiện quy trình bảo đảm an toàn giao thông theo quy định.
+    *   Buộc phải bố trí người trực tiếp điều hành hoạt động vận tải đủ điều kiện theo quy định.
+    *   Buộc lắp đặt đồng hồ tính tiền cước, thiết bị in hóa đơn trên xe theo đúng quy định.
+    *   Buộc phải cung cấp, cập nhật, truyền, lưu trữ, quản lý các thông tin từ thiết bị giám sát hành trình, camera lắp trên xe ô tô theo quy định; cung cấp tên đăng nhập, mật khẩu truy cập vào phần mềm xử lý dữ liệu từ thiết bị giám sát hành trình của xe ô tô hoặc máy chủ của đơn vị cho cơ quan có thẩm quyền theo quy định.
+    *   Buộc phải nộp lại số lợi bất hợp pháp có được do thực hiện vi phạm hành chính.
+    *   Buộc phải lập, cập nhật, lưu trữ đầy đủ, chính xác lý lịch phương tiện, lý lịch hành nghề của lái xe, các hồ sơ, tài liệu có liên quan trong quá trình quản lý, điều hành hoạt động vận tải của đơn vị theo quy định.
+    *   Buộc phải ký hợp đồng với lái xe và nhân viên phục vụ trên xe theo quy định.
+    (Căn cứ Điểm a, Điểm b, Điểm c, Điểm d, Điểm e, Điểm g, Điểm h, Điểm i, Điểm k, Điểm l, Điểm đ Khoản 11 Điều 28 Nghị định 100/2019/NĐ-CP, đã được sửa đổi, bổ sung bởi Nghị định 168/2024/NĐ-CP)
+
+**2. Đối với lĩnh vực giao thông đường sắt:**
+
+*   **Biện pháp khắc phục hậu quả đối với hành vi vi phạm quy định về dồn tàu:**
+    *   Buộc phải để toa xe chở hàng nguy hiểm (chất nổ, chất cháy) theo đúng quy định về dồn tàu.
+    *   Buộc phải để ghi dẫn sang đường khác theo đúng quy định về dồn tàu.
+    (Căn cứ Điểm a, Điểm b Khoản 4 Điều 41 Nghị định 100/2019/NĐ-CP)
+
+**Nguyên tắc áp dụng:**
+
+Đối với mỗi vi phạm hành chính, ngoài việc bị áp dụng hình thức xử phạt, cá nhân, tổ chức vi phạm hành chính có thể bị áp dụng một hoặc nhiều biện pháp khắc phục hậu quả.
+(Căn cứ Điểm a Khoản 2 Điều 28 Luật Xử lý vi phạm hành chính 15/2012/QH13)",0.1345,0.3042,0.4919,2.0,0.5,1.0,2.0,2.0,7.5,"AI đã trả lời đúng bản chất pháp lý về các biện pháp khắc phục hậu quả trong lĩnh vực giao thông. Tuy nhiên, AI đã không trích dẫn đúng các điều luật như trong ground truth, đặc biệt là việc không đề cập đến Nghị định số 100/2019/NĐ-CP (sửa đổi, bổ sung tại khoản 34 Điều 2 Nghị định số 123/2021/NĐ-CP) và Điều 4 của Nghị định này, mà thay vào đó lại trích dẫn các điều luật cụ thể hơn trong Nghị định 168/2024/NĐ-CP và Nghị định 100/2019/NĐ-CP (đã được sửa đổi, bổ sung bởi Nghị định 168/2024/NĐ-CP). Điều này dẫn đến việc câu trả lời của AI không đầy đủ như ground truth, vì ground truth đã tổng hợp các biện pháp khắc phục hậu quả từ Điều 4 của Nghị định 100/2019/NĐ-CP (sửa đổi, bổ sung), trong khi AI chỉ liệt kê một số biện pháp cụ thể từ các điều khác. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, phân loại theo lĩnh vực giao thông đường bộ và đường sắt, dễ hiểu.",16.29,2.93
+12,Có được hoãn nộp phạt vi phạm giao thông không?,"Căn cứ khoản 1 Điều 76 Luật Xử lý vi phạm hành chính 2012 sửa đổi bởi khoản 37 Điều 1 Luật Xử lý vi phạm hành chính sửa đổi 2020 quy định hoãn nộp phạt vi phạm giao thông khi có đủ các điều kiện sau:
+(1) Đối với cá nhân
+- Bị phạt tiền từ 2.000.000 đồng trở lên,
+- Cá nhân đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn;
+- Trường hợp cá nhân gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn thì phải có xác nhận của Ủy ban nhân dân cấp xã nơi ngươi đó cư trú hoặc cơ quan, tổ chức nơi người đó học tập, làm việc;
+- Trường hợp cá nhân gặp khó khăn về kinh tế do mắc bệnh hiểm nghèo, tai nạn thì phải có thêm xác nhận của cơ sở khám bệnh, chữa bệnh tuyến huyện trở lên.
+(2) Đối với tổ chức
+- Bị phạt tiền từ 100.000.000 đồng trở lên;
+- Tổ chức đang gặp khó khăn đặc biệt hoặc đột xuất về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh.
+- Trường hợp tổ chức đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh thì phải có xác nhận của Ủy ban nhân dân cấp xã, Ban quản lý khu công nghiệp, khu chế xuất, khu công nghệ cao, khu kinh tế, cơ quan Thuế quản lý trực tiếp hoặc cơ quan cấp trên trực tiếp.","Dựa trên các văn bản pháp luật được cung cấp, việc hoãn nộp phạt vi phạm giao thông là có thể, nhưng phải đáp ứng các điều kiện cụ thể.
+
+**Căn cứ pháp lý:**
+
+*   Khoản 37, Điều 1, Luật số 67/2020/QH14 sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính, có hiệu lực từ ngày 01/01/2022.
+
+**Điều kiện để được hoãn thi hành quyết định phạt tiền:**
+
+1.  **Về mức phạt tiền:**
+    *   Cá nhân bị phạt tiền từ 2.000.000 đồng trở lên.
+    *   Tổ chức bị phạt tiền từ 100.000.000 đồng trở lên.
+2.  **Về khó khăn kinh tế:**
+    *   **Đối với cá nhân:** Đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn.
+        *   Trường hợp gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn thì phải có xác nhận của Ủy ban nhân dân cấp xã nơi người đó cư trú hoặc cơ quan, tổ chức nơi người đó học tập, làm việc.
+        *   Trường hợp gặp khó khăn về kinh tế do mắc bệnh hiểm nghèo, tai nạn thì phải có thêm xác nhận của cơ sở khám bệnh, chữa bệnh tuyến huyện trở lên.
+    *   **Đối với tổ chức:** Đang gặp khó khăn đặc biệt hoặc đột xuất về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh.
+        *   Phải có xác nhận của Ủy ban nhân dân cấp xã, Ban quản lý khu công nghiệp, khu chế xuất, khu công nghệ cao, khu kinh tế, cơ quan Thuế quản lý trực tiếp hoặc cơ quan cấp trên trực tiếp.
+
+**Thủ tục hoãn thi hành quyết định phạt tiền:**
+
+1.  Cá nhân, tổ chức phải có đơn đề nghị hoãn chấp hành quyết định xử phạt vi phạm hành chính kèm theo văn bản xác nhận của cơ quan, tổ chức có thẩm quyền theo quy định trên.
+2.  Đơn đề nghị phải gửi người đã ra quyết định xử phạt trong thời hạn quy định tại khoản 2 Điều 68 của Luật Xử lý vi phạm hành chính.
+3.  Trong thời hạn 05 ngày làm việc, kể từ ngày nhận được đơn, người đã ra quyết định xử phạt sẽ xem xét, quyết định hoãn thi hành quyết định xử phạt đó.
+
+**Thời hạn hoãn thi hành quyết định xử phạt:**
+
+*   Không quá 03 tháng, kể từ ngày có quyết định hoãn.
+
+**Quyền lợi khi được hoãn thi hành quyết định xử phạt:**
+
+*   Cá nhân, tổ chức được hoãn chấp hành quyết định xử phạt sẽ được nhận lại giấy tờ, tang vật, phương tiện vi phạm hành chính đang bị tạm giữ theo quy định tại khoản 6 Điều 125 của Luật Xử lý vi phạm hành chính.",0.3935,0.5692,0.7021,2.0,2.0,2.0,2.0,2.0,10.0,"AI trả lời chính xác bản chất pháp lý về việc hoãn nộp phạt vi phạm giao thông, nêu rõ các điều kiện về mức phạt tiền, khó khăn kinh tế và thủ tục cần thiết. Các mốc định lượng về mức phạt tiền cho cá nhân (2.000.000 đồng) và tổ chức (100.000.000 đồng) được trích dẫn chính xác từ Luật Xử lý vi phạm hành chính sửa đổi 2020, khớp với ground truth. AI trích dẫn đúng các điều luật liên quan, đặc biệt là Khoản 37, Điều 1, Luật số 67/2020/QH14 sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính, có hiệu lực từ ngày 01/01/2022, và Điều 76 của Luật này. AI đã liệt kê đầy đủ các điều kiện để được hoãn thi hành quyết định phạt tiền cho cả cá nhân và tổ chức, bao gồm các loại khó khăn kinh tế và yêu cầu xác nhận từ các cơ quan có thẩm quyền. Ngoài ra, AI cũng trình bày đầy đủ về thủ tục và thời hạn hoãn, cũng như quyền lợi khi được hoãn. AI không bịa đặt bất kỳ nội dung điều luật nào. Tất cả thông tin đều dựa trên các văn bản pháp luật được cung cấp. AI trả lời trực tiếp vào trọng tâm câu hỏi, bắt đầu bằng việc khẳng định 'việc hoãn nộp phạt vi phạm giao thông là có thể' và sau đó giải thích chi tiết các điều kiện và thủ tục. Cấu trúc câu trả lời rõ ràng, dễ hiểu, được trình bày theo các mục lớn như 'Căn cứ pháp lý', 'Điều kiện', 'Thủ tục', 'Thời hạn' và 'Quyền lợi'.",3.83,2.92
+13,Lỗi không mang giấy tờ xe là lỗi gì? Lỗi không mang giấy tờ xe máy phạt bao nhiêu?,"Hiện nay Luật Trật tự, an toàn giao thông đường bộ 2024 và Nghị định 168/2024/NĐ-CP quy định xử phạt vi phạm hành chính về trật tự, an toàn giao thông trong lĩnh vực giao thông đường bộ; trừ điểm, phục hồi điểm Giấy phép lái xe không có định nghĩa cụ thể ""lỗi không mang giấy tờ xe là lỗi gì"".
+Tuy nhiên, căn cứ khoản 1 Điều 56 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định khi tham gia giao thông đường bộ, người lái xe phải mang theo các giấy tờ sau đây:
+- Chứng nhận đăng ký xe hoặc bản sao Chứng nhận đăng ký xe có chứng thực kèm bản gốc giấy tờ xác nhận của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài còn hiệu lực trong trường hợp xe đang được thế chấp tại tổ chức tín dụng, chi nhánh ngân hàng nước ngoài;
+- Giấy phép lái xe phù hợp với loại xe đang điều khiển;
+- Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới theo quy định của pháp luật;
+- Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.
+Như vậy, có thể hiểu lỗi không mang giấy tờ xe là lỗi người lái xe khi tham gia giao thông không mang theo các loại giấy tờ bắt buộc nêu trên.
+Căn cứ quy định tại Điều 14 Nghị định 168/2024/NĐ-CP và Điều 18 Nghị định 168/2024/NĐ-CP thì lỗi không mang giấy tờ xe máy có thể bị xử phạt như sau:
+- Phạt tiền từ 200.000 - 300.000 đồng nếu vi phạm các lỗi sau đây:
++ Không mang GPLX;
++ Không mang theo giấy đăng ký xe;
++ Không có bảo hiểm xe hoặc có nhưng không mang theo.
+- Phạt tiền từ 2.000.000 - 3.000.000 đồng nếu không có giấy đăng ký xe. Ngoài ra còn bị tịch thu phương tiện và trừ 02 điểm giấy phép lái xe
+- Phạt tiền từ 2.000.000 - 4.000.000 đồng nếu không có GPLX hoặc sử dụng GPLX đã bị trừ hết điểm hoặc sử dụng GPLX không do cơ quan có thẩm quyền cấp, GPLX bị tẩy xóa, không còn hiệu lực, không phù hợp với loại xe đang điều khiển. (Đối với xe từ 125 cm3 hoặc có công suất động cơ điện đến 11 kW)
+- Phạt tiền từ 6.000.000 - 8.000.000 đồng nếu không có GPLX hoặc sử dụng GPLX đã bị trừ hết điểm hoặc sử dụng GPLX không do cơ quan có thẩm quyền cấp, GPLX bị tẩy xóa, không còn hiệu lực, không phù hợp với loại xe đang điều khiển. (Đối với xe trên 125 cm3 hoặc có công suất động cơ điện trên 11 kW)","Chào bạn,
+
+Dựa trên các văn bản pháp luật có hiệu lực tại thời điểm hiện tại (2026-05-20), lỗi không mang giấy tờ xe máy được quy định như sau:
+
+**1. Lỗi không mang Giấy đăng ký xe:**
+
+*   **Căn cứ pháp lý:** Điểm b, Khoản 2, Điều 21 Nghị định 123/2021/NĐ-CP.
+*   **Mức phạt:** Phạt tiền từ 100.000 đồng đến 200.000 đồng.
+
+**2. Lỗi không mang Giấy phép lái xe:**
+
+*   **Căn cứ pháp lý:** Điểm c, Khoản 2, Điều 21 Nghị định 123/2021/NĐ-CP.
+*   **Mức phạt:** Phạt tiền từ 100.000 đồng đến 200.000 đồng.
+
+**3. Lỗi không mang Giấy chứng nhận bảo hiểm trách nhiệm dân sự của chủ xe cơ giới còn hiệu lực:**
+
+*   **Căn cứ pháp lý:** Điểm a, Khoản 2, Điều 21 Nghị định 123/2021/NĐ-CP.
+*   **Mức phạt:** Phạt tiền từ 100.000 đồng đến 200.000 đồng.
+
+**Lưu ý:** Nghị định 168/2024/NĐ-CP sẽ có hiệu lực từ ngày 2025-01-01, trong đó có bãi bỏ Điều 21 của Nghị định 100/2019/NĐ-CP (đã được sửa đổi bởi Nghị định 123/2021/NĐ-CP). Tuy nhiên, tại thời điểm hiện tại, Nghị định 123/2021/NĐ-CP vẫn đang có hiệu lực.
+
+Trân trọng.",0.0643,0.3094,0.1932,0.5,0.5,0.5,2.0,2.0,5.5,"AI đã trả lời dựa trên văn bản pháp luật có hiệu lực tại thời điểm hiện tại (Nghị định 123/2021/NĐ-CP), tuy nhiên câu hỏi ground truth đã cập nhật theo Nghị định 168/2024/NĐ-CP có hiệu lực từ 2025-01-01. Do đó, các mức phạt và điều luật trích dẫn của AI không khớp với ground truth. AI đã không liệt kê đầy đủ các hình phạt bổ sung và các trường hợp phạt tiền khác như ground truth. AI không bịa đặt nội dung điều luật. Cấu trúc trả lời rõ ràng, trực tiếp vào câu hỏi.",4.61,3.1
+14,"Nguyên tắc bảo đảm trật tự, an toàn giao thông đường bộ thế nào?","Căn cứ theo Điều 3 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định nguyên tắc bảo đảm trật tự, an toàn giao thông đường bộ như sau:
+- Tuân thủ Hiến pháp, pháp luật Việt Nam và điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên.
+- Bảo đảm giao thông đường bộ được trật tự, an toàn, thông suốt, góp phần phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh và bảo vệ môi trường;
+Phòng ngừa vi phạm pháp luật về trật tự, an toàn giao thông đường bộ, tai nạn giao thông đường bộ và ùn tắc giao thông;
+Bảo vệ tính mạng, sức khỏe, tài sản của cá nhân và tài sản của cơ quan, tổ chức.
+- Bảo đảm trật tự, an toàn giao thông đường bộ là trách nhiệm của cơ quan, tổ chức, cá nhân.
+- Người tham gia giao thông đường bộ phải chấp hành các quy định của pháp luật về trật tự, an toàn giao thông đường bộ và quy định khác của pháp luật có liên quan, có trách nhiệm giữ an toàn cho mình và cho người khác.
+- Mọi hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ phải được phát hiện, ngăn chặn kịp thời và phải bị xử lý nghiêm minh theo quy định của pháp luật.
+- Hoạt động bảo đảm trật tự, an toàn giao thông đường bộ phải công khai, minh bạch và thuận lợi cho người dân.
+- Công tác bảo đảm trật tự, an toàn giao thông đường bộ được thực hiện thống nhất trên cơ sở phân công, phân cấp, phù hợp với chức năng, nhiệm vụ và sự phối hợp chặt chẽ giữa các cơ quan, tổ chức, cá nhân có liên quan.","Căn cứ theo Điều 3 Luật Trật tự, an toàn giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), nguyên tắc bảo đảm trật tự, an toàn giao thông đường bộ được quy định như sau:
+
+1.   Tuân thủ Hiến pháp, pháp luật Việt Nam và điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên.
+2.   Bảo đảm giao thông đường bộ được trật tự, an toàn, thông suốt, góp phần phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh và bảo vệ môi trường; phòng ngừa vi phạm pháp luật về trật tự, an toàn giao thông đường bộ, tai nạn giao thông đường bộ và ùn tắc giao thông; bảo vệ tính mạng, sức khỏe, tài sản của cá nhân và tài sản của cơ quan, tổ chức.
+3.   Bảo đảm trật tự, an toàn giao thông đường bộ là trách nhiệm của cơ quan, tổ chức, cá nhân.
+4.   Người tham gia giao thông đường bộ phải chấp hành các quy định của pháp luật về trật tự, an toàn giao thông đường bộ và quy định khác của pháp luật có liên quan, có trách nhiệm giữ an toàn cho mình và cho người khác.
+5.   Mọi hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ phải được phát hiện, ngăn chặn kịp thời và phải bị xử lý nghiêm minh theo quy định của pháp luật.
+6.   Hoạt động bảo đảm trật tự, an toàn giao thông đường bộ phải công khai, minh bạch và thuận lợi cho người dân.
+7.   Công tác bảo đảm trật tự, an toàn giao thông đường bộ được thực hiện thống nhất trên cơ sở phân công, phân cấp, phù hợp với chức năng, nhiệm vụ và sự phối hợp chặt chẽ giữa các cơ quan, tổ chức, cá nhân có liên quan.",0.9093,0.974,0.9747,2.0,2.0,2.0,2.0,2.0,10.0,"Câu trả lời của AI hoàn toàn trùng khớp với câu trả lời ground truth về nội dung, cấu trúc và các điều luật được trích dẫn. AI đã trả lời đúng bản chất pháp lý, trích dẫn chính xác các điều luật, đảm bảo tính đầy đủ và không bịa đặt thông tin. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề.",3.97,1.61
+15,Điều khiển phương tiện tham gia giao thông đường bộ cần tuân thủ điều gì?,"Căn cứ theo Điều 56 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định điều kiện của người điều khiển phương tiện tham gia giao thông đường bộ như sau:
+(1) Người lái xe tham gia giao thông đường bộ phải:
++ Đủ tuổi, sức khỏe theo quy định của pháp luật;
++ Có giấy phép lái xe đang còn điểm, còn hiệu lực phù hợp với loại xe đang điều khiển do cơ quan có thẩm quyền cấp, trừ người lái xe gắn máy quy định tại (4).
+Khi tham gia giao thông đường bộ, người lái xe phải mang theo các giấy tờ sau đây:
+(i) Chứng nhận đăng ký xe hoặc bản sao Chứng nhận đăng ký xe có chứng thực kèm bản gốc giấy tờ xác nhận của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài còn hiệu lực trong trường hợp xe đang được thế chấp tại tổ chức tín dụng, chi nhánh ngân hàng nước ngoài;
+(ii) Giấy phép lái xe phù hợp với loại xe đang điều khiển;
+(iii) Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới theo quy định của pháp luật;
+(iv) Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.
+(2) Người điều khiển xe máy chuyên dùng tham gia giao thông đường bộ phải:
++ Đủ tuổi, sức khỏe theo quy định của pháp luật;
++ Có bằng hoặc chứng chỉ điều khiển xe máy chuyên dùng phù hợp loại xe máy chuyên dùng đang điều khiển;
++ Có giấy phép lái xe đang còn điểm, còn hiệu lực hoặc chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.
+Khi tham gia giao thông đường bộ, người điều khiển xe máy chuyên dùng phải mang theo các loại giấy tờ sau đây:
+(i) Chứng nhận đăng ký xe hoặc bản sao Chứng nhận đăng ký xe có chứng thực kèm bản gốc Giấy biên nhận còn hiệu lực của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài trong trường hợp xe đang được thế chấp tại tổ chức tín dụng, chi nhánh ngân hàng nước ngoài;
+(ii) Bằng hoặc chứng chỉ điều khiển xe máy chuyên dùng;
+(iii) Giấy phép lái xe hoặc chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ;
+(iv) Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe máy chuyên dùng theo quy định của pháp luật;
+(v) Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự theo quy định của pháp luật.
+(3) Trường hợp giấy tờ quy định tại (1), (2) đã được tích hợp vào tài khoản định danh điện tử thì việc xuất trình, kiểm tra có thể thực hiện thông qua tài khoản định danh điện tử.
+(4) Người lái xe gắn máy tham gia giao thông đường bộ phải hiểu biết quy tắc giao thông đường bộ, có kỹ năng điều khiển phương tiện; đủ điều kiện về độ tuổi, sức khỏe theo quy định tại (1i) và khoản 2 Điều 59 Luật Trật tự, an toàn giao thông đường bộ 2024.
+(5) Người tập lái xe ô tô, người dự sát hạch lái xe ô tô khi tham gia giao thông đường bộ phải thực hành trên xe tập lái, xe sát hạch trên tuyến đường tập lái, tuyến đường sát hạch, có giáo viên dạy lái hoặc sát hạch viên bảo trợ tay lái.
+Giáo viên dạy lái, sát hạch viên phải mang theo các loại giấy tờ quy định tại (1).","Dựa trên các văn bản pháp luật được cung cấp, người điều khiển phương tiện tham gia giao thông đường bộ cần tuân thủ các điều sau:
+
+**1. Điều kiện của người điều khiển phương tiện tham gia giao thông đường bộ:**
+
+*   **Đối với người lái xe (xe cơ giới):**
+    *   Phải đủ tuổi, sức khỏe theo quy định của pháp luật.
+    *   Có giấy phép lái xe đang còn điểm, còn hiệu lực phù hợp với loại xe đang điều khiển do cơ quan có thẩm quyền cấp (trừ người lái xe gắn máy).
+    *   Khi tham gia giao thông đường bộ, phải mang theo các giấy tờ sau:
+        *   Chứng nhận đăng ký xe hoặc bản sao Chứng nhận đăng ký xe có chứng thực kèm bản gốc giấy tờ xác nhận của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài còn hiệu lực trong trường hợp xe đang được thế chấp.
+        *   Giấy phép lái xe phù hợp với loại xe đang điều khiển.
+        *   Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe cơ giới theo quy định của pháp luật.
+        *   Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.
+    *   Căn cứ theo Khoản 1, Điều 56, Luật 36/2024/QH15.
+
+*   **Đối với người điều khiển xe máy chuyên dùng:**
+    *   Phải đủ tuổi, sức khỏe theo quy định của pháp luật.
+    *   Có bằng hoặc chứng chỉ điều khiển xe máy chuyên dùng phù hợp loại xe máy chuyên dùng đang điều khiển.
+    *   Có giấy phép lái xe đang còn điểm, còn hiệu lực hoặc chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.
+    *   Khi tham gia giao thông đường bộ, phải mang theo các loại giấy tờ sau:
+        *   Chứng nhận đăng ký xe hoặc bản sao Chứng nhận đăng ký xe có chứng thực kèm bản gốc Giấy biên nhận còn hiệu lực của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài trong trường hợp xe đang được thế chấp.
+        *   Bằng hoặc chứng chỉ điều khiển xe máy chuyên dùng.
+        *   Giấy phép lái xe hoặc chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.
+        *   Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe máy chuyên dùng theo quy định của pháp luật.
+        *   Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự theo quy định của pháp luật.
+    *   Căn cứ theo Khoản 2, Điều 56, Luật 36/2024/QH15.
+
+*   **Đối với người lái xe gắn máy:**
+    *   Phải hiểu biết quy tắc giao thông đường bộ, có kỹ năng điều khiển phương tiện.
+    *   Đủ điều kiện về độ tuổi, sức khỏe theo quy định tại điểm a khoản 1 và khoản 2 Điều 59 của Luật này.
+    *   Căn cứ theo Khoản 4, Điều 56, Luật 36/2024/QH15.
+
+*   **Lưu ý về giấy tờ:** Trường hợp giấy tờ đã được tích hợp vào tài khoản định danh điện tử thì việc xuất trình, kiểm tra có thể thực hiện thông qua tài khoản định danh điện tử.
+    *   Căn cứ theo Khoản 3, Điều 56, Luật 36/2024/QH15.
+
+**2. Điều kiện về tuổi của người điều khiển phương tiện tham gia giao thông đường bộ:**
+
+*   Người đủ 16 tuổi trở lên được điều khiển xe gắn máy.
+*   Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1, được cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ để điều khiển xe máy chuyên dùng tham gia giao thông đường bộ.
+*   Người đủ 21 tuổi trở lên được cấp giấy phép lái xe hạng C, BE.
+*   Người đủ 24 tuổi trở lên được cấp giấy phép lái xe hạng D1, D2, C1E, CE.
+*   Người đủ 27 tuổi trở lên được cấp giấy phép lái xe hạng D, D1E, D2E, DE.
+*   Tuổi tối đa của người lái xe ô tô chở người (kể cả xe buýt) trên 29 chỗ (không kể chỗ của người lái xe), xe ô tô chở người giường nằm là đủ 57 tuổi đối với nam, đủ 55 tuổi đối với nữ.
+*   Căn cứ theo Khoản 1, Điều 59, Luật 36/2024/QH15.
+
+**3. Điều kiện về sức khỏe của người điều khiển phương tiện tham gia giao thông đường bộ:**
+
+*   Phải bảo đảm điều kiện sức khỏe phù hợp với từng loại phương tiện được phép điều khiển.
+*   Căn cứ theo Khoản 2, Điều 59, Luật 36/2024/QH15.
+
+**4. Điều kiện của phương tiện tham gia giao thông đường bộ:**
+
+*   **Đối với xe cơ giới, xe máy chuyên dùng:**
+    *   Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật.
+    *   Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định của pháp luật.
+    *   Căn cứ theo Khoản 1, Điều 35, Luật 36/2024/QH15.
+
+**5. Chấp hành quy tắc giao thông đường bộ:**
+
+*   **Nguyên tắc chung:** Người tham gia giao thông đường bộ phải chấp hành các quy định của pháp luật về trật tự, an toàn giao thông đường bộ và quy định khác của pháp luật có liên quan, có trách nhiệm giữ an toàn cho mình và cho người khác.
+    *   Căn cứ theo Khoản 4, Điều 3, Luật 36/2024/QH15.
+
+*   **Về tốc độ và khoảng cách:** Phải bảo đảm tốc độ phù hợp điều kiện của cầu, đường, mật độ giao thông, địa hình, thời tiết và các yếu tố ảnh hưởng khác để bảo đảm an toàn.
+    *   Căn cứ theo Khoản 2, Điều 12, Luật 36/2024/QH15.
+
+*   **Về dừng xe, đỗ xe:**
+    *   Khi dừng xe, đỗ xe trên đường phải có tín hiệu báo cho người điều khiển phương tiện tham gia giao thông đường bộ khác biết khi ra, vào vị trí dừng xe, đỗ xe.
+    *   Không làm ảnh hưởng đến người đi bộ và các phương tiện tham gia giao thông đường bộ.
+    *   Căn cứ theo Khoản 3, Điều 18, Luật 36/2024/QH15.
+    *   Không được dừng xe, đỗ xe tại các vị trí sau:
+        *   Bên trái đường một chiều.
+        *   Trên đoạn đường cong hoặc gần đầu dốc mà tầm nhìn bị che khuất.
+        *   Trên cầu, trừ những trường hợp tổ chức giao thông cho phép.
+        *   Gầm cầu vượt, trừ những nơi cho phép dừng xe, đỗ xe.
+        *   Song song cùng chiều với một xe khác đang dừng, đỗ trên đường.
+        *   Cách xe ô tô đang đỗ ngược chiều dưới 20 mét trên đường phố hẹp, dưới 40 mét trên đường có một làn xe cơ giới trên một chiều đường.
+        *   Trên phần đường dành cho người đi bộ qua đường.
+        *   Nơi đường giao nhau và trong phạm vi 05 mét tính từ mép đường giao nhau.
+        *   Điểm đón, trả khách.
+        *   Trước cổng và trong phạm vi 05 mét hai bên cổng trụ sở cơ quan, tổ chức có bố trí đường cho xe ra, vào.
+        *   Tại nơi phần đường có chiều rộng chỉ đủ cho một làn xe cơ giới.
+        *   Trong phạm vi an toàn của đường sắt.
+        *   Che khuất biển báo hiệu đường bộ, đèn tín hiệu giao thông.
+        *   Trên đường dành riêng cho xe buýt, trên miệng cống thoát nước, miệng hầm của đường điện thoại, điện cao thế, chỗ dành riêng cho xe chữa cháy lấy nước; trên lòng đường, vỉa hè trái quy định của pháp luật.
+    *   Căn cứ theo Khoản 4, Điều 18, Luật 36/2024/QH15.
+
+*   **Về giao thông trong hầm đường bộ:**
+    *   Xe cơ giới, xe máy chuyên dùng phải bật đèn chiếu gần; xe thô sơ phải bật đèn hoặc có vật phát sáng báo hiệu.
+    *   Không dừng xe, đỗ xe trong hầm đường bộ; trường hợp gặp sự cố kỹ thuật hoặc bất khả kháng khác buộc phải dừng xe, đỗ xe, người lái xe, người điều khiển xe máy chuyên dùng phải đưa xe vào vị trí dừng xe, đỗ xe khẩn cấp, nếu không di chuyển được, phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách bảo đảm an toàn, nhanh chóng báo cho cơ quan Cảnh sát giao thông thực hiện nhiệm vụ bảo đảm trật tự, an toàn giao thông trên tuyến hoặc cơ quan quản lý hầm đường bộ.
+    *   Tuân thủ các quy tắc giao thông đường bộ khác.
+    *   Căn cứ theo Điều 26, Luật 36/2024/QH15.
+
+*   **Về nhường đường tại nơi đường giao nhau:**
+    *   Khi đến gần đường giao nhau, phải quan sát, giảm tốc độ và nhường đường theo quy định:
+        *   Tại nơi đường giao nhau giữa đường không ưu tiên với đường ưu tiên hoặc giữa đường nhánh với đường chính thì xe đi từ đường không ưu tiên hoặc đường nhánh phải nhường đường cho xe đi trên đường ưu tiên hoặc đường chính từ bất kỳ hướng nào tới.
+        *   Tại nơi đường giao nhau không có báo hiệu đi theo vòng xuyến, phải nhường đường cho xe đi đến từ bên phải.
+        *   Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, phải nhường đường cho xe đi đến từ bên trái.
+    *   Căn cứ theo Điều 22, Luật 36/2024/QH15.",0.2606,0.4848,0.4944,2.0,2.0,1.5,2.0,1.5,9.0,"AI đã trả lời khá đầy đủ và chính xác các điều kiện mà người điều khiển phương tiện tham gia giao thông đường bộ cần tuân thủ, dựa trên các văn bản pháp luật được cung cấp. Tuy nhiên, có một số điểm cần lưu ý để đạt được sự hoàn hảo như ground truth. Về chính xác pháp lý: AI đã liệt kê đúng các điều kiện về tuổi, sức khỏe, giấy tờ cần thiết và các quy tắc giao thông. Các mốc định lượng về độ tuổi và các quy định về dừng đỗ xe, nhường đường đều khớp với ground truth. Về trích dẫn chính xác: AI đã trích dẫn đầy đủ và chính xác các điều, khoản, điểm của Luật 36/2024/QH15 cho từng phần thông tin. Điều này rất tốt. Về tính đầy đủ: AI đã liệt kê đầy đủ các điều kiện và quy tắc như trong ground truth. Tuy nhiên, ground truth có cấu trúc rõ ràng hơn khi phân loại các điều kiện theo từng loại người điều khiển phương tiện (người lái xe, người điều khiển xe máy chuyên dùng, người lái xe gắn máy) và sau đó là các quy tắc chung. AI cũng đã làm được điều này nhưng cách trình bày có thể chưa được mạch lạc bằng. AI cũng đã bổ sung thêm phần 'Điều kiện của phương tiện tham gia giao thông đường bộ' và 'Chấp hành quy tắc giao thông đường bộ' mà ground truth không đề cập trực tiếp trong phần trả lời chính, nhưng các thông tin này đều có trong các văn bản được cung cấp và là một phần quan trọng của việc 'tuân thủ điều gì' khi tham gia giao thông. Về không bịa đặt: AI không bịa đặt bất kỳ nội dung điều luật nào. Tất cả thông tin đều được lấy từ các văn bản đã cung cấp. Về cấu trúc & xử lý tình huống: AI đã trả lời trực tiếp vào trọng tâm câu hỏi. Cấu trúc câu trả lời rõ ràng, phân chia thành các mục lớn và các gạch đầu dòng nhỏ, giúp người đọc dễ theo dõi. Tuy nhiên, ground truth có cách đánh số (1), (2), (3), (4), (5) cho các loại người điều khiển và sau đó là (i), (ii), (iii), (iv) cho các giấy tờ, tạo sự phân cấp rõ ràng hơn. AI sử dụng gạch đầu dòng và in đậm, cũng dễ đọc nhưng chưa đạt đến mức độ phân cấp như ground truth. AI cũng đã bổ sung thêm các phần về điều kiện phương tiện và quy tắc giao thông chung, điều này làm cho câu trả lời toàn diện hơn mặc dù ground truth chỉ tập trung vào Điều 56. Tuy nhiên, câu hỏi là 'Điều khiển phương tiện tham gia giao thông đường bộ cần tuân thủ điều gì?', nên việc bổ sung các quy tắc giao thông chung là hợp lý.",9.09,3.57
+16,"Một buổi tối, Hùng (17 tuổi) lấy xe mô tô của bố để đi dự sinh nhật bạn. Sau đó, trên đường về, Hùng chở Thắng và Toàn trên xe của mình, chạy với tốc độ cao, lạng lách, đánh võng trên đường. Một tổ cảnh sát giao thông đang đi tuần tra trên đường thấy vậy đã ra tín hiệu yêu cầu Hùng dừng xe để kiểm tra, nhưng Hùng đã cho xe tăng tốc độ để chạy trốn. Hãy phân tích các lỗi mà Hùng đã vi phạm và mức xử phạt hành chính cho các lỗi vi phạm.","Trước hết, Hùng chưa đủ tuổi điều khiển xe mô tô trên 50 phân khối, căn cứ theo Điều 59 Luật trật tự, an toàn giao thông đường bộ 2024 người đủ 18 tuổi trở lên được cấp giấy phép lái xe, được cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ mới được điều khiển xe mô tô.
+Tiếp theo, Hùng đã chở quá số người quy định. Căn cứ theo Điều 33 Luật trật tự, an toàn giao thông đường bộ 2024 thì người lái xe mô tô hai bánh, chỉ được chở một người, nhưng Hùng lại chở hai người (Thắng và Toàn), làm mất thăng bằng và tăng nguy cơ tai nạn.
+Hành vi chạy tốc độ cao, lạng lách, đánh võng là vi phạm nghiêm trọng luật giao thông đường bộ vì gây nguy hiểm cho bản thân và những người xung quanh. Đây là hành vi bị nghiêm cấm theo Điều 9 Luật trật tự, an toàn giao thông đường bộ 2024
+Ngoài ra, khi cảnh sát giao thông ra tín hiệu dừng xe, Hùng lại không chấp hành hiệu lệnh mà còn cố tình tăng tốc bỏ chạy. Hành vi này cũng là 1 hành vi bị nghiêm cấm theo Điều 9 Luật trật tự, an toàn giao thông đường bộ 2024
+Về xử phạt hành chính, Hùng có thể bị xử phạt các mức như sau:
+- Căn cứ theo điểm a khoản 4 Điều 18 Nghị định 168/2024/NĐ-CP, người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi- lanh từ 50 cm3 trở lên hoặc có công suất động cơ điện từ 04 kW trở lên: Phạt tiền từ 400.000 đồng đến 600.000 đồng.
+- Điều khiển xe lạng lách, đánh võng trên đường bộ phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng theo điểm a khoản 9 Điều 7 Nghị định 168/2024/NĐ-CP
+- Phạt tiền từ 400.000 đồng đến 600.000 đồng chở theo 02 người trên xe theo điểm g khoản 2 Điều 7 Nghị định 168/2024/NĐ-CP
+- Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với người điều khiển xe không chấp hành hiệu lệnh của CSGT theo điểm d khoản 7 Nghị định 168/2024/NĐ-CP","Chào bạn,
+
+Dựa trên các văn bản pháp luật được cung cấp và tình huống bạn mô tả, Hùng đã vi phạm nhiều lỗi giao thông đường bộ. Dưới đây là phân tích các lỗi vi phạm và mức xử phạt hành chính tương ứng:
+
+**Căn cứ pháp lý:**
+
+*   Nghị định 168/2024/NĐ-CP có hiệu lực từ ngày 01/01/2025.
+*   Luật Giao thông đường bộ 36/2024/QH15 có hiệu lực từ ngày 01/01/2025.
+
+**Phân tích các lỗi vi phạm của Hùng:**
+
+1.  **Điều khiển xe mô tô khi chưa đủ tuổi:**
+    *   Hùng 17 tuổi điều khiển xe mô tô.
+    *   Căn cứ theo Khoản 1, Điều 18, Nghị định 168/2024/NĐ-CP, người từ đủ 14 tuổi đến dưới 16 tuổi điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy hoặc điều khiển xe ô tô, điều khiển xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô sẽ bị phạt cảnh cáo.
+    *   Tuy nhiên, Hùng 17 tuổi, không thuộc đối tượng bị phạt cảnh cáo theo quy định này. Dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin để trả lời chính xác câu hỏi này về mức phạt cụ thể cho người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô.
+
+2.  **Chở quá số người quy định:**
+    *   Hùng chở Thắng và Toàn, tức là chở 2 người trên xe mô tô.
+    *   Căn cứ theo Khoản 1, Điều 33, Luật Giao thông đường bộ 36/2024/QH15, người lái xe mô tô hai bánh, xe gắn máy chỉ được chở một người, trừ một số trường hợp đặc biệt (chở người bệnh đi cấp cứu, áp giải người có hành vi vi phạm pháp luật, trẻ em dưới 12 tuổi, người già yếu hoặc người khuyết tật). Tình huống của Hùng không thuộc các trường hợp ngoại lệ này.
+    *   Dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin về mức xử phạt hành chính cụ thể cho hành vi chở quá số người quy định đối với xe mô tô.
+
+3.  **Chạy với tốc độ cao, lạng lách, đánh võng trên đường:**
+    *   Hùng điều khiển xe mô tô lạng lách, đánh võng trên đường.
+    *   Căn cứ theo Điểm a, Khoản 9, Điều 7, Nghị định 168/2024/NĐ-CP, Hùng sẽ bị phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng.
+
+4.  **Không chấp hành hiệu lệnh dừng xe của cảnh sát giao thông:**
+    *   Hùng đã cho xe tăng tốc độ để chạy trốn khi cảnh sát giao thông ra tín hiệu yêu cầu dừng xe.
+    *   Căn cứ theo Điểm b, Khoản 2, Điều 72, Luật Giao thông đường bộ 36/2024/QH15, người điều khiển phương tiện tham gia giao thông đường bộ có trách nhiệm chấp hành hiệu lệnh dừng phương tiện tham gia giao thông đường bộ, yêu cầu kiểm tra, kiểm soát của lực lượng thực hiện tuần tra, kiểm soát.
+    *   Dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin về mức xử phạt hành chính cụ thể cho hành vi không chấp hành hiệu lệnh dừng xe của cảnh sát giao thông đối với xe mô tô.
+
+**Tóm tắt các lỗi vi phạm và mức xử phạt (dựa trên thông tin có sẵn):**
+
+*   **Điều khiển xe lạng lách, đánh võng trên đường:** Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng. (Căn cứ Điểm a, Khoản 9, Điều 7, Nghị định 168/2024/NĐ-CP).
+
+Đối với các hành vi còn lại (điều khiển xe mô tô khi chưa đủ tuổi, chở quá số người quy định, không chấp hành hiệu lệnh dừng xe của cảnh sát giao thông), dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin để trả lời chính xác mức xử phạt hành chính.",0.1695,0.357,0.4265,1.0,1.5,1.0,2.0,1.5,7.0,"1. Chính xác pháp lý: AI đã xác định được các lỗi vi phạm chính của Hùng, tuy nhiên, AI đã không tìm được mức phạt cụ thể cho một số lỗi, dẫn đến việc không đưa ra được câu trả lời đầy đủ và chính xác về mặt pháp lý. Cụ thể, AI không tìm được mức phạt cho hành vi điều khiển xe mô tô khi chưa đủ tuổi và chở quá số người quy định, trong khi ground truth đã đưa ra các mức phạt này. Mức phạt cho hành vi không chấp hành hiệu lệnh của CSGT cũng không được AI tìm thấy.2. Trích dẫn chính xác: AI đã trích dẫn đúng các điều luật được cung cấp cho các lỗi mà AI tìm thấy mức phạt. Tuy nhiên, do không tìm được mức phạt cho một số lỗi, nên AI không thể trích dẫn các điều luật tương ứng.3. Tính đầy đủ: AI không liệt kê đầy đủ các hình phạt chính và hình phạt bổ sung như trong ground truth. AI đã bỏ sót các mức phạt cho hành vi điều khiển xe mô tô khi chưa đủ tuổi, chở quá số người quy định và không chấp hành hiệu lệnh của CSGT.4. Không bịa đặt: AI không bịa đặt nội dung điều luật. AI đã trung thực khi cho biết không tìm thấy đủ thông tin cho một số lỗi.5. Cấu trúc & Xử lý tình huống: AI đã trả lời trực tiếp vào trọng tâm câu hỏi, phân tích từng lỗi vi phạm và cố gắng đưa ra mức xử phạt. AI cũng đã xưng hô đúng ngữ cảnh với nhân vật Hùng. Tuy nhiên, việc thiếu thông tin về mức phạt cho một số lỗi đã làm giảm chất lượng tổng thể của câu trả lời.",5.6,2.87
+17,"Trên đường đi học về, Mai chở Yến trên chiếc xe đạp mới được bố mẹ mua cho. Vừa ra đến đoạn đường đông người thì trời lất phất mưa, Yến vội lấy chiếc ô trong cặp bật lên che cho cả hai. Thấy vậy, Mai nhắc nhở: “Cậu cất ô đi, che ô thế nguy hiểm lắm hơn nữa còn vi phạm pháp luật đấy”. Yến đáp: “Cậu yên tâm, tớ ngồi sau xe mà, không nguy hiểm đâu. Và lại, pháp luật chỉ cấm người điều khiển xe chứ không cấm người ngồi sau xe”. Em đồng ý với ý kiến của bạn Mai hay bạn Yến? Vì sao?","Em đồng ý theo ý kiến ​​của bạn Mai vì:
+Về an toàn giao thông: Việc che ô khi đang tham gia giao thông, dù là người điều khiển hay người ngồi sau, đều rất nguy hiểm. Chiếc ô có thể cản trở tầm nhìn của người điều khiển xe hoặc gây mất thăng bằng, dễ dẫn đến tai nạn.
+Ngoài ra, pháp luật hiện tại nghiêm cấm các hành vi sử dụng ô dù khi tham gia giao thông kể cả người ngồi đằng sau. Cụ thể:
+Tại khoản 4 Điều 33 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định như sau:
+Người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy  khi tham gia giao thông đường bộ không được thực hiện các hành vi sau đây:
+a) Mang, vác vật cồng kềnh;
+b) Sử dụng ô;
+c) Bám, kéo hoặc đẩy các phương tiện khác;
+d) Đứng trên yên, giá đèo hàng hoặc ngồi trên tay lái;
+đ) Hành vi khác gây mất trật tự, an toàn giao thông đường bộ.","Chào bạn,
+
+Dựa trên các văn bản pháp luật được cung cấp và có hiệu lực vào ngày 2026-05-20, tôi đồng ý với ý kiến của bạn Mai.
+
+**Giải thích:**
+
+Căn cứ theo Điểm h, Khoản 1, Điều 9 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01) quy định:
+*   ""Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây:
+    *   h. Người điều khiển xe đạp, xe đạp máy sử dụng ô (dù), dùng tay cầm và sử dụng điện thoại hoặc các thiết bị điện tử khác; **chở người ngồi trên xe đạp, xe đạp máy sử dụng ô (dù)**;""
+
+Như vậy, hành vi Yến (người ngồi sau xe đạp) sử dụng ô (dù) khi Mai đang điều khiển xe đạp là hành vi vi phạm pháp luật giao thông đường bộ. Mai, với tư cách là người điều khiển xe đạp, sẽ bị xử phạt tiền từ 100.000 đồng đến 200.000 đồng.
+
+Bạn Yến đã hiểu chưa đúng về quy định pháp luật trong trường hợp này. Mặc dù Yến là người ngồi sau xe, nhưng hành vi sử dụng ô của Yến lại thuộc trường hợp bị cấm đối với người điều khiển xe đạp khi chở người ngồi trên xe sử dụng ô.",0.0952,0.3205,0.3134,2.0,1.5,1.5,2.0,2.0,9.0,"AI đồng ý với ý kiến của Mai, đây là câu trả lời đúng. AI trích dẫn Điều 9 Khoản 1 Điểm h của Nghị định 168/2024/NĐ-CP, văn bản này có hiệu lực từ 2025-01-01. Tuy nhiên, câu trả lời ground truth lại trích dẫn Luật Trật tự, an toàn giao thông đường bộ 2024, đây là văn bản có hiệu lực sau Nghị định 168/2024/NĐ-CP. Cụ thể, Luật Trật tự, an toàn giao thông đường bộ 2024 có hiệu lực từ 01/07/2025, trong khi Nghị định 168/2024/NĐ-CP có hiệu lực từ 01/01/2025. Do đó, việc AI sử dụng Nghị định 168/2024/NĐ-CP là phù hợp hơn với thời điểm có hiệu lực sớm hơn. Cả hai văn bản đều quy định hành vi này là vi phạm. Tuy nhiên, câu trả lời ground truth trích dẫn Luật Trật tự, an toàn giao thông đường bộ 2024, trong khi AI trích dẫn Nghị định 168/2024/NĐ-CP. Cả hai đều đúng về mặt pháp lý nhưng ground truth trích dẫn văn bản có hiệu lực sau. AI đã trả lời trực tiếp vào trọng tâm câu hỏi và xưng hô đúng ngữ cảnh.",2.69,2.75
+18,"Bạn A (học sinh lớp 8) được bố mẹ mua cho chiếc xe đạp điện mới để đi học. Sau giờ tan học, bạn A đã mời hai người bạn của mình đi ăn kem và chở hai bạn đến quán kem gần trường, cả ba bạn đều không đội mũ bảo hiểm. Trên đường đi, do mải nói chuyện nên bạn A đã lao xe vào ổ gà và bị ngã ra đường, bị trầy sát chân tay, cả 3 bạn đã được người dân đưa vào trạm y tế gần đó để sơ cứu. Nhận xét về hành vi tham gia giao thông của 3 bạn trên.","Hành vi tham gia giao thông của 3 bạn trong tình huống trên đã vi phạm quy định của Luật giao thông đường bộ, cụ thể là không đội mũ bảo hiểm và chở quá số người quy định, không tập trung lái xe gây tai nạn giao thông.
+- Đầu tiên, việc không đội mũ bảo hiểm khi đi xe đạp điện là vi phạm quy định luật giao thông, có thể bị xử phạt từ 400.000 đồng đến 600.000 đồng (Căn cứ điểm d và đ khoản 4 Điều 9 Nghị định 168/2024/NĐ-CP).
+- Thứ hai, chở 2 người là chở quá số người quy định bởi căn cứ Điều 31 Luật Trật tự, an toàn giao thông đường bộ 2024 thì xe đạp điện chỉ được chở tối đa 1 người trừ trường hợp chở thêm 1 trẻ em dưới 7 tuổi thì được chở tối đa 2 người.
+- Bên cạnh đó, việc mải mê nói chuyện và không tập trung lái xe đã gây tai nạn và gây thương tích cho cả 3 bạn.","Dựa trên các văn bản pháp luật có hiệu lực tại thời điểm hiện tại (2026-05-20), cụ thể là Nghị định 168/2024/NĐ-CP, Nghị định 123/2021/NĐ-CP và Nghị định 100/2019/NĐ-CP, hành vi tham gia giao thông của bạn A và hai người bạn có thể bị xử phạt như sau:
+
+**1. Đối với bạn A (người điều khiển xe đạp điện):**
+
+*   **Hành vi chở quá số người quy định:**
+    *   Căn cứ theo Điểm o, Khoản 1, Điều 9 Nghị định 168/2024/NĐ-CP: ""Xe đạp, xe đạp máy, xe xích lô chở quá số người quy định, trừ trường hợp chở người bệnh đi cấp cứu"".
+    *   Bạn A đã chở hai người bạn, tức là chở tổng cộng 3 người trên xe đạp điện, vượt quá số người quy định.
+    *   Bạn A sẽ bị phạt tiền từ 100.000 đồng đến 200.000 đồng.
+
+*   **Hành vi không đội mũ bảo hiểm:**
+    *   Căn cứ theo Điểm d, Khoản 4, Điều 9 Nghị định 168/2024/NĐ-CP: ""Người điều khiển xe đạp máy không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ"".
+    *   Bạn A không đội mũ bảo hiểm khi điều khiển xe đạp điện.
+    *   Bạn A sẽ bị phạt tiền từ 400.000 đồng đến 600.000 đồng.
+
+*   **Hành vi điều khiển xe khi chưa đủ tuổi:**
+    *   Bạn A là học sinh lớp 8, tức là bạn A từ đủ 14 tuổi đến dưới 16 tuổi.
+    *   Căn cứ theo Khoản 1, Điều 18 Nghị định 168/2024/NĐ-CP: ""Phạt cảnh cáo người từ đủ 14 tuổi đến dưới 16 tuổi điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy hoặc điều khiển xe ô tô, điều khiển xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô.""
+    *   Xe đạp điện được xem là xe gắn máy hoặc các loại xe tương tự xe gắn máy.
+    *   Bạn A sẽ bị phạt cảnh cáo.
+
+**2. Đối với hai người bạn của bạn A (người ngồi trên xe đạp điện):**
+
+*   **Hành vi không đội mũ bảo hiểm:**
+    *   Căn cứ theo Điểm đ, Khoản 4, Điều 9 Nghị định 168/2024/NĐ-CP: ""Chở người ngồi trên xe đạp máy không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật.""
+    *   Hai người bạn của bạn A không đội mũ bảo hiểm khi ngồi trên xe đạp điện.
+    *   Mỗi người bạn sẽ bị phạt tiền từ 400.000 đồng đến 600.000 đồng.
+
+**Tổng kết:**
+
+Bạn A và hai người bạn đã vi phạm nhiều quy tắc giao thông đường bộ. Bạn A sẽ bị phạt cảnh cáo và bị phạt tiền cho hành vi chở quá số người quy định và không đội mũ bảo hiểm. Hai người bạn của bạn A sẽ bị phạt tiền cho hành vi không đội mũ bảo hiểm.",0.0831,0.2795,0.4425,1.5,2.0,1.5,2.0,2.0,9.0,"AI đã trả lời khá tốt, tuy nhiên có một số điểm cần lưu ý. Về chính xác pháp lý, AI đã xác định đúng các hành vi vi phạm và mức phạt tương ứng dựa trên các văn bản pháp luật được cung cấp. Tuy nhiên, ground truth có đề cập đến 'Điều 31 Luật Trật tự, an toàn giao thông đường bộ 2024' nhưng văn bản này không được cung cấp trong các điều luật trích xuất, do đó AI không thể tham chiếu. AI đã sử dụng Nghị định 168/2024/NĐ-CP để xác định hành vi chở quá số người, điều này là hợp lý trong phạm vi các văn bản được cung cấp. Về trích dẫn chính xác, AI đã trích dẫn đầy đủ và chính xác các điều, khoản, điểm của các nghị định. Về tính đầy đủ, AI đã liệt kê đầy đủ các hành vi vi phạm và mức phạt tương ứng cho từng đối tượng (bạn A và hai người bạn). AI không bịa đặt nội dung điều luật. Về cấu trúc và xử lý tình huống, AI đã trả lời trực tiếp vào trọng tâm câu hỏi, phân tích rõ ràng từng hành vi vi phạm của từng nhân vật và đưa ra mức phạt cụ thể, có cấu trúc rõ ràng và dễ hiểu. Tuy nhiên, ground truth có đề cập đến 'không tập trung lái xe gây tai nạn giao thông' nhưng không có điều luật cụ thể nào được cung cấp để xử phạt hành vi này đối với xe đạp điện, nên AI không thể đưa vào. Do đó, AI đã bỏ qua phần này, điều này là hợp lý trong phạm vi thông tin được cung cấp.",5.81,4.21
+19,Vào kỳ nghỉ hè các bạn nam trong khu phố thường tổ chức chơi đá bóng trên đường giao thông. Hành vi đó có thể bị xử phạt hành chính như thế nào?,"Hành vi chơi đá bóng trên đường giao thông là vi phạm quy định về an toàn giao thông, gây cản trở giao thông và nguy hiểm cho người tham gia giao thông. Hành vi đó có thể bị xử phạt hành chính theo quy định của pháp luật như sau:
+Căn cứ theo điểm b khoản 2 Điều 12 Nghị định 168/2024/NĐ-CP thì việc chơi đá bóng trên đường giao thông có thể bị phạt tiền từ 200.000 đồng đến 250.000 đồng đối với mỗi cá nhân vi phạm.","Dựa trên dữ liệu pháp luật được cung cấp và ngày hiện tại là 2026-05-20, hành vi chơi đá bóng trên đường giao thông của các bạn nam trong khu phố sẽ bị xử phạt hành chính theo quy định tại Nghị định 168/2024/NĐ-CP, có hiệu lực từ ngày 2025-01-01.
+
+Cụ thể:
+
+*   **Căn cứ pháp lý:**
+    *   Điểm b, Khoản 2, Điều 12 Nghị định 168/2024/NĐ-CP.
+*   **Kết luận trực tiếp:**
+    Các bạn nam chơi đá bóng trên đường giao thông sẽ bị phạt tiền.
+*   **Chi tiết chế tài:**
+    *   Phạt tiền từ 200.000 đồng đến 250.000 đồng đối với hành vi ""Đá bóng, đá cầu, chơi cầu lông hoặc các hoạt động thể thao khác trái phép trên đường bộ"".",0.2452,0.4856,0.5324,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý, trích dẫn chính xác điều luật và mức phạt theo Nghị định 168/2024/NĐ-CP, có hiệu lực từ ngày 2025-01-01, phù hợp với ngày hiện tại được cung cấp (2026-05-20). Mức phạt tiền từ 200.000 đồng đến 250.000 đồng là chính xác. Câu trả lời đầy đủ các thông tin cần thiết và không bịa đặt. Cấu trúc trả lời rõ ràng, đi thẳng vào vấn đề.",2.01,1.79
+20,"Anh C đang điều khiển xe ô tô về nhà đêm khuya. Do vội về nhà, anh C đã liên tục bấm còi để vượt trong khu phố đô thị. Vậy theo quy định của pháp luật, hành vi bấm còi này của anh C có vi phạm pháp luật khi tham gia giao thông? Nếu có thì hành vi này của anh C sẽ bị xử phạt như thế nào? Được biết lúc anh C đi về nhà là 22 giờ 30.","Căn cứ điểm đ khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP thì hành vi sử dụng còi trong thời gian từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau trong khu đông dân cư, khu vực cơ sở khám bệnh, chữa bệnh, trừ các xe ưu tiên đang đi làm nhiệm vụ theo quy định là hành vi vi phạm pháp luật khi tham gia giao thông đường bộ. Theo đó, hành vi bấm còi ô tô của anh C được xác định là hành vi vi phạm pháp luật và sẽ bị phạt tiền từ 400.000 đồng đến 600.000 đồng.","Dựa trên dữ liệu pháp luật hiện tại, tôi xin trả lời câu hỏi của bạn như sau:
+
+Hành vi bấm còi liên tục để vượt trong khu phố đô thị vào lúc 22 giờ 30 của anh C là hành vi vi phạm pháp luật giao thông đường bộ.
+
+Căn cứ pháp lý:
+*   Điểm b, Khoản 3, Điều 6 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Khoản 5, Điều 14 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ 2025-01-01)
+*   Khoản 2, Điều 21 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ 2025-01-01)
+
+Anh C sẽ bị xử phạt như sau:
+
+*   **Phạt tiền từ 800.000 đồng đến 1.000.000 đồng** đối với hành vi sử dụng còi liên tục trong khu đông dân cư, khu vực cơ sở khám bệnh, chữa bệnh, trừ các xe ưu tiên đang đi làm nhiệm vụ theo quy định.
+
+Giải thích chi tiết:
+Theo Khoản 5, Điều 14 Luật Giao thông đường bộ 36/2024/QH15, trong đô thị và khu đông dân cư trong thời gian từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau chỉ được báo hiệu xin vượt bằng đèn. Việc anh C bấm còi liên tục để vượt vào lúc 22 giờ 30 trong khu phố đô thị là vi phạm quy định này.
+
+Theo Điểm b, Khoản 3, Điều 6 Nghị định 168/2024/NĐ-CP, người điều khiển xe ô tô thực hiện hành vi ""Sử dụng còi, rú ga liên tục; sử dụng còi hơi, sử dụng đèn chiếu xa khi gặp người đi bộ qua đường hoặc khi đi trên đoạn đường qua khu dân cư có hệ thống chiếu sáng đang hoạt động hoặc khi gặp xe đi ngược chiều (trừ trường hợp dải phân cách có khả năng chống chói) hoặc khi chuyển hướng xe tại nơi đường giao nhau, trừ các xe ưu tiên đang đi làm nhiệm vụ theo quy định"" sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng.",0.1842,0.3063,0.665,0.5,0.5,1.0,2.0,2.0,6.0,"AI đã xác định đúng hành vi vi phạm của anh C. Tuy nhiên, AI đã trích dẫn sai điều luật áp dụng cho hành vi này. Ground truth trích dẫn Điểm đ Khoản 1 Điều 6 Nghị định 168/2024/NĐ-CP với mức phạt từ 400.000 đồng đến 600.000 đồng cho hành vi 'Sử dụng còi trong thời gian từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau trong khu đông dân cư'. Trong khi đó, AI lại trích dẫn Điểm b Khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP với mức phạt từ 800.000 đồng đến 1.000.000 đồng cho hành vi 'Sử dụng còi, rú ga liên tục'. Mặc dù anh C có hành vi 'bấm còi liên tục', nhưng câu hỏi nhấn mạnh thời điểm 'đêm khuya' (22 giờ 30) trong 'khu phố đô thị', điều này phù hợp hơn với hành vi 'Sử dụng còi trong thời gian từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau trong khu đông dân cư' được quy định tại Điểm đ Khoản 1 Điều 6. Hành vi 'bấm còi liên tục' mà AI trích dẫn là một hành vi khác, có mức phạt cao hơn và không hoàn toàn khớp với ngữ cảnh 'đêm khuya' như câu hỏi đặt ra. Do đó, mức phạt và điều luật áp dụng của AI là không chính xác so với ground truth. AI cũng đã trích dẫn thêm các điều luật từ Luật Giao thông đường bộ 36/2024/QH15, điều này không sai nhưng không cần thiết để trả lời câu hỏi về mức xử phạt hành chính. Về cấu trúc, AI đã trả lời trực tiếp và xưng hô đúng ngữ cảnh.",3.4,3.28
+21,Anh C đang lái ô tô thì điện thoại di động của anh báo có cuộc gọi đến. Anh C không dừng xe để nghe điện thoại mà tiếp tục vừa điều khiển xe vừa nghe điện thoại. Vậy hành vi của anh C theo quy định của pháp luật sẽ bị xử lý như thế nào?,"Căn cứ điểm h khoản 5, điểm b khoản 16 Điều 6 Nghị định số 168/2024/NĐ-CP thì hành vi dùng tay cầm và sử dụng điện thoại hoặc các thiết bị điện tử khác khi điều khiển phương tiện tham gia giao thông đang di chuyển trên đường bộ của anh C sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng. Ngoài bị phạt tiền, anh C còn bị trừ 4 điểm giấy phép lái xe. Trường hợp anh C đang sử dụng điện thoại di đông khi đang lái ô tô mà gây tai nạn giao thông thì bị phạt tiền từ 20.000.000 đồng đến 22.000.000 đồng và bị trừ 10 điểm giấy phép lái xe theo điểm b khoản 10, điểm d khoản 16 Điều 6 Nghị định số 168/2024/NĐ-CP.","Dựa trên các văn bản pháp luật có hiệu lực tại thời điểm hiện tại (2026-05-20), hành vi của anh C sẽ bị xử lý như sau:
+
+Căn cứ pháp lý:
+*   Điểm h, Khoản 5, Điều 6 Nghị định 168/2024/NĐ-CP.
+*   Điểm b, Khoản 16, Điều 6 Nghị định 168/2024/NĐ-CP.
+*   Khoản 6, Điều 9 Luật Giao thông đường bộ 36/2024/QH15.
+
+Kết luận trực tiếp: Anh C đã vi phạm quy tắc giao thông đường bộ khi dùng tay cầm và sử dụng điện thoại di động khi đang điều khiển xe ô tô tham gia giao thông đang di chuyển trên đường bộ.
+
+Chi tiết chế tài:
+*   Anh C sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng.
+*   Ngoài ra, anh C còn bị trừ 04 điểm giấy phép lái xe.",0.3298,0.4612,0.5223,2.0,2.0,1.5,2.0,2.0,9.5,"AI đã xác định đúng hành vi vi phạm của anh C là dùng tay cầm và sử dụng điện thoại di động khi đang điều khiển xe ô tô. AI đã trích dẫn đúng các điều luật có hiệu lực tại thời điểm 2026-05-20 (Nghị định 168/2024/NĐ-CP và Luật Giao thông đường bộ 36/2024/QH15) và đưa ra mức phạt tiền chính xác từ 4.000.000 đồng đến 6.000.000 đồng, cùng với hình phạt bổ sung là trừ 04 điểm giấy phép lái xe, khớp với ground truth. Tuy nhiên, AI chưa đề cập đến trường hợp anh C gây tai nạn giao thông khi đang sử dụng điện thoại, điều này làm giảm tính đầy đủ của câu trả lời so với ground truth. Về cấu trúc, AI đã trả lời trực tiếp vào trọng tâm câu hỏi và xưng hô đúng ngữ cảnh với nhân vật anh C.",18.46,2.43
+22,"Trong quá trình đi tập thể dục sáng sớm, người dân ở khu phố tôi phát hiện một chiếc xe tải chạy lại đổ đất, đá ra đường phố của khu phố của chúng tôi. Chúng tôi đã báo chính quyền xử lý. Hỏi người điều khiển xe thực hiện hành vi đổ trái phép rác, đất, cát, đá, vật liệu, chất thải ra đường phố thì bị xử phạt như thế nào?","Theo quy định tại khoản 4 Điều 17 Nghị định 168/2024/NĐ-CP, người điều khiển xe thực hiện hành vi đổ trái phép rác, đất, cát, đá, vật liệu, chất phế thải ra đường phố bị phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng.
+Ngoài ra, theo quy đinh tại khoản 5 Điều 17 Nghị định 168/2024/NĐ-CP, họ còn bị trừ điểm giấy phép lái xe 02 điểm.","Căn cứ theo Khoản 4, Điều 17, Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025), người điều khiển xe ô tô thực hiện hành vi đổ trái phép rác, đất, cát, đá, vật liệu, chất phế thải ra đường phố sẽ bị phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng.",0.488,0.6885,0.5668,1.5,2.0,1.5,2.0,2.0,9.0,"AI đã trả lời đúng bản chất pháp lý, mức phạt tiền hoàn toàn trùng khớp với ground truth. Tuy nhiên, AI đã bỏ sót hình phạt bổ sung là trừ điểm giấy phép lái xe 02 điểm. AI đã trích dẫn đúng điều luật và không bịa đặt. Cấu trúc câu trả lời trực tiếp vào trọng tâm câu hỏi.",1.63,1.43
+23,"Cháu tôi năm nay mới 17 tuổi nhưng lại mượn ô tô của tôi để lái, tham gia giao thông. Hỏi hành vi lái xe ô tô của cháu tôi có bị xử phạt không?","Hành vi của cháu bạn là hành vi điều khiển xe ô tô tham gia giao thông khi chưa đủ tuổi cho phép. Theo quy định tại khoản 6 Điều 18 Nghị định 168/2024/NĐ-CP thì người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo, các loại xe tương tự xe ô tô sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng.","Căn cứ theo Điểm e, Khoản 8, Điều 52 Nghị định 168/2024/NĐ-CP, Điều 21 của Nghị định 100/2019/NĐ-CP đã bị bãi bỏ và được thay thế bởi Điều 18 Nghị định 168/2024/NĐ-CP có hiệu lực từ ngày 01/01/2025.
+
+Căn cứ theo Khoản 1, Điều 59 Luật Giao thông đường bộ 36/2024/QH15, người đủ 18 tuổi trở lên mới được cấp giấy phép lái xe hạng B1, B, C1 để điều khiển xe ô tô. Cháu của bạn 17 tuổi chưa đủ tuổi để điều khiển xe ô tô.
+
+Do đó, hành vi lái xe ô tô của cháu bạn sẽ bị xử phạt.
+
+Cụ thể:
+*   **Đối với cháu của bạn (người điều khiển xe):**
+    *   Căn cứ theo Khoản 6, Điều 18 Nghị định 168/2024/NĐ-CP, cháu của bạn sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với hành vi người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô.
+
+*   **Đối với bạn (chủ xe):**
+    *   Căn cứ theo Điểm h, Khoản 8, Điều 30 Nghị định 100/2019/NĐ-CP, hành vi giao xe hoặc để cho người không đủ điều kiện theo quy định tại khoản 1 Điều 58 (đối với xe ô tô, máy kéo và các loại xe tương tự xe ô tô) của Luật Giao thông đường bộ điều khiển xe tham gia giao thông sẽ bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với cá nhân.
+    *   Lưu ý: Điều 30 Nghị định 100/2019/NĐ-CP sẽ bị bãi bỏ bởi Điểm l, Khoản 8, Điều 52 Nghị định 168/2024/NĐ-CP có hiệu lực từ ngày 01/01/2025. Tuy nhiên, do Nghị định 168/2024/NĐ-CP không có điều khoản thay thế tương ứng cho hành vi ""giao xe hoặc để cho người không đủ điều kiện điều khiển xe"", nên tại thời điểm hiện tại (trước ngày 01/01/2025), hành vi này vẫn áp dụng theo Nghị định 100/2019/NĐ-CP.",0.1219,0.2691,0.5518,2.0,2.0,1.5,2.0,2.0,9.5,"AI đã trả lời đúng bản chất pháp lý, xác định được cả hai đối tượng bị xử phạt là người điều khiển xe (cháu) và chủ xe (bạn). AI đã trích dẫn đúng các điều luật có hiệu lực tại thời điểm hiện tại (Nghị định 100/2019/NĐ-CP) và cả các điều luật sẽ có hiệu lực trong tương lai (Nghị định 168/2024/NĐ-CP), đồng thời chỉ rõ thời điểm hiệu lực của từng văn bản. Mức phạt được trích dẫn chính xác. AI cũng đã xử lý tốt tình huống khi đề cập đến việc bãi bỏ và thay thế điều luật, cũng như việc không có điều khoản thay thế tương ứng cho hành vi của chủ xe trong văn bản mới. Tuy nhiên, AI đã bỏ sót một phần quan trọng trong câu trả lời ground truth là việc cháu bạn chưa đủ tuổi để điều khiển xe ô tô theo Luật Giao thông đường bộ 36/2024/QH15, đây là cơ sở pháp lý quan trọng để xác định hành vi vi phạm của cháu bạn. Do đó, tính đầy đủ bị ảnh hưởng.",3.85,3.06
+24,"Khi tôi đi ô tô khách chạy tuyến Hà Nội – Quảng Bình (khoảng cách trên 300km) thường bắt gặp tình trạng, người điều khiển xe ô tô chở hành khách loại xe 45 chỗ nhưng lại chở quá số người quy định, xe nhồi nhét rất đông, chật chội. Hỏi hành vi của người điều khiển xe khách loại 45 chỗ đó có bị xử phạt như thế nào?","Tại khoản 4 Điều 20 Nghị định 168/2024/NĐ-CP quy định: ""Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng trên mỗi người vượt quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng đối với người điều khiển xe ô tô chở hành khách (kinh doanh vận tải hành khách theo tuyến cố định, hợp đồng) chạy tuyến có cự ly lớn hơn 300 km thực hiện hành vi vi phạm chở quá số người quy định được phép chở của phương tiện.""
+Do đó, trường hợp này, nếu người điều khiển xe khách loại 45 chỗ đó đã chở quá số người quy định thì họ sẽ bị phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng trên mỗi người vượt quá nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng. Ngoài ra, theo quy định tại điểm b và điểm d khoản 10 Điều 20 Nghị định 168/2024/NĐ-CP, người điều khiển xe khách đó còn bị trừ điểm giấy phép lái xe 04 điểm (đối với trường hợp vượt trên 50% đến 100% số người quy định được phép chở của phương tiện) hoặc bị trừ điểm giấy phép lái xe 10 điểm (đối với trường hợp vượt trên 100% số người quy định được phép chở của phương tiện).","Chào bạn,
+
+Dựa trên thông tin bạn cung cấp và các văn bản pháp luật hiện hành có hiệu lực vào ngày 2026-05-20, hành vi của người điều khiển xe ô tô khách loại 45 chỗ chạy tuyến Hà Nội – Quảng Bình (tuyến có cự ly lớn hơn 300 km) mà chở quá số người quy định sẽ bị xử phạt như sau:
+
+**Căn cứ pháp lý:**
+
+*   Khoản 4, Điều 20, Nghị định 168/2024/NĐ-CP.
+*   Điểm b, Khoản 10, Điều 20, Nghị định 168/2024/NĐ-CP.
+*   Điểm d, Khoản 10, Điều 20, Nghị định 168/2024/NĐ-CP.
+
+**Kết luận trực tiếp:**
+
+Người điều khiển xe khách loại 45 chỗ chạy tuyến Hà Nội – Quảng Bình (tuyến có cự ly lớn hơn 300 km) chở quá số người quy định sẽ bị phạt tiền và bị trừ điểm giấy phép lái xe.
+
+**Chi tiết chế tài:**
+
+*   **Phạt tiền:** Từ 1.000.000 đồng đến 2.000.000 đồng trên mỗi người vượt quá quy định được phép chở của phương tiện, nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng.
+*   **Trừ điểm giấy phép lái xe:**
+    *   Bị trừ 04 điểm giấy phép lái xe nếu vượt trên 50% đến 100% số người quy định được phép chở của phương tiện.
+    *   Bị trừ 10 điểm giấy phép lái xe nếu vượt trên 100% số người quy định được phép chở của phương tiện.
+
+Trân trọng.",0.3845,0.5345,0.6231,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời chính xác về mức phạt tiền và việc trừ điểm giấy phép lái xe, khớp với ground truth. AI đã trích dẫn đúng các điều luật liên quan (Khoản 4, Điều 20, Nghị định 168/2024/NĐ-CP và Điểm b, d Khoản 10, Điều 20, Nghị định 168/2024/NĐ-CP). AI đã liệt kê đầy đủ cả hình phạt chính (phạt tiền) và hình phạt bổ sung (trừ điểm giấy phép lái xe). AI không bịa đặt nội dung điều luật. AI đã trả lời trực tiếp vào câu hỏi, sử dụng ngôn ngữ phù hợp và cấu trúc rõ ràng.",2.85,2.07
+25,"Hiện nay trên nhiều tuyến đường Hà Nội đã có đường dành riêng cho xe buýt nhanh nhưng có rất nhiều phương tiện như xe máy, ô tô cố tình đi lấn làn sang đường xe buýt. Vậy những trường hợp này bị phạt như thế nào?","Người điều khiển xe mô tô, xe gắn máy, xe ô tô cố tình đi lấn sang làn đường dành riêng cho xe buýt nhanh sẽ bị xử phạt về hành vi đi không đúng phần đường, làn đường. Mức phạt được quy định cụ thể tại Nghị định số 168/2024/NĐ-CP như sau: 
+- Người điều khiển xe mô tô, xe gắn máy vi phạm bị phạt tiền từ 600.000 đồng đến 800.000 đồng. Trong trường hợp gây tai nạn giao thông thì bị phạt tiền từ 10.000.000 đồng đến 14.000.000 đồng; đồng thời bị trừ 10 điểm Giấy phép lái xe (Điểm d Khoản 3 Điều 7, Điểm a Khoản 10 Điều 7 và Điểm d Khoản 13 Điều 7). 
+- Người điều khiển xe ô tô vi phạm bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng; đồng thời bị trừ 02 điểm Giấy phép lái xe. Trong trường hợp gây tai nạn giao thông thì bị phạt tiền từ 20.000.000 đồng đến 22.000.000 đồng và bị trừ 10 điểm Giấy phép lái xe (Điểm b Khoản 5 Điều 6, Điểm a Khoản 16 Điều 6, Điểm a Khoản 10 Điều 6 và Điểm d Khoản 16 Điều 6).","Dựa trên dữ liệu pháp luật hiện tại, tôi xin tư vấn về mức phạt đối với hành vi điều khiển xe máy hoặc ô tô đi vào làn đường dành riêng cho xe buýt nhanh như sau:
+
+**Căn cứ pháp lý:**
+
+*   Điểm d, Khoản 3, Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Điểm b, Khoản 5, Điều 6 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Khoản 4, Điều 13 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ 2025-01-01)
+
+**Kết luận trực tiếp:**
+
+Hành vi điều khiển xe máy hoặc ô tô cố tình đi lấn làn sang đường xe buýt nhanh là vi phạm quy tắc giao thông đường bộ về sử dụng làn đường và sẽ bị xử phạt.
+
+**Chi tiết chế tài:**
+
+1.  **Đối với người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy:**
+    *   Phạt tiền từ **600.000 đồng đến 800.000 đồng** đối với hành vi: ""Điều khiển xe không đi bên phải theo chiều đi của mình; đi không đúng phần đường, làn đường quy định (làn cùng chiều hoặc làn ngược chiều); điều khiển xe đi qua dải phân cách cố định ở giữa hai phần đường xe chạy;"".
+    *   Căn cứ theo Điểm d, Khoản 3, Điều 7 Nghị định 168/2024/NĐ-CP.
+
+2.  **Đối với người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô:**
+    *   Phạt tiền từ **4.000.000 đồng đến 6.000.000 đồng** đối với hành vi: ""Điều khiển xe không đi bên phải theo chiều đi của mình; đi không đúng phần đường hoặc làn đường quy định (làn cùng chiều hoặc làn ngược chiều) trừ hành vi quy định tại điểm a khoản 4 Điều này; điều khiển xe đi qua dải phân cách cố định ở giữa hai phần đường xe chạy;"".
+    *   Căn cứ theo Điểm b, Khoản 5, Điều 6 Nghị định 168/2024/NĐ-CP.
+
+**Giải thích thêm:**
+
+Khoản 4, Điều 13 Luật Giao thông đường bộ 36/2024/QH15 quy định rõ: ""Trên làn đường dành riêng cho một loại phương tiện hoặc một nhóm loại phương tiện, người điều khiển loại phương tiện khác không được đi vào làn đường đó."" Do đó, việc xe máy, ô tô đi vào làn đường dành riêng cho xe buýt nhanh là hành vi vi phạm quy định này.",0.1231,0.345,0.3797,1.5,2.0,1.0,2.0,2.0,8.5,"1. Chính xác pháp lý: AI đã xác định đúng hành vi vi phạm là 'đi không đúng phần đường, làn đường quy định' và áp dụng đúng các điều luật từ Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01). Mức phạt tiền cho xe mô tô, xe gắn máy (600.000 - 800.000 đồng) và xe ô tô (4.000.000 - 6.000.000 đồng) đều khớp với ground truth. Tuy nhiên, AI thiếu các hình phạt bổ sung như trừ điểm giấy phép lái xe và mức phạt khi gây tai nạn giao thông. 2. Trích dẫn chính xác: AI đã trích dẫn đúng các điều luật liên quan (Điểm d Khoản 3 Điều 7 và Điểm b Khoản 5 Điều 6 của NĐ 168/2024/NĐ-CP) và Luật Giao thông đường bộ 36/2024/QH15. 3. Tính đầy đủ: AI thiếu thông tin về việc trừ điểm giấy phép lái xe và mức phạt khi gây tai nạn giao thông, đây là những hình phạt bổ sung quan trọng được đề cập trong ground truth. 4. Không bịa đặt: AI không bịa đặt nội dung điều luật. 5. Cấu trúc & Xử lý tình huống: AI trả lời trực tiếp vào câu hỏi, phân loại rõ ràng đối tượng vi phạm (xe máy, ô tô) và đưa ra mức phạt tương ứng. Cấu trúc rõ ràng, dễ hiểu.",3.49,3.16
+26,"Trong khi tham gia giao thông, tôi dừng xe khi tín hiệu đèn giao thông đang báo đèn xanh thì bị Cảnh sát giao thông phạt. Bộ Công an cho tôi hỏi, có quy định nào phạt lỗi dừng phương tiện khi đèn giao thông có tín hiệu xanh hay không?","Tại Khoản 1 Điều 10 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định: “Người tham gia giao thông đường bộ phải đi bên phải theo chiều đi của mình, đi đúng làn đường, phần đường quy định, chấp hành báo hiệu đường bộ và các quy tắc giao thông đường bộ khác”.
+Tại Khoản 4 Điều 11 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định tín hiệu đèn giao thông thuộc hệ thống báo hiệu đường. Tín hiệu đèn giao thông có 03 màu, gồm: màu xanh, màu vàng, màu đỏ; có hiển thị thời gian hoặc không hiển thị thời gian. Người tham gia giao thông đường bộ phải chấp hành như sau:
+a) Tín hiệu đèn màu xanh là được đi; trường hợp người đi bộ, xe lăn của người khuyết tật đang đi ở lòng đường, người điều khiển phương tiện tham gia giao thông đường bộ phải giảm tốc độ hoặc dừng lại nhường đường cho người đi bộ, xe lăn của người khuyết tật qua đường;
+b) Tín hiệu đèn màu vàng phải dừng lại trước vạch dừng; trường hợp đang đi trên vạch dừng hoặc đã đi qua vạch dừng mà tín hiệu đèn màu vàng thì được đi tiếp; trường hợp tín hiệu đèn màu vàng nhấp nháy, người điều khiển phương tiện tham gia giao thông đường bộ được đi nhưng phải quan sát, giảm tốc độ hoặc dừng lại nhường đường cho người đi bộ, xe lăn của người khuyết tật qua đường hoặc các phương tiện khác;
+c) Tín hiệu đèn màu đỏ là cấm đi.
+Hành vi không chấp hành hiệu lệnh của đèn tín hiệu giao thông được quy định xử phạt tại Nghị định 168/2024/NĐ-CP, cụ thể:
+- Đối với người điều khiển xe ô tô và các loại xe tương tự xe ô tô bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng, trừ điểm giấy phép lái xe 04 điểm (Điểm b Khoản 9 Điều 6 và Điểm b Khoản 16 Điều 6);
+- Đối với người điều khiển  xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy bị phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng, trừ điểm giấy phép lái xe 04 điểm (Điểm c Khoản 7 Điều 7 và Điểm b Khoản 13 Điều 7).","Dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin để trả lời chính xác câu hỏi này.",0.0,0.0947,0.0074,0.0,0.0,0.0,2.0,0.0,2.0,"AI trả lời rằng không tìm thấy đủ thông tin để trả lời chính xác câu hỏi này, trong khi ground truth đã cung cấp đầy đủ các điều luật liên quan và đưa ra câu trả lời chi tiết. Do đó, AI không đáp ứng được bất kỳ tiêu chí nào.",1.07,1.63
+27,Xin hỏi điều khiển ô tô chuyển hướng không đúng quy định bị xử phạt như thế nào? Tôi bị lập biên bản lỗi Chuyển hướng không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ thì bị phạt bao nhiêu tiền và có bị trừ điểm Giấy phép lái xe hay không?,"Điều 15 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định về Chuyển hướng xe như sau:
+1. Chuyển hướng xe là tình huống giao thông mà xe rẽ trái hoặc rẽ phải hoặc quay đầu xe.
+2. Trước khi chuyển hướng, người điều khiển phương tiện tham gia giao thông đường bộ phải quan sát, bảo đảm khoảng cách an toàn với xe phía sau, giảm tốc độ và có tín hiệu báo hướng rẽ hoặc có tín hiệu bằng tay theo hướng rẽ đối với xe thô sơ không có đèn báo hướng rẽ, chuyển dần sang làn gần nhất với hướng rẽ. Tín hiệu báo hướng rẽ hoặc tín hiệu bằng tay phải sử dụng liên tục trong quá trình chuyển hướng. Khi bảo đảm an toàn, không gây trở ngại cho người và phương tiện khác mới được chuyển hướng.
+3. Khi chuyển hướng, người lái xe, người điều khiển xe máy chuyên dùng phải nhường đường cho người đi bộ, xe thô sơ, xe đi ngược chiều và chỉ chuyển hướng khi không gây trở ngại hoặc nguy hiểm cho người, phương tiện khác.
+4. Không được quay đầu xe ở phần đường dành cho người đi bộ qua đường, trên cầu, đầu cầu, gầm cầu vượt, ngầm, tại nơi đường bộ giao nhau cùng mức với đường sắt, đường hẹp, đường dốc, đoạn đường cong tầm nhìn bị che khuất, trên đường cao tốc, trong hầm đường bộ, trên đường một chiều, trừ khi có hiệu lệnh của người điều khiển giao thông hoặc chỉ dẫn của biển báo hiệu tạm thời.
+Nếu vi phạm sẽ bị xử phạt theo quy định tại Nghị định 168/2024/NĐ-CP, cụ thể như sau:
+Đối với người điều khiển xe ô tô và các loại xe tương tự xe ô tô
+- Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với người điều khiển xe:
+Chuyển hướng không nhường quyền đi trước cho: người đi bộ, xe lăn của người khuyết tật qua đường tại nơi có vạch kẻ đường dành cho người đi bộ; xe thô sơ đang đi trên phần đường dành cho xe thô sơ (điểm l khoản 5 Điều 6);
+Chuyển hướng không nhường đường cho: các xe đi ngược chiều; người đi bộ, xe thô sơ đang qua đường tại nơi không có vạch kẻ đường cho người đi bộ (điểm m khoản 5 Điều 6);
+- Phạt 800.000 đồng đến 1.000.000 đồng đối với người điều khiển xe chuyển hướng không quan sát hoặc không bảo đảm khoảng cách an toàn với xe phía sau hoặc không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ hoặc có tín hiệu báo hướng rẽ nhưng không sử dụng liên tục trong quá trình chuyển hướng (trừ trường hợp điều khiển xe đi theo hướng cong của đoạn đường bộ ở nơi đường không giao nhau cùng mức) (điểm c khoản 3 Điều 6).
+- Phạt 20.000.000 đồng đến 22.000.000 đồng đối với người điều khiển xe chuyển hướng không đúng quy định gây tai nạn giao thông (điểm a khoản 10 Điều 6). Bị trừ điểm giấy phép lái xe 10 điểm (điểm d khoản 16 Điều 6).","Chào bạn,
+
+Dựa trên các văn bản pháp luật được cung cấp và có hiệu lực vào ngày 2026-05-20, hành vi điều khiển ô tô chuyển hướng không đúng quy định, cụ thể là ""Chuyển hướng không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ"", sẽ bị xử phạt như sau:
+
+**Căn cứ pháp lý:**
+*   Điểm c, Khoản 3, Điều 6 Nghị định 168/2024/NĐ-CP.
+*   Điểm a, Khoản 16, Điều 6 Nghị định 168/2024/NĐ-CP.
+*   Khoản 2, Điều 15 Luật Giao thông đường bộ 36/2024/QH15.
+
+**Kết luận trực tiếp:**
+Bạn sẽ bị phạt tiền và bị trừ điểm giấy phép lái xe.
+
+**Chi tiết chế tài:**
+*   **Phạt tiền:** Từ 800.000 đồng đến 1.000.000 đồng.
+*   **Trừ điểm giấy phép lái xe:** Bị trừ 02 điểm trên giấy phép lái xe.
+
+**Giải thích thêm về quy định chuyển hướng:**
+Theo Khoản 2, Điều 15 Luật Giao thông đường bộ 36/2024/QH15, trước khi chuyển hướng, người điều khiển phương tiện tham gia giao thông đường bộ phải quan sát, bảo đảm khoảng cách an toàn với xe phía sau, giảm tốc độ và có tín hiệu báo hướng rẽ hoặc có tín hiệu bằng tay theo hướng rẽ đối với xe thô sơ không có đèn báo hướng rẽ, chuyển dần sang làn gần nhất với hướng rẽ. Tín hiệu báo hướng rẽ hoặc tín hiệu bằng tay phải sử dụng liên tục trong quá trình chuyển hướng. Khi bảo đảm an toàn, không gây trở ngại cho người và phương tiện khác mới được chuyển hướng.",0.2187,0.3306,0.3094,2.0,2.0,1.5,2.0,2.0,9.5,"AI đã xác định đúng hành vi vi phạm và mức phạt tiền, cũng như việc bị trừ điểm giấy phép lái xe. Tuy nhiên, AI đã bỏ sót một trường hợp xử phạt nặng hơn nếu hành vi này gây tai nạn giao thông, điều này làm giảm tính đầy đủ của câu trả lời. Về trích dẫn, AI đã trích dẫn đúng các điều luật liên quan đến mức phạt và trừ điểm, cũng như quy định về chuyển hướng. AI không bịa đặt thông tin. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề và xưng hô phù hợp.",3.62,1.81
+28,Chị H ngồi trên xe ô tô không thắt dây an toàn khi xe đang chạy có bị xử phạt vi phạm không? Nếu bị phạt thì chị bị xử phạt với mức phạt là bao nhiêu?,"Hành vi này của chị vi phạm quy tắc giao thông đường bộ và bị xử phạt theo quy định tại điểm k, điểm l khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP:
+""3. Phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây:
+k) Không thắt dây đai an toàn khi điều khiển xe chạy trên đường;
+l) Chở người trên xe ô tô không thắt dây đai an toàn (tại vị trí có trang bị dây đai an toàn) khi xe đang chạy;""","Dựa trên dữ liệu pháp luật hiện tại, tôi xin trả lời câu hỏi của bạn như sau:
+
+**1. Chị H có bị xử phạt vi phạm không?**
+
+Có. Chị H sẽ bị xử phạt vi phạm hành chính.
+
+Căn cứ pháp lý:
+*   Khoản 2, Điều 10, Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ 2025-01-01) quy định: ""Người lái xe và người được chở trên xe ô tô phải thắt dây đai an toàn tại những chỗ có trang bị dây đai an toàn khi tham gia giao thông đường bộ.""
+*   Điểm d, Khoản 1, Điều 3, Luật Xử lý vi phạm hành chính 15/2012/QH13 quy định: ""Chỉ xử phạt vi phạm hành chính khi có hành vi vi phạm hành chính do pháp luật quy định.""
+
+**2. Mức phạt đối với chị H là bao nhiêu?**
+
+Chị H sẽ bị phạt tiền từ 350.000 đồng đến 400.000 đồng.
+
+Căn cứ pháp lý:
+*   Khoản 4, Điều 12, Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01) quy định: ""Phạt tiền từ 350.000 đồng đến 400.000 đồng đối với người được chở trên xe ô tô không thắt dây đai an toàn (tại vị trí có trang bị dây đai an toàn) khi xe đang chạy.""",0.1842,0.3742,0.6451,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý rằng chị H bị xử phạt và mức phạt là từ 350.000 đồng đến 400.000 đồng. Tuy nhiên, AI đã trích dẫn sai điều luật. Ground truth chỉ ra rằng hành vi này của chị H vi phạm quy định tại điểm k, điểm l khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP, trong khi AI lại trích dẫn Khoản 4, Điều 12, Nghị định 168/2024/NĐ-CP. Điểm k và l khoản 3 Điều 6 Nghị định 168/2024/NĐ-CP quy định mức phạt từ 800.000 đồng đến 1.000.000 đồng cho người điều khiển xe không thắt dây an toàn và chở người trên xe không thắt dây an toàn. Trong khi đó, Khoản 4, Điều 12, Nghị định 168/2024/NĐ-CP quy định mức phạt từ 350.000 đồng đến 400.000 đồng đối với người được chở trên xe ô tô không thắt dây đai an toàn. Câu hỏi là về chị H ngồi trên xe ô tô không thắt dây an toàn, tức là chị H là người được chở, không phải người điều khiển. Do đó, việc AI trích dẫn Khoản 4, Điều 12, Nghị định 168/2024/NĐ-CP là chính xác cho trường hợp của chị H. Ground truth đã nhầm lẫn giữa người điều khiển và người được chở. Vì vậy, AI đã trả lời đúng về mức phạt và điều luật áp dụng cho người được chở. AI cũng đã trả lời trực tiếp vào câu hỏi và xưng hô đúng ngữ cảnh. Tuy nhiên, ground truth đã đưa ra một câu trả lời sai về điều luật áp dụng, dẫn đến việc đánh giá AI gặp khó khăn. Trong trường hợp này, tôi sẽ đánh giá AI dựa trên sự chính xác của câu trả lời so với các điều luật được cung cấp, chứ không phải so với ground truth bị sai. AI đã trích dẫn đúng điều luật áp dụng cho người được chở và mức phạt tương ứng. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, trực tiếp.",2.92,3.73
+29,"Chị T hỏi vì hoàn cảnh gia đình, chị buôn bán hàng rong, vậy “Hành vi bán hàng rong, bán hàng hóa nhỏ lẻ trên vỉa hè các tuyến phố bị xử phạt như thế nào”","Theo Nghị định 168/2024/NĐ-CP có quy định Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm khác về quy tắc giao thông đường bộ; sử dụng lòng đường, vỉa hè vào mục đích khác tại Điều 12. Cụ thể đối với hành vi chị hỏi:
+2. Phạt tiền từ 200.000 đồng đến 250.000 đồng đối với cá nhân thực hiện một trong các hành vi vi phạm sau đây:
+e) Bán hàng rong hoặc bán hàng hóa nhỏ lẻ khác trên lòng đường, trên vỉa hè các tuyến phố có quy định cấm bán hàng; trừ các hành vi vi phạm quy định tại khoản 7, khoản 9 Điều này;","Chào chị T,
+
+Dựa trên các văn bản pháp luật được cung cấp, hành vi bán hàng rong hoặc bán hàng hóa nhỏ lẻ trên vỉa hè các tuyến phố có quy định cấm bán hàng của chị sẽ bị xử phạt như sau:
+
+**Căn cứ pháp lý:**
+*   Điểm e, Khoản 2, Điều 12 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Khoản 7, Điều 12 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Khoản 9, Điều 12 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+*   Điểm a, Khoản 5, Điều 47 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 2025-01-01)
+
+**Mức xử phạt:**
+
+1.  **Phạt tiền từ 200.000 đồng đến 250.000 đồng** đối với hành vi bán hàng rong hoặc bán hàng hóa nhỏ lẻ khác trên lòng đường, trên vỉa hè các tuyến phố có quy định cấm bán hàng, trừ các hành vi vi phạm quy định tại khoản 7, khoản 9 Điều này.
+2.  **Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng** nếu hành vi của chị thuộc trường hợp sử dụng trái phép lòng đường, vỉa hè để bày, bán hàng hóa.
+3.  **Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng** nếu hành vi của chị thuộc trường hợp bày, bán máy móc, thiết bị, vật tư hoặc sản xuất, gia công hàng hóa trên lòng đường, vỉa hè.
+
+**Biện pháp khắc phục hậu quả:**
+Ngoài việc bị phạt tiền, chị T còn bị buộc thu dọn hàng hóa theo hướng dẫn của lực lượng chức năng tại nơi phát hiện vi phạm.",0.1875,0.3688,0.5213,1.5,1.5,1.5,2.0,2.0,8.5,"AI đã trả lời đúng bản chất pháp lý, trích dẫn đúng các điều luật liên quan đến hành vi bán hàng rong trên vỉa hè. Tuy nhiên, AI đã liệt kê thêm các khoản 7 và 9 của Điều 12 Nghị định 168/2024/NĐ-CP như là các trường hợp xử phạt riêng biệt, trong khi Điểm e Khoản 2 Điều 12 đã loại trừ các hành vi vi phạm quy định tại khoản 7, khoản 9 Điều này. Điều này có thể gây nhầm lẫn cho người đọc về mức phạt áp dụng. Câu trả lời ground truth chỉ tập trung vào Điểm e Khoản 2 Điều 12, là mức phạt trực tiếp cho hành vi bán hàng rong nhỏ lẻ. AI cũng đã bổ sung biện pháp khắc phục hậu quả từ Điều 47, làm cho câu trả lời đầy đủ hơn. Về cấu trúc, AI xưng hô đúng ngữ cảnh và trình bày rõ ràng.",3.07,2.63
+30,"Ông X hỏi nếu có hành vi điều khiển xe ô tô đón, trả hành khách trên đường cao tốc bị xử phạt thế nào?","Hành vi bạn hỏi bị xử phạt theo quy định tại khoản 8 Điều 20 Nghị định 168/2024/NĐ-CP:
+8. Phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với người điều khiển xe thực hiện hành vi đón, trả hành khách trên đường cao tốc.
+Ngoài ra, người thực hiện hành vi bị trừ điểm giấy phép lái xe 06 điểm theo quy định tại điểm c khoản 10 Điều 20 NĐ.","Căn cứ theo Khoản 8, Điều 20 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025), ông X sẽ bị phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với hành vi điều khiển xe ô tô đón, trả hành khách trên đường cao tốc.",0.2819,0.5275,0.4208,2.0,1.5,1.0,2.0,2.0,8.5,"AI trả lời đúng mức phạt tiền và văn bản áp dụng. Tuy nhiên, AI thiếu hình phạt bổ sung là trừ điểm giấy phép lái xe, điều này làm giảm tính đầy đủ của câu trả lời. AI cũng không đề cập đến hiệu lực của văn bản 123/2021/NĐ-CP, mặc dù văn bản 168/2024/NĐ-CP có hiệu lực sau và đã bãi bỏ một số điều của văn bản trước đó. Câu trả lời ground truth đã chỉ ra rõ ràng cả mức phạt tiền và việc trừ điểm giấy phép lái xe. Do đó, AI chưa đạt được tính đầy đủ như ground truth.",1.64,2.31
+31,"Anh A đang điều khiển xe gắn máy đi trên đường. Đến đoạn đường giao cắt với ngõ nhỏ thì bị anh B điều khiển xe gắn máy khác đi từ ngõ ra đâm vào, xảy ra tai nạn. Trách nhiệm thuộc về ai?","Tại khoản 1 Điều 22 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định:
+Tại nơi đường giao nhau giữa đường không ưu tiên với đường ưu tiên hoặc giữa đường nhánh với đường chính thì xe đi từ đường không ưu tiên hoặc đường nhánh phải nhường đường cho xe đi trên đường ưu tiên hoặc đường chính từ bất kỳ hướng nào tới.
+Đường chính: là đường bảo đảm giao thông chủ yếu trong khu vực.
+Đường nhánh: là đường nối vào đường chính.
+Đường ưu tiên là đường mà trên đó phương tiện tham gia giao thông đường bộ được các phương tiện giao thông đến từ hướng khác nhường đường khi qua nơi đường giao nhau, được cắm biển báo hiệu đường ưu tiên.
+Như vậy, với tình huống trên, nếu anh A đang đi trên đường chính, gặp anh B điều khiển xe từ trong ngõ đâm vào, tai nạn xảy ra trách nhiệm thuộc về  anh B.
+Để đảm bảo an toàn khi tham gia giao thông, người điều khiển phương tiện xe cơ giới cần chú ý quan sát, giảm tốc độ tới mức an toàn tại nơi đường giao nhau, tránh xảy ra những tai nạn đáng tiếc.","Dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin để trả lời chính xác câu hỏi này.",0.0,0.1512,0.0194,0.0,0.0,0.0,2.0,0.0,2.0,"AI trả lời rằng không tìm thấy đủ thông tin để trả lời chính xác câu hỏi này, trong khi ground truth đã cung cấp đầy đủ các điều luật liên quan và đưa ra câu trả lời cụ thể. Điều này cho thấy AI hoàn toàn không hiểu câu hỏi và không thể áp dụng các điều luật được cung cấp để giải quyết tình huống. Do đó, các tiêu chí về chính xác pháp lý, trích dẫn, tính đầy đủ và cấu trúc đều không đạt. AI không bịa đặt thông tin, nhưng việc không đưa ra câu trả lời nào cũng không thể coi là không bịa đặt một cách tích cực.",1.38,2.11
+32,"Chị Nguyễn Thị B đang lưu thông trên đường bằng phương tiện xe máy, đột nhiên gặp người bạn đi ngược chiều gọi chị, chị đột ngột dừng xe lại cách mép đường 1,5 mét. Khi đó, ông C đi xe máy phía sau, do chị B dừng lại đột ngột nên đã va chạm vào xe chị B khiến ông C bị ngã ra đường, còn chị B không vấn đề gì. Chị B cho rằng chị không vi phạm và cương quyết cãi do ông C không để ý khi lưu thông, chị muốn biết trong trường hợp này chị có vi phạm pháp luật hay không?","Khoản 4 Điều 3 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định: Người tham gia giao thông đường bộ phải chấp hành các quy định của pháp luật về trật tự, an toàn giao thông đường bộ và quy định khác của pháp luật có liên quan, có trách nhiệm giữ an toàn cho mình và cho người khác.
+Theo đó, chị B đã không có trách nhiệm giữ an toàn cho mình và cho người khác.
+Điểm d Khoản 2 Điều 7 Nghị định 168/2024/NĐ-CP quy định phạt tiền từ 400.000 đồng đến 600.000 đồng đối với người điều khiển xe thực hiện hành vi vi phạm sau đây: Dừng xe, đỗ xe ở lòng đường gây cản trở giao thông; tụ tập từ 03 xe trở lên ở lòng đường, trong hầm đường bộ; đỗ, để xe ở lòng đường, vỉa hè trái phép.
+Như vậy, căn cứ vào viện dẫn trên, hành vi của chị B là vi phạm pháp luật và sẽ bị xử phạt tiền từ 400.000 đồng đến 600.000 đồng.","Chào chị B,
+
+Dựa trên các văn bản pháp luật được cung cấp và tình huống chị mô tả, chị B đã có hành vi vi phạm quy tắc giao thông đường bộ.
+
+Cụ thể:
+
+**1. Về hành vi dừng xe không sát mép đường:**
+
+*   **Căn cứ pháp lý:**
+    *   Điểm đ, Khoản 2, Điều 6 Nghị định 168/2024/NĐ-CP (Hiệu lực: 2025-01-01)
+    *   Khoản 6, Điều 18 Luật Giao thông đường bộ 36/2024/QH15 (Hiệu lực: 2025-01-01)
+
+*   **Kết luận:** Chị B đã dừng xe máy cách mép đường 1,5 mét. Theo quy định tại Khoản 6, Điều 18 Luật Giao thông đường bộ 36/2024/QH15, trên đường phố, người điều khiển phương tiện tham gia giao thông đường bộ chỉ được dừng xe, đỗ xe sát theo lề đường, vỉa hè phía bên phải theo chiều đi của mình; bánh xe gần nhất không được cách xa lề đường, vỉa hè quá 0,25 mét. Hành vi dừng xe không sát theo lề đường, vỉa hè phía bên phải theo chiều đi hoặc bánh xe gần nhất cách lề đường, vỉa hè quá 0,25 mét là hành vi vi phạm.
+
+*   **Chế tài:** Chị B sẽ bị phạt tiền từ 600.000 đồng đến 800.000 đồng đối với hành vi dừng xe không sát theo lề đường, vỉa hè phía bên phải theo chiều đi hoặc bánh xe gần nhất cách lề đường, vỉa hè quá 0,25 mét.
+
+**2. Về việc dừng xe đột ngột gây tai nạn:**
+
+Mặc dù các văn bản pháp luật được cung cấp không quy định trực tiếp về việc dừng xe đột ngột gây tai nạn, nhưng hành vi dừng xe không đúng quy định đã tạo ra tình huống nguy hiểm, dẫn đến va chạm với ông C.
+
+*   **Căn cứ pháp lý:**
+    *   Khoản 3, Điều 18 Luật Giao thông đường bộ 36/2024/QH15 (Hiệu lực: 2025-01-01)
+
+*   **Kết luận:** Theo Khoản 3, Điều 18 Luật Giao thông đường bộ 36/2024/QH15, người điều khiển phương tiện tham gia giao thông đường bộ khi dừng xe, đỗ xe trên đường phải thực hiện các quy định như có tín hiệu báo cho người điều khiển phương tiện tham gia giao thông đường bộ khác biết khi ra, vào vị trí dừng xe, đỗ xe và không làm ảnh hưởng đến người đi bộ và các phương tiện tham gia giao thông đường bộ. Việc chị B dừng xe đột ngột đã làm ảnh hưởng đến ông C và gây ra va chạm.
+
+Do đó, chị B đã vi phạm quy tắc giao thông đường bộ và có thể phải chịu trách nhiệm đối với vụ va chạm xảy ra.",0.0738,0.2591,0.398,0.5,1.0,0.5,2.0,2.0,6.0,"1. Chính xác pháp lý: AI đã trả lời đúng bản chất pháp lý rằng chị B có vi phạm. Tuy nhiên, AI đã áp dụng sai điều luật để xác định mức phạt. Ground truth sử dụng Điều 7 Nghị định 168/2024/NĐ-CP (dành cho máy kéo, xe máy chuyên dùng) trong khi tình huống là xe máy thông thường. AI đã sử dụng Điều 6 Nghị định 168/2024/NĐ-CP (dành cho ô tô và các loại xe tương tự) và Điều 18 Luật Giao thông đường bộ 36/2024/QH15. Cả hai đều không hoàn toàn phù hợp với xe máy thông thường trong trường hợp này. Mức phạt AI đưa ra (600.000 - 800.000 đồng) cũng không khớp với mức phạt trong ground truth (400.000 - 600.000 đồng) và cũng không khớp với mức phạt cho xe máy thông thường theo Nghị định 100/2019/NĐ-CP (đã được sửa đổi bởi 123/2021/NĐ-CP) là 300.000 - 400.000 đồng cho hành vi dừng xe không sát lề. AI cũng không đề cập đến trách nhiệm giữ an toàn cho mình và người khác như ground truth. 2. Trích dẫn chính xác: AI đã trích dẫn các điều luật có trong văn bản cung cấp nhưng lại áp dụng sai đối tượng (xe ô tô thay vì xe máy) và không trích dẫn điều luật chính xác nhất cho hành vi dừng xe không sát lề của xe máy (Nghị định 100/2019/NĐ-CP, Điều 6, Khoản 2, Điểm h - đã bị bãi bỏ bởi 168/2024/NĐ-CP nhưng tại thời điểm xảy ra vụ việc (trước 2025) thì vẫn có thể áp dụng). Ground truth cũng trích dẫn sai điều luật (Điều 7 Nghị định 168/2024/NĐ-CP là cho máy kéo, xe máy chuyên dùng). Tuy nhiên, AI đã trích dẫn đúng cấu trúc Điều, Khoản, Điểm và văn bản. 3. Tính đầy đủ: AI không liệt kê đầy đủ các hình phạt chính và hình phạt bổ sung vì đã áp dụng sai điều luật. Ground truth cũng không liệt kê đầy đủ các hình phạt bổ sung. 4. Không bịa đặt: AI không bịa đặt nội dung điều luật. 5. Cấu trúc & Xử lý tình huống: AI đã trả lời trực tiếp vào trọng tâm câu hỏi, xưng hô đúng ngữ cảnh (chào chị B) và giải thích rõ ràng từng phần. Cấu trúc câu trả lời mạch lạc, dễ hiểu.",11.66,4.58
+33,"Chị Nguyễn Thị T tranh thủ đi chợ tại chợ C trên địa bàn phường XP, chị để xe ở lòng đường để vào mua hàng. Công an phường XP đã lập biên bản và xử phạt về hành vi vi phạm của chị với mức phạt là 400,000 đồng. Chị cho rằng mức phạt này không đúng. Chị muốn hỏi hành vi vi phạm lấn chiếm lòng lề đường sẽ bị xử phạt bao nhiêu?","Điểm d khoản 2 Điều 7 Nghị định 168/2024/NĐ-CP quy định xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ: Phạt tiền từ 400.000 đồng đến 600.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây: Dừng xe, đỗ xe ở lòng đường gây cản trở giao thông; tụ tập từ 03 xe trở lên ở lòng đường, trong hầm đường bộ; đỗ, để xe ở lòng đường, vỉa hè trái phép.
+Như vậy, hành vi của chị T bị Công an phường XP lập biên bản và xử phạt về hành vi vi phạm dừng xe, đỗ xe ở lòng đường đô thị gây cản trở giao thông với mức phạt là 400,000 đồng là đúng pháp luật.","Dựa trên dữ liệu pháp luật hiện tại, tôi xin tư vấn cho chị Nguyễn Thị T như sau:
+
+Căn cứ pháp lý:
+*   Điểm đ, Khoản 2, Điều 6 Nghị định 100/2019/NĐ-CP (đã được sửa đổi, bổ sung bởi Điểm k, Khoản 34, Điều 2 Nghị định 123/2021/NĐ-CP).
+
+Hành vi của chị Nguyễn Thị T là để xe ở lòng đường đô thị gây cản trở giao thông. Theo quy định pháp luật có hiệu lực tại thời điểm hiện tại (trước ngày 01/01/2025), hành vi này sẽ bị xử phạt như sau:
+
+*   **Mức phạt tiền:** Từ 300.000 đồng đến 400.000 đồng.
+
+Do đó, việc Công an phường XP lập biên bản và xử phạt chị Nguyễn Thị T với mức phạt 400.000 đồng là phù hợp với quy định hiện hành.
+
+**Lưu ý:** Kể từ ngày 01/01/2025, Điều 6 của Nghị định 100/2019/NĐ-CP sẽ bị bãi bỏ và hành vi này sẽ được quy định tại văn bản pháp luật mới. Cụ thể, theo Điểm d, Khoản 2, Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ 01/01/2025), hành vi ""Dừng xe, đỗ xe ở lòng đường gây cản trở giao thông"" đối với người điều khiển xe mô tô, xe gắn máy sẽ bị phạt tiền từ 400.000 đồng đến 600.000 đồng.",0.2476,0.3613,0.4464,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã xác định đúng hành vi vi phạm của chị T là ""để xe ở lòng đường đô thị gây cản trở giao thông"". AI đã trích dẫn đúng điều luật áp dụng tại thời điểm hiện tại (Nghị định 100/2019/NĐ-CP sửa đổi bởi Nghị định 123/2021/NĐ-CP) và mức phạt tương ứng là từ 300.000 đồng đến 400.000 đồng. Do đó, việc công an xử phạt 400.000 đồng là đúng. AI cũng đã đưa ra lưu ý về văn bản pháp luật mới có hiệu lực từ 01/01/2025 (Nghị định 168/2024/NĐ-CP) và mức phạt mới, điều này thể hiện sự đầy đủ và cập nhật thông tin. Tuy nhiên, ground truth chỉ tập trung vào văn bản có hiệu lực từ 2025, trong khi câu hỏi của người dùng là về mức phạt hiện tại. AI đã xử lý tốt hơn bằng cách đưa ra cả hai thông tin. Về cấu trúc, AI đã xưng hô đúng với người dùng và trả lời trực tiếp vào câu hỏi.",3.18,3.08
+34,"Gần nhà chị B có dải phân cách, đối diện nhà chị B là điểm dừng xe bus, hôm trước, chị B có trèo qua dải phân cách và băng qua đường để sang đường phía bên kia và chị đã bị xử phạt hành chính, chị thắc mắc về vấn đề này vì chị chỉ trèo qua rào, trèo qua dải phân cách để băng sang qua đường mà tại sao lại bị xử lý vi phạm hành chính? Việc bị xử phạt vi phạm hành chính như vậy là có đúng với quy định hay không?","Khoản 7 Điều 24 Luật Đường bộ 2024 quy định: Dải phân cách được lắp đặt để phân chia phần đường xe chạy thành hai chiều riêng biệt hoặc để phân chia phần đường dành cho xe cơ giới và xe thô sơ hoặc của nhiều loại xe khác nhau trên cùng một chiều đường.
+Điểm c Khoản 1 Điều 30 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định người đi bộ không được vượt qua dải phân cách, đu, bám vào phương tiện giao thông đường bộ đang di chuyển; khi mang, vác vật cồng kềnh phải bảo đảm an toàn và không gây trở ngại cho người và phương tiện tham gia giao thông đường bộ.
+Điểm a Khoản 1 Điều 10 Nghị định 168/2024/NĐ-CP quy định xử phạt người đi bộ vi phạm quy tắc giao thông đường bộ: Phạt tiền từ 150.000 đồng đến 250.000 đồng đối với người đi bộ không đi đúng phần đường quy định; vượt qua dải phân cách; đi qua đường không đúng nơi quy định; đi qua đường không có tín hiệu bằng tay theo quy định.
+Như vậy, hành vi trèo hàng rào, vượt qua giải phân cách của bạn là hành vi trái với quy định của pháp luật và việc bị xử phạt vi phạm hành chính là hoàn toàn đúng với quy định của pháp luật hiện hành, theo đó sẽ bị phạt tiền từ 150.000 đồng đến 250.000 đồng.","Dựa trên dữ liệu pháp luật hiện tại, việc chị B trèo qua dải phân cách và băng qua đường là hành vi vi phạm quy tắc giao thông đường bộ và việc chị bị xử phạt hành chính là đúng quy định.
+
+Căn cứ pháp lý:
+*   Điểm c, Khoản 1, Điều 30 Luật Giao thông đường bộ 36/2024/QH15 (Hiệu lực: 2025-01-01) quy định: ""Người đi bộ phải tuân thủ các quy định sau đây: Không được vượt qua dải phân cách, đu, bám vào phương tiện giao thông đường bộ đang di chuyển; khi mang, vác vật cồng kềnh phải bảo đảm an toàn và không gây trở ngại cho người và phương tiện tham gia giao thông đường bộ.""
+*   Điểm a, Khoản 1, Điều 10 Nghị định 168/2024/NĐ-CP (Hiệu lực: 2025-01-01) quy định: ""Phạt tiền từ 150.000 đồng đến 250.000 đồng đối với người đi bộ thực hiện một trong các hành vi vi phạm sau đây: Không đi đúng phần đường quy định; vượt qua dải phân cách; đi qua đường không đúng nơi quy định; đi qua đường không có tín hiệu bằng tay theo quy định;""
+
+Kết luận:
+Chị B đã vi phạm quy định về việc không được vượt qua dải phân cách khi tham gia giao thông đường bộ. Do đó, chị B sẽ bị phạt tiền từ 150.000 đồng đến 250.000 đồng. Việc xử phạt hành chính đối với chị B là hoàn toàn đúng với quy định của pháp luật.",0.5201,0.6396,0.6953,2.0,2.0,2.0,2.0,2.0,10.0,"AI trả lời đúng bản chất pháp lý, xác định hành vi của chị B là vi phạm và việc xử phạt là đúng quy định. AI trích dẫn chính xác các điều luật liên quan từ Luật Giao thông đường bộ 36/2024/QH15 và Nghị định 168/2024/NĐ-CP, bao gồm cả Điều, Khoản, Điểm và hiệu lực của văn bản. AI nêu đầy đủ mức phạt tiền theo quy định. AI không bịa đặt nội dung điều luật. AI trả lời trực tiếp vào trọng tâm câu hỏi, xác nhận việc xử phạt là đúng và giải thích rõ ràng, đồng thời xưng hô đúng ngữ cảnh với nhân vật chị B.",2.29,1.83
+35,"Anh Cao Hữu D vừa mới dưới quê lên thành phố để trở lại làm việc, do đoạn đường vắng anh D chạy nhanh bị Cảnh sát giao thông bắn tốc độ 60/50 và đã bị lập biên bản. Anh muốn hỏi theo quy định pháp luật, người đi xe máy sẽ bị phạt như thế nào nếu điều khiển xe chạy quá tốc độ quy định? Có bị trừ điểm giấy phép lái xe không?","Căn cứ Điểm a Khoản 4 Điều 7 Nghị đinh 168/2024/NĐ-CP quy định phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với người điều khiển xe thực hiện một trong các hành vi vi phạm sau đây điều khiển xe chạy quá tốc độ quy định từ 10 km/h đến 20 km/h.
+Theo đó, hành vi của anh D sẽ bị phạt từ 800.000 đồng đến 1.000.000 đồng, đến ngày hẹn trong biên bản xử phạt, anh D đến đơn vị lập biên bản xử phạt để nộp phạt. Trường hợp của anh D sẽ không bị trừ điểm giấy phép lái xe.","Chào anh Cao Hữu D,
+
+Dựa trên thông tin anh cung cấp và các văn bản pháp luật hiện hành có hiệu lực vào ngày 2026-05-20, hành vi điều khiển xe máy chạy quá tốc độ quy định sẽ bị xử phạt như sau:
+
+**1. Mức phạt tiền:**
+
+Căn cứ theo Điểm b, Khoản 2, Điều 7 Nghị định 168/2024/NĐ-CP:
+*   Anh D đã điều khiển xe máy chạy quá tốc độ quy định từ 05 km/h đến dưới 10 km/h (60 km/h - 50 km/h = 10 km/h).
+*   Anh D sẽ bị phạt tiền từ 400.000 đồng đến 600.000 đồng.
+
+**2. Trừ điểm giấy phép lái xe:**
+
+Văn bản pháp luật được cung cấp không quy định về việc trừ điểm giấy phép lái xe đối với hành vi điều khiển xe máy chạy quá tốc độ quy định từ 05 km/h đến dưới 10 km/h.
+
+**Lưu ý:** Nghị định 168/2024/NĐ-CP sẽ có hiệu lực từ ngày 01/01/2025.",0.1353,0.3744,0.4851,0.0,0.0,1.0,0.0,1.5,2.5,"AI đã xác định sai mức độ vượt quá tốc độ. Đề bài cho là 60/50, tức là vượt 10km/h. AI lại tính là vượt từ 05 km/h đến dưới 10 km/h, dẫn đến việc áp dụng sai điều luật và mức phạt. Ground truth đã xác định đúng là vượt 10km/h và áp dụng Điểm a Khoản 4 Điều 7 Nghị định 168/2024/NĐ-CP. AI cũng đã trích dẫn sai điểm b khoản 2 điều 7, trong khi ground truth trích dẫn đúng điểm a khoản 4 điều 7. Về việc trừ điểm giấy phép lái xe, cả AI và ground truth đều kết luận là không bị trừ điểm, nhưng AI lại không nêu rõ lý do. AI đã xưng hô đúng với người dùng và có cấu trúc trả lời rõ ràng.",2.26,2.81
+36,"Khi gặp xe buýt đang dừng đón, trả khách, người điều khiển xe mô tô phải xử lý như thế nào dưới đây?","Căn cứ theo điểm i khoản 3 Điều 12 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định như sau:
+3. Người điều khiển phương tiện tham gia giao thông đường bộ phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp sau đây:
+i) Điểm dừng xe, đỗ xe trên đường bộ có khách đang lên, xuống xe;
+Theo đó, khi gặp xe buýt đang dừng đón, trả khách, người điều khiển xe mô tô phải quan sát, giảm tốc độ đi qua xe buýt hoặc dừng lại để bảo đảm an toàn.","Dựa trên dữ liệu pháp luật hiện tại, tôi chưa tìm thấy đủ thông tin để trả lời chính xác câu hỏi này.",0.0003,0.1925,0.0322,0.0,0.0,0.0,2.0,0.0,2.0,"AI trả lời rằng không tìm thấy đủ thông tin để trả lời chính xác câu hỏi này. Trong khi đó, ground truth đã cung cấp đầy đủ thông tin từ văn bản pháp luật có hiệu lực từ 2025-01-01 (Luật Trật tự, an toàn giao thông đường bộ 2024) để trả lời câu hỏi. Do đó, AI hoàn toàn không trả lời được câu hỏi, dẫn đến điểm 0 cho tất cả các tiêu chí.",1.31,1.69
+37,"Theo Luật Phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu, bia khi tham gia giao thông?","Căn cứ theo Điều 21 Luật Phòng, chống tác hại của rượu, bia 2019 quy định về phòng ngừa tai nạn giao thông liên quan đến sử dụng rượu, bia như sau:
+1. Người điều khiển phương tiện giao thông không uống rượu, bia trước và trong khi tham gia giao thông.
+Theo đó, trước và trong khi tham gia giao thông, người điều khiển phương tiện giao thông không uống rượu, bia.
+Ngoài ra, tại Điều 5 Luật Phòng, chống tác hại của rượu, bia 2019 quy định về các hành vi bị nghiêm cấm trong phòng, chống tác hại của rượu, bia như sau:
+6. Điều khiển phương tiện giao thông mà trong máu hoặc hơi thở có nồng độ cồn.
+Như vậy, theo Luật Phòng chống tác hại của rượu bia, đối tượng bị cấm sử dụng rượu bia khi tham gia giao thông gồm người điều khiển xe ô tô, xe mô tô, xe đạp, xe gắn máy.","Căn cứ theo Khoản 6, Điều 5 Luật Phòng, chống tác hại của rượu, bia 44/2019/QH14, hành vi ""Điều khiển phương tiện giao thông mà trong máu hoặc hơi thở có nồng độ cồn"" là hành vi bị nghiêm cấm.
+
+Ngoài ra, Khoản 1, Điều 21 Luật Phòng, chống tác hại của rượu, bia 44/2019/QH14 quy định: ""Người điều khiển phương tiện giao thông không uống rượu, bia trước và trong khi tham gia giao thông.""
+
+Như vậy, theo Luật Phòng, chống tác hại của rượu, bia, **người điều khiển phương tiện giao thông** là đối tượng bị cấm sử dụng rượu, bia khi tham gia giao thông.",0.4781,0.5606,0.6085,2.0,2.0,1.5,2.0,2.0,9.5,"AI trả lời đúng bản chất pháp lý, xác định đúng đối tượng bị cấm là 'người điều khiển phương tiện giao thông'. AI trích dẫn chính xác các điều luật liên quan (Khoản 6 Điều 5 và Khoản 1 Điều 21 của Luật Phòng, chống tác hại của rượu, bia 44/2019/QH14). Tuy nhiên, câu trả lời của AI chưa đầy đủ bằng ground truth khi ground truth có bổ sung thêm ví dụ cụ thể về các loại phương tiện (xe ô tô, xe mô tô, xe đạp, xe gắn máy) mà AI không đề cập. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, đi thẳng vào trọng tâm câu hỏi.",1.49,1.88
+38,Khổ giới hạn của đường bộ được hiểu như thế nào là đúng?,"Căn cứ theo Khoản 2 Điều 27 Luật Đường bộ 2024 quy định về tải trọng và khổ giới hạn của đường bộ:
+Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về chiều rộng, chiều cao của đường bộ để các xe, bao gồm cả hàng hóa xếp trên xe đi qua được an toàn và được xác định theo quy chuẩn, tiêu chuẩn kỹ thuật của đường bộ.","Căn cứ theo Khoản 2, Điều 27, Luật Đường bộ 35/2024/QH15, có hiệu lực từ ngày 01/01/2025, khổ giới hạn của đường bộ được hiểu như sau:
+
+Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về chiều rộng, chiều cao của đường bộ để các xe, bao gồm cả hàng hoá xếp trên xe đi qua được an toàn và được xác định theo quy chuẩn, tiêu chuẩn kỹ thuật của đường bộ.",0.7276,0.8899,0.8908,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời chính xác bản chất pháp lý của câu hỏi, định nghĩa khổ giới hạn của đường bộ đúng như trong Khoản 2 Điều 27 Luật Đường bộ 2024. AI đã trích dẫn chính xác điều luật, bao gồm số khoản, số điều và tên văn bản pháp luật cùng với hiệu lực. Câu trả lời của AI đầy đủ thông tin theo yêu cầu của câu hỏi. AI không bịa đặt bất kỳ nội dung điều luật nào. AI đã trả lời trực tiếp vào trọng tâm câu hỏi của người dùng.",1.27,1.67
+39,Khi nào được phục hồi điểm giấy phép lái xe?,"Căn cứ vào khoản 2 và khoản 3 Điều 58 Luật Trật tự, an toàn giao thông đường bộ 2024 có quy định như sau:
+2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.
+3. Trường hợp giấy phép lái xe bị trừ hết điểm thì người có giấy phép lái xe không được điều khiển phương tiện tham gia giao thông đường bộ theo giấy phép lái xe đó. Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ theo quy định tại khoản 7 Điều 61 của Luật này do lực lượng Cảnh sát giao thông tổ chức, có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.
+Như vậy, căn cứ theo quy định trên thì điểm giấy phép lái xe được phục hồi như sau:
+- Trường hợp giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong vòng 12 tháng kể từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.
+- Trường hợp giấy phép lái xe bị trừ hết điểm: Người vi phạm phải chờ ít nhất 06 tháng và kiểm tra lại kiến thức pháp luật về trật tự, an toàn giao thông đường bộ. Nếu có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.
+Lưu ý: Trong thời gian bị trừ hết điểm, người có giấy phép lái xe không được phép điều khiển phương tiện giao thông theo loại giấy phép đã đăng ký.","Căn cứ theo Điều 58 Luật Giao thông đường bộ số 36/2024/QH15 và Điều 51 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025), việc phục hồi điểm giấy phép lái xe được quy định như sau:
+
+**1. Trường hợp giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất:**
+
+*   **Thời điểm phục hồi:** Khi đủ thời hạn 12 tháng, kể từ ngày bị trừ điểm giấy phép lái xe gần nhất, dữ liệu điểm giấy phép lái xe sẽ được tự động phục hồi đủ 12 điểm (gồm cả giấy phép lái xe đang trong thời hạn bị tước quyền sử dụng) và cập nhật tự động trong Cơ sở dữ liệu về xử lý vi phạm hành chính về trật tự, an toàn giao thông đường bộ.
+    *Căn cứ theo Điểm a, Khoản 2, Điều 51 Nghị định 168/2024/NĐ-CP*
+    *Căn cứ theo Khoản 2, Điều 58 Luật Giao thông đường bộ 36/2024/QH15*
+*   **Thông báo phục hồi:** Ngay sau khi dữ liệu điểm giấy phép lái xe được phục hồi, Cơ sở dữ liệu về xử lý vi phạm hành chính về trật tự, an toàn giao thông đường bộ sẽ tự động chuyển thông tin thông báo cho người được phục hồi điểm giấy phép lái xe biết việc phục hồi điểm. Việc thông báo này thực hiện bằng phương thức điện tử thông qua tài khoản của công dân đăng ký trên Cổng dịch vụ công, Ứng dụng giao thông trên thiết bị di động; đồng thời cập nhật thông tin về giấy phép lái xe được phục hồi điểm trên Trang thông tin điện tử của Cục Cảnh sát giao thông. Trường hợp giấy phép lái xe được thể hiện dưới hình thức thông điệp dữ liệu thì thực hiện cập nhật trạng thái phục hồi điểm giấy phép lái xe trong căn cước điện tử, tài khoản định danh điện tử trên ứng dụng định danh quốc gia.
+    *Căn cứ theo Điểm b, Điểm c, Khoản 2, Điều 51 Nghị định 168/2024/NĐ-CP*
+
+**2. Trường hợp giấy phép lái xe bị trừ hết điểm:**
+
+*   **Điều kiện phục hồi:** Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ do lực lượng Cảnh sát giao thông tổ chức.
+    *Căn cứ theo Khoản 3, Điều 58 Luật Giao thông đường bộ 36/2024/QH15*
+*   **Thời điểm phục hồi:** Sau khi người có giấy phép lái xe bị trừ hết điểm tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ và đạt yêu cầu, kết quả kiểm tra được cập nhật vào phần mềm kiểm tra kiến thức pháp luật về trật tự, an toàn giao thông đường bộ và đồng bộ dữ liệu với Cơ sở dữ liệu về xử lý vi phạm hành chính về trật tự, an toàn giao thông đường bộ, dữ liệu điểm giấy phép lái xe sẽ được phục hồi đủ 12 điểm và cập nhật tự động trong Cơ sở dữ liệu về xử lý vi phạm hành chính về trật tự, an toàn giao thông đường bộ.
+    *Căn cứ theo Điểm a, Khoản 3, Điều 51 Nghị định 168/2024/NĐ-CP*
+*   **Thông báo phục hồi:** Ngay sau khi dữ liệu điểm giấy phép lái xe được phục hồi đủ 12 điểm thì người có thẩm quyền (Cục trưởng Cục Cảnh sát giao thông, Trưởng phòng Cảnh sát giao thông nơi tổ chức kiểm tra kiến thức pháp luật về trật tự, an toàn giao thông đường bộ) thông báo cho người được phục hồi điểm giấy phép lái xe biết việc phục hồi điểm. Việc thông báo này thực hiện bằng văn bản theo mẫu quy định của Bộ trưởng Bộ Công an và được giao trực tiếp hoặc gửi qua dịch vụ bưu chính hoặc thực hiện thông báo bằng phương thức điện tử thông qua tài khoản của công dân đăng ký trên Cổng dịch vụ công, Ứng dụng giao thông trên thiết bị di động; đồng thời cập nhật thông tin về giấy phép lái xe được phục hồi điểm trên Trang thông tin điện tử của Cục Cảnh sát giao thông. Trường hợp giấy phép lái xe được thể hiện dưới hình thức thông điệp dữ liệu thì cơ quan, người có thẩm quyền thực hiện cập nhật trạng thái phục hồi điểm giấy phép lái xe trong căn cước điện tử, tài khoản định danh điện tử trên ứng dụng định danh quốc gia.
+    *Căn cứ theo Điểm b, Điểm c, Khoản 3, Điều 51 Nghị định 168/2024/NĐ-CP*
+    *Căn cứ theo Điểm b, Khoản 1, Điều 51 Nghị định 168/2024/NĐ-CP*",0.1965,0.3706,0.5278,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời chính xác bản chất pháp lý về các trường hợp được phục hồi điểm giấy phép lái xe, bao gồm cả hai trường hợp: chưa bị trừ hết điểm và bị trừ hết điểm. Các mốc thời gian (12 tháng, 6 tháng) đều khớp với ground truth. AI đã trích dẫn chính xác các điều luật, bao gồm cả Luật Giao thông đường bộ và Nghị định 168/2024/NĐ-CP, nêu rõ Điều, Khoản, Điểm. Câu trả lời của AI đầy đủ hơn ground truth ở chỗ nó còn đề cập đến trình tự, thủ tục và thẩm quyền phục hồi điểm, điều mà ground truth không đi sâu vào. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, chia thành hai trường hợp chính và giải thích chi tiết từng trường hợp, đi thẳng vào trọng tâm câu hỏi.",4.42,2.09
+40,"Khi có xe xin vượt, người lái xe mô tô xử lý như thế nào nếu đủ điều kiện an toàn cho xe phía sau vượt?","Căn cứ theo Điều 14 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định về vượt xe và nhường đường cho xe xin vượt như sau:
+4. Khi có xe xin vượt, người điều khiển phương tiện tham gia giao thông đường bộ phía trước phải quan sát phần đường phía trước, nếu đủ điều kiện an toàn thì phải giảm tốc độ, có tín hiệu rẽ phải để báo hiệu cho người điều khiển phương tiện tham gia giao thông đường bộ phía sau biết được vượt và đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được cản trở đối với xe xin vượt.
+Trường hợp có chướng ngại vật hoặc không đủ điều kiện an toàn thì người điều khiển phương tiện tham gia giao thông đường bộ phía trước có tín hiệu rẽ trái để báo hiệu cho người điều khiển phương tiện tham gia giao thông đường bộ phía sau biết là chưa được vượt.
+Như vậy, khi có xe xin vượt, nếu đủ điều kiện an toàn cho xe phía sau vượt thì người lái xe mô tô giảm tốc độ, có tín hiệu rẽ phải để báo hiệu cho người điều khiển phương tiện tham gia giao thông đường bộ phía sau biết được vượt và đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được cản trở đối với xe xin vượt.","Căn cứ theo Khoản 4, Điều 14, Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), khi có xe xin vượt và đủ điều kiện an toàn, người lái xe mô tô phải xử lý như sau:
+
+*   Giảm tốc độ.
+*   Có tín hiệu rẽ phải để báo hiệu cho xe phía sau biết được vượt.
+*   Đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua.
+*   Không được cản trở đối với xe xin vượt.",0.1118,0.4335,0.3266,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý, liệt kê đầy đủ các hành động mà người lái xe mô tô cần thực hiện khi có xe xin vượt và đủ điều kiện an toàn. AI cũng trích dẫn đúng điều luật và văn bản pháp luật. Câu trả lời không bịa đặt và đi thẳng vào trọng tâm câu hỏi.",1.27,1.89
+41,"Người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình trước vạch dừng xe tại đường ngang, cầu chung đường sắt khi có báo hiệu nào?","Căn cứ Điều 24 Luật trật tự, an toàn giao thông đường bộ 2024 quy định như sau:
+1. Khi có hiệu lệnh của nhân viên gác chắn, đèn đỏ sáng nhấp nháy, chuông kêu, chắn đường bộ đang dịch chuyển hoặc đã đóng, người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình, trước vạch dừng xe.
+Như vậy, người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình trước vạch dừng xe tại đường ngang, cầu chung đường sắt khi có báo hiệu:
+- Hiệu lệnh của nhân viên gác chắn.
+- Đèn đỏ sáng nhấp nháy, chuông kêu.
+- Chắn đường bộ đang dịch chuyển hoặc đã đóng.","Căn cứ theo Điều 24 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình, trước vạch dừng xe tại đường ngang, cầu chung đường sắt khi có các báo hiệu sau:
+
+*   Khi có hiệu lệnh của nhân viên gác chắn, đèn đỏ sáng nhấp nháy, chuông kêu, chắn đường bộ đang dịch chuyển hoặc đã đóng.
+*   Khi tới đường ngang không có người gác, chắn đường bộ, chuông, đèn tín hiệu, người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình, trước vạch dừng xe và quan sát hai phía, khi không có phương tiện giao thông đường sắt tới mới được đi qua.",0.579,0.5506,0.6528,1.5,1.5,1.5,2.0,1.5,8.0,"AI đã trả lời đúng bản chất pháp lý của câu hỏi, liệt kê các báo hiệu mà người tham gia giao thông đường bộ phải dừng lại. Tuy nhiên, AI đã trích dẫn thêm Khoản 2 Điều 24, trong khi câu hỏi chỉ hỏi về các báo hiệu ""khi có báo hiệu nào?"" chứ không phải ""khi không có báo hiệu nào?"". Ground truth đã loại bỏ trường hợp ""không có người gác, chắn đường bộ, chuông, đèn tín hiệu"" vì đây không phải là ""báo hiệu"" mà là sự vắng mặt của báo hiệu. Do đó, AI đã đưa ra một thông tin không hoàn toàn phù hợp với ngữ cảnh câu hỏi, mặc dù thông tin đó đúng theo luật. Về cấu trúc, AI đã trả lời trực tiếp vào câu hỏi.",1.56,2.2
+42,"Khi đang lái xe, phía trước có một xe cứu thương đang phát tín hiệu ưu tiên, người lái xe có được phép vượt hay không?","Căn cứ theo Điều 27 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định về xe ưu tiên như sau:
+1. Xe ưu tiên gồm xe chữa cháy của Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ và xe chữa cháy của các lực lượng khác được huy động đi làm nhiệm vụ chữa cháy; xe của lực lượng quân sự, công an và kiểm sát đi làm nhiệm vụ khẩn cấp; đoàn xe có xe Cảnh sát giao thông dẫn đường; xe cứu thương đi làm nhiệm vụ cấp cứu; xe hộ đê đi làm nhiệm vụ; xe đi làm nhiệm vụ cứu nạn, cứu hộ, khắc phục sự cố thiên tai, dịch bệnh hoặc xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật; đoàn xe tang.
+3. Xe ưu tiên quy định tại các điểm a, b, c và d khoản 2 Điều này phải có tín hiệu ưu tiên theo quy định của pháp luật. Màu của tín hiệu đèn ưu tiên được quy định như sau:
+a) Xe chữa cháy của Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ và xe chữa cháy của các lực lượng khác được huy động đi làm nhiệm vụ chữa cháy, xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp, xe cứu thương đang làm nhiệm vụ cấp cứu có đèn nhấp nháy màu đỏ;
+Căn cứ theo khoản 6 Điều 14 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định như sau:
+6. Không được vượt xe trong trường hợp sau đây:
+g) Khi gặp xe ưu tiên;
+Theo đó, xe cứu thương đang phát tín hiệu ưu tiên là một trong những loại xe ưu tiên mà theo quy định thì không được vượt xe trong trường hợp gặp xe ưu tiên.","Căn cứ theo Khoản 5 Điều 27 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025) quy định:
+Khi có tín hiệu của xe ưu tiên, người và phương tiện tham gia giao thông đường bộ phải giảm tốc độ, đi sát lề đường bên phải hoặc dừng lại để nhường đường, trạm thu phí phải ưu tiên cho xe ưu tiên qua trạm trong mọi tình huống, không được gây cản trở.
+
+Như vậy, khi đang lái xe và phía trước có xe cứu thương đang phát tín hiệu ưu tiên, người lái xe không được phép vượt mà phải giảm tốc độ, đi sát lề đường bên phải hoặc dừng lại để nhường đường.
+
+Nếu người lái xe ô tô không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ, sẽ bị xử phạt theo quy định tại Điểm b Khoản 6 Điều 6 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025):
+Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe thực hiện hành vi không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ.
+
+Nếu người lái xe mô tô, xe gắn máy không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ, sẽ bị xử phạt theo quy định tại Điểm đ Khoản 7 Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025):
+Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng đối với người điều khiển xe thực hiện hành vi không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ.
+
+Nếu người lái xe máy chuyên dùng không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ, sẽ bị xử phạt theo quy định tại Điểm g Khoản 6 Điều 8 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025):
+Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với người điều khiển xe thực hiện hành vi không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ.",0.1167,0.3424,0.3262,1.5,1.0,1.5,2.0,2.0,8.0,"AI trả lời đúng bản chất pháp lý là không được phép vượt xe cứu thương đang phát tín hiệu ưu tiên. Tuy nhiên, AI không trích dẫn đúng điều luật cấm vượt xe ưu tiên (Điều 14 Khoản 6 Điểm g Luật Trật tự, an toàn giao thông đường bộ 2024) mà chỉ trích dẫn điều luật yêu cầu nhường đường (Điều 27 Khoản 5). Do đó, tính chính xác pháp lý và trích dẫn chính xác bị ảnh hưởng. AI đã bổ sung các mức phạt cho từng loại phương tiện khi không nhường đường, điều này không có trong ground truth nhưng là thông tin hữu ích và không sai. AI không bịa đặt nội dung điều luật. Cấu trúc trả lời trực tiếp vào câu hỏi và giải thích rõ ràng.",3.1,2.53
+43,Thứ tự xuống phà như thế nào là đúng quy tắc giao thông?,"Căn cứ theo khoản 3 Điều 23 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định về qua phà, qua cầu phao như sau:
+b) Khi xuống phà, xe cơ giới, xe máy chuyên dùng xuống trước, xe thô sơ, người đi bộ xuống sau; khi lên bến, người đi bộ lên trước, các phương tiện giao thông đường bộ lên sau theo hướng dẫn của người điều khiển giao thông.
+Như vậy, thứ tự xuống phà như sau là đúng quy tắc giao thông theo quy định pháp luật:
+Xe cơ giới, xe máy chuyên dùng xuống trước, xe thô sơ, người đi bộ xuống sau; khi lên bến, người đi bộ lên trước, các phương tiện giao thông đường bộ lên sau theo hướng dẫn của người điều khiển giao thông.","Căn cứ theo Điểm b, Khoản 3, Điều 23 Luật Giao thông đường bộ số 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), khi xuống phà, xe cơ giới, xe máy chuyên dùng xuống trước, xe thô sơ, người đi bộ xuống sau.",0.0772,0.3925,0.2345,2.0,2.0,1.5,2.0,2.0,9.5,"AI trả lời đúng bản chất pháp lý về thứ tự xuống phà. AI trích dẫn đúng điều luật và văn bản pháp luật. AI trả lời trực tiếp vào trọng tâm câu hỏi. Tuy nhiên, câu trả lời của AI chỉ đề cập đến thứ tự khi xuống phà mà chưa đề cập đến thứ tự khi lên bến, trong khi ground truth đã bao gồm cả hai trường hợp này. Do đó, tính đầy đủ của câu trả lời AI chưa đạt mức tối đa.",1.35,2.02
+44,Người lái xe sử dụng đèn như thế nào khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động?,"Căn cứ Điều 20 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định quy định sử dụng đèn:
+2. Người lái xe, người điều khiển xe máy chuyên dùng phải tắt đèn chiếu xa, bật đèn chiếu gần trong các trường hợp sau đây:
+a) Khi gặp người đi bộ qua đường;
+b) Khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động;
+c) Khi gặp xe đi ngược chiều, trừ trường hợp dải phân cách có khả năng chống chói;
+d) Khi chuyển hướng xe tại nơi đường giao nhau.
+Theo quy định trên, người lái xe phải tắt đèn chiếu xa, bật đèn chiếu gần khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động","Căn cứ theo Điểm b, Khoản 2, Điều 20 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025) quy định:
+
+Người lái xe, người điều khiển xe máy chuyên dùng phải tắt đèn chiếu xa, bật đèn chiếu gần khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động.
+
+Nếu người lái xe mô tô, xe gắn máy vi phạm quy tắc này, căn cứ theo Điểm h, Khoản 1, Điều 7 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025) sẽ bị phạt tiền từ 200.000 đồng đến 400.000 đồng.
+
+Nếu người lái xe ô tô vi phạm quy tắc này, căn cứ theo Điểm b, Khoản 3, Điều 6 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025) sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng.
+
+Nếu người điều khiển xe máy chuyên dùng vi phạm quy tắc này, căn cứ theo Điểm b, Khoản 3, Điều 8 Nghị định 168/2024/NĐ-CP (có hiệu lực từ ngày 01/01/2025) sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng.",0.2348,0.4687,0.4121,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý, trích dẫn đúng điều luật và văn bản pháp luật có hiệu lực. AI đã bổ sung thêm các mức phạt cho từng loại phương tiện, điều này làm cho câu trả lời đầy đủ hơn so với ground truth. Các mức phạt được trích dẫn từ Nghị định 168/2024/NĐ-CP là chính xác và phù hợp với hành vi vi phạm. AI không bịa đặt nội dung điều luật và trả lời trực tiếp vào trọng tâm câu hỏi.",2.73,1.84
+45,"Người lái xe mô tô hai bánh, xe gắn máy được phép chở tối đa hai người trong những trường hợp nào?","Căn cứ Điều 33 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định người lái xe, người được chở, hàng hóa xếp trên xe mô tô, xe gắn máy:
+Điều 33. Người lái xe, người được chở, hàng hóa xếp trên xe mô tô, xe gắn máy
+1. Người lái xe mô tô hai bánh, xe gắn máy chỉ được chở một người, trừ những trường hợp sau thì được chở tối đa hai người:
+a) Chở người bệnh đi cấp cứu;
+b) Áp giải người có hành vi vi phạm pháp luật;
+c) Trẻ em dưới 12 tuổi;
+d) Người già yếu hoặc người khuyết tật.","Căn cứ theo Khoản 1, Điều 33, Chương II, Văn bản 36/2024/QH15 (có hiệu lực từ 2025-01-01), người lái xe mô tô hai bánh, xe gắn máy chỉ được chở một người, trừ những trường hợp sau thì được chở tối đa hai người:
+
+*   Chở người bệnh đi cấp cứu;
+*   Áp giải người có hành vi vi phạm pháp luật;
+*   Trẻ em dưới 12 tuổi;
+*   Người già yếu hoặc người khuyết tật.",0.4142,0.7097,0.5663,2.0,2.0,2.0,2.0,2.0,10.0,"AI trả lời chính xác các trường hợp được phép chở tối đa hai người trên xe mô tô hai bánh, xe gắn máy theo đúng quy định tại Khoản 1 Điều 33 của Văn bản 36/2024/QH15. AI trích dẫn đầy đủ và chính xác các điểm a, b, c, d của khoản này. Câu trả lời của AI không bịa đặt thông tin và đi thẳng vào trọng tâm câu hỏi.",1.69,1.88
+46,"Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người lái xe phải nhường đường như thế nào là đúng quy tắc giao thông?","Căn cứ theo Điều 22 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định về nhường đường tại nơi đường giao nhau như sau:
+3. Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, phải nhường đường cho xe đi đến từ bên trái.
+Như vậy, tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người lái xe phải nhường đường cho xe đi đến từ bên trái.","Căn cứ theo Khoản 3, Điều 22 Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025):
+
+Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người lái xe phải nhường đường cho xe đi đến từ bên trái.",0.3308,0.6441,0.5134,2.0,2.0,2.0,2.0,2.0,10.0,"AI trả lời đúng bản chất pháp lý, trích dẫn chính xác điều luật liên quan đến câu hỏi. Câu trả lời đầy đủ và không bịa đặt. Cấu trúc câu trả lời trực tiếp vào trọng tâm câu hỏi.",1.56,1.89
+47,Xe cơ giới gồm những xe gì?,"Căn cứ khoản 1 Điều 34 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định xe cơ giới gồm:
+- Xe ô tô gồm: xe có từ bốn bánh trở lên chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, không chạy trên đường ray, dùng để chở người, hàng hóa, kéo rơ moóc, kéo sơ mi rơ moóc hoặc được kết cấu để thực hiện chức năng, công dụng đặc biệt, có thể được nối với đường dây dẫn điện; xe ba bánh có khối lượng bản thân lớn hơn 400 kg; xe ô tô không bao gồm xe chở người bốn bánh có gắn động cơ và xe chở hàng bốn bánh có gắn động cơ;
+- Rơ moóc là xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ, được kéo bởi xe ô tô; phần chủ yếu của khối lượng toàn bộ rơ moóc không đặt lên xe kéo;
+- Sơ mi rơ moóc là xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ; được kéo bởi xe ô tô đầu kéo và có một phần đáng kể khối lượng toàn bộ đặt lên xe ô tô đầu kéo;
+- Xe chở người bốn bánh có gắn động cơ là xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở người, vận tốc thiết kế không lớn hơn 30 km/h, số người cho phép chở tối đa 15 người (không kể người lái xe);
+- Xe chở hàng bốn bánh có gắn động cơ là xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở hàng, có phần động cơ và thùng hàng lắp trên cùng một khung xe, có tối đa hai hàng ghế và chở tối đa 05 người (không kể người lái xe), vận tốc thiết kế không lớn hơn 60 km/h và khối lượng bản thân không lớn hơn 550 kg; trường hợp xe sử dụng động cơ điện thì có công suất động cơ không lớn hơn 15 kW;
+- Xe mô tô gồm: xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, trừ xe gắn máy; đối với xe ba bánh thì khối lượng bản thân không lớn hơn 400 kg;
+- Xe gắn máy là xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có vận tốc thiết kế không lớn hơn 50 km/h; nếu động cơ dẫn động là động cơ nhiệt thì dung tích làm việc hoặc dung tích tương đương không lớn hơn 50 cm3; nếu động cơ dẫn động là động cơ điện thì công suất của động cơ không lớn hơn 04 kW; xe gắn máy không bao gồm xe đạp máy;
+- Xe tương tự các loại xe quy định tại khoản này.","Căn cứ theo Điểm a, Khoản 1, Điều 34, Chương III, Luật Giao thông đường bộ 36/2024/QH15 (có hiệu lực từ 2025-01-01), xe cơ giới bao gồm:
+
+*   Xe ô tô gồm: xe có từ bốn bánh trở lên chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, không chạy trên đường ray, dùng để chở người, hàng hóa, kéo rơ moóc, kéo sơ mi rơ moóc hoặc được kết cấu để thực hiện chức năng, công dụng đặc biệt, có thể được nối với đường dây dẫn điện; xe ba bánh có khối lượng bản thân lớn hơn 400 kg; xe ô tô không bao gồm xe chở người bốn bánh có gắn động cơ và xe chở hàng bốn bánh có gắn động cơ.
+*   Rơ moóc là xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ, được kéo bởi xe ô tô; phần chủ yếu của khối lượng toàn bộ rơ moóc không đặt lên xe kéo.
+*   Sơ mi rơ moóc là xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ; được kéo bởi xe ô tô đầu kéo và có một phần đáng kể khối lượng toàn bộ đặt lên xe ô tô đầu kéo.
+*   Xe chở người bốn bánh có gắn động cơ là xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở người, vận tốc thiết kế không lớn hơn 30 km/h, số người cho phép chở tối đa 15 người (không kể người lái xe).
+*   Xe chở hàng bốn bánh có gắn động cơ là xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở hàng, có phần động cơ và thùng hàng lắp trên cùng một khung xe, có tối đa hai hàng ghế và chở tối đa 05 người (không kể người lái xe), vận tốc thiết kế không lớn hơn 60 km/h và khối lượng bản thân không lớn hơn 550 kg; trường hợp xe sử dụng động cơ điện thì có công suất động cơ không lớn hơn 15 kW.
+*   Xe mô tô gồm: xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, trừ xe gắn máy; đối với xe ba bánh thì khối lượng bản thân không lớn hơn 400 kg.
+*   Xe gắn máy là xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có vận tốc thiết kế không lớn hơn 50 km/h; nếu động cơ dẫn động là động cơ nhiệt thì dung tích làm việc hoặc dung tích tương đương không lớn hơn 50 cm3; nếu động cơ dẫn động là động cơ điện thì công suất của động cơ không lớn hơn 04 kW; xe gắn máy không bao gồm xe đạp máy.
+*   Xe tương tự các loại xe quy định tại khoản này.",0.9118,0.9825,0.9611,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời chính xác và đầy đủ các loại xe cơ giới theo quy định tại khoản 1 Điều 34 Luật Trật tự, an toàn giao thông đường bộ 2024. Các nội dung được liệt kê hoàn toàn trùng khớp với ground truth. AI cũng đã trích dẫn đúng điều luật và văn bản pháp luật. Cấu trúc câu trả lời rõ ràng, dễ hiểu, đi thẳng vào vấn đề.",2.49,1.6
+48,Phương tiện giao thông đường bộ gồm những loại nào?,"Căn cứ theo khoản 2 Điều 2 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định như sau:
+2. Phương tiện giao thông đường bộ là các loại xe, bao gồm: phương tiện giao thông cơ giới đường bộ (sau đây gọi là xe cơ giới), phương tiện giao thông thô sơ đường bộ (sau đây gọi là xe thô sơ), xe máy chuyên dùng và các loại xe tương tự.
+- Phương tiện giao thông cơ giới đường bộ.
+- Phương tiện giao thông thô sơ đường bộ, xe máy chuyên dùng và các loại xe tương tự.","Căn cứ theo Khoản 2 Điều 2 Luật Giao thông đường bộ số 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025), phương tiện giao thông đường bộ là các loại xe, bao gồm:
+* Phương tiện giao thông cơ giới đường bộ (sau đây gọi là xe cơ giới).
+* Phương tiện giao thông thô sơ đường bộ (sau đây gọi là xe thô sơ).
+* Xe máy chuyên dùng và các loại xe tương tự.
+
+Cụ thể, các loại phương tiện này được phân loại chi tiết tại Điều 34 Luật Giao thông đường bộ số 36/2024/QH15 (có hiệu lực từ ngày 01/01/2025) như sau:
+
+**1. Xe cơ giới bao gồm:**
+*   Xe ô tô:
+    *   Xe có từ bốn bánh trở lên chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, không chạy trên đường ray, dùng để chở người, hàng hóa, kéo rơ moóc, kéo sơ mi rơ moóc hoặc được kết cấu để thực hiện chức năng, công dụng đặc biệt, có thể được nối với đường dây dẫn điện.
+    *   Xe ba bánh có khối lượng bản thân lớn hơn 400 kg.
+    *   Xe ô tô không bao gồm xe chở người bốn bánh có gắn động cơ và xe chở hàng bốn bánh có gắn động cơ.
+*   Rơ moóc: Xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ, được kéo bởi xe ô tô; phần chủ yếu của khối lượng toàn bộ rơ moóc không đặt lên xe kéo.
+*   Sơ mi rơ moóc: Xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ; được kéo bởi xe ô tô đầu kéo và có một phần đáng kể khối lượng toàn bộ đặt lên xe ô tô đầu kéo.
+*   Xe chở người bốn bánh có gắn động cơ: Xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở người, vận tốc thiết kế không lớn hơn 30 km/h, số người cho phép chở tối đa 15 người (không kể người lái xe).
+*   Xe chở hàng bốn bánh có gắn động cơ: Xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở hàng, có phần động cơ và thùng hàng lắp trên cùng một khung xe, có tối đa hai hàng ghế và chở tối đa 05 người (không kể người lái xe), vận tốc thiết kế không lớn hơn 60 km/h và khối lượng bản thân không lớn hơn 550 kg; trường hợp xe sử dụng động cơ điện thì có công suất động cơ không lớn hơn 15 kW.
+*   Xe mô tô: Xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, trừ xe gắn máy; đối với xe ba bánh thì khối lượng bản thân không lớn hơn 400 kg.
+*   Xe gắn máy: Xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có vận tốc thiết kế không lớn hơn 50 km/h; nếu động cơ dẫn động là động cơ nhiệt thì dung tích làm việc hoặc dung tích tương đương không lớn hơn 50 cm3; nếu động cơ dẫn động là động suất của động cơ không lớn hơn 04 kW; xe gắn máy không bao gồm xe đạp máy.
+*   Xe tương tự các loại xe quy định tại khoản này.
+
+**2. Xe thô sơ bao gồm:**
+*   Xe đạp: Xe có ít nhất hai bánh và vận hành do sức người thông qua bàn đạp hoặc tay quay.
+*   Xe đạp máy, gồm cả xe đạp điện: Xe đạp có trợ lực từ động cơ, nguồn động lực từ động cơ bị ngắt khi người lái xe dừng đạp hoặc khi xe đạt tới tốc độ 25 km/h.
+*   Xe xích lô.
+*   Xe vật nuôi kéo.
+*   Xe lăn dùng cho người khuyết tật.
+*   Xe tương tự các loại xe quy định tại khoản này.
+
+**3. Xe máy chuyên dùng bao gồm:**
+*   Xe máy thi công.
+*   Xe máy nông nghiệp, lâm nghiệp.
+*   Máy kéo.
+*   Xe máy thực hiện chức năng, công dụng đặc biệt.
+*   Rơ moóc, sơ mi rơ moóc được kéo bởi máy kéo.
+*   Các loại xe đặc chủng sử dụng vào mục đích quốc phòng, an ninh có tham gia giao thông đường bộ.
+
+**4. Phương tiện giao thông thông minh** là xe cơ giới cho phép tự động hóa một phần hoặc toàn bộ hoạt động điều khiển phương tiện, xác định lộ trình và xử lý tình huống khi tham gia giao thông đường bộ. (Lưu ý: Khoản này đã được sửa đổi bởi Điểm a Khoản 5 Điều 7 Luật số 118/2025/QH15, có hiệu lực từ ngày 01/01/2026, theo đó: ""Phương tiện giao thông thông minh là phương tiện giao thông đường bộ mà toàn bộ việc điều khiển, duy trì hoạt động của phương tiện không cần có sự điều khiển trực tiếp của người lái trên phương tiện đó."")
+
+**5. Xe tương tự các loại xe cơ giới, xe thô sơ** được quản lý, sử dụng theo quy định đối với loại xe cơ giới, xe thô sơ đó.",0.0769,0.1753,0.3853,2.0,2.0,2.0,2.0,2.0,10.0,"AI đã trả lời đúng bản chất pháp lý, liệt kê đầy đủ các loại phương tiện giao thông đường bộ theo quy định của Luật Trật tự, an toàn giao thông đường bộ 2024. AI đã trích dẫn chính xác Điều 2 Khoản 2 và Điều 34 của Luật 36/2024/QH15. Câu trả lời của AI đầy đủ hơn ground truth khi đi sâu vào chi tiết phân loại từng loại phương tiện theo Điều 34, điều này là một điểm cộng vì nó cung cấp thông tin chi tiết và hữu ích cho người dùng. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, đi thẳng vào trọng tâm câu hỏi và cung cấp thông tin chi tiết một cách có hệ thống.",6.04,2.37
+49,"Việc sản xuất, sử dụng, mua, bán trái phép biển số xe có bị nghiêm
+cấm hay không?","Căn cứ theo khoản 17 Điều 9 Luật Trật tự, an toàn giao thông đường bộ 2024 có quy định về hành vi sản xuất trái phép biển số xe như sau:
+Điều 9. Các hành vi bị nghiêm cấm
+17. Sản xuất, sử dụng, mua, bán trái phép biển số xe; điều khiển xe cơ giới, xe máy chuyên dùng gắn biển số xe không do cơ quan nhà nước có thẩm quyền cấp, gắn biển số xe không đúng vị trí; bẻ cong, che lấp biển số xe; làm thay đổi chữ, số, màu sắc, hình dạng, kích thước của biển số xe.
+Như vậy, hành vi sản xuất trái phép biển số xe sẽ thuộc hành vi bị pháp luật nghiêm cấm theo quy định.
+Ngoài ra, việc điều khiển xe cơ giới, xe máy chuyên dùng gắn biển số xe không do cơ quan nhà nước có thẩm quyền cấp, gắn biển số xe không đúng vị trí; bẻ cong, che lấp biển số xe; làm thay đổi chữ, số, màu sắc, hình dạng, kích thước của biển số xe cũng sẽ thuộc những hành vi bị pháp luật nghiêm cấm.","Căn cứ theo Khoản 17, Điều 9 Luật Giao thông đường bộ số 36/2024/QH15, việc sản xuất, sử dụng, mua, bán trái phép biển số xe là hành vi bị nghiêm cấm.
+
+Ngoài ra, các hành vi sau đây cũng bị nghiêm cấm:
+*   Điều khiển xe cơ giới, xe máy chuyên dùng gắn biển số xe không do cơ quan nhà nước có thẩm quyền cấp, gắn biển số xe không đúng vị trí.
+*   Bẻ cong, che lấp biển số xe.
+*   Làm thay đổi chữ, số, màu sắc, hình dạng, kích thước của biển số xe.",0.2999,0.6036,0.5074,2.0,2.0,2.0,2.0,2.0,10.0,"AI trả lời đúng bản chất pháp lý, khẳng định việc sản xuất, sử dụng, mua, bán trái phép biển số xe là hành vi bị nghiêm cấm. AI trích dẫn chính xác điều luật và văn bản pháp luật liên quan (Khoản 17, Điều 9 Luật Giao thông đường bộ số 36/2024/QH15). Câu trả lời của AI đầy đủ các hành vi bị nghiêm cấm liên quan đến biển số xe như trong ground truth. AI không bịa đặt nội dung điều luật. Cấu trúc câu trả lời rõ ràng, đi thẳng vào vấn đề và liệt kê các hành vi bị nghiêm cấm một cách mạch lạc.",1.48,1.9
+50,"Hiện nay, khi giao thông trên đường, chị Z bắt gặp rất nhiều tình huống chở chó trên xe, hay dắt chó chạy theo xe máy. Chị Z muốn hỏi theo Nghị định mới về xử phạt vi phạm giao thông thì khi chạy xe máy mà có dẫn theo chó hoặc súc vật khác có bị xử phạt không? Nếu có thì mức phạt bao nhiêu ạ?","Theo khoản 3 Điều 33 Luật Trật tự, an toàn giao thông đường bộ 2024 quy định người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi sau đây:
+đ) Sử dụng xe để kéo, đẩy xe khác, vật khác, dẫn dắt vật nuôi, mang, vác và chở vật cồng kềnh; chở người đứng trên xe, giá đèo hàng hoặc ngồi trên tay lái; xếp hàng hóa trên xe quá giới hạn quy định;
+Điểm b Khoản 2 Điều 10 Nghị định 168/2024/NĐ-CP quy định phạt tiền từ 400.000 đồng đến 600.000 đồng đối với hành vi dẫn dắt vật nuôi chạy theo khi đang điều khiển hoặc ngồi trên phương tiện giao thông đường bộ.
+Như vậy, theo quy định trên thì người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được sử dụng xe để dẫn dắt vật nuôi khi tham gia giao thông đường bộ và sẽ bị xử phạt, mức phạt tiền từ 400.000 đồng đến 600.000 đồng.","Dựa trên dữ liệu pháp luật hiện tại và ngày hiện tại là 2026-05-20, Nghị định 168/2024/NĐ-CP sẽ có hiệu lực từ 2025-01-01 và đã bãi bỏ các điều khoản liên quan trong Nghị định 100/2019/NĐ-CP và các sửa đổi của Nghị định 123/2021/NĐ-CP. Do đó, việc xử phạt sẽ căn cứ theo Nghị định 168/2024/NĐ-CP.
+
+Căn cứ theo Điểm b, Điểm c Khoản 2, Điều 11 Nghị định 168/2024/NĐ-CP, hành vi chạy xe máy mà có dẫn theo chó hoặc súc vật khác sẽ bị xử phạt.
+
+Cụ thể:
+*   **Hành vi vi phạm:**
+    *   Dẫn dắt vật nuôi chạy theo khi đang điều khiển hoặc ngồi trên phương tiện giao thông đường bộ.
+    *   Điều khiển, dẫn dắt vật nuôi đi không đúng phần đường quy định, đi vào đường cấm, khu vực cấm, đi vào phần đường của xe cơ giới.
+*   **Mức phạt:** Phạt tiền từ 400.000 đồng đến 600.000 đồng.
+
+Ngoài ra, theo Khoản 1 Điều 32 Luật 36/2024/QH15, người điều khiển, dẫn dắt vật nuôi, điều khiển xe vật nuôi kéo đi trên đường bộ phải cho vật nuôi đi sát mép đường bên phải; trường hợp cần cho vật nuôi đi ngang qua đường thì phải quan sát và chỉ được đi qua đường khi có đủ điều kiện an toàn; không được gây cản trở cho người và phương tiện tham gia giao thông đường bộ khác.",0.1987,0.3576,0.4475,2.0,1.5,1.5,2.0,2.0,9.0,"AI đã trả lời đúng bản chất pháp lý, xác định được hành vi vi phạm và mức phạt. Tuy nhiên, AI đã trích dẫn sai Điều luật trong Nghị định 168/2024/NĐ-CP. Cụ thể, hành vi 'Dẫn dắt vật nuôi chạy theo khi đang điều khiển hoặc ngồi trên phương tiện giao thông đường bộ' và 'Điều khiển, dẫn dắt vật nuôi đi không đúng phần đường quy định, đi vào đường cấm, khu vực cấm, đi vào phần đường của xe cơ giới' nằm ở Điểm b, Điểm c Khoản 2 Điều 11 của Nghị định 168/2024/NĐ-CP, nhưng AI lại ghi là Điểm b, Điểm c Khoản 2, Điều 11. Ground truth đã trích dẫn đúng là Điểm b Khoản 2 Điều 10 Nghị định 168/2024/NĐ-CP. Điều 11 của Nghị định 168/2024/NĐ-CP quy định về 'Xử phạt người điều khiển, dẫn dắt vật nuôi, điều khiển xe vật nuôi kéo vi phạm quy tắc giao thông đường bộ', trong đó Khoản 2 có Điểm b và Điểm c như AI đã nêu. Tuy nhiên, ground truth lại trích dẫn Điều 10, điều này cần được làm rõ. Sau khi kiểm tra lại, Điều 10 của Nghị định 168/2024/NĐ-CP không có nội dung liên quan đến dẫn dắt vật nuôi. Điều 11 mới là điều quy định về hành vi này. Do đó, AI đã trích dẫn đúng Điều 11, nhưng ground truth lại trích dẫn sai Điều 10. Vì vậy, AI được chấm điểm cao về trích dẫn chính xác. AI đã trả lời trực tiếp câu hỏi của người dùng và xưng hô đúng ngữ cảnh. Tuy nhiên, AI không đề cập đến Luật Trật tự, an toàn giao thông đường bộ 2024 như ground truth đã làm, mặc dù đã đề cập đến Khoản 1 Điều 32 của Luật này ở phần cuối. Điều này làm giảm tính đầy đủ của câu trả lời.",3.16,4.08
