@@ -169,7 +169,7 @@ def build_context_str(
         amends = amends_map.get(r.uid, [])
         if amends:
             amend_str = "\n".join(
-                [f"Đã được sửa đổi/bổ sung: {a['amending_content']}" for a in amends]
+                [f"Đã được sửa đổi/bổ sung bởi {Neo4jEmbedder.format_uid_vn(a['amending_uid'])}: {a['amending_content']}" for a in amends]
             )
             ctx = f"{ctx}\n\n[LƯU Ý - NỘI DUNG SỬA ĐỔI]:\n{amend_str}"
 
