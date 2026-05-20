@@ -37,7 +37,7 @@ from legal_scraper.embedder import Neo4jEmbedder
 from legal_scraper.retrieval import build_context_str_for_uids
 from legal_scraper.generator import AnswerGenerator
 from legal_scraper.query_rewriter import create_chat_llm
-from legal_scraper.prompts import _JUDGE_SYSTEM_PROMPT, _JUDGE_USER_PROMPT
+from legal_scraper.prompts import _JUDGE_SYSTEM_PROMPT, _JUDGE_USER_PROMPT, _QA_FEW_SHOT_SYSTEM_PROMPT, _QA_SYSTEM_PROMPT
 
 load_dotenv()
 
@@ -119,6 +119,7 @@ def parse_args():
     parser.add_argument("--sleep", type=float, default=2.0, help="Seconds to sleep between LLM calls")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of rows to evaluate (for testing)")
     parser.add_argument("--expand", action=argparse.BooleanOptionalAction, default=True, help="Expand context with sibling points and children content")
+    parser.add_argument("--few-shot", action=argparse.BooleanOptionalAction, default=False, help="Use few-shot prompt for QA generation")
     
     # Neo4j connection
     parser.add_argument("--uri", default=os.getenv("NEO4J_URI", "neo4j+ssc://localhost:7687"))
@@ -190,6 +191,8 @@ def main():
         | StrOutputParser()
     )
 
+    system_prompt = _QA_FEW_SHOT_SYSTEM_PROMPT if args.few_shot else _QA_SYSTEM_PROMPT
+
     print("Starting evaluation...")
     skipped = 0
 
@@ -233,7 +236,8 @@ def main():
         generated_answer = generator.generate_rag_answer(
             query=question, 
             context=context, 
-            rewritten_query=None # Single turn
+            rewritten_query=None, # Single turn
+            system_prompt=system_prompt
         )
         # Sanitize surrogates (matches logic in api.py)
         generated_answer = generated_answer.encode("utf-8", errors="replace").decode("utf-8")

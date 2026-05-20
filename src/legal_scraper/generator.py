@@ -4,7 +4,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
-from legal_scraper.prompts import _QA_SYSTEM_PROMPT, _QA_USER_PROMPT
+from legal_scraper.prompts import _QA_SYSTEM_PROMPT, _QA_FEW_SHOT_SYSTEM_PROMPT, _QA_USER_PROMPT
 from legal_scraper.query_rewriter import create_chat_llm
 
 class AnswerGenerator:
@@ -33,10 +33,13 @@ class AnswerGenerator:
             
         return _do_request()
 
-    def generate_rag_answer(self, query: str, context: str, current_date: str | None = None, rewritten_query: str | None = None) -> str:
+    def generate_rag_answer(self, query: str, context: str, current_date: str | None = None, rewritten_query: str | None = None, system_prompt: str | None = None) -> str:
         """Generate answer using retrieved legal context."""
         from datetime import datetime
         date_str = current_date or datetime.now().strftime("%Y-%m-%d")
+        
+        sys_prompt = system_prompt or _QA_FEW_SHOT_SYSTEM_PROMPT
+
         # Build optional rewritten query section
         if rewritten_query and rewritten_query != query:
             rewritten_section = f"\n[Câu hỏi đã được làm rõ (dùng để tra cứu)]:\n{rewritten_query}"
@@ -44,7 +47,7 @@ class AnswerGenerator:
             rewritten_section = ""
         try:
             user_prompt = _QA_USER_PROMPT.format(query=query, context=context, current_date=date_str, rewritten_section=rewritten_section)
-            return self._call_llm(_QA_SYSTEM_PROMPT, user_prompt)
+            return self._call_llm(sys_prompt, user_prompt)
         except Exception as e:
             print(f"RAG Generation error: {e}")
             return "Xin lỗi, đã có lỗi xảy ra trong quá trình tổng hợp câu trả lời từ hệ thống."
