@@ -1,0 +1,2 @@
+model,avg_score,avg_bleu,avg_rougeL,avg_meteor,avg_bert_f1,avg_legal_accuracy,avg_correct_citation,avg_completeness,avg_hallucination_citation,avg_structure
+NVIDIA-Nemotron-3-Nano-4B_0shot,4.7575,0.1876,0.4105,0.4157,0.6115,0.8525,0.8525,0.7025,1.1525,1.1975

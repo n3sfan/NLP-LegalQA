@@ -79,6 +79,11 @@ except ImportError:  # pragma: no cover - optional at import time
     AutoConfig = None
     AutoTokenizer = None
 
+try:
+    from pyvi.ViTokenizer import tokenize as vi_tokenize
+except ImportError:
+    vi_tokenize = None
+
 # Repo root is the parent of src/ (NLP-LegalQA/)
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(_REPO_ROOT) not in sys.path:
@@ -94,7 +99,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 DEFAULT_OPENROUTER_MODEL = "google/gemma-4-26b-a4b-it:free"
-_BERTSCORE_MODEL_TYPE = "vinai/phobert-base"
+_BERTSCORE_MODEL_TYPE = "bkai-foundation-models/vietnamese-bi-encoder"
 _BERTSCORE_NUM_LAYERS = 9
 _bertscore_truncation_cache: dict[str, tuple[object | None, int | None]] = {}
 
@@ -876,7 +881,9 @@ async def evaluate_qa(
 
     results_path = out_p / "row_qa_eval_scores.csv"
     fieldnames = [
-        "id", "question", "score", "bleu", "rougeL", "meteor", "bert_f1",
+        "id", "question", "score",
+        "legal_accuracy", "correct_citation", "completeness", "hallucination_citation", "structure",
+        "bleu", "rougeL", "meteor", "bert_f1",
         # "reasoning",
         "comparison", "raw_eval", "latency_ms"
     ]
@@ -985,11 +992,19 @@ async def evaluate_qa(
 
             try:
                 bert_preds = [
-                    _truncate_text_for_bertscore(text, bertscore_tokenizer, bertscore_text_token_limit)
+                    _truncate_text_for_bertscore(
+                        vi_tokenize(text) if vi_tokenize else text,
+                        bertscore_tokenizer,
+                        bertscore_text_token_limit
+                    )
                     for text in preds
                 ]
                 bert_refs = [
-                    _truncate_text_for_bertscore(text, bertscore_tokenizer, bertscore_text_token_limit)
+                    _truncate_text_for_bertscore(
+                        vi_tokenize(text) if vi_tokenize else text,
+                        bertscore_tokenizer,
+                        bertscore_text_token_limit
+                    )
                     for text in refs
                 ]
                 bert_res = metric_bertscore.compute(
@@ -1017,6 +1032,7 @@ async def evaluate_qa(
         comparison = ""
         score = None
 
+        scores = {}
         if is_json:
             reasoning = judge_result.get("reasoning", "")
             comparison = judge_result.get("comparison", "")
@@ -1041,10 +1057,24 @@ async def evaluate_qa(
                 
             score = parse_eval_score(raw_eval)
 
+        if not isinstance(scores, dict):
+            scores = {}
+
+        legal_accuracy = scores.get("legal_accuracy", 0)
+        correct_citation = scores.get("correct_citation", 0)
+        completeness = scores.get("completeness", 0)
+        hallucination_citation = scores.get("hallucination_citation", 0)
+        structure = scores.get("structure", 0)
+
         return {
             "id": qid,
             "question": question,
             "score": score,
+            "legal_accuracy": legal_accuracy,
+            "correct_citation": correct_citation,
+            "completeness": completeness,
+            "hallucination_citation": hallucination_citation,
+            "structure": structure,
             "bleu": bleu_val,
             "rougeL": rougeL_val,
             "meteor": meteor_val,
@@ -1071,6 +1101,35 @@ async def evaluate_qa(
         avg_score = sum(all_scores) / len(all_scores)
         pass_rate = sum(1 for s in all_scores if s >= 7) / len(all_scores)
         log.info("QA Eval Summary: Avg Score = %.2f, Pass Rate (>=7) = %.2f%%", avg_score, pass_rate * 100)
+
+    # Generate summary CSV at the end, average all of metrics
+    try:
+        if results_path.exists():
+            eval_df = pd.read_csv(results_path)
+            
+            # Numeric columns to average
+            numeric_cols = [
+                "score", "legal_accuracy", "correct_citation", 
+                "completeness", "hallucination_citation", "structure",
+                "bleu", "rougeL", "meteor", "bert_f1"
+            ]
+            
+            summary = {}
+            for col in numeric_cols:
+                if col in eval_df.columns:
+                    vals = pd.to_numeric(eval_df[col], errors='coerce')
+                    summary[f"avg_{col}"] = round(vals.mean(), 4) if not vals.isna().all() else 0.0
+
+            summary_path = out_p / "qa_metrics_summary.csv"
+            summary_df = pd.DataFrame([summary])
+            summary_df.to_csv(summary_path, index=False)
+            log.info("Wrote QA overall summary → %s", summary_path)
+            
+            log.info("=== QA Evaluation Summary (Averages) ===")
+            for k, v in summary.items():
+                log.info("  %-30s: %.4f", k, v)
+    except Exception as e:
+        log.error("Failed to generate QA metrics summary CSV: %s", e)
 
 
 # ─────────────────────────────────────────────────────────────────────────────

@@ -1,0 +1,2 @@
+model,avg_score,avg_bleu,avg_rougeL,avg_meteor,avg_bert_f1,avg_legal_accuracy,avg_correct_citation,avg_completeness,avg_hallucination_citation,avg_structure
+gemma-4-E2B-it_fewshot,6.6437,0.2751,0.4631,0.5396,0.7023,1.2275,1.1787,1.0775,1.6525,1.5075
