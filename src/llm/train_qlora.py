@@ -98,13 +98,13 @@ class VRAMCleanupCallback(TrainerCallback):
         if control.should_evaluate:
             gc.collect()
             torch.cuda.empty_cache()
-            # print("\n[VRAM Cleanup] CUDA cache cleared before starting validation (Train -> Validate)...")
+            print("\n[VRAM Cleanup] CUDA cache cleared before starting validation (Train -> Validate)...")
 
     def on_evaluate(self, args, state, control, **kwargs):
         # Clear VRAM when transitioning from Validate -> Train
         gc.collect()
         torch.cuda.empty_cache()
-        # print("\n[VRAM Cleanup] CUDA cache cleared after completing validation (Validate -> Train)...")
+        print("\n[VRAM Cleanup] CUDA cache cleared after completing validation (Validate -> Train)...")
 
 
 def format_dataset(batch):
@@ -213,7 +213,7 @@ def main():
         max_seq_length=Config.max_seq_length,
         args=TrainingArguments(
             per_device_train_batch_size=Config.batch_size,
-            per_device_eval_batch_size=128,  # Safe and highly parallelized for RTX 6000 Blackwell without OOM
+            per_device_eval_batch_size=64,  # Safe and highly parallelized for RTX 6000 Blackwell without OOM
             eval_accumulation_steps=10,    # Periodically offloads logits to CPU; CRITICAL to prevent logit-gathering OOM
             dataloader_num_workers=os.cpu_count() or 4,  # Prevents CPU bottleneck during rapid evaluation
             gradient_accumulation_steps=Config.gradient_accumulation_steps,

@@ -70,13 +70,13 @@ OPENROUTER_API_KEY=... python src/llm/eval_qa_offline.py \
 uv run .\src\llm\eval_voter.py `
 --mode eval_qa `
 --backend openrouter `
---input eval_results\llm\gemma_4_e2b_results_qa_pipeline_all_ablations_gemma4_rerank_top_30 `
---dataset .\eval_results\eval_results_pipeline_all_ablations_geminiflash_rerank_top_30 `
+--input eval_results\thinh_eval_llm\finetune `
+--dataset eval_results\QA_Part2\eval_results_pipeline_all_ablations_geminiflash_rerank_top_30 `
 --gt-dataset qa_dataset/QA_Part2.csv `
 --payload-dir .\offline_payloads `
---output .\eval_results\eval_llm\eval_results_eval_gemma-4-e2b_qa_pipeline_all_ablations_gemma4_rerank_top_30_judge `
---prompt-template .\src\llm\prompts\prompt_eval_qa_fewshot.md `
---model google/gemma-4-26b-a4b-it `
+--output .\eval_results\thinh_eval_llm\score\finetune `
+--prompt-template .\src\llm\prompts\prompt_eval_qa_0shot.md `
+--model google/gemini-2.5-flash `
 --print-every 5
 ```
 

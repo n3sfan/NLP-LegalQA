@@ -190,13 +190,16 @@ def build_context_str_for_uids(
     embedder: Neo4jEmbedder,
     uids: list[str],
     expand: bool = False,
+    include_hierarchy: bool = True,
 ) -> str:
     """Build retrieval-style context_str when the caller already has final UIDs."""
     final_results = [
         SearchResult(uid=uid, label=_label_from_uid(uid), score=0.0)
         for uid in uids
     ]
-    context_map = fetch_context_for_results(embedder, final_results, include_hierarchy=True)
+    # When expanding children explicitly, hierarchy fetch would duplicate them.
+    effective_hierarchy = include_hierarchy and not expand
+    context_map = fetch_context_for_results(embedder, final_results, include_hierarchy=effective_hierarchy)
     abolished_map = embedder.fetch_abolished_uids(uids)
     amends_map = embedder.fetch_amends(uids)
 

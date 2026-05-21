@@ -1,0 +1,537 @@
+id,question,model,generated_answer,expert_answer,latency_ms,law_text_preview
+1,Người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ theo thứ tự ưu tiên nào?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Khoản 2, Điều 11, Nghị định 100/2019/NĐ-CP.
+Kết luận trực tiếp: Người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ theo thứ tự ưu tiên từ trên xuống dưới như sau: hiệu lệnh của người điều khiển giao thông, tín hiệu đèn giao thông, biển báo hiệu đường bộ, vạch kẻ đường và các dấu hiệu khác trên mặt đường, thiết bị âm thanh báo hiệu đường bộ, cọc tiêu, tường bảo vệ, rào chắn, đinh phản quang, tiêu phản quang, cột Km, cọc H.",36/2024/QH15::article::11::clause::2,10223.4,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 11: Chấp hành báo hiệu đường bộ
+Khoản 2.
+Người tham gia giao thông đường bộ phải chấp hành báo hiệu đường bộ ..."
+2,Dừng xe che khuất biển báo hiệu đường bộ bị phạt bao nhiêu tiền?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm đ, Khoản 4, Điều 18, Nghị định 100/2019/NĐ-CP; người điều khiển phương tiện tham gia giao thông đường bộ bị phạt tiền từ 200.000 đồng đến 400.000 đồng.",168/2024/NĐ-CP::article::6::clause::3::point::đ;168/2024/NĐ-CP::article::8::clause::2::point::b,4519.1,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+3,Hiệu lệnh của người điều khiển giao thông được quy định như thế nào?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Khoản 1, Điều 11, Thông tư 36/2024/QH15.
+
+Kết luận trực tiếp: Hiệu lệnh của người điều khiển giao thông được quy định như sau: Tay bên phải giơ thẳng đứng để báo hiệu cho người tham gia giao thông đường bộ ở tất cả các hướng phải dừng lại; hai tay hoặc một tay dang ngang để báo hiệu cho người tham gia giao thông đường bộ ở phía trước và ở phía sau người điều khiển giao thông phải dừng lại; người tham gia giao thông đường bộ ở phía bên phải và bên trái người điều khiển giao thông được đi.",36/2024/QH15::article::11::clause::3,7194.3,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 11: Chấp hành báo hiệu đường bộ
+Khoản 3.
+Nội dung: Hiệu lệnh của người điều khiển giao thông được quy định nh..."
+4,"Người điều khiển xe mô tô phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 3, Điều 12 và Điểm c, Khoản 6, Điều 168/2024/NĐ-CP; Điểm c, Khoản 6, Điều 100/2019/NĐ-CP.
+
+Kết luận trực tiếp: Người điều khiển xe mô tô phải quan sát, giảm tốc độ hoặc dừng lại khi gặp các trường hợp được quy định tại Điểm a, Khoản 3, Điều 12 và Điểm c, Khoản 6, Điều 100/2019/NĐ-CP.
+
+Chi tiết chế tài (nếu có): Không quy định mức phạt tiền cụ thể cho hành vi này trong ngữ cảnh được cung cấp.",36/2024/QH15::article::12::clause::3,9395.7,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 12: Chấp hành quy định về tốc độ và khoảng cách giữa các xe
+Khoản 3.
+Nội dung: Người điều khiển phương tiện t..."
+5,"Hành vi không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi điều khiển xe tham gia giao thông trên đường bộ và chở người ngồi trên xe không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách, trừ trường hợp chở người bệnh đi cấp cứu, trẻ em dưới 06 tuổi, áp giải người có hành vi vi phạm pháp luật bị xử phạt vi phạm hành chính như thế nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm i, Khoản 2, Điều 7 và Điểm đ, Khoản 4, Điều 9 của Nghị định 100/2019/NĐ-CP; người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy bị phạt tiền từ 400.000 đồng đến 600.000 đồng.",168/2024/NĐ-CP::article::7::clause::2::point::h;168/2024/NĐ-CP::article::7::clause::2::point::i,9088.7,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+6,Xe ô tô không chấp hành hiệu lệnh của đèn tín hiệu giao thông bị phạt bao nhiêu?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 5, Điều 5 của Nghị định 100/2019/NĐ-CP, người điều khiển xe ô tô không chấp hành hiệu lệnh của đèn tín hiệu giao thông bị phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng.",168/2024/NĐ-CP::article::6::clause::9::point::b;168/2024/NĐ-CP::article::6::clause::10::point::b;168/2024/NĐ-CP::article::6::clause::16::point::b;168/2024/NĐ-CP::article::6::clause::16::point::d,4478.8,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+7,Không chấp hành hiệu lệnh của đèn tín hiệu giao thông xe máy bị phạt bao nhiêu?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm e, Khoản 4, Điều 6 của Nghị định 100/2019/NĐ-CP, người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không chấp hành hiệu lệnh của đèn tín hiệu giao thông sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng.",168/2024/NĐ-CP::article::7::clause::7::point::c;168/2024/NĐ-CP::article::7::clause::10::point::b;168/2024/NĐ-CP::article::7::clause::13::point::b;168/2024/NĐ-CP::article::7::clause::13::point::d,5793.8,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+8,Vượt đường ngang khi đèn đỏ bật sáng bị phạt bao nhiêu tiền?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Khoản 1, Điều 47, Điều 100/2019/NĐ-CP.
+Kết luận trực tiếp: Người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy bị phạt tiền từ 60.000 đồng đến 100.000 đồng khi vượt đường ngang khi đèn đỏ đã bật sáng.
+Chi tiết chế tài: Mức phạt tiền từ 60.000 đồng đến 100.000 đồng.",100/2019/NĐ-CP::article::47;123/2021/NĐ-CP::article::2::clause::34,7255.6,"[ĐÃ BỊ THAY THẾ bởi văn bản mới hơn]
+[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương III: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH V..."
+9,Quy định bật đèn xe? Bật đèn xe vào giờ nào để không bị xử phạt?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi của bạn như sau:
+
+**Căn cứ pháp lý:**
+- Theo Khoản 2, Điều 20, Điều 36/2024/QH15, người lái xe, người điều khiển xe máy chuyên dùng phải bật đèn chiếu sáng phía trước trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn.
+- Theo Khoản 3, Điều 20, Điều 168/2024/NĐ-CP, người lái xe, người điều khiển xe ô tô (bao gồm cả rơ moóc hoặc sơ mi rơ moóc được kéo theo) phải bật đèn chiếu sáng phía trước trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn.
+
+**Kết luận trực tiếp:**
+Người lái xe, người điều khiển xe phải bật đèn chiếu sáng phía trước trong thời gian từ 18 giờ ngày hôm trước đến 06 giờ ngày hôm sau hoặc khi có sương mù, khói, bụi, trời mưa, thời tiết xấu làm hạn chế tầm nhìn.
+
+**Chi tiết chế tài (nếu có):**
+Không có mức phạt tiền, hình phạt bổ sung cụ thể cho hành vi bật đèn đúng quy định trong các văn bản được cung cấp.",36/2024/QH15::article::20::clause::1;168/2024/NĐ-CP::article::7::clause::1::point::g;168/2024/NĐ-CP::article::6::clause::3::point::g,16936.3,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+10,Thay đổi kết cấu xe có thể được hiểu là gì? Lỗi thay đổi kết cấu xe máy phạt bao nhiêu?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi pháp lý như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Khoản 1, Điều 14, Nghị định 168/2024/NĐ-CP: ""Tự ý thay đổi tổng thành khung, tổng thành máy (động cơ), hệ thống phanh, hệ thống truyền động (truyền lực), hệ thống chuyển động hoặc tự ý cải tạo kết cấu, hình dáng, kích thước của xe không đúng thiết kế của nhà sản xuất hoặc thiết kế trong hồ sơ đã nộp cho cơ quan đăng ký xe hoặc thiết kế cải tạo đã được cơ quan có thẩm quyền phê duyệt; tự ý thay đổi tính năng sử dụng của xe hoặc tự ý lắp đặt thêm cơ cấu nâng hạ thùng xe, nâng hạ công-ten-nơ trên xe (kể cả rơ moóc và sơ mi rơ moóc).""
+- Căn cứ theo Khoản 1, Điều 30, Nghị định 100/2019/NĐ-CP: ""Tự ý thay đổi tổng thành khung, tổng thành máy (động cơ), hệ thống phanh, hệ thống truyền động (truyền lực), hệ thống chuyển động hoặc tự ý cải tạo kết cấu, hình dáng, kích thước của xe không đúng thiết kế của nhà sản xuất hoặc thiết kế trong hồ sơ đã nộp cho cơ quan đăng ký xe hoặc thiết kế cải tạo đã được cơ quan có thẩm quyền phê duyệt; tự ý thay đổi tính năng sử dụng của xe hoặc tự ý lắp đặt thêm cơ cấu nâng hạ thùng xe, nâng hạ công-ten-nơ trên xe (kể cả rơ moóc và sơ mi rơ moóc).""
+- Căn cứ theo Khoản 1, Điều 30, Nghị định 100/2019/NĐ-CP: ""Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với cá nhân, từ 200.000 đồng đến 400.000 đồng đối với tổ chức là chủ xe mô tô, xe gắn máy và các loại xe tương tự xe mô tô thực hiện hành vi tự ý thay đổi nhãn hiệu, màu sơn của xe không đúng với Giấy đăng ký xe.""
+
+**Kết luận trực tiếp:**
+Việc thay đổi kết cấu xe được hiểu là thay đổi tổng thành khung, tổng thành máy (động cơ), hệ thống phanh, hệ thống truyền động (truyền lực), hệ thống chuyển động hoặc tự ý cải tạo kết cấu, hình dáng, kích thước của xe không đúng thiết kế của nhà sản xuất hoặc thiết kế trong hồ sơ đã nộp cho cơ quan đăng ký xe hoặc thiết kế cải tạo đã được cơ quan có thẩm quyền phê duyệt; tự ý thay đổi tính năng sử dụng của xe hoặc tự ý lắp đặt thêm cơ cấu nâng hạ thùng xe, nâng hạ công-ten-nơ trên xe (kể cả rơ moóc và sơ mi rơ moóc). Lỗi này bị phạt tiền từ 100.000 đồng đến 200.000 đồng đối với cá nhân, từ 200.000 đồng đến 400.000 đồng đối với tổ chức là chủ xe mô tô, xe gắn máy và các loại xe tương tự xe mô tô.",36/2024/QH15::article::2::clause::7;36/2024/QH15::article::9::clause::11;168/2024/NĐ-CP::article::32::clause::8,39600.9,"[Văn bản: 123/2021/NĐ-CP — Hiệu lực: 2022-01-01]
+Điều 2: Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chín..."
+11,"Xử phạt vi phạm hành chính trong lĩnh vực giao thông ngoài hình thức xử phạt chính, người có thẩm quyền có thể áp dụng những biện pháp khắc phục hậu quả nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm h, Khoản 1, Điều 68 của Nghị định 100/2019/NĐ-CP và Điều 28 của Nghị định 168/2024/NĐ-CP, người có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ có thể áp dụng các biện pháp khắc phục hậu quả sau:
+
+1. **Hình thức xử phạt bổ sung:** Áp dụng hình thức xử phạt bổ sung theo quy định tại Điều 68 khoản 1, điểm h.
+2. **Biện pháp khắc phục hậu quả:** Áp dụng các biện pháp khắc phục hậu quả theo quy định tại Điều 28 khoản 1, điểm a.",100/2019/NĐ-CP::article::4::clause::1;100/2019/NĐ-CP::article::4::clause::2;123/2021/NĐ-CP::article::2::clause::34,10745.8,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương III: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG SẮT
+Mục 1: VI PHẠ..."
+12,Có được hoãn nộp phạt vi phạm giao thông không?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, có thể trả lời như sau:
+
+**Căn cứ pháp lý:**
+- Khoản 1 Điều 76 Nghị định 100/2019/NĐ-CP quy định về việc hoãn thi hành quyết định phạt tiền trong trường hợp cá nhân bị phạt tiền từ 3.000.000 đồng trở lên đang gặp khó khăn đặc biệt, đột xuất về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, bệnh hiểm nghèo, tai nạn và có xác nhận của Ủy ban nhân dân cấp xã nơi cư trú hoặc cơ quan, tổ chức nơi học tập, làm việc.
+- Khoản 2 Điều 76 Nghị định 100/2019/NĐ-CP quy định cá nhân phải có đơn đề nghị hoãn chấp hành quyết định xử phạt vi phạm hành chính gửi cơ quan của người đã ra quyết định xử phạt trong thời hạn 05 ngày, kể từ ngày nhận được đơn, người đã ra quyết định xử phạt xem xét quyết định hoãn thi hành quyết định xử phạt đó.
+- Khoản 3 Điều 76 Nghị định 100/2019/NĐ-CP quy định cá nhân được hoãn chấp hành quyết định xử phạt được nhận lại giấy tờ, tang vật, phương tiện vi phạm hành chính đang bị tạm giữ theo quy định tại khoản 6 Điều 125 của Luật này.
+
+**Kết luận trực tiếp:**
+Có được hoãn nộp phạt vi phạm giao thông trong các trường hợp được quy định tại Khoản 1 Điều 76 Nghị định 100/2019/NĐ-CP.
+
+**Chi tiết chế tài (nếu có):**
+- Thời hạn hoãn thi hành quyết định xử phạt không quá 03 tháng, kể từ ngày có quyết định hoãn.
+- Cá nhân phải có đơn đề nghị hoãn chấp hành quyết định xử phạt vi phạm hành chính kèm theo văn bản xác nhận của cơ quan, tổ chức có thẩm quyền theo quy định tại khoản 1 Điều 76 Nghị định 100/2019/NĐ-CP gửi người đã ra quyết định xử phạt trong thời hạn 05 ngày làm việc, kể từ ngày nhận được đơn.
+- Cá nhân được hoãn chấp hành quyết định xử phạt được nhận lại giấy tờ, tang vật, phương tiện vi phạm hành chính đang bị tạm giữ theo quy định tại khoản 6 Điều 125 của Luật này.",15/2012/QH13::article::76::clause::1;67/2020/QH14::article::1::clause::37,26042.0,"[Văn bản: 15/2012/QH13 — Hiệu lực: 2013-07-01]
+Phần HAI: XỬ PHẠT VI PHẠM HÀNH CHÍNH
+Chương III: THỦ TỤC XỬ PHẠT, THI HÀNH QUYẾT ĐỊNH XỬ PHẠT VÀ CƯỠNG CHẾ THI HÀNH QUYẾT ĐỊNH XỬ PHẠT
+Mục 2: THI HÀNH QU..."
+13,Lỗi không mang giấy tờ xe là lỗi gì? Lỗi không mang giấy tờ xe máy phạt bao nhiêu?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi pháp lý như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm b, Khoản 2, Điều 21, Khoản 2, Điều 100/2019/NĐ-CP: Người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không mang theo Giấy đăng ký xe bị phạt tiền từ 100.000 đồng đến 200.000 đồng.
+- Căn cứ theo Điểm b, Khoản 2, Điều 14, 168/2024/NĐ-CP: Người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy không mang theo Giấy đăng ký xe bị phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng.
+
+**Kết luận trực tiếp:**
+Lỗi không mang Giấy đăng ký xe đối với xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy bị phạt tiền từ 100.000 đồng đến 200.000 đồng. Nếu là xe ô tô, máy kéo và các loại xe tương tự xe ô tô thì mức phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng.",36/2024/QH15::article::56::clause::1;168/2024/NĐ-CP::article::14;168/2024/NĐ-CP::article::18,20561.0,"[Văn bản: 123/2021/NĐ-CP — Hiệu lực: 2022-01-01]
+Điều 2: Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chín..."
+14,"Nguyên tắc bảo đảm trật tự, an toàn giao thông đường bộ thế nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Khoản 2, Điều 3, Luật Giao thông đường bộ số 36/2024/QH15.
+
+Kết luận trực tiếp: Nguyên tắc bảo đảm trật tự, an toàn giao thông đường bộ là bảo đảm giao thông đường bộ được trật tự, an toàn, thông suốt, góp phần phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh và bảo vệ môi trường; phòng ngừa vi phạm pháp luật về trật tự, an toàn giao thông đường bộ, tai nạn giao thông đường bộ và ùn tắc giao thông; bảo vệ tính mạng, sức khỏe, tài sản của cá nhân và tài sản của cơ quan, tổ chức.",36/2024/QH15::article::3,7600.8,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương I: NHỮNG QUY ĐỊNH CHUNG
+Điều 3: Nguyên tắc bảo đảm trật tự, an toàn giao thông đường bộ
+Khoản 2.
+Nội dung: Bảo đảm giao thông đường bộ được trật t..."
+15,Điều khiển phương tiện tham gia giao thông đường bộ cần tuân thủ điều gì?,/kaggle/finetune-models/gemma-legal-qa-qlora,"- Căn cứ pháp lý: Căn cứ theo Khoản 1, Điều 56 Nghị định 100/2019/NĐ-CP; Khoản 1, Điều 3, Điều 18, Điều 22, Điều 26, Điều 2, Điều 12, Điều 28, Điều 23, Điều 22, Điều 26, Điều 18, Điều 22, Điều 26, Điều 22, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26, Điều 22, Điều 26,",36/2024/QH15::article::56,472582.7,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương IV: NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
+Điều 56: Điều kiện của người điều khiển phương tiện tham gia giao thông đường bộ
+
+[N..."
+16,"Một buổi tối, Hùng (17 tuổi) lấy xe mô tô của bố để đi dự sinh nhật bạn. Sau đó, trên đường về, Hùng chở Thắng và Toàn trên xe của mình, chạy với tốc độ cao, lạng lách, đánh võng trên đường. Một tổ cảnh sát giao thông đang đi tuần tra trên đường thấy vậy đã ra tín hiệu yêu cầu Hùng dừng xe để kiểm tra, nhưng Hùng đã cho xe tăng tốc độ để chạy trốn. Hãy phân tích các lỗi mà Hùng đã vi phạm và mức xử phạt hành chính cho các lỗi vi phạm.",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin phân tích các lỗi và mức xử phạt hành chính đối với Hùng như sau:
+
+**Căn cứ pháp lý:**
+*   Căn cứ theo Điểm a, Khoản 9, Điều 9, Điều 10, Khoản 1, Nghị định 100/2019/NĐ-CP.
+*   Căn cứ theo Điểm b, Khoản 12, Điều 6, Nghị định 100/2019/NĐ-CP.
+*   Căn cứ theo Điểm c, Khoản 3, Điều 9, Nghị định 100/19/NĐ-CP.
+*   Căn cứ theo Điểm c, Khoản 11, Điều 7, Nghị định 100/19/NĐ-CP.
+
+**Kết luận trực tiếp:**
+Hùng đã vi phạm nhiều quy định về điều khiển xe mô tô, xe gắn máy và quy tắc giao thông đường bộ, với mức xử phạt tiền từ 100.000 đồng đến 200.000 đồng đối với hành vi vi phạm quy tắc giao thông đường bộ, và có thể bị xử phạt bổ sung tịch thu Giấy phép lái xe không do cơ quan có thẩm quyền cấp, Giấy phép lái xe bị tẩy xóa, Giấy phép lái xe không hợp lệ.
+
+**Chi tiết chế tài (nếu có):**
+*   Phạt tiền từ 100.000 đồng đến 200.000 đồng đối với hành vi vi phạm quy tắc giao thông đường bộ (Điểm a, Khoản 1, Điều 9).
+*   Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với hành vi điều khiển xe lạng lách hoặc đánh võng trên đường bộ trong, ngoài đô thị (Điểm b, Khoản 12, Điều 6).
+*   Phạt tiền từ 300.000 đồng đến 400.000 đồng đối với hành vi đi vào khu vực cấm, đường có biển báo hiệu nội dung cấm đi vào đối với loại phương tiện đang điều khiển (Điểm c, Khoản 3, Điều 9).
+*   Hùng có thể bị áp dụng hình thức xử phạt bổ sung tịch thu Giấy phép lái xe không do cơ quan có thẩm quyền cấp, Giấy phép lái xe bị tẩy xóa, Giấy phép lái xe không hợp lệ (Điểm b, Khoản 11, Điều 7).",36/2024/QH15::article::59::clause::1::point::b;36/2024/QH15::article::33::clause::1;36/2024/QH15::article::9::clause::5;36/2024/QH15::article::9::clause::4;168/2024/NĐ-CP::article::18::clause::4::point::a;168/2024/NĐ-CP::article::7::clause::9::point::a;168/2024/NĐ-CP::article::7::clause::2::point::g;168/2024/NĐ-CP::article::7::clause::7::point::d,28744.8,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+17,"Trên đường đi học về, Mai chở Yến trên chiếc xe đạp mới được bố mẹ mua cho. Vừa ra đến đoạn đường đông người thì trời lất phất mưa, Yến vội lấy chiếc ô trong cặp bật lên che cho cả hai. Thấy vậy, Mai nhắc nhở: “Cậu cất ô đi, che ô thế nguy hiểm lắm hơn nữa còn vi phạm pháp luật đấy”. Yến đáp: “Cậu yên tâm, tớ ngồi sau xe mà, không nguy hiểm đâu. Và lại, pháp luật chỉ cấm người điều khiển xe chứ không cấm người ngồi sau xe”. Em đồng ý với ý kiến của bạn Mai hay bạn Yến? Vì sao?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi của bạn như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm h, Khoản 1, Điều 9, Khoản 1, Nghị định 100/2019/NĐ-CP.
+- Căn cứ theo Điểm h, Khoản 1, Điều 8, Khoản 1, Nghị định 100/2019/NĐ-CP.
+- Căn cứ theo Khoản 7, Điều 12, Nghị định 100/2019/NĐ-CP.
+
+**Kết luận trực tiếp:**
+Ý kiến của bạn Mai là đúng, vì pháp luật chỉ quy định xử phạt đối với người điều khiển xe, không cấm người ngồi sau xe vi phạm quy định về ô che mưa.
+
+**Chi tiết chế tài (nếu có):**
+Không có chế tài cụ thể nào được áp dụng cho hành vi của Yến vì không vi phạm quy định về ô che mưa.",36/2024/QH15::article::33::clause::4,12424.7,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+18,"Bạn A (học sinh lớp 8) được bố mẹ mua cho chiếc xe đạp điện mới để đi học. Sau giờ tan học, bạn A đã mời hai người bạn của mình đi ăn kem và chở hai bạn đến quán kem gần trường, cả ba bạn đều không đội mũ bảo hiểm. Trên đường đi, do mải nói chuyện nên bạn A đã lao xe vào ổ gà và bị ngã ra đường, bị trầy sát chân tay, cả 3 bạn đã được người dân đưa vào trạm y tế gần đó để sơ cứu. Nhận xét về hành vi tham gia giao thông của 3 bạn trên.",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Điểm d, Khoản 3, Điều 8, Khoản 1, Điều 9, Khoản 1, Điều 12, Khoản 1, Điều 21, Khoản 1, Điều 21, Khoản 2, Điều 18, Khoản 1, Điều 10, Khoản 1, Điều 21, Khoản 3, Điều 168/2024/NĐ-CP.
+
+Kết luận trực tiếp: Ba bạn không đội mũ bảo hiểm khi tham gia giao thông trên đường bộ là hành vi vi phạm quy tắc giao thông đường bộ.
+
+Chi tiết chế tài (nếu có): Người điều khiển xe đạp, xe đạp máy không đội mũ bảo hiểm hoặc đội mũ bảo hiểm không cài quai đúng quy cách bị phạt tiền từ 200.000 đồng đến 300.000 đồng.",168/2024/NĐ-CP::article::9::clause::4::point::d;168/2024/NĐ-CP::article::9::clause::4::point::đ;36/2024/QH15::article::31::clause::1,11055.3,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+19,Vào kỳ nghỉ hè các bạn nam trong khu phố thường tổ chức chơi đá bóng trên đường giao thông. Hành vi đó có thể bị xử phạt hành chính như thế nào?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, câu trả lời chi tiết như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm b, Khoản 2, Điều 11 Nghị định 100/2019/NĐ-CP.
+- Căn cứ theo Điểm b, Khoản 2, Điều 12 Nghị định 168/2024/NĐ-CP.
+
+**Kết luận trực tiếp:**
+Hành vi tổ chức chơi đá bóng trên đường giao thông trong kỳ nghỉ hè có thể bị xử phạt hành chính theo quy định tại Điều 11 Nghị định 100/2019/NĐ-CP và Điều 12 Nghị định 168/2024/NĐ-CP.
+
+**Chi tiết chế tài (nếu có):**
+- Đối với cá nhân thực hiện hành vi này, mức phạt tiền từ 100.000 đồng đến 200.000 đồng (theo Điều 11 Nghị định 100/2019/NĐ-CP).
+- Đối với cá nhân thực hiện hành vi này, mức phạt tiền từ 200.000 đồng đến 250.000 đồng (theo Điều 12 Nghị định 168/2024/NĐ-CP).
+
+**Hình phạt bổ sung (nếu có):**
+- Không có quy định về hình phạt bổ sung trong các điều khoản liên quan đến hành vi này.",168/2024/NĐ-CP::article::12::clause::2::point::b,16720.4,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+20,"Anh C đang điều khiển xe ô tô về nhà đêm khuya. Do vội về nhà, anh C đã liên tục bấm còi để vượt trong khu phố đô thị. Vậy theo quy định của pháp luật, hành vi bấm còi này của anh C có vi phạm pháp luật khi tham gia giao thông? Nếu có thì hành vi này của anh C sẽ bị xử phạt như thế nào? Được biết lúc anh C đi về nhà là 22 giờ 30.",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Điểm b, Khoản 2, Điều 21, Nghị định 100/2019/NĐ-CP.
+Kết luận trực tiếp: Anh C có hành vi vi phạm quy định về sử dụng còi trong thời gian từ 22 giờ ngày hôm trước đến 05 giờ ngày hôm sau trong khu đông dân cư, khu vực cơ sở khám bệnh, chữa bệnh, trừ xe ưu tiên đang đi làm nhiệm vụ theo quy định. Anh C sẽ bị xử phạt tiền từ 200.000 đồng đến 400.000 đồng.
+Chi tiết chế tài: Mức phạt tiền từ 200.000 đồng đến 400.000 đồng.",168/2024/NĐ-CP::article::6::clause::1::point::đ,9524.5,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+21,Anh C đang lái ô tô thì điện thoại di động của anh báo có cuộc gọi đến. Anh C không dừng xe để nghe điện thoại mà tiếp tục vừa điều khiển xe vừa nghe điện thoại. Vậy hành vi của anh C theo quy định của pháp luật sẽ bị xử lý như thế nào?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, anh C sẽ bị xử phạt theo quy định tại Điều 6, Khoản 5, Điểm h của Nghị định 100/2019/NĐ-CP.
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm h, Khoản 5, Điều 6 Nghị định 100/2019/NĐ-CP.
+
+**Kết luận trực tiếp:**
+Anh C sẽ bị phạt tiền từ 600.000 đồng đến 800.000 đồng.
+
+**Chi tiết chế tài:**
+- Mức phạt tiền: từ 600.000 đồng đến 800.000 đồng.",168/2024/NĐ-CP::article::6::clause::5::point::h;168/2024/NĐ-CP::article::6::clause::16::point::b;168/2024/NĐ-CP::article::6::clause::10::point::b;168/2024/NĐ-CP::article::6::clause::16::point::d,10823.6,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+22,"Trong quá trình đi tập thể dục sáng sớm, người dân ở khu phố tôi phát hiện một chiếc xe tải chạy lại đổ đất, đá ra đường phố của khu phố của chúng tôi. Chúng tôi đã báo chính quyền xử lý. Hỏi người điều khiển xe thực hiện hành vi đổ trái phép rác, đất, cát, đá, vật liệu, chất thải ra đường phố thì bị xử phạt như thế nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý:
+- Theo Điểm a, Khoản 4, Điều 20, Khoản 2, Điều 100/2019/NĐ-CP: Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với một trong các hành vi vi phạm sau đây: Lôi kéo bùn, đất, cát, nguyên liệu, vật liệu hoặc chất phế thải khác ra đường bộ gây mất an toàn giao thông và vệ sinh môi trường.
+- Theo Điểm a, Khoản 4, Điều 17, Khoản 2, Điều 168/2024/NĐ-CP: Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với một trong các hành vi vi phạm sau đây: Chở đất đá, phế thải, hàng rời mà không có mui, bạt che đậy hoặc có mui, bạt che đậy nhưng vẫn để rơi vãi; làm rơi vãi hàng hóa trên đường bộ; chở hàng hoặc chất thải để nước chảy xuống mặt đường gây mất an toàn giao thông.
+- Theo Khoản 6, Điều 20, Khoản 6, Điều 100/2019/NĐ-CP: Ngoài việc bị áp dụng hình thức xử phạt, người điều khiển phương tiện thực hiện hành vi vi phạm quy định tại khoản 2, khoản 3, khoản 4 Điều này còn bị áp dụng các biện pháp khắc phục hậu quả: Buộc phải thu dọn rác, chất phế thải, vật liệu, hàng hóa và khôi phục lại tình trạng ban đầu đã bị thay đổi do vi phạm hành chính gây ra; nếu gây ô nhiễm môi trường phải thực hiện các biện pháp khắc phục tình trạng ô nhiễm môi trường do vi phạm hành chính gây ra.
+
+Kết luận trực tiếp: Người điều khiển xe thực hiện hành vi đổ trái phép rác, đất, cát, đá, vật liệu, chất thải ra đường phố sẽ bị phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng và bị buộc phải khắc phục hậu quả theo quy định.",168/2024/NĐ-CP::article::17::clause::4;168/2024/NĐ-CP::article::17::clause::5,25567.2,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+23,"Cháu tôi năm nay mới 17 tuổi nhưng lại mượn ô tô của tôi để lái, tham gia giao thông. Hỏi hành vi lái xe ô tô của cháu tôi có bị xử phạt không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các quy định tại Nghị định 100/2019/NĐ-CP, hành vi lái xe ô tô của cháu bạn có thể bị xử phạt nếu cháu bạn không đáp ứng điều kiện về độ tuổi theo quy định.
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe mô tô có dung tích xi lanh từ 50 cm3 trở lên"".
+- Căn cứ theo Điểm a, Khoản 4, Điều 21 Nghị định 100/2019/NĐ-CP: ""Người từ đủ 16 tuổi đến dưới 18 tuổi điều khiển xe ô tô, máy kéo và các loại xe tương tự xe ô tô"".
+- C",168/2024/NĐ-CP::article::18::clause::6,565630.8,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 4: VI PHẠM ..."
+24,"Khi tôi đi ô tô khách chạy tuyến Hà Nội – Quảng Bình (khoảng cách trên 300km) thường bắt gặp tình trạng, người điều khiển xe ô tô chở hành khách loại xe 45 chỗ nhưng lại chở quá số người quy định, xe nhồi nhét rất đông, chật chội. Hỏi hành vi của người điều khiển xe khách loại 45 chỗ đó có bị xử phạt như thế nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Khoản 4, Điều 23, Nghị định 100/2019/NĐ-CP.
+
+Kết luận: Người điều khiển xe ô tô chở hành khách loại 45 chỗ chở quá số người quy định được phép chở của phương tiện trên tuyến Hà Nội – Quảng Bình (khoảng cách trên 300km) sẽ bị phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng trên mỗi người vượt quá số người quy định được phép chở của phương tiện, với tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng.",168/2024/NĐ-CP::article::20::clause::4;168/2024/NĐ-CP::article::20::clause::10::point::b;168/2024/NĐ-CP::article::20::clause::10::point::d,10016.1,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+25,"Hiện nay trên nhiều tuyến đường Hà Nội đã có đường dành riêng cho xe buýt nhanh nhưng có rất nhiều phương tiện như xe máy, ô tô cố tình đi lấn làn sang đường xe buýt. Vậy những trường hợp này bị phạt như thế nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên dữ liệu pháp luật được cung cấp, câu trả lời chi tiết như sau:
+
+**Căn cứ pháp lý:**
+*   [Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01] Điều 7, Khoản 3, Điểm d quy định về việc đi không đúng phần đường hoặc làn đường quy định (làn cùng chiều hoặc làn ngược chiều) đối với xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy.
+*   [Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01] Điều 5, Khoản 5, Điểm d quy định về việc đi không đúng phần đường hoặc làn đường quy định (làn cùng chiều hoặc làn ngược chiều) đối với xe ô tô và các loại xe tương tự xe ô tô.
+
+**Kết luận trực tiếp:**
+Những trường hợp xe máy, ô tô cố tình đi lấn làn sang đường xe buýt sẽ bị phạt tiền từ 600.000 đồng đến 800.000 đồng (đối với xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy) hoặc từ 4.000.000 đồng đến 6.000.000 đồng (đối với xe ô tô và các loại xe tương tự xe ô tô).
+
+**Chi tiết chế tài (nếu có):**
+*   Đối với xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy: Phạt tiền từ 600.000 đồng đến 800.000 đồng.
+*   Đối với xe ô tô và các loại xe tương tự xe ô tô: Phạt tiền từ 4.000.000 đồng đến 6.000.000 đồng.",168/2024/NĐ-CP::article::7::clause::3::point::d;168/2024/NĐ-CP::article::7::clause::10::point::a;168/2024/NĐ-CP::article::7::clause::13::point::d;168/2024/NĐ-CP::article::6::clause::5::point::b;168/2024/NĐ-CP::article::6::clause::16::point::a;168/2024/NĐ-CP::article::6::clause::10::point::a;168/2024/NĐ-CP::article::6::clause::16::point::d,22500.6,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+26,"Trong khi tham gia giao thông, tôi dừng xe khi tín hiệu đèn giao thông đang báo đèn xanh thì bị Cảnh sát giao thông phạt. Bộ Công an cho tôi hỏi, có quy định nào phạt lỗi dừng phương tiện khi đèn giao thông có tín hiệu xanh hay không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 4, Điều 11, Luật Giao thông đường bộ năm 2008 và Nghị định 100/2019/NĐ-CP, người điều khiển phương tiện tham gia giao thông đường bộ không chấp hành hiệu lệnh của đèn tín hiệu giao thông có thể bị phạt tiền từ 200.000 đồng đến 400.000 đồng.",36/2024/QH15::article::10::clause::1;36/2024/QH15::article::11::clause::4;168/2024/NĐ-CP::article::6::clause::9::point::b;168/2024/NĐ-CP::article::6::clause::16::point::b;168/2024/NĐ-CP::article::7::clause::7::point::c;168/2024/NĐ-CP::article::7::clause::13::point::b,5253.8,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+27,Xin hỏi điều khiển ô tô chuyển hướng không đúng quy định bị xử phạt như thế nào? Tôi bị lập biên bản lỗi Chuyển hướng không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ thì bị phạt bao nhiêu tiền và có bị trừ điểm Giấy phép lái xe hay không?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi của bạn như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm c, Khoản 3, Điều 6 Nghị định 100/2019/NĐ-CP;
+- Căn cứ theo Điểm c, Khoản 3, Điều 100/2019/NĐ-CP;
+- Căn cứ theo Điểm c, Khoản 3, Điều 6 Nghị định 100/2019/NĐ-CP;
+- Căn cứ theo Điểm c, Khoản 3, Điều 16 Nghị định 100/19/NĐ-CP.
+
+**Kết luận trực tiếp:**
+Người điều khiển xe ô tô chuyển hướng không đúng quy định sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng và bị trừ 02 điểm Giấy phép lái xe.
+
+**Chi tiết chế tài:**
+- Mức phạt tiền: từ 800.000 đồng đến 1.000.000 đồng.
+- Hình phạt bổ sung: bị trừ 02 điểm Giấy phép lái xe.",36/2024/QH15::article::15;168/2024/NĐ-CP::article::6::clause::5::point::l;168/2024/NĐ-CP::article::6::clause::5::point::m;168/2024/NĐ-CP::article::6::clause::3::point::c;168/2024/NĐ-CP::article::6::clause::10::point::a;168/2024/NĐ-CP::article::6::clause::16::point::d,17184.8,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+28,Chị H ngồi trên xe ô tô không thắt dây an toàn khi xe đang chạy có bị xử phạt vi phạm không? Nếu bị phạt thì chị bị xử phạt với mức phạt là bao nhiêu?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, kết luận như sau:
+
+- Căn cứ pháp lý: Căn cứ theo Điểm l, Khoản 3, Điều 6 Nghị định 100/2019/NĐ-CP; Điều 6 Nghị định 100/2019/NĐ-CP; Điều 12 Nghị định 168/2024/NĐ-CP.
+- Kết luận trực tiếp: Chị H bị xử phạt vi phạm hành chính về việc không thắt dây an toàn khi xe đang chạy. Mức phạt tiền là từ 800.000 đồng đến 1.000.000 đồng.
+- Chi tiết chế tài (nếu có): Mức phạt tiền từ 800.000 đồng đến 1.000.000 đồng.
+- Hình phạt bổ sung (nếu có): Không có hình phạt bổ sung được quy định cụ thể cho hành vi này trong ngữ cảnh này.",168/2024/NĐ-CP::article::6::clause::3::point::k;168/2024/NĐ-CP::article::6::clause::3::point::l,11479.5,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+29,"Chị T hỏi vì hoàn cảnh gia đình, chị buôn bán hàng rong, vậy “Hành vi bán hàng rong, bán hàng hóa nhỏ lẻ trên vỉa hè các tuyến phố bị xử phạt như thế nào”",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 2, Điều 12 Nghị định 100/2019/NĐ-CP, chị T bị phạt tiền từ 200.000 đồng đến 250.000 đồng vì hành vi bán hàng rong, bán hàng hóa nhỏ lẻ khác trên lòng đường, trên vỉa hè các tuyến phố có quy định cấm bán hàng.",168/2024/NĐ-CP::article::12::clause::2::point::e,5306.8,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+30,"Ông X hỏi nếu có hành vi điều khiển xe ô tô đón, trả hành khách trên đường cao tốc bị xử phạt thế nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Khoản 8, Điều 20 Nghị định 168/2024/NĐ-CP, ông X sẽ bị phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với hành vi đón, trả hành khách trên đường cao tốc.",168/2024/NĐ-CP::article::20::clause::8;168/2024/NĐ-CP::article::20::clause::10::point::c,6049.0,"[Văn bản: 123/2021/NĐ-CP — Hiệu lực: 2022-01-01]
+Điều 2: Sửa đổi, bổ sung, bãi bỏ một số điều của Nghị định số 100/2019/NĐ-CP ngày 31 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chín..."
+31,"Anh A đang điều khiển xe gắn máy đi trên đường. Đến đoạn đường giao cắt với ngõ nhỏ thì bị anh B điều khiển xe gắn máy khác đi từ ngõ ra đâm vào, xảy ra tai nạn. Trách nhiệm thuộc về ai?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Khoản 1, Điều 80, Điều 80, Khoản 1, Điều 80 Nghị định 100/2019/NĐ-CP.
+
+Kết luận trực tiếp: Anh A và anh B đều có trách nhiệm pháp lý về vụ tai nạn giao thông đường bộ.
+
+Chi tiết chế tài (nếu có): Người điều khiển xe gây tai nạn phải dừng ngay phương tiện, cảnh báo nguy hiểm, giữ nguyên hiện trường, trợ giúp người bị nạn và báo tin cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất; ở lại hiện trường cho đến khi người của cơ quan Công an đến, trừ trường hợp phải đi cấp cứu, đưa người bị nạn đi cấp cứu hoặc xét thấy bị đe dọa đến tính mạng, sức khỏe nhưng phải đến trình báo ngay cơ quan Công an, Ủy ban nhân dân nơi gần nhất; cung cấp thông tin xác định danh tính về bản thân, người liên quan đến vụ tai nạn giao thông đường bộ và thông tin liên quan của vụ tai nạn giao thông đường bộ cho cơ quan có thẩm quyền.",36/2024/QH15::article::22::clause::1,12782.3,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+32,"Chị Nguyễn Thị B đang lưu thông trên đường bằng phương tiện xe máy, đột nhiên gặp người bạn đi ngược chiều gọi chị, chị đột ngột dừng xe lại cách mép đường 1,5 mét. Khi đó, ông C đi xe máy phía sau, do chị B dừng lại đột ngột nên đã va chạm vào xe chị B khiến ông C bị ngã ra đường, còn chị B không vấn đề gì. Chị B cho rằng chị không vi phạm và cương quyết cãi do ông C không để ý khi lưu thông, chị muốn biết trong trường hợp này chị có vi phạm pháp luật hay không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Điểm đ, Khoản 2, Điều 6 Nghị định 100/2019/NĐ-CP.
+Kết luận trực tiếp: Chị Nguyễn Thị B có vi phạm hành vi dừng xe không sát theo lề đường, vỉa hè phía bên phải theo chiều đi hoặc bánh xe gần nhất cách lề đường, vỉa hè quá 0,25 mét.
+Chi tiết chế tài: Phạt tiền từ 600.000 đồng đến 800.000 đồng.",36/2024/QH15::article::3::clause::4;168/2024/NĐ-CP::article::7::clause::2::point::d,6670.9,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+33,"Chị Nguyễn Thị T tranh thủ đi chợ tại chợ C trên địa bàn phường XP, chị để xe ở lòng đường để vào mua hàng. Công an phường XP đã lập biên bản và xử phạt về hành vi vi phạm của chị với mức phạt là 400,000 đồng. Chị cho rằng mức phạt này không đúng. Chị muốn hỏi hành vi vi phạm lấn chiếm lòng lề đường sẽ bị xử phạt bao nhiêu?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm đ, Khoản 2, Điều 6 và Điểm đ, Khoản 2, Điều 7 của Nghị định 100/2019/NĐ-CP, hành vi để xe ở lòng đường đô thị gây cản trở giao thông, tụ tập từ 03 xe trở lên ở lòng đường, trong hầm đường bộ, đỗ, để xe ở lòng đường đô thị, hè phố trái quy định của pháp luật sẽ bị phạt tiền từ 200.000 đồng đến 300.000 đồng đối với người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy.",168/2024/NĐ-CP::article::7::clause::2::point::d,9116.1,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+34,"Gần nhà chị B có dải phân cách, đối diện nhà chị B là điểm dừng xe bus, hôm trước, chị B có trèo qua dải phân cách và băng qua đường để sang đường phía bên kia và chị đã bị xử phạt hành chính, chị thắc mắc về vấn đề này vì chị chỉ trèo qua rào, trèo qua dải phân cách để băng sang qua đường mà tại sao lại bị xử lý vi phạm hành chính? Việc bị xử phạt vi phạm hành chính như vậy là có đúng với quy định hay không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi của bạn như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Điểm a, Khoản 1, Điều 10, Nghị định 100/2019/NĐ-CP: Người đi bộ không đi đúng phần đường quy định, vượt qua dải phân cách, đi qua đường không đúng nơi quy định hoặc không bảo đảm an toàn sẽ bị phạt tiền từ 60.000 đồng đến 100.000 đồng.
+- Căn cứ theo Điểm a, Khoản 1, Điều 9, Nghị định 100/2019/NĐ-CP: Người đi bộ không đi đúng phần đường quy định, vượt qua dải phân cách, đi qua đường không đúng nơi quy định hoặc không bảo đảm an toàn sẽ bị phạt tiền từ 60.000 đồng đến 100.000 đồng.
+- Căn cứ theo Điểm a, Khoản 1, Điều 10, Nghị định 100/2019/NĐ-CP: Người đi bộ không chấp hành hiệu lệnh hoặc chỉ dẫn của đèn tín hiệu, biển báo hiệu, vạch kẻ đường, trừ hành vi vi phạm quy định tại điểm a khoản 2 Điều này.
+- Căn cứ theo Điểm b, Khoản 1, Điều 10, Nghị định 100/19/NĐ-CP: Người đi bộ không chấp hành hiệu lệnh hoặc chỉ dẫn của đèn tín hiệu, biển báo hiệu, vạch kẻ đường, trừ hành vi vi phạm quy định tại điểm a khoản 2 Điều này.
+- Căn cứ theo Điểm b, Khoản 1, Điều 9, Nghị định 100/19/NĐ-CP: Người đi bộ không chấp hành hiệu lệnh hoặc chỉ dẫn của đèn tín hiệu, biển báo hiệu, vạch kẻ đường, trừ hành vi vi phạm quy định tại khoản 2 Điều này.
+- Căn cứ theo Điểm c, Khoản 1, Điều 10, Nghị định 100/19/NĐ-CP: Người đi bộ không chấp hành hiệu lệnh, hướng dẫn của người điều khiển giao thông hoặc người kiểm soát giao thông.
+- Căn cứ theo Điểm c, Khoản 1, Điều 9, Nghị định 100/19/NĐ-CP: Người đi bộ không chấp hành hiệu lệnh, hướng dẫn của người điều khiển giao thông hoặc người kiểm soát giao thông.
+- Căn cứ theo Điểm c, Khoản 1, Điều 30, Nghị định 36/2024/QH15: Người đi bộ không được vượt qua dải phân cách, đu, bám vào phương tiện giao thông đường bộ đang di chuyển.
+
+**Kết luận trực tiếp:**
+Việc chị B bị xử phạt hành chính là đúng với quy định pháp luật vì chị đã vi phạm các quy tắc giao thông đường bộ như không đi đúng phần đường quy định, vượt qua dải phân cách và không chấp hành hiệu lệnh của đèn tín hiệu, biển báo hiệu, vạch kẻ đường.",35/2024/QH15::article::24::clause::7;36/2024/QH15::article::30::clause::1::point::c;168/2024/NĐ-CP::article::10::clause::1::point::a,33536.9,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+35,"Anh Cao Hữu D vừa mới dưới quê lên thành phố để trở lại làm việc, do đoạn đường vắng anh D chạy nhanh bị Cảnh sát giao thông bắn tốc độ 60/50 và đã bị lập biên bản. Anh muốn hỏi theo quy định pháp luật, người đi xe máy sẽ bị phạt như thế nào nếu điều khiển xe chạy quá tốc độ quy định? Có bị trừ điểm giấy phép lái xe không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Điểm a, Khoản 4, Điều 7 Nghị định 100/2019/NĐ-CP.
+Kết luận trực tiếp: Anh Cao Hữu D sẽ bị phạt tiền từ 800.000 đồng đến 1.000.000 đồng và bị trừ 01 điểm giấy phép lái xe.
+Chi tiết chế tài: Mức phạt tiền từ 800.000 đồng đến 1.000.000 đồng và bị trừ 01 điểm giấy phép lái xe.",168/2024/NĐ-CP::article::7::clause::4::point::a,7629.6,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT, MỨC TRỪ ĐIỂM GIẤY PHÉP LÁI XE VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN..."
+36,"Khi gặp xe buýt đang dừng đón, trả khách, người điều khiển xe mô tô phải xử lý như thế nào dưới đây?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, tôi xin trả lời câu hỏi của bạn như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Khoản 2, Điều 7, Điều 100/2019/NĐ-CP: ""Dừng xe, đỗ xe trên đường xe điện, đường dành riêng cho xe buýt, trên miệng cống thoát nước, miệng hầm của đường điện thoại, điện cao thế, các chỗ dành riêng cho xe chữa cháy lấy nước, trên phần đường dành cho người đi bộ qua đường; rời vị trí lái, tắt máy khi dừng xe; mở cửa xe, để cửa xe mở không bảo đảm an toàn"".
+- Căn cứ theo Khoản 2, Điều 8, Điều 100/2019/NĐ-CP: ""Dừng xe, đỗ xe trên đường xe điện, đường dành riêng cho xe buýt, trên miệng cống thoát nước, miệng hầm của đường điện thoại, điện cao thế, các chỗ dành riêng cho xe chữa cháy lấy nước, trên phần đường dành cho người đi bộ qua đường; rời vị trí lái, tắt máy khi dừng xe; mở cửa xe, để cửa xe mở không bảo đảm an toàn"".
+
+**Kết luận trực tiếp:**
+Khi gặp xe buýt đang dừng đón, trả khách, người điều khiển xe mô tô phải thực hiện các hành vi như dừng xe, đỗ xe trên đường xe điện, đường dành riêng cho xe buýt, trên miệng cống thoát nước, miệng hầm của đường điện thoại, điện cao thế, các chỗ dành riêng cho xe chữa cháy lấy nước, trên phần đường dành cho người đi bộ qua đường; rời vị trí lái, tắt máy khi dừng xe, mở cửa xe, để cửa xe mở không bảo đảm an toàn.",36/2024/QH15::article::12::clause::3::point::i,19944.8,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."
+37,"Theo Luật Phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu, bia khi tham gia giao thông?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên dữ liệu pháp luật hiện tại, người điều khiển phương tiện giao thông bị cấm sử dụng rượu, bia khi trong máu hoặc hơi thở có nồng độ cồn theo Khoản 6 Điều 5 Luật Phòng chống tác hại của rượu, bia.",44/2019/QH14::article::21::clause::1;44/2019/QH14::article::5::clause::6,2826.0,"[Văn bản: 44/2019/QH14 — Hiệu lực: 2020-01-01]
+Chương I: NHỮNG QUY ĐỊNH CHUNG
+Điều 5: Các hành vi bị nghiêm cấm trong phòng, chống tác hại của rượu, bia
+Khoản 6.
+Nội dung: Điều khiển phương tiện giao ..."
+38,Khổ giới hạn của đường bộ được hiểu như thế nào là đúng?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Khoản 2, Điều 27, Chương II, Mục 3 của Nghị định 35/2024/QH15.
+
+Kết luận: Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về chiều rộng, chiều cao của đường bộ để các xe, bao gồm cả hàng hoá xếp trên xe đi qua được an toàn và được xác định theo quy chuẩn, tiêu chuẩn kỹ thuật của đường bộ.",35/2024/QH15::article::27::clause::2,4924.9,"[Văn bản: 35/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II
+Mục 3
+Điều 27: Tải trọng và khổ giới hạn của đường bộ
+Khoản 2.
+Nội dung: Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về ch..."
+39,Khi nào được phục hồi điểm giấy phép lái xe?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 2, Điều 51, Điều 49, Nghị định 100/2019/NĐ-CP:
+- Nếu giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất, thì được phục hồi đủ 12 điểm.
+- Nếu giấy phép lái xe bị trừ hết điểm, sau khi đạt yêu cầu kiểm tra, dữ liệu điểm sẽ được phục hồi đủ 12 điểm.
+- Nếu giấy phép lái xe bị trừ hết điểm, sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ theo quy định tại khoản 7 Điều 61 của Luật này do lực lượng Cảnh sát giao thông tổ chức, có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.",36/2024/QH15::article::58::clause::2;36/2024/QH15::article::58::clause::3,10643.0,"[Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01]
+Chương III: THẨM QUYỀN, THỦ TỤC XỬ PHẠT, TRỪ ĐIỂM, PHỤC HỒI ĐIỂM GIẤY PHÉP LÁI XE
+Mục 3: TRÌNH TỰ, THỦ TỤC, THẨM QUYỀN TRỪ ĐIỂM, PHỤC HỒI ĐIỂM GIẤY PHÉ..."
+40,"Khi có xe xin vượt, người lái xe mô tô xử lý như thế nào nếu đủ điều kiện an toàn cho xe phía sau vượt?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, câu trả lời chi tiết như sau:
+
+**Căn cứ pháp lý:**
+- Căn cứ theo Khoản 4, Điều 14, Nghị định 100/2019/NĐ-CP;
+- Căn cứ theo Khoản 4, Điều 14, Nghị định 36/2024/QH15.
+
+**Kết luận trực tiếp:**
+Khi có xe xin vượt và đủ điều kiện an toàn cho xe phía sau vượt, người điều khiển phương tiện tham gia giao thông đường bộ phía trước phải giảm tốc độ, có tín hiệu rẽ phải để báo hiệu cho người điều khiển phương tiện phía sau biết được vượt và đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được cản trở đối với xe xin vượt.
+
+**Chi tiết chế tài (nếu có):**
+Không có chế tài xử phạt cụ thể được quy định cho hành vi này trong các văn bản được cung cấp.",36/2024/QH15::article::14::clause::4,11912.7,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 14: Vượt xe và nhường đường cho xe xin vượt
+Khoản 4.
+Nội dung: Khi có xe xin vượt, người điều khiển phương ti..."
+41,"Người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình trước vạch dừng xe tại đường ngang, cầu chung đường sắt khi có báo hiệu nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, người tham gia giao thông đường bộ phải dừng lại về bên phải đường của mình trước vạch dừng xe tại đường ngang, cầu chung đường sắt khi có hiệu lệnh của nhân viên gác chắn, đèn đỏ sáng nhấp nháy, chuông kêu, chắn đường bộ đang dịch chuyển hoặc đã đóng theo Khoản 1 Điều 24 Nghị định 100/2019/NĐ-CP.",36/2024/QH15::article::24::clause::1,5146.9,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 24: Giao thông tại đường ngang, cầu chung đường sắt
+Khoản 2.
+Nội dung: Khi tới đường ngang không có người gác..."
+42,"Khi đang lái xe, phía trước có một xe cứu thương đang phát tín hiệu ưu tiên, người lái xe có được phép vượt hay không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên các văn bản pháp luật được cung cấp, câu trả lời pháp lý như sau:
+
+**Căn cứ pháp lý:**
+*   [Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01] Điều 14, Khoản 2 quy định: ""Khi vượt các xe phải vượt bên trái; trường hợp khi xe phía trước có tín hiệu rẽ trái hoặc đang rẽ trái hoặc khi xe chuyên dùng đang làm việc trên đường mà không thể vượt bên trái thì được vượt về bên phải.""
+*   [Văn bản: 168/2024/NĐ-CP — Hiệu lực: 2025-01-01] Điều 6, Khoản 6 quy định: ""Không nhường đường hoặc gây cản trở xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ.""
+
+**Kết luận trực tiếp:**
+Người lái xe không được phép vượt khi phía trước có xe cứu thương đang phát tín hiệu ưu tiên.
+
+**Chi tiết chế tài (nếu có):**
+Không có chế tài cụ thể về mức phạt tiền, phạt tù hay hình phạt bổ sung được quy định cho hành vi này trong các văn bản được cung cấp.",36/2024/QH15::article::27::clause::1;36/2024/QH15::article::27::clause::3::point::a;36/2024/QH15::article::14::clause::6::point::g,13661.3,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 27: Xe ưu tiên
+Khoản 5.
+Nội dung: Khi có tín hiệu của xe ưu tiên, người và phương tiện tham gia giao thông đư..."
+43,Thứ tự xuống phà như thế nào là đúng quy tắc giao thông?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên dữ liệu pháp luật được cung cấp, câu trả lời là:
+
+Căn cứ theo Khoản 2, Điều 23, Chương II, Mục 2 của Nghị định 36/2024/QH15:
+- Xe ưu tiên được quyền đi trước xe khác khi qua đường giao nhau từ bất kỳ hướng nào tới theo thứ tự ưu tiên từ trên xuống dưới như sau: xe chữa cháy của Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ và xe chữa cháy của các lực lượng khác được huy động đi làm nhiệm vụ chữa cháy; xe của lực lượng quân sự, công an, kiểm sát đi làm nhiệm vụ khẩn cấp; đoàn xe có xe Cảnh sát giao thông dẫn đường; xe cứu thương đi làm nhiệm vụ cấp cứu; xe hộ đê đi làm nhiệm vụ; xe đi làm nhiệm vụ cứu nạn, cứu hộ, khắc phục sự cố thiên tai, dịch bệnh hoặc xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật; đoàn xe tang.
+- Trong trường hợp các xe cùng thứ tự ưu tiên đến bến phà, cầu phao thì xe nào đến trước được qua trước.
+Kết luận: Thứ tự xuống phà đúng quy tắc giao thông là xe ưu tiên đi trước, sau đó đến xe chở thư báo, xe chở thực phẩm tươi sống, và cuối cùng là xe chở khách công cộng.",36/2024/QH15::article::23::clause::3::point::b,14012.0,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 23: Qua phà, qua cầu phao
+Khoản 3.
+Khi qua phà, phải chấp hành quy định sau đây:
+Điểm b.
+Nội dung: Khi xuống ..."
+44,Người lái xe sử dụng đèn như thế nào khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm b, Khoản 2, Điều 20, Nghị định 100/2019/NĐ-CP.
+
+Kết luận: Người lái xe phải tắt đèn chiếu xa, bật đèn chiếu gần khi đi trên các đoạn đường qua khu đông dân cư có hệ thống chiếu sáng đang hoạt động.",36/2024/QH15::article::20::clause::2,4518.6,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 20: Sử dụng đèn
+Khoản 2.
+Người lái xe, người điều khiển xe máy chuyên dùng phải tắt đèn chiếu xa, bật đèn chi..."
+45,"Người lái xe mô tô hai bánh, xe gắn máy được phép chở tối đa hai người trong những trường hợp nào?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 1, Điều 33 của Nghị định 36/2024/QH15.
+
+Kết luận trực tiếp: Người lái xe mô tô hai bánh, xe gắn máy chỉ được chở tối đa hai người trong các trường hợp sau: chở người bệnh đi cấp cứu; áp giải người có hành vi vi phạm pháp luật; chở trẻ em dưới 12 tuổi; người già yếu hoặc người khuyết tật.",36/2024/QH15::article::33::clause::1,5648.9,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 33: Người lái xe, người được chở, hàng hóa xếp trên xe mô tô, xe gắn máy
+Khoản 1.
+Nội dung: Người lái xe mô t..."
+46,"Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người lái xe phải nhường đường như thế nào là đúng quy tắc giao thông?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ pháp lý: Căn cứ theo Khoản 3, Điều 22, Nghị định 36/2024/QH15.
+Kết luận trực tiếp: Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến, người lái xe phải nhường đường cho xe đi đến từ bên trái.
+Chi tiết chế tài (nếu có): Không áp dụng mức phạt tiền cụ thể cho hành vi này, chỉ quy định về nghĩa vụ nhường đường.",36/2024/QH15::article::22::clause::3,5621.1,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương II: QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
+Điều 22: Nhường đường tại nơi đường giao nhau
+Khoản 3.
+Nội dung: Tại nơi đường giao nhau có báo hiệu đi theo vòng ..."
+47,Xe cơ giới gồm những xe gì?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Dựa trên dữ liệu pháp luật được cung cấp, xe cơ giới bao gồm các loại xe sau:
+
+- Xe ô tô gồm: xe có từ bốn bánh trở lên chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, không chạy trên đường ray, dùng để chở người, hàng hóa, kéo rơ moóc, kéo sơ mi rơ moóc hoặc được kết cấu để thực hiện chức năng, công dụng đặc biệt, có thể được nối với đường dây dẫn điện; xe ba bánh có khối lượng bản thân lớn hơn 400 kg; xe ô tô không bao gồm xe chở người bốn bánh có gắn động cơ và xe chở hàng bốn bánh có gắn động cơ.
+- Rơ moóc là xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ, được kéo bởi xe ô tô; phần chủ yếu của khối lượng toàn bộ rơ moóc không đặt lên xe kéo.
+- Sơ mi rơ moóc là xe không có động cơ để di chuyển, được thiết kế, sản xuất để hoạt động trên đường bộ; được kéo bởi xe ô tô đầu kéo và có một phần đáng kể khối lượng toàn bộ đặt lên xe ô tô đầu kéo.
+- Xe chở người bốn bánh có gắn động cơ là xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở người, vận tốc thiết kế không lớn hơn 30 km/h, số người cho phép chở tối đa 15 người (không kể người lái xe).
+- Xe mô tô gồm: xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, trừ xe gắn máy; đối với xe ba bánh thì khối lượng bản thân không lớn hơn 400 kg.
+- Xe gắn máy là xe có hai hoặc ba bánh chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có vận tốc thiết kế không lớn hơn 50 km/h; nếu động cơ dẫn động là động cơ nhiệt thì dung tích làm việc hoặc dung tích tương đương không lớn hơn 50 cm3; nếu động cơ dẫn động là động cơ điện thì công suất của động cơ không lớn hơn 04 kW; xe gắn máy không bao gồm xe đạp máy.
+- Xe chở hàng bốn bánh có gắn động cơ là xe có từ bốn bánh trở lên, chạy bằng động cơ, được thiết kế, sản xuất để hoạt động trên đường bộ, có kết cấu để chở hàng, có phần động cơ và thùng hàng lắp trên cùng một khung xe, có tối đa hai hàng ghế và chở tối đa 05 người (không kể người lái xe), vận tốc thiết kế không lớn hơn 60 km/h và khối lượng bản thân không lớn hơn 550 kg; trường hợp xe sử dụng động cơ điện thì có công suất động cơ không lớn hơn 15 kW.",36/2024/QH15::article::34::clause::1,29739.9,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương III: PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
+Điều 34: Phân loại phương tiện giao thông đường bộ
+Khoản 1.
+Xe cơ giới bao gồm:
+Điểm a.
+Nội dung: Xe..."
+48,Phương tiện giao thông đường bộ gồm những loại nào?,/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Khoản 1, Điều 34 của Nghị định 36/2024/QH15, phương tiện giao thông đường bộ bao gồm: xe cơ giới, xe thô sơ, xe máy chuyên dùng và các loại xe tương tự.",36/2024/QH15::article::2::clause::2,3223.4,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương I: NHỮNG QUY ĐỊNH CHUNG
+Điều 2: Giải thích từ ngữ
+Khoản 2.
+Nội dung: Phương tiện giao thông đường bộ là các loại xe, bao gồm: phương tiện giao thô..."
+49,"Việc sản xuất, sử dụng, mua, bán trái phép biển số xe có bị nghiêm
+cấm hay không?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Khoản 17, Điều 9 của Nghị định 100/2019/NĐ-CP và Khoản 1, Điều 29 của 168/2024/NĐ-CP, việc sản xuất, sử dụng, mua, bán trái phép biển số xe là hành vi bị nghiêm cấm.
+
+Kết luận: Việc sản xuất, sử dụng, mua, bán trái phép biển số xe bị nghiêm cấm theo quy định pháp luật.",36/2024/QH15::article::9::clause::17,5926.3,"[Văn bản: 36/2024/QH15 — Hiệu lực: 2025-01-01]
+Chương I: NHỮNG QUY ĐỊNH CHUNG
+Điều 9: Các hành vi bị nghiêm cấm
+Khoản 17.
+Nội dung: Sản xuất, sử dụng, mua, bán trái phép biển số xe; điều khiển xe cơ g..."
+50,"Hiện nay, khi giao thông trên đường, chị Z bắt gặp rất nhiều tình huống chở chó trên xe, hay dắt chó chạy theo xe máy. Chị Z muốn hỏi theo Nghị định mới về xử phạt vi phạm giao thông thì khi chạy xe máy mà có dẫn theo chó hoặc súc vật khác có bị xử phạt không? Nếu có thì mức phạt bao nhiêu ạ?",/kaggle/finetune-models/gemma-legal-qa-qlora,"Căn cứ theo Điểm a, Khoản 3, Điều 6 Nghị định 100/2019/NĐ-CP và Điểm a, Khoản 6, Điều 11 của Nghị định 123/2021/NĐ-CP, người điều khiển xe mô tô, xe gắn máy (kể cả xe máy điện), các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi phạm quy tắc giao thông đường bộ khi có dẫn theo chó hoặc súc vật khác sẽ bị phạt tiền từ 400.000 đồng đến 600.000 đồng.",36/2024/QH15::article::33::clause::3::point::đ;168/2024/NĐ-CP::article::10::clause::2::point::b,8914.1,"[Văn bản: 100/2019/NĐ-CP — Hiệu lực: 2020-01-01]
+Chương II: HÀNH VI VI PHẠM, HÌNH THỨC, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ
+Mục 1: VI PHẠM ..."

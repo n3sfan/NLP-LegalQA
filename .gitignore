@@ -15,4 +15,5 @@ offline_payloads/
 offline_packages/
 
 .claude/
+.agents/
 vietnamese_legal_qa_local/

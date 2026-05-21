@@ -63,16 +63,6 @@ def _find_recall_column(df: pd.DataFrame, top_k: int) -> tuple[int, str | None]:
             recall_candidates.append((recall_at, str(col)))
     return max(recall_candidates, default=(top_k, None))
 
-
-def _infer_expand(dataset_p: Path, df: pd.DataFrame) -> bool:
-    """Mirror an explicit expansion marker when future row_results include one."""
-    if "expand" in df.columns:
-        values = df["expand"].dropna().astype(str).str.lower()
-        return values.isin(["1", "true", "yes", "on"]).any()
-    config_name = dataset_p.stem.lower()
-    return "expand" in config_name and "no_expand" not in config_name
-
-
 def _process_dataset(dataset_p: Path, cfg: EvalConfig, embedder: Neo4jEmbedder) -> None:
     log.info("Loading dataset from %s", dataset_p)
     df = pd.read_csv(dataset_p)
