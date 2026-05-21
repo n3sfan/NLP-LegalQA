@@ -1,0 +1,2 @@
+model,avg_score,avg_bleu,avg_rougeL,avg_meteor,avg_bert_f1,avg_legal_accuracy,avg_correct_citation,avg_completeness,avg_hallucination_citation,avg_structure
+finetune,3.8,0.175,0.4029,0.3389,0.6589,0.69,0.24,0.64,0.83,1.4

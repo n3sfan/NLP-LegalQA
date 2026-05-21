@@ -14,7 +14,7 @@ After recalculating bert_f1:
   - Writes a global all_models_summary.csv aggregating all models
 
 Usage:
-    uv run python scripts/recalculate_bert_score.py [--dry-run] [--models MODEL [MODEL ...]]
+    uv run python scripts/recalculate_bert_score.py [--dry-run] [--summary-only] [--end-row ROW_COUNT] [--models MODEL [MODEL ...]]
 """
 
 import argparse
@@ -145,6 +145,8 @@ def recalculate_bert_f1_for_model(
     bertscore_limit: int | None,
     gt_map: dict[int, str],
     dry_run: bool = False,
+    summary_only: bool = False,
+    end_row: int | None = 50,
 ) -> dict | None:
     """
     Recalculate bert_f1 for one model's row_qa_eval_scores.csv.
@@ -165,6 +167,10 @@ def recalculate_bert_f1_for_model(
     log.info("[%s] Loading scores from %s", model_name, scores_path)
     df_scores  = pd.read_csv(scores_path)
     df_offline = pd.read_csv(offline_path)
+
+    # Limit the rows to process if end_row is specified and positive
+    if end_row is not None and end_row > 0:
+        df_scores = df_scores.iloc[:end_row]
 
     # Build id → generated_answer lookup
     gen_map: dict[int, str] = {}
@@ -204,9 +210,11 @@ def recalculate_bert_f1_for_model(
     # Output path: same dir, same stem + "_edited"
     edited_path = scores_path.with_stem(scores_path.stem + "_edited")
 
-    if not dry_run:
+    if not dry_run and not summary_only:
         df_scores.to_csv(edited_path, index=False)
         log.info("[%s] Wrote updated scores → %s", model_name, edited_path)
+    elif summary_only:
+        log.info("[%s] (summary-only) Would write updated scores to %s (skipping)", model_name, edited_path)
     else:
         log.info("[%s] (dry-run) Would write updated scores → %s", model_name, edited_path)
 
@@ -248,9 +256,11 @@ def recalculate_bert_f1_for_model(
 
     # Write per-model summary
     per_model_summary_path = _SCORES_DIR / model_name / _OUT_SUBDIR / "qa_metrics_summary.csv"
-    if not dry_run:
+    if not dry_run and not summary_only:
         pd.DataFrame([agg]).to_csv(per_model_summary_path, index=False)
         log.info("[%s] Per-model summary → %s", model_name, per_model_summary_path)
+    elif summary_only:
+        log.info("[%s] (summary-only) Skipping per-model summary write to %s", model_name, per_model_summary_path)
 
     # Log averages
     log.info("[%s] Averages:", model_name)
@@ -279,6 +289,14 @@ def main() -> None:
     parser.add_argument(
         "--dry-run", action="store_true",
         help="Compute new scores but do not write changes to disk"
+    )
+    parser.add_argument(
+        "--summary-only", action="store_true",
+        help="Print averages/summary only; do not save any files to disk"
+    )
+    parser.add_argument(
+        "--end-row", type=int, default=50,
+        help="Stop processing at this row index (default: 50). Use <= 0 to process all rows."
     )
     args = parser.parse_args()
 
@@ -331,6 +349,8 @@ def main() -> None:
             bertscore_limit=bertscore_limit,
             gt_map=gt_map,
             dry_run=args.dry_run,
+            summary_only=args.summary_only,
+            end_row=args.end_row,
         )
         if summary is not None:
             all_summaries.append(summary)
@@ -344,11 +364,15 @@ def main() -> None:
         avg_cols = sorted(c for c in df_global.columns if c.startswith("avg_"))
         df_global = df_global[["model"] + avg_cols]
 
-        if not args.dry_run:
+        if not args.dry_run and not args.summary_only:
             df_global.to_csv(global_summary_path, index=False)
             log.info("=" * 60)
             log.info("Global summary → %s", global_summary_path)
+        elif args.summary_only:
+            log.info("=" * 60)
+            log.info("(summary-only) Skipping global summary write to: %s", global_summary_path)
         else:
+            log.info("=" * 60)
             log.info("(dry-run) Global summary would be written to: %s", global_summary_path)
 
         log.info("\n%s", df_global.to_string(index=False))
