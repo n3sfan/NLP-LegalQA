@@ -1,0 +1,2 @@
+avg_score,avg_legal_accuracy,avg_correct_citation,avg_completeness,avg_hallucination_citation,avg_structure,avg_bleu,avg_rougeL,avg_meteor,avg_bert_f1
+7.929,1.5675,1.5775,1.3915,1.76,1.6325,0.2034,0.403,0.5079,0.6535
