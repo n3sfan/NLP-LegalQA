@@ -1,0 +1,2 @@
+model_config,bleu,rougeL,meteor,judge_legal_accuracy,judge_correct_citation,judge_completeness,judge_hallucination_citation,judge_structure,judge_overall_score,gen_time,judge_time
+gemma4_zeroshot,0.293186,0.48127000000000003,0.558429,1.65,1.6775,1.495,1.8725,1.7925,8.4875,23.589499999999997,5.0255

@@ -1,0 +1,2 @@
+model_config,bleu,rougeL,meteor,judge_legal_accuracy,judge_correct_citation,judge_completeness,judge_hallucination_citation,judge_structure,judge_overall_score,gen_time,judge_time
+geminiflash_zeroshot,0.2902075,0.47572000000000003,0.5268295000000001,1.685,1.6775,1.52,1.9275,1.78,8.59,4.54735,3.9628999999999994

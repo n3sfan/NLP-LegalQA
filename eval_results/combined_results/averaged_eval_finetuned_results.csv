@@ -1,0 +1,2 @@
+model_config,bleu,rougeL,meteor,judge_legal_accuracy,judge_correct_citation,judge_completeness,judge_hallucination_citation,judge_structure,judge_overall_score,gen_time,judge_time
+eval_finetuned_results,0.28073,0.482881,0.49540350000000005,0.915,0.57,0.885,1.1525,1.425,4.9475,36.4801,7.40245
