@@ -1,5 +1,5 @@
 from neo4j import GraphDatabase
-from neo4j.exceptions import CypherSyntaxError
+from neo4j.exceptions import CypherSyntaxError, Neo4jError
 from openai import OpenAI
 
 node_properties_query = """
@@ -149,12 +149,12 @@ class Neo4jGeminiQuery:
         rewrite = self.rewrite_question(question)
         cypher = self.construct_cypher(question, rewrite, history)
         try:
-            return self.query_database(cypher)
+            return self.query_database(cypher), cypher
         # Self-healing flow
-        except CypherSyntaxError as e:
+        except (CypherSyntaxError, Neo4jError) as e:
             # If out of retries
             if not retry:
-              return "Cú pháp Cypher sinh ra từ câu hỏi không hợp lệ."
+              return "Cú pháp Cypher sinh ra từ câu hỏi không hợp lệ.", cypher
         # Self-healing Cypher flow by
         # providing specific error to Gemini
             return self.run(

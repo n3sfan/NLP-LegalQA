@@ -258,6 +258,11 @@ for msg in st.session_state.messages:
                     </div>
                     """, unsafe_allow_html=True)
 
+        # Show cypher query if available
+        if msg["role"] == "assistant" and msg.get("cypher_query"):
+            with st.expander("Cypher Query", expanded=False):
+                st.code(msg["cypher_query"], language="cypher")
+
         # Show timings if available
         if msg["role"] == "assistant" and msg.get("timings"):
             timings = msg["timings"]
@@ -303,6 +308,7 @@ if prompt := st.chat_input("Đặt câu hỏi..."):
                 timings = data.get("timings", {})
                 rewritten = data.get("rewritten_query")
                 sub_queries = data.get("sub_queries", [])
+                cypher_query = data.get("cypher_query")
 
                 # Show rewritten query if different
                 if rewritten:
@@ -313,6 +319,11 @@ if prompt := st.chat_input("Đặt câu hỏi..."):
                     with st.expander("Sub-queries", expanded=False):
                         for i, sq in enumerate(sub_queries, 1):
                             st.text(f"  {i}. {sq}")
+
+                # Show cypher query
+                if cypher_query:
+                    with st.expander("Cypher Query", expanded=False):
+                        st.code(cypher_query, language="cypher")
 
                 # Show answer
                 st.markdown(answer)
@@ -343,6 +354,7 @@ if prompt := st.chat_input("Đặt câu hỏi..."):
                     "content": answer,
                     "sources": sources,
                     "timings": timings,
+                    "cypher_query": cypher_query,
                 })
 
                 # Update chat_history for next request

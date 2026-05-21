@@ -419,6 +419,23 @@ def main(argv: list[str] | None = None) -> None:
                 print(ans)
                 return
 
+            elif intent == "cypher_query":
+                from legal_scraper.text2cypher import Neo4jGeminiQuery
+                print("\nExecuting Cypher query...")
+                api_key = os.environ.get("OPENROUTER_API_KEY", "")
+                cypher_tool = Neo4jGeminiQuery(
+                    url=args.uri, user=args.user, password=args.password, gemini_api_key=api_key
+                )
+                raw_result, generated_cypher = cypher_tool.run(args.query)
+                print(f"Generated Cypher:\n{generated_cypher}\n")
+                if isinstance(raw_result, str):
+                    ans = raw_result
+                else:
+                    ans = generator.generate_cypher_answer(args.query, str(raw_result))
+                print("\n=== TRẢ LỜI ===")
+                print(ans)
+                return
+
             # Step 1-5: Shared retrieval pipeline
             from legal_scraper.retrieval import retrieve_and_build_context
 
@@ -552,6 +569,35 @@ def main(argv: list[str] | None = None) -> None:
                     chat_history.append({"role": "user", "content": user_input})
                     chat_history.append({"role": "assistant", "content": answer})
 
+                elif intent == "cypher_query":
+                    t2 = time.time()
+                    if "cypher_tool" not in locals():
+                        from legal_scraper.text2cypher import Neo4jGeminiQuery
+                        api_key = os.environ.get("OPENROUTER_API_KEY", "")
+                        try:
+                            cypher_tool = Neo4jGeminiQuery(
+                                url=args.uri, user=args.user, password=args.password, gemini_api_key=api_key
+                            )
+                        except Exception as e:
+                            print(f"[!] Warning: cypher_tool init failed: {e}")
+                            cypher_tool = None
+                    
+                    if not cypher_tool:
+                        answer = "Xin lỗi, tính năng tra cứu bằng Cypher hiện không khả dụng (chưa được cấu hình)."
+                    else:
+                        raw_result, generated_cypher = cypher_tool.run(rewritten_query)
+                        print(f"[*] Generated Cypher:\n{generated_cypher}\n")
+                        if isinstance(raw_result, str):
+                            answer = raw_result
+                        else:
+                            answer = generator.generate_cypher_answer(rewritten_query, str(raw_result))
+                    
+                    t_gen = time.time() - t2
+                    print(f"\n[ASSISTANT]: {answer}")
+                    print(f"[*] Cypher execution & Generation: {t_gen:.2f}s\n")
+                    chat_history.append({"role": "user", "content": user_input})
+                    chat_history.append({"role": "assistant", "content": answer})
+
                 else:  # retrieve
                     from legal_scraper.retrieval import retrieve_and_build_context
 
@@ -635,8 +681,9 @@ def main(argv: list[str] | None = None) -> None:
             password=args.password,
             gemini_api_key=api_key,
         )
-        result = gds_db.run(args.question)
-        print(result)
+        result, cypher = gds_db.run(args.question)
+        print(f"Cypher:\n{cypher}\n")
+        print(f"Result:\n{result}")
         return
 
 if __name__ == "__main__":

@@ -76,6 +76,7 @@ class ChatResponse(BaseModel):
     timings: dict[str, float] = {}
     rewritten_query: str | None = None
     sub_queries: list[str] = []
+    cypher_query: str | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -93,6 +94,7 @@ async def lifespan(app: FastAPI):
     from legal_scraper.query_rewriter import QueryRewriter
     from legal_scraper.reranker import VietnameseReranker
     from legal_scraper.router import QueryRouter
+    from legal_scraper.text2cypher import Neo4jGeminiQuery
 
     print("[api] Initializing components …")
     t0 = time.time()
@@ -108,11 +110,23 @@ async def lifespan(app: FastAPI):
     generator = AnswerGenerator()
     reranker = VietnameseReranker()
 
+    try:
+        cypher_tool = Neo4jGeminiQuery(
+            url=os.getenv("NEO4J_URI", ""),
+            user=os.getenv("NEO4J_USER", ""),
+            password=os.getenv("NEO4J_PASSWORD", ""),
+            gemini_api_key=os.getenv("OPENROUTER_API_KEY", ""),
+        )
+    except Exception as e:
+        print(f"[api] Warning: cypher_tool init failed: {e}")
+        cypher_tool = None
+
     _components["embedder"] = embedder
     _components["rewriter"] = rewriter
     _components["router"] = router
     _components["generator"] = generator
     _components["reranker"] = reranker
+    _components["cypher_tool"] = cypher_tool
 
     provider = os.getenv("LLM_PROVIDER", "local")
     _components["provider"] = provider
@@ -216,10 +230,35 @@ async def chat(req: ChatRequest):
             timings=timings,
         )
 
-    # --- Step 1: Rewrite (only for "retrieve" intent) ---
+    # --- Step 1: Rewrite (only for "retrieve" and "cypher_query" intent) ---
     t1 = time.time()
     rewritten_query = rewriter.rewrite(history_dicts, req.query)
     timings["rewrite"] = round(time.time() - t1, 3)
+
+    if intent == "cypher_query":
+        t2 = time.time()
+        cypher_tool = _components.get("cypher_tool")
+        if not cypher_tool:
+            return ChatResponse(
+                answer="Xin lỗi, tính năng tra cứu bằng Cypher hiện không khả dụng (chưa được cấu hình).",
+                intent=intent,
+                timings=timings,
+            )
+        
+        raw_result, generated_cypher = cypher_tool.run(rewritten_query)
+        if isinstance(raw_result, str):
+            answer = raw_result
+        else:
+            answer = generator.generate_cypher_answer(rewritten_query, str(raw_result))
+            
+        timings["cypher"] = round(time.time() - t2, 3)
+        return ChatResponse(
+            answer=answer,
+            intent=intent,
+            timings=timings,
+            rewritten_query=rewritten_query if rewritten_query != req.query else None,
+            cypher_query=generated_cypher,
+        )
 
     # --- intent == "retrieve" ---
     from legal_scraper.retrieval import retrieve_and_build_context, RetrievalResult

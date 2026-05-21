@@ -9,7 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from legal_scraper.prompts import _ROUTER_SYSTEM_PROMPT, _ROUTER_USER_PROMPT
 from legal_scraper.query_rewriter import create_chat_llm
 
-IntentType = Literal["direct_answer", "retrieve", "reject"]
+IntentType = Literal["direct_answer", "retrieve", "reject", "cypher_query"]
 
 class QueryRouter:
     """Classifies user queries to determine the appropriate response strategy."""
@@ -58,7 +58,7 @@ class QueryRouter:
         try:
             data = json.loads(text)
             intent = data.get("intent", "retrieve").lower()
-            if intent in ["direct_answer", "retrieve", "reject"]:
+            if intent in ["direct_answer", "retrieve", "reject", "cypher_query"]:
                 return intent
         except json.JSONDecodeError:
             # Simple fallback parsing using string matching
@@ -66,5 +66,7 @@ class QueryRouter:
                 return "direct_answer"
             elif '"intent": "reject"' in text or "'intent': 'reject'" in text:
                 return "reject"
+            elif '"intent": "cypher_query"' in text or "'intent': 'cypher_query'" in text:
+                return "cypher_query"
         
         return "retrieve"

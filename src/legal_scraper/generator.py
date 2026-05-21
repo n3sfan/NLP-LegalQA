@@ -62,3 +62,13 @@ class AnswerGenerator:
         except Exception as e:
             print(f"Direct Generation error: {e}")
             return "Xin lỗi, hiện tại tôi không thể xử lý câu hỏi này."
+
+    def generate_cypher_answer(self, query: str, cypher_result: str) -> str:
+        """Generate a natural language answer from Cypher query results."""
+        try:
+            sys_prompt = "Bạn là trợ lý pháp lý hỗ trợ cơ sở dữ liệu đồ thị. Hãy trả lời câu hỏi của người dùng dựa trên kết quả truy xuất thô từ cơ sở dữ liệu. Kết quả có dạng mảng (chứa tên cột và các hàng dữ liệu). Nếu kết quả trống, hãy nói rằng không tìm thấy thông tin. Hãy trả lời ngắn gọn, tự nhiên và dễ hiểu."
+            user_prompt = f"Câu hỏi: {query}\nKết quả truy xuất: {cypher_result}\nHãy trả lời câu hỏi trên."
+            return self._call_llm(sys_prompt, user_prompt)
+        except Exception as e:
+            print(f"Cypher Generation error: {e}")
+            return "Đã xảy ra lỗi khi tạo câu trả lời từ dữ liệu truy xuất."
