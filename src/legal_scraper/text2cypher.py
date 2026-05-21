@@ -14,9 +14,9 @@ RETURN {labels: label, properties: props} AS output
 rel_properties_query = """
 MATCH ()-[r]->()
 WITH type(r) AS relType, keys(r) AS propertyNames
-UNWIND propertyNames AS prop
-WITH relType, collect(DISTINCT prop) AS props
-RETURN {type: relType, properties: props} AS output
+UNWIND (case when propertyNames = [] then [null] else propertyNames end) AS prop
+WITH relType, collect(DISTINCT prop) AS rawProps
+RETURN {type: relType, properties: [p IN rawProps WHERE p IS NOT NULL]} AS output
 """
 
 rel_query = """
