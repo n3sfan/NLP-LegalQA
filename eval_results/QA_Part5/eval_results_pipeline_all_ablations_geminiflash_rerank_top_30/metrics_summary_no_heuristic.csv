@@ -1,0 +1,2 @@
+recall@1,recall@3,recall@5,recall@7,recall@10,precision@1,precision@3,mrr,config,num_evaluated
+0.5766666666666667,0.6983333333333333,0.775,0.78,0.8066666666666668,0.6,0.2533333333333333,0.70575,no_heuristic,50
