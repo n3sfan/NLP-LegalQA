@@ -42,9 +42,9 @@ For an ablation folder, pass the folder and one payload JSONL will be written fo
 
 ```bash
 uv run src/llm/eval_qa_online.py `
-  --dataset eval_results/eval_results_pipeline_all_ablations_geminiflash_rerank_top_30 `
+  --dataset eval_results/QA_Part2345/eval_results_pipeline_all_ablations_geminiflash_rerank_top_30 `
   --payload-dir offline_payloads/ `
-  --top-k 30 
+  --top-k 15 
 ```
 
 3. Run LLM inference from payloads:
