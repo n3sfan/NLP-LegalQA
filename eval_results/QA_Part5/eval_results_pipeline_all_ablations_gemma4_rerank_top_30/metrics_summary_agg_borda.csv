@@ -1,0 +1,2 @@
+recall@1,recall@3,recall@5,recall@7,recall@10,precision@1,precision@3,mrr,config,num_evaluated
+0.6283333333333334,0.73,0.79,0.81,0.8216666666666668,0.68,0.2733333333333333,0.760062271062271,agg_borda,50
